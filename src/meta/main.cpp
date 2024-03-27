@@ -1,7 +1,4 @@
-#include <random>
-#include <ctime>
-
-#include "meta/app.hpp"
+#include "meta/header.hpp"
 #include "meta/global.hpp"
 
 
