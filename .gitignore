@@ -1,0 +1,9 @@
+# Compiled Object files
+*.o
+dispersio3
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
