@@ -1,5 +1,5 @@
-#ifndef __DEFINES
-#define __DEFINES
+#ifndef __META_DEFINES
+#define __META_DEFINES
 
 
 /***********************************************************************

@@ -1,5 +1,5 @@
-#ifndef __HEADERS
-#define __HEADERS
+#ifndef __META_HEADERS
+#define __META_HEADERS
 
 #include <random>
 #include <ctime>
@@ -8,6 +8,9 @@
 #include <SFML/Graphics.hpp>
 
 #include "meta/defines.hpp"
+
+#include "framework/menu/item.hpp"
+#include "framework/menu/base.hpp"
 
 #include "meta/app.hpp"
 #include "meta/externs.hpp"

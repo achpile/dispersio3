@@ -1,8 +1,10 @@
-#ifndef __APP
-#define __APP
+#ifndef __META_APP
+#define __META_APP
 
-namespace ach {
-	struct App {
+namespace ach
+{
+	struct App
+	{
 		sf::RenderWindow *window;
 
 		bool isRunning;

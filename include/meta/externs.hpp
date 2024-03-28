@@ -1,5 +1,5 @@
-#ifndef __EXTERNS
-#define __EXTERNS
+#ifndef __META_EXTERNS
+#define __META_EXTERNS
 
 extern ach::App *app;
 
