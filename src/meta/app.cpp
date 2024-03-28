@@ -117,5 +117,8 @@ void ach::App::create()
 
 	// center window
 
-	// set window icon
+	sf::Image icon;
+	icon.loadFromFile("data/gfx/gui/misc/icon.png");
+
+	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 }
