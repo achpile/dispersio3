@@ -7,7 +7,7 @@
 
 ***********************************************************************/
 #define PROJECT_NAME   "Dispersio 3"
-#define PROJECT_VERS   "v0.0.1"
+#define PROJECT_VERS   "0.0.1"
 
 
 
@@ -15,12 +15,13 @@
      * List processing macros
 
 ***********************************************************************/
-#define deleteList(list)   for (; !(list).empty();)      \
-                           {                             \
-                               if ((list).back())        \
-                                   delete (list).back(); \
-                                                         \
-                               (list).pop_back();        \
-                           }
+#define listDelete(list)          \
+    for (; !(list).empty();)      \
+    {                             \
+        if ((list).back())        \
+            delete (list).back(); \
+                                  \
+        (list).pop_back();        \
+    }
 
 #endif
