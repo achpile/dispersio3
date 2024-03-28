@@ -6,7 +6,8 @@ namespace ach
 {
 	struct Menu
 	{
-		std::vector<ach::MenuItem*> items;
+		ach::MenuItem* root;
+		ach::MenuItem* current;
 
 
 		 Menu();

@@ -19,4 +19,5 @@ ach::MenuItem::MenuItem()
 ***********************************************************************/
 ach::MenuItem::~MenuItem()
 {
+	listDelete(items);
 }
