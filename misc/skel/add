@@ -1,0 +1,34 @@
+#!/bin/bash
+
+function help() {
+	echo -e "Syntax: $0 t path"
+	echo -e "\tt = [s i b] - src, include, both"
+	echo -e "\tpath - prefix"
+	exit
+}
+
+
+if [ "$1" = "s" ]; then
+	SRC="1"
+elif [ "$1" = "i" ]; then
+	INC="1"
+elif [ "$1" = "b" ]; then
+	SRC="1"
+	INC="1"
+else
+	help
+fi
+
+
+if [ ! -z "$INC" ]; then
+	mkdir -p include/`dirname "$2"`
+	cp `dirname "$0"`/skel.hpp include/$2.hpp
+
+	GUARD=`echo ${2^^} | sed "s/\//_/g"`
+	sed -i "s/__SKEL/__$GUARD/" include/$2.hpp
+fi
+
+if [ ! -z "$SRC" ]; then
+	mkdir -p src/`dirname "$2"`
+	cp `dirname "$0"`/skel.cpp src/$2.cpp
+fi
