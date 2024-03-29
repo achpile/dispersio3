@@ -5,6 +5,7 @@ namespace ach
 {
 	struct App
 	{
+		ach::StateBase   *state;
 		sf::RenderWindow *window;
 
 		bool isRunning;

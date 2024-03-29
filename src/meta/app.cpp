@@ -12,6 +12,8 @@ ach::App::App()
 	isFocused = true;
 
 	create();
+
+	state = new ach::StateMenu();
 }
 
 
@@ -24,6 +26,7 @@ ach::App::App()
 ach::App::~App()
 {
 	delete window;
+	delete state;
 }
 
 
@@ -44,6 +47,7 @@ void ach::App::update()
 		return;
 
 	window->clear();
+	state->update();
 	window->display();
 }
 
@@ -85,6 +89,8 @@ void ach::App::event(sf::Event e)
 		default:
 			break;
 	}
+
+	state->event(e);
 }
 
 

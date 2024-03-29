@@ -12,6 +12,9 @@
 #include "framework/menu/item.hpp"
 #include "framework/menu/base.hpp"
 
+#include "state/base.hpp"
+#include "state/menu.hpp"
+
 #include "meta/app.hpp"
 #include "meta/externs.hpp"
 
