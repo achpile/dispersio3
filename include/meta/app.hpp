@@ -5,8 +5,10 @@ namespace ach
 {
 	struct App
 	{
-		ach::StateBase   *state;
-		sf::RenderWindow *window;
+		ach::RenderManager *rm;
+
+		ach::StateBase     *state;
+		sf::RenderWindow   *window;
 
 		bool isRunning;
 		bool isFocused;

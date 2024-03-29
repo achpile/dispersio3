@@ -9,8 +9,12 @@
 
 #include "meta/defines.hpp"
 
+#include "framework/gfx/layer.hpp"
+
 #include "framework/menu/item.hpp"
 #include "framework/menu/base.hpp"
+
+#include "framework/manager/render.hpp"
 
 #include "state/base.hpp"
 #include "state/menu.hpp"
