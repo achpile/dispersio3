@@ -13,9 +13,10 @@ ach::App::App()
 
 	create();
 
-	rm    = new ach::RenderManager();
+	rm        = new ach::RenderManager();
 
-	state = new ach::StateMenu();
+	resources = new ach::Resources();
+	state     = new ach::StateMenu();
 
 	resize();
 }
@@ -32,6 +33,7 @@ ach::App::~App()
 	delete rm;
 
 	delete state;
+	delete resources;
 	delete window;
 }
 

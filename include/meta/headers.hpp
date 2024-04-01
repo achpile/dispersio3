@@ -16,6 +16,8 @@
 
 #include "framework/manager/render.hpp"
 
+#include "container/resources.hpp"
+
 #include "state/base.hpp"
 #include "state/menu.hpp"
 
