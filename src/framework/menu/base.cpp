@@ -13,11 +13,13 @@ ach::Menu::Menu()
 	root    = new ach::MenuItem();
 	current = root;
 
-	height  = 8;
-	size    = 12;
+	width   = 0;
+	height  = 0;
+	size    = 16;
 	padding = sf::Vector2f(10.0f, 10.0f);
 
 	text->setFont(*resources->fonts.base);
+	text->setFillColor(sf::Color::White);
 
 	box->setFillColor(sf::Color::Black);
 	box->setOutlineColor(sf::Color::Green);
@@ -62,6 +64,14 @@ void ach::Menu::update()
 void ach::Menu::render()
 {
 	app->rm->draw(box, ach::RenderLayer::rlGUI);
+
+	for (unsigned int i = 0; i < current->items.size(); i++)
+	{
+		text->setString(current->items[i]->caption);
+		text->setPosition(pos.x + padding.x, pos.y + padding.y + i * spacing);
+
+		app->rm->draw(text, ach::RenderLayer::rlGUI);
+	}
 }
 
 
@@ -74,6 +84,8 @@ void ach::Menu::render()
 void ach::Menu::calculate()
 {
 	spacing = text->getFont()->getLineSpacing(size);
+
+	text->setCharacterSize(size);
 
 	box->setPosition(pos);
 	box->setSize(sf::Vector2f(padding.x * 2 + width, padding.y * 2.0f + height * spacing));

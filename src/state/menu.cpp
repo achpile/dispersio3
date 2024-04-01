@@ -12,6 +12,7 @@ ach::StateMenu::StateMenu()
 
 	menu->setPosition(sf::Vector2f(100.0f, 100.0f));
 	menu->setWidth(400.0f);
+	menu->setHeight(6);
 }
 
 
