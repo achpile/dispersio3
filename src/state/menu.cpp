@@ -9,6 +9,9 @@
 ach::StateMenu::StateMenu()
 {
 	menu = new ach::Menu();
+
+	menu->setPosition(sf::Vector2f(100.0f, 100.0f));
+	menu->setWidth(400.0f);
 }
 
 
@@ -32,6 +35,9 @@ ach::StateMenu::~StateMenu()
 ***********************************************************************/
 void ach::StateMenu::update()
 {
+	render();
+
+	menu->update();
 }
 
 
@@ -53,5 +59,16 @@ void ach::StateMenu::render()
 
 ***********************************************************************/
 void ach::StateMenu::event(sf::Event)
+{
+}
+
+
+
+/***********************************************************************
+     * StateMenu
+     * fill
+
+***********************************************************************/
+void ach::StateMenu::fill()
 {
 }
