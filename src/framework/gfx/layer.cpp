@@ -61,6 +61,22 @@ void ach::Layer::display()
 
 /***********************************************************************
      * Layer
+     * resize
+
+***********************************************************************/
+void ach::Layer::resize(sf::RenderWindow *window)
+{
+	float scale = std::min((float)window->getSize().x / (float)tex->getSize().x,
+	                       (float)window->getSize().y / (float)tex->getSize().y);
+
+	spr->setPosition(sf::Vector2f(window->getSize()) / 2.0f);
+	spr->setScale(scale, scale);
+}
+
+
+
+/***********************************************************************
+     * Layer
      * render
 
 ***********************************************************************/

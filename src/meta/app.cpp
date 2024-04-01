@@ -16,6 +16,8 @@ ach::App::App()
 	rm    = new ach::RenderManager();
 
 	state = new ach::StateMenu();
+
+	resize();
 }
 
 
@@ -55,7 +57,7 @@ void ach::App::update()
 
 	state->update();
 
-	rm->display();
+	rm->display(window);
 	window->display();
 }
 
@@ -110,6 +112,7 @@ void ach::App::event(sf::Event e)
 ***********************************************************************/
 void ach::App::resize()
 {
+	rm->resize(window);
 }
 
 

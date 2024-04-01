@@ -15,6 +15,7 @@ namespace ach
 
 		void clear(sf::Color color);
 		void display();
+		void resize(sf::RenderWindow *window);
 		void render(sf::RenderTarget *target);
 		void draw(sf::Drawable *drawable, sf::RenderStates states);
 	};

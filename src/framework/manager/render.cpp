@@ -70,9 +70,23 @@ void ach::RenderManager::clear()
      * display
 
 ***********************************************************************/
-void ach::RenderManager::display()
+void ach::RenderManager::display(sf::RenderWindow *window)
 {
 	gui->display();
 
-	gui->render(app->window);
+	gui->render(window);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * resize
+
+***********************************************************************/
+void ach::RenderManager::resize(sf::RenderWindow *window)
+{
+	window->setView(sf::View(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y)));
+
+	gui->resize(window);
 }
