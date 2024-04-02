@@ -16,6 +16,7 @@
 #include "framework/menu/base.hpp"
 
 #include "framework/manager/render.hpp"
+#include "framework/manager/time.hpp"
 
 #include "container/resources.hpp"
 

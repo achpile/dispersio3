@@ -14,11 +14,13 @@ ach::App::App()
 	create();
 
 	rm        = new ach::RenderManager();
+	tm        = new ach::TimeManager();
 
 	resources = new ach::Resources();
 	state     = new ach::StateMenu();
 
 	resize();
+	tm->init();
 }
 
 
@@ -31,6 +33,7 @@ ach::App::App()
 ach::App::~App()
 {
 	delete rm;
+	delete tm;
 
 	delete state;
 	delete resources;
@@ -46,6 +49,7 @@ ach::App::~App()
 ***********************************************************************/
 void ach::App::update()
 {
+	tm->update();
 	events();
 
 	isFocused = window->hasFocus();
