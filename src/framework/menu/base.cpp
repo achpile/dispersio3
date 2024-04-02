@@ -10,7 +10,7 @@ ach::Menu::Menu()
 {
 	box     = new sf::RectangleShape();
 	text    = new sf::Text();
-	root    = new ach::MenuItem();
+	root    = new ach::MenuItem(this);
 	current = root;
 
 	width   = 0;

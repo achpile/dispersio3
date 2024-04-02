@@ -8,6 +8,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "meta/defines.hpp"
+#include "meta/forward.hpp"
 
 #include "framework/gfx/layer.hpp"
 

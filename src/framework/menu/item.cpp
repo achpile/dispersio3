@@ -6,9 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItem::MenuItem(std::string _caption)
+ach::MenuItem::MenuItem(ach::Menu *_menu)
 {
-	caption = _caption;
+	menu = _menu;
 }
 
 

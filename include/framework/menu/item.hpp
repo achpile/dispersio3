@@ -7,10 +7,12 @@ namespace ach
 	struct MenuItem
 	{
 		std::vector<ach::MenuItem*> items;
-		std::string                 caption;
+
+		ach::Menu   *menu;
+		std::string  caption;
 
 
-		 MenuItem(std::string _caption = "");
+		 MenuItem(ach::Menu *_menu);
 		~MenuItem();
 	};
 }
