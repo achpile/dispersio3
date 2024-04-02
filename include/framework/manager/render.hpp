@@ -4,7 +4,7 @@
 
 namespace ach
 {
-	enum struct RenderLayer
+	enum RenderLayer
 	{
 		rlGUI
 	};

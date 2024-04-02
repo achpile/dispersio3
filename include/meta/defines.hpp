@@ -12,16 +12,9 @@
 
 
 /***********************************************************************
-     * List processing macros
+     * Strings
 
 ***********************************************************************/
-#define listDelete(list)          \
-    for (; !(list).empty();)      \
-    {                             \
-        if ((list).back())        \
-            delete (list).back(); \
-                                  \
-        (list).pop_back();        \
-    }
+#define STR_LEN_PATH   256
 
 #endif
