@@ -9,12 +9,17 @@
 ach::Sprite::Sprite(const char *filename, bool repeated, bool centered)
 {
 	tex = new sf::Texture();
+	spr = new sf::Sprite();
 
-	tex->loadFromFile(filename);
+	if (!tex->loadFromFile(filename))
+	{
+		logger->log(ach::llError, "Error loading texture: \"%s\"", filename);
+		return;
+	}
+
 	tex->setSmooth(false);
 	tex->setRepeated(repeated);
 
-	spr = new sf::Sprite();
 	spr->setTexture(*tex);
 
 	size = sf::Vector2f(tex->getSize());

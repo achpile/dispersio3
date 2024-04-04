@@ -103,6 +103,7 @@ const char* ach::Log::getLevel(ach::LogLevel level)
 {
 	switch (level)
 	{
+		case ach::llDebug  : return "DBG";
 		case ach::llInfo   : return "INFO";
 		case ach::llWarning: return "WARN";
 		case ach::llError  : return "ERR";

@@ -8,9 +8,7 @@
 ***********************************************************************/
 ach::Resources::Resources()
 {
-	fonts.base = new sf::Font();
-
-	fonts.base->loadFromFile("data/fonts/dejavu.ttf");
+	loadFont(&fonts.base, "data/fonts/dejavu.ttf");
 }
 
 
@@ -23,4 +21,22 @@ ach::Resources::Resources()
 ach::Resources::~Resources()
 {
 	delete fonts.base;
+}
+
+
+
+/***********************************************************************
+     * Resources
+     * loadFont
+
+***********************************************************************/
+void ach::Resources::loadFont(sf::Font **font, const char *filename)
+{
+	(*font) = new sf::Font();
+
+	if (!(*font)->loadFromFile(filename))
+	{
+		logger->log(ach::llError, "Error loading font: \"%s\"", filename);
+		return;
+	}
 }

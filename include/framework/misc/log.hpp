@@ -6,7 +6,8 @@ namespace ach
 {
 	enum LogLevel
 	{
-		llInfo = 0,
+		llDebug = 0,
+		llInfo,
 		llWarning,
 		llError
 	};

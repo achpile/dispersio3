@@ -15,7 +15,12 @@ ach::Sheet::Sheet(const char *filename, unsigned int _frames, bool centered)
 
 	tex = new sf::Texture();
 
-	tex->loadFromFile(filename);
+	if (!tex->loadFromFile(filename))
+	{
+		logger->log(ach::llError, "Error loading texture: \"%s\"", filename);
+		return;
+	}
+
 	tex->setSmooth(false);
 
 	step = tex->getSize().x / frames;

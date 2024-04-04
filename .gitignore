@@ -2,6 +2,9 @@
 *.o
 dispersio3
 
+# Game saved data
+logs/
+
 # CMake files
 CMakeCache.txt
 CMakeFiles/

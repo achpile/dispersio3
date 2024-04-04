@@ -14,6 +14,8 @@ namespace ach
 
 		 Resources();
 		~Resources();
+
+		void loadFont(sf::Font **font, const char *filename);
 	};
 }
 
