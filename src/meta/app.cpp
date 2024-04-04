@@ -144,7 +144,7 @@ void ach::App::create()
 	// center window
 
 	sf::Image icon;
-	icon.loadFromFile("data/gfx/gui/misc/icon.png");
+	icon.loadFromFile("data/base/gfx/gui/misc/icon.png");
 
 	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 }

@@ -30,6 +30,7 @@ RED         = "\033[1;31m"
 
 LDFLAGS     = -static-libstdc++ \
               -static-libgcc    \
+              -lstdc++fs        \
               -lsfml-graphics   \
               -lsfml-window     \
               -lsfml-system     \

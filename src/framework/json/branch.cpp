@@ -9,19 +9,19 @@ json_t *json_object_get_branch(json_t *root, const char *path)
 {
 	if (!path)
 	{
-		logger->log(ach::llError, "json_object_get_branch: path is NULL");
+		logger->log(ach::LogLevel::llError, "json_object_get_branch: path is NULL");
 		return NULL;
 	}
 
 	if (!root)
 	{
-		logger->log(ach::llError, "json_object_get_branch: root object is NULL");
+		logger->log(ach::LogLevel::llError, "json_object_get_branch: root object is NULL");
 		return NULL;
 	}
 
 	if (strlen(path) >= STR_LEN_PATH)
 	{
-		logger->log(ach::llError, "json_object_get_branch: path is too long");
+		logger->log(ach::LogLevel::llError, "json_object_get_branch: path is too long");
 		return NULL;
 	}
 
@@ -40,7 +40,7 @@ json_t *json_object_get_branch(json_t *root, const char *path)
 
 		if (!result)
 		{
-			logger->log(ach::llError, "json_object_get_branch: object not found \"%s\"", path);
+			logger->log(ach::LogLevel::llError, "json_object_get_branch: object not found \"%s\"", path);
 			return NULL;
 		}
 
@@ -60,25 +60,25 @@ void json_object_set_branch(json_t *root, const char *path, json_t *obj)
 {
 	if (!path)
 	{
-		logger->log(ach::llError, "json_object_set_branch: path is NULL");
+		logger->log(ach::LogLevel::llError, "json_object_set_branch: path is NULL");
 		return;
 	}
 
 	if (!root)
 	{
-		logger->log(ach::llError, "json_object_set_branch: root object is NULL");
+		logger->log(ach::LogLevel::llError, "json_object_set_branch: root object is NULL");
 		return;
 	}
 
 	if (!obj)
 	{
-		logger->log(ach::llError, "json_object_set_branch: new object is NULL");
+		logger->log(ach::LogLevel::llError, "json_object_set_branch: new object is NULL");
 		return;
 	}
 
 	if (strlen(path) >= STR_LEN_PATH)
 	{
-		logger->log(ach::llError, "json_object_set_branch: path is too long");
+		logger->log(ach::LogLevel::llError, "json_object_set_branch: path is too long");
 		return;
 	}
 

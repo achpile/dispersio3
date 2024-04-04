@@ -2,10 +2,10 @@
 
 
 /***********************************************************************
-     * str_check_check
+     * str_regex_check
 
 ***********************************************************************/
-bool str_check_check(const char *str, const char *expr)
+bool str_regex_check(const char *str, const char *expr)
 {
 	regex_t regex;
 	int ret = regcomp(&regex, expr, REG_NOSUB | REG_EXTENDED);

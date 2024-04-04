@@ -2,41 +2,38 @@
 
 
 /***********************************************************************
-     * Resources
+     * Datamodel
      * constructor
 
 ***********************************************************************/
-ach::Resources::Resources()
+ach::Datamodel::Datamodel()
 {
-	loadFont(&fonts.base, "data/base/fonts/dejavu.ttf");
+	dm   = json_preprocess_include("dm.json", "data/dm");
+	data = json_dm_generate_default(NULL, dm);
+
+	load();
 }
 
 
 
 /***********************************************************************
-     * Resources
+     * Datamodel
      * destructor
 
 ***********************************************************************/
-ach::Resources::~Resources()
+ach::Datamodel::~Datamodel()
 {
-	delete fonts.base;
+	json_decref(data);
+	json_decref(dm);
 }
 
 
 
 /***********************************************************************
-     * Resources
-     * loadFont
+     * Datamodel
+     * load
 
 ***********************************************************************/
-void ach::Resources::loadFont(sf::Font **font, const char *filename)
+void ach::Datamodel::load()
 {
-	(*font) = new sf::Font();
-
-	if (!(*font)->loadFromFile(filename))
-	{
-		logger->log(ach::LogLevel::llError, "Error loading font: \"%s\"", filename);
-		return;
-	}
 }

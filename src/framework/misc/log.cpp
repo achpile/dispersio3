@@ -24,7 +24,7 @@ ach::Log::Log()
 
 	logfile = fopen(filename, "w");
 
-	log(ach::llInfo, PROJECT_NAME " v" PROJECT_VERS " started");
+	log(ach::LogLevel::llInfo, PROJECT_NAME " v" PROJECT_VERS " started");
 }
 
 
