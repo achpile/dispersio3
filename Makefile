@@ -10,7 +10,9 @@ CMAKE       = CMakeFiles           \
               cmake_install.cmake  \
               install_manifest.txt
 
-GARBAGE     = $(OBJS) $(PROJECT) $(CMAKE)
+DATA        = logs/
+
+GARBAGE     = $(OBJS) $(PROJECT) $(CMAKE) $(DATA)
 
 CC          = @g++
 STRIP       = @strip

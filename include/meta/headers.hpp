@@ -1,6 +1,8 @@
 #ifndef __META_HEADERS
 #define __META_HEADERS
 
+#include <sys/stat.h>
+
 #include <jansson.h>
 #include <string.h>
 #include <regex.h>
@@ -16,6 +18,8 @@
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
 
+#include "framework/misc/log.hpp"
+#include "framework/misc/arch.hpp"
 #include "framework/misc/flag.hpp"
 #include "framework/misc/handler.hpp"
 #include "framework/misc/list.hpp"

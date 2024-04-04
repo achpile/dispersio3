@@ -11,6 +11,8 @@ ach::App::App()
 	isRunning = true;
 	isFocused = true;
 
+	logger    = new ach::Log();
+
 	create();
 
 	rm        = new ach::RenderManager();
@@ -38,6 +40,7 @@ ach::App::~App()
 	delete state;
 	delete resources;
 	delete window;
+	delete logger;
 }
 
 
