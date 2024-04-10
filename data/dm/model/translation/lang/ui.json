@@ -1,0 +1,7 @@
+{
+    "#attr": {
+        "type": "object"
+    },
+    "Menu": "#include ui/menu.json",
+    "Options": "#include ui/options.json"
+}

@@ -1,0 +1,30 @@
+{
+    "#attr": {
+        "type": "multi"
+    },
+    "Author": {
+        "#attr": {
+            "type": "array"
+        },
+        "Name": {
+            "#attr": {
+                "default": "Unknown writer",
+                "maxlen": 32,
+                "type": "string"
+            }
+        }
+    },
+    "Label": {
+        "#attr": {
+            "default": "English",
+            "type": "string"
+        }
+    },
+    "Lang": "#include translation/lang.json",
+    "Steam": {
+        "#attr": {
+            "default": "english",
+            "type": "string"
+        }
+    }
+}

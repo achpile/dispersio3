@@ -1,0 +1,6 @@
+{
+    "#attr": {
+        "type": "object"
+    },
+    "Translation": "#include translation.json"
+}

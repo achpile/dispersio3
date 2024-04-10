@@ -1,0 +1,58 @@
+{
+    "#attr": {
+        "type": "object"
+    },
+    "Fullscreen": {
+        "#attr": {
+            "default": "Fullscreen",
+            "type": "string"
+        }
+    },
+    "Language": {
+        "#attr": {
+            "default": "Language",
+            "type": "string"
+        }
+    },
+    "Music": {
+        "#attr": {
+            "default": "Music volume",
+            "type": "string"
+        }
+    },
+    "Ratio": {
+        "#attr": {
+            "default": "Keep aspect ratio",
+            "type": "string"
+        }
+    },
+    "Smooth": {
+        "#attr": {
+            "default": "Texture smoothing",
+            "type": "string"
+        }
+    },
+    "Sound": {
+        "#attr": {
+            "default": "Sound volume",
+            "type": "string"
+        }
+    },
+    "Switch": {
+        "#attr": {
+            "type": "object"
+        },
+        "Off": {
+            "#attr": {
+                "default": "Off",
+                "type": "string"
+            }
+        },
+        "On": {
+            "#attr": {
+                "default": "On",
+                "type": "string"
+            }
+        }
+    }
+}

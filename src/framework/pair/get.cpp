@@ -5,7 +5,8 @@
      * pairGetString
 
 ***********************************************************************/
-const char *pairGetString(int val, ach::Pair pairs[]) {
+const char *pairGetString(int val, ach::Pair pairs[])
+{
 	for (int i = 0; pairs[i].str; i++)
 		if (val == pairs[i].num)
 			return pairs[i].str;
@@ -19,7 +20,8 @@ const char *pairGetString(int val, ach::Pair pairs[]) {
      * pairGetEnum
 
 ***********************************************************************/
-int pairGetEnum(const char * val, ach::Pair pairs[]) {
+int pairGetEnum(const char * val, ach::Pair pairs[])
+{
 	if (!val)
 		return 0;
 

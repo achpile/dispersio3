@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Datamodel::Datamodel()
 {
-	dm   = json_preprocess_include("dm.json", "data/dm");
+	dm   = json_preprocess_include("main.json", "data/dm/model");
 	data = json_dm_generate_default(NULL, dm);
 
 	load();
@@ -36,4 +36,26 @@ ach::Datamodel::~Datamodel()
 ***********************************************************************/
 void ach::Datamodel::load()
 {
+	loadPath("data/base");
+}
+
+
+
+/***********************************************************************
+     * Datamodel
+     * loadPath
+
+***********************************************************************/
+void ach::Datamodel::loadPath(const char *path)
+{
+	logger->log(ach::llInfo, "Loading data from: \"%s\"", path);
+
+	json_t *pack = json_preprocess_include("json/main.json", path);
+
+	json_dm_check_datatypes(pack, dm, path);
+	json_merge(data, pack);
+	json_dm_check_links(data, data, dm);
+	json_dm_generate_default(data, dm);
+
+	json_decref(pack);
 }

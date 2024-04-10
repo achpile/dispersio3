@@ -14,6 +14,7 @@ namespace ach
 		~Datamodel();
 
 		void load();
+		void loadPath(const char *path);
 	};
 }
 

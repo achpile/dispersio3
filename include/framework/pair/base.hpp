@@ -4,7 +4,8 @@
 
 namespace ach
 {
-	struct Pair {
+	struct Pair
+	{
 		int         num;
 		const char *str;
 	};

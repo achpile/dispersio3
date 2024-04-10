@@ -1,0 +1,12 @@
+{
+    "rus": {
+        "Author": [
+            {
+                "Name": "Achpile"
+            }
+        ],
+        "Label": "Русский",
+        "Lang": "#include rus/lang.json",
+        "Steam": "russian"
+    }
+}

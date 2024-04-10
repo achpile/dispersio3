@@ -12,6 +12,7 @@ ach::App::App()
 	isFocused = true;
 
 	logger    = new ach::Log();
+	dm        = new ach::Datamodel();
 
 	create();
 
@@ -36,6 +37,7 @@ ach::App::~App()
 {
 	delete rm;
 	delete tm;
+	delete dm;
 
 	delete state;
 	delete resources;
