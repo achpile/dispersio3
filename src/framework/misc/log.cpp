@@ -88,25 +88,20 @@ void ach::Log::put(FILE *fp, const char *str, ach::LogLevel level)
 	if (!fp)
 		return;
 
-	fprintf(fp, "[%02d:%02d:%02d][%4s]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, getLevel(level), str);
+	fprintf(fp, "[%02d:%02d:%02d][%4s]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, pairGetString(level, pairLog), str);
 	fflush(fp);
 }
 
 
 
 /***********************************************************************
-     * Log
-     * getLevel
+     * pairLog
 
 ***********************************************************************/
-const char* ach::Log::getLevel(ach::LogLevel level)
-{
-	switch (level)
-	{
-		case ach::llDebug  : return "DBG";
-		case ach::llInfo   : return "INFO";
-		case ach::llWarning: return "WARN";
-		case ach::llError  : return "ERR";
-		default            : return "";
-	}
-}
+ach::Pair pairLog[] = {
+	{.num = ach::LogLevel::llDebug  , .str = "DBG" },
+	{.num = ach::LogLevel::llInfo   , .str = "INFO"},
+	{.num = ach::LogLevel::llWarning, .str = "WARN"},
+	{.num = ach::LogLevel::llError  , .str = "ERR" },
+	{.num = 0                       , .str = NULL  },
+};

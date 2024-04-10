@@ -20,6 +20,9 @@
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
 
+#include "framework/pair/base.hpp"
+#include "framework/pair/get.hpp"
+
 #include "framework/misc/log.hpp"
 #include "framework/misc/arch.hpp"
 #include "framework/misc/flag.hpp"
