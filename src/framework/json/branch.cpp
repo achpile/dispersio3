@@ -112,3 +112,41 @@ void json_object_set_branch(json_t *root, const char *path, json_t *obj)
 
 	json_object_set_new(parent, l, obj);
 }
+
+
+
+/***********************************************************************
+     * json_object_getv_branch
+
+***********************************************************************/
+json_t *json_object_getv_branch(json_t *root, const char *format, ...)
+{
+	char path[STR_LEN_PATH];
+
+	va_list ap;
+
+	va_start(ap, format);
+	vsnprintf(path, STR_LEN_PATH, format, ap);
+	va_end(ap);
+
+	return json_object_get_branch(root, path);
+}
+
+
+
+/***********************************************************************
+     * json_object_setv_branch
+
+***********************************************************************/
+void json_object_set_branch(json_t *root, json_t *obj, const char *format, ...)
+{
+	char path[STR_LEN_PATH];
+
+	va_list ap;
+
+	va_start(ap, format);
+	vsnprintf(path, STR_LEN_PATH, format, ap);
+	va_end(ap);
+
+	json_object_set_branch(root, path, obj);
+}
