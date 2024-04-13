@@ -47,17 +47,7 @@ json_t *json_attr_get_default(json_t *obj)
 		return NULL;
 	}
 
-	json_t *def = json_object_get(attr, "default");
-
-	if (json_attr_get_type(obj) == ach::JSONtype::jtFilename)
-	{
-		char path[STR_LEN_PATH];
-
-		snprintf(path, STR_LEN_PATH, "%s/%s", json_attr_get_dir(obj), json_string_value(def));
-		return json_string(path);
-	}
-
-	return json_deep_copy(def);
+	return json_deep_copy(json_object_get(attr, "default"));
 }
 
 
@@ -199,25 +189,6 @@ float json_attr_get_max_real(json_t *obj)
 	}
 
 	return json_object_get_real(attr, "max");
-}
-
-
-
-/***********************************************************************
-     * json_attr_get_dir
-
-***********************************************************************/
-const char *json_attr_get_dir(json_t *obj)
-{
-	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
-
-	if (!attr)
-	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
-		return NULL;
-	}
-
-	return json_object_get_string(attr, "dir");
 }
 
 

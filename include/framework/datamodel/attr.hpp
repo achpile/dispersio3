@@ -29,7 +29,6 @@ int            json_attr_get_min(json_t *obj);
 int            json_attr_get_max(json_t *obj);
 float          json_attr_get_min_real(json_t *obj);
 float          json_attr_get_max_real(json_t *obj);
-const char    *json_attr_get_dir(json_t *obj);
 const char    *json_attr_get_data(json_t *obj);
 
 #endif

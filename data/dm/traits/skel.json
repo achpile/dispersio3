@@ -15,7 +15,6 @@
         "Filename": {
             "@attr": {
                 "default": "path/to/file.type",
-                "dir": "base/folder",
                 "type": "filename"
             }
         },

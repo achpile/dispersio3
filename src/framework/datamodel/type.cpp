@@ -144,7 +144,7 @@ bool json_type_check_boolean(json_t *obj, json_t *, const char *name, const char
      * json_type_check_filename
 
 ***********************************************************************/
-bool json_type_check_filename(json_t *obj, json_t *dm, const char *name, const char *path)
+bool json_type_check_filename(json_t *obj, json_t *, const char *name, const char *path)
 {
 	char filename[STR_LEN_PATH];
 
@@ -154,13 +154,13 @@ bool json_type_check_filename(json_t *obj, json_t *dm, const char *name, const c
 		return false;
 	}
 
-	snprintf(filename, STR_LEN_PATH, "%s/%s/%s", path, json_attr_get_dir(dm), json_string_value(obj));
+	snprintf(filename, STR_LEN_PATH, "%s/%s", path, json_string_value(obj));
 
 	if (!fileExists(filename))
 	{
 		logger->log(ach::LogLevel::llWarning, "File \"%s\" is not found: using %s dir instead", filename, PATH_BASE);
 
-		snprintf(filename, STR_LEN_PATH, "%s/%s/%s", PATH_BASE, json_attr_get_dir(dm), json_string_value(obj));
+		snprintf(filename, STR_LEN_PATH, "%s/%s", PATH_BASE, json_string_value(obj));
 	}
 
 	if (!fileExists(filename))
