@@ -6,7 +6,7 @@ namespace ach
 {
 	enum JSONtype
 	{
-		jtUnknown,
+		jtUnknown = 0,
 		jtObject,
 		jtString,
 		jtInteger,

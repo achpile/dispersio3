@@ -20,10 +20,15 @@
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
 
-#include "framework/pair/base.hpp"
-#include "framework/pair/get.hpp"
+#include "framework/string/pair.hpp"
+#include "framework/string/check.hpp"
+#include "framework/string/regex.hpp"
+#include "framework/string/color.hpp"
+#include "framework/string/utf8.hpp"
 
-#include "framework/misc/log.hpp"
+#include "framework/log/base.hpp"
+#include "framework/log/pair.hpp"
+
 #include "framework/misc/arch.hpp"
 #include "framework/misc/flag.hpp"
 #include "framework/misc/handler.hpp"
@@ -36,16 +41,12 @@
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"
 
-#include "framework/string/check.hpp"
-#include "framework/string/regex.hpp"
-#include "framework/string/color.hpp"
-#include "framework/string/utf8.hpp"
-
 #include "framework/json/branch.hpp"
 #include "framework/json/merge.hpp"
 #include "framework/json/macros.hpp"
 
 #include "framework/datamodel/attr.hpp"
+#include "framework/datamodel/pair.hpp"
 #include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/type.hpp"
 #include "framework/datamodel/check.hpp"

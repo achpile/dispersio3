@@ -23,18 +23,12 @@ ach::JSONtype json_attr_get_type(json_t *obj)
 		return ach::JSONtype::jtUnknown;
 	}
 
-	     if (!strcmp(type, "object"  )) return ach::JSONtype::jtObject;
-	else if (!strcmp(type, "string"  )) return ach::JSONtype::jtString;
-	else if (!strcmp(type, "integer" )) return ach::JSONtype::jtInteger;
-	else if (!strcmp(type, "boolean" )) return ach::JSONtype::jtBoolean;
-	else if (!strcmp(type, "filename")) return ach::JSONtype::jtFilename;
-	else if (!strcmp(type, "color"   )) return ach::JSONtype::jtColor;
-	else if (!strcmp(type, "array"   )) return ach::JSONtype::jtArray;
-	else if (!strcmp(type, "multi"   )) return ach::JSONtype::jtMulti;
-	else if (!strcmp(type, "link"    )) return ach::JSONtype::jtLink;
+	ach::JSONtype res = (ach::JSONtype)pairGetEnum(type, pairAttrType);
 
-	logger->log(ach::LogLevel::llError, "Unknown type: \"%s\"", type);
-	return ach::JSONtype::jtUnknown;
+	if (res == ach::JSONtype::jtUnknown)
+		logger->log(ach::LogLevel::llError, "Unknown type: \"%s\"", type);
+
+	return res;
 }
 
 

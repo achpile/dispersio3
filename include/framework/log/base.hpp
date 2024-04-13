@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MISC_LOG
-#define __FRAMEWORK_MISC_LOG
+#ifndef __FRAMEWORK_LOG_BASE
+#define __FRAMEWORK_LOG_BASE
 
 
 namespace ach
@@ -29,7 +29,5 @@ namespace ach
 		void put(FILE *fp, const char *str, ach::LogLevel level);
 	};
 }
-
-extern ach::Pair pairLog[];
 
 #endif

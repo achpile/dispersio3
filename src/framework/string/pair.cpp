@@ -25,9 +25,11 @@ int pairGetEnum(const char * val, ach::Pair pairs[])
 	if (!val)
 		return 0;
 
-	for (int i = 0; pairs[i].str; i++)
-		if (!strcmp(val, pairs[i].str))
-			return pairs[i].num;
+	int i;
 
-	return 0;
+	for (i = 0; pairs[i].str; i++)
+		if (!strcmp(val, pairs[i].str))
+			break;
+
+	return pairs[i].num;
 }
