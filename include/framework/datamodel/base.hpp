@@ -8,6 +8,7 @@ namespace ach
 	{
 		json_t *dm;
 		json_t *data;
+		json_t *traits;
 
 
 		 Datamodel();

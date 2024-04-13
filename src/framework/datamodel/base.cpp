@@ -8,10 +8,14 @@
 ***********************************************************************/
 ach::Datamodel::Datamodel()
 {
-	dm   = json_preprocess_include("main.json", "data/dm/model");
-	data = json_dm_generate_default(NULL, dm);
+	traits = json_preprocess_dir("traits", "data/dm");
+	dm     = json_preprocess_include("main.json", "data/dm/model");
+
+	json_dm_trait_process(dm, traits);
 
 	load();
+
+	json_dump_file(dm, "test.json", JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
 
@@ -24,6 +28,7 @@ ach::Datamodel::Datamodel()
 ach::Datamodel::~Datamodel()
 {
 	json_decref(data);
+	json_decref(traits);
 	json_decref(dm);
 }
 
@@ -36,6 +41,8 @@ ach::Datamodel::~Datamodel()
 ***********************************************************************/
 void ach::Datamodel::load()
 {
+	data = json_dm_generate_default(NULL, dm);
+
 	loadPath("data/base");
 }
 

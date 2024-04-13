@@ -17,6 +17,7 @@
     "Label": {
         "#attr": {
             "default": "English",
+            "maxlen": 32,
             "type": "string"
         }
     },
@@ -24,6 +25,7 @@
     "Steam": {
         "#attr": {
             "default": "english",
+            "maxlen": 32,
             "type": "string"
         }
     }

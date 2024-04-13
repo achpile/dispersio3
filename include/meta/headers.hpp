@@ -46,6 +46,7 @@
 #include "framework/json/macros.hpp"
 
 #include "framework/datamodel/attr.hpp"
+#include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/type.hpp"
 #include "framework/datamodel/check.hpp"
 #include "framework/datamodel/default.hpp"

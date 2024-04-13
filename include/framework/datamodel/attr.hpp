@@ -22,6 +22,7 @@ namespace ach
 
 ach::JSONtype  json_attr_get_type(json_t *obj);
 json_t        *json_attr_get_default(json_t *obj);
+json_t        *json_attr_get_traits(json_t *obj);
 size_t         json_attr_get_maxlen(json_t *obj);
 int            json_attr_get_min(json_t *obj);
 int            json_attr_get_max(json_t *obj);

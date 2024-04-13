@@ -69,6 +69,25 @@ json_t *json_attr_get_default(json_t *obj)
 
 
 /***********************************************************************
+     * json_attr_get_traits
+
+***********************************************************************/
+json_t *json_attr_get_traits(json_t *obj)
+{
+	json_t *attr = json_object_get(obj, "#attr");
+
+	if (!attr)
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		return NULL;
+	}
+
+	return json_object_get(attr, "traits");
+}
+
+
+
+/***********************************************************************
      * json_attr_get_maxlen
 
 ***********************************************************************/
