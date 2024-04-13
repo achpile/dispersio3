@@ -7,7 +7,7 @@
 ***********************************************************************/
 ach::JSONtype json_attr_get_type(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -39,7 +39,7 @@ ach::JSONtype json_attr_get_type(json_t *obj)
 ***********************************************************************/
 json_t *json_attr_get_default(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -68,7 +68,7 @@ json_t *json_attr_get_default(json_t *obj)
 ***********************************************************************/
 json_t *json_attr_get_traits(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -87,7 +87,7 @@ json_t *json_attr_get_traits(json_t *obj)
 ***********************************************************************/
 size_t json_attr_get_maxlen(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -109,7 +109,7 @@ size_t json_attr_get_maxlen(json_t *obj)
 ***********************************************************************/
 int json_attr_get_min(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -134,7 +134,7 @@ int json_attr_get_min(json_t *obj)
 ***********************************************************************/
 int json_attr_get_max(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -159,7 +159,7 @@ int json_attr_get_max(json_t *obj)
 ***********************************************************************/
 float json_attr_get_min_real(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -184,7 +184,7 @@ float json_attr_get_min_real(json_t *obj)
 ***********************************************************************/
 float json_attr_get_max_real(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -209,7 +209,7 @@ float json_attr_get_max_real(json_t *obj)
 ***********************************************************************/
 const char *json_attr_get_dir(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{
@@ -228,7 +228,7 @@ const char *json_attr_get_dir(json_t *obj)
 ***********************************************************************/
 const char *json_attr_get_data(json_t *obj)
 {
-	json_t *attr = json_object_get(obj, "#attr");
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
 
 	if (!attr)
 	{

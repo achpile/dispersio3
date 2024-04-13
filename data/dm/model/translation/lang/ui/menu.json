@@ -1,51 +1,51 @@
 {
-    "#attr": {
+    "@attr": {
         "type": "object"
     },
     "Audio": {
-        "#attr": {
+        "@attr": {
             "default": "Audio",
             "type": "string"
         }
     },
     "Back": {
-        "#attr": {
+        "@attr": {
             "default": "Back",
             "type": "string"
         }
     },
     "Exit": {
-        "#attr": {
+        "@attr": {
             "default": "Exit",
             "type": "string"
         }
     },
     "Game": {
-        "#attr": {
+        "@attr": {
             "default": "Game",
             "type": "string"
         }
     },
     "Name": {
-        "#attr": {
+        "@attr": {
             "default": "Main menu",
             "type": "string"
         }
     },
     "Options": {
-        "#attr": {
+        "@attr": {
             "default": "Options",
             "type": "string"
         }
     },
     "Start": {
-        "#attr": {
+        "@attr": {
             "default": "Start game",
             "type": "string"
         }
     },
     "Video": {
-        "#attr": {
+        "@attr": {
             "default": "Video",
             "type": "string"
         }

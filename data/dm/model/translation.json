@@ -1,13 +1,13 @@
 {
-    "#attr": {
+    "@attr": {
         "type": "multi"
     },
     "Author": {
-        "#attr": {
+        "@attr": {
             "type": "array"
         },
         "Name": {
-            "#attr": {
+            "@attr": {
                 "default": "Unknown writer",
                 "maxlen": 32,
                 "type": "string"
@@ -15,15 +15,15 @@
         }
     },
     "Label": {
-        "#attr": {
+        "@attr": {
             "default": "English",
             "maxlen": 32,
             "type": "string"
         }
     },
-    "Lang": "#include translation/lang.json",
+    "Lang": "@include translation/lang.json",
     "Steam": {
-        "#attr": {
+        "@attr": {
             "default": "english",
             "maxlen": 32,
             "type": "string"

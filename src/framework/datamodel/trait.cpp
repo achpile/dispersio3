@@ -18,7 +18,7 @@ void json_dm_trait_process(json_t *obj, json_t *traits)
 
 	json_object_foreach(obj, key, i)
 	{
-		if (!strcmp(key, "#attr"))
+		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
 		if (json_is_object(i))

@@ -1,26 +1,26 @@
 {
     "Skel": {
         "Boolean": {
-            "#attr": {
+            "@attr": {
                 "default": false,
                 "type": "boolean"
             }
         },
         "Color": {
-            "#attr": {
+            "@attr": {
                 "default": "#FFFFFFFF",
                 "type": "color"
             }
         },
         "Filename": {
-            "#attr": {
+            "@attr": {
                 "default": "path/to/file.type",
                 "dir": "base/folder",
                 "type": "filename"
             }
         },
         "Integer": {
-            "#attr": {
+            "@attr": {
                 "default": 0,
                 "max": 32,
                 "min": 0,
@@ -28,14 +28,14 @@
             }
         },
         "Link": {
-            "#attr": {
+            "@attr": {
                 "data": "Data.Multi.Object",
                 "default": "default",
                 "type": "link"
             }
         },
         "Real": {
-            "#attr": {
+            "@attr": {
                 "default": 3.1415,
                 "max": 11.5,
                 "min": 0.25,
@@ -43,7 +43,7 @@
             }
         },
         "String": {
-            "#attr": {
+            "@attr": {
                 "default": "",
                 "maxlen": 32,
                 "type": "string"

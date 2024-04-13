@@ -6,7 +6,7 @@
             }
         ],
         "Label": "Русский",
-        "Lang": "#include rus/lang.json",
+        "Lang": "@include rus/lang.json",
         "Steam": "russian"
     }
 }

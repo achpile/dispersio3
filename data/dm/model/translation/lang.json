@@ -1,6 +1,6 @@
 {
-    "#attr": {
+    "@attr": {
         "type": "object"
     },
-    "UI": "#include lang/ui.json"
+    "UI": "@include lang/ui.json"
 }

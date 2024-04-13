@@ -15,7 +15,7 @@ json_t *json_dm_generate_default(json_t *obj, json_t *dm)
 
 	json_object_foreach(dm, key, i)
 	{
-		if (!strcmp(key, "#attr"))
+		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
 		     if (json_attr_get_type(i) == ach::jtObject) json_dm_generate_default_object(res, i, key);

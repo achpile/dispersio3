@@ -19,7 +19,7 @@ json_t *json_preprocess(json_t *obj, const char *dir)
 		{
 			const char *val = json_string_value(sub);
 
-			if (*val == '#')
+			if (*val == DM_DIRECTIVE_START)
 			{
 				json_t *res = json_preprocess_directive(val, dir);
 
@@ -54,10 +54,10 @@ const char *json_preprocess_argument(const char *str)
 ***********************************************************************/
 json_t *json_preprocess_directive(const char *name, const char *dir)
 {
-	if      (str_check_start(name, "#include")) return json_preprocess_include(json_preprocess_argument(name), dir);
-	else if (str_check_start(name, "#dir"    )) return json_preprocess_dir    (json_preprocess_argument(name), dir);
+	if      (str_check_start(name, DM_DIRECTIVE_INCLUDE)) return json_preprocess_include(json_preprocess_argument(name), dir);
+	else if (str_check_start(name, DM_DIRECTIVE_DIR    )) return json_preprocess_dir    (json_preprocess_argument(name), dir);
 
-	else if (!str_regex_check(name, STR_REGEX_COLOR))
+	else
 		logger->log(ach::LogLevel::llError, "Unknown directive \"%s\"", name);
 
 	return NULL;
