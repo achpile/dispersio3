@@ -2,6 +2,7 @@
 #define __FRAMEWORK_DATAMODEL_DIRECTIVE
 
 
+#define DM_DIRECTIVE_PWD       '~'
 #define DM_DIRECTIVE_START     '@'
 
 #define DM_DIRECTIVE_ATTR      "@attr"

@@ -28,6 +28,10 @@ json_t *json_preprocess(json_t *obj, const char *dir)
 					json_object_set_new_nocheck(obj, key, res);
 					json_decref(sub);
 				}
+				else
+				{
+					json_object_del(obj, key);
+				}
 			}
 		}
 	}
@@ -73,6 +77,12 @@ json_t *json_preprocess_include(const char *name, const char *dir)
 {
 	char path[STR_LEN_PATH];
 	json_error_t error;
+
+	if (name[0] == DM_DIRECTIVE_PWD)
+	{
+		name++;
+		dir = ".";
+	}
 
 	snprintf(path, STR_LEN_PATH, "%s/%s", dir, name);
 

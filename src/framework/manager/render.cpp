@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::RenderManager::RenderManager()
 {
-	gui = new ach::Layer(1280, 800);
+	gui = new ach::Layer(RENDER_LAYER_GUI_X, RENDER_LAYER_GUI_Y);
 }
 
 
