@@ -3,6 +3,12 @@
 
 extern ach::App           *app;
 extern ach::Log           *logger;
+
 extern ach::Resources     *resources;
+extern ach::Settings      *settings;
+
+extern ach::RenderManager *rm;
+extern ach::TimeManager   *tm;
+extern ach::Datamodel     *dm;
 
 #endif

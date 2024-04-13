@@ -63,14 +63,14 @@ void ach::Menu::update()
 ***********************************************************************/
 void ach::Menu::render()
 {
-	app->rm->draw(box, ach::RenderLayer::rlGUI);
+	rm->draw(box, ach::RenderLayer::rlGUI);
 
 	for (unsigned int i = 0; i < current->items.size(); i++)
 	{
 		text->setString(current->items[i]->caption);
 		text->setPosition(pos.x + padding.x, pos.y + padding.y + i * spacing);
 
-		app->rm->draw(text, ach::RenderLayer::rlGUI);
+		rm->draw(text, ach::RenderLayer::rlGUI);
 	}
 }
 

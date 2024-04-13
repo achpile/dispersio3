@@ -13,13 +13,14 @@ ach::App::App()
 
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
+	settings  = new ach::Settings();
+	resources = new ach::Resources();
 
 	create();
 
 	rm        = new ach::RenderManager();
 	tm        = new ach::TimeManager();
 
-	resources = new ach::Resources();
 	state     = new ach::StateMenu();
 
 	resize();
@@ -35,14 +36,15 @@ ach::App::App()
 ***********************************************************************/
 ach::App::~App()
 {
-	delete rm;
-	delete tm;
-	delete dm;
-
+	delete settings;
 	delete state;
 	delete resources;
 	delete window;
 	delete logger;
+
+	delete rm;
+	delete tm;
+	delete dm;
 }
 
 
@@ -135,18 +137,15 @@ void ach::App::resize()
 ***********************************************************************/
 void ach::App::create()
 {
-	window = new sf::RenderWindow(sf::VideoMode(1280, 800, 32), // settings->getWindowMode
+	window = new sf::RenderWindow(settings->getWindowMode(),
 	                              PROJECT_NAME " v" PROJECT_VERS,
-	                              sf::Style::Default);          // settings->getWindowStyle
+	                              settings->getWindowStyle());
 
 	window->setMouseCursorVisible(true);
 	window->setFramerateLimit(60);
 	window->setVerticalSyncEnabled(true);
-
-	// center window
-
-	sf::Image icon;
-	icon.loadFromFile("data/base/gfx/gui/misc/icon.png");
-
-	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+	window->setPosition(settings->getWindowPosition());
+	window->setIcon(resources->meta.icon->getSize().x,
+	                resources->meta.icon->getSize().y,
+	                resources->meta.icon->getPixelsPtr());
 }

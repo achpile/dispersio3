@@ -88,6 +88,6 @@ void ach::Log::put(FILE *fp, const char *str, ach::LogLevel level)
 	if (!fp)
 		return;
 
-	fprintf(fp, "[%02d:%02d:%02d][%4s]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, pairGetString(level, pairLog), str);
+	fprintf(fp, "[%02d:%02d:%02d] [ %-4s ]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, pairGetString(level, pairLog), str);
 	fflush(fp);
 }

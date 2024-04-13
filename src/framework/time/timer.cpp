@@ -59,7 +59,7 @@ bool ach::Timer::process()
 	if (value <= 0)
 		return false;
 
-	value -= app->tm->frame;
+	value -= tm->frame;
 
 	if (value <= 0)
 	{

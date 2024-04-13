@@ -33,7 +33,7 @@ ach::Framer::~Framer()
 ***********************************************************************/
 void ach::Framer::update()
 {
-	value -= app->tm->frame;
+	value -= tm->frame;
 
 	while (value < 0.0f)
 	{

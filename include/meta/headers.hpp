@@ -69,6 +69,7 @@
 #include "framework/manager/time.hpp"
 
 #include "container/resources.hpp"
+#include "container/settings.hpp"
 
 #include "state/base.hpp"
 #include "state/menu.hpp"

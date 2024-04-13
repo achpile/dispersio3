@@ -5,10 +5,6 @@ namespace ach
 {
 	struct App
 	{
-		ach::RenderManager *rm;
-		ach::TimeManager   *tm;
-		ach::Datamodel     *dm;
-
 		ach::StateBase     *state;
 		sf::RenderWindow   *window;
 

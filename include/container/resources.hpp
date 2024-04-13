@@ -11,11 +11,17 @@ namespace ach
 			sf::Font *base;
 		} fonts;
 
+		struct
+		{
+			sf::Image *icon;
+		} meta;
+
 
 		 Resources();
 		~Resources();
 
-		void loadFont(sf::Font **font, const char *filename);
+		void loadFont (sf::Font **font  , const char *filename);
+		void loadImage(sf::Image **image, const char *filename);
 	};
 }
 

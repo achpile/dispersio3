@@ -2,36 +2,42 @@
     "@attr": {
         "type": "object"
     },
-    "Window": {
-        "@attr": {
-            "type": "object"
-        },
-        "Width": {
-            "@attr": {
-                "default": 1280,
-                "type": "integer",
-                "min": 640,
-                "max": 32768
-            }
-        },
-        "Height": {
-            "@attr": {
-                "default": 800,
-                "type": "integer",
-                "min": 400,
-                "max": 32768
-            }
-        }
-    },
     "Game": {
         "@attr": {
             "type": "object"
         },
         "Language": {
             "@attr": {
+                "data": "Translation",
                 "default": "eng",
-                "type": "link",
-                "data": "Translation"
+                "type": "link"
+            }
+        }
+    },
+    "Window": {
+        "@attr": {
+            "type": "object"
+        },
+        "Fullscreen": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        },
+        "Height": {
+            "@attr": {
+                "default": 800,
+                "max": 32768,
+                "min": 400,
+                "type": "integer"
+            }
+        },
+        "Width": {
+            "@attr": {
+                "default": 1280,
+                "max": 32768,
+                "min": 640,
+                "type": "integer"
             }
         }
     }

@@ -10,7 +10,8 @@ CMAKE       = CMakeFiles           \
               cmake_install.cmake  \
               install_manifest.txt
 
-DATA        = logs/
+DATA        = settings.json        \
+              logs/
 
 GARBAGE     = $(OBJS) $(PROJECT) $(CMAKE) $(DATA)
 
