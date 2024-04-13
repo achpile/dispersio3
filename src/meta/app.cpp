@@ -14,6 +14,7 @@ ach::App::App()
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
 	settings  = new ach::Settings();
+	lang      = new ach::Language();
 	resources = new ach::Resources();
 
 	create();
@@ -37,6 +38,7 @@ ach::App::App()
 ach::App::~App()
 {
 	delete settings;
+	delete lang;
 	delete state;
 	delete resources;
 	delete window;

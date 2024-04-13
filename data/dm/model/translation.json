@@ -21,7 +21,7 @@
             "type": "string"
         }
     },
-    "Lang": "@include translation/lang.json",
+    "Tokens": "@include translation/tokens.json",
     "Steam": {
         "@attr": {
             "default": "english",

@@ -6,6 +6,7 @@ ach::Log           *logger;
 
 ach::Resources     *resources;
 ach::Settings      *settings;
+ach::Language      *lang;
 
 ach::RenderManager *rm;
 ach::TimeManager   *tm;

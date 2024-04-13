@@ -15,6 +15,8 @@ namespace ach
 
 		bool isFullscreen();
 
+		const char   *getLanguage();
+
 		sf::VideoMode getWindowMode();
 		sf::Uint32    getWindowStyle();
 		sf::Vector2i  getWindowPosition();

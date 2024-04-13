@@ -70,6 +70,7 @@
 
 #include "container/resources.hpp"
 #include "container/settings.hpp"
+#include "container/language.hpp"
 
 #include "state/base.hpp"
 #include "state/menu.hpp"
