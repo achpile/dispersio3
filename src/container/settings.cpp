@@ -93,3 +93,16 @@ sf::Vector2i ach::Settings::getWindowPosition()
 
 	return offset;
 }
+
+
+
+/***********************************************************************
+     * Settings
+     * setWindowSize
+
+***********************************************************************/
+void ach::Settings::setWindowSize(sf::Vector2u size)
+{
+	json_object_set_branch_integer(data, "Window.Width" , size.x);
+	json_object_set_branch_integer(data, "Window.Height", size.y);
+}

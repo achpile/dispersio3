@@ -12,11 +12,14 @@ namespace ach
 		 Settings();
 		~Settings();
 
+
 		bool isFullscreen();
 
 		sf::VideoMode getWindowMode();
 		sf::Uint32    getWindowStyle();
 		sf::Vector2i  getWindowPosition();
+
+		void setWindowSize(sf::Vector2u size);
 	};
 }
 

@@ -125,6 +125,7 @@ void ach::App::event(sf::Event e)
 ***********************************************************************/
 void ach::App::resize()
 {
+	settings->setWindowSize(window->getSize());
 	rm->resize(window);
 }
 
