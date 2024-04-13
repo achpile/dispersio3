@@ -154,6 +154,56 @@ int json_attr_get_max(json_t *obj)
 
 
 /***********************************************************************
+     * json_attr_get_min_real
+
+***********************************************************************/
+float json_attr_get_min_real(json_t *obj)
+{
+	json_t *attr = json_object_get(obj, "#attr");
+
+	if (!attr)
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		return 0;
+	}
+
+	if (!json_object_get(attr, "min"))
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find 'min' value in #attr");
+		return 0;
+	}
+
+	return json_object_get_real(attr, "min");
+}
+
+
+
+/***********************************************************************
+     * json_attr_get_max_real
+
+***********************************************************************/
+float json_attr_get_max_real(json_t *obj)
+{
+	json_t *attr = json_object_get(obj, "#attr");
+
+	if (!attr)
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		return 0;
+	}
+
+	if (!json_object_get(attr, "max"))
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find 'max' value in #attr");
+		return 0;
+	}
+
+	return json_object_get_real(attr, "max");
+}
+
+
+
+/***********************************************************************
      * json_attr_get_dir
 
 ***********************************************************************/

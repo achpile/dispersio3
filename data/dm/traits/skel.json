@@ -34,6 +34,14 @@
                 "type": "link"
             }
         },
+        "Real": {
+            "#attr": {
+                "default": 3.1415,
+                "max": 11.5,
+                "min": 0.25,
+                "type": "real"
+            }
+        },
         "String": {
             "#attr": {
                 "default": "",
