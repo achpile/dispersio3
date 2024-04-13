@@ -1,0 +1,11 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Base": {
+    "@attr": {
+        "type": "filename",
+        "default": "font/dejavu.ttf"
+    }
+	}
+}

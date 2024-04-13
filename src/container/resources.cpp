@@ -8,9 +8,9 @@
 ***********************************************************************/
 ach::Resources::Resources()
 {
-	loadFont(&fonts.base, "data/base/fonts/dejavu.ttf");
+	loadFont(&fonts.base, json_object_get_branch_string(dm->data, "Meta.Font.Base"));
 
-	loadImage(&meta.icon, "data/base/gfx/gui/misc/icon.png");
+	loadImage(&meta.icon, json_object_get_branch_string(dm->data, "Meta.Icon"));
 }
 
 

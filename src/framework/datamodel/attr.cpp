@@ -47,7 +47,16 @@ json_t *json_attr_get_default(json_t *obj)
 		return NULL;
 	}
 
-	return json_deep_copy(json_object_get(attr, "default"));
+	json_t *def = json_object_get(attr, "default");
+
+	if (json_attr_get_type(obj) == ach::jtFilename) {
+		char path[STR_LEN_PATH];
+
+		snprintf(path, STR_LEN_PATH, PATH_BASE "/%s", json_string_value(def));
+		return json_string(path);
+	}
+
+	return json_deep_copy(def);
 }
 
 

@@ -1,0 +1,6 @@
+{
+    "@attr": {
+        "type": "filename",
+        "default": "gfx/gui/misc/icon.png"
+    }
+}

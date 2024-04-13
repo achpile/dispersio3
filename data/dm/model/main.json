@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Meta": "@include meta.json",
     "Settings": "@include settings.json",
     "Translation": "@include translation.json"
 }
