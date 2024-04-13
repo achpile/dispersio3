@@ -6,12 +6,14 @@ namespace ach
 {
 	enum RenderLayer
 	{
+		rlBG,
 		rlGUI
 	};
 
 
 	struct RenderManager
 	{
+		ach::Layer *bg;
 		ach::Layer *gui;
 
 

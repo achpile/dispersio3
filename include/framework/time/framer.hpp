@@ -14,7 +14,7 @@ namespace ach
 		 Framer(float _timer);
 		~Framer();
 
-		void update();
+		void update(bool real = false);
 		void reset();
 	};
 }

@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::RenderManager::RenderManager()
 {
+	bg  = new ach::Layer(RENDER_LAYER_BG_X , RENDER_LAYER_BG_Y );
 	gui = new ach::Layer(RENDER_LAYER_GUI_X, RENDER_LAYER_GUI_Y);
 }
 
@@ -20,6 +21,7 @@ ach::RenderManager::RenderManager()
 ***********************************************************************/
 ach::RenderManager::~RenderManager()
 {
+	delete bg;
 	delete gui;
 }
 
@@ -34,6 +36,7 @@ ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
 {
 	switch (layer)
 	{
+		case ach::RenderLayer::rlBG : return bg;
 		case ach::RenderLayer::rlGUI: return gui;
 		default                     : return NULL;
 	}
@@ -60,6 +63,7 @@ void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf
 ***********************************************************************/
 void ach::RenderManager::clear()
 {
+	bg->clear(sf::Color::Black);
 	gui->clear(sf::Color::Transparent);
 }
 
@@ -72,8 +76,10 @@ void ach::RenderManager::clear()
 ***********************************************************************/
 void ach::RenderManager::display(sf::RenderWindow *window)
 {
+	bg->display();
 	gui->display();
 
+	bg->render(window);
 	gui->render(window);
 }
 
@@ -88,5 +94,6 @@ void ach::RenderManager::resize(sf::RenderWindow *window)
 {
 	window->setView(sf::View(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y)));
 
+	bg->resize(window);
 	gui->resize(window);
 }

@@ -2,55 +2,53 @@
 
 
 /***********************************************************************
-     * Framer
+     * Particle
      * constructor
 
 ***********************************************************************/
-ach::Framer::Framer(float _timer)
+ach::Particle::Particle()
 {
-	_timer = _timer;
-
-	reset();
+	age   =  0.0f;
+	scale =  1.0f;
 }
 
 
 
 /***********************************************************************
-     * Framer
+     * Particle
      * destructor
 
 ***********************************************************************/
-ach::Framer::~Framer()
+ach::Particle::~Particle()
 {
 }
 
 
 
 /***********************************************************************
-     * Framer
+     * Particle
      * update
 
 ***********************************************************************/
-void ach::Framer::update(bool real)
+void ach::Particle::update(float frame)
 {
-	value -= real ? tm->real : tm->frame;
-
-	while (value < 0.0f)
-	{
-		value += timer;
-		frame++;
-	}
+	age += frame;
+	vel += acc * frame;
+	pos += vel * frame;
 }
 
 
 
 /***********************************************************************
-     * Framer
-     * reset
+     * Particle
+     * render
 
 ***********************************************************************/
-void ach::Framer::reset()
+void ach::Particle::render(ach::RenderLayer layer)
 {
-	frame = 0;
-	value = timer;
+	spr->setPosition(pos);
+	spr->setFillColor(clr);
+	spr->setScale(scale, scale);
+
+	rm->draw(spr, layer);
 }

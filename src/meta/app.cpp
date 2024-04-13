@@ -16,6 +16,7 @@ ach::App::App()
 	settings  = new ach::Settings();
 	lang      = new ach::Language();
 	resources = new ach::Resources();
+	bg        = new ach::Background();
 
 	create();
 
@@ -38,6 +39,7 @@ ach::App::App()
 ach::App::~App()
 {
 	delete settings;
+	delete bg;
 	delete lang;
 	delete state;
 	delete resources;

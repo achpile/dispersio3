@@ -2,81 +2,79 @@
 
 
 /***********************************************************************
-     * Timer
+     * ParticleSystem
      * constructor
 
 ***********************************************************************/
-ach::Timer::Timer(float _timer)
+ach::ParticleSystem::ParticleSystem(float size)
 {
-	set(_timer);
+	spr = new sf::RectangleShape(sf::Vector2f(size, size));
+
+	spr->setOrigin(size / 2.0f, size / 2.0f);
 }
 
 
 
 /***********************************************************************
-     * Timer
+     * ParticleSystem
      * destructor
 
 ***********************************************************************/
-ach::Timer::~Timer()
+ach::ParticleSystem::~ParticleSystem()
 {
+	delete spr;
+
+	listDelete(particles);
 }
 
 
 
 /***********************************************************************
-     * Timer
-     * set
-
-***********************************************************************/
-void ach::Timer::set(float _timer)
-{
-	timer = _timer;
-	value = _timer;
-}
-
-
-
-/***********************************************************************
-     * Timer
-     * reset
-
-***********************************************************************/
-void ach::Timer::reset()
-{
-	value = timer;
-}
-
-
-
-/***********************************************************************
-     * Timer
+     * ParticleSystem
      * update
 
 ***********************************************************************/
-bool ach::Timer::update(bool real)
+bool ach::ParticleSystem::update()
 {
-	if (value <= 0)
-		return false;
-
-	value -= real ? tm->real : tm->frame;
-
-	if (value <= 0)
-	{
-		value = 0;
-	}
-
-	return value > 0.0f;
+	return false;
 }
 
 
 
 /***********************************************************************
-     * Timer
-     * isActive
+     * ParticleSystem
+     * check
 
 ***********************************************************************/
-bool ach::Timer::isActive()
+bool ach::ParticleSystem::check(ach::Particle*)
 {
-	return value > 0.0f;
+	return false;
+}
+
+
+
+/***********************************************************************
+     * ParticleSystem
+     * render
+
+***********************************************************************/
+void ach::ParticleSystem::render(ach::RenderLayer layer, float frame)
+{
+	unsigned int i = 0;
+
+	while (i < particles.size())
+	{
+		particles[i]->update(frame);
+
+		if (!check(particles[i]))
+		{
+			delete particles[i];
+			particles.erase(particles.begin() + i);
+
+			continue;
+		}
+
+		particles[i]->render(layer);
+		i++;
+	}
 }

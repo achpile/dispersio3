@@ -15,6 +15,9 @@
      * Sizes
 
 ***********************************************************************/
+#define RENDER_LAYER_BG_X  640
+#define RENDER_LAYER_BG_Y  400
+
 #define RENDER_LAYER_GUI_X 1280
 #define RENDER_LAYER_GUI_Y 800
 

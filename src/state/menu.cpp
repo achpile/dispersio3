@@ -50,6 +50,7 @@ void ach::StateMenu::update()
 ***********************************************************************/
 void ach::StateMenu::render()
 {
+	bg->stars->update();
 }
 
 

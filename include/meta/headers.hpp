@@ -68,8 +68,14 @@
 #include "framework/manager/render.hpp"
 #include "framework/manager/time.hpp"
 
+#include "framework/particle/base.hpp"
+#include "framework/particle/system.hpp"
+
+#include "particle/stars.hpp"
+
 #include "container/resources.hpp"
 #include "container/settings.hpp"
+#include "container/background.hpp"
 #include "container/language.hpp"
 
 #include "state/base.hpp"
