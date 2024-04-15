@@ -8,6 +8,11 @@ namespace ach
 	{
 		 MenuItemBack(ach::Menu *_menu, const char *_name);
 		~MenuItemBack();
+
+		void action();
+
+		void pick();
+		void click();
 	};
 }
 

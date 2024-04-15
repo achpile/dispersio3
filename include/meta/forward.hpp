@@ -4,6 +4,7 @@
 namespace ach
 {
 	struct Menu;
+	struct MenuItemFolder;
 }
 
 #endif

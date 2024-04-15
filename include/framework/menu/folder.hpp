@@ -14,6 +14,11 @@ namespace ach
 
 		void add(ach::MenuItem *item);
 		void finalize();
+
+		void action();
+
+		void pick();
+		void click();
 	};
 }
 

@@ -111,9 +111,9 @@ void ach::Menu::add(ach::MenuItem *item, const char *_parent)
      * go
 
 ***********************************************************************/
-void ach::Menu::go(ach::MenuItem *parent, ach::MenuItem *item)
+void ach::Menu::go(ach::MenuItemFolder *parent, ach::MenuItem *item)
 {
-	current = (ach::MenuItemFolder*)parent;
+	current = parent;
 	index   = 0;
 
 	if (!item)

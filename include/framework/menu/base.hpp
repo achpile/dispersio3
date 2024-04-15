@@ -34,7 +34,7 @@ namespace ach
 		void render();
 
 		void add(ach::MenuItem *item, const char *_parent);
-		void go(ach::MenuItem *parent, ach::MenuItem *item);
+		void go(ach::MenuItemFolder *parent, ach::MenuItem *item);
 
 		void finalize();
 		void translate();
