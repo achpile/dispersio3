@@ -6,9 +6,11 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItem::MenuItem(ach::Menu *_menu)
+ach::MenuItem::MenuItem(ach::Menu *_menu, const char *_name)
 {
 	menu = _menu;
+
+	strncpy(name, _name, sizeof(name));
 }
 
 
@@ -20,5 +22,16 @@ ach::MenuItem::MenuItem(ach::Menu *_menu)
 ***********************************************************************/
 ach::MenuItem::~MenuItem()
 {
-	listDelete(items);
+}
+
+
+
+/***********************************************************************
+     * MenuItem
+     * translate
+
+***********************************************************************/
+void ach::MenuItem::translate()
+{
+	caption = lang->getv("UI.Menu.%s", name);
 }

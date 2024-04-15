@@ -62,11 +62,14 @@
 #include "framework/gfx/sheet.hpp"
 #include "framework/gfx/layer.hpp"
 
-#include "framework/menu/item.hpp"
-#include "framework/menu/base.hpp"
-
 #include "framework/manager/render.hpp"
 #include "framework/manager/time.hpp"
+
+#include "framework/draw/text.hpp"
+
+#include "framework/menu/item.hpp"
+#include "framework/menu/folder.hpp"
+#include "framework/menu/base.hpp"
 
 #include "framework/particle/base.hpp"
 #include "framework/particle/system.hpp"

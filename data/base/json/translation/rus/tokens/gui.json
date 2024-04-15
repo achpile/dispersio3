@@ -1,4 +1,0 @@
-{
-    "Menu": "@include gui/menu.json",
-    "Options": "@include gui/options.json"
-}

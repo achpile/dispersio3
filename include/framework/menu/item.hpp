@@ -6,14 +6,22 @@ namespace ach
 {
 	struct MenuItem
 	{
-		std::vector<ach::MenuItem*> items;
-
 		ach::Menu   *menu;
-		std::string  caption;
+		sf::String   caption;
+
+		char         name[32];
 
 
-		 MenuItem(ach::Menu *_menu);
-		~MenuItem();
+		         MenuItem(ach::Menu *_menu, const char *_name);
+		virtual ~MenuItem();
+
+		void translate();
+
+		virtual void left()   {};
+		virtual void right()  {};
+		virtual void pick()   {};
+		virtual void click()  {};
+		virtual void rclick() {};
 	};
 }
 

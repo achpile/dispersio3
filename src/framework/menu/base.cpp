@@ -10,12 +10,14 @@ ach::Menu::Menu()
 {
 	box     = new sf::RectangleShape();
 	text    = new sf::Text();
-	root    = new ach::MenuItem(this);
+	root    = new ach::MenuItemFolder(this, "Main");
 	current = root;
 
+	index   = 0;
 	width   = 0;
 	height  = 0;
 	size    = 16;
+	offset  = 20;
 	padding = sf::Vector2f(10.0f, 10.0f);
 
 	text->setFont(*resources->fonts.base);
@@ -24,6 +26,8 @@ ach::Menu::Menu()
 	box->setFillColor(sf::Color::Black);
 	box->setOutlineColor(sf::Color::Green);
 	box->setOutlineThickness(1.0f);
+
+	items.push_back(root);
 
 	calculate();
 }
@@ -37,9 +41,10 @@ ach::Menu::Menu()
 ***********************************************************************/
 ach::Menu::~Menu()
 {
-	delete root;
 	delete text;
 	delete box;
+
+	listDelete(items);
 }
 
 
@@ -67,11 +72,24 @@ void ach::Menu::render()
 
 	for (unsigned int i = 0; i < current->items.size(); i++)
 	{
-		text->setString(current->items[i]->caption);
-		text->setPosition(pos.x + padding.x, pos.y + padding.y + i * spacing);
-
-		rm->draw(text, ach::RenderLayer::rlGUI);
+		printItem(current->items[i]->caption, i);
 	}
+
+	printCaption();
+	printSelector();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * translate
+
+***********************************************************************/
+void ach::Menu::translate()
+{
+	for (unsigned int i = 0; i < items.size(); i++)
+		items[i]->translate();
 }
 
 
@@ -88,7 +106,7 @@ void ach::Menu::calculate()
 	text->setCharacterSize(size);
 
 	box->setPosition(pos);
-	box->setSize(sf::Vector2f(padding.x * 2 + width, padding.y * 2.0f + height * spacing));
+	box->setSize(sf::Vector2f(padding.x * 2 + offset + width, padding.y * 2.0f + (height + 2) * spacing));
 }
 
 
@@ -159,4 +177,52 @@ void ach::Menu::setFontSize(int _size)
 	size = _size;
 
 	calculate();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * print
+
+***********************************************************************/
+void ach::Menu::print(sf::String string, float x, int y, ach::TextAlign align)
+{
+	textDraw(text, string, pos.x + padding.x + x, pos.y + padding.y + y * spacing, width, align, ach::RenderLayer::rlGUI);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * printItem
+
+***********************************************************************/
+void ach::Menu::printItem(sf::String string, int y)
+{
+	print(string, offset, y + 2, ach::TextAlign::taLeft);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * printCaption
+
+***********************************************************************/
+void ach::Menu::printCaption()
+{
+	print(current->caption, 0.0f, 0, ach::TextAlign::taCenter);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * printSelector
+
+***********************************************************************/
+void ach::Menu::printSelector()
+{
+	print(">", 0.0f, index + 2, ach::TextAlign::taLeft);
 }

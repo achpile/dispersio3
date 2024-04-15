@@ -6,18 +6,23 @@ namespace ach
 {
 	struct Menu
 	{
-		ach::MenuItem      *root;
-		ach::MenuItem      *current;
+		std::vector<ach::MenuItem*> items;
 
-		sf::RectangleShape *box;
-		sf::Text           *text;
-		sf::Vector2f        pos;
-		sf::Vector2f        padding;
+		ach::MenuItemFolder *root;
+		ach::MenuItemFolder *current;
+
+		sf::RectangleShape  *box;
+		sf::Text            *text;
+		sf::Vector2f         pos;
+		sf::Vector2f         padding;
 
 		float width;
 		float spacing;
+		float offset;
+
 		int   height;
 		int   size;
+		int   index;
 
 
 		 Menu();
@@ -26,6 +31,7 @@ namespace ach
 		void update();
 		void render();
 
+		void translate();
 		void calculate();
 
 		void setWidth(float _width);
@@ -33,6 +39,11 @@ namespace ach
 		void setPosition(sf::Vector2f _pos);
 		void setPadding(sf::Vector2f _padding);
 		void setFontSize(int _size);
+
+		void print(sf::String string, float x, int y, ach::TextAlign align);
+		void printItem(sf::String string, int y);
+		void printCaption();
+		void printSelector();
 	};
 }
 
