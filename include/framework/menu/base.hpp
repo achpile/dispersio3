@@ -33,6 +33,8 @@ namespace ach
 		void update();
 		void render();
 
+		void controls();
+
 		void add(ach::MenuItem *item, const char *_parent);
 		void go(ach::MenuItemFolder *parent, ach::MenuItem *item);
 

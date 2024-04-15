@@ -84,6 +84,27 @@ void ach::Menu::render()
 
 /***********************************************************************
      * Menu
+     * controls
+
+***********************************************************************/
+void ach::Menu::controls()
+{
+	if (ctrl->keys[caUp    ].pressed) index--;
+	if (ctrl->keys[caDown  ].pressed) index++;
+
+	index %= current->items.size();
+
+	if (ctrl->keys[caLeft  ].pressed) current->items[index]->left();
+	if (ctrl->keys[caRight ].pressed) current->items[index]->right();
+	if (ctrl->keys[caAction].pressed) current->items[index]->pick();
+
+	if (ctrl->keys[caMenu  ].pressed) current->items.back()->pick();
+}
+
+
+
+/***********************************************************************
+     * Menu
      * add
 
 ***********************************************************************/

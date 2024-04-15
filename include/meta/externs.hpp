@@ -3,6 +3,7 @@
 
 extern ach::App           *app;
 extern ach::Log           *logger;
+extern ach::ControlPad    *ctrl;
 
 extern ach::Resources     *resources;
 extern ach::Settings      *settings;

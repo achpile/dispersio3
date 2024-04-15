@@ -3,6 +3,7 @@
 
 ach::App           *app;
 ach::Log           *logger;
+ach::ControlPad    *ctrl;
 
 ach::Resources     *resources;
 ach::Settings      *settings;

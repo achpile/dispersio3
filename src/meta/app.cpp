@@ -17,6 +17,7 @@ ach::App::App()
 	lang      = new ach::Language();
 	resources = new ach::Resources();
 	bg        = new ach::Background();
+	ctrl      = new ach::ControlPad();
 
 	create();
 
@@ -45,6 +46,7 @@ ach::App::~App()
 	delete resources;
 	delete window;
 	delete logger;
+	delete ctrl;
 
 	delete rm;
 	delete tm;
@@ -72,6 +74,7 @@ void ach::App::update()
 	window->clear();
 	rm->clear();
 
+	ctrl->update();
 	state->update();
 
 	rm->display(window);

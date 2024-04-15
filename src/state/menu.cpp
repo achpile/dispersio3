@@ -43,6 +43,7 @@ void ach::StateMenu::update()
 
 	render();
 
+	menu->controls();
 	menu->update();
 }
 
