@@ -49,7 +49,8 @@ json_t *json_attr_get_default(json_t *obj)
 
 	json_t *def = json_object_get(attr, "default");
 
-	if (json_attr_get_type(obj) == ach::jtFilename) {
+	if (json_attr_get_type(obj) == ach::jtFilename)
+	{
 		char path[STR_LEN_PATH];
 
 		snprintf(path, STR_LEN_PATH, PATH_BASE "/%s", json_string_value(def));

@@ -5,7 +5,8 @@
      * pairAttrType
 
 ***********************************************************************/
-ach::Pair pairAttrType[] = {
+ach::Pair pairAttrType[] =
+{
 	{.num = ach::JSONtype::jtObject  , .str = "object"  },
 	{.num = ach::JSONtype::jtString  , .str = "string"  },
 	{.num = ach::JSONtype::jtInteger , .str = "integer" },

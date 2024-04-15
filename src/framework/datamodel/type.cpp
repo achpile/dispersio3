@@ -71,7 +71,8 @@ bool json_type_check_string(json_t *obj, json_t *dm, const char *name, const cha
      * json_type_check_integer
 
 ***********************************************************************/
-bool json_type_check_integer(json_t *obj, json_t *dm, const char *name, const char *) {
+bool json_type_check_integer(json_t *obj, json_t *dm, const char *name, const char *)
+{
 	if (!json_is_integer(obj))
 	{
 		logger->log(ach::LogLevel::llWarning, "Value \"%s\" must be an integer", name);
@@ -99,7 +100,8 @@ bool json_type_check_integer(json_t *obj, json_t *dm, const char *name, const ch
      * json_type_check_real
 
 ***********************************************************************/
-bool json_type_check_real(json_t *obj, json_t *dm, const char *name, const char *) {
+bool json_type_check_real(json_t *obj, json_t *dm, const char *name, const char *)
+{
 	if (!json_is_real(obj))
 	{
 		logger->log(ach::LogLevel::llWarning, "Value \"%s\" must be a real number", name);

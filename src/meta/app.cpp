@@ -105,7 +105,8 @@ void ach::App::events()
 ***********************************************************************/
 void ach::App::event(sf::Event e)
 {
-	switch(e.type) {
+	switch(e.type)
+	{
 		case sf::Event::Closed:
 			window->close();
 			break;

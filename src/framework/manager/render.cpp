@@ -97,3 +97,15 @@ void ach::RenderManager::resize(sf::RenderWindow *window)
 	bg->resize(window);
 	gui->resize(window);
 }
+
+
+
+/***********************************************************************
+     * RenderManager
+     * transform
+
+***********************************************************************/
+sf::Vector2f ach::RenderManager::transform(sf::Vector2f v, ach::RenderLayer layer)
+{
+	return getLayer(layer)->spr->getInverseTransform().transformPoint(v.x, v.y);
+}

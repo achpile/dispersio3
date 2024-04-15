@@ -44,11 +44,13 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 	{
 		j = json_object_get(dm, key);
 
+
 		if (json_attr_get_type(j) == ach::jtObject)
 		{
 			json_dm_check_links(data, i, j);
 			continue;
 		}
+
 
 		if (json_attr_get_type(j) == ach::jtMulti)
 		{
@@ -61,13 +63,15 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 			continue;
 		}
 
+
 		if (json_attr_get_type(j) == ach::jtLink)
 		{
 			char path[STR_LEN_PATH];
 
 			snprintf(path, STR_LEN_PATH, "%s.%s", json_attr_get_data(j), json_string_value(i));
 
-			if (!json_object_get_branch(data, path)) {
+			if (!json_object_get_branch(data, path))
+			{
 				logger->log(ach::LogLevel::llWarning, "Linked object \"%s\" is not found", path);
 				json_string_set(i, json_string_value(json_attr_get_default(j)));
 			}

@@ -5,7 +5,8 @@
      * arch_mkdir
 
 ***********************************************************************/
-void arch_mkdir(const char *name) {
+void arch_mkdir(const char *name)
+{
 #ifdef _WIN32
 	mkdir(name);
 #else
