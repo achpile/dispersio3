@@ -6,16 +6,20 @@ namespace ach
 {
 	struct MenuItem
 	{
-		ach::Menu   *menu;
-		sf::String   caption;
+		ach::Menu     *menu;
+		ach::MenuItem *parent;
+		sf::String     caption;
 
-		char         name[32];
+		char           name[STR_LEN_MENU];
 
 
 		         MenuItem(ach::Menu *_menu, const char *_name);
 		virtual ~MenuItem();
 
 		void translate();
+
+		virtual void add(ach::MenuItem *) {};
+		virtual void finalize()           {};
 
 		virtual void left()   {};
 		virtual void right()  {};

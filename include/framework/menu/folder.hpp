@@ -11,6 +11,9 @@ namespace ach
 
 		 MenuItemFolder(ach::Menu *_menu, const char *_name);
 		~MenuItemFolder();
+
+		void add(ach::MenuItem *item);
+		void finalize();
 	};
 }
 

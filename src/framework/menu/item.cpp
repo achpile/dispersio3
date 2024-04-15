@@ -8,9 +8,10 @@
 ***********************************************************************/
 ach::MenuItem::MenuItem(ach::Menu *_menu, const char *_name)
 {
-	menu = _menu;
+	menu   = _menu;
+	parent = NULL;
 
-	strncpy(name, _name, sizeof(name));
+	strncpy(name, _name, STR_LEN_MENU);
 }
 
 

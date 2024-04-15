@@ -35,6 +35,7 @@
      * Strings
 
 ***********************************************************************/
+#define STR_LEN_MENU       32
 #define STR_LEN_NAME       128
 #define STR_LEN_PATH       256
 #define STR_LEN_LOG        512

@@ -69,6 +69,7 @@
 
 #include "framework/menu/item.hpp"
 #include "framework/menu/folder.hpp"
+#include "framework/menu/back.hpp"
 #include "framework/menu/base.hpp"
 
 #include "framework/particle/base.hpp"

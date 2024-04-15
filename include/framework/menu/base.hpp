@@ -20,17 +20,23 @@ namespace ach
 		float spacing;
 		float offset;
 
+		bool  isActive;
+
 		int   height;
 		int   size;
 		int   index;
 
 
-		 Menu();
+		 Menu(const char *name);
 		~Menu();
 
 		void update();
 		void render();
 
+		void add(ach::MenuItem *item, const char *_parent);
+		void go(ach::MenuItem *parent, ach::MenuItem *item);
+
+		void finalize();
 		void translate();
 		void calculate();
 

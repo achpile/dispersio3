@@ -6,19 +6,20 @@
      * constructor
 
 ***********************************************************************/
-ach::Menu::Menu()
+ach::Menu::Menu(const char *name)
 {
-	box     = new sf::RectangleShape();
-	text    = new sf::Text();
-	root    = new ach::MenuItemFolder(this, "Main");
-	current = root;
+	box      = new sf::RectangleShape();
+	text     = new sf::Text();
+	root     = new ach::MenuItemFolder(this, name);
+	current  = root;
 
-	index   = 0;
-	width   = 0;
-	height  = 0;
-	size    = 16;
-	offset  = 20;
-	padding = sf::Vector2f(10.0f, 10.0f);
+	index    = 0;
+	width    = 0;
+	height   = 0;
+	size     = 16;
+	offset   = 20;
+	isActive = true;
+	padding  = sf::Vector2f(10.0f, 10.0f);
 
 	text->setFont(*resources->fonts.base);
 	text->setFillColor(sf::Color::White);
@@ -77,6 +78,65 @@ void ach::Menu::render()
 
 	printCaption();
 	printSelector();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * add
+
+***********************************************************************/
+void ach::Menu::add(ach::MenuItem *item, const char *_parent)
+{
+	items.push_back(item);
+
+	ach::MenuItem *parent = NULL;
+
+	for (unsigned int i = 0; i < items.size(); i++)
+		if (!strncmp(_parent, items[i]->name, STR_LEN_MENU))
+		{
+			parent = items[i];
+			break;
+		}
+
+	if (parent)
+		parent->add(item);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * go
+
+***********************************************************************/
+void ach::Menu::go(ach::MenuItem *parent, ach::MenuItem *item)
+{
+	current = (ach::MenuItemFolder*)parent;
+	index   = 0;
+
+	if (!item)
+		return;
+
+	for (unsigned int i = 0; i < current->items.size(); i++)
+		if (current->items[i] == item)
+			index = i;
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * finalize
+
+***********************************************************************/
+void ach::Menu::finalize()
+{
+	for (unsigned int i = 0; i < items.size(); i++)
+		items[i]->finalize();
+
+	translate();
 }
 
 
