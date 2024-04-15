@@ -38,6 +38,10 @@ namespace ach
 		void add(ach::MenuItem *item, const char *_parent);
 		void go(ach::MenuItemFolder *parent, ach::MenuItem *item);
 
+		bool inside(sf::Vector2f pos);
+		void hover(sf::Vector2f pos);
+		void click(sf::Vector2f pos, bool left);
+
 		void finalize();
 		void translate();
 		void calculate();

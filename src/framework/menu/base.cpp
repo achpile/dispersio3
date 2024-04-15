@@ -149,6 +149,53 @@ void ach::Menu::go(ach::MenuItemFolder *parent, ach::MenuItem *item)
 
 /***********************************************************************
      * Menu
+     * inside
+
+***********************************************************************/
+bool ach::Menu::inside(sf::Vector2f v)
+{
+	return sf::FloatRect(pos.x, pos.y + padding.y + 2 * spacing, width, current->items.size() * spacing).contains(v);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * hover
+
+***********************************************************************/
+void ach::Menu::hover(sf::Vector2f v)
+{
+	if (!inside(v))
+		return;
+
+	index = floor((v.y - (pos.y + padding.y + 2 * spacing)) / spacing);
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * click
+
+***********************************************************************/
+void ach::Menu::click(sf::Vector2f v, bool left)
+{
+	if (!inside(v))
+		return;
+
+	hover(pos);
+
+	if (left)
+		current->items[index]->click();
+	else
+		current->items[index]->rclick();
+}
+
+
+
+/***********************************************************************
+     * Menu
      * finalize
 
 ***********************************************************************/

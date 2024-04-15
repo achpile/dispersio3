@@ -79,7 +79,7 @@ void ach::StateMenu::event(sf::Event e)
 			if ((e.mouseButton.button != sf::Mouse::Button::Left) && (e.mouseButton.button == sf::Mouse::Button::Right))
 				break;
 
-			click(rm->transform(sf::Vector2f(e.mouseMove.x, e.mouseMove.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
+			click(rm->transform(sf::Vector2f(e.mouseButton.x, e.mouseButton.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
 			break;
 
 
@@ -95,8 +95,9 @@ void ach::StateMenu::event(sf::Event e)
      * hover
 
 ***********************************************************************/
-void ach::StateMenu::hover(sf::Vector2f )
+void ach::StateMenu::hover(sf::Vector2f pos)
 {
+	menu->hover(pos);
 }
 
 
@@ -106,8 +107,9 @@ void ach::StateMenu::hover(sf::Vector2f )
      * click
 
 ***********************************************************************/
-void ach::StateMenu::click(sf::Vector2f , bool )
+void ach::StateMenu::click(sf::Vector2f pos, bool left)
 {
+	menu->click(pos, left);
 }
 
 
