@@ -7,6 +7,7 @@ namespace ach
 	struct MenuItemCheckbox : MenuItem
 	{
 		sf::RectangleShape *box;
+		sf::RectangleShape *fill;
 
 		bool state;
 

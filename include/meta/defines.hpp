@@ -57,4 +57,14 @@
 #define STR_REGEX_NAME     "^[[:alnum:]_-]{1,128}$"
 #define STR_REGEX_COLOR    "^#[[:xdigit:]]{2}{3,4}$"
 
+
+
+/***********************************************************************
+     * Menu
+
+***********************************************************************/
+#define MENU_PADDING       10.0f
+#define MENU_THICKNESS     1.0f
+#define MENU_BOX_SHRINK    8.0f
+
 #endif

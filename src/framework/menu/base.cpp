@@ -17,16 +17,15 @@ ach::Menu::Menu(const char *name)
 	width    = 0;
 	height   = 0;
 	size     = 16;
-	offset   = 20;
 	isActive = true;
-	padding  = sf::Vector2f(10.0f, 10.0f);
+	padding  = sf::Vector2f(MENU_PADDING, MENU_PADDING);
 
 	text->setFont(*resources->fonts.base);
 	text->setFillColor(sf::Color::White);
 
 	box->setFillColor(sf::Color::Black);
 	box->setOutlineColor(sf::Color::Green);
-	box->setOutlineThickness(1.0f);
+	box->setOutlineThickness(MENU_THICKNESS);
 
 	items.push_back(root);
 
@@ -231,11 +230,12 @@ void ach::Menu::translate()
 void ach::Menu::calculate()
 {
 	spacing = text->getFont()->getLineSpacing(size);
+	offset  = spacing;
 
 	text->setCharacterSize(size);
 
 	box->setPosition(pos);
-	box->setSize(sf::Vector2f(padding.x * 2 + offset + width, padding.y * 2.0f + (height + 2) * spacing));
+	box->setSize(sf::Vector2f(padding.x * 2 + offset + width, padding.y * 2 + (height + 2) * spacing));
 }
 
 

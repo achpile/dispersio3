@@ -9,11 +9,17 @@
 ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
 {
 	box = new sf::RectangleShape();
+	fill = new sf::RectangleShape();
 
-	box->setSize(sf::Vector2f(menu->spacing - 2.0f, menu->spacing - 2.0f));
-	box->setOutlineThickness(1.0f);
+	box->setSize(sf::Vector2f(menu->spacing - MENU_BOX_SHRINK, menu->spacing - MENU_BOX_SHRINK));
+	box->setOrigin(menu->spacing + MENU_THICKNESS - MENU_BOX_SHRINK, MENU_THICKNESS - MENU_BOX_SHRINK);
+	box->setFillColor(sf::Color::Transparent);
+	box->setOutlineThickness(MENU_THICKNESS);
 	box->setOutlineColor(menu->text->getFillColor());
-	box->setOrigin(menu->spacing + 1.0f, -1.0f);
+
+	fill->setSize(sf::Vector2f(menu->spacing - MENU_BOX_SHRINK * 1.5f, menu->spacing - MENU_BOX_SHRINK * 1.5f));
+	fill->setOrigin(menu->spacing + MENU_THICKNESS - MENU_BOX_SHRINK * 1.25f, MENU_THICKNESS - MENU_BOX_SHRINK * 1.25f);
+	fill->setFillColor(menu->box->getOutlineColor());
 }
 
 
@@ -26,6 +32,7 @@ ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name) : M
 ach::MenuItemCheckbox::~MenuItemCheckbox()
 {
 	delete box;
+	delete fill;
 }
 
 
@@ -49,13 +56,13 @@ void ach::MenuItemCheckbox::action()
 ***********************************************************************/
 void ach::MenuItemCheckbox::render(int i)
 {
-	if (state)
-		box->setFillColor(menu->box->getOutlineColor());
-	else
-		box->setFillColor(sf::Color::Transparent);
+	box->setPosition (menu->pos.x + menu->padding.x + menu->width, menu->pos.y + menu->padding.y + (i + 2) * menu->spacing);
+	fill->setPosition(menu->pos.x + menu->padding.x + menu->width, menu->pos.y + menu->padding.y + (i + 2) * menu->spacing);
 
-	box->setPosition(menu->pos.x + menu->padding.x + menu->width, menu->pos.y + menu->padding.y + (i + 2) * menu->spacing);
-	rm->draw(box, ach::RenderLayer::rlGUI);
+	rm->draw(box , ach::RenderLayer::rlGUI);
+
+	if (state)
+		rm->draw(fill, ach::RenderLayer::rlGUI);
 }
 
 
