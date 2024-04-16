@@ -2,6 +2,12 @@
     "@attr": {
         "type": "object"
     },
+    "Aspect": {
+        "@attr": {
+            "default": "Aspect ratio",
+            "type": "string"
+        }
+    },
     "Audio": {
         "@attr": {
             "default": "Audio",
@@ -14,9 +20,27 @@
             "type": "string"
         }
     },
+    "Controls": {
+        "@attr": {
+            "default": "Controls",
+            "type": "string"
+        }
+    },
+    "Credits": {
+        "@attr": {
+            "default": "Credits",
+            "type": "string"
+        }
+    },
     "Exit": {
         "@attr": {
             "default": "Exit",
+            "type": "string"
+        }
+    },
+    "Fullscreen": {
+        "@attr": {
+            "default": "Fullscreen",
             "type": "string"
         }
     },
@@ -26,15 +50,39 @@
             "type": "string"
         }
     },
+    "Language": {
+        "@attr": {
+            "default": "Language",
+            "type": "string"
+        }
+    },
     "Main": {
         "@attr": {
             "default": "Main menu",
             "type": "string"
         }
     },
+    "Music": {
+        "@attr": {
+            "default": "Music",
+            "type": "string"
+        }
+    },
     "Options": {
         "@attr": {
             "default": "Options",
+            "type": "string"
+        }
+    },
+    "Smooth": {
+        "@attr": {
+            "default": "Smooth textures",
+            "type": "string"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "default": "Sound",
             "type": "string"
         }
     },

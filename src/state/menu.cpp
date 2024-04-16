@@ -121,12 +121,23 @@ void ach::StateMenu::click(sf::Vector2f pos, bool left)
 ***********************************************************************/
 void ach::StateMenu::fill()
 {
-	menu->add(new ach::MenuItemFolder(menu, "Start"  ), "Main");
-	menu->add(new ach::MenuItemFolder(menu, "Options"), "Main");
+	menu->add(new ach::MenuItemFolder(menu, "Start"   ), "Main");
+	menu->add(new ach::MenuItemFolder(menu, "Options" ), "Main");
+	menu->add(new ach::MenuItemAction(menu, "Credits" ), "Main");
 
-	menu->add(new ach::MenuItemFolder(menu, "Game"   ), "Options");
-	menu->add(new ach::MenuItemFolder(menu, "Video"  ), "Options");
-	menu->add(new ach::MenuItemFolder(menu, "Audio"  ), "Options");
+	menu->add(new ach::MenuItemFolder(menu, "Game"    ), "Options");
+	menu->add(new ach::MenuItemFolder(menu, "Video"   ), "Options");
+	menu->add(new ach::MenuItemFolder(menu, "Audio"   ), "Options");
+	menu->add(new ach::MenuItemFolder(menu, "Controls"), "Options");
+
+	menu->add(new ach::MenuItemList  (menu, "Language"), "Game");
+
+	menu->add(new ach::MenuItemSlider(menu, "Sound"   ), "Audio");
+	menu->add(new ach::MenuItemSlider(menu, "Music"   ), "Audio");
+
+	menu->add(new ach::MenuItemCheckbox(menu, "Fullscreen"), "Video");
+	menu->add(new ach::MenuItemCheckbox(menu, "Aspect"    ), "Video");
+	menu->add(new ach::MenuItemCheckbox(menu, "Smooth"    ), "Video");
 
 	menu->finalize();
 }
