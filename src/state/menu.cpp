@@ -76,7 +76,7 @@ void ach::StateMenu::event(sf::Event e)
 
 
 		case sf::Event::MouseButtonReleased:
-			if ((e.mouseButton.button != sf::Mouse::Button::Left) && (e.mouseButton.button == sf::Mouse::Button::Right))
+			if ((e.mouseButton.button != sf::Mouse::Button::Left) && (e.mouseButton.button != sf::Mouse::Button::Right))
 				break;
 
 			click(rm->transform(sf::Vector2f(e.mouseButton.x, e.mouseButton.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
@@ -132,8 +132,8 @@ void ach::StateMenu::fill()
 
 	menu->add("Game"   , new ach::MenuItemList    (menu, "Language"  ));
 
-	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Sound"     ));
-	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Music"     ));
+	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Sound"     , 0, 10));
+	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Music"     , 0, 10));
 
 	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Fullscreen"));
 	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Aspect"    ));

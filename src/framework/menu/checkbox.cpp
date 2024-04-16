@@ -8,17 +8,17 @@
 ***********************************************************************/
 ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
 {
-	box = new sf::RectangleShape();
+	box  = new sf::RectangleShape();
 	fill = new sf::RectangleShape();
 
-	box->setSize(sf::Vector2f(menu->spacing - MENU_BOX_SHRINK, menu->spacing - MENU_BOX_SHRINK));
-	box->setOrigin(menu->spacing + MENU_THICKNESS - MENU_BOX_SHRINK, MENU_THICKNESS - MENU_BOX_SHRINK);
+	box->setSize(sf::Vector2f(menu->size, menu->size));
+	box->setOrigin(menu->size, 0);
 	box->setFillColor(sf::Color::Transparent);
 	box->setOutlineThickness(MENU_THICKNESS);
 	box->setOutlineColor(menu->text->getFillColor());
 
-	fill->setSize(sf::Vector2f(menu->spacing - MENU_BOX_SHRINK * 1.5f, menu->spacing - MENU_BOX_SHRINK * 1.5f));
-	fill->setOrigin(menu->spacing + MENU_THICKNESS - MENU_BOX_SHRINK * 1.25f, MENU_THICKNESS - MENU_BOX_SHRINK * 1.25f);
+	fill->setSize(sf::Vector2f(menu->size - MENU_BOX_SHRINK, menu->size - MENU_BOX_SHRINK));
+	fill->setOrigin(menu->size - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
 	fill->setFillColor(menu->box->getOutlineColor());
 }
 
@@ -44,7 +44,7 @@ ach::MenuItemCheckbox::~MenuItemCheckbox()
 ***********************************************************************/
 void ach::MenuItemCheckbox::action()
 {
-	state = !state;
+	value = !value;
 }
 
 
@@ -56,12 +56,12 @@ void ach::MenuItemCheckbox::action()
 ***********************************************************************/
 void ach::MenuItemCheckbox::render(int i)
 {
-	box->setPosition (menu->pos.x + menu->padding.x + menu->width, menu->pos.y + menu->padding.y + (i + 2) * menu->spacing);
-	fill->setPosition(menu->pos.x + menu->padding.x + menu->width, menu->pos.y + menu->padding.y + (i + 2) * menu->spacing);
+	box->setPosition (menu->right(), menu->line(i));
+	fill->setPosition(menu->right(), menu->line(i));
 
 	rm->draw(box , ach::RenderLayer::rlGUI);
 
-	if (state)
+	if (value)
 		rm->draw(fill, ach::RenderLayer::rlGUI);
 }
 
@@ -74,7 +74,7 @@ void ach::MenuItemCheckbox::render(int i)
 ***********************************************************************/
 void ach::MenuItemCheckbox::finalize()
 {
-	state = false;
+	value = false;
 }
 
 

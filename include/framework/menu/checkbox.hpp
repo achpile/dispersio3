@@ -9,7 +9,7 @@ namespace ach
 		sf::RectangleShape *box;
 		sf::RectangleShape *fill;
 
-		bool state;
+		bool value;
 
 
 		 MenuItemCheckbox(ach::Menu *_menu, const char *_name);

@@ -154,7 +154,7 @@ void ach::Menu::go(ach::MenuItemFolder *parent, ach::MenuItem *item)
 ***********************************************************************/
 bool ach::Menu::inside(sf::Vector2f v)
 {
-	return sf::FloatRect(pos.x, pos.y + padding.y + 2 * spacing, width, current->items.size() * spacing).contains(v);
+	return sf::FloatRect(pos.x, line(0), width, current->items.size() * spacing).contains(v);
 }
 
 
@@ -169,7 +169,7 @@ void ach::Menu::hover(sf::Vector2f v)
 	if (!inside(v))
 		return;
 
-	index = floor((v.y - (pos.y + padding.y + 2 * spacing)) / spacing);
+	index = floor((v.y - line(0)) / spacing);
 }
 
 
@@ -236,6 +236,54 @@ void ach::Menu::calculate()
 
 	box->setPosition(pos);
 	box->setSize(sf::Vector2f(padding.x * 2 + offset + width, padding.y * 2 + (height + 2) * spacing));
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * left
+
+***********************************************************************/
+float ach::Menu::left()
+{
+	return pos.x + padding.x;
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * right
+
+***********************************************************************/
+float ach::Menu::right()
+{
+	return left() + width;
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * top
+
+***********************************************************************/
+float ach::Menu::top()
+{
+	return pos.y + padding.y;
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * line
+
+***********************************************************************/
+float ach::Menu::line(int l)
+{
+	return top() + spacing * (l + 2);
 }
 
 
@@ -317,7 +365,7 @@ void ach::Menu::setFontSize(int _size)
 ***********************************************************************/
 void ach::Menu::print(sf::String string, float x, int y, ach::TextAlign align)
 {
-	textDraw(text, string, pos.x + padding.x + x, pos.y + padding.y + y * spacing, width, align, ach::RenderLayer::rlGUI);
+	textDraw(text, string, left() + x, line(y), width, align, ach::RenderLayer::rlGUI);
 }
 
 
@@ -329,7 +377,7 @@ void ach::Menu::print(sf::String string, float x, int y, ach::TextAlign align)
 ***********************************************************************/
 void ach::Menu::printItem(sf::String string, int y)
 {
-	print(string, offset, y + 2, ach::TextAlign::taLeft);
+	print(string, offset, y, ach::TextAlign::taLeft);
 }
 
 
@@ -341,7 +389,7 @@ void ach::Menu::printItem(sf::String string, int y)
 ***********************************************************************/
 void ach::Menu::printCaption()
 {
-	print(current->caption, 0.0f, 0, ach::TextAlign::taCenter);
+	print(current->caption, 0.0f, -2, ach::TextAlign::taCenter);
 }
 
 
@@ -353,5 +401,5 @@ void ach::Menu::printCaption()
 ***********************************************************************/
 void ach::Menu::printSelector()
 {
-	print(">", 0.0f, index + 2, ach::TextAlign::taLeft);
+	print(">", 0.0f, index, ach::TextAlign::taLeft);
 }

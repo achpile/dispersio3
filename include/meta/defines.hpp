@@ -63,8 +63,9 @@
      * Menu
 
 ***********************************************************************/
-#define MENU_PADDING       10.0f
-#define MENU_THICKNESS     1.0f
-#define MENU_BOX_SHRINK    8.0f
+#define MENU_PADDING       10
+#define MENU_THICKNESS    -1
+#define MENU_BOX_SHRINK    8
+#define MENU_SLIDER_SIZE   5
 
 #endif

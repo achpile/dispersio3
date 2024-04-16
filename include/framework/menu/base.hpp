@@ -46,6 +46,11 @@ namespace ach
 		void translate();
 		void calculate();
 
+		float left();
+		float right();
+		float top();
+		float line(int l);
+
 		void setWidth(float _width);
 		void setHeight(int _height);
 		void setPosition(sf::Vector2f _pos);
