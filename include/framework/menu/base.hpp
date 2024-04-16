@@ -42,6 +42,7 @@ namespace ach
 		void hover(sf::Vector2f pos);
 		void click(sf::Vector2f pos, bool left);
 
+		void reset();
 		void finalize();
 		void translate();
 		void calculate();

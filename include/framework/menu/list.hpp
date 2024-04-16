@@ -8,6 +8,16 @@ namespace ach
 	{
 		 MenuItemList(ach::Menu *_menu, const char *_name);
 		~MenuItemList();
+
+		void action(int d);
+
+		void render(int i);
+		void finalize();
+
+		void left();
+		void right();
+		void click();
+		void rclick();
 	};
 }
 
