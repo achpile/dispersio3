@@ -35,6 +35,23 @@
             }
         }
     },
+    "Video": {
+        "@attr": {
+            "type": "object"
+        },
+        "Aspect": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        },
+        "Smooth": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        }
+},
     "Window": {
         "@attr": {
             "type": "object"

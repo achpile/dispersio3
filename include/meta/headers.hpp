@@ -21,6 +21,7 @@
 #include "meta/forward.hpp"
 
 #include "framework/string/pair.hpp"
+#include "framework/string/option.hpp"
 #include "framework/string/check.hpp"
 #include "framework/string/regex.hpp"
 #include "framework/string/color.hpp"

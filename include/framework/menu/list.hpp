@@ -6,7 +6,15 @@ namespace ach
 {
 	struct MenuItemList : MenuItem
 	{
-		 MenuItemList(ach::Menu *_menu, const char *_name);
+		std::vector<ach::Option> options;
+
+		json_t *data;
+
+		int     index;
+		bool    token;
+
+
+		 MenuItemList(ach::Menu *_menu, const char *_name, json_t *_data);
 		~MenuItemList();
 
 		void action(int d);

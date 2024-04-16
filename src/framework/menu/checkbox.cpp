@@ -6,8 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
+ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name, json_t *_data, const char *_var) : MenuItem(_menu, _name)
 {
+	data = _data;
+
 	box  = new sf::RectangleShape();
 	fill = new sf::RectangleShape();
 
@@ -20,6 +22,8 @@ ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name) : M
 	fill->setSize(sf::Vector2f(menu->size - MENU_BOX_SHRINK, menu->size - MENU_BOX_SHRINK));
 	fill->setOrigin(menu->size - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
 	fill->setFillColor(menu->box->getOutlineColor());
+
+	strncpy(var, _var, STR_LEN_MENU);
 }
 
 
@@ -45,6 +49,8 @@ ach::MenuItemCheckbox::~MenuItemCheckbox()
 void ach::MenuItemCheckbox::action()
 {
 	value = !value;
+
+	json_object_set_boolean(data, var, value);
 }
 
 
@@ -74,7 +80,7 @@ void ach::MenuItemCheckbox::render(int i)
 ***********************************************************************/
 void ach::MenuItemCheckbox::finalize()
 {
-	value = false;
+	value = json_object_get_boolean(data, var);
 }
 
 

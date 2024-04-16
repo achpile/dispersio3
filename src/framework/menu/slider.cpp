@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemSlider::MenuItemSlider(ach::Menu *_menu, const char *_name, int _min, int _max) : MenuItem(_menu, _name)
+ach::MenuItemSlider::MenuItemSlider(ach::Menu *_menu, const char *_name, json_t *_data, int _min, int _max) : MenuItem(_menu, _name)
 {
+	data = _data;
 	min  = _min;
 	max  = _max;
 
@@ -50,6 +51,8 @@ void ach::MenuItemSlider::action(int d)
 		return;
 
 	value += d;
+
+	json_integer_set(data, value);
 }
 
 
@@ -79,7 +82,7 @@ void ach::MenuItemSlider::render(int i)
 ***********************************************************************/
 void ach::MenuItemSlider::finalize()
 {
-	value = 0;
+	value = json_integer_value(data);
 }
 
 

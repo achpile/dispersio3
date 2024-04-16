@@ -9,11 +9,13 @@ namespace ach
 		sf::RectangleShape *box;
 		sf::RectangleShape *fill;
 
-		int min;
-		int max;
-		int value;
+		json_t *data;
 
-		 MenuItemSlider(ach::Menu *_menu, const char *_name, int _min, int _max);
+		int     min;
+		int     max;
+		int     value;
+
+		 MenuItemSlider(ach::Menu *_menu, const char *_name, json_t *_data, int _min, int _max);
 		~MenuItemSlider();
 
 		void action(int d);

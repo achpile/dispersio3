@@ -9,10 +9,13 @@ namespace ach
 		sf::RectangleShape *box;
 		sf::RectangleShape *fill;
 
-		bool value;
+		json_t *data;
+
+		char    var[STR_LEN_MENU];
+		bool    value;
 
 
-		 MenuItemCheckbox(ach::Menu *_menu, const char *_name);
+		 MenuItemCheckbox(ach::Menu *_menu, const char *_name, json_t *_data, const char *_var);
 		~MenuItemCheckbox();
 
 		void action();

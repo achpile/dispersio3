@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
+ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, json_t *_data) : MenuItem(_menu, _name)
 {
+	data = _data;
 }
 
 

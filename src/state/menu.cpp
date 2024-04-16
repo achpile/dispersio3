@@ -130,14 +130,14 @@ void ach::StateMenu::fill()
 	menu->add("Options", new ach::MenuItemFolder  (menu, "Audio"     ));
 	menu->add("Options", new ach::MenuItemFolder  (menu, "Controls"  ));
 
-	menu->add("Game"   , new ach::MenuItemList    (menu, "Language"  ));
+	menu->add("Game"   , new ach::MenuItemList    (menu, "Language"  , json_object_get_branch(settings->data, "Game.Language")));
 
-	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Sound"     , 0, 10));
-	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Music"     , 0, 10));
+	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Sound"     , json_object_get_branch(settings->data, "Audio.Sound"  ), 0, 10));
+	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Music"     , json_object_get_branch(settings->data, "Audio.Music"  ), 0, 10));
 
-	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Fullscreen"));
-	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Aspect"    ));
-	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Smooth"    ));
+	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Fullscreen", json_object_get_branch(settings->data, "Window"       ), "Fullscreen"));
+	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Aspect"    , json_object_get_branch(settings->data, "Video"        ), "Aspect"    ));
+	menu->add("Video"  , new ach::MenuItemCheckbox(menu, "Smooth"    , json_object_get_branch(settings->data, "Video"        ), "Smooth"    ));
 
 	menu->finalize();
 }
