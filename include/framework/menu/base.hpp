@@ -35,7 +35,7 @@ namespace ach
 
 		void controls();
 
-		void add(ach::MenuItem *item, const char *_parent);
+		void add(const char *_parent, ach::MenuItem *item);
 		void go(ach::MenuItemFolder *parent, ach::MenuItem *item);
 
 		bool inside(sf::Vector2f pos);

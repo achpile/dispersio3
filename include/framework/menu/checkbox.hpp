@@ -6,8 +6,22 @@ namespace ach
 {
 	struct MenuItemCheckbox : MenuItem
 	{
+		sf::RectangleShape *box;
+
+		bool state;
+
+
 		 MenuItemCheckbox(ach::Menu *_menu, const char *_name);
 		~MenuItemCheckbox();
+
+		void action();
+
+		void render(int i);
+		void finalize();
+
+		void pick();
+		void click();
+		void rclick();
 	};
 }
 

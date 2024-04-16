@@ -74,6 +74,7 @@ void ach::Menu::render()
 	for (unsigned int i = 0; i < current->items.size(); i++)
 	{
 		printItem(current->items[i]->caption, i);
+		current->items[i]->render(i);
 	}
 
 	printCaption();
@@ -108,7 +109,7 @@ void ach::Menu::controls()
      * add
 
 ***********************************************************************/
-void ach::Menu::add(ach::MenuItem *item, const char *_parent)
+void ach::Menu::add(const char *_parent, ach::MenuItem *item)
 {
 	items.push_back(item);
 

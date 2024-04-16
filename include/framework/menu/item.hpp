@@ -19,6 +19,7 @@ namespace ach
 		void translate();
 
 		virtual void add(ach::MenuItem *) {};
+		virtual void render(int)          {};
 		virtual void finalize()           {};
 
 		virtual void left()   {};
