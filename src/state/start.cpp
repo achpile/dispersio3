@@ -11,10 +11,10 @@ ach::StateStart::StateStart()
 	index  = 0;
 	offset = 0.0f;
 
-	sprites.push_back(new ach::Sprite("data/base/gfx/gui/start/01.png", false, true));
-	sprites.push_back(new ach::Sprite("data/base/gfx/gui/start/02.png", false, true));
-	sprites.push_back(new ach::Sprite("data/base/gfx/gui/start/03.png", false, true));
-	sprites.push_back(new ach::Sprite("data/base/gfx/gui/start/04.png", false, true));
+	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/01.png", false, true));
+	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/02.png", false, true));
+	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/03.png", false, true));
+	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/04.png", false, true));
 }
 
 

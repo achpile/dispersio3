@@ -6,7 +6,8 @@ namespace ach
 {
 	struct StateMenu : StateBase
 	{
-		ach::Menu *menu;
+		ach::Menu   *menu;
+		ach::Sprite *logo;
 
 
 		 StateMenu();

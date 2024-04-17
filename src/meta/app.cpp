@@ -27,7 +27,7 @@ ach::App::App()
 	rm        = new ach::RenderManager();
 	tm        = new ach::TimeManager();
 
-	state     = new ach::StateStart();
+	state     = new ach::StateMenu();
 
 	resize();
 	tm->init();

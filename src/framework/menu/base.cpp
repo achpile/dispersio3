@@ -284,7 +284,7 @@ void ach::Menu::translate()
 ***********************************************************************/
 void ach::Menu::calculate()
 {
-	spacing = text->getFont()->getLineSpacing(size);
+	spacing = text->getFont()->getLineSpacing(size) + MENU_SPACING;
 	offset  = spacing;
 
 	text->setCharacterSize(size);

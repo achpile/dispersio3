@@ -10,9 +10,13 @@ ach::StateMenu::StateMenu()
 {
 	menu = new ach::Menu("Main");
 
-	menu->setPosition(sf::Vector2f(100.0f, 100.0f));
-	menu->setWidth(400.0f);
-	menu->setHeight(6);
+	menu->setPosition(sf::Vector2f(200, 300));
+	menu->setWidth(400);
+	menu->setHeight(8);
+
+	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.Logo"), false, true);
+
+	logo->spr->setPosition(RENDER_LAYER_GUI_X / 2, logo->tex->getSize().y / 2 + MENU_LOGO_OFFSET);
 
 	fill();
 }
@@ -27,6 +31,7 @@ ach::StateMenu::StateMenu()
 ach::StateMenu::~StateMenu()
 {
 	delete menu;
+	delete logo;
 }
 
 
@@ -58,6 +63,8 @@ void ach::StateMenu::update()
 void ach::StateMenu::render()
 {
 	menu->update();
+
+	rm->draw(logo->spr, ach::RenderLayer::rlGUI);
 }
 
 

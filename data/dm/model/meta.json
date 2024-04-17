@@ -3,5 +3,6 @@
         "type": "object"
     },
     "Font": "@include meta/font.json",
-    "Icon": "@include meta/icon.json"
+    "Icon": "@include meta/icon.json",
+    "Logo": "@include meta/logo.json"
 }
