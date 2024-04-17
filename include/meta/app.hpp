@@ -26,6 +26,8 @@ namespace ach
 
 		void stateSet(ach::GameState s);
 		void stateSwitch();
+
+		void mouse(bool visible);
 	};
 }
 

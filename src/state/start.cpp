@@ -15,6 +15,8 @@ ach::StateStart::StateStart()
 	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/02.png", false, true));
 	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/03.png", false, true));
 	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/04.png", false, true));
+
+	app->mouse(false);
 }
 
 
@@ -78,7 +80,7 @@ void ach::StateStart::render()
 ***********************************************************************/
 void ach::StateStart::event(sf::Event e)
 {
-	if ((e.type == sf::Event::MouseButtonReleased) || (e.type == sf::Event::KeyReleased))
+	if ((e.type == sf::Event::MouseButtonPressed) || (e.type == sf::Event::KeyPressed))
 		next();
 }
 

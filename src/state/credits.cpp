@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::StateCredits::StateCredits()
 {
+	app->mouse(false);
 }
 
 
@@ -55,6 +56,6 @@ void ach::StateCredits::render()
 ***********************************************************************/
 void ach::StateCredits::event(sf::Event e)
 {
-	if ((e.type == sf::Event::MouseButtonReleased) || (e.type == sf::Event::KeyReleased))
+	if ((e.type == sf::Event::MouseButtonPressed) || (e.type == sf::Event::KeyPressed))
 		app->stateSet(ach::GameState::gsMenu);
 }
