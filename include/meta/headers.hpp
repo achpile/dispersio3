@@ -36,6 +36,7 @@
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
 
+#include "framework/math/base.hpp"
 #include "framework/math/interval.hpp"
 #include "framework/math/random.hpp"
 #include "framework/math/vector.hpp"

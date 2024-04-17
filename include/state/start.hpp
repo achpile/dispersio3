@@ -18,6 +18,8 @@ namespace ach
 		void update();
 		void render();
 		void event(sf::Event);
+
+		void next();
 	};
 }
 
