@@ -16,6 +16,8 @@ namespace ach
 		void render();
 		void event(sf::Event);
 
+		void translate();
+
 		void hover(sf::Vector2f pos);
 		void click(sf::Vector2f pos, bool left);
 

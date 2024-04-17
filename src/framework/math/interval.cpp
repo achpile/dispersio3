@@ -2,10 +2,10 @@
 
 
 /***********************************************************************
-     * intervalCheck
+     * interval_check
 
 ***********************************************************************/
-bool intervalCheck(int x, int min, int max)
+bool interval_check(int x, int min, int max)
 {
 	return (x >= min) && (x <= max);
 }
@@ -13,10 +13,10 @@ bool intervalCheck(int x, int min, int max)
 
 
 /***********************************************************************
-     * intervalSet
+     * interval_set
 
 ***********************************************************************/
-int intervalSet(int x, int min, int max)
+int interval_set(int x, int min, int max)
 {
 	if (x < min)
 		return min;
@@ -30,10 +30,10 @@ int intervalSet(int x, int min, int max)
 
 
 /***********************************************************************
-     * intervalLoop
+     * interval_loop
 
 ***********************************************************************/
-int intervalLoop(int x, int min, int max)
+int interval_loop(int x, int min, int max)
 {
 	while (x < min)
 		x += (max - min + 1);

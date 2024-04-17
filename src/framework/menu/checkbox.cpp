@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name, json_t *_data, const char *_var) : MenuItem(_menu, _name)
+ach::MenuItemCheckbox::MenuItemCheckbox(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, const char *_var) : MenuItem(_menu, _name)
 {
-	data = _data;
+	data    = _data;
+	handler = _handler;
 
 	box  = new sf::RectangleShape();
 	fill = new sf::RectangleShape();

@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Language::Language()
 {
-	data = json_object_getv_branch(dm->data, "Translation.%s.Tokens", settings->getLanguage());
+	refresh();
 }
 
 
@@ -66,4 +66,35 @@ sf::String ach::Language::getv(const char *format, ...)
 	va_end(ap);
 
 	return get(path);
+}
+
+
+
+/***********************************************************************
+     * Language
+     * list
+
+***********************************************************************/
+json_t* ach::Language::list()
+{
+	json_t     *res = json_object();
+	json_t     *lang;
+	const char *key;
+
+	json_object_foreach(json_object_get(dm->data, "Translation"), key, lang)
+		json_object_set_new(res, key, json_object_get(lang, "Label"));
+
+	return res;
+}
+
+
+
+/***********************************************************************
+     * Language
+     * refresh
+
+***********************************************************************/
+void ach::Language::refresh()
+{
+	data = json_object_getv_branch(dm->data, "Translation.%s.Tokens", settings->getLanguage());
 }

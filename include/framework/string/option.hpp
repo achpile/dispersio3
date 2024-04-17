@@ -10,7 +10,7 @@ namespace ach
 		char       value[STR_LEN_MENU];
 
 
-		 Option(sf::String _caption, char *_value);
+		 Option(sf::String _caption, const char *_value);
 		~Option();
 	};
 }

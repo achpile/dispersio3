@@ -228,7 +228,7 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 ***********************************************************************/
 void ach::Menu::move(int d)
 {
-	index = intervalLoop(index + d, 0, current->items.size() - 1);
+	index = interval_loop(index + d, 0, current->items.size() - 1);
 }
 
 
@@ -269,7 +269,10 @@ void ach::Menu::finalize()
 void ach::Menu::translate()
 {
 	for (unsigned int i = 0; i < items.size(); i++)
+	{
+		items[i]->caption = lang->getv("UI.Menu.%s", items[i]->name);
 		items[i]->translate();
+	}
 }
 
 

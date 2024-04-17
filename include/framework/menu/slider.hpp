@@ -6,6 +6,7 @@ namespace ach
 {
 	struct MenuItemSlider : MenuItem
 	{
+		ach::Handler        handler;
 		sf::RectangleShape *box;
 		sf::RectangleShape *fill;
 
@@ -15,7 +16,7 @@ namespace ach
 		int     max;
 		int     value;
 
-		 MenuItemSlider(ach::Menu *_menu, const char *_name, json_t *_data, int _min, int _max);
+		 MenuItemSlider(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, int _min, int _max);
 		~MenuItemSlider();
 
 		void action(int d);

@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Option::Option(sf::String _caption, char *_value)
+ach::Option::Option(sf::String _caption, const char *_value)
 {
 	caption = _caption;
 

@@ -6,6 +6,7 @@ namespace ach
 {
 	struct MenuItemCheckbox : MenuItem
 	{
+		ach::Handler        handler;
 		sf::RectangleShape *box;
 		sf::RectangleShape *fill;
 
@@ -15,7 +16,7 @@ namespace ach
 		bool    value;
 
 
-		 MenuItemCheckbox(ach::Menu *_menu, const char *_name, json_t *_data, const char *_var);
+		 MenuItemCheckbox(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, const char *_var);
 		~MenuItemCheckbox();
 
 		void action();

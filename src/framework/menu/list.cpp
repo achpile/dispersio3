@@ -6,9 +6,18 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, json_t *_data) : MenuItem(_menu, _name)
+ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, json_t *_list, bool _token) : MenuItem(_menu, _name)
 {
-	data = _data;
+	data    = _data;
+	list    = _list;
+	token   = _token;
+	handler = _handler;
+
+	const char *value;
+	json_t     *caption;
+
+	json_object_foreach(list, value, caption)
+		options.push_back(ach::Option("", value));
 }
 
 
@@ -20,6 +29,8 @@ ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, json_t *_da
 ***********************************************************************/
 ach::MenuItemList::~MenuItemList()
 {
+	json_decref(list);
+	options.clear();
 }
 
 
@@ -29,8 +40,14 @@ ach::MenuItemList::~MenuItemList()
      * action
 
 ***********************************************************************/
-void ach::MenuItemList::action(int)
+void ach::MenuItemList::action(int d)
 {
+	index = interval_loop(index + d, 0, options.size() - 1);
+
+	json_string_set(data, options[index].value);
+
+	if (handler)
+		handler(NULL);
 }
 
 
@@ -42,7 +59,7 @@ void ach::MenuItemList::action(int)
 ***********************************************************************/
 void ach::MenuItemList::render(int i)
 {
-	menu->print("< " + sf::String("list") + " >", 0, i, ach::TextAlign::taRight);
+	menu->print("< " + options[index].caption + " >", 0, i, ach::TextAlign::taRight);
 }
 
 
@@ -54,6 +71,27 @@ void ach::MenuItemList::render(int i)
 ***********************************************************************/
 void ach::MenuItemList::finalize()
 {
+	index = 0;
+
+	for (unsigned int i = 0; i < options.size(); i++)
+		if (!strncmp(json_string_value(data), options[i].value, STR_LEN_MENU))
+			index = i;
+}
+
+
+
+/***********************************************************************
+     * MenuItemList
+     * translate
+
+***********************************************************************/
+void ach::MenuItemList::translate()
+{
+	for (unsigned int i = 0; i < options.size(); i++)
+		if (token)
+			options[i].caption = lang->getv("UI.Options.%s", json_object_get_string(list, options[i].value));
+		else
+			options[i].caption = str_utf8(json_object_get_string(list, options[i].value));
 }
 
 

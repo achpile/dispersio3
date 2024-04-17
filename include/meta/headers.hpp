@@ -82,6 +82,8 @@
 #include "framework/particle/base.hpp"
 #include "framework/particle/system.hpp"
 
+#include "misc/handler.hpp"
+
 #include "particle/stars.hpp"
 
 #include "container/resources.hpp"

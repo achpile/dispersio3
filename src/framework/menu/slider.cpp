@@ -6,11 +6,12 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemSlider::MenuItemSlider(ach::Menu *_menu, const char *_name, json_t *_data, int _min, int _max) : MenuItem(_menu, _name)
+ach::MenuItemSlider::MenuItemSlider(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, int _min, int _max) : MenuItem(_menu, _name)
 {
-	data = _data;
-	min  = _min;
-	max  = _max;
+	min     = _min;
+	max     = _max;
+	data    = _data;
+	handler = _handler;
 
 	box  = new sf::RectangleShape();
 	fill = new sf::RectangleShape();
@@ -47,7 +48,7 @@ ach::MenuItemSlider::~MenuItemSlider()
 ***********************************************************************/
 void ach::MenuItemSlider::action(int d)
 {
-	if (!intervalCheck(value + d, min, max))
+	if (!interval_check(value + d, min, max))
 		return;
 
 	value += d;

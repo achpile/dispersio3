@@ -2,8 +2,8 @@
 #define __FRAMEWORK_MATH_INTERVAL
 
 
-bool intervalCheck(int x, int min, int max);
-int  intervalSet  (int x, int min, int max);
-int  intervalLoop (int x, int min, int max);
+bool interval_check(int x, int min, int max);
+int  interval_set  (int x, int min, int max);
+int  interval_loop (int x, int min, int max);
 
 #endif
