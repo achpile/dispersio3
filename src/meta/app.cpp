@@ -11,6 +11,8 @@ ach::App::App()
 	isRunning = true;
 	isFocused = true;
 
+	window    = NULL;
+
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
 	settings  = new ach::Settings();
@@ -146,6 +148,9 @@ void ach::App::resize()
 ***********************************************************************/
 void ach::App::create()
 {
+	if (window)
+		delete window;
+
 	window = new sf::RenderWindow(settings->getWindowMode(),
 	                              PROJECT_NAME " v" PROJECT_VERS,
 	                              settings->getWindowStyle());

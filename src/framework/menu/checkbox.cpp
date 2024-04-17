@@ -52,6 +52,9 @@ void ach::MenuItemCheckbox::action()
 	value = !value;
 
 	json_object_set_boolean(data, var, value);
+
+	if (handler)
+		handler(NULL);
 }
 
 
