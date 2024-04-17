@@ -4,6 +4,15 @@
 
 namespace ach
 {
+	enum GameState
+	{
+		gsStart = 0,
+		gsMenu,
+		gsCredits,
+		gsGame
+	};
+
+
 	struct StateBase
 	{
 		         StateBase()          {};

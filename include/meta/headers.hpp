@@ -92,6 +92,7 @@
 #include "container/language.hpp"
 
 #include "state/base.hpp"
+#include "state/pair.hpp"
 #include "state/start.hpp"
 #include "state/menu.hpp"
 #include "state/game.hpp"

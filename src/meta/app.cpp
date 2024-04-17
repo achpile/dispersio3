@@ -12,6 +12,7 @@ ach::App::App()
 	isFocused = true;
 
 	window    = NULL;
+	state     = NULL;
 
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
