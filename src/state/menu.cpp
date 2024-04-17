@@ -41,10 +41,11 @@ void ach::StateMenu::update()
 	if (!menu->isActive)
 		app->isRunning = false;
 
+	bg->stars->update();
+	menu->controls();
+
 	render();
 
-	menu->controls();
-	menu->update();
 }
 
 
@@ -56,7 +57,7 @@ void ach::StateMenu::update()
 ***********************************************************************/
 void ach::StateMenu::render()
 {
-	bg->stars->update();
+	menu->update();
 }
 
 

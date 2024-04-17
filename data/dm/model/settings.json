@@ -47,17 +47,17 @@
         },
         "Height": {
             "@attr": {
-                "default": 800,
+                "default": 600,
                 "max": 32768,
-                "min": 400,
+                "min": 300,
                 "type": "integer"
             }
         },
         "Width": {
             "@attr": {
-                "default": 1280,
+                "default": 800,
                 "max": 32768,
-                "min": 640,
+                "min": 400,
                 "type": "integer"
             }
         }
