@@ -2,12 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "Aspect": {
-        "@attr": {
-            "default": "Aspect ratio",
-            "type": "string"
-        }
-    },
     "Audio": {
         "@attr": {
             "default": "Audio",
@@ -74,12 +68,6 @@
             "type": "string"
         }
     },
-    "Smooth": {
-        "@attr": {
-            "default": "Smooth textures",
-            "type": "string"
-        }
-    },
     "Sound": {
         "@attr": {
             "default": "Sound",
@@ -89,12 +77,6 @@
     "Start": {
         "@attr": {
             "default": "Start game",
-            "type": "string"
-        }
-    },
-    "Video": {
-        "@attr": {
-            "default": "Video",
             "type": "string"
         }
     }

@@ -115,6 +115,9 @@ sf::Vector2i ach::Settings::getWindowPosition()
 ***********************************************************************/
 void ach::Settings::setWindowSize(sf::Vector2u size)
 {
+	if (isFullscreen())
+		return;
+
 	json_object_set_branch_integer(data, "Window.Width" , size.x);
 	json_object_set_branch_integer(data, "Window.Height", size.y);
 }
