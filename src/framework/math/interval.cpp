@@ -26,3 +26,20 @@ int intervalSet(int x, int min, int max)
 
 	return x;
 }
+
+
+
+/***********************************************************************
+     * intervalLoop
+
+***********************************************************************/
+int intervalLoop(int x, int min, int max)
+{
+	while (x < min)
+		x += (max - min + 1);
+
+	while (x > max)
+		x -= (max - min + 1);
+
+	return x;
+}

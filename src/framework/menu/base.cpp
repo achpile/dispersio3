@@ -228,7 +228,7 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 ***********************************************************************/
 void ach::Menu::move(int d)
 {
-	index = intervalSet(index + d, 0, current->items.size() - 1);
+	index = intervalLoop(index + d, 0, current->items.size() - 1);
 }
 
 
