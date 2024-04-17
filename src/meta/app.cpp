@@ -14,6 +14,8 @@ ach::App::App()
 	window    = NULL;
 	state     = NULL;
 
+	stateCurr = ach::GameState::gsNone;
+
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
 	settings  = new ach::Settings();
@@ -27,10 +29,10 @@ ach::App::App()
 	rm        = new ach::RenderManager();
 	tm        = new ach::TimeManager();
 
-	state     = new ach::StateMenu();
-
 	resize();
 	tm->init();
+
+	stateSet(ach::GameState::gsStart);
 }
 
 
@@ -66,10 +68,12 @@ ach::App::~App()
 void ach::App::update()
 {
 	tm->update();
-	events();
 
 	isFocused = window->hasFocus();
 	isRunning = window->isOpen();
+
+	stateSwitch();
+	events();
 
 	if (!isFocused)
 		return;
@@ -138,6 +142,45 @@ void ach::App::resize()
 {
 	settings->setWindowSize(window->getSize());
 	rm->resize(window);
+}
+
+
+
+/***********************************************************************
+     * App
+     * stateSet
+
+***********************************************************************/
+void ach::App::stateSet(ach::GameState s)
+{
+	stateNext = s;
+}
+
+
+
+/***********************************************************************
+     * App
+     * stateSwitch
+
+***********************************************************************/
+void ach::App::stateSwitch()
+{
+	if (stateCurr == stateNext)
+		return;
+
+	if (stateCurr != ach::GameState::gsNone)
+		delete state;
+
+	stateCurr = stateNext;
+
+	switch (stateCurr)
+	{
+		case ach::GameState::gsNone   : state = NULL                   ; return;
+		case ach::GameState::gsStart  : state = new ach::StateStart  (); return;
+		case ach::GameState::gsMenu   : state = new ach::StateMenu   (); return;
+		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
+		case ach::GameState::gsGame   : state = new ach::StateGame   (); return;
+	}
 }
 
 

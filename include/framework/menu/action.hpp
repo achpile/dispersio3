@@ -6,7 +6,12 @@ namespace ach
 {
 	struct MenuItemAction : MenuItem
 	{
-		 MenuItemAction(ach::Menu *_menu, const char *_name);
+		ach::Handler  handler;
+
+		json_t       *param;
+
+
+		 MenuItemAction(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_param);
 		~MenuItemAction();
 
 		void action();

@@ -8,6 +8,10 @@ namespace ach
 	{
 		 StateCredits();
 		~StateCredits();
+
+		void update();
+		void render();
+		void event(sf::Event);
 	};
 }
 

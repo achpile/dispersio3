@@ -2,10 +2,10 @@
 
 
 /***********************************************************************
-     * pairGetString
+     * pair_get_string
 
 ***********************************************************************/
-const char *pairGetString(int val, ach::Pair pairs[])
+const char *pair_get_string(int val, ach::Pair pairs[])
 {
 	for (int i = 0; pairs[i].str; i++)
 		if (val == pairs[i].num)
@@ -17,10 +17,10 @@ const char *pairGetString(int val, ach::Pair pairs[])
 
 
 /***********************************************************************
-     * pairGetEnum
+     * pair_get_enum
 
 ***********************************************************************/
-int pairGetEnum(const char * val, ach::Pair pairs[])
+int pair_get_enum(const char * val, ach::Pair pairs[])
 {
 	if (!val)
 		return 0;

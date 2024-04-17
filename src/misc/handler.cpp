@@ -38,6 +38,7 @@ void handlerAudio(json_t *)
      * handlerState
 
 ***********************************************************************/
-void handlerState(json_t *)
+void handlerState(json_t *data)
 {
+	app->stateSet((ach::GameState)pair_get_enum(json_string_value(data), pairGameState));
 }

@@ -12,7 +12,7 @@ namespace ach
 }
 
 
-const char *pairGetString(int val, ach::Pair pairs[]);
-int         pairGetEnum(const char *val, ach::Pair pairs[]);
+const char *pair_get_string(int val, ach::Pair pairs[]);
+int         pair_get_enum(const char *val, ach::Pair pairs[]);
 
 #endif

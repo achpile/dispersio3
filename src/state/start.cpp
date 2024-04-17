@@ -44,7 +44,10 @@ void ach::StateStart::update()
 		next();
 
 	if (index >= sprites.size())
-		exit(0); // switch to menu
+	{
+		app->stateSet(ach::GameState::gsMenu);
+		return;
+	}
 
 	bg->stars->update();
 

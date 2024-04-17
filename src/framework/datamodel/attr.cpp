@@ -23,7 +23,7 @@ ach::JSONtype json_attr_get_type(json_t *obj)
 		return ach::JSONtype::jtUnknown;
 	}
 
-	ach::JSONtype res = (ach::JSONtype)pairGetEnum(type, pairAttrType);
+	ach::JSONtype res = (ach::JSONtype)pair_get_enum(type, pairAttrType);
 
 	if (res == ach::JSONtype::jtUnknown)
 		logger->log(ach::LogLevel::llError, "Unknown type: \"%s\"", type);

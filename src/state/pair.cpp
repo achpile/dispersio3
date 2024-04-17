@@ -12,5 +12,5 @@ ach::Pair pairGameState[] =
 	{.num = ach::GameState::gsCredits, .str = "credits"},
 	{.num = ach::GameState::gsGame   , .str = "game"   },
 
-	{.num = ach::GameState::gsStart  , .str = NULL     },
+	{.num = ach::GameState::gsNone   , .str = NULL     },
 };

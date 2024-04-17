@@ -100,9 +100,9 @@ void ach::StateMenu::translate()
 ***********************************************************************/
 void ach::StateMenu::fill()
 {
-	menu->add("Main"   , new ach::MenuItemFolder  (menu, "Start"     ));
+	menu->add("Main"   , new ach::MenuItemAction  (menu, "Start"     , handlerState     , json_string("game"   )));
 	menu->add("Main"   , new ach::MenuItemFolder  (menu, "Options"   ));
-	menu->add("Main"   , new ach::MenuItemAction  (menu, "Credits"   ));
+	menu->add("Main"   , new ach::MenuItemAction  (menu, "Credits"   , handlerState     , json_string("credits")));
 
 	menu->add("Options", new ach::MenuItemFolder  (menu, "Game"      ));
 	menu->add("Options", new ach::MenuItemFolder  (menu, "Audio"     ));

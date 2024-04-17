@@ -6,8 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemAction::MenuItemAction(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
+ach::MenuItemAction::MenuItemAction(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_param) : MenuItem(_menu, _name)
 {
+	param   = _param;
+	handler = _handler;
 }
 
 
@@ -19,6 +21,8 @@ ach::MenuItemAction::MenuItemAction(ach::Menu *_menu, const char *_name) : MenuI
 ***********************************************************************/
 ach::MenuItemAction::~MenuItemAction()
 {
+	if (param)
+		json_decref(param);
 }
 
 
@@ -30,6 +34,8 @@ ach::MenuItemAction::~MenuItemAction()
 ***********************************************************************/
 void ach::MenuItemAction::action()
 {
+	if (handler)
+		handler(param);
 }
 
 

@@ -82,7 +82,7 @@ json_t* ach::Language::list()
 	const char *key;
 
 	json_object_foreach(json_object_get(dm->data, "Translation"), key, lang)
-		json_object_set_new(res, key, json_object_get(lang, "Label"));
+		json_object_set(res, key, json_object_get(lang, "Label"));
 
 	return res;
 }

@@ -6,6 +6,7 @@ namespace ach
 {
 	enum GameState
 	{
+		gsNone = -1,
 		gsStart = 0,
 		gsMenu,
 		gsCredits,
