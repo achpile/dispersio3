@@ -47,7 +47,7 @@ ach::MenuItemSlider::~MenuItemSlider()
 ***********************************************************************/
 void ach::MenuItemSlider::action(int d)
 {
-	if (value + d > max || value + d < min)
+	if (!intervalCheck(value + d, min, max))
 		return;
 
 	value += d;

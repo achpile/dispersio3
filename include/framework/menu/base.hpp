@@ -33,6 +33,8 @@ namespace ach
 		void update();
 		void render();
 
+		void event(sf::Event e);
+
 		void controls();
 
 		void add(const char *_parent, ach::MenuItem *item);
@@ -41,6 +43,7 @@ namespace ach
 		bool inside(sf::Vector2f pos);
 		void hover(sf::Vector2f pos);
 		void click(sf::Vector2f pos, bool left);
+		void move(int d);
 
 		void reset();
 		void finalize();

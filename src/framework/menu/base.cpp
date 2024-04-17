@@ -84,15 +84,42 @@ void ach::Menu::render()
 
 /***********************************************************************
      * Menu
+     * event
+
+***********************************************************************/
+void ach::Menu::event(sf::Event e)
+{
+	switch(e.type)
+	{
+		case sf::Event::MouseMoved:
+			hover(rm->transform(sf::Vector2f(e.mouseMove.x, e.mouseMove.y), ach::RenderLayer::rlGUI));
+			break;
+
+
+		case sf::Event::MouseButtonReleased:
+			if ((e.mouseButton.button != sf::Mouse::Button::Left) && (e.mouseButton.button != sf::Mouse::Button::Right))
+				break;
+
+			click(rm->transform(sf::Vector2f(e.mouseButton.x, e.mouseButton.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
+			break;
+
+
+		default:
+			break;
+	}
+}
+
+
+
+/***********************************************************************
+     * Menu
      * controls
 
 ***********************************************************************/
 void ach::Menu::controls()
 {
-	if (ctrl->keys[caUp    ].pressed) index--;
-	if (ctrl->keys[caDown  ].pressed) index++;
-
-	index %= current->items.size();
+	if (ctrl->keys[caUp    ].pressed) move(-1);
+	if (ctrl->keys[caDown  ].pressed) move( 1);
 
 	if (ctrl->keys[caLeft  ].pressed) current->items[index]->left();
 	if (ctrl->keys[caRight ].pressed) current->items[index]->right();
@@ -190,6 +217,18 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 		current->items[index]->click();
 	else
 		current->items[index]->rclick();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * move
+
+***********************************************************************/
+void ach::Menu::move(int d)
+{
+	index = intervalSet(index + d, 0, current->items.size() - 1);
 }
 
 
