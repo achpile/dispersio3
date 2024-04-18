@@ -17,6 +17,9 @@ namespace ach
 
 		const char   *getLanguage();
 
+		int           getVolumeSound();
+		int           getVolumeMusic();
+
 		sf::VideoMode getWindowMode();
 		sf::Uint32    getWindowStyle();
 		sf::Vector2i  getWindowPosition();

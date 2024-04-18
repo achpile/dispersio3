@@ -11,6 +11,7 @@ extern ach::Language      *lang;
 extern ach::Background    *bg;
 
 extern ach::RenderManager *rm;
+extern ach::SoundManager  *sm;
 extern ach::TimeManager   *tm;
 extern ach::Datamodel     *dm;
 

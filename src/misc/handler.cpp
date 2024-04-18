@@ -30,6 +30,7 @@ void handlerFullscreen(json_t *)
 ***********************************************************************/
 void handlerAudio(json_t *)
 {
+	sm->volume();
 }
 
 

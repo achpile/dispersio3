@@ -11,6 +11,7 @@ ach::Language      *lang;
 ach::Background    *bg;
 
 ach::RenderManager *rm;
+ach::SoundManager  *sm;
 ach::TimeManager   *tm;
 ach::Datamodel     *dm;
 

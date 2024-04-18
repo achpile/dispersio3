@@ -27,6 +27,7 @@ ach::App::App()
 	create();
 
 	rm        = new ach::RenderManager();
+	sm        = new ach::SoundManager();
 	tm        = new ach::TimeManager();
 
 	resize();
@@ -54,6 +55,7 @@ ach::App::~App()
 	delete ctrl;
 
 	delete rm;
+	delete sm;
 	delete tm;
 	delete dm;
 }
@@ -83,6 +85,7 @@ void ach::App::update()
 
 	ctrl->update();
 	state->update();
+	sm->update();
 
 	rm->display(window);
 	window->display();

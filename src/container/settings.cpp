@@ -52,6 +52,30 @@ const char* ach::Settings::getLanguage()
 
 /***********************************************************************
      * Settings
+     * getVolumeSound
+
+***********************************************************************/
+int ach::Settings::getVolumeSound()
+{
+	return json_object_get_branch_integer(data, "Audio.Sound");
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * getVolumeMusic
+
+***********************************************************************/
+int ach::Settings::getVolumeMusic()
+{
+	return json_object_get_branch_integer(data, "Audio.Music");
+}
+
+
+
+/***********************************************************************
+     * Settings
      * getWindowMode
 
 ***********************************************************************/
