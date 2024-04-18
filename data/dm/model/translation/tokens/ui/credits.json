@@ -1,0 +1,47 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Developer": {
+        "@attr": {
+            "default": "Developer",
+            "type": "string"
+        }
+    },
+    "Lib": {
+        "@attr": {
+            "default": "Multimedia library",
+            "type": "string"
+        }
+    },
+    "MapEditor": {
+        "@attr": {
+            "default": "Map editor",
+            "type": "string"
+        }
+    },
+    "Music": {
+        "@attr": {
+            "default": "Music",
+            "type": "string"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "default": "Sound effects",
+            "type": "string"
+        }
+    },
+    "Special": {
+        "@attr": {
+            "default": "Special thanks",
+            "type": "string"
+        }
+    },
+    "Translations": {
+        "@attr": {
+            "default": "Translations",
+            "type": "string"
+        }
+    }
+}

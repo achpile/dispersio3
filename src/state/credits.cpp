@@ -86,15 +86,52 @@ void ach::StateCredits::fill()
 {
 	add(PROJECT_NAME " v" PROJECT_VERS, ach::CreditsWeight::cwTitle);
 
-	add("Developer", ach::CreditsWeight::cwHeader);
-	add("Achpile", ach::CreditsWeight::cwEntry);
-	add("Achpile2", ach::CreditsWeight::cwEntry);
+	add(lang->get("UI.Credits.Developer"), ach::CreditsWeight::cwHeader);
+
+	add("Achpile"                 , ach::CreditsWeight::cwEntry);
+	add("http://achpile.github.io", ach::CreditsWeight::cwEntry);
+	add("achpile@gmail.com"       , ach::CreditsWeight::cwEntry);
+	space();
+
+
+	add(lang->get("UI.Credits.Music"), ach::CreditsWeight::cwHeader);
+
+	add("Creepue"                       , ach::CreditsWeight::cwEntry);
+	add("https://vk.com/creepue_music"  , ach::CreditsWeight::cwEntry);
+	add("https://youtube.com/c/creepue" , ach::CreditsWeight::cwEntry);
+	add("https://soundcloud.com/creepue", ach::CreditsWeight::cwEntry);
+	space();
+
+
+	add(lang->get("UI.Credits.Sound"), ach::CreditsWeight::cwHeader);
+
+	add("ChipTone by SFBGames"             , ach::CreditsWeight::cwEntry);
+	add("https://sfbgames.itch.io/chiptone", ach::CreditsWeight::cwEntry);
+	space();
+
+
+	add(lang->get("UI.Credits.Lib"), ach::CreditsWeight::cwHeader);
+
+	add("SFML"                , ach::CreditsWeight::cwEntry);
+	add("http://sfml-dev.org/", ach::CreditsWeight::cwEntry);
+	space();
+
+
+	add(lang->get("UI.Credits.MapEditor"), ach::CreditsWeight::cwHeader);
+
+	add("Tiled"                , ach::CreditsWeight::cwEntry);
+	add("http://mapeditor.org/", ach::CreditsWeight::cwEntry);
+	space();
+
+
+	add(lang->get("UI.Credits.Translations"), ach::CreditsWeight::cwHeader);
 
 	space();
 
-	add("Developer2", ach::CreditsWeight::cwHeader);
-	add("Achpile", ach::CreditsWeight::cwEntry);
-	add("Achpile2", ach::CreditsWeight::cwEntry);
+
+	add(lang->get("UI.Credits.Special"), ach::CreditsWeight::cwHeader);
+
+	add("garett90", ach::CreditsWeight::cwEntry);
 }
 
 

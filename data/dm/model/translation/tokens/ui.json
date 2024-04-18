@@ -2,5 +2,6 @@
     "@attr": {
         "type": "object"
     },
+    "Credits": "@include ui/credits.json",
     "Menu": "@include ui/menu.json"
 }
