@@ -6,7 +6,7 @@
             }
         ],
         "Label": "Русский",
-        "Tokens": "@include rus/tokens.json",
-        "Steam": "russian"
+        "Steam": "russian",
+        "Tokens": "@include rus/tokens.json"
     }
 }

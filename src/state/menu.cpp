@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::StateMenu::StateMenu()
 {
-	menu = new ach::Menu("Main");
+	menu = new ach::Menu("Main", resources->fonts.menu);
 
 	menu->setPosition(sf::Vector2f(200, 300));
 	menu->setWidth(400);

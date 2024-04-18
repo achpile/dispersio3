@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Menu::Menu(const char *name)
+ach::Menu::Menu(const char *name, sf::Font *font)
 {
 	box      = new sf::RectangleShape();
 	text     = new sf::Text();
@@ -20,7 +20,7 @@ ach::Menu::Menu(const char *name)
 	isActive = true;
 	padding  = sf::Vector2f(MENU_PADDING, MENU_PADDING);
 
-	text->setFont(*resources->fonts.base);
+	text->setFont(*font);
 	text->setFillColor(sf::Color::White);
 
 	box->setFillColor(sf::Color::Black);
@@ -420,7 +420,7 @@ void ach::Menu::setFontSize(int _size)
 ***********************************************************************/
 void ach::Menu::print(sf::String string, float x, int y, ach::TextAlign align)
 {
-	textDraw(text, string, left() + x, line(y), width, align, ach::RenderLayer::rlGUI);
+	text_draw(text, string, left() + x, line(y), width, align, ach::RenderLayer::rlGUI);
 }
 
 

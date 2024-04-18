@@ -1,6 +1,6 @@
 {
     "@attr": {
-        "type": "filename",
-        "default": "gfx/ui/misc/logo.png"
+        "default": "gfx/ui/misc/logo.png",
+        "type": "filename"
     }
 }

@@ -68,7 +68,8 @@
 #include "framework/manager/render.hpp"
 #include "framework/manager/time.hpp"
 
-#include "framework/draw/text.hpp"
+#include "framework/text/align.hpp"
+#include "framework/text/draw.hpp"
 
 #include "framework/menu/item.hpp"
 #include "framework/menu/action.hpp"

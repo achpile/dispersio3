@@ -8,7 +8,8 @@ namespace ach
 	{
 		struct
 		{
-			sf::Font *base;
+			sf::Font *menu;
+			sf::Font *credits;
 		} fonts;
 
 		struct

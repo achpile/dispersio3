@@ -27,7 +27,7 @@ namespace ach
 		int   index;
 
 
-		 Menu(const char *name);
+		 Menu(const char *name, sf::Font *font);
 		~Menu();
 
 		void update();

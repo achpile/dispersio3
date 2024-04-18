@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Resources::Resources()
 {
-	loadFont(&fonts.base, json_object_get_branch_string(dm->data, "Meta.Font.Base"));
+	loadFont(&fonts.menu   , json_object_get_branch_string(dm->data, "Meta.Font.Menu"   ));
+	loadFont(&fonts.credits, json_object_get_branch_string(dm->data, "Meta.Font.Credits"));
 
 	loadImage(&meta.icon, json_object_get_branch_string(dm->data, "Meta.Icon"));
 }
@@ -22,7 +23,8 @@ ach::Resources::Resources()
 ***********************************************************************/
 ach::Resources::~Resources()
 {
-	delete fonts.base;
+	delete fonts.menu;
+	delete fonts.credits;
 
 	delete meta.icon;
 }

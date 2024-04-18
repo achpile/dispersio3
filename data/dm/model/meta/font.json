@@ -2,10 +2,16 @@
     "@attr": {
         "type": "object"
     },
-    "Base": {
-    "@attr": {
-        "type": "filename",
-        "default": "font/dejavu.ttf"
+    "Credits": {
+        "@attr": {
+            "default": "font/FSEX300.ttf",
+            "type": "filename"
+        }
+    },
+    "Menu": {
+        "@attr": {
+            "default": "font/dejavu.ttf",
+            "type": "filename"
+        }
     }
-	}
 }
