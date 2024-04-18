@@ -27,6 +27,8 @@ namespace ach
 		void event(sf::Event);
 
 		void fill();
+		void translations();
+
 		void add(sf::String string, ach::CreditsWeight weight);
 		void space();
 

@@ -126,12 +126,46 @@ void ach::StateCredits::fill()
 
 	add(lang->get("UI.Credits.Translations"), ach::CreditsWeight::cwHeader);
 
+	translations();
 	space();
 
 
 	add(lang->get("UI.Credits.Special"), ach::CreditsWeight::cwHeader);
 
 	add("garett90", ach::CreditsWeight::cwEntry);
+}
+
+
+
+/***********************************************************************
+     * StateCredits
+     * translations
+
+***********************************************************************/
+void ach::StateCredits::translations()
+{
+	sf::String  line;
+	const char *key;
+	size_t      i;
+
+	json_t *author;
+	json_t *item;
+
+	json_object_foreach(json_object_get(dm->data, "Translation"), key, item)
+	{
+		line  = str_utf8(json_object_get_string(item, "Label"));
+		line += " - ";
+
+		json_array_foreach(json_object_get(item, "Author"), i, author)
+		{
+			if (i != 0)
+				line += ", ";
+
+			line += str_utf8(json_object_get_string(author, "Name"));
+		}
+
+		add(line, ach::CreditsWeight::cwEntry);
+	}
 }
 
 
