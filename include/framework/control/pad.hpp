@@ -10,7 +10,7 @@ namespace ach
 		caDown,
 		caLeft,
 		caRight,
-		caAction,
+		caJump,
 		caMenu,
 		caCount
 	};

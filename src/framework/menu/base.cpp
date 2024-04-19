@@ -122,14 +122,14 @@ void ach::Menu::event(sf::Event e)
 ***********************************************************************/
 void ach::Menu::controls()
 {
-	if (ctrl->keys[caUp    ].pressed) move(-1);
-	if (ctrl->keys[caDown  ].pressed) move( 1);
+	if (ctrl->keys[caUp   ].pressed) move(-1);
+	if (ctrl->keys[caDown ].pressed) move( 1);
 
-	if (ctrl->keys[caLeft  ].pressed) current->items[index]->left();
-	if (ctrl->keys[caRight ].pressed) current->items[index]->right();
-	if (ctrl->keys[caAction].pressed) current->items[index]->pick();
+	if (ctrl->keys[caLeft ].pressed) current->items[index]->left();
+	if (ctrl->keys[caRight].pressed) current->items[index]->right();
+	if (ctrl->keys[caJump ].pressed) current->items[index]->pick();
 
-	if (ctrl->keys[caMenu  ].pressed) current->items.back()->pick();
+	if (ctrl->keys[caMenu ].pressed) current->items.back()->pick();
 }
 
 

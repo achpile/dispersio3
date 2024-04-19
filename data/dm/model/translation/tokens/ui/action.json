@@ -1,0 +1,41 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Up": {
+        "@attr": {
+            "default": "Up",
+            "type": "string"
+        }
+    },
+    "Down": {
+        "@attr": {
+            "default": "Down",
+            "type": "string"
+        }
+    },
+    "Left": {
+        "@attr": {
+            "default": "Left",
+            "type": "string"
+        }
+    },
+    "Right": {
+        "@attr": {
+            "default": "Right",
+            "type": "string"
+        }
+    },
+    "Jump": {
+        "@attr": {
+            "default": "Jump",
+            "type": "string"
+        }
+    },
+    "Menu": {
+        "@attr": {
+            "default": "Menu",
+            "type": "string"
+        }
+    }
+}
