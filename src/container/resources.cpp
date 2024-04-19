@@ -11,7 +11,11 @@ ach::Resources::Resources()
 	loadFont(&fonts.menu   , json_object_get_branch_string(dm->data, "Meta.Font.Menu"   ));
 	loadFont(&fonts.credits, json_object_get_branch_string(dm->data, "Meta.Font.Credits"));
 
-	loadImage(&meta.icon, json_object_get_branch_string(dm->data, "Meta.Icon"));
+	loadSound(&sound.blip  , json_object_get_branch_string(dm->data, "Meta.Sound.Menu.Blip"));
+	loadSound(&sound.back  , json_object_get_branch_string(dm->data, "Meta.Sound.Menu.Back"));
+	loadSound(&sound.pick  , json_object_get_branch_string(dm->data, "Meta.Sound.Menu.Pick"));
+
+	loadImage(&meta.icon   , json_object_get_branch_string(dm->data, "Meta.Icon"));
 }
 
 
@@ -25,6 +29,10 @@ ach::Resources::~Resources()
 {
 	delete fonts.menu;
 	delete fonts.credits;
+
+	delete sound.blip;
+	delete sound.back;
+	delete sound.pick;
 
 	delete meta.icon;
 }
@@ -42,6 +50,21 @@ void ach::Resources::loadFont(sf::Font **font, const char *filename)
 
 	if (!(*font)->loadFromFile(filename))
 		logger->log(ach::LogLevel::llError, "Error loading font: \"%s\"", filename);
+}
+
+
+
+/***********************************************************************
+     * Resources
+     * loadSound
+
+***********************************************************************/
+void ach::Resources::loadSound(sf::SoundBuffer **sound, const char *filename)
+{
+	(*sound) = new sf::SoundBuffer();
+
+	if (!(*sound)->loadFromFile(filename))
+		logger->log(ach::LogLevel::llError, "Error loading sound: \"%s\"", filename);
 }
 
 

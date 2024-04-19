@@ -86,6 +86,9 @@ void ach::StateCredits::fill()
 {
 	add(PROJECT_NAME " v" PROJECT_VERS, ach::CreditsWeight::cwTitle);
 
+	space();
+
+
 	add(lang->get("UI.Credits.Developer"), ach::CreditsWeight::cwHeader);
 
 	add("Achpile"                 , ach::CreditsWeight::cwEntry);
@@ -200,7 +203,7 @@ void ach::StateCredits::add(sf::String string, ach::CreditsWeight weight)
 ***********************************************************************/
 void ach::StateCredits::space()
 {
-	pos += getOffset(ach::CreditsWeight::cwEntry);
+	pos += 100.0f;
 }
 
 

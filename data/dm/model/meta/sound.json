@@ -1,0 +1,28 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Menu": {
+        "@attr": {
+            "type": "object"
+        },
+        "Back": {
+            "@attr": {
+                "default": "sfx/misc/menu/back.wav",
+                "type": "filename"
+            }
+        },
+        "Blip": {
+            "@attr": {
+                "default": "sfx/misc/menu/blip.wav",
+                "type": "filename"
+            }
+        },
+        "Pick": {
+            "@attr": {
+                "default": "sfx/misc/menu/pick.wav",
+                "type": "filename"
+            }
+        }
+    }
+}
