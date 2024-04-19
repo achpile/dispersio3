@@ -45,6 +45,7 @@ void ach::MenuItemList::action(int d)
 	index = interval_loop(index + d, 0, options.size() - 1);
 
 	json_string_set(data, options[index].value);
+	sm->play(menu->sfxPick);
 
 	if (handler)
 		handler(NULL);

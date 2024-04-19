@@ -34,6 +34,8 @@ ach::MenuItemAction::~MenuItemAction()
 ***********************************************************************/
 void ach::MenuItemAction::action()
 {
+	sm->play(menu->sfxPick);
+
 	if (handler)
 		handler(param);
 }

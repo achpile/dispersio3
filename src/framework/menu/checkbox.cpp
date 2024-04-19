@@ -52,6 +52,7 @@ void ach::MenuItemCheckbox::action()
 	value = !value;
 
 	json_object_set_boolean(data, var, value);
+	sm->play(menu->sfxPick);
 
 	if (handler)
 		handler(NULL);

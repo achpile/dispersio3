@@ -200,7 +200,13 @@ void ach::Menu::hover(sf::Vector2f v)
 	if (!inside(v))
 		return;
 
-	index = floor((v.y - line(0)) / spacing);
+	int _index = floor((v.y - line(0)) / spacing);
+
+	if (index != _index)
+	{
+		index = _index;
+		sm->play(sfxBlip);
+	}
 }
 
 
@@ -215,7 +221,7 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 	if (!inside(v))
 		return;
 
-	hover(pos);
+	hover(v);
 
 	if (left)
 		current->items[index]->click();
@@ -233,6 +239,8 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 void ach::Menu::move(int d)
 {
 	index = interval_loop(index + d, 0, current->items.size() - 1);
+
+	sm->play(sfxBlip);
 }
 
 

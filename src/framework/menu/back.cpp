@@ -34,6 +34,8 @@ void ach::MenuItemBack::action()
 		menu->go(parent->parent, parent);
 	else
 		menu->isActive = false;
+
+	sm->play(menu->sfxBack);
 }
 
 

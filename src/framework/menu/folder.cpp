@@ -60,6 +60,7 @@ void ach::MenuItemFolder::finalize()
 void ach::MenuItemFolder::action()
 {
 	menu->go(this, NULL);
+	sm->play(menu->sfxPick);
 }
 
 

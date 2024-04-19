@@ -86,6 +86,7 @@ void ach::SoundManager::add()
 		sfx->setVolume(settings->getVolumeSound());
 		sfx->play();
 
+		sound.push_back(sfx);
 		buf.pop_back();
 	}
 }
