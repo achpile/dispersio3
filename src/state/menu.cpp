@@ -13,6 +13,7 @@ ach::StateMenu::StateMenu()
 	menu->setPosition(sf::Vector2f(200, 300));
 	menu->setWidth(400);
 	menu->setHeight(8);
+	menu->setSound(resources->sound.blip, resources->sound.back, resources->sound.pick);
 
 	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.Logo"), false, true);
 

@@ -13,6 +13,10 @@ ach::Menu::Menu(const char *name, sf::Font *font)
 	root     = new ach::MenuItemFolder(this, name);
 	current  = root;
 
+	sfxBlip  = NULL;
+	sfxBack  = NULL;
+	sfxPick  = NULL;
+
 	index    = 0;
 	width    = 0;
 	height   = 0;
@@ -409,6 +413,20 @@ void ach::Menu::setFontSize(int _size)
 	size = _size;
 
 	calculate();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * setSound
+
+***********************************************************************/
+void ach::Menu::setSound(sf::SoundBuffer *_blip, sf::SoundBuffer *_back, sf::SoundBuffer *_pick)
+{
+	sfxBlip = _blip;
+	sfxBack = _back;
+	sfxPick = _pick;
 }
 
 

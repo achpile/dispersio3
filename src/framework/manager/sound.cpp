@@ -65,7 +65,8 @@ void ach::SoundManager::update()
 ***********************************************************************/
 void ach::SoundManager::play(sf::SoundBuffer *sfx)
 {
-	buf.push_back(sfx);
+	if (sfx)
+		buf.push_back(sfx);
 }
 
 

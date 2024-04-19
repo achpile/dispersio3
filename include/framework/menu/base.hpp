@@ -11,6 +11,10 @@ namespace ach
 		ach::MenuItemFolder *root;
 		ach::MenuItemFolder *current;
 
+		sf::SoundBuffer     *sfxBlip;
+		sf::SoundBuffer     *sfxBack;
+		sf::SoundBuffer     *sfxPick;
+
 		sf::RectangleShape  *box;
 		sf::Text            *text;
 		sf::Vector2f         pos;
@@ -60,6 +64,7 @@ namespace ach
 		void setPosition(sf::Vector2f _pos);
 		void setPadding(sf::Vector2f _padding);
 		void setFontSize(int _size);
+		void setSound(sf::SoundBuffer *_blip, sf::SoundBuffer *_back, sf::SoundBuffer *_pick);
 
 		void print(sf::String string, float x, int y, ach::TextAlign align);
 		void printItem(sf::String string, int y);
