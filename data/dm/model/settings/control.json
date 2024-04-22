@@ -1,0 +1,47 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Down": {
+        "@attr": {
+            "default": "DOWN",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
+    "Jump": {
+        "@attr": {
+            "default": "SPACE",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
+    "Left": {
+        "@attr": {
+            "default": "LEFT",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
+    "Menu": {
+        "@attr": {
+            "default": "ESC",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
+    "Right": {
+        "@attr": {
+            "default": "RIGHT",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
+    "Up": {
+        "@attr": {
+            "default": "UP",
+            "maxlen": 12,
+            "type": "string"
+        }
+    }
+}

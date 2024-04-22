@@ -1,0 +1,12 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Language": {
+        "@attr": {
+            "data": "Translation",
+            "default": "eng",
+            "type": "link"
+        }
+    }
+}

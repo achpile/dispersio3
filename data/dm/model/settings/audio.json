@@ -1,0 +1,21 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Music": {
+        "@attr": {
+            "default": 10,
+            "max": 10,
+            "min": 0,
+            "type": "integer"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "default": 10,
+            "max": 10,
+            "min": 0,
+            "type": "integer"
+        }
+    }
+}

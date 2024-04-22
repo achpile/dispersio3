@@ -2,64 +2,8 @@
     "@attr": {
         "type": "object"
     },
-    "Audio": {
-        "@attr": {
-            "type": "object"
-        },
-        "Music": {
-            "@attr": {
-                "default": 10,
-                "max": 10,
-                "min": 0,
-                "type": "integer"
-            }
-        },
-        "Sound": {
-            "@attr": {
-                "default": 10,
-                "max": 10,
-                "min": 0,
-                "type": "integer"
-            }
-        }
-    },
-    "Game": {
-        "@attr": {
-            "type": "object"
-        },
-        "Language": {
-            "@attr": {
-                "data": "Translation",
-                "default": "eng",
-                "type": "link"
-            }
-        }
-    },
-    "Window": {
-        "@attr": {
-            "type": "object"
-        },
-        "Fullscreen": {
-            "@attr": {
-                "default": false,
-                "type": "boolean"
-            }
-        },
-        "Height": {
-            "@attr": {
-                "default": 600,
-                "max": 32768,
-                "min": 300,
-                "type": "integer"
-            }
-        },
-        "Width": {
-            "@attr": {
-                "default": 800,
-                "max": 32768,
-                "min": 400,
-                "type": "integer"
-            }
-        }
-    }
+    "Audio": "@include settings/audio.json",
+    "Control": "@include settings/control.json",
+    "Game": "@include settings/game.json",
+    "Window": "@include settings/window.json"
 }

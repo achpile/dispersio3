@@ -57,7 +57,7 @@ const char* ach::Settings::getLanguage()
 ***********************************************************************/
 int ach::Settings::getVolumeSound()
 {
-	return json_object_get_branch_integer(data, "Audio.Sound");
+	return json_object_get_branch_integer(data, "Audio.Sound") * 10;
 }
 
 
@@ -69,7 +69,7 @@ int ach::Settings::getVolumeSound()
 ***********************************************************************/
 int ach::Settings::getVolumeMusic()
 {
-	return json_object_get_branch_integer(data, "Audio.Music");
+	return json_object_get_branch_integer(data, "Audio.Music") * 10;
 }
 
 

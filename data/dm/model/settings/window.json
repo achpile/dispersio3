@@ -1,0 +1,27 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Fullscreen": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Height": {
+        "@attr": {
+            "default": 600,
+            "max": 32768,
+            "min": 300,
+            "type": "integer"
+        }
+    },
+    "Width": {
+        "@attr": {
+            "default": 800,
+            "max": 32768,
+            "min": 400,
+            "type": "integer"
+        }
+    }
+}
