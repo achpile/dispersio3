@@ -145,3 +145,27 @@ void ach::Settings::setWindowSize(sf::Vector2u size)
 	json_object_set_branch_integer(data, "Window.Width" , size.x);
 	json_object_set_branch_integer(data, "Window.Height", size.y);
 }
+
+
+
+/***********************************************************************
+     * Settings
+     * getKeyCode
+
+***********************************************************************/
+sf::Keyboard::Key ach::Settings::getKeyCode(ach::ControlAction action)
+{
+	return (sf::Keyboard::Key)pair_get_enum(json_object_getv_branch_string(data, "Control.%s", pair_get_string(action, pairAction)), pairKey);
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * setKeyCode
+
+***********************************************************************/
+void ach::Settings::setKeyCode(ach::ControlAction action, sf::Keyboard::Key code)
+{
+	json_object_setv_branch_string(data, pair_get_string(code, pairKey), "Control.%s", pair_get_string(action, pairAction));
+}

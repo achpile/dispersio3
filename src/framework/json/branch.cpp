@@ -138,7 +138,7 @@ json_t *json_object_getv_branch(json_t *root, const char *format, ...)
      * json_object_setv_branch
 
 ***********************************************************************/
-void json_object_set_branch(json_t *root, json_t *obj, const char *format, ...)
+void json_object_setv_branch(json_t *root, json_t *obj, const char *format, ...)
 {
 	char path[STR_LEN_PATH];
 

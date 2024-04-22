@@ -24,7 +24,10 @@ namespace ach
 		sf::Uint32    getWindowStyle();
 		sf::Vector2i  getWindowPosition();
 
-		void setWindowSize(sf::Vector2u size);
+		void          setWindowSize(sf::Vector2u size);
+
+		sf::Keyboard::Key getKeyCode(ach::ControlAction action);
+		void              setKeyCode(ach::ControlAction action, sf::Keyboard::Key code);
 	};
 }
 

@@ -8,12 +8,8 @@
 ***********************************************************************/
 ach::ControlPad::ControlPad()
 {
-	keys[ach::ControlAction::caUp   ].code = sf::Keyboard::Up;
-	keys[ach::ControlAction::caDown ].code = sf::Keyboard::Down;
-	keys[ach::ControlAction::caLeft ].code = sf::Keyboard::Left;
-	keys[ach::ControlAction::caRight].code = sf::Keyboard::Right;
-	keys[ach::ControlAction::caJump ].code = sf::Keyboard::Space;
-	keys[ach::ControlAction::caMenu ].code = sf::Keyboard::Escape;
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+		keys[i].code = settings->getKeyCode((ach::ControlAction)i);
 }
 
 
@@ -71,6 +67,8 @@ bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 				return false;
 
 	keys[action].code = code;
+
+	settings->setKeyCode(action, code);
 	reset();
 
 	return true;
