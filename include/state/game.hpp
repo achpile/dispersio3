@@ -6,8 +6,13 @@ namespace ach
 {
 	struct StateGame : StateBase
 	{
+		ach::Process *proc;
+
 		 StateGame();
 		~StateGame();
+
+		void update();
+		void event(sf::Event e);
 	};
 }
 

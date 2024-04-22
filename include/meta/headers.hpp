@@ -95,6 +95,9 @@
 #include "container/background.hpp"
 #include "container/language.hpp"
 
+#include "process/base.hpp"
+#include "process/world.hpp"
+
 #include "state/base.hpp"
 #include "state/pair.hpp"
 #include "state/start.hpp"

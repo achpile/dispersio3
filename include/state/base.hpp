@@ -20,7 +20,6 @@ namespace ach
 		virtual ~StateBase()          {};
 
 		virtual void update()         {};
-		virtual void render()         {};
 		virtual void translate()      {};
 		virtual void event(sf::Event) {};
 	};

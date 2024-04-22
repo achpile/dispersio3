@@ -2,49 +2,44 @@
 
 
 /***********************************************************************
-     * StateGame
+     * ProcessWorld
      * constructor
 
 ***********************************************************************/
-ach::StateGame::StateGame()
+ach::ProcessWorld::ProcessWorld()
 {
-	proc = new ach::ProcessWorld();
-
-	app->mouse(false);
 }
 
 
 
 /***********************************************************************
-     * StateGame
+     * ProcessWorld
      * destructor
 
 ***********************************************************************/
-ach::StateGame::~StateGame()
+ach::ProcessWorld::~ProcessWorld()
 {
-	delete proc;
 }
 
 
 
 /***********************************************************************
-     * StateGame
+     * ProcessWorld
      * update
 
 ***********************************************************************/
-void ach::StateGame::update()
+void ach::ProcessWorld::update()
 {
-	proc->update();
+	render();
 }
 
 
 
 /***********************************************************************
-     * StateGame
-     * event
+     * ProcessWorld
+     * render
 
 ***********************************************************************/
-void ach::StateGame::event(sf::Event e)
+void ach::ProcessWorld::render()
 {
-	proc->event(e);
 }
