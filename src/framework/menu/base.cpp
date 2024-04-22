@@ -281,10 +281,7 @@ void ach::Menu::finalize()
 void ach::Menu::translate()
 {
 	for (unsigned int i = 0; i < items.size(); i++)
-	{
-		items[i]->caption = lang->getv("UI.Menu.%s", items[i]->name);
 		items[i]->translate();
-	}
 }
 
 

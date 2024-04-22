@@ -11,7 +11,8 @@ ach::MenuItem::MenuItem(ach::Menu *_menu, const char *_name)
 	menu   = _menu;
 	parent = NULL;
 
-	strncpy(name, _name, STR_LEN_MENU);
+	if (_name)
+		strncpy(name, _name, STR_LEN_MENU);
 }
 
 
@@ -23,4 +24,16 @@ ach::MenuItem::MenuItem(ach::Menu *_menu, const char *_name)
 ***********************************************************************/
 ach::MenuItem::~MenuItem()
 {
+}
+
+
+
+/***********************************************************************
+     * MenuItem
+     * translate
+
+***********************************************************************/
+void ach::MenuItem::translate()
+{
+	caption = lang->getv("UI.Menu.%s", name);
 }

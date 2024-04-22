@@ -6,8 +6,14 @@ namespace ach
 {
 	struct MenuItemControl : MenuItem
 	{
-		 MenuItemControl(ach::Menu *_menu, const char *_name);
+		ach::ControlAction action;
+
+
+		 MenuItemControl(ach::Menu *_menu, ach::ControlAction _action);
 		~MenuItemControl();
+
+		void render(int i);
+		void translate();
 	};
 }
 

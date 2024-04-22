@@ -116,5 +116,8 @@ void ach::StateMenu::fill()
 	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Sound"     , handlerAudio     , json_object_get_branch(settings->data, "Audio.Sound"  ), 0, 10));
 	menu->add("Audio"  , new ach::MenuItemSlider  (menu, "Music"     , handlerAudio     , json_object_get_branch(settings->data, "Audio.Music"  ), 0, 10));
 
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+		menu->add("Controls", new ach::MenuItemControl(menu, (ach::ControlAction)i));
+
 	menu->finalize();
 }
