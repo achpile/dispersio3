@@ -48,6 +48,7 @@ namespace ach
 		bool inside(sf::Vector2f pos);
 		void hover(sf::Vector2f pos);
 		void click(sf::Vector2f pos, bool left);
+		void select(int i);
 		void move(int d);
 
 		void reset();

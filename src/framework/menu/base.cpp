@@ -210,13 +210,7 @@ void ach::Menu::hover(sf::Vector2f v)
 	if (!inside(v))
 		return;
 
-	int _index = floor((v.y - line(0)) / spacing);
-
-	if (index != _index)
-	{
-		index = _index;
-		sm->play(sfxBlip);
-	}
+	select(floor((v.y - line(0)) / spacing));
 }
 
 
@@ -243,14 +237,31 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 
 /***********************************************************************
      * Menu
+     * select
+
+***********************************************************************/
+void ach::Menu::select(int i)
+{
+	if (binding && current->items[i] != binding && i != (int)current->items.size() - 1)
+		return;
+
+	if (index != i)
+	{
+		index = i;
+		sm->play(sfxBlip);
+	}
+}
+
+
+
+/***********************************************************************
+     * Menu
      * move
 
 ***********************************************************************/
 void ach::Menu::move(int d)
 {
-	index = interval_loop(index + d, 0, current->items.size() - 1);
-
-	sm->play(sfxBlip);
+	select(interval_loop(index + d, 0, current->items.size() - 1));
 }
 
 
