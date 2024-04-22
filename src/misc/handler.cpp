@@ -43,3 +43,18 @@ void handlerState(json_t *data)
 {
 	app->stateSet((ach::GameState)pair_get_enum(json_string_value(data), pairGameState));
 }
+
+
+
+/***********************************************************************
+     * handlerReset
+
+***********************************************************************/
+void handlerReset(json_t *)
+{
+	json_object_del(settings->data, "Control");
+	json_dm_generate_default(settings->data, json_object_get(dm->dm, "Settings"));
+
+	ctrl->init();
+	ctrl->reset();
+}

@@ -44,6 +44,12 @@
             "type": "string"
         }
     },
+    "Keyboard": {
+        "@attr": {
+            "default": "Keyboard",
+            "type": "string"
+        }
+    },
     "Language": {
         "@attr": {
             "default": "Language",
@@ -65,6 +71,12 @@
     "Options": {
         "@attr": {
             "default": "Options",
+            "type": "string"
+        }
+    },
+    "Reset": {
+        "@attr": {
+            "default": "Reset to defaults",
             "type": "string"
         }
     },

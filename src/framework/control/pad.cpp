@@ -8,8 +8,8 @@
 ***********************************************************************/
 ach::ControlPad::ControlPad()
 {
-	for (int i = 0; i < ach::ControlAction::caCount; i++)
-		keys[i].code = settings->getKeyCode((ach::ControlAction)i);
+	init();
+	reset();
 }
 
 
@@ -47,6 +47,19 @@ void ach::ControlPad::reset()
 {
 	for (unsigned int i = 0; i < ach::ControlAction::caCount; i++)
 		keys[i].reset();
+}
+
+
+
+/***********************************************************************
+     * ControlPad
+     * init
+
+***********************************************************************/
+void ach::ControlPad::init()
+{
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+		keys[i].code = settings->getKeyCode((ach::ControlAction)i);
 }
 
 
