@@ -46,9 +46,9 @@ void ach::MenuItemControl::action()
 void ach::MenuItemControl::render(int i)
 {
 	if (isBinding)
-		menu->print("..."                   , 0, i, ach::TextAlign::taRight);
+		menu->print("...", 0, i, ach::TextAlign::taRight);
 	else
-		menu->print(ctrl->keys[act].getKey(), 0, i, ach::TextAlign::taRight);
+		menu->print(pair_get_string(ctrl->keys[act].code, pairKey), 0, i, ach::TextAlign::taRight);
 }
 
 

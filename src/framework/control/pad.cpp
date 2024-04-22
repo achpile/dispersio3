@@ -62,7 +62,7 @@ void ach::ControlPad::reset()
 ***********************************************************************/
 bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 {
-	if (!ach::ControlKey::isKeyLegit(code))
+	if (!pair_has_enum(code, pairKey))
 		return false;
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)

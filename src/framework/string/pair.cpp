@@ -33,3 +33,18 @@ int pair_get_enum(const char * val, ach::Pair pairs[])
 
 	return pairs[i].num;
 }
+
+
+
+/***********************************************************************
+     * pair_has_enum
+
+***********************************************************************/
+bool pair_has_enum(int val, ach::Pair pairs[])
+{
+	for (int i = 0; pairs[i].str; i++)
+		if (val == pairs[i].num)
+			return true;
+
+	return false;
+}

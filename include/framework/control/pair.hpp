@@ -3,5 +3,6 @@
 
 
 extern ach::Pair pairAction[];
+extern ach::Pair pairKey[];
 
 #endif

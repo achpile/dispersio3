@@ -14,5 +14,6 @@ namespace ach
 
 const char *pair_get_string(int val, ach::Pair pairs[]);
 int         pair_get_enum(const char *val, ach::Pair pairs[]);
+bool        pair_has_enum(int val, ach::Pair pairs[]);
 
 #endif

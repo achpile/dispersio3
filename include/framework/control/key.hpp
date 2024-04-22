@@ -18,9 +18,6 @@ namespace ach
 
 		void update();
 		void reset();
-
-		static bool isKeyLegit(sf::Keyboard::Key key);
-		std::string getKey();
 	};
 }
 
