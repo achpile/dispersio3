@@ -30,6 +30,12 @@ ach::MenuItemBack::~MenuItemBack()
 ***********************************************************************/
 void ach::MenuItemBack::action()
 {
+	if (menu->binding)
+	{
+		menu->binding->isBinding = false;
+		menu->binding = NULL;
+	}
+
 	if (parent->parent)
 		menu->go(parent->parent, parent);
 	else

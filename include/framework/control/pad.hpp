@@ -25,6 +25,9 @@ namespace ach
 		~ControlPad();
 
 		void update();
+		void reset();
+
+		bool bind(ach::ControlAction action, sf::Keyboard::Key code);
 	};
 }
 

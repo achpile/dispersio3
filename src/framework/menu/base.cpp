@@ -12,6 +12,7 @@ ach::Menu::Menu(const char *name, sf::Font *font)
 	text     = new sf::Text();
 	root     = new ach::MenuItemFolder(this, name);
 	current  = root;
+	binding  = NULL;
 
 	sfxBlip  = NULL;
 	sfxBack  = NULL;
@@ -107,6 +108,12 @@ void ach::Menu::event(sf::Event e)
 			click(rm->transform(sf::Vector2f(e.mouseButton.x, e.mouseButton.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
 			break;
 
+		case sf::Event::KeyPressed:
+			if (binding)
+				binding->bind(e.key.code);
+
+			break;
+
 
 		default:
 			break;
@@ -122,6 +129,9 @@ void ach::Menu::event(sf::Event e)
 ***********************************************************************/
 void ach::Menu::controls()
 {
+	if (binding)
+		return;
+
 	if (ctrl->keys[caUp   ].pressed) move(-1);
 	if (ctrl->keys[caDown ].pressed) move( 1);
 

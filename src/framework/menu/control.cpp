@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _action) : MenuItem(_menu, NULL)
+ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _act) : MenuItem(_menu, NULL)
 {
-	action = _action;
+	act       = _act;
+	isBinding = false;
 }
 
 
@@ -26,12 +27,13 @@ ach::MenuItemControl::~MenuItemControl()
 
 /***********************************************************************
      * MenuItemControl
-     * translate
+     * action
 
 ***********************************************************************/
-void ach::MenuItemControl::translate()
+void ach::MenuItemControl::action()
 {
-	caption = lang->getv("UI.Action.%s", pair_get_string(action, pairAction));
+	menu->binding = this;
+	isBinding     = true;
 }
 
 
@@ -43,5 +45,69 @@ void ach::MenuItemControl::translate()
 ***********************************************************************/
 void ach::MenuItemControl::render(int i)
 {
-	menu->print(ctrl->keys[action].getKey(), 0, i, ach::TextAlign::taRight);
+	if (isBinding)
+		menu->print("..."                   , 0, i, ach::TextAlign::taRight);
+	else
+		menu->print(ctrl->keys[act].getKey(), 0, i, ach::TextAlign::taRight);
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * translate
+
+***********************************************************************/
+void ach::MenuItemControl::translate()
+{
+	caption = lang->getv("UI.Action.%s", pair_get_string(act, pairAction));
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * pick
+
+***********************************************************************/
+void ach::MenuItemControl::pick()
+{
+	if (!menu->binding)
+		action();
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * click
+
+***********************************************************************/
+void ach::MenuItemControl::click()
+{
+	if (!menu->binding)
+	{
+		action();
+	}
+	else if (menu->binding == this)
+	{
+		isBinding = false;
+		menu->binding = NULL;
+	}
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * bind
+
+***********************************************************************/
+void ach::MenuItemControl::bind(sf::Keyboard::Key code)
+{
+	if (ctrl->bind(act, code))
+	{
+		isBinding = false;
+		menu->binding = NULL;
+	}
 }

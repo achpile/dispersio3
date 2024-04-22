@@ -8,9 +8,7 @@
 ***********************************************************************/
 ach::ControlKey::ControlKey()
 {
-	state    = false;
-	pressed  = false;
-	released = false;
+	reset();
 }
 
 
@@ -38,6 +36,20 @@ void ach::ControlKey::update()
 	pressed  =  current && current != state;
 	released = !current && current != state;
 	state    =  current;
+}
+
+
+
+/***********************************************************************
+     * ControlKey
+     * reset
+
+***********************************************************************/
+void ach::ControlKey::reset()
+{
+	state    = false;
+	pressed  = false;
+	released = false;
 }
 
 
@@ -163,7 +175,7 @@ std::string ach::ControlKey::getKey()
      * isKeyLegit
 
 ***********************************************************************/
-bool isKeyLegit(sf::Keyboard::Key key)
+bool ach::ControlKey::isKeyLegit(sf::Keyboard::Key key)
 {
 	switch (key)
 	{

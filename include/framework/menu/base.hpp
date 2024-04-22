@@ -8,17 +8,18 @@ namespace ach
 	{
 		std::vector<ach::MenuItem*> items;
 
-		ach::MenuItemFolder *root;
-		ach::MenuItemFolder *current;
+		ach::MenuItemFolder  *root;
+		ach::MenuItemFolder  *current;
+		ach::MenuItemControl *binding;
 
-		sf::SoundBuffer     *sfxBlip;
-		sf::SoundBuffer     *sfxBack;
-		sf::SoundBuffer     *sfxPick;
+		sf::SoundBuffer      *sfxBlip;
+		sf::SoundBuffer      *sfxBack;
+		sf::SoundBuffer      *sfxPick;
 
-		sf::RectangleShape  *box;
-		sf::Text            *text;
-		sf::Vector2f         pos;
-		sf::Vector2f         padding;
+		sf::RectangleShape   *box;
+		sf::Text             *text;
+		sf::Vector2f          pos;
+		sf::Vector2f          padding;
 
 		float width;
 		float spacing;

@@ -16,8 +16,10 @@ namespace ach
 		 ControlKey();
 		~ControlKey();
 
-		void        update();
-		bool        isKeyLegit(sf::Keyboard::Key key);
+		void update();
+		void reset();
+
+		static bool isKeyLegit(sf::Keyboard::Key key);
 		std::string getKey();
 	};
 }

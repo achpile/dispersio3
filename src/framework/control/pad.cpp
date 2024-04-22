@@ -39,3 +39,39 @@ void ach::ControlPad::update()
 	for (unsigned int i = 0; i < ach::ControlAction::caCount; i++)
 		keys[i].update();
 }
+
+
+
+/***********************************************************************
+     * ControlPad
+     * reset
+
+***********************************************************************/
+void ach::ControlPad::reset()
+{
+	for (unsigned int i = 0; i < ach::ControlAction::caCount; i++)
+		keys[i].reset();
+}
+
+
+
+/***********************************************************************
+     * ControlPad
+     * bind
+
+***********************************************************************/
+bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
+{
+	if (!ach::ControlKey::isKeyLegit(code))
+		return false;
+
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+		if (i != action)
+			if (keys[i].code == code)
+				return false;
+
+	keys[action].code = code;
+	reset();
+
+	return true;
+}
