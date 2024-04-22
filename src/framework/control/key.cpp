@@ -47,7 +47,7 @@ void ach::ControlKey::update()
 ***********************************************************************/
 void ach::ControlKey::reset()
 {
-	state    = false;
+	state    = true;
 	pressed  = false;
 	released = false;
 }

@@ -184,6 +184,8 @@ void ach::App::stateSwitch()
 		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
 		case ach::GameState::gsGame   : state = new ach::StateGame   (); return;
 	}
+
+	ctrl->reset();
 }
 
 
