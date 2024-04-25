@@ -56,7 +56,7 @@ ach::Tile* ach::Tileset::get(unsigned int id)
 	if (!id)
 		return NULL;
 
-	for (unsigned int i = 1; i < tiles.size(); i++)
+	for (unsigned int i = 0; i < tiles.size(); i++)
 		if (tiles[i]->id == id)
 			return tiles[i];
 
