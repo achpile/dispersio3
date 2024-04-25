@@ -6,6 +6,9 @@ namespace ach
 {
 	struct ProcessWorld : Process
 	{
+		ach::Map *map;
+
+
 		 ProcessWorld();
 		~ProcessWorld();
 

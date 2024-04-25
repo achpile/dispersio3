@@ -95,6 +95,11 @@
 #include "container/background.hpp"
 #include "container/language.hpp"
 
+#include "map/tile.hpp"
+#include "map/tileset.hpp"
+#include "map/maptile.hpp"
+#include "map/base.hpp"
+
 #include "process/base.hpp"
 #include "process/world.hpp"
 
