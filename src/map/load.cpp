@@ -92,6 +92,4 @@ void ach::Map::loadTileset(json_t *mapdata, const char *path)
 
 	json_array_foreach(json_object_get(mapdata, "tilesets"), index, item)
 		tileset->load(path, item);
-
-	tileset->sort();
 }

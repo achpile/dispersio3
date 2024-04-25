@@ -13,7 +13,8 @@ namespace ach
 		~Tileset();
 
 		void load(const char *path, json_t *tileset);
-		void sort();
+
+		ach::Tile* get(unsigned int id);
 	};
 }
 
