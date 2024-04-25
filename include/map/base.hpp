@@ -21,6 +21,8 @@ namespace ach
 		void loadMeta(json_t *mapdata);
 		void loadInit();
 		void loadTileset(json_t *mapdata, const char *path);
+		void loadLayers(json_t *mapdata);
+		void loadLayerTiles(json_t *layer);
 	};
 }
 

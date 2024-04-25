@@ -98,6 +98,7 @@
 #include "map/tile.hpp"
 #include "map/tileset.hpp"
 #include "map/maptile.hpp"
+#include "map/pair.hpp"
 #include "map/base.hpp"
 
 #include "process/base.hpp"

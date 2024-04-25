@@ -39,6 +39,7 @@ void ach::Map::load(const char *filename)
 	loadMeta(mapdata);
 	loadInit();
 	loadTileset(mapdata, path);
+	loadLayers(mapdata);
 
 	json_decref(mapdata);
 }
@@ -92,4 +93,44 @@ void ach::Map::loadTileset(json_t *mapdata, const char *path)
 
 	json_array_foreach(json_object_get(mapdata, "tilesets"), index, item)
 		tileset->load(path, item);
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadLayers
+
+***********************************************************************/
+void ach::Map::loadLayers(json_t *mapdata)
+{
+	json_t *layer;
+	size_t  index;
+
+	json_array_foreach(json_object_get(mapdata, "layers"), index, layer)
+	{
+		if (!strcmp(json_object_get_string(layer, "type"), "tilelayer"))
+		{
+			loadLayerTiles(layer);
+			continue;
+		}
+
+		logger->log(ach::LogLevel::llWarning, "Unknown map layer \"%s\"", json_object_get_string(layer, "type"));
+	}
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadLayerTiles
+
+***********************************************************************/
+void ach::Map::loadLayerTiles(json_t *layer)
+{
+	ach::TileLayer tl = (ach::TileLayer)pair_get_enum(json_object_get_string(layer, "name"), pairTileLayer);
+
+	for (int x = 0; x < size.x; x++)
+		for (int y = 0; y < size.y; y++)
+			tiles[x][y]->set(tileset->get(json_integer_value(json_array_get(json_object_get(layer, "data"), x + y * size.x))), tl);
 }
