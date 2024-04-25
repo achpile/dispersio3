@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Tile::Tile(const char *filename, int _id)
+ach::Tile::Tile(const char *filename, unsigned int _id)
 {
 	id  = _id;
 	spr = new ach::Sprite(filename, false, false);

@@ -54,4 +54,23 @@ void ach::Tileset::load(const char *path, json_t *tileset)
 ***********************************************************************/
 void ach::Tileset::sort()
 {
+	ach::Tile *tile;
+
+	for (unsigned int i = 1; i < tiles.size(); i++)
+		if (tiles[i]->id != i)
+		{
+			if (tiles[i]->id >= tiles.size())
+			{
+				logger->log(ach::LogLevel::llError, "Tileset has incorrect tiles indexes");
+				return;
+			}
+
+			tile = tiles[tiles[i]->id];
+			tiles[tiles[i]->id] = tiles[i];
+			tiles[i] = tile;
+		}
+
+	for (unsigned int i = 1; i < tiles.size(); i++)
+		if (tiles[i]->id != i)
+			logger->log(ach::LogLevel::llError, "Tileset is missing tiles");
 }

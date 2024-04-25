@@ -6,12 +6,11 @@ namespace ach
 {
 	struct Tile
 	{
-		ach::Sprite *spr;
+		ach::Sprite  *spr;
+		unsigned int  id;
 
-		int id;
 
-
-		 Tile(const char *filename, int _id);
+		 Tile(const char *filename, unsigned int _id);
 		~Tile();
 	};
 }
