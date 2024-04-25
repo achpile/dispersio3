@@ -22,6 +22,8 @@ namespace ach
 		 MapTile();
 		~MapTile();
 
+		void render(sf::Vector2f pos);
+		void renderTile(ach::Tile *tile, sf::Vector2f pos);
 		void set(ach::Tile *tile, ach::TileLayer layer);
 	};
 }

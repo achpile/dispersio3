@@ -17,6 +17,8 @@ namespace ach
 		void update();
 		void render();
 
+		void renderTiles();
+
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);
 		void loadInit();

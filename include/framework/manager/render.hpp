@@ -7,6 +7,7 @@ namespace ach
 	enum RenderLayer
 	{
 		rlBG,
+		rlGame,
 		rlGUI
 	};
 
@@ -14,6 +15,7 @@ namespace ach
 	struct RenderManager
 	{
 		ach::Layer *bg;
+		ach::Layer *game;
 		ach::Layer *gui;
 
 

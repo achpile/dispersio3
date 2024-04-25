@@ -52,4 +52,19 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render()
 {
+	renderTiles();
+}
+
+
+
+/***********************************************************************
+     * Map
+     * renderTiles
+
+***********************************************************************/
+void ach::Map::renderTiles()
+{
+	for (int x = 0; x < size.x; x++)
+		for (int y = 0; y < size.y; y++)
+			tiles[x][y]->render(sf::Vector2f(x * MAP_TILE_SIZE, y * MAP_TILE_SIZE));
 }
