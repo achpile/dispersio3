@@ -6,6 +6,11 @@ namespace ach
 {
 	struct MapTile
 	{
+		ach::Tile *wall;
+		ach::Tile *block;
+		ach::Tile *decor;
+
+
 		 MapTile();
 		~MapTile();
 	};

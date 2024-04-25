@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Map::Map()
+ach::Map::Map(const char *filename)
 {
+	load(filename);
 }
 
 
@@ -19,6 +20,16 @@ ach::Map::Map()
 ***********************************************************************/
 ach::Map::~Map()
 {
+	for (int x = 0; x < size.x; x++)
+	{
+		for (int y = 0; y < size.y; y++)
+			delete tiles[x][y];
+
+		delete tiles[x];
+	}
+
+	delete tiles;
+	delete tileset;
 }
 
 

@@ -6,8 +6,14 @@ namespace ach
 {
 	struct Tileset
 	{
+		std::vector<ach::Tile*> tiles;
+
+
 		 Tileset();
 		~Tileset();
+
+		void load(const char *path, json_t *tileset);
+		void sort();
 	};
 }
 

@@ -6,8 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::Tile::Tile()
+ach::Tile::Tile(const char *filename, int _id)
 {
+	id  = _id;
+	spr = new ach::Sprite(filename, false, false);
 }
 
 
@@ -19,4 +21,5 @@ ach::Tile::Tile()
 ***********************************************************************/
 ach::Tile::~Tile()
 {
+	delete spr;
 }

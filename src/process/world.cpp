@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::ProcessWorld::ProcessWorld()
 {
-	map = new ach::Map();
+	map = new ach::Map(PATH_BASE "/" "maps/test.tmj");
 }
 
 
