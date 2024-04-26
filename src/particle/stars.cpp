@@ -11,7 +11,7 @@ ach::Stars::Stars() : ParticleSystem(2.0f)
 	age  = 0.0f;
 	freq = 0.05f;
 
-	for (int i = 0; i < 70; i++)
+	for (int i = 0; i < 40; i++)
 		add(rand() % RENDER_LAYER_BG_X);
 }
 
