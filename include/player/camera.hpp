@@ -7,6 +7,7 @@ namespace ach
 	struct Camera
 	{
 		sf::FloatRect   viewport;
+		sf::FloatRect   area;
 		sf::Vector2f    offset;
 		sf::View        view;
 
@@ -15,6 +16,9 @@ namespace ach
 		~Camera();
 
 		void update();
+		void check();
+
+		void setArea(sf::FloatRect _area);
 	};
 }
 

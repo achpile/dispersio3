@@ -10,6 +10,8 @@ ach::ProcessWorld::ProcessWorld()
 {
 	map = new ach::Map(PATH_BASE "/" "maps/test.tmj");
 	cam = new ach::Camera();
+
+	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
 }
 
 

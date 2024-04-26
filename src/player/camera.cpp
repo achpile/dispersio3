@@ -34,9 +34,47 @@ ach::Camera::~Camera()
 ***********************************************************************/
 void ach::Camera::update()
 {
+	check();
+
 	viewport.left = offset.x;
 	viewport.top  = offset.y;
 
 	view.reset(viewport);
 	rm->setView(view);
+}
+
+
+
+/***********************************************************************
+     * Camera
+     * check
+
+***********************************************************************/
+void ach::Camera::check()
+{
+	if (offset.x < area.left)
+		offset.x = area.left;
+
+	if (offset.y < area.top)
+		offset.y = area.top;
+
+	if (offset.x > area.left + area.width - viewport.width)
+		offset.x = area.left + area.width - viewport.width;
+
+	if (offset.y > area.top + area.height - viewport.height)
+		offset.y = area.top + area.height - viewport.height;
+}
+
+
+
+/***********************************************************************
+     * Camera
+     * setArea
+
+***********************************************************************/
+void ach::Camera::setArea(sf::FloatRect _area)
+{
+	area = _area;
+
+	update();
 }
