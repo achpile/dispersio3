@@ -17,9 +17,9 @@ namespace ach
 		~Map();
 
 		void update();
-		void render();
+		void render(sf::FloatRect viewport);
 
-		void renderTiles();
+		void renderTiles(sf::FloatRect viewport);
 
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);

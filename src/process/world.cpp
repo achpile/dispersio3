@@ -49,5 +49,5 @@ void ach::ProcessWorld::update()
 ***********************************************************************/
 void ach::ProcessWorld::render()
 {
-	map->render();
+	map->render(cam->viewport);
 }
