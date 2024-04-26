@@ -6,5 +6,7 @@ float        vector_dot(sf::Vector2f a, sf::Vector2f b);
 float        vector_len(sf::Vector2f v);
 sf::Vector2f vector_norm(sf::Vector2f v);
 sf::Vector2f vector_set_len(sf::Vector2f v, float l);
+sf::Vector2f vector_mult(sf::Vector2f a, sf::Vector2f b);
+sf::Vector2f vector_mult(sf::Vector2i a, sf::Vector2i b);
 
 #endif

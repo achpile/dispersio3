@@ -8,7 +8,9 @@ namespace ach
 	{
 		ach::MapTile ***tiles;
 		ach::Tileset   *tileset;
-		sf::Vector2i    size;
+
+		sf::Vector2i    sizeMap;
+		sf::Vector2i    sizeTile;
 
 
 		 Map(const char *filename);

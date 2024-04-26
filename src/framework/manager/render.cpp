@@ -8,9 +8,9 @@
 ***********************************************************************/
 ach::RenderManager::RenderManager()
 {
-	bg   = new ach::Layer(RENDER_LAYER_BG_X , RENDER_LAYER_BG_Y );
-	game = new ach::Layer(RENDER_LAYER_BG_X , RENDER_LAYER_BG_Y );
-	gui  = new ach::Layer(RENDER_LAYER_GUI_X, RENDER_LAYER_GUI_Y);
+	bg   = new ach::Layer(RENDER_LAYER_BG_X  , RENDER_LAYER_BG_Y  );
+	game = new ach::Layer(RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
+	gui  = new ach::Layer(RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y );
 }
 
 
@@ -103,6 +103,18 @@ void ach::RenderManager::resize(sf::RenderWindow *window)
 	bg->resize(window);
 	game->resize(window);
 	gui->resize(window);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * setView
+
+***********************************************************************/
+void ach::RenderManager::setView(sf::View view)
+{
+	game->setView(view);
 }
 
 

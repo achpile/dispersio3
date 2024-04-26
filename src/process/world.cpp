@@ -9,6 +9,7 @@
 ach::ProcessWorld::ProcessWorld()
 {
 	map = new ach::Map(PATH_BASE "/" "maps/test.tmj");
+	cam = new ach::Camera();
 }
 
 
@@ -21,6 +22,7 @@ ach::ProcessWorld::ProcessWorld()
 ach::ProcessWorld::~ProcessWorld()
 {
 	delete map;
+	delete cam;
 }
 
 
@@ -32,6 +34,7 @@ ach::ProcessWorld::~ProcessWorld()
 ***********************************************************************/
 void ach::ProcessWorld::update()
 {
+	cam->update();
 	map->update();
 
 	render();

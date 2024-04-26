@@ -53,8 +53,11 @@ void ach::Map::load(const char *filename)
 ***********************************************************************/
 void ach::Map::loadMeta(json_t *mapdata)
 {
-	size = sf::Vector2i(json_object_get_integer(mapdata, "width" ),
-	                    json_object_get_integer(mapdata, "height"));
+	sizeMap  = sf::Vector2i(json_object_get_integer(mapdata, "width" ),
+	                        json_object_get_integer(mapdata, "height"));
+
+	sizeTile = sf::Vector2i(json_object_get_integer(mapdata, "tilewidth" ),
+	                        json_object_get_integer(mapdata, "tileheight"));
 }
 
 
@@ -66,13 +69,13 @@ void ach::Map::loadMeta(json_t *mapdata)
 ***********************************************************************/
 void ach::Map::loadInit()
 {
-	tiles = new ach::MapTile**[size.x];
+	tiles = new ach::MapTile**[sizeMap.x];
 
-	for (int x = 0; x < size.x; x++)
+	for (int x = 0; x < sizeMap.x; x++)
 	{
-		tiles[x] = new ach::MapTile*[size.y];
+		tiles[x] = new ach::MapTile*[sizeMap.y];
 
-		for (int y = 0; y < size.y; y++)
+		for (int y = 0; y < sizeMap.y; y++)
 			tiles[x][y] = new ach::MapTile();
 	}
 }
@@ -130,7 +133,7 @@ void ach::Map::loadLayerTiles(json_t *layer)
 {
 	ach::TileLayer tl = (ach::TileLayer)pair_get_enum(json_object_get_string(layer, "name"), pairTileLayer);
 
-	for (int x = 0; x < size.x; x++)
-		for (int y = 0; y < size.y; y++)
-			tiles[x][y]->set(tileset->get(json_integer_value(json_array_get(json_object_get(layer, "data"), x + y * size.x))), tl);
+	for (int x = 0; x < sizeMap.x; x++)
+		for (int y = 0; y < sizeMap.y; y++)
+			tiles[x][y]->set(tileset->get(json_integer_value(json_array_get(json_object_get(layer, "data"), x + y * sizeMap.x))), tl);
 }

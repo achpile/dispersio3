@@ -42,3 +42,25 @@ sf::Vector2f vector_set_len(sf::Vector2f v, float l)
 {
 	return vector_norm(v) * l;
 }
+
+
+
+/***********************************************************************
+     * vector_mult
+
+***********************************************************************/
+sf::Vector2f vector_mult(sf::Vector2f a, sf::Vector2f b)
+{
+	return sf::Vector2f(a.x * b.x, a.y * b.y);
+}
+
+
+
+/***********************************************************************
+     * vector_mult
+
+***********************************************************************/
+sf::Vector2f vector_mult(sf::Vector2i a, sf::Vector2i b)
+{
+	return sf::Vector2f(a.x * b.x, a.y * b.y);
+}

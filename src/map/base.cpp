@@ -20,9 +20,9 @@ ach::Map::Map(const char *filename)
 ***********************************************************************/
 ach::Map::~Map()
 {
-	for (int x = 0; x < size.x; x++)
+	for (int x = 0; x < sizeMap.x; x++)
 	{
-		for (int y = 0; y < size.y; y++)
+		for (int y = 0; y < sizeMap.y; y++)
 			delete tiles[x][y];
 
 		delete tiles[x];
@@ -52,6 +52,7 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render()
 {
+	bg->stars->update();
 	renderTiles();
 }
 
@@ -64,7 +65,7 @@ void ach::Map::render()
 ***********************************************************************/
 void ach::Map::renderTiles()
 {
-	for (int x = 0; x < size.x; x++)
-		for (int y = 0; y < size.y; y++)
-			tiles[x][y]->render(sf::Vector2f(x * MAP_TILE_SIZE, y * MAP_TILE_SIZE));
+	for (int x = 0; x < sizeMap.x; x++)
+		for (int y = 0; y < sizeMap.y; y++)
+			tiles[x][y]->render(vector_mult(sizeTile, sf::Vector2i(x, y)));
 }

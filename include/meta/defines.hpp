@@ -6,8 +6,8 @@
      * Project
 
 ***********************************************************************/
-#define PROJECT_NAME       "Dispersio 3"
-#define PROJECT_VERS       "0.2.1"
+#define PROJECT_NAME          "Dispersio 3"
+#define PROJECT_VERS          "0.2.1"
 
 
 
@@ -15,11 +15,14 @@
      * Sizes
 
 ***********************************************************************/
-#define RENDER_LAYER_BG_X  320
-#define RENDER_LAYER_BG_Y  240
+#define RENDER_LAYER_BG_X     512
+#define RENDER_LAYER_BG_Y     384
 
-#define RENDER_LAYER_GUI_X 800
-#define RENDER_LAYER_GUI_Y 600
+#define RENDER_LAYER_GAME_X   320
+#define RENDER_LAYER_GAME_Y   240
+
+#define RENDER_LAYER_GUI_X    800
+#define RENDER_LAYER_GUI_Y    600
 
 
 
@@ -27,7 +30,7 @@
      * Files
 
 ***********************************************************************/
-#define FILE_SETTINGS      "settings.json"
+#define FILE_SETTINGS         "settings.json"
 
 
 
@@ -35,18 +38,10 @@
      * Strings
 
 ***********************************************************************/
-#define STR_LEN_MENU       32
-#define STR_LEN_NAME       128
-#define STR_LEN_PATH       256
-#define STR_LEN_LOG        512
-
-
-
-/***********************************************************************
-     * Map
-
-***********************************************************************/
-#define MAP_TILE_SIZE      16.0f
+#define STR_LEN_MENU          32
+#define STR_LEN_NAME          128
+#define STR_LEN_PATH          256
+#define STR_LEN_LOG           512
 
 
 
@@ -54,7 +49,7 @@
      * Path
 
 ***********************************************************************/
-#define PATH_BASE        "data/base"
+#define PATH_BASE             "data/base"
 
 
 
@@ -62,8 +57,8 @@
      * Regex
 
 ***********************************************************************/
-#define STR_REGEX_NAME     "^[[:alnum:]_-]{1,128}$"
-#define STR_REGEX_COLOR    "^#[[:xdigit:]]{2}{3,4}$"
+#define STR_REGEX_NAME        "^[[:alnum:]_-]{1,128}$"
+#define STR_REGEX_COLOR       "^#[[:xdigit:]]{2}{3,4}$"
 
 
 
@@ -71,8 +66,8 @@
      * Start screen
 
 ***********************************************************************/
-#define START_FADE_SLOPE   1.0f
-#define START_FADE_LENGTH  2.0f
+#define START_FADE_SLOPE      1.0f
+#define START_FADE_LENGTH     2.0f
 
 
 
@@ -80,8 +75,8 @@
      * Credits screen
 
 ***********************************************************************/
-#define CREDITS_SPEED      50.0f
-#define CREDITS_LEFT       100.0f
+#define CREDITS_SPEED         50.0f
+#define CREDITS_LEFT          100.0f
 
 
 
@@ -89,11 +84,11 @@
      * Menu
 
 ***********************************************************************/
-#define MENU_LOGO_OFFSET   100
-#define MENU_PADDING       10
-#define MENU_SPACING       5
-#define MENU_THICKNESS    -1
-#define MENU_BOX_SHRINK    8
-#define MENU_SLIDER_SIZE   5
+#define MENU_LOGO_OFFSET      100
+#define MENU_PADDING          10
+#define MENU_SPACING          5
+#define MENU_THICKNESS       -1
+#define MENU_BOX_SHRINK       8
+#define MENU_SLIDER_SIZE      5
 
 #endif
