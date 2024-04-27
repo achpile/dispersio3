@@ -3,17 +3,17 @@
 
 
 #define json_object_get_integer(obj, name) json_integer_value(json_object_get(obj, name))
-#define json_object_get_real(obj, name)    json_real_value   (json_object_get(obj, name))
+#define json_object_get_real(obj, name)    json_number_value (json_object_get(obj, name))
 #define json_object_get_string(obj, name)  json_string_value (json_object_get(obj, name))
 #define json_object_get_boolean(obj, name) json_is_true      (json_object_get(obj, name))
 
 #define json_object_get_branch_integer(obj, name) json_integer_value(json_object_get_branch(obj, name))
-#define json_object_get_branch_real(obj, name)    json_real_value   (json_object_get_branch(obj, name))
+#define json_object_get_branch_real(obj, name)    json_number_value (json_object_get_branch(obj, name))
 #define json_object_get_branch_string(obj, name)  json_string_value (json_object_get_branch(obj, name))
 #define json_object_get_branch_boolean(obj, name) json_boolean_value(json_object_get_branch(obj, name))
 
 #define json_object_getv_branch_integer(obj, format, ...) json_integer_value(json_object_getv_branch(obj, format, __VA_ARGS__))
-#define json_object_getv_branch_real(obj, format, ...)    json_real_value   (json_object_getv_branch(obj, format, __VA_ARGS__))
+#define json_object_getv_branch_real(obj, format, ...)    json_number_value (json_object_getv_branch(obj, format, __VA_ARGS__))
 #define json_object_getv_branch_string(obj, format, ...)  json_string_value (json_object_getv_branch(obj, format, __VA_ARGS__))
 #define json_object_getv_branch_boolean(obj, format, ...) json_boolean_value(json_object_getv_branch(obj, format, __VA_ARGS__))
 
