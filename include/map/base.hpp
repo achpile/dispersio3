@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::MapTile ***tiles;
 		ach::Tileset   *tileset;
+		ach::Collision *collision;
 
 		sf::Vector2i    sizeMap;
 		sf::Vector2i    sizeTile;
