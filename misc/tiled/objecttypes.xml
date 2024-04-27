@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="platform" color="#e5a50a"/>
+ <objecttype name="solid" color="#a51d2d"/>
+</objecttypes>

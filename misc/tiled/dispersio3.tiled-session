@@ -1,0 +1,302 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "maps/test.tmx",
+    "expandedProjectPaths": [
+        "maps",
+        "tilesets"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "/home/achpile/.local/share/tiled/#Test": {
+            "dynamicWrapping": true
+        },
+        "/home/achpile/Desktop/frama_scifi_extension/preview.tmx": {
+            "scale": 2,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 74.25,
+                "y": 167
+            }
+        },
+        "/home/achpile/Desktop/frama_scifi_extension/preview.tmx#scifi_hackspace_frama": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Desktop/frama_scifi_extension/preview.tmx#scifi_space_rpg_tiles_lpcized": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/home/achpile/Desktop/test.tmj": {
+            "scale": 1.1012207031249999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 512.612956147741,
+                "y": 192.0595929588082
+            }
+        },
+        "/home/achpile/Desktop/test.tmj#test": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Desktop/test.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 537.5,
+                "y": 189.5
+            }
+        },
+        "/home/achpile/Desktop/test.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 11
+        },
+        "/home/achpile/Public/achball/docs/maps/09.tmx": {
+            "scale": 1.0934895833333333,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 320.5334603477018,
+                "y": 173.75565610859726
+            }
+        },
+        "/home/achpile/Public/achball/docs/maps/09.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/achball/docs/maps/14.tmx": {
+            "scale": 1.0934895833333333,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 512.579185520362,
+                "y": 384.0914503453203
+            }
+        },
+        "/home/achpile/Public/achball/docs/maps/14.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/beasthunter/docs/maps/forest_start.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 695.3333333333333,
+                "y": 422.66666666666663
+            }
+        },
+        "/home/achpile/Public/beasthunter/docs/maps/forest_start.tmx#air": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/beasthunter/docs/maps/forest_start.tmx#solid": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/beasthunter/docs/maps/forest_start.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx": {
+            "scale": 3.005505952380952,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 172.84943308412142,
+                "y": 120.27924939347432
+            }
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx#decor": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx#platform": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx#solid": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx#spike": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/ancients_room_1.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 594.5,
+                "y": 608.5
+            }
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx#decor": {
+            "scaleInDock": 4
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx#platform": {
+            "dynamicWrapping": true,
+            "scaleInDock": 4
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx#solid": {
+            "scaleInDock": 4
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx#spike": {
+            "scaleInDock": 4
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/castle.tmx#wall": {
+            "scaleInDock": 4
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 321.66666666666663,
+                "y": 205.66666666666666
+            }
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx#decor": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx#platform": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx#solid": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx#spike": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio2/docs/maps/spiders_nest.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/dispersio3/misc/maps/maps/test.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 229.83333333333331,
+                "y": 132.16666666666666
+            }
+        },
+        "/home/achpile/Public/dispersio3/misc/maps/test.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 230.16666666666666,
+                "y": 132.16666666666666
+            }
+        },
+        "/home/achpile/Public/dispersio3/misc/maps/test.tmx#test": {
+            "dynamicWrapping": true,
+            "scaleInDock": 3
+        },
+        "/home/achpile/Public/dispersio3/misc/maps/tilesets/Test.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 4,
+            "scaleInEditor": 11
+        },
+        "/home/achpile/Public/dispersio3/misc/maps/tilesets/test.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 3,
+            "scaleInEditor": 11
+        },
+        "/home/achpile/Public/scp/docs/maps/cabinet.tmx": {
+            "scale": 2.1944010416666666,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 256.3341838248383,
+                "y": 192.0797484127455
+            }
+        },
+        "/home/achpile/Public/scp/docs/maps/cabinet.tmx#air": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/cabinet.tmx#solid": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/cabinet.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/forest_start.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 1895.4545454545455,
+                "y": 113.63636363636351
+            }
+        },
+        "/home/achpile/Public/scp/docs/maps/forest_start.tmx#air": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/forest_start.tmx#solid": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/forest_start.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/test3.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 747.3333333333333,
+                "y": 24.66666666666663
+            }
+        },
+        "/home/achpile/Public/scp/docs/maps/test3.tmx#air": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/test3.tmx#solid": {
+            "scaleInDock": 1
+        },
+        "/home/achpile/Public/scp/docs/maps/test3.tmx#wall": {
+            "scaleInDock": 1
+        },
+        "maps/test.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 289,
+                "y": 170.66666666666666
+            }
+        },
+        "tilesets/test.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "/home/achpile/Public/dispersio3/data/base/maps",
+    "last.externalTilesetPath": "/home/achpile/Desktop",
+    "last.imagePath": "/home/achpile/Desktop",
+    "last.objectTypesPath": "/home/achpile/Public/dispersio3/misc/tiled/objecttypes.xml",
+    "lastUsedTilesetExportFilter": "JSON tileset files (*.tsj *.json)",
+    "map.height": 24,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 64,
+    "openFiles": [
+        "maps/test.tmx"
+    ],
+    "project": "dispersio3.tiled-project",
+    "recentFiles": [
+        "maps/test.tmx",
+        "/home/achpile/Public/achball/docs/maps/09.tmx",
+        "/home/achpile/Public/achball/docs/maps/14.tmx",
+        "/home/achpile/Public/beasthunter/docs/maps/forest_start.tmx",
+        "tilesets/test.tsx",
+        "/home/achpile/Public/dispersio3/misc/maps/tilesets/test.tsx",
+        "/home/achpile/Public/dispersio3/misc/maps/maps/test.tmx",
+        "/home/achpile/Public/dispersio3/misc/maps/test.tmx",
+        "/home/achpile/Desktop/test.tmx",
+        "/home/achpile/Desktop/test.tsx",
+        "/home/achpile/Desktop/test.tmj",
+        "/home/achpile/Public/dispersio3/misc/maps/tilesets/Test.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
