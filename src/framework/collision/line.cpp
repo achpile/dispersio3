@@ -6,14 +6,14 @@
      * constructor
 
 ***********************************************************************/
-ach::PhysLine::PhysLine(sf::Vector2f _a, sf::Vector2f _l, sf::Vector2f pos, bool _solid)
+ach::PhysLine::PhysLine(ach::PhysType _type, sf::Vector2f _a, sf::Vector2f _b, sf::Vector2f pos)
 {
 	a = _a + pos;
-	b = _l + a;
-	l = _l;
+	b = _b + pos;
+	l = _b - _a;
 
-	solid = _solid;
-	len   = vector_len(l);
+	type = _type;
+	len  = vector_len(l);
 }
 
 

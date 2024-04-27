@@ -64,3 +64,15 @@ sf::Vector2f vector_mult(sf::Vector2i a, sf::Vector2i b)
 {
 	return sf::Vector2f(a.x * b.x, a.y * b.y);
 }
+
+
+
+/***********************************************************************
+     * vector_json_coord
+
+***********************************************************************/
+sf::Vector2f vector_json_coord(json_t *j)
+{
+	return sf::Vector2f(json_object_get_real(j, "x"),
+	                    json_object_get_real(j, "y"));
+}

@@ -4,17 +4,25 @@
 
 namespace ach
 {
+	enum PhysType
+	{
+		ptSolid = 0,
+		ptPlatform
+	};
+
+
 	struct PhysLine
 	{
-		sf::Vector2f a;
-		sf::Vector2f b;
-		sf::Vector2f l;
+		ach::PhysType type;
+
+		sf::Vector2f  a;
+		sf::Vector2f  b;
+		sf::Vector2f  l;
 
 		float len;
-		bool  solid;
 
 
-		 PhysLine(sf::Vector2f _a, sf::Vector2f _l, sf::Vector2f pos, bool _solid);
+		 PhysLine(ach::PhysType _type, sf::Vector2f _a, sf::Vector2f _b, sf::Vector2f pos);
 		~PhysLine();
 	};
 }

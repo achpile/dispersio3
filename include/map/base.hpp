@@ -28,6 +28,8 @@ namespace ach
 		void loadTileset(json_t *mapdata, const char *path);
 		void loadLayers(json_t *mapdata);
 		void loadLayerTiles(json_t *layer);
+		void loadLayerObjects(json_t *layer);
+		void loadPhys(json_t *layer);
 	};
 }
 
