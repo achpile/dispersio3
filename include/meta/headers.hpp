@@ -86,6 +86,9 @@
 #include "framework/particle/base.hpp"
 #include "framework/particle/system.hpp"
 
+#include "framework/collision/line.hpp"
+#include "framework/collision/base.hpp"
+
 #include "misc/handler.hpp"
 
 #include "particle/stars.hpp"

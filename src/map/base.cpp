@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::Map::Map(const char *filename)
 {
+	collision = new ach::Collision();
+
 	load(filename);
 }
 
@@ -30,6 +32,7 @@ ach::Map::~Map()
 
 	delete tiles;
 	delete tileset;
+	delete collision;
 }
 
 
