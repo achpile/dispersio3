@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="7">
  <editorsettings>
-  <export target="../../data/base/maps/test.tmj" format="json"/>
+  <export target="../../../data/base/maps/test.tmj" format="json"/>
  </editorsettings>
- <tileset firstgid="1" source="tilesets/test.tsx"/>
+ <tileset firstgid="1" source="../tilesets/test.tsx"/>
  <layer id="1" name="wall" width="40" height="15">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,
@@ -61,4 +61,18 @@
 12,12,16,0,0,0,0,0,0,0,0,0,0,0,17,12,12,12,12,12,12,12,12,12,12,12,0,0,0,0,12,12,12,12,12,12,12,12,12,12
 </data>
  </layer>
+ <objectgroup id="5" name="phys">
+  <object id="3" type="platform" x="208" y="112">
+   <polyline points="0,0 80,0"/>
+  </object>
+  <object id="4" type="platform" x="320" y="144">
+   <polyline points="0,0 256,0"/>
+  </object>
+  <object id="5" type="solid" x="0" y="32">
+   <polyline points="0,192 0,0 640,0 640,192 480,192 480,144 448,144 448,160 416,160 416,192 240,192 144,144 80,144 32,192 0,192"/>
+  </object>
+  <object id="6" type="solid" x="48" y="112">
+   <polyline points="0,0 0,-32 16,-32 48,-48 64,-48 96,-32 128,-32 128,0 0,0"/>
+  </object>
+ </objectgroup>
 </map>
