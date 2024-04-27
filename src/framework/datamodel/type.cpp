@@ -12,6 +12,7 @@ bool json_type_check(json_t *obj, json_t *dm, const char *name, const char *path
 		case ach::jtObject  : return json_type_check_object  (obj, dm, name, path);
 		case ach::jtString  : return json_type_check_string  (obj, dm, name, path);
 		case ach::jtInteger : return json_type_check_integer (obj, dm, name, path);
+		case ach::jtReal    : return json_type_check_real    (obj, dm, name, path);
 		case ach::jtBoolean : return json_type_check_boolean (obj, dm, name, path);
 		case ach::jtFilename: return json_type_check_filename(obj, dm, name, path);
 		case ach::jtColor   : return json_type_check_color   (obj, dm, name, path);
@@ -19,8 +20,9 @@ bool json_type_check(json_t *obj, json_t *dm, const char *name, const char *path
 		case ach::jtMulti   : return json_type_check_multi   (obj, dm, name, path);
 		case ach::jtLink    : return json_type_check_link    (obj, dm, name, path);
 		case ach::jtUnknown : return false;
-		default             : return false;
 	}
+
+	return false;
 }
 
 

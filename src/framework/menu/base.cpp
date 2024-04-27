@@ -94,7 +94,7 @@ void ach::Menu::render()
 ***********************************************************************/
 void ach::Menu::event(sf::Event e)
 {
-	switch(e.type)
+	switch (e.type)
 	{
 		case sf::Event::MouseMoved:
 			hover(rm->transform(sf::Vector2f(e.mouseMove.x, e.mouseMove.y), ach::RenderLayer::rlGUI));

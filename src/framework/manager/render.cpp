@@ -41,8 +41,9 @@ ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
 		case ach::RenderLayer::rlBG  : return bg;
 		case ach::RenderLayer::rlGame: return game;
 		case ach::RenderLayer::rlGUI : return gui;
-		default                      : return NULL;
 	}
+
+	return NULL;
 }
 
 
