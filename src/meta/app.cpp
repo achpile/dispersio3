@@ -115,7 +115,7 @@ void ach::App::events()
 ***********************************************************************/
 void ach::App::event(sf::Event e)
 {
-	switch(e.type)
+	switch (e.type)
 	{
 		case sf::Event::Closed:
 			window->close();
@@ -176,6 +176,8 @@ void ach::App::stateSwitch()
 
 	stateCurr = stateNext;
 
+	ctrl->reset();
+
 	switch (stateCurr)
 	{
 		case ach::GameState::gsNone   : state = NULL                   ; return;
@@ -184,8 +186,6 @@ void ach::App::stateSwitch()
 		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
 		case ach::GameState::gsGame   : state = new ach::StateGame   (); return;
 	}
-
-	ctrl->reset();
 }
 
 
