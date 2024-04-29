@@ -1,0 +1,4 @@
+{
+    "Model": "@dir data/model",
+    "Spritesheet": "@dir data/spritesheet"
+}

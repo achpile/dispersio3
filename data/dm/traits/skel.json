@@ -1,5 +1,5 @@
 {
-    "Skel": {
+    "skel": {
         "Boolean": {
             "@attr": {
                 "default": false,

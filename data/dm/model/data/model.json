@@ -1,0 +1,47 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Animation": {
+        "@attr": {
+            "type": "multi"
+        },
+        "End": {
+            "@attr": {
+                "default": -1,
+                "max": 1024,
+                "min": -1,
+                "type": "integer"
+            }
+        },
+        "Rate": {
+            "@attr": {
+                "default": 0.1,
+                "max": 10.0,
+                "min": 0.0,
+                "type": "real"
+            }
+        },
+        "Start": {
+            "@attr": {
+                "default": 0,
+                "max": 1024,
+                "min": -1,
+                "type": "integer"
+            }
+        }
+    },
+    "Color": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    },
+    "Spritesheet": {
+        "@attr": {
+            "data": "Data.Spritesheet",
+            "default": "Default",
+            "type": "link"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Model": "@include data/model.json",
+    "Spritesheet": "@include data/spritesheet.json"
+}

@@ -67,7 +67,7 @@ void json_dm_trait_add_list(json_t *obj, json_t *traits, json_t *list)
 
 
 /***********************************************************************
-     * json_dm_trait_process
+     * json_dm_trait_add
 
 ***********************************************************************/
 void json_dm_trait_add(json_t *obj, json_t *trait)

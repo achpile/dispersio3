@@ -1,0 +1,19 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Filename": {
+        "@attr": {
+            "default": "gfx/game/spritesheet/misc/default.png",
+            "type": "filename"
+        }
+    },
+    "Frames": {
+        "@attr": {
+            "default": 1,
+            "max": 512,
+            "min": 1,
+            "type": "integer"
+        }
+    }
+}
