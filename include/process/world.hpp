@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::Map    *map;
 		ach::Camera *cam;
+		ach::Player *player;
 
 
 		 ProcessWorld();

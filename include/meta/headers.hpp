@@ -109,6 +109,7 @@
 #include "map/base.hpp"
 
 #include "player/camera.hpp"
+#include "player/base.hpp"
 
 #include "process/base.hpp"
 #include "process/world.hpp"
