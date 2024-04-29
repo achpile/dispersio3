@@ -18,6 +18,7 @@ ach::App::App()
 
 	logger    = new ach::Log();
 	dm        = new ach::Datamodel();
+	db        = new ach::Database();
 	settings  = new ach::Settings();
 	lang      = new ach::Language();
 	resources = new ach::Resources();
@@ -31,6 +32,7 @@ ach::App::App()
 	tm        = new ach::TimeManager();
 
 	resize();
+	db->load();
 	tm->init();
 
 	stateSet(ach::GameState::gsStart);
@@ -47,6 +49,7 @@ ach::App::~App()
 {
 	delete settings;
 	delete bg;
+	delete db;
 	delete lang;
 	delete state;
 	delete resources;

@@ -94,6 +94,10 @@
 
 #include "particle/stars.hpp"
 
+#include "data/spritesheet.hpp"
+#include "data/model.hpp"
+#include "data/base.hpp"
+
 #include "container/resources.hpp"
 #include "container/settings.hpp"
 #include "container/background.hpp"

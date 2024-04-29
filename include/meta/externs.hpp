@@ -9,6 +9,7 @@ extern ach::Resources     *resources;
 extern ach::Settings      *settings;
 extern ach::Language      *lang;
 extern ach::Background    *bg;
+extern ach::Database      *db;
 
 extern ach::RenderManager *rm;
 extern ach::SoundManager  *sm;

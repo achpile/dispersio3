@@ -9,6 +9,7 @@ ach::Resources     *resources;
 ach::Settings      *settings;
 ach::Language      *lang;
 ach::Background    *bg;
+ach::Database      *db;
 
 ach::RenderManager *rm;
 ach::SoundManager  *sm;
