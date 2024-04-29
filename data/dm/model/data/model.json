@@ -31,15 +31,9 @@
             }
         }
     },
-    "Color": {
+    "Sheet": {
         "@attr": {
-            "default": "#FFFFFFFF",
-            "type": "color"
-        }
-    },
-    "Spritesheet": {
-        "@attr": {
-            "data": "Data.Spritesheet",
+            "data": "Data.Sheet",
             "default": "Default",
             "type": "link"
         }

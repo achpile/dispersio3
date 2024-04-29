@@ -94,7 +94,7 @@
 
 #include "particle/stars.hpp"
 
-#include "data/spritesheet.hpp"
+#include "data/sheet.hpp"
 #include "data/model.hpp"
 #include "data/base.hpp"
 

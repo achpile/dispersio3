@@ -1,4 +1,4 @@
 {
     "Model": "@dir data/model",
-    "Spritesheet": "@dir data/spritesheet"
+    "Sheet": "@dir data/sheet"
 }

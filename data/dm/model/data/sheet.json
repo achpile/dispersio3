@@ -4,7 +4,7 @@
     },
     "Filename": {
         "@attr": {
-            "default": "gfx/game/spritesheet/misc/default.png",
+            "default": "gfx/game/sheet/misc/default.png",
             "type": "filename"
         }
     },
