@@ -1,4 +1,3 @@
 {
-    "Model": "@dir data/model",
-    "Sheet": "@dir data/sheet"
+    "Model": "@dir data/model"
 }

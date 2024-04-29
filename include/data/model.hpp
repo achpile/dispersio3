@@ -6,7 +6,7 @@ namespace ach
 {
 	struct DataModel
 	{
-		ach::DataSheet *sheet;
+		ach::Sheet *sheet;
 
 		json_t *animation;
 		char    name[STR_LEN_NAME];

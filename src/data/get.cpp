@@ -17,18 +17,6 @@ template<class T> T* getContent(const char *name, std::vector<T*> *list) {
 
 /***********************************************************************
      * Database
-     * getSheet
-
-***********************************************************************/
-ach::DataSheet* ach::Database::getSheet(const char *name)
-{
-	return getContent<ach::DataSheet>(name, &sheet);
-}
-
-
-
-/***********************************************************************
-     * Database
      * getModel
 
 ***********************************************************************/
