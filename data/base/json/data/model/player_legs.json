@@ -1,0 +1,23 @@
+{
+    "PlayerLegs": {
+        "Animation": {
+            "Fall": {
+                "End": 7,
+                "Start": 7
+            },
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            },
+            "Jump": {
+                "End": 2,
+                "Start": 2
+            },
+            "Walk": {
+                "End": -1,
+                "Start": 1
+            }
+        },
+        "Spritesheet": "PlayerLegs"
+    }
+}

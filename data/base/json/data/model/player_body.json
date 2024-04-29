@@ -1,0 +1,23 @@
+{
+    "PlayerBody": {
+        "Animation": {
+            "DiagonalDown": {
+                "End": 3,
+                "Start": 3
+            },
+            "DiagonalUp": {
+                "End": 1,
+                "Start": 1
+            },
+            "Front": {
+                "End": 0,
+                "Start": 0
+            },
+            "Up": {
+                "End": 2,
+                "Start": 2
+            }
+        },
+        "Spritesheet": "PlayerBody"
+    }
+}
