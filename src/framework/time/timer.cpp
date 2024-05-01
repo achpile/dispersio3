@@ -6,9 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Timer::Timer(float _timer)
+ach::Timer::Timer()
 {
-	set(_timer);
+	set(0.0f);
 }
 
 

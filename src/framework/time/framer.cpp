@@ -6,11 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Framer::Framer(float _timer)
+ach::Framer::Framer()
 {
-	_timer = _timer;
-
-	reset();
+	set(ANIMATION_DEFAULT);
 }
 
 
@@ -28,18 +26,13 @@ ach::Framer::~Framer()
 
 /***********************************************************************
      * Framer
-     * update
+     * set
 
 ***********************************************************************/
-void ach::Framer::update(bool real)
+void ach::Framer::set(float _timer)
 {
-	value -= real ? tm->real : tm->frame;
-
-	while (value < 0.0f)
-	{
-		value += timer;
-		frame++;
-	}
+	timer = _timer;
+	value = _timer;
 }
 
 
@@ -51,6 +44,27 @@ void ach::Framer::update(bool real)
 ***********************************************************************/
 void ach::Framer::reset()
 {
-	frame = 0;
 	value = timer;
+}
+
+
+
+/***********************************************************************
+     * Framer
+     * update
+
+***********************************************************************/
+int ach::Framer::update(bool real)
+{
+	int res = 0;
+
+	value -= real ? tm->real : tm->frame;
+
+	while (value < 0.0f)
+	{
+		value += timer;
+		res++;
+	}
+
+	return res;
 }

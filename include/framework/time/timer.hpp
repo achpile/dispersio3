@@ -10,13 +10,13 @@ namespace ach
 		float timer;
 
 
-		 Timer(float _timer = 0.0f);
+		 Timer();
 		~Timer();
 
-		void  set(float _timer);
-		void  reset();
-		bool  update(bool real = false);
-		bool  isActive();
+		void set(float _timer);
+		void reset();
+		bool update(bool real = false);
+		bool isActive();
 	};
 }
 

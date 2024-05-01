@@ -43,6 +43,7 @@
 
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"
+#include "framework/time/animation.hpp"
 
 #include "framework/json/branch.hpp"
 #include "framework/json/merge.hpp"

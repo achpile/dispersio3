@@ -6,16 +6,16 @@ namespace ach
 {
 	struct Framer
 	{
-		unsigned int frame;
-		float        value;
-		float        timer;
+		float value;
+		float timer;
 
 
-		 Framer(float _timer);
+		 Framer();
 		~Framer();
 
-		void update(bool real = false);
+		void set(float _timer);
 		void reset();
+		int  update(bool real = false);
 	};
 }
 
