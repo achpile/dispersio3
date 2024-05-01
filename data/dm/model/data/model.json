@@ -22,6 +22,12 @@
                 "type": "real"
             }
         },
+        "Loop": {
+            "@attr": {
+                "default": true,
+                "type": "boolean"
+            }
+        },
         "Start": {
             "@attr": {
                 "default": 0,
