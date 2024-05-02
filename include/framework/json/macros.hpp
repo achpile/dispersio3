@@ -2,6 +2,11 @@
 #define __FRAMEWORK_JSON_MACROS
 
 
+#define json_property_get_integer(obj, name) json_integer_value(json_property_get(obj, name))
+#define json_property_get_real(obj, name)    json_number_value (json_property_get(obj, name))
+#define json_property_get_string(obj, name)  json_string_value (json_property_get(obj, name))
+#define json_property_get_boolean(obj, name) json_is_true      (json_property_get(obj, name))
+
 #define json_object_get_integer(obj, name) json_integer_value(json_object_get(obj, name))
 #define json_object_get_real(obj, name)    json_number_value (json_object_get(obj, name))
 #define json_object_get_string(obj, name)  json_string_value (json_object_get(obj, name))

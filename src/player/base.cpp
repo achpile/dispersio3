@@ -9,7 +9,6 @@
 ach::Player::Player()
 {
 	phys.init(sf::Vector2f(16.0f, 16.0f));
-	phys.pos = sf::Vector2f(13*16+8, 6*16+8);
 
 	legs = new ach::Model(db->getModel("PlayerLegs"));
 	body = new ach::Model(db->getModel("PlayerBody"));
@@ -55,4 +54,17 @@ void ach::Player::render()
 {
 	legs->render(phys.pos);
 	body->render(phys.pos);
+}
+
+
+
+/***********************************************************************
+     * Player
+     * respawn
+
+***********************************************************************/
+void ach::Player::respawn()
+{
+	phys.pos = spawn;
+	phys.reset();
 }

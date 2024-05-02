@@ -21,6 +21,7 @@ namespace ach
 		void update();
 		void calc();
 		void init(sf::Vector2f _size);
+		void reset();
 	};
 }
 

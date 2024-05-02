@@ -12,6 +12,7 @@ namespace ach
 
 		sf::Vector2i    sizeMap;
 		sf::Vector2i    sizeTile;
+		sf::Vector2f    spawn;
 
 
 		 Map(const char *filename);
@@ -30,6 +31,9 @@ namespace ach
 		void loadLayerTiles(json_t *layer);
 		void loadLayerObjects(json_t *layer);
 		void loadPhys(json_t *layer);
+
+		sf::Vector2f getTilePos(sf::Vector2i v);
+		sf::Vector2f getTileCenter(sf::Vector2i v);
 	};
 }
 

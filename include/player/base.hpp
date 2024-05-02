@@ -6,10 +6,11 @@ namespace ach
 {
 	struct Player
 	{
-		ach::Model *body;
-		ach::Model *legs;
+		ach::Model  *body;
+		ach::Model  *legs;
 
-		ach::Phys   phys;
+		ach::Phys    phys;
+		sf::Vector2f spawn;
 
 
 		 Player();
@@ -17,6 +18,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void respawn();
 	};
 }
 

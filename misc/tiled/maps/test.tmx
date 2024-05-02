@@ -3,6 +3,10 @@
  <editorsettings>
   <export target="../../../data/base/maps/test.tmj" format="json"/>
  </editorsettings>
+ <properties>
+  <property name="spawnX" type="int" value="13"/>
+  <property name="spawnY" type="int" value="6"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/test.tsx"/>
  <layer id="1" name="wall" width="40" height="15">
   <data encoding="csv">

@@ -88,5 +88,29 @@ void ach::Map::renderTiles(sf::FloatRect viewport)
 
 	for (int x = from.x; x < to.x; x++)
 		for (int y = from.y; y < to.y; y++)
-			tiles[x][y]->render(vector_mult(sizeTile, sf::Vector2i(x, y)));
+			tiles[x][y]->render(getTilePos(sf::Vector2i(x, y)));
+}
+
+
+
+/***********************************************************************
+     * Map
+     * getTilePos
+
+***********************************************************************/
+sf::Vector2f ach::Map::getTilePos(sf::Vector2i v)
+{
+	return vector_mult(sizeTile, v);
+}
+
+
+
+/***********************************************************************
+     * Map
+     * getTileCenter
+
+***********************************************************************/
+sf::Vector2f ach::Map::getTileCenter(sf::Vector2i v)
+{
+	return getTilePos(v) + sf::Vector2f(sizeTile) / 2.0f;
 }

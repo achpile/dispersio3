@@ -36,10 +36,27 @@ void ach::Phys::calc()
 ***********************************************************************/
 void ach::Phys::init(sf::Vector2f _size)
 {
-	acc  = sf::Vector2f(0.0f, 0.0f);
-	vel  = sf::Vector2f(0.0f, 0.0f);
-	pos  = sf::Vector2f(0.0f, 0.0f);
-
 	size = _size;
-	rect = sf::FloatRect(pos, size);
+	rect = sf::FloatRect(sf::Vector2f(0.0f, 0.0f), size);
+
+	reset();
+}
+
+
+
+/***********************************************************************
+     * Phys
+     * reset
+
+***********************************************************************/
+void ach::Phys::reset()
+{
+	acc = sf::Vector2f(0.0f, 0.0f);
+	vel = sf::Vector2f(0.0f, 0.0f);
+
+	grounded = true;
+	moving   = false;
+	jumpdown = false;
+
+	calc();
 }

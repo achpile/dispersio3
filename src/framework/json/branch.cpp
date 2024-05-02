@@ -5,7 +5,7 @@
      * json_object_get_branch
 
 ***********************************************************************/
-json_t *json_object_get_branch(json_t *root, const char *path)
+json_t* json_object_get_branch(json_t *root, const char *path)
 {
 	if (!path)
 	{
@@ -119,7 +119,7 @@ void json_object_set_branch(json_t *root, const char *path, json_t *obj)
      * json_object_getv_branch
 
 ***********************************************************************/
-json_t *json_object_getv_branch(json_t *root, const char *format, ...)
+json_t* json_object_getv_branch(json_t *root, const char *format, ...)
 {
 	char path[STR_LEN_PATH];
 

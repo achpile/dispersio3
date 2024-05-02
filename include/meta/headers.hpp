@@ -46,6 +46,7 @@
 #include "framework/time/animation.hpp"
 
 #include "framework/json/branch.hpp"
+#include "framework/json/property.hpp"
 #include "framework/json/merge.hpp"
 #include "framework/json/macros.hpp"
 
