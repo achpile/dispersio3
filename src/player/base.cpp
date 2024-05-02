@@ -8,6 +8,9 @@
 ***********************************************************************/
 ach::Player::Player()
 {
+	phys.init(sf::Vector2f(16.0f, 16.0f));
+	phys.pos = sf::Vector2f(13*16+8, 6*16+8);
+
 	legs = new ach::Model(db->getModel("PlayerLegs"));
 	body = new ach::Model(db->getModel("PlayerBody"));
 
@@ -50,6 +53,6 @@ void ach::Player::update()
 ***********************************************************************/
 void ach::Player::render()
 {
-	legs->render(sf::Vector2f(13*16+8, 6*16+8));
-	body->render(sf::Vector2f(13*16+8, 6*16+8));
+	legs->render(phys.pos);
+	body->render(phys.pos);
 }

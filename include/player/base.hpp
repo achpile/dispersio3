@@ -9,6 +9,8 @@ namespace ach
 		ach::Model *body;
 		ach::Model *legs;
 
+		ach::Phys   phys;
+
 
 		 Player();
 		~Player();
