@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::Animation::Animation()
 {
+	frames = 0;
 	frame  = 0;
 	start  = 0;
 	end    = 0;
@@ -62,10 +63,22 @@ void ach::Animation::reset()
 
 /***********************************************************************
      * Animation
+     * init
+
+***********************************************************************/
+void ach::Animation::init(int _frames)
+{
+	frames = _frames;
+}
+
+
+
+/***********************************************************************
+     * Animation
      * set
 
 ***********************************************************************/
-void ach::Animation::set(int _start, int _end, bool _loop, float rate, int frames)
+void ach::Animation::set(int _start, int _end, bool _loop, float rate)
 {
 	if (start == _start &&
 	    end   == _end   &&
@@ -82,20 +95,4 @@ void ach::Animation::set(int _start, int _end, bool _loop, float rate, int frame
 		end = frames - 1;
 
 	framer.set(rate);
-}
-
-
-
-/***********************************************************************
-     * Animation
-     * set
-
-***********************************************************************/
-void ach::Animation::set(json_t *obj, int frames)
-{
-	set(json_object_get_integer(obj, "Start"),
-	    json_object_get_integer(obj, "End"  ),
-	    json_object_get_boolean(obj, "Loop" ),
-	    json_object_get_real   (obj, "Rate" ),
-	    frames);
 }

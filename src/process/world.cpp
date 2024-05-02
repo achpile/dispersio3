@@ -38,6 +38,7 @@ ach::ProcessWorld::~ProcessWorld()
 ***********************************************************************/
 void ach::ProcessWorld::update()
 {
+	player->update();
 	cam->update();
 	map->update();
 
@@ -54,4 +55,5 @@ void ach::ProcessWorld::update()
 void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
+	player->render();
 }

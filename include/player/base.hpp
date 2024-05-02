@@ -6,8 +6,15 @@ namespace ach
 {
 	struct Player
 	{
+		ach::Model *body;
+		ach::Model *legs;
+
+
 		 Player();
 		~Player();
+
+		void update();
+		void render();
 	};
 }
 

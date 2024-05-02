@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::Framer framer;
 
+		int  frames;
 		int  frame;
 
 		int  start;
@@ -21,8 +22,8 @@ namespace ach
 		void update();
 		void reset();
 
-		void set(int _start, int _end, bool _loop, float rate, int frames);
-		void set(json_t *obj, int frames);
+		void init(int _frames);
+		void set(int _start, int _end, bool _loop, float rate);
 	};
 }
 

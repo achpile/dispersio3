@@ -98,6 +98,8 @@
 #include "data/model.hpp"
 #include "data/base.hpp"
 
+#include "gfx/model.hpp"
+
 #include "container/resources.hpp"
 #include "container/settings.hpp"
 #include "container/background.hpp"
