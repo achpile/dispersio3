@@ -113,6 +113,8 @@
 #include "map/pair.hpp"
 #include "map/base.hpp"
 
+#include "character/base.hpp"
+
 #include "player/camera.hpp"
 #include "player/base.hpp"
 

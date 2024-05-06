@@ -2,83 +2,63 @@
 
 
 /***********************************************************************
-     * Player
+     * Character
      * constructor
 
 ***********************************************************************/
-ach::Player::Player()
+ach::Character::Character(sf::Vector2f size)
 {
-	character = new ach::Character(sf::Vector2f(16.0f, 16.0f));
-
-	legs = new ach::Model(db->getModel("PlayerLegs"));
-	body = new ach::Model(db->getModel("PlayerBody"));
-
-	character->models.push_back(legs);
-	character->models.push_back(body);
+	phys.init(size);
 }
 
 
 
 /***********************************************************************
-     * Player
+     * Character
      * destructor
 
 ***********************************************************************/
-ach::Player::~Player()
+ach::Character::~Character()
 {
+	listDelete(models);
 }
 
 
 
 /***********************************************************************
-     * Player
+     * Character
      * update
 
 ***********************************************************************/
-void ach::Player::update()
+void ach::Character::update()
 {
-	character->update();
+	for (unsigned int i = 0; i < models.size(); i++)
+		models[i]->update();
 }
 
 
 
 /***********************************************************************
-     * Player
+     * Character
      * render
 
 ***********************************************************************/
-void ach::Player::render()
+void ach::Character::render()
 {
-	character->render();
+	for (unsigned int i = 0; i < models.size(); i++)
+		models[i]->render(phys.pos);
 }
 
 
 
 /***********************************************************************
-     * Player
+     * Character
      * reset
 
 ***********************************************************************/
-void ach::Player::reset()
+void ach::Character::reset()
 {
-	legs->setAnimation("Idle");
-	body->setAnimation("Front");
+	aim = sf::Vector2f(1.0f, 0.0f);
 
-	dir = sf::Vector2i(1, 0);
-
-	character->reset();
-}
-
-
-
-/***********************************************************************
-     * Player
-     * respawn
-
-***********************************************************************/
-void ach::Player::respawn(sf::Vector2f spawn)
-{
-	character->phys.pos = spawn;
-
-	reset();
+	phys.reset();
 }
