@@ -61,4 +61,5 @@ void ach::Character::reset()
 	aim = sf::Vector2f(1.0f, 0.0f);
 
 	phys.reset();
+	phys.acc.y = PHYS_GRAVITY;
 }

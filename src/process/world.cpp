@@ -44,6 +44,7 @@ void ach::ProcessWorld::update()
 	cam->update();
 	map->update();
 
+	collision();
 	render();
 }
 
@@ -58,4 +59,16 @@ void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
 	player->render();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * collision
+
+***********************************************************************/
+void ach::ProcessWorld::collision()
+{
+	map->collision->collide(&player->character->phys);
 }
