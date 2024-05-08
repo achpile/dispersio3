@@ -40,6 +40,7 @@
 #include "framework/math/interval.hpp"
 #include "framework/math/random.hpp"
 #include "framework/math/vector.hpp"
+#include "framework/math/projection.hpp"
 
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"

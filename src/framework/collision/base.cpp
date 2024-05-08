@@ -44,7 +44,7 @@ void ach::Collision::collide(ach::Phys *phys)
 	while (left > 0.0f)
 	{
 		velocity = vector_len(phys->vel);
-		chunk    = (velocity == 0.0f) ? left : 4.0f / velocity;
+		chunk    = (velocity == 0.0f) ? left : 1.5f / velocity;
 
 		if (chunk > left)
 			chunk = left;
@@ -71,6 +71,7 @@ void ach::Collision::collideLines(ach::Phys *phys)
 {
 	for (unsigned int i = 0; i < lines.size(); i++)
 	{
+		lines[i]->check(phys);
 		collideLine(phys, lines[i]);
 	}
 }
@@ -82,6 +83,29 @@ void ach::Collision::collideLines(ach::Phys *phys)
      * collideLine
 
 ***********************************************************************/
-void ach::Collision::collideLine(ach::Phys *, ach::PhysLine *)
+void ach::Collision::collideLine(ach::Phys *phys, ach::PhysLine *line)
 {
+	if (line->d == 0.0f)
+		return;
+
+	if (line->o == 0.0f)
+		return;
+
+
+	sf::Vector2f offset = line->offset();
+
+	if (offset.y < 0.0f)
+		phys->grounded = true;
+
+	if (offset.y != 0.0f)
+		phys->vel.y = 0.0f;
+
+	if (offset.x != 0.0f)
+	{
+		phys->moving = false;
+		phys->vel.x  = 0.0f;
+	}
+
+	phys->pos += offset;
+	phys->calc();
 }
