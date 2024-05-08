@@ -21,3 +21,14 @@ float math_fade(float x, float slope, float length)
 
 	return 0.0f;
 }
+
+
+
+/***********************************************************************
+     * math_linear
+
+***********************************************************************/
+float math_linear(float x, float k, float m)
+{
+	return k * x + m;
+}

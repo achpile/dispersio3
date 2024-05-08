@@ -70,7 +70,9 @@ void ach::Collision::collide(ach::Phys *phys)
 void ach::Collision::collideLines(ach::Phys *phys)
 {
 	for (unsigned int i = 0; i < lines.size(); i++)
+	{
 		collideLine(phys, lines[i]);
+	}
 }
 
 
@@ -80,7 +82,6 @@ void ach::Collision::collideLines(ach::Phys *phys)
      * collideLine
 
 ***********************************************************************/
-bool ach::Collision::collideLine(ach::Phys *, ach::PhysLine *)
+void ach::Collision::collideLine(ach::Phys *, ach::PhysLine *)
 {
-	return true;
 }

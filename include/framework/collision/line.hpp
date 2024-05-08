@@ -24,6 +24,10 @@ namespace ach
 
 		 PhysLine(ach::PhysType _type, sf::Vector2f _a, sf::Vector2f _b, sf::Vector2f pos);
 		~PhysLine();
+
+		void calc();
+
+		bool collideBox(sf::FloatRect box, sf::Vector2f *c = NULL, sf::Vector2f *n = NULL);
 	};
 }
 

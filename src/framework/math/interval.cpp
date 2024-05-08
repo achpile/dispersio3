@@ -5,9 +5,31 @@
      * interval_check
 
 ***********************************************************************/
+template<typename T> bool interval_check(T x, T min, T max)
+{
+	return ((x >= min) && (x <= max)) || ((x <= min) && (x >= max));
+}
+
+
+
+/***********************************************************************
+     * interval_check
+
+***********************************************************************/
 bool interval_check(int x, int min, int max)
 {
-	return (x >= min) && (x <= max);
+	return interval_check<int>(x, min, max);
+}
+
+
+
+/***********************************************************************
+     * interval_check
+
+***********************************************************************/
+bool interval_check(float x, float min, float max)
+{
+	return interval_check<float>(x, min, max);
 }
 
 
@@ -64,4 +86,21 @@ int interval_loop(int x, int min, int max)
 		x -= (max - min + 1);
 
 	return x;
+}
+
+
+
+/***********************************************************************
+     * interval_side
+
+***********************************************************************/
+int interval_side(int x, int left, int right)
+{
+	if (x < left)
+		return SIDE_LEFT;
+
+	if (x > right)
+		return SIDE_RIGHT;
+
+	return SIDE_MIDDLE;
 }

@@ -108,4 +108,8 @@
 ***********************************************************************/
 #define ANIMATION_DEFAULT     0.1f
 
+#define SIDE_LEFT            -1
+#define SIDE_MIDDLE           0
+#define SIDE_RIGHT            1
+
 #endif

@@ -3,5 +3,6 @@
 
 
 float math_fade(float x, float slope, float length);
+float math_linear(float x, float k, float m);
 
 #endif
