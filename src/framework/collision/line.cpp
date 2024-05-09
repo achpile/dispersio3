@@ -73,8 +73,8 @@ bool ach::PhysLine::check(ach::Phys *phys)
 	float d1 = 0.0f;
 	float d2 = 0.0f;
 
-	d1 = diff(projection_rect_pos(phys->rect, v), projection_rect_len(phys->rect, !v), projection_rect_tip(phys->rect, !v), false);
-	d2 = diff(projection_rect_tip(phys->rect, v), projection_rect_len(phys->rect, !v), projection_rect_tip(phys->rect, !v), true );
+	d1 = diff(projection_rect_pos(phys->rect, v), projection_rect_pos(phys->rect, !v), projection_rect_tip(phys->rect, !v), false);
+	d2 = diff(projection_rect_tip(phys->rect, v), projection_rect_pos(phys->rect, !v), projection_rect_tip(phys->rect, !v), true );
 
 
 	d = (fabs(d1) > fabs(d2)) ? d1 : d2;
