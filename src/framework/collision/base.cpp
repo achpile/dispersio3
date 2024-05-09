@@ -52,7 +52,7 @@ void ach::Collision::collide(ach::Phys *phys)
 		phys->pos += phys->vel * chunk;
 		phys->calc();
 
-		collideLines(phys);
+		while (collideLines(phys));
 
 		left -= chunk;
 	}
@@ -67,13 +67,23 @@ void ach::Collision::collide(ach::Phys *phys)
      * collideLines
 
 ***********************************************************************/
-void ach::Collision::collideLines(ach::Phys *phys)
+bool ach::Collision::collideLines(ach::Phys *phys)
 {
+	for (unsigned int i = 0; i < lines.size(); i++)
+		lines[i]->check(phys);
+
+	std::sort(lines.begin(), lines.end(), sort);
+
+
 	for (unsigned int i = 0; i < lines.size(); i++)
 	{
 		lines[i]->check(phys);
-		collideLine(phys, lines[i]);
+
+		if (collideLine(phys, lines[i]))
+			return true;
 	}
+
+	return false;
 }
 
 
@@ -83,13 +93,13 @@ void ach::Collision::collideLines(ach::Phys *phys)
      * collideLine
 
 ***********************************************************************/
-void ach::Collision::collideLine(ach::Phys *phys, ach::PhysLine *line)
+bool ach::Collision::collideLine(ach::Phys *phys, ach::PhysLine *line)
 {
 	if (line->d == 0.0f)
-		return;
+		return false;
 
 	if (line->o == 0.0f)
-		return;
+		return false;
 
 
 	sf::Vector2f offset = line->offset();
@@ -108,4 +118,6 @@ void ach::Collision::collideLine(ach::Phys *phys, ach::PhysLine *line)
 
 	phys->pos += offset;
 	phys->calc();
+
+	return true;
 }

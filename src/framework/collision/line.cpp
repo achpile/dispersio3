@@ -237,3 +237,15 @@ bool ach::PhysLine::collideBox(sf::FloatRect box, sf::Vector2f *c, sf::Vector2f 
 
 	return true;
 }
+
+
+
+/***********************************************************************
+     * PhysLineSort
+     * operator()
+
+***********************************************************************/
+bool ach::PhysLineSort::operator()(ach::PhysLine *a, ach::PhysLine *b)
+{
+	return a->o > b->o;
+}

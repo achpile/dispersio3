@@ -38,6 +38,12 @@ namespace ach
 
 		sf::Vector2f offset();
 	};
+
+
+	struct PhysLineSort
+	{
+		bool operator()(ach::PhysLine *a, ach::PhysLine *b);
+	};
 }
 
 #endif

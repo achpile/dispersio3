@@ -8,13 +8,15 @@ namespace ach
 	{
 		std::vector<ach::PhysLine*> lines;
 
+		ach::PhysLineSort sort;
+
 
 		 Collision();
 		~Collision();
 
 		void collide(ach::Phys *phys);
-		void collideLines(ach::Phys *phys);
-		void collideLine(ach::Phys *phys, ach::PhysLine *line);
+		bool collideLines(ach::Phys *phys);
+		bool collideLine(ach::Phys *phys, ach::PhysLine *line);
 	};
 }
 
