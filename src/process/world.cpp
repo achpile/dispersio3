@@ -13,6 +13,7 @@ ach::ProcessWorld::ProcessWorld()
 	player = new ach::Player();
 
 	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
+	cam->follow(&player->character->phys);
 
 	player->respawn(map->spawn);
 }

@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Camera::Camera()
 {
-	offset   = sf::Vector2f(0, 0);
+	follower = NULL;
 	viewport = sf::FloatRect(0, 0, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
 
 	view.reset(viewport);
@@ -34,13 +34,27 @@ ach::Camera::~Camera()
 ***********************************************************************/
 void ach::Camera::update()
 {
+	center();
 	check();
-
-	viewport.left = offset.x;
-	viewport.top  = offset.y;
 
 	view.reset(viewport);
 	rm->setView(view);
+}
+
+
+
+/***********************************************************************
+     * Camera
+     * center
+
+***********************************************************************/
+void ach::Camera::center()
+{
+	if (!follower)
+		return;
+
+	viewport.left = follower->pos.x - RENDER_LAYER_GAME_X / 2.0f;
+	viewport.top  = follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f;
 }
 
 
@@ -52,17 +66,22 @@ void ach::Camera::update()
 ***********************************************************************/
 void ach::Camera::check()
 {
-	if (offset.x < area.left)
-		offset.x = area.left;
+	viewport.left = interval_set(viewport.left, area.left, area.left + area.width  - viewport.width );
+	viewport.top  = interval_set(viewport.top , area.top , area.top  + area.height - viewport.height);
+}
 
-	if (offset.y < area.top)
-		offset.y = area.top;
 
-	if (offset.x > area.left + area.width - viewport.width)
-		offset.x = area.left + area.width - viewport.width;
 
-	if (offset.y > area.top + area.height - viewport.height)
-		offset.y = area.top + area.height - viewport.height;
+/***********************************************************************
+     * Camera
+     * follow
+
+***********************************************************************/
+void ach::Camera::follow(ach::Phys *phys)
+{
+	follower = phys;
+
+	update();
 }
 
 

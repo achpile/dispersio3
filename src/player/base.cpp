@@ -17,7 +17,7 @@ ach::Player::Player()
 	character->models.push_back(body);
 
 	character->speed   = 100.0f;
-	character->jumping = 300.0f;
+	character->jumping = 320.0f;
 }
 
 

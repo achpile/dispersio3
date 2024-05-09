@@ -6,9 +6,10 @@ namespace ach
 {
 	struct Camera
 	{
+		ach::Phys      *follower;
+
 		sf::FloatRect   viewport;
 		sf::FloatRect   area;
-		sf::Vector2f    offset;
 		sf::View        view;
 
 
@@ -17,7 +18,9 @@ namespace ach
 
 		void update();
 		void check();
+		void center();
 
+		void follow(ach::Phys *phys);
 		void setArea(sf::FloatRect _area);
 	};
 }
