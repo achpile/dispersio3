@@ -20,8 +20,12 @@ namespace ach
 		void update();
 		void render();
 
+		void controls();
+
 		void reset();
 		void respawn(sf::Vector2f spawn);
+
+		void move(int d);
 	};
 }
 

@@ -11,6 +11,10 @@ namespace ach
 		ach::Phys    phys;
 		sf::Vector2f aim;
 
+		float speed;
+		float jumping;
+		bool  dead;
+
 
 		 Character(sf::Vector2f size);
 		~Character();
@@ -19,6 +23,9 @@ namespace ach
 		void render();
 
 		void reset();
+
+		void move(int d);
+		void jump();
 	};
 }
 

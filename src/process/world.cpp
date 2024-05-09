@@ -40,6 +40,8 @@ ach::ProcessWorld::~ProcessWorld()
 ***********************************************************************/
 void ach::ProcessWorld::update()
 {
+	player->controls();
+
 	player->update();
 	cam->update();
 	map->update();

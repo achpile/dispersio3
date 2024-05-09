@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::Character::Character(sf::Vector2f size)
 {
+	dead = false;
+
 	phys.init(size);
 }
 
@@ -62,4 +64,35 @@ void ach::Character::reset()
 
 	phys.reset();
 	phys.acc.y = PHYS_GRAVITY;
+}
+
+
+
+/***********************************************************************
+     * Character
+     * move
+
+***********************************************************************/
+void ach::Character::move(int d)
+{
+	phys.moving = true;
+	phys.vel.x  = speed * d;
+}
+
+
+
+/***********************************************************************
+     * Character
+     * jump
+
+***********************************************************************/
+void ach::Character::jump()
+{
+	if (!phys.grounded)
+		return;
+
+	if (phys.jumpdown)
+		return;
+
+	phys.vel.y = -jumping;
 }

@@ -132,14 +132,14 @@ void ach::Menu::controls()
 	if (binding)
 		return;
 
-	if (ctrl->keys[caUp   ].pressed) move(-1);
-	if (ctrl->keys[caDown ].pressed) move( 1);
+	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) move(-1);
+	if (ctrl->keys[ach::ControlAction::caDown ].pressed) move( 1);
 
-	if (ctrl->keys[caLeft ].pressed) current->items[index]->left();
-	if (ctrl->keys[caRight].pressed) current->items[index]->right();
-	if (ctrl->keys[caJump ].pressed) current->items[index]->pick();
+	if (ctrl->keys[ach::ControlAction::caLeft ].pressed) current->items[index]->left();
+	if (ctrl->keys[ach::ControlAction::caRight].pressed) current->items[index]->right();
+	if (ctrl->keys[ach::ControlAction::caJump ].pressed) current->items[index]->pick();
 
-	if (ctrl->keys[caMenu ].pressed) current->items.back()->pick();
+	if (ctrl->keys[ach::ControlAction::caMenu ].pressed) current->items.back()->pick();
 }
 
 
