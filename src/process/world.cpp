@@ -42,11 +42,12 @@ void ach::ProcessWorld::update()
 {
 	player->controls();
 
+	collision();
+
 	player->update();
 	cam->update();
 	map->update();
 
-	collision();
 	render();
 }
 

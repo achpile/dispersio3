@@ -21,6 +21,7 @@ namespace ach
 		void render();
 
 		void controls();
+		void animate();
 
 		void reset();
 		void respawn(sf::Vector2f spawn);

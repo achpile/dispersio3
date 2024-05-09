@@ -40,6 +40,7 @@ ach::Player::~Player()
 ***********************************************************************/
 void ach::Player::update()
 {
+	animate();
 	character->update();
 }
 
@@ -67,6 +68,8 @@ void ach::Player::controls()
 	if (character->dead)
 		return;
 
+	dir.y = 0;
+
 	character->phys.vel.x  = 0.0f;
 	character->phys.moving = false;
 
@@ -77,6 +80,55 @@ void ach::Player::controls()
 	                           ctrl->keys[ach::ControlAction::caDown].state;
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) character->jump();
+
+	if (ctrl->keys[ach::ControlAction::caUp  ].state) dir.y = -1;
+	if (ctrl->keys[ach::ControlAction::caDown].state) dir.y =  1;
+}
+
+
+
+/***********************************************************************
+     * Player
+     * animate
+
+***********************************************************************/
+void ach::Player::animate()
+{
+	if (character->phys.grounded)
+	{
+		if (character->phys.moving)
+			legs->setAnimation("Walk");
+		else
+			legs->setAnimation("Idle");
+	}
+	else
+	{
+		if (character->phys.vel.y > 0.0f)
+			legs->setAnimation("Fall");
+		else
+			legs->setAnimation("Jump");
+	}
+
+
+	if (dir.y == 0)
+	{
+		body->setAnimation("Front");
+	}
+	else if (dir.y == 1)
+	{
+		body->setAnimation("DiagonalDown");
+	}
+	else
+	{
+		if (character->phys.moving)
+			body->setAnimation("DiagonalUp");
+		else
+			body->setAnimation("Up");
+	}
+
+
+	legs->scale.x = dir.x;
+	body->scale.x = dir.x;
 }
 
 
@@ -119,5 +171,7 @@ void ach::Player::respawn(sf::Vector2f spawn)
 ***********************************************************************/
 void ach::Player::move(int d)
 {
+	dir.x = d;
+
 	character->move(d);
 }

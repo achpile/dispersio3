@@ -9,10 +9,10 @@ namespace ach
 		ach::DataModel *base;
 		ach::Animation  anim;
 
+		sf::Vector2f    scale;
 		sf::Color       color;
 
 		char  animation[STR_LEN_NAME];
-		float scale;
 
 
 		 Model(ach::DataModel *_base);

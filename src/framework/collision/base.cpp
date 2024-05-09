@@ -41,6 +41,7 @@ void ach::Collision::collide(ach::Phys *phys)
 	phys->vel.x = interval_set(phys->vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 	phys->vel.y = interval_set(phys->vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 
+
 	while (left > 0.0f)
 	{
 		velocity = vector_len(phys->vel);

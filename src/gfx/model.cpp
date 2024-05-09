@@ -10,7 +10,7 @@ ach::Model::Model(ach::DataModel *_base)
 {
 	base         = _base;
 	color        = sf::Color::White;
-	scale        = 1.0f;
+	scale        = sf::Vector2f(1.0f, 1.0f);
 	animation[0] = 0;
 
 	anim.init(base->sheet->spr.size());
@@ -51,7 +51,7 @@ void ach::Model::render(sf::Vector2f pos)
 	sf::Sprite *spr = base->sheet->spr[anim.frame];
 
 	spr->setColor(color);
-	spr->setScale(scale, scale);
+	spr->setScale(scale);
 	spr->setPosition(pos);
 
 	rm->draw(spr, ach::RenderLayer::rlGame);
