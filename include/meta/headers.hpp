@@ -114,6 +114,8 @@
 #include "map/pair.hpp"
 #include "map/base.hpp"
 
+#include "character/projectile.hpp"
+#include "character/weapon.hpp"
 #include "character/base.hpp"
 
 #include "player/camera.hpp"

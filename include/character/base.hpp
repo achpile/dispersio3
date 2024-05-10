@@ -8,8 +8,9 @@ namespace ach
 	{
 		std::vector<ach::Model*> models;
 
-		ach::Phys    phys;
-		sf::Vector2f aim;
+		ach::Weapon  *weapon;
+		ach::Phys     phys;
+		sf::Vector2f  aim;
 
 		float speed;
 		float jumping;

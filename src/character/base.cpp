@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Character::Character(sf::Vector2f size)
 {
-	dead = false;
+	dead   = false;
+	weapon = new ach::Weapon();
 
 	phys.init(size);
 }
@@ -22,6 +23,8 @@ ach::Character::Character(sf::Vector2f size)
 ***********************************************************************/
 ach::Character::~Character()
 {
+	delete weapon;
+
 	listDelete(models);
 }
 
