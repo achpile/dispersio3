@@ -33,6 +33,12 @@
             }
         }
     },
+    "Gravity": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
     "Radius": {
         "@attr": {
             "default": 0,
