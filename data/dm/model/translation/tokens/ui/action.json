@@ -32,6 +32,12 @@
             "type": "string"
         }
     },
+    "Shot": {
+        "@attr": {
+            "default": "Shot",
+            "type": "string"
+        }
+    },
     "Up": {
         "@attr": {
             "default": "Up",

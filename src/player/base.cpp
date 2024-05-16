@@ -80,6 +80,7 @@ void ach::Player::controls()
 	                           ctrl->keys[ach::ControlAction::caDown].state;
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) character->jump();
+	if (ctrl->keys[ach::ControlAction::caShot ].state  ) character->shot();
 
 	if (ctrl->keys[ach::ControlAction::caUp  ].state) dir.y = -1;
 	if (ctrl->keys[ach::ControlAction::caDown].state) dir.y =  1;

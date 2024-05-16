@@ -27,6 +27,7 @@ namespace ach
 
 		void move(int d);
 		void jump();
+		void shot();
 	};
 }
 
