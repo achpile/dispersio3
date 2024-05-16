@@ -1,0 +1,9 @@
+{
+    "Rifle": {
+        "Cooldown": 0.1,
+        "Sound": {
+            "Shot": "sfx/weapon/rifle_shot.wav"
+        },
+        "Speed": 1000
+    }
+}

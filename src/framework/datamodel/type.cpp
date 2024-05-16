@@ -104,21 +104,21 @@ bool json_type_check_integer(json_t *obj, json_t *dm, const char *name, const ch
 ***********************************************************************/
 bool json_type_check_real(json_t *obj, json_t *dm, const char *name, const char *)
 {
-	if (!json_is_real(obj))
+	if (!json_is_number(obj))
 	{
 		logger->log(ach::LogLevel::llWarning, "Value \"%s\" must be a real number", name);
 		return false;
 	}
 
-	if (json_real_value(obj) < json_attr_get_min_real(dm))
+	if (json_number_value(obj) < json_attr_get_min_real(dm))
 	{
-		logger->log(ach::LogLevel::llWarning, "Value \"%s\" is less than minimum (%f < %f)", name, json_real_value(obj), json_attr_get_min_real(dm));
+		logger->log(ach::LogLevel::llWarning, "Value \"%s\" is less than minimum (%f < %f)", name, json_number_value(obj), json_attr_get_min_real(dm));
 		return false;
 	}
 
-	if (json_real_value(obj) > json_attr_get_max_real(dm))
+	if (json_number_value(obj) > json_attr_get_max_real(dm))
 	{
-		logger->log(ach::LogLevel::llWarning, "Value \"%s\" is more than maximum (%f > %f)", name, json_real_value(obj), json_attr_get_max_real(dm));
+		logger->log(ach::LogLevel::llWarning, "Value \"%s\" is more than maximum (%f > %f)", name, json_number_value(obj), json_attr_get_max_real(dm));
 		return false;
 	}
 

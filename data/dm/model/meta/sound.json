@@ -8,19 +8,19 @@
         },
         "Back": {
             "@attr": {
-                "default": "sfx/misc/menu/back.wav",
+                "default": "sfx/menu/back.wav",
                 "type": "filename"
             }
         },
         "Blip": {
             "@attr": {
-                "default": "sfx/misc/menu/blip.wav",
+                "default": "sfx/menu/blip.wav",
                 "type": "filename"
             }
         },
         "Pick": {
             "@attr": {
-                "default": "sfx/misc/menu/pick.wav",
+                "default": "sfx/menu/pick.wav",
                 "type": "filename"
             }
         }

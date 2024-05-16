@@ -1,0 +1,10 @@
+{
+    "Bullet": {
+        "Sound": {
+            "Bump": "sfx/projectile/bullet_bump.wav"
+        },
+        "Tracer": {
+            "Enable": true
+        }
+    }
+}

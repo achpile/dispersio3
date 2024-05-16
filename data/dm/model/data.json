@@ -3,5 +3,7 @@
         "type": "object"
     },
     "Model": "@include data/model.json",
-    "Sheet": "@include data/sheet.json"
+    "Projectile": "@include data/projectile.json",
+    "Sheet": "@include data/sheet.json",
+    "Weapon": "@include data/weapon.json"
 }
