@@ -18,9 +18,6 @@
                 "Start": 1
             }
         },
-        "Sheet": {
-            "Filename": "gfx/game/sheet/player/legs.png",
-            "Frames": 9
-        }
+        "Sheet": "PlayerLegs"
     }
 }

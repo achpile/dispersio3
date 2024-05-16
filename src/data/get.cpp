@@ -24,3 +24,15 @@ ach::DataModel* ach::Database::getModel(const char *name)
 {
 	return getContent<ach::DataModel>(name, &model);
 }
+
+
+
+/***********************************************************************
+     * Database
+     * getSheet
+
+***********************************************************************/
+ach::DataSheet* ach::Database::getSheet(const char *name)
+{
+	return getContent<ach::DataSheet>(name, &sheet);
+}

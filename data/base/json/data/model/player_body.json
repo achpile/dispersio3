@@ -18,9 +18,6 @@
                 "Start": 2
             }
         },
-        "Sheet": {
-            "Filename": "gfx/game/sheet/player/body.png",
-            "Frames": 4
-        }
+        "Sheet": "PlayerBody"
     }
 }

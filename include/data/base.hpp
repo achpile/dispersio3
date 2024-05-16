@@ -7,6 +7,7 @@ namespace ach
 	struct Database
 	{
 		std::vector<ach::DataModel*> model;
+		std::vector<ach::DataSheet*> sheet;
 
 
 		 Database();
@@ -15,6 +16,7 @@ namespace ach
 		void load();
 
 		ach::DataModel *getModel(const char *name);
+		ach::DataSheet *getSheet(const char *name);
 	};
 }
 

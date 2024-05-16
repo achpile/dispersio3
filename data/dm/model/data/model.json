@@ -14,18 +14,18 @@
                 "type": "integer"
             }
         },
+        "Loop": {
+            "@attr": {
+                "default": true,
+                "type": "boolean"
+            }
+        },
         "Rate": {
             "@attr": {
                 "default": 0.1,
                 "max": 10.0,
                 "min": 0.0,
                 "type": "real"
-            }
-        },
-        "Loop": {
-            "@attr": {
-                "default": true,
-                "type": "boolean"
             }
         },
         "Start": {
@@ -39,21 +39,9 @@
     },
     "Sheet": {
         "@attr": {
-            "type": "object"
-        },
-        "Filename": {
-            "@attr": {
-                "default": "gfx/game/sheet/misc/default.png",
-                "type": "filename"
-            }
-        },
-        "Frames": {
-            "@attr": {
-                "default": 1,
-                "max": 512,
-                "min": 1,
-                "type": "integer"
-            }
+            "data": "Data.Sheet",
+            "default": "Default",
+            "type": "link"
         }
     }
 }

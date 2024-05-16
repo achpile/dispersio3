@@ -2,5 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "Model": "@include data/model.json"
+    "Model": "@include data/model.json",
+    "Sheet": "@include data/sheet.json"
 }
