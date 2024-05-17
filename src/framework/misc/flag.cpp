@@ -49,10 +49,10 @@ void flag_toggle(long *value, int bit)
 
 
 /***********************************************************************
-     * flag_check
+     * flag_get
 
 ***********************************************************************/
-bool flag_check(long  value, int bit)
+bool flag_get(long value, int bit)
 {
 	return (value & (1 << bit));
 }
