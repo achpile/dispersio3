@@ -100,6 +100,8 @@
 
 #include "data/sheet.hpp"
 #include "data/model.hpp"
+#include "data/projectile.hpp"
+#include "data/weapon.hpp"
 #include "data/base.hpp"
 
 #include "gfx/model.hpp"

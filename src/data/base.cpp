@@ -21,6 +21,8 @@ ach::Database::~Database()
 {
 	listDelete(sheet);
 	listDelete(model);
+	listDelete(projectile);
+	listDelete(weapon);
 }
 
 
@@ -54,6 +56,8 @@ template<class T> void loadContent(const char *section, std::vector<T*> *list) {
 ***********************************************************************/
 void ach::Database::load()
 {
-	loadContent<ach::DataSheet>("Sheet", &sheet);
-	loadContent<ach::DataModel>("Model", &model);
+	loadContent<ach::DataSheet     >("Sheet"     , &sheet     );
+	loadContent<ach::DataModel     >("Model"     , &model     );
+	loadContent<ach::DataProjectile>("Projectile", &projectile);
+	loadContent<ach::DataWeapon    >("Weapon"    , &weapon    );
 }

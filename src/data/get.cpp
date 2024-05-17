@@ -36,3 +36,27 @@ ach::DataSheet* ach::Database::getSheet(const char *name)
 {
 	return getContent<ach::DataSheet>(name, &sheet);
 }
+
+
+
+/***********************************************************************
+     * Database
+     * getProjectile
+
+***********************************************************************/
+ach::DataProjectile* ach::Database::getProjectile(const char *name)
+{
+	return getContent<ach::DataProjectile>(name, &projectile);
+}
+
+
+
+/***********************************************************************
+     * Database
+     * getWeapon
+
+***********************************************************************/
+ach::DataWeapon* ach::Database::getWeapon(const char *name)
+{
+	return getContent<ach::DataWeapon>(name, &weapon);
+}
