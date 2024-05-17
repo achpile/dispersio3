@@ -4,7 +4,7 @@
 
 namespace ach
 {
-	struct DataWeapon
+	struct DataWeapon : DataContent
 	{
 		ach::DataProjectile *projectile;
 		sf::SoundBuffer     *shot;
@@ -14,12 +14,11 @@ namespace ach
 		float range;
 		float speed;
 
-		char  name[STR_LEN_NAME];
 		int   damage;
 		int   count;
 
 
-		 DataWeapon(const char *_name, json_t *obj);
+		 DataWeapon(json_t *obj);
 		~DataWeapon();
 	};
 }

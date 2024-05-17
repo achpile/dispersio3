@@ -6,10 +6,8 @@
      * constructor
 
 ***********************************************************************/
-ach::DataWeapon::DataWeapon(const char *_name, json_t *obj)
+ach::DataWeapon::DataWeapon(json_t *obj)
 {
-	strncpy(name, _name, STR_LEN_NAME);
-
 	cone       = json_object_get_real(obj, "Cone"    );
 	cooldown   = json_object_get_real(obj, "Cooldown");
 	range      = json_object_get_real(obj, "Range"   );

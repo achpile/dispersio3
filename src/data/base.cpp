@@ -37,13 +37,8 @@ template<class T> void loadContent(const char *section, std::vector<T*> *list) {
 
 	json_object_foreach(json_object_getv_branch(dm->data, "Data.%s", section), key, obj)
 	{
-		if (!str_regex_check(key, STR_REGEX_NAME))
-		{
-			logger->log(ach::llError, "Invalid name: \"Data.%s.%s\"", section, key);
-			continue;
-		}
-
-		list->push_back(new T(key, obj));
+		list->push_back(new T(obj));
+		strncpy(list->back()->name, key, STR_LEN_NAME);
 	}
 }
 

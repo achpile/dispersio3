@@ -4,14 +4,12 @@
 
 namespace ach
 {
-	struct DataSheet
+	struct DataSheet : DataContent
 	{
 		ach::Sheet *sheet;
 
-		char name[STR_LEN_NAME];
 
-
-		 DataSheet(const char *_name, json_t *obj);
+		 DataSheet(json_t *obj);
 		~DataSheet();
 	};
 }

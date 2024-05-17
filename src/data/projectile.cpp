@@ -6,10 +6,8 @@
      * constructor
 
 ***********************************************************************/
-ach::DataProjectile::DataProjectile(const char *_name, json_t *obj)
+ach::DataProjectile::DataProjectile(json_t *obj)
 {
-	strncpy(name, _name, STR_LEN_NAME);
-
 	radius      = json_object_get_real(obj, "Radius");
 	scale       = json_object_get_real(obj, "Scale" );
 	explosion   = json_object_get_branch_real(obj, "Explosive.Radius");

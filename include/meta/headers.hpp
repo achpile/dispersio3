@@ -99,6 +99,7 @@
 
 #include "particle/stars.hpp"
 
+#include "data/content.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"
 #include "data/projectile.hpp"

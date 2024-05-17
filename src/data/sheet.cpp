@@ -6,10 +6,8 @@
      * constructor
 
 ***********************************************************************/
-ach::DataSheet::DataSheet(const char *_name, json_t *obj)
+ach::DataSheet::DataSheet(json_t *obj)
 {
-	strncpy(name, _name, STR_LEN_NAME);
-
 	sheet = new ach::Sheet(json_object_get_branch_string (obj, "Filename"),
 	                       json_object_get_branch_integer(obj, "Frames"  ),
 	                       true);

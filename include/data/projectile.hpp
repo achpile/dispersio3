@@ -14,7 +14,7 @@ namespace ach
 	};
 
 
-	struct DataProjectile
+	struct DataProjectile : DataContent
 	{
 		ach::DataSheet  *sheet;
 		sf::SoundBuffer *bump;
@@ -28,10 +28,9 @@ namespace ach
 		float scale;
 
 		long  flags;
-		char  name[STR_LEN_NAME];
 
 
-		 DataProjectile(const char *_name, json_t *obj);
+		 DataProjectile(json_t *obj);
 		~DataProjectile();
 	};
 }
