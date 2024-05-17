@@ -11,9 +11,10 @@ ach::Model::Model(ach::DataModel *_base)
 	base         = _base;
 	color        = sf::Color::White;
 	scale        = sf::Vector2f(1.0f, 1.0f);
+	sheet        = base->sheet->sheet;
 	animation[0] = 0;
 
-	anim.init(base->sheet->spr.size());
+	anim.init(sheet->spr.size());
 }
 
 
@@ -48,7 +49,7 @@ void ach::Model::update()
 ***********************************************************************/
 void ach::Model::render(sf::Vector2f pos)
 {
-	sf::Sprite *spr = base->sheet->spr[anim.frame];
+	sf::Sprite *spr = sheet->spr[anim.frame];
 
 	spr->setColor(color);
 	spr->setScale(scale);
