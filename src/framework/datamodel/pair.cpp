@@ -17,6 +17,7 @@ ach::Pair pairAttrType[] =
 	{.num = ach::JSONtype::jtArray   , .str = "array"   },
 	{.num = ach::JSONtype::jtMulti   , .str = "multi"   },
 	{.num = ach::JSONtype::jtLink    , .str = "link"    },
+	{.num = ach::JSONtype::jtEnum    , .str = "enum"    },
 
 	{.num = ach::JSONtype::jtUnknown , .str = NULL      },
 };

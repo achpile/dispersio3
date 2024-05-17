@@ -19,6 +19,7 @@ bool json_type_check(json_t *obj, json_t *dm, const char *name, const char *path
 		case ach::jtArray   : return json_type_check_array   (obj, dm, name, path);
 		case ach::jtMulti   : return json_type_check_multi   (obj, dm, name, path);
 		case ach::jtLink    : return json_type_check_link    (obj, dm, name, path);
+		case ach::jtEnum    : return json_type_check_enum    (obj, dm, name, path);
 		case ach::jtUnknown : return false;
 	}
 
@@ -298,4 +299,41 @@ bool json_type_check_link(json_t *obj, json_t *, const char *name, const char *)
 	}
 
 	return true;
+}
+
+
+
+/***********************************************************************
+     * json_type_check_enum
+
+***********************************************************************/
+bool json_type_check_enum(json_t *obj, json_t *dm, const char *name, const char *)
+{
+	if (!json_is_string(obj))
+	{
+		logger->log(ach::LogLevel::llWarning, "Value \"%s\" must be a link", name);
+		return false;
+	}
+
+	if (strlen(json_string_value(obj)) >= STR_LEN_NAME)
+	{
+		logger->log(ach::LogLevel::llWarning, "Value \"%s\" is too long", name);
+		return false;
+	}
+
+	if (!str_regex_check(json_string_value(obj), STR_REGEX_NAME))
+	{
+		logger->log(ach::LogLevel::llError, "Value \"%s\" has wrong symbols: \"%s\"", name, json_string_value(obj));
+		return false;
+	}
+
+	size_t  index;
+	json_t *item;
+
+	json_array_foreach(json_attr_get_enum(dm), index, item)
+		if (!strcmp(json_string_value(obj), json_string_value(item)))
+			return true;
+
+	logger->log(ach::LogLevel::llError, "Value \"%s\" is not in the enum list: %s", name, json_string_value(obj));
+	return false;
 }

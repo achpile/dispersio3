@@ -219,3 +219,22 @@ const char *json_attr_get_data(json_t *obj)
 
 	return json_object_get_string(attr, "data");
 }
+
+
+
+/***********************************************************************
+     * json_attr_get_enum
+
+***********************************************************************/
+json_t *json_attr_get_enum(json_t *obj)
+{
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
+
+	if (!attr)
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		return NULL;
+	}
+
+	return json_object_get(attr, "enum");
+}

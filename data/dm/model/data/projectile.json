@@ -73,6 +73,23 @@
             }
         }
     },
+    "Sparks": {
+        "@attr": {
+            "type": "object"
+        },
+        "Color": {
+            "@attr": {
+                "default": "#FFFFFFFF",
+                "type": "color"
+            }
+        },
+        "Enable": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        }
+    },
     "Tracer": {
         "@attr": {
             "type": "object"

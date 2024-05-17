@@ -12,6 +12,17 @@
                 "type": "color"
             }
         },
+        "Enum": {
+            "@attr": {
+                "default": "one",
+                "enum": [
+                    "one",
+                    "two",
+                    "three"
+                ],
+                "type": "enum"
+            }
+        },
         "Filename": {
             "@attr": {
                 "default": "path/to/file.type",

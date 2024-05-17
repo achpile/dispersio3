@@ -13,5 +13,6 @@ bool json_type_check_array   (json_t *obj, json_t *dm, const char *name, const c
 bool json_type_check_multi   (json_t *obj, json_t *dm, const char *name, const char *path);
 bool json_type_check_color   (json_t *obj, json_t *dm, const char *name, const char *path);
 bool json_type_check_link    (json_t *obj, json_t *dm, const char *name, const char *path);
+bool json_type_check_enum    (json_t *obj, json_t *dm, const char *name, const char *path);
 
 #endif

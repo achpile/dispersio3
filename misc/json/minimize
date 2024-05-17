@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import sys
+import json
+
+for arg in sys.argv[1:]:
+    f = open(arg, "r")
+
+    try:
+        s = json.dumps(json.loads(f.read()), sort_keys=True, indent=None, ensure_ascii=False, separators=(',', ':'))
+    except ValueError as e:
+        print("Wrong file {0}: {1}".format(arg, e))
+        continue
+    finally:
+        f.close()
+
+    f = open(arg, "w")
+    f.write(s)
+    f.write("\n")
+    f.close()
