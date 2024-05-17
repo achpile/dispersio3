@@ -31,6 +31,7 @@
 #include "framework/log/pair.hpp"
 
 #include "framework/misc/arch.hpp"
+#include "framework/misc/sfml.hpp"
 #include "framework/misc/flag.hpp"
 #include "framework/misc/handler.hpp"
 #include "framework/misc/list.hpp"

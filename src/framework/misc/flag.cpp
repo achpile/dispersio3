@@ -5,7 +5,21 @@
      * flag_set
 
 ***********************************************************************/
-void flag_set(unsigned int *value, int bit)
+void flag_set(long *value, int bit, bool flag)
+{
+	if (flag)
+		flag_check(value, bit);
+	else
+		flag_uncheck(value, bit);
+}
+
+
+
+/***********************************************************************
+     * flag_check
+
+***********************************************************************/
+void flag_check(long *value, int bit)
 {
 	(*value) |= (1 << bit);
 }
@@ -13,10 +27,10 @@ void flag_set(unsigned int *value, int bit)
 
 
 /***********************************************************************
-     * flag_unset
+     * flag_uncheck
 
 ***********************************************************************/
-void flag_unset(unsigned int *value, int bit)
+void flag_uncheck(long *value, int bit)
 {
 	(*value) &= ~(1 << bit);
 }
@@ -27,7 +41,7 @@ void flag_unset(unsigned int *value, int bit)
      * flag_toggle
 
 ***********************************************************************/
-void flag_toggle(unsigned int *value, int bit)
+void flag_toggle(long *value, int bit)
 {
 	(*value) ^= (1 << bit);
 }
@@ -38,7 +52,7 @@ void flag_toggle(unsigned int *value, int bit)
      * flag_check
 
 ***********************************************************************/
-bool flag_check(unsigned int  value, int bit)
+bool flag_check(long  value, int bit)
 {
 	return (value & (1 << bit));
 }

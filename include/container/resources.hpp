@@ -27,10 +27,6 @@ namespace ach
 
 		 Resources();
 		~Resources();
-
-		void loadFont (sf::Font        **font  , const char *filename);
-		void loadSound(sf::SoundBuffer **sound, const char *filename);
-		void loadImage(sf::Image       **image, const char *filename);
 	};
 }
 
