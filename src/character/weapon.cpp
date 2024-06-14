@@ -6,8 +6,12 @@
      * constructor
 
 ***********************************************************************/
-ach::Weapon::Weapon()
+ach::Weapon::Weapon(ach::DataWeapon *_base)
 {
+	base = _base;
+
+	cooldown.set(base->cooldown);
+	cooldown.zero();
 }
 
 
@@ -19,4 +23,32 @@ ach::Weapon::Weapon()
 ***********************************************************************/
 ach::Weapon::~Weapon()
 {
+}
+
+
+
+/***********************************************************************
+     * Weapon
+     * update
+
+***********************************************************************/
+void ach::Weapon::update()
+{
+	cooldown.update();
+}
+
+
+
+/***********************************************************************
+     * Weapon
+     * shot
+
+***********************************************************************/
+void ach::Weapon::shot()
+{
+	if (cooldown.isActive())
+		return;
+
+	cooldown.reset();
+	sm->play(base->shot);
 }

@@ -10,6 +10,8 @@ namespace ach
 		ach::Camera *cam;
 		ach::Player *player;
 
+		std::vector<ach::Projectile*> projectiles;
+
 
 		 ProcessWorld();
 		~ProcessWorld();

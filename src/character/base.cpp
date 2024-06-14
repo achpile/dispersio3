@@ -9,7 +9,7 @@
 ach::Character::Character(sf::Vector2f size)
 {
 	dead   = false;
-	weapon = new ach::Weapon();
+	weapon = new ach::Weapon(db->getWeapon("Rifle"));
 
 	phys.init(size);
 }
@@ -37,6 +37,8 @@ ach::Character::~Character()
 ***********************************************************************/
 void ach::Character::update()
 {
+	weapon->update();
+
 	for (unsigned int i = 0; i < models.size(); i++)
 		models[i]->update();
 }
@@ -109,4 +111,5 @@ void ach::Character::jump()
 ***********************************************************************/
 void ach::Character::shot()
 {
+	weapon->shot();
 }

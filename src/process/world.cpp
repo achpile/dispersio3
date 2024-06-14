@@ -30,6 +30,8 @@ ach::ProcessWorld::~ProcessWorld()
 	delete map;
 	delete cam;
 	delete player;
+
+	listDelete(projectiles);
 }
 
 

@@ -6,8 +6,20 @@ namespace ach
 {
 	struct Weapon
 	{
-		 Weapon();
+		ach::DataWeapon *base;
+		ach::Timer       cooldown;
+		sf::Vector2f     aim;
+		sf::Vector2f     pos;
+
+		float angle;
+
+
+		 Weapon(ach::DataWeapon *_base);
 		~Weapon();
+
+		void update();
+
+		void shot();
 	};
 }
 

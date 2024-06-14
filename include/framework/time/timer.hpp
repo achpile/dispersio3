@@ -15,6 +15,7 @@ namespace ach
 
 		void set(float _timer);
 		void reset();
+		void zero();
 		bool update(bool real = false);
 		bool isActive();
 	};

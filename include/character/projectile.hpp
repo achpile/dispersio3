@@ -6,7 +6,10 @@ namespace ach
 {
 	struct Projectile
 	{
-		 Projectile();
+		ach::DataProjectile *base;
+
+
+		 Projectile(ach::DataProjectile *_base);
 		~Projectile();
 	};
 }

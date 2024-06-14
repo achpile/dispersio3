@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Projectile::Projectile()
+ach::Projectile::Projectile(ach::DataProjectile *_base)
 {
+	base = _base;
 }
 
 
