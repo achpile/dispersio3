@@ -11,6 +11,9 @@ namespace ach
 
 		 Projectile(ach::DataProjectile *_base);
 		~Projectile();
+
+		bool update();
+		void render();
 	};
 }
 

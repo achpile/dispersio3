@@ -51,6 +51,8 @@ void ach::ProcessWorld::update()
 	cam->update();
 	map->update();
 
+	listUpdate(projectiles);
+
 	render();
 }
 
@@ -64,6 +66,9 @@ void ach::ProcessWorld::update()
 void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
+
+	listRender(projectiles);
+
 	player->render();
 }
 
