@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::Weapon::Weapon(ach::DataWeapon *_base)
+ach::Weapon::Weapon(ach::ProcessWorld *_world, ach::DataWeapon *_base)
 {
-	base = _base;
+	world = _world;
+	base  = _base;
 
 	cooldown.set(base->cooldown);
 	cooldown.zero();

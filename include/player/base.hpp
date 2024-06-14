@@ -14,7 +14,7 @@ namespace ach
 		sf::Vector2i    dir;
 
 
-		 Player();
+		 Player(ach::ProcessWorld *world);
 		~Player();
 
 		void update();

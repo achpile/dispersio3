@@ -8,16 +8,17 @@ namespace ach
 	{
 		std::vector<ach::Model*> models;
 
-		ach::Weapon  *weapon;
-		ach::Phys     phys;
-		sf::Vector2f  aim;
+		ach::ProcessWorld *world;
+		ach::Weapon       *weapon;
+		ach::Phys          phys;
+		sf::Vector2f       aim;
 
 		float speed;
 		float jumping;
 		bool  dead;
 
 
-		 Character(sf::Vector2f size);
+		 Character(ach::ProcessWorld *_world, sf::Vector2f size);
 		~Character();
 
 		void update();

@@ -10,7 +10,7 @@ ach::ProcessWorld::ProcessWorld()
 {
 	map    = new ach::Map(PATH_BASE "/" "maps/test.tmj");
 	cam    = new ach::Camera();
-	player = new ach::Player();
+	player = new ach::Player(this);
 
 	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
 	cam->follow(&player->character->phys);

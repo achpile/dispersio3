@@ -6,10 +6,11 @@
      * constructor
 
 ***********************************************************************/
-ach::Character::Character(sf::Vector2f size)
+ach::Character::Character(ach::ProcessWorld *_world, sf::Vector2f size)
 {
+	world  = _world;
 	dead   = false;
-	weapon = new ach::Weapon(db->getWeapon("Rifle"));
+	weapon = new ach::Weapon(world, db->getWeapon("Rifle"));
 
 	phys.init(size);
 }

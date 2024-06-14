@@ -6,9 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Player::Player()
+ach::Player::Player(ach::ProcessWorld *world)
 {
-	character = new ach::Character(sf::Vector2f(16.0f, 16.0f));
+	character = new ach::Character(world, sf::Vector2f(16.0f, 16.0f));
 
 	legs = new ach::Model(db->getModel("PlayerLegs"));
 	body = new ach::Model(db->getModel("PlayerBody"));
