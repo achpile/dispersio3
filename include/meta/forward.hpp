@@ -3,8 +3,6 @@
 
 namespace ach
 {
-	struct Menu;
-	struct MenuItemFolder;
 	struct ProcessWorld;
 }
 

@@ -20,6 +20,7 @@
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
 
+#include "framework/string/defines.hpp"
 #include "framework/string/pair.hpp"
 #include "framework/string/option.hpp"
 #include "framework/string/check.hpp"
@@ -37,12 +38,14 @@
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
 
+#include "framework/math/defines.hpp"
 #include "framework/math/base.hpp"
 #include "framework/math/interval.hpp"
 #include "framework/math/random.hpp"
 #include "framework/math/vector.hpp"
 #include "framework/math/projection.hpp"
 
+#include "framework/time/defines.hpp"
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
@@ -70,6 +73,7 @@
 #include "framework/gfx/sheet.hpp"
 #include "framework/gfx/layer.hpp"
 
+#include "framework/manager/defines.hpp"
 #include "framework/manager/render.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
@@ -77,6 +81,8 @@
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"
 
+#include "framework/menu/defines.hpp"
+#include "framework/menu/forward.hpp"
 #include "framework/menu/item.hpp"
 #include "framework/menu/action.hpp"
 #include "framework/menu/back.hpp"

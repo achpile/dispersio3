@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Framer::Framer()
 {
-	set(ANIMATION_DEFAULT);
+	set(TIME_ANIMATION_DEFAULT);
 }
 
 

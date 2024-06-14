@@ -8,6 +8,8 @@ namespace ach
 	{
 		ach::DataProjectile *base;
 
+		bool alive;
+
 
 		 Projectile(ach::DataProjectile *_base);
 		~Projectile();

@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Projectile::Projectile(ach::DataProjectile *_base)
 {
-	base = _base;
+	base  = _base;
+	alive = true;
 }
 
 
@@ -31,7 +32,7 @@ ach::Projectile::~Projectile()
 ***********************************************************************/
 bool ach::Projectile::update()
 {
-	return true;
+	return alive;
 }
 
 
