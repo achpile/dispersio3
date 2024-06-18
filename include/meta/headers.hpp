@@ -123,6 +123,9 @@
 #include "character/weapon.hpp"
 #include "character/base.hpp"
 
+#include "object/base.hpp"
+#include "object/decor.hpp"
+
 #include "map/tile.hpp"
 #include "map/tileset.hpp"
 #include "map/maptile.hpp"

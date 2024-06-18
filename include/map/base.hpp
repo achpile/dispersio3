@@ -6,6 +6,7 @@ namespace ach
 {
 	struct Map
 	{
+		std::vector<ach::MapObject*>  objects;
 		std::vector<ach::Projectile*> projectiles;
 
 		ach::MapTile ***tiles;
@@ -33,6 +34,7 @@ namespace ach
 		void loadLayerTiles(json_t *layer);
 		void loadLayerObjects(json_t *layer);
 		void loadPhys(json_t *layer);
+		void loadObjects(json_t *layer);
 
 		sf::Vector2f getTilePos(sf::Vector2i v);
 		sf::Vector2f getTileCenter(sf::Vector2i v);

@@ -147,7 +147,8 @@ void ach::Map::loadLayerTiles(json_t *layer)
 ***********************************************************************/
 void ach::Map::loadLayerObjects(json_t *layer)
 {
-		     if (!strcmp(json_object_get_string(layer, "name"), "phys")) loadPhys(layer);
+		     if (!strcmp(json_object_get_string(layer, "name"), "phys"   )) loadPhys   (layer);
+		else if (!strcmp(json_object_get_string(layer, "name"), "objects")) loadObjects(layer);
 
 		else logger->log(ach::LogLevel::llWarning, "Unknown map layer \"%s\"", json_object_get_string(layer, "name"));
 }
@@ -183,5 +184,25 @@ void ach::Map::loadPhys(json_t *layer)
 			if (i)
 				collision->lines.push_back(new ach::PhysLine(type, a, b, pos));
 		}
+	}
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadObjects
+
+***********************************************************************/
+void ach::Map::loadObjects(json_t *layer)
+{
+	json_t *obj;
+	size_t  index;
+
+	json_array_foreach(json_object_get(layer, "objects"), index, obj)
+	{
+		     if (!strcmp(json_object_get_string(obj, "type"), "decor")) objects.push_back(new ach::MapObjectDecor());
+
+		else logger->log(ach::LogLevel::llWarning, "Unknown map object type \"%s\"", json_object_get_string(layer, "type"));
 	}
 }
