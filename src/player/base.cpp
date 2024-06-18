@@ -68,6 +68,8 @@ void ach::Player::controls()
 	if (character->dead)
 		return;
 
+	character->aim = sf::Vector2f(0.0f, 0.0f);
+
 	dir.y = 0;
 
 	character->phys.vel.x  = 0.0f;
@@ -84,6 +86,12 @@ void ach::Player::controls()
 
 	if (ctrl->keys[ach::ControlAction::caUp  ].state) dir.y = -1;
 	if (ctrl->keys[ach::ControlAction::caDown].state) dir.y =  1;
+
+
+	character->aim = sf::Vector2f(dir);
+
+	if (dir.y == -1 && !character->phys.moving)
+		character->aim.x = 0.0f;
 }
 
 

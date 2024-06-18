@@ -33,6 +33,8 @@ ach::Map::~Map()
 	delete tiles;
 	delete tileset;
 	delete collision;
+
+	listDelete(projectiles);
 }
 
 
@@ -44,6 +46,7 @@ ach::Map::~Map()
 ***********************************************************************/
 void ach::Map::update()
 {
+	listUpdate(projectiles);
 }
 
 
@@ -57,6 +60,8 @@ void ach::Map::render(sf::FloatRect viewport)
 {
 	bg->stars->update();
 	renderTiles(viewport);
+
+	listRender(projectiles);
 }
 
 

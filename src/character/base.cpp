@@ -38,6 +38,7 @@ ach::Character::~Character()
 ***********************************************************************/
 void ach::Character::update()
 {
+	weapon->aim(phys.pos, aim);
 	weapon->update();
 
 	for (unsigned int i = 0; i < models.size(); i++)

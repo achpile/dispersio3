@@ -5,7 +5,8 @@
      * getContent
 
 ***********************************************************************/
-template<class T> T* getContent(const char *name, std::vector<T*> *list) {
+template<class T> T* getContent(const char *name, std::vector<T*> *list)
+{
 	for (unsigned int i = 0; i < list->size(); i++)
 		if (!strcmp(name, (*list)[i]->name))
 			return (*list)[i];

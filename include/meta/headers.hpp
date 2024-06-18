@@ -119,15 +119,15 @@
 #include "container/background.hpp"
 #include "container/language.hpp"
 
+#include "character/projectile.hpp"
+#include "character/weapon.hpp"
+#include "character/base.hpp"
+
 #include "map/tile.hpp"
 #include "map/tileset.hpp"
 #include "map/maptile.hpp"
 #include "map/pair.hpp"
 #include "map/base.hpp"
-
-#include "character/projectile.hpp"
-#include "character/weapon.hpp"
-#include "character/base.hpp"
 
 #include "player/camera.hpp"
 #include "player/base.hpp"

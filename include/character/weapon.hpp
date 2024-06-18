@@ -9,7 +9,6 @@ namespace ach
 		ach::ProcessWorld *world;
 		ach::DataWeapon   *base;
 		ach::Timer         cooldown;
-		sf::Vector2f       aim;
 		sf::Vector2f       pos;
 
 		float angle;
@@ -20,6 +19,7 @@ namespace ach
 
 		void update();
 
+		void aim(sf::Vector2f p, sf::Vector2f v);
 		void shot();
 	};
 }

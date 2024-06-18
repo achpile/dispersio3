@@ -31,7 +31,8 @@ ach::Database::~Database()
      * loadContent
 
 ***********************************************************************/
-template<class T> void loadContent(const char *section, std::vector<T*> *list) {
+template<class T> void loadContent(const char *section, std::vector<T*> *list)
+{
 	json_t     *obj;
 	const char *key;
 

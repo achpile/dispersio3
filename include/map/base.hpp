@@ -6,6 +6,8 @@ namespace ach
 {
 	struct Map
 	{
+		std::vector<ach::Projectile*> projectiles;
+
 		ach::MapTile ***tiles;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
