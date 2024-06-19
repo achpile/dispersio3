@@ -9,12 +9,23 @@
 ach::Model::Model(ach::DataModel *_base)
 {
 	base         = _base;
-	color        = sf::Color::White;
-	scale        = sf::Vector2f(1.0f, 1.0f);
-	sheet        = base->sheet->sheet;
 	animation[0] = 0;
 
-	anim.init(sheet->spr.size());
+	init(base->sheet->sheet);
+}
+
+
+
+/***********************************************************************
+     * Model
+     * constructor
+
+***********************************************************************/
+ach::Model::Model(ach::DataSheet *_sheet)
+{
+	base = NULL;
+
+	init(_sheet->sheet);
 }
 
 
@@ -62,11 +73,30 @@ void ach::Model::render(sf::Vector2f pos)
 
 /***********************************************************************
      * Model
+     * init
+
+***********************************************************************/
+void ach::Model::init(ach::Sheet *_sheet)
+{
+	sheet = _sheet;
+	color = sf::Color::White;
+	scale = sf::Vector2f(1.0f, 1.0f);
+
+	anim.init(sheet->spr.size());
+}
+
+
+
+/***********************************************************************
+     * Model
      * setAnimation
 
 ***********************************************************************/
 void ach::Model::setAnimation(const char *name)
 {
+	if (!base)
+		return;
+
 	if (!strcmp(animation, name))
 		return;
 
@@ -81,4 +111,28 @@ void ach::Model::setAnimation(const char *name)
 	         json_object_get_integer(obj, "End"  ),
 	         json_object_get_boolean(obj, "Loop" ),
 	         json_object_get_real   (obj, "Rate" ));
+}
+
+
+
+/***********************************************************************
+     * Model
+     * setScale
+
+***********************************************************************/
+void ach::Model::setScale(float _scale)
+{
+	scale = sf::Vector2f(_scale, _scale);
+}
+
+
+
+/***********************************************************************
+     * Model
+     * setColor
+
+***********************************************************************/
+void ach::Model::setColor(sf::Color _color)
+{
+	color = _color;
 }

@@ -17,11 +17,16 @@ namespace ach
 
 
 		 Model(ach::DataModel *_base);
+		 Model(ach::DataSheet *_sheet);
 		~Model();
 
 		void update();
 		void render(sf::Vector2f pos);
 
+		void init(ach::Sheet *_sheet);
+
+		void setColor(sf::Color _color);
+		void setScale(float _scale);
 		void setAnimation(const char *name);
 	};
 }

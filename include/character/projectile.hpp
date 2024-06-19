@@ -7,11 +7,8 @@ namespace ach
 	struct Projectile
 	{
 		ach::DataProjectile *base;
-		ach::Sheet          *sheet;
-		ach::Animation       anim;
+		ach::Model          *model;
 		ach::Phys            phys;
-
-		sf::Vector2f         scale;
 
 		bool alive;
 
