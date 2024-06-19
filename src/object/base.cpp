@@ -6,9 +6,12 @@
      * constructor
 
 ***********************************************************************/
-ach::MapObject::MapObject()
+ach::MapObject::MapObject(json_t *obj)
 {
+	model = NULL;
 	alive = true;
+
+	phys.init(vector_json_rect(obj));
 }
 
 
@@ -20,6 +23,8 @@ ach::MapObject::MapObject()
 ***********************************************************************/
 ach::MapObject::~MapObject()
 {
+	if (model)
+		delete model;
 }
 
 
@@ -31,6 +36,9 @@ ach::MapObject::~MapObject()
 ***********************************************************************/
 bool ach::MapObject::update()
 {
+	if (model)
+		model->update();
+
 	return alive;
 }
 
@@ -43,4 +51,6 @@ bool ach::MapObject::update()
 ***********************************************************************/
 void ach::MapObject::render()
 {
+	if (model)
+		model->render(phys.pos);
 }

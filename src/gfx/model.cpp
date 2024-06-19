@@ -79,8 +79,9 @@ void ach::Model::render(sf::Vector2f pos)
 void ach::Model::init(ach::Sheet *_sheet)
 {
 	sheet = _sheet;
-	color = sf::Color::White;
-	scale = sf::Vector2f(1.0f, 1.0f);
+
+	setColor(sf::Color::White);
+	setScale(1.0f);
 
 	anim.init(sheet->spr.size());
 }

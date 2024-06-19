@@ -46,6 +46,17 @@ sf::Vector2f vector_create(float a)
 
 
 /***********************************************************************
+     * vector_center
+
+***********************************************************************/
+sf::Vector2f vector_center(sf::FloatRect r)
+{
+	return sf::Vector2f(r.left + r.width / 2.0f, r.top + r.height / 2.0f);
+}
+
+
+
+/***********************************************************************
      * vector_norm
 
 ***********************************************************************/
@@ -97,4 +108,18 @@ sf::Vector2f vector_json_coord(json_t *j)
 {
 	return sf::Vector2f(json_object_get_real(j, "x"),
 	                    json_object_get_real(j, "y"));
+}
+
+
+
+/***********************************************************************
+     * vector_json_rect
+
+***********************************************************************/
+sf::FloatRect vector_json_rect(json_t *j)
+{
+	return sf::FloatRect(json_object_get_real(j, "x"     ),
+	                     json_object_get_real(j, "y"     ),
+	                     json_object_get_real(j, "width" ),
+	                     json_object_get_real(j, "height"));
 }

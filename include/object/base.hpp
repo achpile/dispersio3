@@ -6,10 +6,13 @@ namespace ach
 {
 	struct MapObject
 	{
+		ach::Model *model;
+		ach::Phys   phys;
+
 		bool alive;
 
 
-		 MapObject();
+		 MapObject(json_t *obj);
 		~MapObject();
 
 		bool update();

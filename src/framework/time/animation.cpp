@@ -69,6 +69,8 @@ void ach::Animation::reset()
 void ach::Animation::init(int _frames)
 {
 	frames = _frames;
+
+	set(0, -1, true, 0.1f);
 }
 
 
