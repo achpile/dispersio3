@@ -44,6 +44,13 @@
             "type": "string"
         }
     },
+    "Hold": {
+        "@attr": {
+            "default": "R-SHIFT",
+            "maxlen": 12,
+            "type": "string"
+        }
+    },
     "Up": {
         "@attr": {
             "default": "W",

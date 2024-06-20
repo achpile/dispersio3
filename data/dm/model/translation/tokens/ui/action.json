@@ -38,6 +38,12 @@
             "type": "string"
         }
     },
+    "Hold": {
+        "@attr": {
+            "default": "Hold",
+            "type": "string"
+        }
+    },
     "Up": {
         "@attr": {
             "default": "Up",
