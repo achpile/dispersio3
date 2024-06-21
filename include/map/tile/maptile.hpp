@@ -1,5 +1,5 @@
-#ifndef __MAP_MAPTILE
-#define __MAP_MAPTILE
+#ifndef __MAP_TILE_MAPTILE
+#define __MAP_TILE_MAPTILE
 
 
 namespace ach

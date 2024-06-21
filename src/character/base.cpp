@@ -9,8 +9,9 @@
 ach::Character::Character(ach::ProcessWorld *_world, sf::Vector2f size)
 {
 	world  = _world;
-	dead   = false;
+	body   = new ach::Body();
 	weapon = new ach::Weapon(world, db->getWeapon("Rifle"));
+	dead   = false;
 
 	phys.init(size);
 }
@@ -24,6 +25,7 @@ ach::Character::Character(ach::ProcessWorld *_world, sf::Vector2f size)
 ***********************************************************************/
 ach::Character::~Character()
 {
+	delete body;
 	delete weapon;
 
 	listDelete(models);

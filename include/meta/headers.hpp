@@ -119,17 +119,21 @@
 #include "container/background.hpp"
 #include "container/language.hpp"
 
-#include "character/projectile.hpp"
-#include "character/weapon.hpp"
+#include "character/body/base.hpp"
+
+#include "character/weapon/projectile.hpp"
+#include "character/weapon/base.hpp"
+
 #include "character/base.hpp"
 
-#include "object/base.hpp"
-#include "object/decor.hpp"
+#include "map/object/base.hpp"
+#include "map/object/decor.hpp"
 
-#include "map/tile.hpp"
-#include "map/tileset.hpp"
-#include "map/maptile.hpp"
-#include "map/pair.hpp"
+#include "map/tile/base.hpp"
+#include "map/tile/tileset.hpp"
+#include "map/tile/maptile.hpp"
+#include "map/tile/pair.hpp"
+
 #include "map/base.hpp"
 
 #include "player/camera.hpp"

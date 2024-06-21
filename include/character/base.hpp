@@ -9,6 +9,7 @@ namespace ach
 		std::vector<ach::Model*> models;
 
 		ach::ProcessWorld *world;
+		ach::Body         *body;
 		ach::Weapon       *weapon;
 		ach::Phys          phys;
 		sf::Vector2f       aim;

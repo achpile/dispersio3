@@ -1,5 +1,5 @@
-#ifndef __OBJECT_DECOR
-#define __OBJECT_DECOR
+#ifndef __MAP_OBJECT_DECOR
+#define __MAP_OBJECT_DECOR
 
 
 namespace ach

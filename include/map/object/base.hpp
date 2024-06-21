@@ -1,5 +1,5 @@
-#ifndef __OBJECT_BASE
-#define __OBJECT_BASE
+#ifndef __MAP_OBJECT_BASE
+#define __MAP_OBJECT_BASE
 
 
 namespace ach

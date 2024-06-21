@@ -1,5 +1,5 @@
-#ifndef __MAP_TILESET
-#define __MAP_TILESET
+#ifndef __MAP_TILE_TILESET
+#define __MAP_TILE_TILESET
 
 
 namespace ach
