@@ -42,7 +42,7 @@ LDFLAGS     = -static-libstdc++ \
 CFLAGS      = -Wall            \
               -Wextra          \
               -Werror          \
-              -std=c++11       \
+              -std=c++17       \
               -I$(INCLUDE_DIR)
 
 
