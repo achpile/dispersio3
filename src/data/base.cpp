@@ -23,6 +23,8 @@ ach::Database::~Database()
 	listDelete(model);
 	listDelete(projectile);
 	listDelete(weapon);
+	listDelete(body);
+	listDelete(character);
 }
 
 
@@ -56,4 +58,6 @@ void ach::Database::load()
 	loadContent<ach::DataModel     >("Model"     , &model     );
 	loadContent<ach::DataProjectile>("Projectile", &projectile);
 	loadContent<ach::DataWeapon    >("Weapon"    , &weapon    );
+	loadContent<ach::DataBody      >("Body"      , &body      );
+	loadContent<ach::DataCharacter >("Character" , &character );
 }

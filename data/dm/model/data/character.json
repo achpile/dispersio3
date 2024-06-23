@@ -71,18 +71,18 @@
         },
         "Jump": {
             "@attr": {
-                "default": 320,
-                "max": 1000,
-                "min": 0,
-                "type": "integer"
+                "default": 320.0,
+                "max": 1000.0,
+                "min": 0.0,
+                "type": "real"
             }
         },
         "Speed": {
             "@attr": {
-                "default": 100,
-                "max": 1000,
-                "min": 0,
-                "type": "integer"
+                "default": 100.0,
+                "max": 1000.0,
+                "min": 0.0,
+                "type": "real"
             }
         }
     },

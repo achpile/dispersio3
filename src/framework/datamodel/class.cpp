@@ -40,7 +40,6 @@ void json_dm_class_check_object(json_t *obj, json_t *cls)
 	json_array_foreach(json_object_get(cls, "Objects"), i, j)
 	{
 		key = json_string_value(j);
-logger->log(ach::LogLevel::llError, "Check for \"%s\" in \"%s\"", key, list);
 		if (!json_object_get(multi, key))
 		{
 			logger->log(ach::LogLevel::llError, "Object missing \"%s\" in \"%s\"", key, list);

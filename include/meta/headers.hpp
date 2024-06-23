@@ -112,6 +112,8 @@
 #include "data/model.hpp"
 #include "data/projectile.hpp"
 #include "data/weapon.hpp"
+#include "data/body.hpp"
+#include "data/character.hpp"
 #include "data/base.hpp"
 
 #include "gfx/model.hpp"
@@ -121,6 +123,7 @@
 #include "container/background.hpp"
 #include "container/language.hpp"
 
+#include "character/body/pair.hpp"
 #include "character/body/base.hpp"
 
 #include "character/weapon/projectile.hpp"
