@@ -1,0 +1,9 @@
+{
+    "BodyNone": {
+        "List": "Parts",
+        "Objects": [],
+        "Param": "Type",
+        "Path": "Data.Body",
+        "Value": "none"
+    }
+}

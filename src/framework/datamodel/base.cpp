@@ -8,8 +8,9 @@
 ***********************************************************************/
 ach::Datamodel::Datamodel()
 {
-	traits = json_preprocess_dir("traits", "data/dm", true);
-	dm     = json_preprocess_include("main.json", "data/dm/model");
+	traits  = json_preprocess_dir("trait", "data/dm", true);
+	classes = json_preprocess_dir("class", "data/dm", true);
+	dm      = json_preprocess_include("main.json", "data/dm/model");
 
 	json_dm_trait_process(dm, traits);
 
@@ -27,6 +28,7 @@ ach::Datamodel::~Datamodel()
 {
 	json_decref(data);
 	json_decref(traits);
+	json_decref(classes);
 	json_decref(dm);
 }
 

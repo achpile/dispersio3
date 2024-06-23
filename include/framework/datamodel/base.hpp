@@ -9,6 +9,7 @@ namespace ach
 		json_t *dm;
 		json_t *data;
 		json_t *traits;
+		json_t *classes;
 
 
 		 Datamodel();

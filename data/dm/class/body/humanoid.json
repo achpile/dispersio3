@@ -1,0 +1,12 @@
+{
+    "BodyHumanoid": {
+        "List": "Parts",
+        "Objects": [
+            "Body",
+            "Legs"
+        ],
+        "Param": "Type",
+        "Path": "Data.Body",
+        "Value": "humanoid"
+    }
+}
