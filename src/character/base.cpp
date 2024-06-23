@@ -6,14 +6,17 @@
      * constructor
 
 ***********************************************************************/
-ach::Character::Character(ach::ProcessWorld *_world, sf::Vector2f size)
+ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 {
-	world  = _world;
-	body   = new ach::Body();
-	weapon = new ach::Weapon(world, db->getWeapon("Rifle"));
-	dead   = false;
+	world   = _world;
+	base    = _base;
+	body    = new ach::Body();
+	weapon  = new ach::Weapon(world, base->weapon);
+	dead    = false;
+	speed   = base->speed;
+	jumping = base->jumping;
 
-	phys.init(size);
+	phys.init(base->hitbox);
 }
 
 
@@ -104,6 +107,8 @@ void ach::Character::jump()
 		return;
 
 	phys.vel.y = -jumping;
+
+	sm->play(base->sndJump);
 }
 
 

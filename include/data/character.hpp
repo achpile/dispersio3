@@ -18,7 +18,7 @@ namespace ach
 		sf::SoundBuffer *sndLand;
 
 		float speed;
-		float jump;
+		float jumping;
 
 
 		 DataCharacter(json_t *obj);

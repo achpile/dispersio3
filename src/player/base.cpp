@@ -8,16 +8,13 @@
 ***********************************************************************/
 ach::Player::Player(ach::ProcessWorld *world)
 {
-	character = new ach::Character(world, sf::Vector2f(16.0f, 16.0f));
+	character = new ach::Character(world, db->getCharacter("Player"));
 
 	legs = new ach::Model(db->getModel("PlayerLegs"));
 	body = new ach::Model(db->getModel("PlayerBody"));
 
 	character->models.push_back(legs);
 	character->models.push_back(body);
-
-	character->speed   = 100.0f;
-	character->jumping = 320.0f;
 }
 
 

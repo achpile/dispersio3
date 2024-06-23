@@ -8,14 +8,14 @@
 ***********************************************************************/
 ach::DataCharacter::DataCharacter(json_t *obj)
 {
-	body   = db->getBody  (json_object_get_string(obj, "Body"  ));
-	weapon = db->getWeapon(json_object_get_string(obj, "Weapon"));
+	body    = db->getBody  (json_object_get_string(obj, "Body"  ));
+	weapon  = db->getWeapon(json_object_get_string(obj, "Weapon"));
 
-	hitbox = vector_json_coord(json_object_get(obj, "Hitbox"), "X", "Y");
-	color  = str_to_color(json_object_get_string(obj, "Color"));
+	hitbox  = vector_json_coord(json_object_get(obj, "Hitbox"), "X", "Y");
+	color   = str_to_color(json_object_get_string(obj, "Color"));
 
-	speed  = json_object_get_branch_real(obj, "Stats.Speed");
-	jump   = json_object_get_branch_real(obj, "Stats.Jump" );
+	speed   = json_object_get_branch_real(obj, "Stats.Speed");
+	jumping = json_object_get_branch_real(obj, "Stats.Jump" );
 
 	sfml_load_sound(&sndHurt, json_object_get_branch_string(obj, "Sound.Hurt"));
 	sfml_load_sound(&sndDie , json_object_get_branch_string(obj, "Sound.Die" ));
