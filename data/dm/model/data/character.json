@@ -1,0 +1,83 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Hitbox": {
+        "@attr": {
+            "type": "object"
+        },
+        "X": {
+            "@attr": {
+                "default": 16,
+                "max": 1000,
+                "min": 1,
+                "type": "integer"
+            }
+        },
+        "Y": {
+            "@attr": {
+                "default": 16,
+                "max": 1000,
+                "min": 1,
+                "type": "integer"
+            }
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "type": "object"
+        },
+        "Die": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Hurt": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Jump": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Land": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        }
+    },
+    "Stats": {
+        "@attr": {
+            "type": "object"
+        },
+        "Jump": {
+            "@attr": {
+                "default": 320,
+                "max": 1000,
+                "min": 0,
+                "type": "integer"
+            }
+        },
+        "Speed": {
+            "@attr": {
+                "default": 100,
+                "max": 1000,
+                "min": 0,
+                "type": "integer"
+            }
+        }
+    },
+    "Weapon": {
+        "@attr": {
+            "data": "Data.Weapon",
+            "default": "Rifle",
+            "type": "link"
+        }
+    }
+}

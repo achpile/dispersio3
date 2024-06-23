@@ -8,6 +8,12 @@
             "type": "string"
         }
     },
+    "Hold": {
+        "@attr": {
+            "default": "Hold",
+            "type": "string"
+        }
+    },
     "Jump": {
         "@attr": {
             "default": "Jump",
@@ -35,12 +41,6 @@
     "Shot": {
         "@attr": {
             "default": "Shot",
-            "type": "string"
-        }
-    },
-    "Hold": {
-        "@attr": {
-            "default": "Hold",
             "type": "string"
         }
     },

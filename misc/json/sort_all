@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find ./ -name "*.json" | while read FILE; do ./misc/json/sort $FILE; done
