@@ -10,7 +10,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 {
 	world   = _world;
 	base    = _base;
-	body    = new ach::Body();
+	body    = ach::Body::create(this, base->body);
 	weapon  = new ach::Weapon(world, base->weapon);
 	dead    = false;
 	speed   = base->speed;
