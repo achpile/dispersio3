@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Body": "@include data/body.json",
     "Character": "@include data/character.json",
     "Model": "@include data/model.json",
     "Projectile": "@include data/projectile.json",

@@ -1,5 +1,6 @@
 {
     "Player": {
+        "Body": "Player",
         "Sound": {
             "Die": "sfx/character/player/die.wav",
             "Hurt": "sfx/character/player/hurt.wav",

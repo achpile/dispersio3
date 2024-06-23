@@ -1,0 +1,48 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Parts": {
+        "@attr": {
+            "type": "multi"
+        },
+        "Model": {
+            "@attr": {
+                "data": "Data.Model",
+                "default": "Default",
+                "type": "link"
+            }
+        },
+        "Offset": {
+            "@attr": {
+                "type": "object"
+            },
+            "X": {
+                "@attr": {
+                    "default": 0.0,
+                    "max": 1000.0,
+                    "min": -1000.0,
+                    "type": "real"
+                }
+            },
+            "Y": {
+                "@attr": {
+                    "default": 0.0,
+                    "max": 1000.0,
+                    "min": -1000.0,
+                    "type": "real"
+                }
+            }
+        }
+    },
+    "Type": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "humanoid"
+            ],
+            "type": "enum"
+        }
+    }
+}

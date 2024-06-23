@@ -1,4 +1,5 @@
 {
+    "Body": "@recursive data/body",
     "Character": "@recursive data/character",
     "Model": "@recursive data/model",
     "Projectile": "@recursive data/projectile",

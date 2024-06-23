@@ -2,6 +2,19 @@
     "@attr": {
         "type": "multi"
     },
+    "Body": {
+        "@attr": {
+            "data": "Data.Body",
+            "default": "None",
+            "type": "link"
+        }
+    },
+    "Color": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    },
     "Hitbox": {
         "@attr": {
             "type": "object"
