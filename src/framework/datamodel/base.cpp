@@ -61,6 +61,7 @@ void ach::Datamodel::loadPath(const char *path)
 
 	json_dm_check_datatypes(pack, dm, path);
 	json_merge(data, pack);
+	json_dm_check_classes(data, classes);
 	json_dm_check_links(data, data, dm);
 	json_dm_generate_default(data, dm);
 

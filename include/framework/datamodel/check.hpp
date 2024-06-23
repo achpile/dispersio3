@@ -4,5 +4,6 @@
 
 void json_dm_check_datatypes(json_t *obj, json_t *dm, const char *path);
 void json_dm_check_links(json_t *data, json_t *obj, json_t *dm);
+void json_dm_check_classes(json_t *data, json_t *classes);
 
 #endif

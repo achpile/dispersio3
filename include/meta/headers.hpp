@@ -50,6 +50,7 @@
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
 
+#include "framework/json/array.hpp"
 #include "framework/json/branch.hpp"
 #include "framework/json/property.hpp"
 #include "framework/json/merge.hpp"
@@ -59,6 +60,7 @@
 #include "framework/datamodel/attr.hpp"
 #include "framework/datamodel/pair.hpp"
 #include "framework/datamodel/trait.hpp"
+#include "framework/datamodel/class.hpp"
 #include "framework/datamodel/type.hpp"
 #include "framework/datamodel/check.hpp"
 #include "framework/datamodel/default.hpp"

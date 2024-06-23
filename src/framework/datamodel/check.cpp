@@ -78,3 +78,18 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 		}
 	}
 }
+
+
+
+/***********************************************************************
+     * json_dm_check_classes
+
+***********************************************************************/
+void json_dm_check_classes(json_t *data, json_t *classes)
+{
+	json_t     *cls;
+	const char *key;
+
+	json_object_foreach(classes, key, cls)
+		json_dm_class_check(data, cls);
+}
