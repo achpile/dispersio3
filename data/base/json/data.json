@@ -1,6 +1,6 @@
 {
-    "Model": "@dir data/model",
-    "Projectile": "@dir data/projectile",
-    "Sheet": "@dir data/sheet",
-    "Weapon": "@dir data/weapon"
+    "Model": "@recursive data/model",
+    "Projectile": "@recursive data/projectile",
+    "Sheet": "@recursive data/sheet",
+    "Weapon": "@recursive data/weapon"
 }

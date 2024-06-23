@@ -58,8 +58,9 @@ const char *json_preprocess_argument(const char *str)
 ***********************************************************************/
 json_t *json_preprocess_directive(const char *name, const char *dir)
 {
-	if      (str_check_start(name, DM_DIRECTIVE_INCLUDE)) return json_preprocess_include(json_preprocess_argument(name), dir);
-	else if (str_check_start(name, DM_DIRECTIVE_DIR    )) return json_preprocess_dir    (json_preprocess_argument(name), dir);
+	if      (str_check_start(name, DM_DIRECTIVE_INCLUDE  )) return json_preprocess_include(json_preprocess_argument(name), dir);
+	else if (str_check_start(name, DM_DIRECTIVE_DIR      )) return json_preprocess_dir    (json_preprocess_argument(name), dir, false);
+	else if (str_check_start(name, DM_DIRECTIVE_RECURSIVE)) return json_preprocess_dir    (json_preprocess_argument(name), dir, true );
 
 	else
 		logger->log(ach::LogLevel::llError, "Unknown directive \"%s\"", name);
@@ -117,7 +118,7 @@ json_t *json_preprocess_include(const char *name, const char *dir)
      * json_preprocess_dir
 
 ***********************************************************************/
-json_t *json_preprocess_dir(const char *name, const char *dir)
+json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 {
 	char path[STR_LEN_PATH];
 	json_t *res;
@@ -134,13 +135,19 @@ json_t *json_preprocess_dir(const char *name, const char *dir)
 	obj = json_object();
 
 	fileList(entry, path)
+	{
 		if (fileIsRegular(entry))
 		{
 			res = json_preprocess_include(entry.path().filename().c_str(), path);
-
-			if (res)
-				json_merge(obj, json_preprocess(res, path));
 		}
+		else if (recursive && fileIsDirectory(entry))
+		{
+			res = json_preprocess_dir(entry.path().filename().c_str(), path, true);
+		}
+
+		if (res)
+			json_merge(obj, json_preprocess(res, path));
+	}
 
 	return obj;
 }

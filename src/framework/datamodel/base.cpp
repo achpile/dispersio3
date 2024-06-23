@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Datamodel::Datamodel()
 {
-	traits = json_preprocess_dir("traits", "data/dm");
+	traits = json_preprocess_dir("traits", "data/dm", true);
 	dm     = json_preprocess_include("main.json", "data/dm/model");
 
 	json_dm_trait_process(dm, traits);
