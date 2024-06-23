@@ -11,6 +11,9 @@ namespace ach
 
 		 BodyHumanoid(ach::Character *_owner, ach::DataBody *_base);
 		~BodyHumanoid();
+
+		void animate();
+		void reset();
 	};
 }
 

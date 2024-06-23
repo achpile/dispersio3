@@ -8,11 +8,6 @@ namespace ach
 	{
 		ach::Character *character;
 
-		ach::Model     *body;
-		ach::Model     *legs;
-
-		sf::Vector2i    dir;
-
 
 		 Player(ach::ProcessWorld *world);
 		~Player();
@@ -21,7 +16,6 @@ namespace ach
 		void render();
 
 		void controls();
-		void animate();
 
 		void reset();
 		void respawn(sf::Vector2f spawn);

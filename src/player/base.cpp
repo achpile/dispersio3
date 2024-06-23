@@ -9,12 +9,6 @@
 ach::Player::Player(ach::ProcessWorld *world)
 {
 	character = new ach::Character(world, db->getCharacter("Player"));
-
-	legs = new ach::Model(db->getModel("PlayerLegs"));
-	body = new ach::Model(db->getModel("PlayerBody"));
-
-	character->models.push_back(legs);
-	character->models.push_back(body);
 }
 
 
@@ -26,6 +20,7 @@ ach::Player::Player(ach::ProcessWorld *world)
 ***********************************************************************/
 ach::Player::~Player()
 {
+	delete character;
 }
 
 
@@ -37,7 +32,6 @@ ach::Player::~Player()
 ***********************************************************************/
 void ach::Player::update()
 {
-	animate();
 	character->update();
 }
 
@@ -67,7 +61,7 @@ void ach::Player::controls()
 
 	character->aim = sf::Vector2f(0.0f, 0.0f);
 
-	dir.y = 0;
+	character->dir.y = 0;
 
 	character->phys.vel.x  = 0.0f;
 	character->phys.moving = false;
@@ -81,60 +75,14 @@ void ach::Player::controls()
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) character->jump();
 	if (ctrl->keys[ach::ControlAction::caShot ].state  ) character->shot();
 
-	if (ctrl->keys[ach::ControlAction::caUp  ].state) dir.y = -1;
-	if (ctrl->keys[ach::ControlAction::caDown].state) dir.y =  1;
+	if (ctrl->keys[ach::ControlAction::caUp  ].state) character->dir.y = -1;
+	if (ctrl->keys[ach::ControlAction::caDown].state) character->dir.y =  1;
 
 
-	character->aim = sf::Vector2f(dir);
+	character->aim = sf::Vector2f(character->dir);
 
-	if (dir.y == -1 && !character->phys.moving)
+	if (character->dir.y == -1 && !character->phys.moving)
 		character->aim.x = 0.0f;
-}
-
-
-
-/***********************************************************************
-     * Player
-     * animate
-
-***********************************************************************/
-void ach::Player::animate()
-{
-	if (character->phys.grounded)
-	{
-		if (character->phys.moving)
-			legs->setAnimation("Walk");
-		else
-			legs->setAnimation("Idle");
-	}
-	else
-	{
-		if (character->phys.vel.y > 0.0f)
-			legs->setAnimation("Fall");
-		else
-			legs->setAnimation("Jump");
-	}
-
-
-	if (dir.y == 0)
-	{
-		body->setAnimation("Front");
-	}
-	else if (dir.y == 1)
-	{
-		body->setAnimation("DiagonalDown");
-	}
-	else
-	{
-		if (character->phys.moving)
-			body->setAnimation("DiagonalUp");
-		else
-			body->setAnimation("Up");
-	}
-
-
-	legs->scale.x = dir.x;
-	body->scale.x = dir.x;
 }
 
 
@@ -146,11 +94,6 @@ void ach::Player::animate()
 ***********************************************************************/
 void ach::Player::reset()
 {
-	legs->setAnimation("Idle");
-	body->setAnimation("Front");
-
-	dir = sf::Vector2i(1, 0);
-
 	character->reset();
 }
 
@@ -177,7 +120,5 @@ void ach::Player::respawn(sf::Vector2f spawn)
 ***********************************************************************/
 void ach::Player::move(int d)
 {
-	dir.x = d;
-
 	character->move(d);
 }

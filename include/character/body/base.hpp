@@ -10,9 +10,14 @@ namespace ach
 		ach::Character             *owner;
 
 
-		 Body(ach::Character *_owner, ach::DataBody *_base);
-		~Body();
+		         Body(ach::Character *_owner, ach::DataBody *_base);
+		virtual ~Body();
 
+		void update();
+		void render();
+
+		virtual void animate() {};
+		virtual void reset()   {};
 
 		static ach::Body *create(ach::Character *_owner, ach::DataBody *_base);
 	};

@@ -46,8 +46,8 @@ void ach::Character::update()
 	weapon->aim(phys.pos, aim);
 	weapon->update();
 
-	for (unsigned int i = 0; i < models.size(); i++)
-		models[i]->update();
+	body->animate();
+	body->update();
 }
 
 
@@ -59,8 +59,7 @@ void ach::Character::update()
 ***********************************************************************/
 void ach::Character::render()
 {
-	for (unsigned int i = 0; i < models.size(); i++)
-		models[i]->render(phys.pos);
+	body->render();
 }
 
 
@@ -73,6 +72,9 @@ void ach::Character::render()
 void ach::Character::reset()
 {
 	aim = sf::Vector2f(1.0f, 0.0f);
+	dir = sf::Vector2i(1, 0);
+
+	body->reset();
 
 	phys.reset();
 	phys.acc.y = PHYS_GRAVITY;
@@ -87,6 +89,8 @@ void ach::Character::reset()
 ***********************************************************************/
 void ach::Character::move(int d)
 {
+	dir.x = d; // TODO: to AI
+
 	phys.moving = true;
 	phys.vel.x  = speed * d;
 }

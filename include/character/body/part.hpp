@@ -12,6 +12,11 @@ namespace ach
 
 		 BodyPart(json_t *obj);
 		~BodyPart();
+
+		bool update();
+		void render(sf::Vector2f pos);
+
+		void setAnimation(const char *name);
 	};
 }
 

@@ -14,6 +14,7 @@ namespace ach
 		ach::Weapon        *weapon;
 		ach::Phys           phys;
 
+		sf::Vector2i        dir;
 		sf::Vector2f        aim;
 
 		float speed;
