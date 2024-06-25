@@ -16,6 +16,8 @@ namespace ach
 		void update();
 		void render();
 
+		void setColor(sf::Color color);
+
 		virtual void animate() {};
 		virtual void reset()   {};
 
