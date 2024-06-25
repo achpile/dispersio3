@@ -56,18 +56,15 @@ void ach::Player::render()
 ***********************************************************************/
 void ach::Player::controls()
 {
+	// TODO : move to character::update
 	if (character->dead)
 		return;
-
-	character->aim = sf::Vector2f(0.0f, 0.0f);
-
-	character->dir.y = 0;
 
 	character->phys.vel.x  = 0.0f;
 	character->phys.moving = false;
 
-	if (ctrl->keys[ach::ControlAction::caLeft ].state) move(-1);
-	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1);
+	if (ctrl->keys[ach::ControlAction::caLeft ].state) move(-1, ctrl->keys[ach::ControlAction::caHold].state);
+	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1, ctrl->keys[ach::ControlAction::caHold].state);
 
 	character->phys.jumpdown = ctrl->keys[ach::ControlAction::caJump].state &&
 	                           ctrl->keys[ach::ControlAction::caDown].state;
@@ -75,26 +72,28 @@ void ach::Player::controls()
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) character->jump();
 	if (ctrl->keys[ach::ControlAction::caShot ].state  ) character->shot();
 
-	if (ctrl->keys[ach::ControlAction::caUp  ].state) character->dir.y = -1;
-	if (ctrl->keys[ach::ControlAction::caDown].state) character->dir.y =  1;
-
-
-	character->aim = sf::Vector2f(character->dir);
-
-	if (character->dir.y == -1 && !character->phys.moving)
-		character->aim.x = 0.0f;
+	aim();
 }
 
 
 
 /***********************************************************************
      * Player
-     * reset
+     * aim
 
 ***********************************************************************/
-void ach::Player::reset()
+void ach::Player::aim()
 {
-	character->reset();
+	character->aim = sf::Vector2f(0.0f, 0.0f);
+
+	if (ctrl->keys[ach::ControlAction::caLeft ].state) character->aim.x = -1.0f;
+	if (ctrl->keys[ach::ControlAction::caRight].state) character->aim.x =  1.0f;
+
+	if (ctrl->keys[ach::ControlAction::caUp  ].state) character->aim.y = -1.0f;
+	if (ctrl->keys[ach::ControlAction::caDown].state) character->aim.y =  1.0f;
+
+	if (character->aim.y >= 0)
+		character->aim.x = character->dir.x;
 }
 
 
@@ -106,9 +105,7 @@ void ach::Player::reset()
 ***********************************************************************/
 void ach::Player::respawn(sf::Vector2f spawn)
 {
-	character->phys.pos = spawn;
-
-	reset();
+	character->respawn(spawn);
 }
 
 
@@ -118,7 +115,10 @@ void ach::Player::respawn(sf::Vector2f spawn)
      * move
 
 ***********************************************************************/
-void ach::Player::move(int d)
+void ach::Player::move(int d, bool hold)
 {
-	character->move(d);
+	character->dir.x = d;
+
+	if (!hold)
+		character->move(d);
 }

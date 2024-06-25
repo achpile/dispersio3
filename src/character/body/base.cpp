@@ -35,6 +35,7 @@ void ach::Body::update()
 {
 	aim();
 	animate();
+	flip();
 
 	listUpdate(parts);
 }

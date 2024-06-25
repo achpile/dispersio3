@@ -63,23 +63,32 @@ void ach::BodyHumanoid::animate()
 	}
 
 
-	if (owner->dir.y == 0)
+	if (owner->aim.y == 0.0f)
 	{
 		body->setAnimation("Front");
 	}
-	else if (owner->dir.y == 1)
+	else if (owner->aim.y > 0.0f)
 	{
 		body->setAnimation("DiagonalDown");
 	}
 	else
 	{
-		if (owner->phys.moving)
-			body->setAnimation("DiagonalUp");
-		else
+		if (owner->aim.x == 0.0f)
 			body->setAnimation("Up");
+		else
+			body->setAnimation("DiagonalUp");
 	}
+}
 
 
+
+/***********************************************************************
+     * BodyHumanoid
+     * flip
+
+***********************************************************************/
+void ach::BodyHumanoid::flip()
+{
 	legs->model->scale.x = owner->dir.x;
 	body->model->scale.x = owner->dir.x;
 }

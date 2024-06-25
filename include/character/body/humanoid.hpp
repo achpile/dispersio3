@@ -14,6 +14,7 @@ namespace ach
 
 		void aim();
 		void animate();
+		void flip();
 		void reset();
 	};
 }

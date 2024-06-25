@@ -29,6 +29,7 @@ namespace ach
 		void update();
 		void render();
 
+		void respawn(sf::Vector2f spawn);
 		void reset();
 
 		void move(int d);

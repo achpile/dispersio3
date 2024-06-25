@@ -22,6 +22,7 @@ namespace ach
 
 		virtual void aim()     {};
 		virtual void animate() {};
+		virtual void flip()    {};
 		virtual void reset()   {};
 
 		static ach::Body *create(ach::Character *_owner, ach::DataBody *_base);
