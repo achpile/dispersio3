@@ -13,6 +13,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 	body    = ach::Body::create(this, base->body);
 	weapon  = new ach::Weapon(world, base->weapon);
 	dead    = false;
+	landed  = true;
 	speed   = base->speed;
 	jumping = base->jumping;
 
@@ -48,6 +49,11 @@ void ach::Character::update()
 
 	weapon->aim(phys.pos + body->barrel, aim);
 	weapon->update();
+
+	if (phys.grounded && !landed)
+		sm->play(base->sndLand);
+
+	landed = phys.grounded;
 }
 
 

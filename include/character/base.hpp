@@ -20,6 +20,7 @@ namespace ach
 		float speed;
 		float jumping;
 		bool  dead;
+		bool  landed;
 
 
 		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base);
