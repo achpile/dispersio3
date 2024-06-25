@@ -44,11 +44,10 @@ ach::Character::~Character()
 ***********************************************************************/
 void ach::Character::update()
 {
-	weapon->aim(phys.pos, aim);
-	weapon->update();
-
-	body->animate();
 	body->update();
+
+	weapon->aim(phys.pos + body->barrel, aim);
+	weapon->update();
 }
 
 

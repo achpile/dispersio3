@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Body::Body(ach::Character *_owner, ach::DataBody*)
 {
-	owner = _owner;
+	owner  = _owner;
+	barrel = sf::Vector2f(0.0f, 0.0f);
 }
 
 
@@ -32,6 +33,9 @@ ach::Body::~Body()
 ***********************************************************************/
 void ach::Body::update()
 {
+	aim();
+	animate();
+
 	listUpdate(parts);
 }
 

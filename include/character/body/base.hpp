@@ -9,6 +9,8 @@ namespace ach
 		std::vector<ach::BodyPart*> parts;
 		ach::Character             *owner;
 
+		sf::Vector2f barrel;
+
 
 		         Body(ach::Character *_owner, ach::DataBody *_base);
 		virtual ~Body();
@@ -18,6 +20,7 @@ namespace ach
 
 		void setColor(sf::Color color);
 
+		virtual void aim()     {};
 		virtual void animate() {};
 		virtual void reset()   {};
 

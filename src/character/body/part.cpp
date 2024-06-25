@@ -47,7 +47,7 @@ bool ach::BodyPart::update()
 ***********************************************************************/
 void ach::BodyPart::render(sf::Vector2f pos)
 {
-	model->render(offset + pos);
+	model->render(vector_mult(offset, model->scale) + pos);
 }
 
 

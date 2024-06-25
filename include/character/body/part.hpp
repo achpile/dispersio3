@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::Model   *model;
 		sf::Vector2f  offset;
+		sf::Vector2i  flip;
 
 
 		 BodyPart(json_t *obj);
