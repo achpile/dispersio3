@@ -11,6 +11,7 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	body    = db->getBody  (json_object_get_string(obj, "Body"  ));
 	weapon  = db->getWeapon(json_object_get_string(obj, "Weapon"));
 
+	ai      = (ach::AIType)pair_get_enum(json_object_get_string(obj, "AI"), pairAI);
 	hitbox  = vector_json_coord(json_object_get(obj, "Hitbox"), "X", "Y");
 	color   = str_to_color(json_object_get_string(obj, "Color"));
 

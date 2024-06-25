@@ -10,10 +10,10 @@ ach::ProcessWorld::ProcessWorld()
 {
 	map    = new ach::Map(PATH_BASE "/" "maps/test.tmj");
 	cam    = new ach::Camera();
-	player = new ach::Player(this);
+	player = new ach::Character(this, db->getCharacter("Player"));
 
 	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
-	cam->follow(&player->character->phys);
+	cam->follow(&player->phys);
 
 	player->respawn(map->spawn);
 }
@@ -41,7 +41,7 @@ ach::ProcessWorld::~ProcessWorld()
 ***********************************************************************/
 void ach::ProcessWorld::update()
 {
-	player->controls();
+	player->process();
 
 	collision();
 
@@ -75,5 +75,5 @@ void ach::ProcessWorld::render()
 ***********************************************************************/
 void ach::ProcessWorld::collision()
 {
-	map->collision->collide(&player->character->phys);
+	map->collision->collide(&player->phys);
 }

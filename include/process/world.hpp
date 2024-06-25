@@ -6,9 +6,9 @@ namespace ach
 {
 	struct ProcessWorld : Process
 	{
-		ach::Map    *map;
-		ach::Camera *cam;
-		ach::Player *player;
+		ach::Map       *map;
+		ach::Camera    *cam;
+		ach::Character *player;
 
 
 		 ProcessWorld();

@@ -104,6 +104,7 @@
 #include "framework/collision/base.hpp"
 
 #include "misc/handler.hpp"
+#include "misc/camera.hpp"
 
 #include "particle/stars.hpp"
 
@@ -122,6 +123,10 @@
 #include "container/settings.hpp"
 #include "container/background.hpp"
 #include "container/language.hpp"
+
+#include "character/ai/pair.hpp"
+#include "character/ai/base.hpp"
+#include "character/ai/player.hpp"
 
 #include "character/body/pair.hpp"
 #include "character/body/part.hpp"
@@ -142,9 +147,6 @@
 #include "map/tile/pair.hpp"
 
 #include "map/base.hpp"
-
-#include "player/camera.hpp"
-#include "player/base.hpp"
 
 #include "process/base.hpp"
 #include "process/world.hpp"

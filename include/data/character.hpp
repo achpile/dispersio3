@@ -4,10 +4,18 @@
 
 namespace ach
 {
+	enum AIType
+	{
+		aiIdle = 0,
+		aiPlayer
+	};
+
+
 	struct DataCharacter : DataContent
 	{
 		ach::DataBody   *body;
 		ach::DataWeapon *weapon;
+		ach::AIType      ai;
 
 		sf::Vector2f     hitbox;
 		sf::Color        color;

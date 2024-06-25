@@ -10,6 +10,7 @@ namespace ach
 
 		ach::ProcessWorld  *world;
 		ach::DataCharacter *base;
+		ach::AI            *ai;
 		ach::Body          *body;
 		ach::Weapon        *weapon;
 		ach::Phys           phys;
@@ -28,6 +29,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void process();
 
 		void respawn(sf::Vector2f spawn);
 		void reset();

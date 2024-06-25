@@ -1,5 +1,5 @@
-#ifndef __PLAYER_CAMERA
-#define __PLAYER_CAMERA
+#ifndef __MISC_CAMERA
+#define __MISC_CAMERA
 
 
 namespace ach

@@ -10,6 +10,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 {
 	world   = _world;
 	base    = _base;
+	ai      = ach::AI::create(this, base->ai);
 	body    = ach::Body::create(this, base->body);
 	weapon  = new ach::Weapon(world, base->weapon);
 	dead    = false;
@@ -30,6 +31,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 ***********************************************************************/
 ach::Character::~Character()
 {
+	delete ai;
 	delete body;
 	delete weapon;
 
@@ -45,6 +47,9 @@ ach::Character::~Character()
 ***********************************************************************/
 void ach::Character::update()
 {
+	if (dead)
+		return;
+
 	body->update();
 
 	weapon->aim(phys.pos + body->barrel, aim);
@@ -65,7 +70,25 @@ void ach::Character::update()
 ***********************************************************************/
 void ach::Character::render()
 {
+	if (dead)
+		return;
+
 	body->render();
+}
+
+
+
+/***********************************************************************
+     * Character
+     * process
+
+***********************************************************************/
+void ach::Character::process()
+{
+	if (dead)
+		return;
+
+	ai->update();
 }
 
 
