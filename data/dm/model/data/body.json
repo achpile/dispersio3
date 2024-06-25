@@ -15,23 +15,10 @@
         },
         "Offset": {
             "@attr": {
+                "traits": [
+                    "coord"
+                ],
                 "type": "object"
-            },
-            "X": {
-                "@attr": {
-                    "default": 0.0,
-                    "max": 1000.0,
-                    "min": -1000.0,
-                    "type": "real"
-                }
-            },
-            "Y": {
-                "@attr": {
-                    "default": 0.0,
-                    "max": 1000.0,
-                    "min": -1000.0,
-                    "type": "real"
-                }
             }
         }
     },

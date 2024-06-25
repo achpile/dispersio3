@@ -17,23 +17,10 @@
     },
     "Hitbox": {
         "@attr": {
+            "traits": [
+                "size"
+            ],
             "type": "object"
-        },
-        "X": {
-            "@attr": {
-                "default": 16,
-                "max": 1000,
-                "min": 1,
-                "type": "integer"
-            }
-        },
-        "Y": {
-            "@attr": {
-                "default": 16,
-                "max": 1000,
-                "min": 1,
-                "type": "integer"
-            }
         }
     },
     "Sound": {
