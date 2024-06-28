@@ -129,6 +129,10 @@ void ach::Map::collide()
 {
 	list_foreach(characters)
 		collision->collide(&characters[i]->phys);
+
+	// collide bullets <-> characters
+
+	// collide bullets <-> physlines
 }
 
 
