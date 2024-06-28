@@ -70,13 +70,13 @@ void ach::Collision::collide(ach::Phys *phys)
 ***********************************************************************/
 bool ach::Collision::collideLines(ach::Phys *phys)
 {
-	for (unsigned int i = 0; i < lines.size(); i++)
+	listForeach(lines)
 		lines[i]->check(phys);
 
 	std::sort(lines.begin(), lines.end(), sort);
 
 
-	for (unsigned int i = 0; i < lines.size(); i++)
+	listForeach(lines)
 	{
 		lines[i]->check(phys);
 

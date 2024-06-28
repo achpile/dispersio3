@@ -16,8 +16,6 @@ namespace ach
 
 		void update();
 		void render();
-
-		void collision();
 	};
 }
 

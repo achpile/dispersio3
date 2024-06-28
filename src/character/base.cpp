@@ -45,10 +45,10 @@ ach::Character::~Character()
      * update
 
 ***********************************************************************/
-void ach::Character::update()
+bool ach::Character::update()
 {
 	if (dead)
-		return;
+		return false;
 
 	body->update();
 
@@ -59,6 +59,8 @@ void ach::Character::update()
 		sm->play(base->sndLand);
 
 	landed = phys.grounded;
+
+	return true;
 }
 
 

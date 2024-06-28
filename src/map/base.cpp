@@ -34,6 +34,7 @@ ach::Map::~Map()
 	delete tileset;
 	delete collision;
 
+	listDelete(characters);
 	listDelete(objects);
 	listDelete(projectiles);
 }
@@ -47,6 +48,10 @@ ach::Map::~Map()
 ***********************************************************************/
 void ach::Map::update()
 {
+	process();
+	collide();
+
+	listUpdate(characters);
 	listUpdate(objects);
 	listUpdate(projectiles);
 }
@@ -64,6 +69,7 @@ void ach::Map::render(sf::FloatRect viewport)
 	renderTiles(viewport);
 
 	listRender(objects);
+	listRender(characters);
 	listRender(projectiles);
 }
 
@@ -97,6 +103,32 @@ void ach::Map::renderTiles(sf::FloatRect viewport)
 	for (int x = from.x; x < to.x; x++)
 		for (int y = from.y; y < to.y; y++)
 			tiles[x][y]->render(getTilePos(sf::Vector2i(x, y)));
+}
+
+
+
+/***********************************************************************
+     * Map
+     * process
+
+***********************************************************************/
+void ach::Map::process()
+{
+	listForeach(characters)
+		characters[i]->process();
+}
+
+
+
+/***********************************************************************
+     * Map
+     * collide
+
+***********************************************************************/
+void ach::Map::collide()
+{
+	listForeach(characters)
+		collision->collide(&characters[i]->phys);
 }
 
 

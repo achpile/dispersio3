@@ -74,7 +74,7 @@ void ach::MenuItemList::finalize()
 {
 	index = 0;
 
-	for (unsigned int i = 0; i < options.size(); i++)
+	listForeach(options)
 		if (!strncmp(json_string_value(data), options[i].value, STR_LEN_MENU))
 			index = i;
 }
@@ -90,7 +90,7 @@ void ach::MenuItemList::translate()
 {
 	caption = lang->getv("UI.Menu.%s", name);
 
-	for (unsigned int i = 0; i < options.size(); i++)
+	listForeach(options)
 		if (token)
 			options[i].caption = lang->getv("UI.Options.%s", json_object_get_string(list, options[i].value));
 		else

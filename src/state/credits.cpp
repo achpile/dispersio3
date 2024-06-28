@@ -38,7 +38,7 @@ void ach::StateCredits::update()
 {
 	float offset = tm->frame * CREDITS_SPEED;
 
-	for (unsigned int i = 0; i < lines.size(); i++)
+	listForeach(lines)
 		lines[i]->move(0, -offset);
 
 	if (lines.back()->getGlobalBounds().top < -lines.back()->getGlobalBounds().height)
@@ -58,7 +58,7 @@ void ach::StateCredits::update()
 ***********************************************************************/
 void ach::StateCredits::render()
 {
-	for (unsigned int i = 0; i < lines.size(); i++)
+	listForeach(lines)
 		rm->draw(lines[i], ach::RenderLayer::rlGUI);
 }
 

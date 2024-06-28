@@ -2,6 +2,10 @@
 #define __FRAMEWORK_MISC_LIST
 
 
+#define listForeach(list)                        \
+    for (unsigned int i = 0; i < (list).size(); i++)
+
+
 #define listDelete(list)                         \
     for (; !(list).empty();)                     \
     {                                            \
@@ -28,7 +32,7 @@
 
 
 #define listRender(list)                         \
-    for (unsigned int i = 0; i < (list).size(); (list)[i++]->render())
+    listForeach(list) (list)[i]->render()
 
 
 #endif

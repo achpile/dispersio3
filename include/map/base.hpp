@@ -6,6 +6,7 @@ namespace ach
 {
 	struct Map
 	{
+		std::vector<ach::Character*>  characters;
 		std::vector<ach::MapObject*>  objects;
 		std::vector<ach::Projectile*> projectiles;
 
@@ -25,6 +26,9 @@ namespace ach
 		void render(sf::FloatRect viewport);
 
 		void renderTiles(sf::FloatRect viewport);
+
+		void process();
+		void collide();
 
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);

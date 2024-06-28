@@ -4,6 +4,6 @@
         "Sound": {
             "Shot": "sfx/weapon/rifle_shot.wav"
         },
-        "Speed": 700
+        "Speed": 200
     }
 }

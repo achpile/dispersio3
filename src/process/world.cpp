@@ -16,6 +16,8 @@ ach::ProcessWorld::ProcessWorld()
 	cam->follow(&player->phys);
 
 	player->respawn(map->spawn);
+
+	map->characters.push_back(player);
 }
 
 
@@ -29,7 +31,6 @@ ach::ProcessWorld::~ProcessWorld()
 {
 	delete map;
 	delete cam;
-	delete player;
 }
 
 
@@ -41,13 +42,8 @@ ach::ProcessWorld::~ProcessWorld()
 ***********************************************************************/
 void ach::ProcessWorld::update()
 {
-	player->process();
-
-	collision();
-
-	player->update();
-	cam->update();
 	map->update();
+	cam->update();
 
 	render();
 }
@@ -62,18 +58,4 @@ void ach::ProcessWorld::update()
 void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
-
-	player->render();
-}
-
-
-
-/***********************************************************************
-     * ProcessWorld
-     * collision
-
-***********************************************************************/
-void ach::ProcessWorld::collision()
-{
-	map->collision->collide(&player->phys);
 }

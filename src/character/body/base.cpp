@@ -49,7 +49,7 @@ void ach::Body::update()
 ***********************************************************************/
 void ach::Body::setColor(sf::Color color)
 {
-	for (unsigned int i = 0; i < parts.size(); i++)
+	listForeach(parts)
 		parts[i]->model->color = color;
 }
 
@@ -62,7 +62,7 @@ void ach::Body::setColor(sf::Color color)
 ***********************************************************************/
 void ach::Body::render()
 {
-	for (unsigned int i = 0; i < parts.size(); i++)
+	listForeach(parts)
 		parts[i]->render(owner->phys.pos);
 }
 

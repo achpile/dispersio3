@@ -27,7 +27,7 @@ namespace ach
 		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base);
 		~Character();
 
-		void update();
+		bool update();
 		void render();
 
 		void process();
