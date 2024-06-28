@@ -24,7 +24,7 @@ ach::ParticleSystem::~ParticleSystem()
 {
 	delete spr;
 
-	listDelete(particles);
+	list_delete(particles);
 }
 
 

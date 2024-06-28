@@ -89,7 +89,7 @@ json_t *json_preprocess_include(const char *name, const char *dir)
 
 	logger->log(ach::LogLevel::llInfo, "Loading file: \"%s\"", path);
 
-	if (!fileExists(path))
+	if (!file_exists(path))
 	{
 		logger->log(ach::LogLevel::llError, "File not found: \"%s\"", path);
 		return NULL;
@@ -126,7 +126,7 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 
 	snprintf(path, STR_LEN_PATH, "%s/%s", dir, name);
 
-	if (!fileExists(path))
+	if (!file_exists(path))
 	{
 		logger->log(ach::LogLevel::llError, "Directory not found: \"%s\"", path);
 		return NULL;
@@ -134,13 +134,13 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 
 	obj = json_object();
 
-	fileList(entry, path)
+	file_list(entry, path)
 	{
-		if (fileIsRegular(entry))
+		if (file_is_regular(entry))
 		{
 			res = json_preprocess_include(entry.path().filename().c_str(), path);
 		}
-		else if (recursive && fileIsDirectory(entry))
+		else if (recursive && file_is_directory(entry))
 		{
 			res = json_preprocess_dir(entry.path().filename().c_str(), path, true);
 		}

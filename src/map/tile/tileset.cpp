@@ -19,7 +19,7 @@ ach::Tileset::Tileset()
 ***********************************************************************/
 ach::Tileset::~Tileset()
 {
-	listDelete(tiles);
+	list_delete(tiles);
 }
 
 
@@ -56,7 +56,7 @@ ach::Tile* ach::Tileset::get(unsigned int id)
 	if (!id)
 		return NULL;
 
-	listForeach(tiles)
+	list_foreach(tiles)
 		if (tiles[i]->id == id)
 			return tiles[i];
 

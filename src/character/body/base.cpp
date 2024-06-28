@@ -21,7 +21,7 @@ ach::Body::Body(ach::Character *_owner, ach::DataBody*)
 ***********************************************************************/
 ach::Body::~Body()
 {
-	listDelete(parts);
+	list_delete(parts);
 }
 
 
@@ -37,7 +37,7 @@ void ach::Body::update()
 	animate();
 	flip();
 
-	listUpdate(parts);
+	list_update(parts);
 }
 
 
@@ -49,7 +49,7 @@ void ach::Body::update()
 ***********************************************************************/
 void ach::Body::setColor(sf::Color color)
 {
-	listForeach(parts)
+	list_foreach(parts)
 		parts[i]->model->color = color;
 }
 
@@ -62,7 +62,7 @@ void ach::Body::setColor(sf::Color color)
 ***********************************************************************/
 void ach::Body::render()
 {
-	listForeach(parts)
+	list_foreach(parts)
 		parts[i]->render(owner->phys.pos);
 }
 

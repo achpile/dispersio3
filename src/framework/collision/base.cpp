@@ -19,7 +19,7 @@ ach::Collision::Collision()
 ***********************************************************************/
 ach::Collision::~Collision()
 {
-	listDelete(lines);
+	list_delete(lines);
 }
 
 
@@ -70,13 +70,13 @@ void ach::Collision::collide(ach::Phys *phys)
 ***********************************************************************/
 bool ach::Collision::collideLines(ach::Phys *phys)
 {
-	listForeach(lines)
+	list_foreach(lines)
 		lines[i]->check(phys);
 
 	std::sort(lines.begin(), lines.end(), sort);
 
 
-	listForeach(lines)
+	list_foreach(lines)
 	{
 		lines[i]->check(phys);
 

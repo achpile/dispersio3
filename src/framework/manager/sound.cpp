@@ -23,7 +23,7 @@ ach::SoundManager::SoundManager()
 ***********************************************************************/
 ach::SoundManager::~SoundManager()
 {
-	listDelete(sound);
+	list_delete(sound);
 
 	delete track;
 }

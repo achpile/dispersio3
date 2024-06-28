@@ -49,7 +49,7 @@ ach::Menu::~Menu()
 	delete text;
 	delete box;
 
-	listDelete(items);
+	list_delete(items);
 }
 
 
@@ -75,7 +75,7 @@ void ach::Menu::render()
 {
 	rm->draw(box, ach::RenderLayer::rlGUI);
 
-	listForeach(current->items)
+	list_foreach(current->items)
 	{
 		printItem(current->items[i]->caption, i);
 		current->items[i]->render(i);
@@ -157,7 +157,7 @@ void ach::Menu::add(const char *_parent, ach::MenuItem *item)
 
 	ach::MenuItem *parent = NULL;
 
-	listForeach(items)
+	list_foreach(items)
 		if (!strncmp(_parent, items[i]->name, STR_LEN_MENU))
 		{
 			parent = items[i];
@@ -183,7 +183,7 @@ void ach::Menu::go(ach::MenuItemFolder *parent, ach::MenuItem *item)
 	if (!item)
 		return;
 
-	listForeach(current->items)
+	list_foreach(current->items)
 		if (current->items[i] == item)
 			index = i;
 }
@@ -288,7 +288,7 @@ void ach::Menu::reset()
 ***********************************************************************/
 void ach::Menu::finalize()
 {
-	listForeach(items)
+	list_foreach(items)
 		items[i]->finalize();
 
 	translate();
@@ -303,7 +303,7 @@ void ach::Menu::finalize()
 ***********************************************************************/
 void ach::Menu::translate()
 {
-	listForeach(items)
+	list_foreach(items)
 		items[i]->translate();
 }
 

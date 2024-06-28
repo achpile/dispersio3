@@ -35,7 +35,7 @@ ach::Character::~Character()
 	delete body;
 	delete weapon;
 
-	listDelete(models);
+	list_delete(models);
 }
 
 

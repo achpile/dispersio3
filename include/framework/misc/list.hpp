@@ -2,11 +2,11 @@
 #define __FRAMEWORK_MISC_LIST
 
 
-#define listForeach(list)                        \
+#define list_foreach(list)                       \
     for (unsigned int i = 0; i < (list).size(); i++)
 
 
-#define listDelete(list)                         \
+#define list_delete(list)                        \
     for (; !(list).empty();)                     \
     {                                            \
         if ((list).back())                       \
@@ -16,7 +16,7 @@
     }
 
 
-#define listUpdate(list)                         \
+#define list_update(list)                        \
     for (unsigned int i = 0; i < (list).size();) \
     {                                            \
         if (!(list)[i]->update())                \
@@ -31,8 +31,8 @@
     }
 
 
-#define listRender(list)                         \
-    listForeach(list) (list)[i]->render()
+#define list_render(list)                        \
+    list_foreach(list) (list)[i]->render()
 
 
 #endif

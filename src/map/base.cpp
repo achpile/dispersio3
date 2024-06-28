@@ -34,9 +34,9 @@ ach::Map::~Map()
 	delete tileset;
 	delete collision;
 
-	listDelete(characters);
-	listDelete(objects);
-	listDelete(projectiles);
+	list_delete(characters);
+	list_delete(objects);
+	list_delete(projectiles);
 }
 
 
@@ -51,9 +51,9 @@ void ach::Map::update()
 	process();
 	collide();
 
-	listUpdate(characters);
-	listUpdate(objects);
-	listUpdate(projectiles);
+	list_update(characters);
+	list_update(objects);
+	list_update(projectiles);
 }
 
 
@@ -68,9 +68,9 @@ void ach::Map::render(sf::FloatRect viewport)
 	bg->stars->update();
 	renderTiles(viewport);
 
-	listRender(objects);
-	listRender(characters);
-	listRender(projectiles);
+	list_render(objects);
+	list_render(characters);
+	list_render(projectiles);
 }
 
 
@@ -114,7 +114,7 @@ void ach::Map::renderTiles(sf::FloatRect viewport)
 ***********************************************************************/
 void ach::Map::process()
 {
-	listForeach(characters)
+	list_foreach(characters)
 		characters[i]->process();
 }
 
@@ -127,7 +127,7 @@ void ach::Map::process()
 ***********************************************************************/
 void ach::Map::collide()
 {
-	listForeach(characters)
+	list_foreach(characters)
 		collision->collide(&characters[i]->phys);
 }
 

@@ -50,7 +50,7 @@ ach::Sheet::Sheet(const char *filename, unsigned int _frames, bool centered)
 ***********************************************************************/
 ach::Sheet::~Sheet()
 {
-	listDelete(spr);
+	list_delete(spr);
 
 	delete tex;
 }

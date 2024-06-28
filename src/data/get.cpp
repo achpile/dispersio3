@@ -7,7 +7,7 @@
 ***********************************************************************/
 template<class T> T* getContent(const char *name, std::vector<T*> *list)
 {
-	listForeach(*list)
+	list_foreach(*list)
 		if (!strcmp(name, (*list)[i]->name))
 			return (*list)[i];
 

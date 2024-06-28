@@ -19,12 +19,12 @@ ach::Database::Database()
 ***********************************************************************/
 ach::Database::~Database()
 {
-	listDelete(sheet);
-	listDelete(model);
-	listDelete(projectile);
-	listDelete(weapon);
-	listDelete(body);
-	listDelete(character);
+	list_delete(sheet);
+	list_delete(model);
+	list_delete(projectile);
+	list_delete(weapon);
+	list_delete(body);
+	list_delete(character);
 }
 
 

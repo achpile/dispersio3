@@ -28,7 +28,7 @@ ach::StateStart::StateStart()
 ***********************************************************************/
 ach::StateStart::~StateStart()
 {
-	listDelete(sprites);
+	list_delete(sprites);
 }
 
 

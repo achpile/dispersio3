@@ -24,7 +24,7 @@ ach::StateCredits::StateCredits()
 ***********************************************************************/
 ach::StateCredits::~StateCredits()
 {
-	listDelete(lines);
+	list_delete(lines);
 }
 
 
@@ -38,7 +38,7 @@ void ach::StateCredits::update()
 {
 	float offset = tm->frame * CREDITS_SPEED;
 
-	listForeach(lines)
+	list_foreach(lines)
 		lines[i]->move(0, -offset);
 
 	if (lines.back()->getGlobalBounds().top < -lines.back()->getGlobalBounds().height)
@@ -58,7 +58,7 @@ void ach::StateCredits::update()
 ***********************************************************************/
 void ach::StateCredits::render()
 {
-	listForeach(lines)
+	list_foreach(lines)
 		rm->draw(lines[i], ach::RenderLayer::rlGUI);
 }
 
