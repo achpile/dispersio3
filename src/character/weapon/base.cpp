@@ -72,7 +72,6 @@ void ach::Weapon::shot()
 
 		proj->phys.pos = pos;
 		proj->phys.vel = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
-		proj->phys.acc = sf::Vector2f(0.0f, 0.0f);
 
 		world->map->projectiles.push_back(proj);
 	}

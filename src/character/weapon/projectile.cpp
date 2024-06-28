@@ -16,6 +16,9 @@ ach::Projectile::Projectile(ach::DataProjectile *_base)
 	model->setColor(base->color);
 
 	phys.init(sf::Vector2f(0.0f, 0.0f));
+
+	if (flag_get(base->flags, ach::ProjectileFlag::pfGravity))
+		phys.acc.y = PHYS_GRAVITY / 4.0f;
 }
 
 
