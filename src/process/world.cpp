@@ -31,6 +31,8 @@ ach::ProcessWorld::~ProcessWorld()
 {
 	delete map;
 	delete cam;
+
+	list_delete(gfx);
 }
 
 
@@ -45,6 +47,8 @@ void ach::ProcessWorld::update()
 	map->update();
 	cam->update();
 
+	list_update(gfx);
+
 	render();
 }
 
@@ -58,4 +62,6 @@ void ach::ProcessWorld::update()
 void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
+
+	list_render(gfx);
 }

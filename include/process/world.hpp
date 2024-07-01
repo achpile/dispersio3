@@ -6,6 +6,8 @@ namespace ach
 {
 	struct ProcessWorld : Process
 	{
+		std::vector<ach::Effect*> gfx;
+
 		ach::Map       *map;
 		ach::Camera    *cam;
 		ach::Character *player;

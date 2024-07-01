@@ -8,9 +8,10 @@
 ***********************************************************************/
 ach::Projectile::Projectile(ach::DataProjectile *_base)
 {
-	base  = _base;
-	alive = true;
-	model = new ach::Model(base->sheet);
+	base   = _base;
+	alive  = true;
+	model  = new ach::Model(base->sheet);
+	tracer = new ach::Tracer(&phys);
 
 	model->setScale(base->scale);
 	model->setColor(base->color);
@@ -31,6 +32,7 @@ ach::Projectile::Projectile(ach::DataProjectile *_base)
 ach::Projectile::~Projectile()
 {
 	delete model;
+	delete tracer;
 }
 
 
@@ -44,6 +46,7 @@ bool ach::Projectile::update()
 {
 	phys.update();
 	model->update();
+	tracer->update();
 
 	return alive;
 }
@@ -57,5 +60,6 @@ bool ach::Projectile::update()
 ***********************************************************************/
 void ach::Projectile::render()
 {
+	tracer->render();
 	model->render(phys.pos);
 }

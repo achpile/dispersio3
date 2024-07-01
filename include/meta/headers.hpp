@@ -117,6 +117,10 @@
 #include "data/character.hpp"
 #include "data/base.hpp"
 
+#include "gfx/effect/base.hpp"
+
+#include "gfx/tracer/base.hpp"
+
 #include "gfx/model.hpp"
 
 #include "container/resources.hpp"

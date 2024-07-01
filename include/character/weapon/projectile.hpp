@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::DataProjectile *base;
 		ach::Model          *model;
+		ach::Tracer         *tracer;
 		ach::Phys            phys;
 
 		bool alive;
