@@ -6,7 +6,7 @@ namespace ach
 {
 	struct TracerLine : Tracer
 	{
-		sf::VertexArray *line;
+		sf::VertexArray line;
 
 
 		 TracerLine(ach::Phys *_phys);
@@ -14,6 +14,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void init();
 	};
 }
 

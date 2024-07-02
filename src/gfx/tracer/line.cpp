@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::TracerLine::TracerLine(ach::Phys *_phys) : Tracer(_phys)
 {
-	line = new sf::VertexArray(sf::PrimitiveType::LineStrip, TRACER_LINE_COUNT);
+	line.resize(TRACER_LINE_COUNT);
+	line.setPrimitiveType(sf::PrimitiveType::LineStrip);
 }
 
 
@@ -20,7 +21,6 @@ ach::TracerLine::TracerLine(ach::Phys *_phys) : Tracer(_phys)
 ***********************************************************************/
 ach::TracerLine::~TracerLine()
 {
-	delete line;
 }
 
 
@@ -32,6 +32,10 @@ ach::TracerLine::~TracerLine()
 ***********************************************************************/
 void ach::TracerLine::update()
 {
+	for (int i = 0; i < TRACER_LINE_COUNT - 1; i++)
+		line[i].position = line[i + 1].position;
+
+	line[TRACER_LINE_COUNT - 1].position = phys->pos;
 }
 
 
@@ -43,5 +47,23 @@ void ach::TracerLine::update()
 ***********************************************************************/
 void ach::TracerLine::render()
 {
-	rm->draw(line, ach::RenderLayer::rlGame);
+
+	rm->draw(&line, ach::RenderLayer::rlGame);
+}
+
+
+
+/***********************************************************************
+     * TracerLine
+     * init
+
+***********************************************************************/
+void ach::TracerLine::init()
+{
+	for (int i = 0; i < TRACER_LINE_COUNT; i++)
+	{
+		line[i].color    = color;
+		line[i].color.a  = (i + 1) * 255 / TRACER_LINE_COUNT;
+		line[i].position = phys->pos;
+	}
 }

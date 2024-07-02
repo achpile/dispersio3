@@ -14,7 +14,7 @@ namespace ach
 		bool alive;
 
 
-		 Projectile(ach::DataProjectile *_base);
+		 Projectile(ach::DataProjectile *_base, sf::Vector2f pos);
 		~Projectile();
 
 		bool update();

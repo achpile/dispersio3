@@ -24,6 +24,8 @@ namespace ach
 		virtual void update() {};
 		virtual void render() {};
 
+		virtual void init() {};
+
 		static ach::Tracer *create(ach::TracerType type, ach::Phys *_phys);
 	};
 }

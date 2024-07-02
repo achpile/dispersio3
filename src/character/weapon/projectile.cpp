@@ -6,17 +6,21 @@
      * constructor
 
 ***********************************************************************/
-ach::Projectile::Projectile(ach::DataProjectile *_base)
+ach::Projectile::Projectile(ach::DataProjectile *_base, sf::Vector2f pos)
 {
 	base   = _base;
 	alive  = true;
 	model  = new ach::Model(base->sheet);
 	tracer = ach::Tracer::create(base->tracer, &phys);
 
+	phys.init(sf::Vector2f(0.0f, 0.0f));
+	phys.pos = pos;
+
 	model->setScale(base->scale);
 	model->setColor(base->color);
 
-	phys.init(sf::Vector2f(0.0f, 0.0f));
+	tracer->color = base->colorTracer;
+	tracer->init();
 
 	if (flag_get(base->flags, ach::ProjectileFlag::pfGravity))
 		phys.acc.y = PHYS_GRAVITY / 4.0f;

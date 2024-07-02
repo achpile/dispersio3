@@ -68,9 +68,8 @@ void ach::Weapon::shot()
 
 	for (int i = 0; i < base->count; i++)
 	{
-		ach::Projectile *proj = new ach::Projectile(base->projectile);
+		ach::Projectile *proj = new ach::Projectile(base->projectile, pos);
 
-		proj->phys.pos = pos;
 		proj->phys.vel = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
 
 		world->map->projectiles.push_back(proj);
