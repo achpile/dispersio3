@@ -103,7 +103,8 @@
                 "default": "none",
                 "enum": [
                     "none",
-                    "line"
+                    "line",
+                    "smoke"
                 ],
                 "type": "enum"
             }

@@ -7,7 +7,8 @@ namespace ach
 	enum TracerType
 	{
 		ttNone = 0,
-		ttLine
+		ttLine,
+		ttSmoke
 	};
 
 

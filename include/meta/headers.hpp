@@ -28,8 +28,8 @@
 #include "framework/string/color.hpp"
 #include "framework/string/utf8.hpp"
 
-#include "framework/log/base.hpp"
 #include "framework/log/pair.hpp"
+#include "framework/log/base.hpp"
 
 #include "framework/misc/arch.hpp"
 #include "framework/misc/sfml.hpp"
@@ -57,8 +57,8 @@
 #include "framework/json/macros.hpp"
 
 #include "framework/datamodel/defines.hpp"
-#include "framework/datamodel/attr.hpp"
 #include "framework/datamodel/pair.hpp"
+#include "framework/datamodel/attr.hpp"
 #include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/class.hpp"
 #include "framework/datamodel/type.hpp"
@@ -67,9 +67,9 @@
 #include "framework/datamodel/preprocessor.hpp"
 #include "framework/datamodel/base.hpp"
 
+#include "framework/control/pair.hpp"
 #include "framework/control/key.hpp"
 #include "framework/control/pad.hpp"
-#include "framework/control/pair.hpp"
 
 #include "framework/gfx/sprite.hpp"
 #include "framework/gfx/sheet.hpp"
@@ -98,9 +98,9 @@
 #include "framework/particle/base.hpp"
 #include "framework/particle/system.hpp"
 
+#include "framework/collision/pair.hpp"
 #include "framework/collision/phys.hpp"
 #include "framework/collision/line.hpp"
-#include "framework/collision/pair.hpp"
 #include "framework/collision/base.hpp"
 
 #include "misc/handler.hpp"
@@ -109,13 +109,14 @@
 #include "particle/stars.hpp"
 
 
-#include "gfx/effect/base.hpp"
 #include "gfx/effect/pair.hpp"
+#include "gfx/effect/base.hpp"
 
 #include "gfx/tracer/defines.hpp"
+#include "gfx/tracer/pair.hpp"
 #include "gfx/tracer/base.hpp"
 #include "gfx/tracer/line.hpp"
-#include "gfx/tracer/pair.hpp"
+#include "gfx/tracer/smoke.hpp"
 
 
 #include "data/content.hpp"
@@ -151,18 +152,18 @@
 #include "map/object/base.hpp"
 #include "map/object/decor.hpp"
 
+#include "map/tile/pair.hpp"
 #include "map/tile/base.hpp"
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
-#include "map/tile/pair.hpp"
 
 #include "map/base.hpp"
 
 #include "process/base.hpp"
 #include "process/world.hpp"
 
-#include "state/base.hpp"
 #include "state/pair.hpp"
+#include "state/base.hpp"
 #include "state/start.hpp"
 #include "state/menu.hpp"
 #include "state/game.hpp"
