@@ -6,6 +6,9 @@ namespace ach
 {
 	struct TracerSmoke : Tracer
 	{
+		ach::ParticleSystemSmoke *smoke;
+
+
 		 TracerSmoke(ach::Phys *_phys);
 		~TracerSmoke();
 

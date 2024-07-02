@@ -2,48 +2,45 @@
 
 
 /***********************************************************************
-     * ParticleSystemStars
+     * ParticleSystemSmoke
      * constructor
 
 ***********************************************************************/
-ach::ParticleSystemStars::ParticleSystemStars(int _width, int _height, int count) : ParticleSystem(2.0f)
+ach::ParticleSystemSmoke::ParticleSystemSmoke() : ParticleSystem(2.0f)
 {
-	age    = 0.0f;
-	freq   = 0.05f;
-
-	width  = _width;
-	height = _height;
-
-	for (int i = 0; i < count; i++)
-		add(rand() % width);
+	age   = 0.0f;
+	freq  = 0.2f;
+	life  = 0.35f;
+	pos   = sf::Vector2f(0.0f, 0.0f);
+	color = sf::Color::White;
 }
 
 
 
 /***********************************************************************
-     * ParticleSystemStars
+     * ParticleSystemSmoke
      * destructor
 
 ***********************************************************************/
-ach::ParticleSystemStars::~ParticleSystemStars()
+ach::ParticleSystemSmoke::~ParticleSystemSmoke()
 {
 }
 
 
 
 /***********************************************************************
-     * ParticleSystemStars
+     * ParticleSystemSmoke
      * update
 
 ***********************************************************************/
-bool ach::ParticleSystemStars::update()
+bool ach::ParticleSystemSmoke::update()
 {
 	age += tm->get(source);
 
 	while (age > freq)
 	{
 		age -= freq;
-		add(width);
+		add();
 	}
 
 	return true;
@@ -52,31 +49,32 @@ bool ach::ParticleSystemStars::update()
 
 
 /***********************************************************************
-     * ParticleSystemStars
+     * ParticleSystemSmoke
      * process
 
 ***********************************************************************/
-bool ach::ParticleSystemStars::process(ach::Particle *particle)
+bool ach::ParticleSystemSmoke::process(ach::Particle *particle)
 {
-	return particle->pos.x >= 0.0f;
+	particle->scale    = particle->age * (1.3f / life) + 1.0f;
+	particle->offset.x = (particle->age + 2.0f) * sin(particle->age * 20.0f);
+	particle->color.a  = math_linear(particle->age, -(250.0f / life), 255.0f);
+
+	return particle->age <= life;
 }
 
 
 
 /***********************************************************************
-     * ParticleSystemStars
+     * ParticleSystemSmoke
      * add
 
 ***********************************************************************/
-void ach::ParticleSystemStars::add(float x)
+void ach::ParticleSystemSmoke::add()
 {
-	unsigned char rnd = rand() % 7;
-	unsigned char clr = 63 + rnd * 32;
-
 	particles.push_back(new ach::Particle());
 
-	particles.back()->pos   = sf::Vector2f(x, rand() % height);
-	particles.back()->vel   = sf::Vector2f(-120.0f - rnd * 20.0f, 0.0f);
+	particles.back()->pos   = pos;
+	particles.back()->vel   = sf::Vector2f(0.0f, -20.0f);
 	particles.back()->spr   = spr;
-	particles.back()->color = sf::Color(clr, clr, clr);
+	particles.back()->color = color;
 }

@@ -8,6 +8,10 @@
 ***********************************************************************/
 ach::TracerSmoke::TracerSmoke(ach::Phys *_phys) : Tracer(_phys)
 {
+	smoke = new ach::ParticleSystemSmoke();
+
+	smoke->source = ach::TimeSource::tsFrame;
+	smoke->layer  = ach::RenderLayer::rlGame;
 }
 
 
@@ -19,6 +23,7 @@ ach::TracerSmoke::TracerSmoke(ach::Phys *_phys) : Tracer(_phys)
 ***********************************************************************/
 ach::TracerSmoke::~TracerSmoke()
 {
+	delete smoke;
 }
 
 
@@ -30,6 +35,9 @@ ach::TracerSmoke::~TracerSmoke()
 ***********************************************************************/
 void ach::TracerSmoke::update()
 {
+	smoke->pos = phys->pos;
+
+	smoke->update();
 }
 
 
@@ -41,6 +49,7 @@ void ach::TracerSmoke::update()
 ***********************************************************************/
 void ach::TracerSmoke::render()
 {
+	smoke->render();
 }
 
 
@@ -52,4 +61,8 @@ void ach::TracerSmoke::render()
 ***********************************************************************/
 void ach::TracerSmoke::init()
 {
+	smoke->pos   = phys->pos;
+	smoke->color = color;
+
+	smoke->add();
 }

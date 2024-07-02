@@ -9,6 +9,9 @@ namespace ach
 		std::vector<ach::Particle*> particles;
 		sf::RectangleShape         *spr;
 
+		ach::TimeSource  source;
+		ach::RenderLayer layer;
+
 
 		         ParticleSystem(float size);
 		virtual ~ParticleSystem();
@@ -16,7 +19,7 @@ namespace ach
 		virtual bool update();
 		virtual bool process(ach::Particle *particle);
 
-		void render(ach::RenderLayer layer, float frame);
+		void render();
 	};
 }
 

@@ -48,11 +48,11 @@ void ach::StateMenu::update()
 	if (!menu->isActive)
 		app->isRunning = false;
 
-	bg->stars->update();
 	menu->controls();
+	menu->update();
+	bg->stars->update();
 
 	render();
-
 }
 
 
@@ -64,7 +64,8 @@ void ach::StateMenu::update()
 ***********************************************************************/
 void ach::StateMenu::render()
 {
-	menu->update();
+	bg->stars->render();
+	menu->render();
 
 	rm->draw(logo->spr, ach::RenderLayer::rlGUI);
 }

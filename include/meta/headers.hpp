@@ -107,7 +107,7 @@
 #include "misc/camera.hpp"
 
 #include "particle/stars.hpp"
-
+#include "particle/smoke.hpp"
 
 #include "gfx/effect/pair.hpp"
 #include "gfx/effect/base.hpp"
@@ -117,7 +117,6 @@
 #include "gfx/tracer/base.hpp"
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"
-
 
 #include "data/content.hpp"
 #include "data/sheet.hpp"

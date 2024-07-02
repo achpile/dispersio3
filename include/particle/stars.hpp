@@ -9,8 +9,11 @@ namespace ach
 		float age;
 		float freq;
 
+		int   width;
+		int   height;
 
-		 ParticleSystemStars();
+
+		 ParticleSystemStars(int _width, int _height, int count);
 		~ParticleSystemStars();
 
 		bool update();

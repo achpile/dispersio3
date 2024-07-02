@@ -58,13 +58,13 @@ bool ach::ParticleSystem::process(ach::Particle*)
      * render
 
 ***********************************************************************/
-void ach::ParticleSystem::render(ach::RenderLayer layer, float frame)
+void ach::ParticleSystem::render()
 {
 	unsigned int i = 0;
 
 	while (i < particles.size())
 	{
-		particles[i]->update(frame);
+		particles[i]->update(tm->get(source));
 
 		if (!process(particles[i]))
 		{

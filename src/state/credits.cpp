@@ -58,6 +58,8 @@ void ach::StateCredits::update()
 ***********************************************************************/
 void ach::StateCredits::render()
 {
+	bg->stars->render();
+
 	list_foreach(lines)
 		rm->draw(lines[i], ach::RenderLayer::rlGUI);
 }

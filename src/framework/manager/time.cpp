@@ -54,3 +54,21 @@ void ach::TimeManager::update()
 	last    = current;
 	passed += frame;
 }
+
+
+
+/***********************************************************************
+     * TimeManager
+     * get
+
+***********************************************************************/
+float ach::TimeManager::get(ach::TimeSource source)
+{
+	switch (source)
+	{
+		case ach::TimeSource::tsReal : return real;
+		case ach::TimeSource::tsFrame: return frame;
+
+		default                      : return 0.0f;
+	}
+}
