@@ -7,7 +7,7 @@
 ***********************************************************************/
 ach::Pair pairTracer[] =
 {
-	{.num = ach::TracerType::ttNone    , .str = "none"    },
+	{.num = ach::TracerType::ttNone, .str = "none"},
 
-	{.num = ach::TracerType::ttNone    , .str = NULL      },
+	{.num = ach::TracerType::ttNone, .str = NULL  },
 };

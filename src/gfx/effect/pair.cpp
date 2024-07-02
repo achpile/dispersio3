@@ -7,8 +7,8 @@
 ***********************************************************************/
 ach::Pair pairEffect[] =
 {
-	{.num = ach::EffectType::etNone    , .str = "none"    },
+	{.num = ach::EffectType::etNone, .str = "none"},
 
-	{.num = ach::EffectType::etNone    , .str = NULL      },
+	{.num = ach::EffectType::etNone, .str = NULL  },
 };
 

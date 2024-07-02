@@ -11,7 +11,7 @@ ach::Projectile::Projectile(ach::DataProjectile *_base)
 	base   = _base;
 	alive  = true;
 	model  = new ach::Model(base->sheet);
-	tracer = new ach::Tracer(&phys);
+	tracer = ach::Tracer::create(base->tracer, &phys);
 
 	model->setScale(base->scale);
 	model->setColor(base->color);

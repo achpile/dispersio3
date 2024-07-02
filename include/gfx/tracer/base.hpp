@@ -14,12 +14,16 @@ namespace ach
 	{
 		ach::Phys *phys;
 
+		sf::Color  color;
+
 
 		         Tracer(ach::Phys *_phys);
 		virtual ~Tracer();
 
 		virtual void update() {};
 		virtual void render() {};
+
+		static ach::Tracer *create(ach::TracerType type, ach::Phys *_phys);
 	};
 }
 
