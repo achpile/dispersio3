@@ -8,6 +8,7 @@
 ach::Pair pairTracer[] =
 {
 	{.num = ach::TracerType::ttNone, .str = "none"},
+	{.num = ach::TracerType::ttLine, .str = "line"},
 
 	{.num = ach::TracerType::ttNone, .str = NULL  },
 };

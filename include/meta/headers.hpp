@@ -112,7 +112,9 @@
 #include "gfx/effect/base.hpp"
 #include "gfx/effect/pair.hpp"
 
+#include "gfx/tracer/defines.hpp"
 #include "gfx/tracer/base.hpp"
+#include "gfx/tracer/line.hpp"
 #include "gfx/tracer/pair.hpp"
 
 
