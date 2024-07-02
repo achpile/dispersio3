@@ -1,5 +1,5 @@
-#ifndef __GFX_MODEL
-#define __GFX_MODEL
+#ifndef __MODEL_BASE
+#define __MODEL_BASE
 
 
 namespace ach

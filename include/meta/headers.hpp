@@ -108,6 +108,14 @@
 
 #include "particle/stars.hpp"
 
+
+#include "gfx/effect/base.hpp"
+#include "gfx/effect/pair.hpp"
+
+#include "gfx/tracer/base.hpp"
+#include "gfx/tracer/pair.hpp"
+
+
 #include "data/content.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"
@@ -117,11 +125,7 @@
 #include "data/character.hpp"
 #include "data/base.hpp"
 
-#include "gfx/effect/base.hpp"
-
-#include "gfx/tracer/base.hpp"
-
-#include "gfx/model.hpp"
+#include "model/base.hpp"
 
 #include "container/resources.hpp"
 #include "container/settings.hpp"

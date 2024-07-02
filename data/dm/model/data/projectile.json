@@ -39,6 +39,32 @@
             "type": "boolean"
         }
     },
+    "Impact": {
+        "@attr": {
+            "type": "object"
+        },
+        "Color": {
+            "@attr": {
+                "default": "#FFFFFFFF",
+                "type": "color"
+            }
+        },
+        "Sound": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Type": {
+            "@attr": {
+                "default": "none",
+                "enum": [
+                    "none"
+                ],
+                "type": "enum"
+            }
+        }
+    },
     "Radius": {
         "@attr": {
             "default": 0,
@@ -62,34 +88,6 @@
             "type": "link"
         }
     },
-    "Sound": {
-        "@attr": {
-            "type": "object"
-        },
-        "Bump": {
-            "@attr": {
-                "default": "sfx/misc/default.wav",
-                "type": "filename"
-            }
-        }
-    },
-    "Sparks": {
-        "@attr": {
-            "type": "object"
-        },
-        "Color": {
-            "@attr": {
-                "default": "#FFFFFFFF",
-                "type": "color"
-            }
-        },
-        "Enable": {
-            "@attr": {
-                "default": false,
-                "type": "boolean"
-            }
-        }
-    },
     "Tracer": {
         "@attr": {
             "type": "object"
@@ -100,10 +98,13 @@
                 "type": "color"
             }
         },
-        "Enable": {
+        "Type": {
             "@attr": {
-                "default": false,
-                "type": "boolean"
+                "default": "none",
+                "enum": [
+                    "none"
+                ],
+                "type": "enum"
             }
         }
     }

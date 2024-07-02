@@ -15,6 +15,9 @@ ach::Datamodel::Datamodel()
 	json_dm_trait_process(dm, traits);
 
 	load();
+
+	json_dump_file(dm  , "logs/dm.json"  , JSON_INDENT(4) | JSON_SORT_KEYS);
+	json_dump_file(data, "logs/data.json", JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
 

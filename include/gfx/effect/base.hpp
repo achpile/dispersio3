@@ -4,6 +4,12 @@
 
 namespace ach
 {
+	enum EffectType
+	{
+		etNone = 0
+	};
+
+
 	struct Effect
 	{
 		         Effect();

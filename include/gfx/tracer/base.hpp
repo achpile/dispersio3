@@ -4,6 +4,12 @@
 
 namespace ach
 {
+	enum TracerType
+	{
+		ttNone = 0
+	};
+
+
 	struct Tracer
 	{
 		ach::Phys *phys;
