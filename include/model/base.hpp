@@ -14,6 +14,7 @@ namespace ach
 		sf::Color       color;
 
 		char  animation[STR_LEN_NAME];
+		float angle;
 
 
 		 Model(ach::DataModel *_base);

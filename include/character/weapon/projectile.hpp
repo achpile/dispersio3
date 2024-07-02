@@ -11,7 +11,9 @@ namespace ach
 		ach::Tracer         *tracer;
 		ach::Phys            phys;
 
-		bool alive;
+		bool  alive;
+		bool  flip;
+		float angle;
 
 
 		 Projectile(ach::DataProjectile *_base, sf::Vector2f pos);
@@ -19,6 +21,9 @@ namespace ach
 
 		bool update();
 		void render();
+
+		void direction();
+		void rotation();
 	};
 }
 

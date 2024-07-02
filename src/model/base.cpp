@@ -9,6 +9,7 @@
 ach::Model::Model(ach::DataModel *_base)
 {
 	base         = _base;
+	angle        = 0.0f;
 	animation[0] = 0;
 
 	init(base->sheet);
@@ -65,6 +66,7 @@ void ach::Model::render(sf::Vector2f pos)
 	spr->setColor(color);
 	spr->setScale(scale);
 	spr->setPosition(pos);
+	spr->setRotation(angle);
 
 	rm->draw(spr, ach::RenderLayer::rlGame);
 }

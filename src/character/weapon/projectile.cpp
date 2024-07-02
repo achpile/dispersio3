@@ -9,7 +9,9 @@
 ach::Projectile::Projectile(ach::DataProjectile *_base, sf::Vector2f pos)
 {
 	base   = _base;
+	flip   = false;
 	alive  = true;
+	angle  = 0.0f;
 	model  = new ach::Model(base->sheet);
 	tracer = ach::Tracer::create(base->tracer, &phys);
 
@@ -52,6 +54,9 @@ bool ach::Projectile::update()
 	model->update();
 	tracer->update();
 
+	rotation();
+	direction();
+
 	return alive;
 }
 
@@ -66,4 +71,50 @@ void ach::Projectile::render()
 {
 	tracer->render();
 	model->render(phys.pos);
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * rotation
+
+***********************************************************************/
+void ach::Projectile::rotation()
+{
+	if (!flag_get(base->flags, ach::ProjectileFlag::pfRotation))
+		return;
+
+	angle += phys.vel.x * tm->frame * 4.0f;
+
+	model->angle = angle;
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * direction
+
+***********************************************************************/
+void ach::Projectile::direction()
+{
+	if (!flag_get(base->flags, ach::ProjectileFlag::pfDirection))
+		return;
+
+	if (vector_len(phys.vel) == 0.0f)
+		return;
+
+	angle = MATH_DEG * vector_angle(phys.vel);
+
+	if (flip)
+	{
+		model->scale.x = -1.0f;
+		model->angle   = 180 - angle;
+	}
+	else
+	{
+		model->scale.x = 1.0f;
+		model->angle   = angle;
+	}
 }
