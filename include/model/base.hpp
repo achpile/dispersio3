@@ -23,7 +23,7 @@ namespace ach
 		void update();
 		void render(sf::Vector2f pos);
 
-		void init(ach::Sheet *_sheet);
+		void init(ach::DataSheet *_sheet);
 
 		void setColor(sf::Color _color);
 		void setScale(float _scale);

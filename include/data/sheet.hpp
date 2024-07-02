@@ -8,6 +8,8 @@ namespace ach
 	{
 		ach::Sheet *sheet;
 
+		float rate;
+
 
 		 DataSheet(json_t *obj);
 		~DataSheet();

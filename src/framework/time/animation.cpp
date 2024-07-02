@@ -66,11 +66,12 @@ void ach::Animation::reset()
      * init
 
 ***********************************************************************/
-void ach::Animation::init(int _frames)
+void ach::Animation::init(int _frames, float _rate)
 {
+	drate  = _rate;
 	frames = _frames;
 
-	set(0, -1, true, 0.1f);
+	set(0, -1, true, drate);
 }
 
 
@@ -80,8 +81,10 @@ void ach::Animation::init(int _frames)
      * set
 
 ***********************************************************************/
-void ach::Animation::set(int _start, int _end, bool _loop, float rate)
+void ach::Animation::set(int _start, int _end, bool _loop, float _rate)
 {
+	float rate = (_rate != 0.0f) ? _rate : drate;
+
 	if (start == _start &&
 	    end   == _end   &&
 	    loop  == _loop  &&
@@ -95,6 +98,4 @@ void ach::Animation::set(int _start, int _end, bool _loop, float rate)
 
 	if (end == -1 || end >= frames)
 		end = frames - 1;
-
-	framer.set(rate);
 }

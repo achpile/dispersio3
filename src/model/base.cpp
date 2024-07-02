@@ -11,7 +11,7 @@ ach::Model::Model(ach::DataModel *_base)
 	base         = _base;
 	animation[0] = 0;
 
-	init(base->sheet->sheet);
+	init(base->sheet);
 }
 
 
@@ -25,7 +25,7 @@ ach::Model::Model(ach::DataSheet *_sheet)
 {
 	base = NULL;
 
-	init(_sheet->sheet);
+	init(_sheet);
 }
 
 
@@ -76,14 +76,14 @@ void ach::Model::render(sf::Vector2f pos)
      * init
 
 ***********************************************************************/
-void ach::Model::init(ach::Sheet *_sheet)
+void ach::Model::init(ach::DataSheet *_sheet)
 {
-	sheet = _sheet;
+	sheet = _sheet->sheet;
 
 	setColor(sf::Color::White);
 	setScale(1.0f);
 
-	anim.init(sheet->spr.size());
+	anim.init(sheet->spr.size(), _sheet->rate);
 }
 
 

@@ -8,12 +8,13 @@ namespace ach
 	{
 		ach::Framer framer;
 
-		int  frames;
-		int  frame;
+		int   frames;
+		int   frame;
+		float drate;
 
-		int  start;
-		int  end;
-		bool loop;
+		int   start;
+		int   end;
+		bool  loop;
 
 
 		 Animation();
@@ -22,8 +23,8 @@ namespace ach
 		void update();
 		void reset();
 
-		void init(int _frames);
-		void set(int _start, int _end, bool _loop, float rate);
+		void init(int _frames, float _rate);
+		void set(int _start, int _end, bool _loop, float _rate);
 	};
 }
 

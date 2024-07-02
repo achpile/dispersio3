@@ -22,7 +22,7 @@
         },
         "Rate": {
             "@attr": {
-                "default": 0.1,
+                "default": 0.0,
                 "max": 10.0,
                 "min": 0.0,
                 "type": "real"
