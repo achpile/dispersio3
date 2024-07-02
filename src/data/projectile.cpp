@@ -21,8 +21,10 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	colorImpact = str_to_color(json_object_get_branch_string(obj, "Impact.Color"));
 	colorTracer = str_to_color(json_object_get_branch_string(obj, "Tracer.Color"));
 
-	flag_set(&flags, ach::ProjectileFlag::pfBouncy   , json_object_get_boolean(obj, "Bouncy" ));
-	flag_set(&flags, ach::ProjectileFlag::pfGravity  , json_object_get_boolean(obj, "Gravity"));
+	flag_set(&flags, ach::ProjectileFlag::pfBouncy   , json_object_get_boolean(obj, "Bouncy"   ));
+	flag_set(&flags, ach::ProjectileFlag::pfGravity  , json_object_get_boolean(obj, "Gravity"  ));
+	flag_set(&flags, ach::ProjectileFlag::pfDirection, json_object_get_boolean(obj, "Direction"));
+	flag_set(&flags, ach::ProjectileFlag::pfRotation , json_object_get_boolean(obj, "Rotation" ));
 
 	flag_set(&flags, ach::ProjectileFlag::pfExplosive, json_object_get_branch_boolean(obj, "Explosive.Enable"));
 

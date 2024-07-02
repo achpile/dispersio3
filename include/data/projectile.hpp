@@ -8,7 +8,9 @@ namespace ach
 	{
 		pfBouncy    = 1 << 0,
 		pfExplosive = 1 << 1,
-		pfGravity   = 1 << 2
+		pfGravity   = 1 << 2,
+		pfDirection = 1 << 3,
+		pfRotation  = 1 << 4
 	};
 
 
