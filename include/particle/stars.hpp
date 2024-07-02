@@ -4,17 +4,17 @@
 
 namespace ach
 {
-	struct Stars : ParticleSystem
+	struct ParticleSystemStars : ParticleSystem
 	{
 		float age;
 		float freq;
 
 
-		 Stars();
-		~Stars();
+		 ParticleSystemStars();
+		~ParticleSystemStars();
 
 		bool update();
-		bool check(ach::Particle *particle);
+		bool process(ach::Particle *particle);
 
 		void add(float x);
 	};

@@ -6,7 +6,7 @@ namespace ach
 {
 	struct Background
 	{
-		ach::Stars *stars;
+		ach::ParticleSystemStars *stars;
 
 
 		 Background();

@@ -2,11 +2,11 @@
 
 
 /***********************************************************************
-     * Stars
+     * ParticleSystemStars
      * constructor
 
 ***********************************************************************/
-ach::Stars::Stars() : ParticleSystem(2.0f)
+ach::ParticleSystemStars::ParticleSystemStars() : ParticleSystem(2.0f)
 {
 	age  = 0.0f;
 	freq = 0.05f;
@@ -18,22 +18,22 @@ ach::Stars::Stars() : ParticleSystem(2.0f)
 
 
 /***********************************************************************
-     * Stars
+     * ParticleSystemStars
      * destructor
 
 ***********************************************************************/
-ach::Stars::~Stars()
+ach::ParticleSystemStars::~ParticleSystemStars()
 {
 }
 
 
 
 /***********************************************************************
-     * Stars
+     * ParticleSystemStars
      * update
 
 ***********************************************************************/
-bool ach::Stars::update()
+bool ach::ParticleSystemStars::update()
 {
 	age += tm->real;
 
@@ -51,11 +51,11 @@ bool ach::Stars::update()
 
 
 /***********************************************************************
-     * Stars
-     * check
+     * ParticleSystemStars
+     * process
 
 ***********************************************************************/
-bool ach::Stars::check(ach::Particle *particle)
+bool ach::ParticleSystemStars::process(ach::Particle *particle)
 {
 	return particle->pos.x >= 0.0f;
 }
@@ -63,20 +63,19 @@ bool ach::Stars::check(ach::Particle *particle)
 
 
 /***********************************************************************
-     * Stars
+     * ParticleSystemStars
      * add
 
 ***********************************************************************/
-void ach::Stars::add(float x)
+void ach::ParticleSystemStars::add(float x)
 {
 	unsigned char rnd = rand() % 7;
 	unsigned char clr = 63 + rnd * 32;
 
 	particles.push_back(new ach::Particle());
 
-	particles.back()->pos = sf::Vector2f(x, rand() % RENDER_LAYER_BG_Y);
-	particles.back()->vel = sf::Vector2f(-120.0f - rnd * 20.0f, 0.0f);
-	particles.back()->acc = sf::Vector2f(0.0f, 0.0f);
-	particles.back()->spr = spr;
-	particles.back()->clr = sf::Color(clr, clr, clr);
+	particles.back()->pos   = sf::Vector2f(x, rand() % RENDER_LAYER_BG_Y);
+	particles.back()->vel   = sf::Vector2f(-120.0f - rnd * 20.0f, 0.0f);
+	particles.back()->spr   = spr;
+	particles.back()->color = sf::Color(clr, clr, clr);
 }

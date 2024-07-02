@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Background::Background()
 {
-	stars = new ach::Stars();
+	stars = new ach::ParticleSystemStars();
 }
 
 

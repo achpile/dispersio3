@@ -14,7 +14,7 @@ namespace ach
 		virtual ~ParticleSystem();
 
 		virtual bool update();
-		virtual bool check(ach::Particle *particle);
+		virtual bool process(ach::Particle *particle);
 
 		void render(ach::RenderLayer layer, float frame);
 	};

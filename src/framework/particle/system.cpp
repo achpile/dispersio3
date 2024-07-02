@@ -43,10 +43,10 @@ bool ach::ParticleSystem::update()
 
 /***********************************************************************
      * ParticleSystem
-     * check
+     * process
 
 ***********************************************************************/
-bool ach::ParticleSystem::check(ach::Particle*)
+bool ach::ParticleSystem::process(ach::Particle*)
 {
 	return false;
 }
@@ -66,7 +66,7 @@ void ach::ParticleSystem::render(ach::RenderLayer layer, float frame)
 	{
 		particles[i]->update(frame);
 
-		if (!check(particles[i]))
+		if (!process(particles[i]))
 		{
 			delete particles[i];
 			particles.erase(particles.begin() + i);

@@ -8,8 +8,13 @@
 ***********************************************************************/
 ach::Particle::Particle()
 {
-	age   =  0.0f;
-	scale =  1.0f;
+	age    =  0.0f;
+	scale  =  1.0f;
+	color  = sf::Color::White;
+	pos    = sf::Vector2f(0.0f, 0.0f);
+	vel    = sf::Vector2f(0.0f, 0.0f);
+	acc    = sf::Vector2f(0.0f, 0.0f);
+	offset = sf::Vector2f(0.0f, 0.0f);
 }
 
 
@@ -46,8 +51,8 @@ void ach::Particle::update(float frame)
 ***********************************************************************/
 void ach::Particle::render(ach::RenderLayer layer)
 {
-	spr->setPosition(pos);
-	spr->setFillColor(clr);
+	spr->setPosition(pos + offset);
+	spr->setFillColor(color);
 	spr->setScale(scale, scale);
 
 	rm->draw(spr, layer);

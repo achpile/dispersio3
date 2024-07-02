@@ -7,8 +7,9 @@ namespace ach
 	struct Particle
 	{
 		sf::RectangleShape *spr;
-		sf::Color           clr;
+		sf::Color           color;
 
+		sf::Vector2f offset;
 		sf::Vector2f pos;
 		sf::Vector2f vel;
 		sf::Vector2f acc;
