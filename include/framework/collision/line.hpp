@@ -7,7 +7,8 @@ namespace ach
 	enum PhysType
 	{
 		ptSolid = 0,
-		ptPlatform
+		ptPlatform,
+		ptBarrier
 	};
 
 

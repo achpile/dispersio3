@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
+ <objecttype name="barrier" color="#f66151"/>
  <objecttype name="decor" color="#57e389"/>
  <objecttype name="platform" color="#e5a50a"/>
  <objecttype name="solid" color="#a51d2d"/>

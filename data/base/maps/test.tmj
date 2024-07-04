@@ -112,16 +112,24 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":192
-                        }, 
-                        {
-                         "x":0,
                          "y":0
                         }, 
                         {
                          "x":640,
                          "y":0
-                        }, 
+                        }],
+                 "rotation":0,
+                 "type":"solid",
+                 "visible":true,
+                 "width":0,
+                 "x":0,
+                 "y":32
+                }, 
+                {
+                 "height":0,
+                 "id":9,
+                 "name":"",
+                 "polyline":[
                         {
                          "x":640,
                          "y":192
@@ -224,6 +232,46 @@
                  "width":0,
                  "x":48,
                  "y":112
+                }, 
+                {
+                 "height":0,
+                 "id":10,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0,
+                         "y":-192
+                        }],
+                 "rotation":0,
+                 "type":"barrier",
+                 "visible":true,
+                 "width":0,
+                 "x":0,
+                 "y":224
+                }, 
+                {
+                 "height":0,
+                 "id":11,
+                 "name":"",
+                 "polyline":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":0,
+                         "y":192
+                        }],
+                 "rotation":0,
+                 "type":"barrier",
+                 "visible":true,
+                 "width":0,
+                 "x":640,
+                 "y":32
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -232,7 +280,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":9,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "properties":[
         {

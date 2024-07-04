@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="9">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="12">
  <editorsettings>
   <export target="../../../data/base/maps/test.tmj" format="json"/>
  </editorsettings>
@@ -76,10 +76,19 @@
    <polyline points="0,0 256,0"/>
   </object>
   <object id="5" type="solid" x="0" y="32">
-   <polyline points="0,192 0,0 640,0 640,192 480,192 480,144 448,144 448,160 416,160 416,192 240,192 144,144 80,144 32,192 0,192"/>
+   <polyline points="0,0 640,0"/>
+  </object>
+  <object id="9" type="solid" x="0" y="32">
+   <polyline points="640,192 480,192 480,144 448,144 448,160 416,160 416,192 240,192 144,144 80,144 32,192 0,192"/>
   </object>
   <object id="6" type="solid" x="48" y="112">
    <polyline points="0,0 0,-32 16,-32 48,-48 64,-48 96,-32 128,-32 128,0 0,0"/>
+  </object>
+  <object id="10" type="barrier" x="0" y="224">
+   <polyline points="0,0 0,-192"/>
+  </object>
+  <object id="11" type="barrier" x="640" y="32">
+   <polyline points="0,0 0,192"/>
   </object>
  </objectgroup>
 </map>
