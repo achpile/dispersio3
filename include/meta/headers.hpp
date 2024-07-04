@@ -44,6 +44,7 @@
 #include "framework/math/random.hpp"
 #include "framework/math/vector.hpp"
 #include "framework/math/projection.hpp"
+#include "framework/math/line.hpp"
 
 #include "framework/time/defines.hpp"
 #include "framework/time/timer.hpp"
@@ -102,6 +103,7 @@
 #include "framework/collision/phys.hpp"
 #include "framework/collision/line.hpp"
 #include "framework/collision/base.hpp"
+#include "framework/collision/algo.hpp"
 
 #include "misc/handler.hpp"
 #include "misc/camera.hpp"
