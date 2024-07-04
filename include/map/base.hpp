@@ -28,6 +28,7 @@ namespace ach
 		void renderTiles(sf::FloatRect viewport);
 
 		void process();
+
 		void collide();
 
 		void load(const char *filename);
