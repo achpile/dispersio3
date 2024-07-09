@@ -70,7 +70,7 @@ void ach::ParticleSystemSplash::add()
 	particles.push_back(new ach::Particle());
 
 	particles.back()->pos   = pos;
-	particles.back()->vel   = vector_set_len(vector_create(random_float(angle - cone, angle + cone)), speed);
+	particles.back()->vel   = vector_set_len(vector_create(angle + random_spread(cone)), random_float(speed / 2.0f, speed));
 	particles.back()->spr   = spr;
 	particles.back()->color = color;
 
