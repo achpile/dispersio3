@@ -67,7 +67,8 @@
             "@attr": {
                 "default": "none",
                 "enum": [
-                    "none"
+                    "none",
+                    "spark"
                 ],
                 "type": "enum"
             }

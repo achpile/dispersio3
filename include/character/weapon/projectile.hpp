@@ -6,6 +6,7 @@ namespace ach
 {
 	struct Projectile
 	{
+		ach::ProcessWorld   *world;
 		ach::DataProjectile *base;
 		ach::Model          *model;
 		ach::Tracer         *tracer;
@@ -18,16 +19,16 @@ namespace ach
 		float angle;
 
 
-		 Projectile(ach::DataProjectile *_base, sf::Vector2f pos);
+		 Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base, sf::Vector2f pos);
 		~Projectile();
 
 		bool update();
 		void render();
 
+		void hit(sf::Vector2f c, sf::Vector2f n);
+
 		void direction();
 		void rotation();
-
-		void hit();
 	};
 }
 

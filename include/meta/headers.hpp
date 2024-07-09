@@ -110,9 +110,11 @@
 
 #include "particle/stars.hpp"
 #include "particle/smoke.hpp"
+#include "particle/splash.hpp"
 
 #include "gfx/effect/pair.hpp"
 #include "gfx/effect/base.hpp"
+#include "gfx/effect/spark.hpp"
 
 #include "gfx/tracer/defines.hpp"
 #include "gfx/tracer/pair.hpp"

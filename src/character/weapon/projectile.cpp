@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Projectile::Projectile(ach::DataProjectile *_base, sf::Vector2f pos)
+ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base, sf::Vector2f pos)
 {
+	world   = _world;
 	base    = _base;
 	flip    = false;
 	alive   = true;
@@ -83,6 +84,19 @@ void ach::Projectile::render()
 
 /***********************************************************************
      * Projectile
+     * hit
+
+***********************************************************************/
+void ach::Projectile::hit(sf::Vector2f c, sf::Vector2f n)
+{
+	world->gfx.push_back(ach::Effect::create(base->impact, c, n, base->colorImpact));
+	sm->play(base->bump);
+}
+
+
+
+/***********************************************************************
+     * Projectile
      * rotation
 
 ***********************************************************************/
@@ -123,15 +137,4 @@ void ach::Projectile::direction()
 		model->scale.x = 1.0f;
 		model->angle   = angle;
 	}
-}
-
-
-
-/***********************************************************************
-     * Projectile
-     * hit
-
-***********************************************************************/
-void ach::Projectile::hit()
-{
 }

@@ -6,19 +6,20 @@ namespace ach
 {
 	enum EffectType
 	{
-		etNone = 0
+		etNone = 0,
+		etSpark
 	};
 
 
 	struct Effect
 	{
-		         Effect(sf::Vector2f pos);
+		         Effect(sf::Vector2f pos, sf::Vector2f dir, sf::Color color);
 		virtual ~Effect();
 
 		virtual bool update();
 		virtual void render() {};
 
-		static ach::Effect *create(ach::EffectType type, sf::Vector2f pos);
+		static ach::Effect *create(ach::EffectType type, sf::Vector2f pos, sf::Vector2f dir, sf::Color color);
 	};
 }
 

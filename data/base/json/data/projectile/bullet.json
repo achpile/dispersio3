@@ -1,7 +1,8 @@
 {
     "Bullet": {
         "Impact": {
-            "Sound": "sfx/projectile/bullet_bump.wav"
+            "Sound": "sfx/projectile/bullet_bump.wav",
+            "Type": "spark"
         },
         "Tracer": {
             "Type": "line"
