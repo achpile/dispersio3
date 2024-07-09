@@ -2,28 +2,24 @@
     "@attr": {
         "type": "multi"
     },
-    "Bouncy": {
+    "Bounces": {
         "@attr": {
-            "default": false,
-            "type": "boolean"
-        }
-    },
-    "Direction": {
-        "@attr": {
-            "default": false,
-            "type": "boolean"
-        }
-    },
-    "Rotation": {
-        "@attr": {
-            "default": false,
-            "type": "boolean"
+            "default": 0,
+            "max": 50,
+            "min": 0,
+            "type": "integer"
         }
     },
     "Color": {
         "@attr": {
             "default": "#FFFFFFFF",
             "type": "color"
+        }
+    },
+    "Direction": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
         }
     },
     "Explosive": {
@@ -83,6 +79,12 @@
             "max": 100,
             "min": 0,
             "type": "real"
+        }
+    },
+    "Rotation": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
         }
     },
     "Scale": {

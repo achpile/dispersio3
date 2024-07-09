@@ -30,6 +30,8 @@ namespace ach
 		void process();
 
 		void collide();
+		void collidePhys(ach::Phys *phys);
+		void collideProjectile(ach::Projectile *projectile);
 
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);

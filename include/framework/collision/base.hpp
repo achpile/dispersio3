@@ -14,7 +14,6 @@ namespace ach
 		 Collision();
 		~Collision();
 
-		void collide(ach::Phys *phys);
 		bool collideLines(ach::Phys *phys);
 		bool collideLine(ach::Phys *phys, ach::PhysLine *line);
 	};

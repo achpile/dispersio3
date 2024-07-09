@@ -8,8 +8,9 @@
 ***********************************************************************/
 ach::DataProjectile::DataProjectile(json_t *obj)
 {
-	radius      = json_object_get_real(obj, "Radius");
-	scale       = json_object_get_real(obj, "Scale" );
+	radius      = json_object_get_real   (obj, "Radius" );
+	scale       = json_object_get_real   (obj, "Scale"  );
+	bounces     = json_object_get_integer(obj, "Bounces");
 	explosion   = json_object_get_branch_real(obj, "Explosive.Radius");
 
 	sheet       = db->getSheet(json_object_get_string(obj, "Sheet"));
@@ -21,7 +22,6 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	colorImpact = str_to_color(json_object_get_branch_string(obj, "Impact.Color"));
 	colorTracer = str_to_color(json_object_get_branch_string(obj, "Tracer.Color"));
 
-	flag_set(&flags, ach::ProjectileFlag::pfBouncy   , json_object_get_boolean(obj, "Bouncy"   ));
 	flag_set(&flags, ach::ProjectileFlag::pfGravity  , json_object_get_boolean(obj, "Gravity"  ));
 	flag_set(&flags, ach::ProjectileFlag::pfDirection, json_object_get_boolean(obj, "Direction"));
 	flag_set(&flags, ach::ProjectileFlag::pfRotation , json_object_get_boolean(obj, "Rotation" ));

@@ -8,12 +8,13 @@
 ***********************************************************************/
 ach::Projectile::Projectile(ach::DataProjectile *_base, sf::Vector2f pos)
 {
-	base   = _base;
-	flip   = false;
-	alive  = true;
-	angle  = 0.0f;
-	model  = new ach::Model(base->sheet);
-	tracer = ach::Tracer::create(base->tracer, &phys);
+	base    = _base;
+	flip    = false;
+	alive   = true;
+	angle   = 0.0f;
+	bounces = base->bounces;
+	model   = new ach::Model(base->sheet);
+	tracer  = ach::Tracer::create(base->tracer, &phys);
 
 	phys.init(sf::Vector2f(0.0f, 0.0f));
 	phys.pos = pos;
@@ -117,4 +118,15 @@ void ach::Projectile::direction()
 		model->scale.x = 1.0f;
 		model->angle   = angle;
 	}
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * hit
+
+***********************************************************************/
+void ach::Projectile::hit()
+{
 }

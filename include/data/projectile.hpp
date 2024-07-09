@@ -6,11 +6,10 @@ namespace ach
 {
 	enum ProjectileFlag
 	{
-		pfBouncy    = 1 << 0,
-		pfExplosive = 1 << 1,
-		pfGravity   = 1 << 2,
-		pfDirection = 1 << 3,
-		pfRotation  = 1 << 4
+		pfExplosive = 1 << 0,
+		pfGravity   = 1 << 1,
+		pfDirection = 1 << 2,
+		pfRotation  = 1 << 3
 	};
 
 
@@ -31,6 +30,7 @@ namespace ach
 		float radius;
 		float scale;
 
+		int   bounces;
 		long  flags;
 
 

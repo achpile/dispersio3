@@ -13,6 +13,7 @@ namespace ach
 
 		bool  alive;
 		bool  flip;
+		int   bounces;
 		float angle;
 
 
@@ -24,6 +25,8 @@ namespace ach
 
 		void direction();
 		void rotation();
+
+		void hit();
 	};
 }
 
