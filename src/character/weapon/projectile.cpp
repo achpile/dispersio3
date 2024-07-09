@@ -51,9 +51,14 @@ ach::Projectile::~Projectile()
 ***********************************************************************/
 bool ach::Projectile::update()
 {
+	line.a = phys.pos;
+
 	phys.update();
 	model->update();
 	tracer->update();
+
+	line.b = phys.pos;
+	line.calc();
 
 	rotation();
 	direction();

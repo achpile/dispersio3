@@ -17,6 +17,7 @@ namespace ach
 		~Line();
 
 		void set(sf::Vector2f _a, sf::Vector2f _b);
+		void calc();
 	};
 }
 
