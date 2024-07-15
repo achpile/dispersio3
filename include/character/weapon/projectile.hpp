@@ -26,6 +26,7 @@ namespace ach
 		void render();
 
 		void hit(sf::Vector2f n);
+		void destroy();
 
 		void direction();
 		void rotation();

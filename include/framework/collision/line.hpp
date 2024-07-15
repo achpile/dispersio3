@@ -37,7 +37,6 @@ namespace ach
 		bool  collide(ach::Line *l);
 
 		sf::Vector2f offsetPhys();
-		sf::Vector2f offsetLine(ach::Line *l);
 
 		static bool sort(ach::PhysLine *a, ach::PhysLine *b);
 		static bool remove(ach::PhysLine *l);

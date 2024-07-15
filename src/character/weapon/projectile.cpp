@@ -98,6 +98,21 @@ void ach::Projectile::hit(sf::Vector2f n)
 	world->gfx.push_back(ach::Effect::create(base->impact, phys.pos, n, base->colorImpact));
 	sm->play(base->bump);
 
+	if (bounces--)
+		phys.vel = vector_mirror(phys.vel, n);
+	else
+		destroy();
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * destroy
+
+***********************************************************************/
+void ach::Projectile::destroy()
+{
 	alive = false;
 }
 

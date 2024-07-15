@@ -9,6 +9,7 @@ float         vector_angle(sf::Vector2f v);
 sf::Vector2f  vector_create(float a);
 sf::Vector2f  vector_perpendicular(sf::Vector2f v);
 sf::Vector2f  vector_alike(sf::Vector2f v, sf::Vector2f a);
+sf::Vector2f  vector_mirror(sf::Vector2f v, sf::Vector2f n);
 sf::Vector2f  vector_center(sf::FloatRect r);
 sf::Vector2f  vector_norm(sf::Vector2f v);
 sf::Vector2f  vector_set_len(sf::Vector2f v, float l);

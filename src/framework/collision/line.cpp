@@ -119,7 +119,7 @@ bool ach::PhysLine::check(ach::Line *l)
 ***********************************************************************/
 bool ach::PhysLine::collide(ach::Phys *p)
 {
-	if ((d == 0.0f) || (o == 0.0f))
+	if (math_epsilon(d) || (math_epsilon(o)))
 		return false;
 
 
@@ -158,10 +158,7 @@ bool ach::PhysLine::collide(ach::Line *l)
 	if (o == 0.0f)
 		return false;
 
-
-	sf::Vector2f offset = offsetLine(l);
-
-	l->b -= offset;
+	l->b -= vector_set_len(l->v, o);
 
 	return true;
 }
@@ -181,18 +178,6 @@ sf::Vector2f ach::PhysLine::offsetPhys()
 	else   result.y = d;
 
 	return result;
-}
-
-
-
-/***********************************************************************
-     * PhysLine
-     * offsetLine
-
-***********************************************************************/
-sf::Vector2f ach::PhysLine::offsetLine(ach::Line *l)
-{
-	return vector_set_len(-l->v, o);
 }
 
 
@@ -253,5 +238,5 @@ bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 ***********************************************************************/
 bool ach::PhysLine::remove(ach::PhysLine *l)
 {
-	return (l->d == 0.0f) || (l->o == 0.0f);
+	return (math_epsilon(l->d)) || (math_epsilon(l->o));
 }
