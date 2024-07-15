@@ -42,25 +42,25 @@ void ach::PhysLine::calc()
 
 /***********************************************************************
      * PhysLine
-     * dist
+     * check
 
 ***********************************************************************/
-bool ach::PhysLine::dist(ach::Phys *phys)
+bool ach::PhysLine::check(ach::Phys *p)
 {
 	d = 0.0f;
 	o = 0.0f;
 
-	if (type == ach::PhysType::ptPlatform && (v || phys->jumpdown || phys->vel.y < 0.0f))
+	if (type == ach::PhysType::ptPlatform && (v || p->jumpdown || p->vel.y < 0.0f))
 		return false;
 
-	if (!collision_box_vs_line(phys->rect, line))
+	if (!collision_box_vs_line(p->rect, line))
 		return false;
 
 
 	float left  = std::min(projection_vector(line.a, v), projection_vector(line.b, v));
 	float right = std::max(projection_vector(line.a, v), projection_vector(line.b, v));
 
-	o = std::min(projection_rect_tip(phys->rect, v), right) - std::max(projection_rect_pos(phys->rect, v), left);
+	o = std::min(projection_rect_tip(p->rect, v), right) - std::max(projection_rect_pos(p->rect, v), left);
 
 	if (o == 0.0f)
 		return false;
@@ -69,8 +69,8 @@ bool ach::PhysLine::dist(ach::Phys *phys)
 	float d1 = 0.0f;
 	float d2 = 0.0f;
 
-	d1 = diff(projection_rect_pos(phys->rect, v), projection_rect_pos(phys->rect, !v), projection_rect_tip(phys->rect, !v), false);
-	d2 = diff(projection_rect_tip(phys->rect, v), projection_rect_pos(phys->rect, !v), projection_rect_tip(phys->rect, !v), true );
+	d1 = diff(projection_rect_pos(p->rect, v), projection_rect_pos(p->rect, !v), projection_rect_tip(p->rect, !v), false);
+	d2 = diff(projection_rect_tip(p->rect, v), projection_rect_pos(p->rect, !v), projection_rect_tip(p->rect, !v), true );
 
 
 	d = (fabs(d1) > fabs(d2)) ? d1 : d2;
@@ -88,10 +88,58 @@ bool ach::PhysLine::dist(ach::Phys *phys)
 
 /***********************************************************************
      * PhysLine
+     * check
+
+***********************************************************************/
+bool ach::PhysLine::check(ach::Line *)
+{
+	d = 0.0f;
+	o = 0.0f;
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
      * collide
 
 ***********************************************************************/
-bool ach::PhysLine::collide(ach::Phys *phys)
+bool ach::PhysLine::collide(ach::Phys *p)
+{
+	if ((d == 0.0f) || (o == 0.0f))
+		return false;
+
+
+	sf::Vector2f offset = offsetPhys();
+
+	if (offset.y < 0.0f)
+		p->grounded = true;
+
+	if (offset.y != 0.0f)
+		p->vel.y = 0.0f;
+
+	if (offset.x != 0.0f)
+	{
+		p->moving = false;
+		p->vel.x  = 0.0f;
+	}
+
+	p->pos += offset;
+	p->calc();
+
+	return true;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * collide
+
+***********************************************************************/
+bool ach::PhysLine::collide(ach::Line *l)
 {
 	if (d == 0.0f)
 		return false;
@@ -100,24 +148,42 @@ bool ach::PhysLine::collide(ach::Phys *phys)
 		return false;
 
 
-	sf::Vector2f offset = offsetPhys();
+	sf::Vector2f offset = offsetLine(l);
 
-	if (offset.y < 0.0f)
-		phys->grounded = true;
-
-	if (offset.y != 0.0f)
-		phys->vel.y = 0.0f;
-
-	if (offset.x != 0.0f)
-	{
-		phys->moving = false;
-		phys->vel.x  = 0.0f;
-	}
-
-	phys->pos += offset;
-	phys->calc();
+	l->b -= offset;
 
 	return true;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * offsetPhys
+
+***********************************************************************/
+sf::Vector2f ach::PhysLine::offsetPhys()
+{
+	sf::Vector2f result(0.0f, 0.0f);
+
+	if (v) result.x = d;
+	else   result.y = d;
+
+	return result;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * offsetLine
+
+***********************************************************************/
+sf::Vector2f ach::PhysLine::offsetLine(ach::Line *)
+{
+	sf::Vector2f result(0.0f, 0.0f);
+
+	return result;
 }
 
 
@@ -161,27 +227,22 @@ float ach::PhysLine::value(float x)
 
 /***********************************************************************
      * PhysLine
-     * offset
-
-***********************************************************************/
-sf::Vector2f ach::PhysLine::offsetPhys()
-{
-	sf::Vector2f result(0.0f, 0.0f);
-
-	if (v) result.x = d;
-	else   result.y = d;
-
-	return result;
-}
-
-
-
-/***********************************************************************
-     * PhysLine
      * sort
 
 ***********************************************************************/
 bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 {
 	return a->o > b->o;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * remove
+
+***********************************************************************/
+bool ach::PhysLine::remove(ach::PhysLine *l)
+{
+	return (l->d == 0.0f) || (l->o == 0.0f);
 }

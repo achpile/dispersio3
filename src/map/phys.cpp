@@ -91,7 +91,13 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
 	std::vector<ach::PhysLine*> list;
 
 	collision->fill(&list);
-	collision->sort(&list, projectile->line.a);
+	collision->sort(&list, &projectile->line);
+
+	list_foreach(list)
+	{
+		if (list[i]->collide(&projectile->line))
+			return true;
+	}
 
 	return false;
 }

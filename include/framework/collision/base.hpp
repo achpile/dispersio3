@@ -15,7 +15,7 @@ namespace ach
 		void fill(std::vector<ach::PhysLine*> *list);
 
 		void sort(std::vector<ach::PhysLine*> *list);
-		void sort(std::vector<ach::PhysLine*> *list, sf::Vector2f v);
+		void sort(std::vector<ach::PhysLine*> *list, ach::Line *line);
 		void sort(std::vector<ach::PhysLine*> *list, ach::Phys *phys);
 	};
 }
