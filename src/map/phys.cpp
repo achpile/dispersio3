@@ -9,7 +9,7 @@
 void ach::Map::collide()
 {
 	list_foreach(characters)
-		collidePhys(&characters[i]->phys);
+		collidePhysSteps(&characters[i]->phys);
 
 	// collide bullets <-> characters
 
@@ -21,10 +21,10 @@ void ach::Map::collide()
 
 /***********************************************************************
      * Map
-     * collidePhys
+     * collidePhysSteps
 
 ***********************************************************************/
-void ach::Map::collidePhys(ach::Phys *phys)
+void ach::Map::collidePhysSteps(ach::Phys *phys)
 {
 	phys->grounded = false;
 
@@ -48,7 +48,7 @@ void ach::Map::collidePhys(ach::Phys *phys)
 		phys->pos += phys->vel * chunk;
 		phys->calc();
 
-		while (collision->collideLines(phys));
+		while (collidePhys(phys));
 
 		left -= chunk;
 	}
@@ -60,10 +60,38 @@ void ach::Map::collidePhys(ach::Phys *phys)
 
 /***********************************************************************
      * Map
+     * collidePhys
+
+***********************************************************************/
+bool ach::Map::collidePhys(ach::Phys *phys)
+{
+	std::vector<ach::PhysLine*> list;
+
+	collision->fill(&list);
+	collision->sort(&list, phys);
+
+	list_foreach(list)
+	{
+		if (list[i]->collide(phys))
+			return true;
+	}
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * Map
      * collideProjectile
 
 ***********************************************************************/
-void ach::Map::collideProjectile(ach::Projectile *)
+bool ach::Map::collideProjectile(ach::Projectile *projectile)
 {
-	
+	std::vector<ach::PhysLine*> list;
+
+	collision->fill(&list);
+	collision->sort(&list, projectile->line.a);
+
+	return false;
 }

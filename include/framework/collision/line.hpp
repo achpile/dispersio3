@@ -27,17 +27,16 @@ namespace ach
 		~PhysLine();
 
 		void  calc();
-		bool  check(ach::Phys *phys);
 		float diff(float x, float left, float right, bool max);
 		float value(float x);
 
-		sf::Vector2f offset();
-	};
+		bool  dist(ach::Phys *phys);
 
+		bool  collide(ach::Phys *phys);
 
-	struct PhysLineSort
-	{
-		bool operator()(ach::PhysLine *a, ach::PhysLine *b);
+		sf::Vector2f offsetPhys();
+
+		static bool sort(ach::PhysLine *a, ach::PhysLine *b);
 	};
 }
 

@@ -26,60 +26,52 @@ ach::Collision::~Collision()
 
 /***********************************************************************
      * Collision
-     * collideLines
+     * fill
 
 ***********************************************************************/
-bool ach::Collision::collideLines(ach::Phys *phys)
+void ach::Collision::fill(std::vector<ach::PhysLine*> *list)
 {
-	list_foreach(lines)
-		lines[i]->check(phys);
-
-	std::sort(lines.begin(), lines.end(), sort);
-
+	list->clear();
 
 	list_foreach(lines)
-	{
-		lines[i]->check(phys);
-
-		if (collideLine(phys, lines[i]))
-			return true;
-	}
-
-	return false;
+		list->push_back(lines[i]);
 }
 
 
 
 /***********************************************************************
      * Collision
-     * collideLine
+     * sort
 
 ***********************************************************************/
-bool ach::Collision::collideLine(ach::Phys *phys, ach::PhysLine *line)
+void ach::Collision::sort(std::vector<ach::PhysLine*> *list, ach::Phys *phys)
 {
-	if (line->d == 0.0f)
-		return false;
+	list_foreach(*list)
+		(*list)[i]->dist(phys);
 
-	if (line->o == 0.0f)
-		return false;
+	sort(list);
+}
 
 
-	sf::Vector2f offset = line->offset();
 
-	if (offset.y < 0.0f)
-		phys->grounded = true;
+/***********************************************************************
+     * Collision
+     * sort
 
-	if (offset.y != 0.0f)
-		phys->vel.y = 0.0f;
+***********************************************************************/
+void ach::Collision::sort(std::vector<ach::PhysLine*> *list, sf::Vector2f)
+{
+	sort(list);
+}
 
-	if (offset.x != 0.0f)
-	{
-		phys->moving = false;
-		phys->vel.x  = 0.0f;
-	}
 
-	phys->pos += offset;
-	phys->calc();
 
-	return true;
+/***********************************************************************
+     * Collision
+     * sort
+
+***********************************************************************/
+void ach::Collision::sort(std::vector<ach::PhysLine*> *list)
+{
+	std::sort(list->begin(), list->end(), ach::PhysLine::sort);
 }

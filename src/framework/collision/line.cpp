@@ -42,10 +42,10 @@ void ach::PhysLine::calc()
 
 /***********************************************************************
      * PhysLine
-     * check
+     * dist
 
 ***********************************************************************/
-bool ach::PhysLine::check(ach::Phys *phys)
+bool ach::PhysLine::dist(ach::Phys *phys)
 {
 	d = 0.0f;
 	o = 0.0f;
@@ -80,6 +80,42 @@ bool ach::PhysLine::check(ach::Phys *phys)
 		d = 0.0f;
 		return false;
 	}
+
+	return true;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * collide
+
+***********************************************************************/
+bool ach::PhysLine::collide(ach::Phys *phys)
+{
+	if (d == 0.0f)
+		return false;
+
+	if (o == 0.0f)
+		return false;
+
+
+	sf::Vector2f offset = offsetPhys();
+
+	if (offset.y < 0.0f)
+		phys->grounded = true;
+
+	if (offset.y != 0.0f)
+		phys->vel.y = 0.0f;
+
+	if (offset.x != 0.0f)
+	{
+		phys->moving = false;
+		phys->vel.x  = 0.0f;
+	}
+
+	phys->pos += offset;
+	phys->calc();
 
 	return true;
 }
@@ -128,7 +164,7 @@ float ach::PhysLine::value(float x)
      * offset
 
 ***********************************************************************/
-sf::Vector2f ach::PhysLine::offset()
+sf::Vector2f ach::PhysLine::offsetPhys()
 {
 	sf::Vector2f result(0.0f, 0.0f);
 
@@ -141,11 +177,11 @@ sf::Vector2f ach::PhysLine::offset()
 
 
 /***********************************************************************
-     * PhysLineSort
-     * operator()
+     * PhysLine
+     * sort
 
 ***********************************************************************/
-bool ach::PhysLineSort::operator()(ach::PhysLine *a, ach::PhysLine *b)
+bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 {
 	return a->o > b->o;
 }
