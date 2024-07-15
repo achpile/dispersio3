@@ -91,10 +91,21 @@ bool ach::PhysLine::check(ach::Phys *p)
      * check
 
 ***********************************************************************/
-bool ach::PhysLine::check(ach::Line *)
+bool ach::PhysLine::check(ach::Line *l)
 {
 	d = 0.0f;
 	o = 0.0f;
+
+	if (type != ach::PhysType::ptSolid)
+		return false;
+
+	sf::Vector2f c;
+
+	if (!collision_line_vs_line(*l, line, &c))
+		return false;
+
+	o = vector_len(l->b - c);
+	d = l->l - o;
 
 	return false;
 }
@@ -179,11 +190,9 @@ sf::Vector2f ach::PhysLine::offsetPhys()
      * offsetLine
 
 ***********************************************************************/
-sf::Vector2f ach::PhysLine::offsetLine(ach::Line *)
+sf::Vector2f ach::PhysLine::offsetLine(ach::Line *l)
 {
-	sf::Vector2f result(0.0f, 0.0f);
-
-	return result;
+	return vector_set_len(-l->v, o);
 }
 
 

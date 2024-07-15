@@ -52,6 +52,9 @@ ach::Projectile::~Projectile()
 ***********************************************************************/
 bool ach::Projectile::update()
 {
+	if (!alive)
+		return false;
+
 	line.a = phys.pos;
 
 	phys.update();
@@ -64,7 +67,7 @@ bool ach::Projectile::update()
 	rotation();
 	direction();
 
-	return alive;
+	return true;
 }
 
 
@@ -76,6 +79,9 @@ bool ach::Projectile::update()
 ***********************************************************************/
 void ach::Projectile::render()
 {
+	if (!alive)
+		return;
+
 	tracer->render();
 	model->render(phys.pos);
 }
@@ -87,10 +93,12 @@ void ach::Projectile::render()
      * hit
 
 ***********************************************************************/
-void ach::Projectile::hit(sf::Vector2f c, sf::Vector2f n)
+void ach::Projectile::hit(sf::Vector2f n)
 {
-	world->gfx.push_back(ach::Effect::create(base->impact, c, n, base->colorImpact));
+	world->gfx.push_back(ach::Effect::create(base->impact, phys.pos, n, base->colorImpact));
 	sm->play(base->bump);
+
+	alive = false;
 }
 
 

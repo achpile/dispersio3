@@ -16,12 +16,12 @@ ach::EffectSpark::EffectSpark(sf::Vector2f pos, sf::Vector2f dir, sf::Color colo
 	particle->pos     = pos;
 	particle->dir     = dir;
 	particle->color   = color;
-	particle->cone    = MATH_PI / 12.0f;
+	particle->cone    = MATH_PI / 2.0f;
 	particle->life    = 0.3f;
-	particle->speed   = 200.0f;
+	particle->speed   = 100.0f;
 	particle->gravity = true;
 
-	particle->init(5);
+	particle->init(10);
 }
 
 

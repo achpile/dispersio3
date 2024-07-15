@@ -47,4 +47,5 @@ void ach::Line::calc()
 {
 	v = b - a;
 	l = vector_len(v);
+	n = vector_norm(vector_perpendicular(v));
 }

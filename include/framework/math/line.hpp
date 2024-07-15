@@ -10,6 +10,7 @@ namespace ach
 		sf::Vector2f b;
 
 		sf::Vector2f v;
+		sf::Vector2f n;
 		float        l;
 
 

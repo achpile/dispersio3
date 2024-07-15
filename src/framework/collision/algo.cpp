@@ -107,15 +107,7 @@ bool collision_line_vs_line(ach::Line line, ach::Line solid, sf::Vector2f *c, sf
 	float n2 = ((line.a.y - solid.a.y) * line.v.x ) - ((line.a.x - solid.a.x) * line.v.y );
 
 	if (d == 0.0f)
-	{
-		if (n1 == 0.0f && n2 == 0.0f)
-			return false;
-
-		// get C
-		// get N
-
-		return true;
-	}
+		return false;
 
 
 	float r = n1 / d;
@@ -127,7 +119,7 @@ bool collision_line_vs_line(ach::Line line, ach::Line solid, sf::Vector2f *c, sf
 	sf::Vector2f coord = line.a + line.v * r;
 
 	if (c) *c = coord;
-	if (n) *n = vector_alike(vector_norm(vector_perpendicular(solid.v)), coord - line.a);
+	if (n) *n = vector_alike(vector_norm(solid.n), coord - line.a);
 
 	return true;
 }

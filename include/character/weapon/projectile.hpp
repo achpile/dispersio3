@@ -25,7 +25,7 @@ namespace ach
 		bool update();
 		void render();
 
-		void hit(sf::Vector2f c, sf::Vector2f n);
+		void hit(sf::Vector2f n);
 
 		void direction();
 		void rotation();

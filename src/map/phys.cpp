@@ -96,7 +96,11 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
 	list_foreach(list)
 	{
 		if (list[i]->collide(&projectile->line))
+		{
+			projectile->phys.pos = projectile->line.b;
+			projectile->hit(vector_alike(list[i]->line.n, -projectile->line.v));
 			return true;
+		}
 	}
 
 	return false;

@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ParticleSystemSplash::ParticleSystemSplash() : ParticleSystem(1.5f)
+ach::ParticleSystemSplash::ParticleSystemSplash() : ParticleSystem(1.0f)
 {
 	age     = 0.0f;
 	life    = 1.0f;
@@ -75,7 +75,7 @@ void ach::ParticleSystemSplash::add()
 	particles.back()->color = color;
 
 	if (gravity)
-		particles.back()->acc = sf::Vector2f(0.0f, PHYS_GRAVITY);
+		particles.back()->acc = sf::Vector2f(0.0f, PHYS_GRAVITY / 2.0f);
 }
 
 
