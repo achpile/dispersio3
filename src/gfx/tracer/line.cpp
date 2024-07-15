@@ -35,7 +35,7 @@ void ach::TracerLine::update()
 	for (int i = 0; i < TRACER_LINE_COUNT - 1; i++)
 		line[i].position = line[i + 1].position;
 
-	line[TRACER_LINE_COUNT - 1].position = phys->pos;
+	correct();
 }
 
 
@@ -65,4 +65,16 @@ void ach::TracerLine::init()
 		line[i].color.a  = (i + 1) * 255 / TRACER_LINE_COUNT;
 		line[i].position = phys->pos;
 	}
+}
+
+
+
+/***********************************************************************
+     * TracerLine
+     * correct
+
+***********************************************************************/
+void ach::TracerLine::correct()
+{
+	line[TRACER_LINE_COUNT - 1].position = phys->pos;
 }

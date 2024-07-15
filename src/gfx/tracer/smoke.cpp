@@ -35,8 +35,7 @@ ach::TracerSmoke::~TracerSmoke()
 ***********************************************************************/
 void ach::TracerSmoke::update()
 {
-	smoke->pos = phys->pos;
-
+	correct();
 	smoke->update();
 }
 
@@ -65,4 +64,16 @@ void ach::TracerSmoke::init()
 	smoke->color = color;
 
 	smoke->add();
+}
+
+
+
+/***********************************************************************
+     * TracerSmoke
+     * correct
+
+***********************************************************************/
+void ach::TracerSmoke::correct()
+{
+	smoke->pos = phys->pos;
 }

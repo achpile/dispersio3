@@ -152,10 +152,7 @@ bool ach::PhysLine::collide(ach::Phys *p)
 ***********************************************************************/
 bool ach::PhysLine::collide(ach::Line *l)
 {
-	if (d == 0.0f)
-		return false;
-
-	if (o == 0.0f)
+	if (math_epsilon(d) || (math_epsilon(o)))
 		return false;
 
 	l->b -= vector_set_len(l->v, o);

@@ -16,6 +16,7 @@ namespace ach
 		void render();
 
 		void init();
+		void correct();
 	};
 }
 

@@ -97,6 +97,7 @@ void ach::Projectile::hit(sf::Vector2f n)
 {
 	world->gfx.push_back(ach::Effect::create(base->impact, phys.pos, n, base->colorImpact));
 	sm->play(base->bump);
+	tracer->correct();
 
 	if (bounces--)
 		phys.vel = vector_mirror(phys.vel, n);

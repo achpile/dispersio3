@@ -76,6 +76,7 @@ void ach::Collision::sort(std::vector<ach::PhysLine*> *list, ach::Line *line)
 ***********************************************************************/
 void ach::Collision::sort(std::vector<ach::PhysLine*> *list)
 {
-	std::remove_if(list->begin(), list->end(), ach::PhysLine::remove);
+	list->erase(std::remove_if(list->begin(), list->end(), ach::PhysLine::remove), list->end());
+
 	std::sort(list->begin(), list->end(), ach::PhysLine::sort);
 }
