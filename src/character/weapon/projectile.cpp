@@ -52,6 +52,11 @@ ach::Projectile::~Projectile()
 ***********************************************************************/
 bool ach::Projectile::update()
 {
+	range -= line.l;
+
+	if (range <= 0.0f)
+		destroy();
+
 	if (!alive)
 		return false;
 

@@ -70,6 +70,7 @@ void ach::Weapon::shot()
 	{
 		ach::Projectile *proj = new ach::Projectile(world, base->projectile, pos);
 
+		proj->range    = base->range;
 		proj->phys.vel = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
 
 		if (proj->phys.vel.x < 0.0f)

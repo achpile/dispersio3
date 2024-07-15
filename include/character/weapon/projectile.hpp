@@ -17,6 +17,7 @@ namespace ach
 		bool  flip;
 		int   bounces;
 		float angle;
+		float range;
 
 
 		 Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base, sf::Vector2f pos);
