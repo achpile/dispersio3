@@ -52,11 +52,6 @@ ach::Projectile::~Projectile()
 ***********************************************************************/
 bool ach::Projectile::update()
 {
-	range -= line.l;
-
-	if (range <= 0.0f)
-		destroy();
-
 	if (!alive)
 		return false;
 
@@ -69,10 +64,15 @@ bool ach::Projectile::update()
 	line.b = phys.pos;
 	line.calc();
 
+	range -= line.l;
+
 	rotation();
 	direction();
 
-	return true;
+	if (range <= 0.0f)
+		destroy();
+
+	return alive;
 }
 
 
