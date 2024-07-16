@@ -31,6 +31,7 @@ namespace ach
 
 		void direction();
 		void rotation();
+		void explode();
 	};
 }
 

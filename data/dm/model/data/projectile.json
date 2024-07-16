@@ -22,7 +22,7 @@
             "type": "boolean"
         }
     },
-    "Explosive": {
+    "Explosion": {
         "@attr": {
             "type": "object"
         },
@@ -34,10 +34,17 @@
         },
         "Radius": {
             "@attr": {
-                "default": 0,
+                "default": 32,
                 "max": 100,
                 "min": 0,
                 "type": "real"
+            }
+        },
+        "Sheet": {
+            "@attr": {
+                "data": "Data.Sheet",
+                "default": "Explosion",
+                "type": "link"
             }
         }
     },
@@ -76,7 +83,7 @@
     },
     "Radius": {
         "@attr": {
-            "default": 0,
+            "default": 1,
             "max": 100,
             "min": 0,
             "type": "real"

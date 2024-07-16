@@ -119,6 +119,8 @@ void ach::Projectile::hit(sf::Vector2f n)
 ***********************************************************************/
 void ach::Projectile::destroy()
 {
+	explode();
+
 	alive = false;
 }
 
@@ -166,4 +168,17 @@ void ach::Projectile::direction()
 		model->scale.x = 1.0f;
 		model->angle   = angle;
 	}
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * explode
+
+***********************************************************************/
+void ach::Projectile::explode()
+{
+	if (!flag_get(base->flags, ach::ProjectileFlag::pfExplosive))
+		return;
 }

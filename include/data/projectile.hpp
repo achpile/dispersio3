@@ -16,6 +16,7 @@ namespace ach
 	struct DataProjectile : DataContent
 	{
 		ach::DataSheet  *sheet;
+		ach::DataSheet  *explosion;
 		ach::EffectType  impact;
 		ach::TracerType  tracer;
 
@@ -26,7 +27,7 @@ namespace ach
 		sf::Color        colorTracer;
 
 
-		float explosion;
+		float explosionR;
 		float radius;
 		float scale;
 
