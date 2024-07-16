@@ -181,4 +181,6 @@ void ach::Projectile::explode()
 {
 	if (!flag_get(base->flags, ach::ProjectileFlag::pfExplosive))
 		return;
+
+	world->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
 }

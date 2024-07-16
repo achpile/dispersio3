@@ -2,60 +2,54 @@
 
 
 /***********************************************************************
-     * EffectSpark
+     * EffectExplosion
      * constructor
 
 ***********************************************************************/
-ach::EffectSpark::EffectSpark(sf::Vector2f pos, sf::Vector2f dir, sf::Color color)
+ach::EffectExplosion::EffectExplosion(ach::DataSheet *sheet, sf::Vector2f _pos, float radius)
 {
-	particle = new ach::ParticleSystemSplash();
+	pos   = _pos;
+	model = new ach::Model(sheet);
 
-	particle->layer   = ach::RenderLayer::rlGame;
-	particle->source  = ach::TimeSource::tsFrame;
+	model->anim.loop = false;
 
-	particle->pos     = pos;
-	particle->dir     = dir;
-	particle->color   = color;
-	particle->cone    = MATH_PI / 2.0f;
-	particle->life    = 0.3f;
-	particle->speed   = 100.0f;
-	particle->gravity = true;
-
-	particle->init(10);
+	model->setScale(sheet->sheet->size.y / (2 * radius));
 }
 
 
 
 /***********************************************************************
-     * EffectSpark
+     * EffectExplosion
      * destructor
 
 ***********************************************************************/
-ach::EffectSpark::~EffectSpark()
+ach::EffectExplosion::~EffectExplosion()
 {
-	delete particle;
+	delete model;
 }
 
 
 
 /***********************************************************************
-     * EffectSpark
+     * EffectExplosion
      * update
 
 ***********************************************************************/
-bool ach::EffectSpark::update()
+bool ach::EffectExplosion::update()
 {
-	return particle->update();
+	model->update();
+
+	return model->anim.check();
 }
 
 
 
 /***********************************************************************
-     * EffectSpark
+     * EffectExplosion
      * render
 
 ***********************************************************************/
-void ach::EffectSpark::render()
+void ach::EffectExplosion::render()
 {
-	particle->render();
+	model->render(pos);
 }

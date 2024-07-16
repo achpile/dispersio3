@@ -4,14 +4,6 @@
 
 namespace ach
 {
-	enum TracerType
-	{
-		ttNone = 0,
-		ttLine,
-		ttSmoke
-	};
-
-
 	struct Tracer
 	{
 		ach::Phys *phys;

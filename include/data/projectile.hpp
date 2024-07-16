@@ -4,6 +4,21 @@
 
 namespace ach
 {
+	enum TracerType
+	{
+		ttNone = 0,
+		ttLine,
+		ttSmoke
+	};
+
+
+	enum EffectType
+	{
+		etNone = 0,
+		etSpark
+	};
+
+
 	enum ProjectileFlag
 	{
 		pfExplosive = 1 << 0,

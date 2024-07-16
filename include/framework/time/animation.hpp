@@ -22,6 +22,7 @@ namespace ach
 
 		void update();
 		void reset();
+		bool check();
 
 		void init(int _frames, float _rate);
 		void set(int _start, int _end, bool _loop, float _rate);

@@ -112,16 +112,6 @@
 #include "particle/smoke.hpp"
 #include "particle/splash.hpp"
 
-#include "gfx/effect/pair.hpp"
-#include "gfx/effect/base.hpp"
-#include "gfx/effect/spark.hpp"
-
-#include "gfx/tracer/defines.hpp"
-#include "gfx/tracer/pair.hpp"
-#include "gfx/tracer/base.hpp"
-#include "gfx/tracer/line.hpp"
-#include "gfx/tracer/smoke.hpp"
-
 #include "data/content.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"
@@ -132,6 +122,17 @@
 #include "data/base.hpp"
 
 #include "model/base.hpp"
+
+#include "gfx/effect/pair.hpp"
+#include "gfx/effect/base.hpp"
+#include "gfx/effect/spark.hpp"
+#include "gfx/effect/explosion.hpp"
+
+#include "gfx/tracer/defines.hpp"
+#include "gfx/tracer/pair.hpp"
+#include "gfx/tracer/base.hpp"
+#include "gfx/tracer/line.hpp"
+#include "gfx/tracer/smoke.hpp"
 
 #include "container/resources.hpp"
 #include "container/settings.hpp"

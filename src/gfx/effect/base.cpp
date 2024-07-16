@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Effect::Effect(sf::Vector2f, sf::Vector2f, sf::Color)
+ach::Effect::Effect()
 {
 }
 
@@ -44,9 +44,9 @@ ach::Effect* ach::Effect::create(ach::EffectType type, sf::Vector2f pos, sf::Vec
 {
 	switch (type)
 	{
-		case ach::EffectType::etNone : return new ach::Effect     (pos, dir, color);
+		case ach::EffectType::etNone : return new ach::Effect     ();
 		case ach::EffectType::etSpark: return new ach::EffectSpark(pos, dir, color);
 
-		default                      : return new ach::Effect     (pos, dir, color);
+		default                      : return new ach::Effect     ();
 	}
 }

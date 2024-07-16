@@ -4,16 +4,9 @@
 
 namespace ach
 {
-	enum EffectType
-	{
-		etNone = 0,
-		etSpark
-	};
-
-
 	struct Effect
 	{
-		         Effect(sf::Vector2f pos, sf::Vector2f dir, sf::Color color);
+		         Effect();
 		virtual ~Effect();
 
 		virtual bool update();
