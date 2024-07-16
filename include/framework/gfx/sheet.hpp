@@ -6,7 +6,7 @@ namespace ach
 {
 	struct Sheet
 	{
-		std::vector<sf::Sprite*>  spr;
+		std::vector<sf::Sprite*> spr;
 
 		sf::Texture  *tex;
 		sf::Vector2f  size;
