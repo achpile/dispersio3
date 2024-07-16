@@ -2,6 +2,6 @@
     "Explosion": {
         "Filename": "gfx/game/sheet/misc/explosion.png",
         "Frames": 30,
-        "Rate": 0.03
+        "Rate": 0.015
     }
 }

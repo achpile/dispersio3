@@ -71,7 +71,7 @@ bool ach::Animation::check()
 	if (loop)
 		return true;
 
-	return (frame == end);
+	return (frame != end);
 }
 
 
@@ -113,4 +113,6 @@ void ach::Animation::set(int _start, int _end, bool _loop, float _rate)
 
 	if (end == -1 || end >= frames)
 		end = frames - 1;
+
+	framer.set(rate);
 }
