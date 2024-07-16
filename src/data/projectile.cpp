@@ -29,7 +29,8 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 
 	flag_set(&flags, ach::ProjectileFlag::pfExplosive, json_object_get_branch_boolean(obj, "Explosion.Enable"));
 
-	sfml_load_sound(&bump, json_object_get_branch_string(obj, "Impact.Sound"));
+	sfml_load_sound(&sfxBump     , json_object_get_branch_string(obj, "Explosion.Sound"));
+	sfml_load_sound(&sfxExplosion, json_object_get_branch_string(obj, "Impact.Sound"   ));
 }
 
 
@@ -41,5 +42,6 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 ***********************************************************************/
 ach::DataProjectile::~DataProjectile()
 {
-	delete bump;
+	delete sfxBump;
+	delete sfxExplosion;
 }

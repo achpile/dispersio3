@@ -46,6 +46,12 @@
                 "default": "Explosion",
                 "type": "link"
             }
+        },
+        "Sound": {
+            "@attr": {
+                "default": "sfx/misc/explosion.wav",
+                "type": "filename"
+            }
         }
     },
     "Gravity": {

@@ -35,7 +35,8 @@ namespace ach
 		ach::EffectType  impact;
 		ach::TracerType  tracer;
 
-		sf::SoundBuffer *bump;
+		sf::SoundBuffer *sfxBump;
+		sf::SoundBuffer *sfxExplosion;
 
 		sf::Color        color;
 		sf::Color        colorImpact;
