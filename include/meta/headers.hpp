@@ -123,13 +123,11 @@
 
 #include "model/base.hpp"
 
-#include "gfx/effect/pair.hpp"
 #include "gfx/effect/base.hpp"
 #include "gfx/effect/spark.hpp"
 #include "gfx/effect/explosion.hpp"
 
 #include "gfx/tracer/defines.hpp"
-#include "gfx/tracer/pair.hpp"
 #include "gfx/tracer/base.hpp"
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"
@@ -148,9 +146,10 @@
 #include "character/body/base.hpp"
 #include "character/body/humanoid.hpp"
 
-#include "character/weapon/projectile.hpp"
-#include "character/weapon/base.hpp"
+#include "character/projectile/pair.hpp"
+#include "character/projectile/base.hpp"
 
+#include "character/weapon.hpp"
 #include "character/base.hpp"
 
 #include "map/object/base.hpp"

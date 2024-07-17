@@ -19,6 +19,14 @@ namespace ach
 	};
 
 
+	enum OrientType
+	{
+		otNone = 0,
+		otDirection,
+		otRotation
+	};
+
+
 	enum ProjectileFlag
 	{
 		pfExplosive = 1 << 0,
@@ -34,6 +42,7 @@ namespace ach
 		ach::DataSheet  *explosion;
 		ach::EffectType  impact;
 		ach::TracerType  tracer;
+		ach::OrientType  orient;
 
 		sf::SoundBuffer *sfxBump;
 		sf::SoundBuffer *sfxExplosion;
