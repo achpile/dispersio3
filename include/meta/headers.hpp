@@ -123,11 +123,12 @@
 
 #include "model/base.hpp"
 
-#include "gfx/effect/base.hpp"
-#include "gfx/effect/spark.hpp"
-#include "gfx/effect/explosion.hpp"
+#include "gfx/base.hpp"
+#include "gfx/explosion.hpp"
 
-#include "gfx/tracer/defines.hpp"
+#include "gfx/impact/base.hpp"
+#include "gfx/impact/spark.hpp"
+
 #include "gfx/tracer/base.hpp"
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"

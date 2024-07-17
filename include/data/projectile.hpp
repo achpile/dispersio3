@@ -12,10 +12,10 @@ namespace ach
 	};
 
 
-	enum EffectType
+	enum ImpactType
 	{
-		etNone = 0,
-		etSpark
+		itNone = 0,
+		itSpark
 	};
 
 
@@ -40,7 +40,7 @@ namespace ach
 	{
 		ach::DataSheet  *sheet;
 		ach::DataSheet  *explosion;
-		ach::EffectType  impact;
+		ach::ImpactType  impact;
 		ach::TracerType  tracer;
 		ach::OrientType  orient;
 

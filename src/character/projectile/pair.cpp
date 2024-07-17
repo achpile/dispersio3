@@ -17,15 +17,15 @@ ach::Pair pairTracer[] =
 
 
 /***********************************************************************
-     * pairEffect
+     * pairImpact
 
 ***********************************************************************/
-ach::Pair pairEffect[] =
+ach::Pair pairImpact[] =
 {
-	{.num = ach::EffectType::etNone , .str = "none" },
-	{.num = ach::EffectType::etSpark, .str = "spark"},
+	{.num = ach::ImpactType::itNone , .str = "none" },
+	{.num = ach::ImpactType::itSpark, .str = "spark"},
 
-	{.num = ach::EffectType::etNone , .str = NULL   },
+	{.num = ach::ImpactType::itNone , .str = NULL   },
 };
 
 

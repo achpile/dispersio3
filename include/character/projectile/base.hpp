@@ -32,6 +32,9 @@ namespace ach
 		void direction();
 		void rotation();
 		void explode();
+
+		ach::Tracer *createTracer();
+		ach::Impact *createImpact(sf::Vector2f n);
 	};
 }
 

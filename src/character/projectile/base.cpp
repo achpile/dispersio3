@@ -15,7 +15,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 	angle   = 0.0f;
 	bounces = base->bounces;
 	model   = new ach::Model(base->sheet);
-	tracer  = ach::Tracer::create(base->tracer, &phys);
+	tracer  = createTracer();
 
 	phys.init(sf::Vector2f(0.0f, 0.0f));
 	phys.pos = pos;
@@ -66,11 +66,11 @@ bool ach::Projectile::update()
 
 	range -= line.l;
 
-	rotation();
-	direction();
-
 	if (range <= 0.0f)
 		destroy();
+
+	rotation();
+	direction();
 
 	return alive;
 }
@@ -100,7 +100,7 @@ void ach::Projectile::render()
 ***********************************************************************/
 void ach::Projectile::hit(sf::Vector2f n)
 {
-	world->gfx.push_back(ach::Effect::create(base->impact, phys.pos, n, base->colorImpact));
+	world->gfx.push_back(createImpact(n));
 	sm->play(base->sfxBump);
 	tracer->correct();
 
@@ -184,4 +184,41 @@ void ach::Projectile::explode()
 
 	world->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
 	sm->play(base->sfxExplosion);
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * createTracer
+
+***********************************************************************/
+ach::Tracer* ach::Projectile::createTracer()
+{
+	switch (base->tracer)
+	{
+		case ach::TracerType::ttNone : return new ach::Tracer     (&phys);
+		case ach::TracerType::ttLine : return new ach::TracerLine (&phys);
+		case ach::TracerType::ttSmoke: return new ach::TracerSmoke(&phys);
+
+		default                      : return new ach::Tracer     (&phys);
+	}
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * createImpact
+
+***********************************************************************/
+ach::Impact* ach::Projectile::createImpact(sf::Vector2f n)
+{
+	switch (base->impact)
+	{
+		case ach::ImpactType::itNone : return new ach::Impact     (phys.pos, n, base->colorImpact);
+		case ach::ImpactType::itSpark: return new ach::ImpactSpark(phys.pos, n, base->colorImpact);
+
+		default                      : return new ach::Impact     (phys.pos, n, base->colorImpact);
+	}
 }

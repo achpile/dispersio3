@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::TracerLine::TracerLine(ach::Phys *_phys) : Tracer(_phys)
 {
-	line.resize(TRACER_LINE_COUNT);
+	line.resize(10);
 	line.setPrimitiveType(sf::PrimitiveType::LineStrip);
 }
 
@@ -32,7 +32,7 @@ ach::TracerLine::~TracerLine()
 ***********************************************************************/
 void ach::TracerLine::update()
 {
-	for (int i = 0; i < TRACER_LINE_COUNT - 1; i++)
+	for (unsigned int i = 0; i < line.getVertexCount() - 1; i++)
 		line[i].position = line[i + 1].position;
 
 	correct();
@@ -59,10 +59,10 @@ void ach::TracerLine::render()
 ***********************************************************************/
 void ach::TracerLine::init()
 {
-	for (int i = 0; i < TRACER_LINE_COUNT; i++)
+	for (unsigned int i = 0; i < line.getVertexCount(); i++)
 	{
 		line[i].color    = color;
-		line[i].color.a  = (i + 1) * 255 / TRACER_LINE_COUNT;
+		line[i].color.a  = (i + 1) * 255 / line.getVertexCount();
 		line[i].position = phys->pos;
 	}
 }
@@ -76,5 +76,5 @@ void ach::TracerLine::init()
 ***********************************************************************/
 void ach::TracerLine::correct()
 {
-	line[TRACER_LINE_COUNT - 1].position = phys->pos;
+	line[line.getVertexCount() - 1].position = phys->pos;
 }

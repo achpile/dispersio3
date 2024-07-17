@@ -1,5 +1,5 @@
-#ifndef __GFX_EFFECT_EXPLOSION
-#define __GFX_EFFECT_EXPLOSION
+#ifndef __GFX_EXPLOSION
+#define __GFX_EXPLOSION
 
 
 namespace ach

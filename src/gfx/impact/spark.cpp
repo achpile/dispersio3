@@ -2,11 +2,11 @@
 
 
 /***********************************************************************
-     * EffectSpark
+     * ImpactSpark
      * constructor
 
 ***********************************************************************/
-ach::EffectSpark::EffectSpark(sf::Vector2f pos, sf::Vector2f dir, sf::Color color)
+ach::ImpactSpark::ImpactSpark(sf::Vector2f _pos, sf::Vector2f _dir, sf::Color _color) : Impact(_pos, _dir, _color)
 {
 	particle = new ach::ParticleSystemSplash();
 
@@ -27,11 +27,11 @@ ach::EffectSpark::EffectSpark(sf::Vector2f pos, sf::Vector2f dir, sf::Color colo
 
 
 /***********************************************************************
-     * EffectSpark
+     * ImpactSpark
      * destructor
 
 ***********************************************************************/
-ach::EffectSpark::~EffectSpark()
+ach::ImpactSpark::~ImpactSpark()
 {
 	delete particle;
 }
@@ -39,11 +39,11 @@ ach::EffectSpark::~EffectSpark()
 
 
 /***********************************************************************
-     * EffectSpark
+     * ImpactSpark
      * update
 
 ***********************************************************************/
-bool ach::EffectSpark::update()
+bool ach::ImpactSpark::update()
 {
 	return particle->update();
 }
@@ -51,11 +51,11 @@ bool ach::EffectSpark::update()
 
 
 /***********************************************************************
-     * EffectSpark
+     * ImpactSpark
      * render
 
 ***********************************************************************/
-void ach::EffectSpark::render()
+void ach::ImpactSpark::render()
 {
 	particle->render();
 }

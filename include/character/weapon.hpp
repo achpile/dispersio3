@@ -1,5 +1,5 @@
-#ifndef __CHARACTER_WEAPON_BASE
-#define __CHARACTER_WEAPON_BASE
+#ifndef __CHARACTER_WEAPON
+#define __CHARACTER_WEAPON
 
 
 namespace ach

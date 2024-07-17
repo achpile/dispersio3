@@ -16,7 +16,7 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	sheet       = db->getSheet(json_object_get_string(obj, "Sheet"));
 	explosion   = db->getSheet(json_object_get_branch_string(obj, "Explosion.Sheet"));
 
-	impact      = (ach::EffectType)pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"), pairEffect);
+	impact      = (ach::ImpactType)pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"), pairImpact);
 	tracer      = (ach::TracerType)pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"), pairTracer);
 
 	color       = str_to_color(json_object_get_string(obj, "Color"));
