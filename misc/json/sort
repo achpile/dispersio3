@@ -1,29 +1,141 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+##### IMPORT #####
+
 import sys
 import json
 import getopt
 import os
 
 
+##### GLOBALS #####
+
 minimize = False
 verbose  = False
+mode     = "JSON"
 
+
+##### USAGE #####
 
 def usage():
     print("JSON sorting script\n")
+    print("\t-M : sort maps")
+    print("\t-A : sort all")
+    print()
     print("\t-v : verbose output")
     print("\t-m : minimize")
     print("\t-h : usage")
 
 
-def sort(filename):
+##### DELETE #####
+
+def delete(j, key):
+    if key in j:
+        j.pop(key)
+
+##### CUT #####
+
+def cut_properties(p):
+    if "properties" in p:
+        for i in p["properties"]:
+            delete(i, "type")
+
+
+def cut_object(o):
+    cut_properties(o)
+
+    delete(o, "id")
+    delete(o, "rotation")
+    delete(o, "visible")
+
+    if "polyline" in o:
+        delete(o, "name")
+        delete(o, "width")
+        delete(o, "height")
+
+
+def cut_tile(t):
+    cut_properties(t)
+
+    delete(t, "imageheight")
+    delete(t, "imagewidth")
+
+
+def cut_tileset(t):
+    cut_properties(t)
+
+    delete(t, "columns")
+    delete(t, "grid")
+    delete(t, "margin")
+    delete(t, "name")
+    delete(t, "spacing")
+    delete(t, "tilecount")
+    delete(t, "tileheight")
+    delete(t, "tilewidth")
+
+    for i in t["tiles"]:
+        cut_tile(i)
+
+
+def cut_layer(l):
+    cut_properties(l)
+
+    delete(l, "height")
+    delete(l, "id")
+    delete(l, "opacity")
+    delete(l, "visible")
+    delete(l, "x")
+    delete(l, "y")
+    delete(l, "width")
+    delete(l, "draworder")
+
+    if "objects" in l:
+        for o in l["objects"]:
+            cut_object(o)
+
+
+def cut(j):
+    cut_properties(j)
+
+    delete(j, "compressionlevel")
+    delete(j, "infinite")
+    delete(j, "nextlayerid")
+    delete(j, "nextobjectid")
+    delete(j, "orientation")
+    delete(j, "renderorder")
+    delete(j, "tiledversion")
+    delete(j, "type")
+    delete(j, "version")
+
+    for i in j["layers"]:
+        cut_layer(i)
+
+    for i in j["tilesets"]:
+        cut_tileset(i)
+
+    return j
+
+
+##### SORT #####
+
+def sort(filename, tmj = False):
     if verbose:
         print("Sorting: ", filename);
 
     f = open(filename, "r")
     a = {}
+
+    try:
+        j = json.loads(f.read())
+    except ValueError as e:
+        print("Wrong file {0}: {1}".format(filename, e))
+        return
+    finally:
+        f.close()
+
+    if tmj:
+        j = cut(j)
 
     if minimize:
         a['indent'] = None
@@ -31,22 +143,16 @@ def sort(filename):
     else:
         a['indent'] = 4
 
-    try:
-        s = json.dumps(json.loads(f.read()), sort_keys = True, ensure_ascii = False, **a)
-    except ValueError as e:
-        print("Wrong file {0}: {1}".format(filename, e))
-        return
-    finally:
-        f.close()
-
     f = open(filename, "w")
-    f.write(s)
+    f.write(json.dumps(j, sort_keys = True, ensure_ascii = False, **a))
     f.write("\n")
     f.close()
 
 
+##### MAIN #####
+
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "mvh")
+    opts, args = getopt.getopt(sys.argv[1:], "mvhMA")
 except getopt.GetoptError as err:
     print(err)
     usage()
@@ -58,6 +164,10 @@ for arg, opt in opts:
         minimize = True
     elif arg == "-v":
         verbose = True
+    elif arg == "-M":
+        mode = "Maps"
+    elif arg == "-A":
+        mode = "All"
     elif arg == "-h":
         usage()
         sys.exit(0)
@@ -68,6 +178,12 @@ if args:
 
 
 for root, dirs, files in os.walk("data"):
-    for file in files:
-        if file.endswith(".json"):
-             sort(os.path.join(root, file))
+    if mode in ["JSON", "All"]:
+        for file in files:
+            if file.endswith(".json"):
+                sort(os.path.join(root, file))
+
+    if mode in ["Maps", "All"]:
+        for file in files:
+            if file.endswith(".tmj"):
+                sort(os.path.join(root, file), True)
