@@ -3,19 +3,71 @@
 
 import sys
 import json
+import getopt
+import os
 
-for arg in sys.argv[1:]:
-    f = open(arg, "r")
+
+minimize = False
+verbose  = False
+
+
+def usage():
+    print("JSON sorting script\n")
+    print("\t-v : verbose output")
+    print("\t-m : minimize")
+    print("\t-h : usage")
+
+
+def sort(filename):
+    if verbose:
+        print("Sorting: ", filename);
+
+    f = open(filename, "r")
+    a = {}
+
+    if minimize:
+        a['indent'] = None
+        a['separators'] = (",", ":")
+    else:
+        a['indent'] = 4
 
     try:
-        s = json.dumps(json.loads(f.read()), sort_keys=True, indent=4, ensure_ascii=False)
+        s = json.dumps(json.loads(f.read()), sort_keys = True, ensure_ascii = False, **a)
     except ValueError as e:
-        print("Wrong file {0}: {1}".format(arg, e))
-        continue
+        print("Wrong file {0}: {1}".format(filename, e))
+        return
     finally:
         f.close()
 
-    f = open(arg, "w")
+    f = open(filename, "w")
     f.write(s)
     f.write("\n")
     f.close()
+
+
+try:
+    opts, args = getopt.getopt(sys.argv[1:], "mvh")
+except getopt.GetoptError as err:
+    print(err)
+    usage()
+    sys.exit(2)
+
+
+for arg, opt in opts:
+    if arg == "-m":
+        minimize = True
+    elif arg == "-v":
+        verbose = True
+    elif arg == "-h":
+        usage()
+        sys.exit(0)
+
+if args:
+    usage()
+    sys.exit(2)
+
+
+for root, dirs, files in os.walk("data"):
+    for file in files:
+        if file.endswith(".json"):
+             sort(os.path.join(root, file))
