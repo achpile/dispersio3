@@ -26,7 +26,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 	tracer->color = base->colorTracer;
 	tracer->init();
 
-	if (flag_get(base->flags, ach::ProjectileFlag::pfGravity))
+	if (base->gravity)
 		phys.acc.y = PHYS_GRAVITY / 4.0f;
 }
 
@@ -178,7 +178,7 @@ void ach::Projectile::direction()
 ***********************************************************************/
 void ach::Projectile::explode()
 {
-	if (!flag_get(base->flags, ach::ProjectileFlag::pfExplosive))
+	if (!base->explosive)
 		return;
 
 	world->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));

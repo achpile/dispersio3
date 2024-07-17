@@ -27,13 +27,6 @@ namespace ach
 	};
 
 
-	enum ProjectileFlag
-	{
-		pfExplosive = 1 << 0,
-		pfGravity   = 1 << 1
-	};
-
-
 	struct DataProjectile : DataContent
 	{
 		ach::DataSheet  *sheet;
@@ -54,8 +47,9 @@ namespace ach
 		float radius;
 		float scale;
 
+		bool  explosive;
+		bool  gravity;
 		int   bounces;
-		long  flags;
 
 
 		 DataProjectile(json_t *obj);
