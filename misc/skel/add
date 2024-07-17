@@ -1,34 +1,82 @@
 #!/bin/bash
 
 function help() {
-	echo -e "Syntax: $0 t path"
+	echo -e "Syntax: $0 <t> <path> (class)"
 	echo -e "\tt = [s i b] - src, include, both"
 	echo -e "\tpath - prefix"
+	echo -e "\class - optional class name"
 	exit
 }
 
 
+function inc() {
+	mkdir -p include/`dirname "$1"`
+
+	GUARD=`echo ${1^^} | sed "s/\//_/g"`
+
+	cat <<EOF > include/$1.hpp
+#ifndef __$GUARD
+#define __$GUARD
+
+
+namespace ach
+{
+	struct $2
+	{
+		 $2();
+		~$2();
+	};
+}
+
+#endif
+EOF
+}
+
+
+function src() {
+	mkdir -p src/`dirname "$1"`
+
+	cat <<EOF > src/$1.cpp
+#include "meta/headers.hpp"
+
+
+/***********************************************************************
+     * $2
+     * constructor
+
+***********************************************************************/
+ach::$2::$2()
+{
+}
+
+
+
+/***********************************************************************
+     * $2
+     * destructor
+
+***********************************************************************/
+ach::$2::~$2()
+{
+}
+EOF
+}
+
+
+if [ ! -z "$3" ]; then
+	CLASS="$3"
+else
+	CLASS="Class"
+fi
+
+
 if [ "$1" = "s" ]; then
-	SRC="1"
+	src "$2" "$CLASS"
 elif [ "$1" = "i" ]; then
-	INC="1"
+	inc "$2" "$CLASS"
 elif [ "$1" = "b" ]; then
-	SRC="1"
-	INC="1"
+	src "$2" "$CLASS"
+	inc "$2" "$CLASS"
 else
 	help
-fi
-
-
-if [ ! -z "$INC" ]; then
-	mkdir -p include/`dirname "$2"`
-	cp `dirname "$0"`/skel.hpp include/$2.hpp
-
-	GUARD=`echo ${2^^} | sed "s/\//_/g"`
-	sed -i "s/__SKEL/__$GUARD/" include/$2.hpp
-fi
-
-if [ ! -z "$SRC" ]; then
-	mkdir -p src/`dirname "$2"`
-	cp `dirname "$0"`/skel.cpp src/$2.cpp
 fi
