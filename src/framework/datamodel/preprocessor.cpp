@@ -144,9 +144,17 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 		{
 			res = json_preprocess_dir(entry.path().filename().c_str(), path, true);
 		}
+		else
+		{
+			continue;
+		}
+
 
 		if (res)
+		{
 			json_merge(obj, json_preprocess(res, path));
+			json_decref(res);
+		}
 	}
 
 	return obj;
