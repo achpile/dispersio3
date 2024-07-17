@@ -30,9 +30,7 @@ namespace ach
 	enum ProjectileFlag
 	{
 		pfExplosive = 1 << 0,
-		pfGravity   = 1 << 1,
-		pfDirection = 1 << 2,
-		pfRotation  = 1 << 3
+		pfGravity   = 1 << 1
 	};
 
 

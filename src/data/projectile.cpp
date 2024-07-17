@@ -18,14 +18,13 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 
 	impact      = (ach::ImpactType)pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"), pairImpact);
 	tracer      = (ach::TracerType)pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"), pairTracer);
+	orient      = (ach::OrientType)pair_get_enum(json_object_get_string       (obj, "Orientation"), pairOrient);
 
 	color       = str_to_color(json_object_get_string(obj, "Color"));
 	colorImpact = str_to_color(json_object_get_branch_string(obj, "Impact.Color"));
 	colorTracer = str_to_color(json_object_get_branch_string(obj, "Tracer.Color"));
 
 	flag_set(&flags, ach::ProjectileFlag::pfGravity  , json_object_get_boolean(obj, "Gravity"  ));
-	flag_set(&flags, ach::ProjectileFlag::pfDirection, json_object_get_boolean(obj, "Direction"));
-	flag_set(&flags, ach::ProjectileFlag::pfRotation , json_object_get_boolean(obj, "Rotation" ));
 
 	flag_set(&flags, ach::ProjectileFlag::pfExplosive, json_object_get_branch_boolean(obj, "Explosion.Enable"));
 

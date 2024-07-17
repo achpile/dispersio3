@@ -16,12 +16,6 @@
             "type": "color"
         }
     },
-    "Direction": {
-        "@attr": {
-            "default": false,
-            "type": "boolean"
-        }
-    },
     "Explosion": {
         "@attr": {
             "type": "object"
@@ -87,18 +81,23 @@
             }
         }
     },
+    "Orientation": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "direction",
+                "rotation"
+            ],
+            "type": "enum"
+        }
+    },
     "Radius": {
         "@attr": {
             "default": 1,
             "max": 100,
             "min": 0,
             "type": "real"
-        }
-    },
-    "Rotation": {
-        "@attr": {
-            "default": false,
-            "type": "boolean"
         }
     },
     "Scale": {

@@ -69,8 +69,13 @@ bool ach::Projectile::update()
 	if (range <= 0.0f)
 		destroy();
 
-	rotation();
-	direction();
+	switch (base->orient)
+	{
+		case ach::OrientType::otDirection: direction(); break;
+		case ach::OrientType::otRotation : rotation() ; break;
+		case ach::OrientType::otNone     :              break;
+		default                          :              break;
+	}
 
 	return alive;
 }
@@ -133,9 +138,6 @@ void ach::Projectile::destroy()
 ***********************************************************************/
 void ach::Projectile::rotation()
 {
-	if (!flag_get(base->flags, ach::ProjectileFlag::pfRotation))
-		return;
-
 	angle += phys.vel.x * tm->frame * 4.0f;
 
 	model->angle = angle;
@@ -150,9 +152,6 @@ void ach::Projectile::rotation()
 ***********************************************************************/
 void ach::Projectile::direction()
 {
-	if (!flag_get(base->flags, ach::ProjectileFlag::pfDirection))
-		return;
-
 	if (vector_len(phys.vel) == 0.0f)
 		return;
 
