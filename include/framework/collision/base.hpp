@@ -8,9 +8,15 @@ namespace ach
 	{
 		std::vector<ach::PhysLine*> lines;
 
+		ach::Quadrant ***quad;
+		sf::Vector2i     size;
+		sf::Vector2i     area;
+
 
 		 Collision();
 		~Collision();
+
+		void split(sf::Vector2i _size, sf::Vector2i _area);
 
 		void fill(std::vector<ach::PhysLine*> *list);
 

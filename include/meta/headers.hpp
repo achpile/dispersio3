@@ -102,6 +102,7 @@
 #include "framework/collision/pair.hpp"
 #include "framework/collision/phys.hpp"
 #include "framework/collision/line.hpp"
+#include "framework/collision/quadrant.hpp"
 #include "framework/collision/base.hpp"
 #include "framework/collision/algo.hpp"
 
