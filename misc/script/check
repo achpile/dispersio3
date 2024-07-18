@@ -1,0 +1,48 @@
+#!/bin/bash
+
+########################################################################
+#
+# Checking project status
+#
+########################################################################
+
+NORMAL="\033[0m"
+PURPLE="\033[1;35m"
+YELLOW="\033[0;33m"
+GREEN="\033[0;32m"
+CYAN="\033[1;36m"
+RED="\033[1;31m"
+
+########################################################################
+
+echo
+echo -e $YELLOW "\tProject status\n" $NORMAL
+
+STATUS_DEF=`grep -rn "ifndef" src include | grep hpp | sed "s/include\//__/" | sed "s/\:.\:\#ifndef//" | sed "s/\.hpp//" | tr a-z A-Z | sed "s/\//_/g" | while read A B; do if [ "$A" != "$B" ]; then echo "$A != $B"; fi; done`
+STATUS_LINES=`find ./ -name *.[ch]pp | while read A; do cat $A; done | wc -l`
+STATUS_FILES=`find ./ -name *.[ch]pp | wc -l`
+STATUS_COMMITS=`git log --oneline | wc -l`
+STATUS_DAYS=`git log --format=format:\"%ad\" --date=format:\"%Y.%m.%d\" | sort -u | wc -l`
+STATUS_SIZE=`du -hs --exclude=.git/* . | sed "s/\t.*//"`
+STATUS_FIRST=`git rev-list --max-parents=0 HEAD`
+STATUS_AGE=`git show -s --format=%cr $STATUS_FIRST`
+STATUS_DATE=`git show -s --format=%cd --date=format:'%d %B %Y' $STATUS_FIRST`
+
+echo -en $GREEN"Checking headers   : "$NORMAL
+if [ -z "$STATUS_DEF" ]
+then
+	echo -e $YELLOW"good"$NORMAL
+else
+	echo
+	echo -e $RED"$STATUS_DEF"$NORMAL
+	echo
+fi
+
+echo
+echo -e $PURPLE"Total files  :"$NORMAL $CYAN"$STATUS_FILES"$NORMAL
+echo -e $PURPLE"Total lines  :"$NORMAL $CYAN"$STATUS_LINES"$NORMAL
+echo -e $PURPLE"Total commits:"$NORMAL $CYAN"$STATUS_COMMITS"$NORMAL
+echo -e $PURPLE"Total days   :"$NORMAL $CYAN"$STATUS_DAYS"$NORMAL
+echo -e $PURPLE"Total size   :"$NORMAL $CYAN"$STATUS_SIZE"$NORMAL
+echo
+echo -e $GREEN"Created:"$NORMAL $YELLOW"$STATUS_AGE ($STATUS_DATE)"$NORMAL

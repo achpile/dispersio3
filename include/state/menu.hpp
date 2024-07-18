@@ -1,5 +1,5 @@
-#ifndef __SKEL
-#define __SKEL
+#ifndef __STATE_MENU
+#define __STATE_MENU
 
 
 namespace ach
