@@ -46,8 +46,8 @@ def cut_object(o):
     cut_properties(o)
 
     delete(o, "id")
-    delete(o, "rotation")
     delete(o, "visible")
+    delete(o, "rotation")
 
     if "polyline" in o:
         delete(o, "name")
@@ -58,21 +58,21 @@ def cut_object(o):
 def cut_tile(t):
     cut_properties(t)
 
-    delete(t, "imageheight")
     delete(t, "imagewidth")
+    delete(t, "imageheight")
 
 
 def cut_tileset(t):
     cut_properties(t)
 
-    delete(t, "columns")
-    delete(t, "grid")
-    delete(t, "margin")
     delete(t, "name")
+    delete(t, "grid")
+    delete(t, "columns")
+    delete(t, "margin")
     delete(t, "spacing")
     delete(t, "tilecount")
-    delete(t, "tileheight")
     delete(t, "tilewidth")
+    delete(t, "tileheight")
 
     for i in t["tiles"]:
         cut_tile(i)
@@ -81,13 +81,13 @@ def cut_tileset(t):
 def cut_layer(l):
     cut_properties(l)
 
-    delete(l, "height")
     delete(l, "id")
-    delete(l, "opacity")
-    delete(l, "visible")
     delete(l, "x")
     delete(l, "y")
     delete(l, "width")
+    delete(l, "height")
+    delete(l, "visible")
+    delete(l, "opacity")
     delete(l, "draworder")
 
     if "objects" in l:
@@ -104,9 +104,9 @@ def cut(j):
     delete(j, "nextobjectid")
     delete(j, "orientation")
     delete(j, "renderorder")
-    delete(j, "tiledversion")
     delete(j, "type")
     delete(j, "version")
+    delete(j, "tiledversion")
 
     for i in j["layers"]:
         cut_layer(i)
@@ -121,7 +121,10 @@ def cut(j):
 
 def sort(filename, tmj = False):
     if verbose:
-        print("Sorting: ", filename);
+        if tmj:
+            print("Cutting: ", filename);
+        else
+            print("Sorting: ", filename);
 
     f = open(filename, "r")
     a = {}
