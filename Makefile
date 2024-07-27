@@ -1,9 +1,11 @@
 PROJECT     = dispersio3
 INCLUDE_DIR = $(PWD)/include
+HEADER      = include/meta/headers.hpp
 OBJS        = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
 NPROCS      = $(shell grep -c ^processor /proc/cpuinfo)
 TOTAL       = $(words $(OBJS))
 LEN         = $(shell echo -n ${TOTAL} | wc -c)
+PCH         = $(HEADER).gch
 
 CMAKE       = CMakeFiles           \
               CMakeCache.txt       \
@@ -13,7 +15,7 @@ CMAKE       = CMakeFiles           \
 DATA        = settings.json        \
               logs/
 
-GARBAGE     = $(OBJS) $(PROJECT) $(CMAKE) $(DATA)
+GARBAGE     = $(PCH) $(OBJS) $(PROJECT) $(CMAKE) $(DATA)
 
 CC          = @g++
 STRIP       = @strip
@@ -46,7 +48,7 @@ CFLAGS      = -Wall            \
               -I$(INCLUDE_DIR)
 
 
-all: info
+all: info $(PCH)
 	$(MAKE) $(PROJECT)
 
 
@@ -78,6 +80,11 @@ $(PROJECT): $(OBJS)
 	$(ECHO) $(CYAN) Stripping $(PROJECT) $(NORMAL)
 	$(STRIP) $(PROJECT)
 
+
+$(PCH) : $(HEADER)
+	$(ECHO) $(GREEN) "  Compiling main header:"$(NORMAL)" $(<)"
+	$(ECHO)
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 .cpp.o:
 	$(ECHO) $(GREEN) "  Compiling" $(NORMAL)$(PROGRESS)$(GREEN) ": $(<)" $(NORMAL)

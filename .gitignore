@@ -1,5 +1,6 @@
 # Compiled Object files
 *.o
+*.gch
 dispersio3
 
 # Game saved data
