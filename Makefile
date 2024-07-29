@@ -1,52 +1,52 @@
-PROJECT     = dispersio3
-INCLUDE_DIR = $(PWD)/include
-HEADER      = include/meta/headers.hpp
-OBJ         = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
-HPP         = $(shell find include/ -type f -name '*.hpp')
-NPROCS      = $(shell grep -c ^processor /proc/cpuinfo)
-TOTAL       = $(words $(OBJ))
-LEN         = $(shell echo -n ${TOTAL} | wc -c)
-PCH         = $(HEADER).gch
+PROJECT  = dispersio3
+INCLUDE  = $(PWD)/include
+HEADER   = $(INCLUDE)/meta/headers.hpp
+OBJ      = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
+HPP      = $(shell find include/ -type f -name '*.hpp')
+NPROCS   = $(shell grep -c ^processor /proc/cpuinfo)
+TOTAL    = $(words $(OBJ))
+LEN      = $(shell echo -n ${TOTAL} | wc -c)
+PCH      = $(HEADER).gch
 
-CMAKE       = CMakeFiles           \
-              CMakeCache.txt       \
-              cmake_install.cmake  \
-              install_manifest.txt
+CMAKE    = CMakeFiles           \
+           CMakeCache.txt       \
+           cmake_install.cmake  \
+           install_manifest.txt
 
-DATA        = settings.json        \
-              logs/
+DATA     = settings.json        \
+           logs/
 
-GARBAGE     = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
+GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
 
-CC          = @g++
-STRIP       = @strip
-MAKE        = @make -j${NPROCS} --no-print-directory
-ECHO        = @echo
-CLEAN       = @rm -rf
-PROGRESS    = \[`echo $(OBJ) | sed "s/\ /\n/g" | grep -n $@ | cut -f1 -d: | tr -d '\n' | xargs -0 printf "%0$(LEN)d"`\/$(TOTAL)\]
+CC       = @g++
+STRIP    = @strip
+MAKE     = @make -j${NPROCS} --no-print-directory
+ECHO     = @echo
+CLEAN    = @rm -rf
+PROGRESS = \[`echo $(OBJ) | sed "s/\ /\n/g" | grep -n $@ | cut -f1 -d: | tr -d '\n' | xargs -0 printf "%0$(LEN)d"`\/$(TOTAL)\]
 
-NORMAL      = "\033[0m"
-PURPLE      = "\033[1;35m"
-YELLOW      = "\033[0;33m"
-GREEN       = "\033[0;32m"
-CYAN        = "\033[1;36m"
-RED         = "\033[1;31m"
+NORMAL   = "\033[0m"
+PURPLE   = "\033[1;35m"
+YELLOW   = "\033[0;33m"
+GREEN    = "\033[0;32m"
+CYAN     = "\033[1;36m"
+RED      = "\033[1;31m"
 
-LDFLAGS     = -static-libstdc++ \
-              -static-libgcc    \
-              -lstdc++fs        \
-              -lsfml-graphics   \
-              -lsfml-window     \
-              -lsfml-system     \
-              -lsfml-audio      \
-              -lm               \
-              -ljansson
+LDFLAGS  = -static-libstdc++ \
+           -static-libgcc    \
+           -lstdc++fs        \
+           -lsfml-graphics   \
+           -lsfml-window     \
+           -lsfml-system     \
+           -lsfml-audio      \
+           -lm               \
+           -ljansson
 
-CFLAGS      = -Wall            \
-              -Wextra          \
-              -Werror          \
-              -std=c++17       \
-              -I$(INCLUDE_DIR)
+CFLAGS   = -Wall            \
+           -Wextra          \
+           -Werror          \
+           -std=c++17       \
+           -I$(INCLUDE_DIR)
 
 
 all: info
