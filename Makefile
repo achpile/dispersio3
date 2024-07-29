@@ -1,5 +1,5 @@
 PROJECT  = dispersio3
-INCLUDE  = $(PWD)/include
+INCLUDE  = include
 HEADER   = $(INCLUDE)/meta/headers.hpp
 OBJ      = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
 HPP      = $(shell find include/ -type f -name '*.hpp')
@@ -46,7 +46,7 @@ CFLAGS   = -Wall            \
            -Wextra          \
            -Werror          \
            -std=c++17       \
-           -I$(INCLUDE_DIR)
+           -I$(INCLUDE)
 
 
 all: info
