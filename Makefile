@@ -1,9 +1,10 @@
 PROJECT     = dispersio3
 INCLUDE_DIR = $(PWD)/include
 HEADER      = include/meta/headers.hpp
-OBJS        = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
+OBJ        = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
+HPP         = $(shell find include/ -type f -name '*.hpp')
 NPROCS      = $(shell grep -c ^processor /proc/cpuinfo)
-TOTAL       = $(words $(OBJS))
+TOTAL       = $(words $(OBJ))
 LEN         = $(shell echo -n ${TOTAL} | wc -c)
 PCH         = $(HEADER).gch
 
@@ -15,14 +16,14 @@ CMAKE       = CMakeFiles           \
 DATA        = settings.json        \
               logs/
 
-GARBAGE     = $(PCH) $(OBJS) $(PROJECT) $(CMAKE) $(DATA)
+GARBAGE     = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
 
 CC          = @g++
 STRIP       = @strip
 MAKE        = @make -j${NPROCS} --no-print-directory
 ECHO        = @echo
 CLEAN       = @rm -rf
-PROGRESS    = \[`echo $(OBJS) | sed "s/\ /\n/g" | grep -n $@ | cut -f1 -d: | tr -d '\n' | xargs -0 printf "%0$(LEN)d"`\/$(TOTAL)\]
+PROGRESS    = \[`echo $(OBJ) | sed "s/\ /\n/g" | grep -n $@ | cut -f1 -d: | tr -d '\n' | xargs -0 printf "%0$(LEN)d"`\/$(TOTAL)\]
 
 NORMAL      = "\033[0m"
 PURPLE      = "\033[1;35m"
@@ -48,7 +49,7 @@ CFLAGS      = -Wall            \
               -I$(INCLUDE_DIR)
 
 
-all: info $(PCH)
+all: info
 	$(MAKE) $(PROJECT)
 
 
@@ -72,19 +73,19 @@ info:
 	$(ECHO)
 
 
-$(PROJECT): $(OBJS)
+$(PROJECT): $(OBJ)
 	$(ECHO)
 	$(ECHO) $(CYAN) Linking $(PROJECT) $(NORMAL)
-	$(CC) $(OBJS) -o $(PROJECT) $(LDFLAGS)
+	$(CC) $(OBJ) -o $(PROJECT) $(LDFLAGS)
 
 	$(ECHO) $(CYAN) Stripping $(PROJECT) $(NORMAL)
 	$(STRIP) $(PROJECT)
 
-
-$(PCH) : $(HEADER)
-	$(ECHO) $(GREEN) "  Compiling main header:"$(NORMAL)" $(<)"
+$(OBJ) : $(PCH)
+$(PCH) : $(HPP)
+	$(ECHO) $(GREEN) "  Compiling main header:"$(NORMAL)" $(HEADER)"
 	$(ECHO)
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $(HEADER)
 
 .cpp.o:
 	$(ECHO) $(GREEN) "  Compiling" $(NORMAL)$(PROGRESS)$(GREEN) ": $(<)" $(NORMAL)
