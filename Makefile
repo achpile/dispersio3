@@ -1,7 +1,7 @@
 PROJECT     = dispersio3
 INCLUDE_DIR = $(PWD)/include
 HEADER      = include/meta/headers.hpp
-OBJ        = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
+OBJ         = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
 HPP         = $(shell find include/ -type f -name '*.hpp')
 NPROCS      = $(shell grep -c ^processor /proc/cpuinfo)
 TOTAL       = $(words $(OBJ))
