@@ -1,12 +1,19 @@
 PROJECT  = dispersio3
+
 INCLUDE  = include
+
+CPP      = $(shell find src/        -type f -name '*.cpp')
+HPP      = $(shell find $(INCLUDE)/ -type f -name '*.hpp')
+OBJ      = $(patsubst %.cpp,%.o, $(CPP))
+
 HEADER   = $(INCLUDE)/meta/headers.hpp
-OBJ      = $(patsubst %.cpp,%.o,$(sort $(shell find src/ -type f -name '*.cpp')))
-HPP      = $(shell find include/ -type f -name '*.hpp')
-NPROCS   = $(shell grep -c ^processor /proc/cpuinfo)
+PCH      = $(HEADER).gch
+
 TOTAL    = $(words $(OBJ))
 LEN      = $(shell echo -n ${TOTAL} | wc -c)
-PCH      = $(HEADER).gch
+
+NPROCS   = $(shell grep -c ^processor /proc/cpuinfo)
+
 
 CMAKE    = CMakeFiles           \
            CMakeCache.txt       \

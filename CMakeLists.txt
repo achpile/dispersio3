@@ -1,36 +1,58 @@
-CMAKE_MINIMUM_REQUIRED ( VERSION 2.8 )
-SET ( PROJECT_NAME dispersio3 )
-PROJECT ( ${PROJECT_NAME} )
+CMAKE_MINIMUM_REQUIRED ( VERSION 3.0 )
 
-INCLUDE_DIRECTORIES ( "include" )
+PROJECT ( dispersio3 )
+
+SET ( PROJECT_CFLAGS "-std=c++17" )
+SET ( PROJECT_LFLAGS "-L./lib -Wl,-rpath,./lib/" )
+SET ( PROJECT_LIBS   sfml-audio sfml-graphics sfml-window sfml-system m jansson stdc++fs )
+
+SET ( PLATFORM_RESOURCE "" )
+SET ( PLATFORM_CFLAGS   "" )
+SET ( PLATFORM_LFLAGS   "" )
+SET ( PLATFORM_LIBS     "" )
+
+SET ( PROJECT_INCLUDE "include" )
+SET ( PROJECT_HEADER  "${PROJECT_INCLUDE}/meta/headers.hpp" )
+
+INCLUDE_DIRECTORIES ( ${PROJECT_INCLUDE} )
 FILE ( GLOB_RECURSE SRC "src/*.cpp" )
 
 
 IF ( WIN32 )
 
-        SET ( CMAKE_RESOURCE   "misc/icon/icon.o" )
-        SET ( CMAKE_CXX_FLAGS  "-DSFML_STATIC -s -std=c++17" )
-        SET ( CMAKE_EXE_LINKER_FLAGS  "-mwindows -static-libgcc -static-libstdc++ -static -Wl,-Bstatic -Wl,-rpath,./lib/" )
-        SET ( CMAKE_LINK_LIBS steam_api sfml-audio-s sfml-graphics-s sfml-window-s sfml-system-s winmm opengl32 gdi32 freetype jpeg opengl32 openal32 pthread FLAC vorbisfile vorbisenc vorbis ogg m jansson stdc++fs )
-        ADD_CUSTOM_COMMAND ( OUTPUT misc/icon/icon.o COMMAND ${CMAKE_RC_COMPILER} -Imisc/icon -imisc/icon/icon.rc -o misc/icon/icon.o )
+        SET ( PLATFORM_RESOURCE "misc/icon/icon.o" )
+        SET ( PLATFORM_CFLAGS   "-s" )
+        SET ( PLATFORM_LFLAGS   "-mwindows -static-libgcc -static-libstdc++" )
+
+        ADD_CUSTOM_COMMAND ( OUTPUT ${PLATFORM_RESOURCE} COMMAND ${CMAKE_RC_COMPILER} -Imisc/icon -imisc/icon/icon.rc -o ${PLATFORM_RESOURCE} )
 
 ELSEIF ( APPLE )
 
-        SET ( CMAKE_RESOURCE  "" )
-        SET ( CMAKE_CXX_FLAGS  "-std=c++17 -stdlib=libc++ -mmacosx-version-min=10.7" )
-        SET ( CMAKE_EXE_LINKER_FLAGS  "-lc++ -L./lib -Wl,-rpath,./lib/" )
-        SET ( CMAKE_LINK_LIBS steam_api sfml-audio sfml-graphics sfml-window sfml-system m jansson stdc++fs )
+        SET ( PLATFORM_CFLAGS "-stdlib=libc++ -mmacosx-version-min=10.7" )
+        SET ( PLATFORM_LIBS   c++ )
 
 ELSEIF ( UNIX )
 
-        SET ( CMAKE_RESOURCE  "" )
-        SET ( CMAKE_CXX_FLAGS  "-s -std=c++17" )
-        SET ( CMAKE_EXE_LINKER_FLAGS  "-s -static-libgcc -static-libstdc++ -L./lib -Wl,-rpath,./lib/" )
-        SET ( CMAKE_LINK_LIBS steam_api sfml-audio sfml-graphics sfml-window sfml-system m jansson stdc++fs )
+        SET ( PLATFORM_CFLAGS   "-s" )
+        SET ( PLATFORM_LFLAGS   "-static-libgcc -static-libstdc++" )
 
 ENDIF ( )
 
 
-ADD_EXECUTABLE ( ${PROJECT_NAME} ${SRC} ${CMAKE_RESOURCE} )
-TARGET_LINK_LIBRARIES ( ${PROJECT_NAME}  ${CMAKE_LINK_LIBS} )
-INSTALL ( TARGETS ${PROJECT_NAME} RUNTIME DESTINATION . )
+SET ( CMAKE_CXX_FLAGS         "${PROJECT_CFLAGS} ${PLATFORM_CFLAGS}" )
+SET ( CMAKE_EXE_LINKER_FLAGS  "${PROJECT_LFLAGS} ${PLATFORM_LFLAGS}" )
+SET ( CMAKE_LINK_LIBS          ${PROJECT_LIBS}   ${PLATFORM_LIBS} )
+
+ADD_EXECUTABLE ( ${CMAKE_PROJECT_NAME} ${SRC} ${PLATFORM_RESOURCE} )
+
+
+IF ( CMAKE_VERSION VERSION_GREATER_EQUAL "3.16.0" )
+
+        TARGET_PRECOMPILE_HEADERS ( ${CMAKE_PROJECT_NAME} PUBLIC ${PROJECT_HEADER} )
+
+ENDIF ( )
+
+
+TARGET_LINK_LIBRARIES ( ${CMAKE_PROJECT_NAME}  ${CMAKE_LINK_LIBS} )
+
+INSTALL ( TARGETS ${CMAKE_PROJECT_NAME} RUNTIME DESTINATION . )
