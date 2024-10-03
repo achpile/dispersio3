@@ -20,4 +20,8 @@ sf::Vector2i  vector_mult_i(sf::Vector2i a, sf::Vector2i b);
 sf::Vector2f  vector_json_coord(json_t *j, const char *x = "x", const char *y = "y");
 sf::FloatRect vector_json_rect (json_t *j);
 
+sf::Vector2f  vector_tile_coord (int x, int y, int size);
+sf::Vector2f  vector_tile_center(int x, int y, int size);
+sf::Vector2f  vector_tile_bottom(int x, int y, int size);
+
 #endif

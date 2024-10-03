@@ -76,7 +76,6 @@
 #include "framework/gfx/sheet.hpp"
 #include "framework/gfx/layer.hpp"
 
-#include "framework/manager/defines.hpp"
 #include "framework/manager/render.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"

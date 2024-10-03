@@ -8,9 +8,9 @@
 ***********************************************************************/
 ach::RenderManager::RenderManager()
 {
-	bg   = new ach::Layer(RENDER_LAYER_BG_X  , RENDER_LAYER_BG_Y  );
-	game = new ach::Layer(RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
-	gui  = new ach::Layer(RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y );
+	bg   = new ach::Layer();
+	game = new ach::Layer();
+	gui  = new ach::Layer();
 }
 
 
@@ -25,37 +25,6 @@ ach::RenderManager::~RenderManager()
 	delete bg;
 	delete game;
 	delete gui;
-}
-
-
-
-/***********************************************************************
-     * RenderManager
-     * getLayer
-
-***********************************************************************/
-ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
-{
-	switch (layer)
-	{
-		case ach::RenderLayer::rlBG  : return bg;
-		case ach::RenderLayer::rlGame: return game;
-		case ach::RenderLayer::rlGUI : return gui;
-	}
-
-	return NULL;
-}
-
-
-
-/***********************************************************************
-     * RenderManager
-     * draw
-
-***********************************************************************/
-void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf::RenderStates states)
-{
-	getLayer(layer)->draw(drawable, states);
 }
 
 
@@ -122,10 +91,53 @@ void ach::RenderManager::setView(sf::View view)
 
 /***********************************************************************
      * RenderManager
+     * draw
+
+***********************************************************************/
+void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf::RenderStates states)
+{
+	getLayer(layer)->draw(drawable, states);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * initLayer
+
+***********************************************************************/
+void ach::RenderManager::initLayer(ach::RenderLayer layer, int width, int height)
+{
+	getLayer(layer)->init(width, height);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * getLayer
+
+***********************************************************************/
+ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
+{
+	switch (layer)
+	{
+		case ach::RenderLayer::rlBG  : return bg;
+		case ach::RenderLayer::rlGame: return game;
+		case ach::RenderLayer::rlGUI : return gui;
+	}
+
+	return NULL;
+}
+
+
+
+/***********************************************************************
+     * RenderManager
      * transform
 
 ***********************************************************************/
-sf::Vector2f ach::RenderManager::transform(sf::Vector2f v, ach::RenderLayer layer)
+sf::Vector2f ach::RenderManager::transform(ach::RenderLayer layer, sf::Vector2f v)
 {
-	return getLayer(layer)->spr->getInverseTransform().transformPoint(v.x, v.y);
+	return getLayer(layer)->transform(v);
 }

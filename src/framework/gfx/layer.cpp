@@ -6,18 +6,12 @@
      * constructor
 
 ***********************************************************************/
-ach::Layer::Layer(int width, int height)
+ach::Layer::Layer()
 {
 	spr = new sf::Sprite();
 	tex = new sf::RenderTexture();
 
-	tex->create(width, height);
-	tex->setRepeated(false);
-	tex->setActive(true);
-	tex->setSmooth(true);
-
-	spr->setTexture(tex->getTexture());
-	spr->setOrigin(sf::Vector2f(tex->getSize()) / 2.0f);
+	initialized = false;
 }
 
 
@@ -37,24 +31,21 @@ ach::Layer::~Layer()
 
 /***********************************************************************
      * Layer
-     * clear
+     * init
 
 ***********************************************************************/
-void ach::Layer::clear(sf::Color color)
+void ach::Layer::init(int width, int height)
 {
-	tex->clear(color);
-}
+	tex->create(width, height);
+	tex->setRepeated(false);
+	tex->setActive(true);
+	tex->setSmooth(true);
 
+	spr->setTexture(tex->getTexture());
+	spr->setOrigin(sf::Vector2f(width / 2.0f, height / 2.0f));
 
-
-/***********************************************************************
-     * Layer
-     * display
-
-***********************************************************************/
-void ach::Layer::display()
-{
-	tex->display();
+	size        = sf::Vector2i(width, height);
+	initialized = true;
 }
 
 
@@ -66,8 +57,11 @@ void ach::Layer::display()
 ***********************************************************************/
 void ach::Layer::resize(sf::RenderWindow *window)
 {
-	float scale = std::min((float)window->getSize().x / (float)tex->getSize().x,
-	                       (float)window->getSize().y / (float)tex->getSize().y);
+	if (!initialized)
+		return;
+
+	float scale = std::min((float)window->getSize().x / size.x,
+	                       (float)window->getSize().y / size.y);
 
 	spr->setPosition(sf::Vector2f(window->getSize()) / 2.0f);
 	spr->setScale(scale, scale);
@@ -82,6 +76,9 @@ void ach::Layer::resize(sf::RenderWindow *window)
 ***********************************************************************/
 void ach::Layer::setView(sf::View view)
 {
+	if (!initialized)
+		return;
+
 	tex->setView(view);
 }
 
@@ -94,6 +91,9 @@ void ach::Layer::setView(sf::View view)
 ***********************************************************************/
 void ach::Layer::render(sf::RenderTarget *target)
 {
+	if (!initialized)
+		return;
+
 	target->draw(*spr);
 }
 
@@ -106,5 +106,53 @@ void ach::Layer::render(sf::RenderTarget *target)
 ***********************************************************************/
 void ach::Layer::draw(sf::Drawable *drawable, sf::RenderStates states)
 {
+	if (!initialized)
+		return;
+
 	tex->draw(*drawable, states);
+}
+
+
+
+/***********************************************************************
+     * Layer
+     * clear
+
+***********************************************************************/
+void ach::Layer::clear(sf::Color color)
+{
+	if (!initialized)
+		return;
+
+	tex->clear(color);
+}
+
+
+
+/***********************************************************************
+     * Layer
+     * display
+
+***********************************************************************/
+void ach::Layer::display()
+{
+	if (!initialized)
+		return;
+
+	tex->display();
+}
+
+
+
+/***********************************************************************
+     * Layer
+     * transform
+
+***********************************************************************/
+sf::Vector2f ach::Layer::transform(sf::Vector2f v)
+{
+	if (!initialized)
+		return v;
+
+	return spr->getInverseTransform().transformPoint(v.x, v.y);
 }

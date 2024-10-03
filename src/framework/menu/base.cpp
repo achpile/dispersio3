@@ -96,7 +96,7 @@ void ach::Menu::event(sf::Event e)
 	switch (e.type)
 	{
 		case sf::Event::MouseMoved:
-			hover(rm->transform(sf::Vector2f(e.mouseMove.x, e.mouseMove.y), ach::RenderLayer::rlGUI));
+			hover(rm->transform(ach::RenderLayer::rlGUI, sf::Vector2f(e.mouseMove.x, e.mouseMove.y)));
 			break;
 
 
@@ -104,7 +104,7 @@ void ach::Menu::event(sf::Event e)
 			if ((e.mouseButton.button != sf::Mouse::Button::Left) && (e.mouseButton.button != sf::Mouse::Button::Right))
 				break;
 
-			click(rm->transform(sf::Vector2f(e.mouseButton.x, e.mouseButton.y), ach::RenderLayer::rlGUI), e.mouseButton.button == sf::Mouse::Button::Left);
+			click(rm->transform(ach::RenderLayer::rlGUI, sf::Vector2f(e.mouseButton.x, e.mouseButton.y)), e.mouseButton.button == sf::Mouse::Button::Left);
 			break;
 
 		case sf::Event::KeyPressed:

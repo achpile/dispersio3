@@ -4,6 +4,14 @@
 
 namespace ach
 {
+	enum SheetOrigin
+	{
+		soNone,
+		soCenter,
+		soBottom
+	};
+
+
 	struct Sheet
 	{
 		std::vector<sf::Sprite*> spr;
@@ -14,10 +22,11 @@ namespace ach
 		unsigned int  frames;
 
 
-		 Sheet(const char *filename, unsigned int _frames, bool centered);
+		 Sheet(const char *filename, unsigned int _frames, ach::SheetOrigin origin);
 		~Sheet();
 
-		sf::Sprite *getFrame(unsigned int frame);
+		sf::Sprite   *getFrame(unsigned int frame);
+		sf::Vector2f  getOrigin(ach::SheetOrigin origin);
 	};
 }
 

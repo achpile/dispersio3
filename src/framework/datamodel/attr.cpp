@@ -11,7 +11,7 @@ ach::JSONtype json_attr_get_type(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return ach::JSONtype::jtUnknown;
 	}
 
@@ -19,7 +19,7 @@ ach::JSONtype json_attr_get_type(json_t *obj)
 
 	if (!type)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find \"type\" in #attr object", type);
+		logger->log(ach::LogLevel::llError, "Cannot find \"type\" in @attr object", type);
 		return ach::JSONtype::jtUnknown;
 	}
 
@@ -43,7 +43,7 @@ json_t *json_attr_get_default(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return NULL;
 	}
 
@@ -72,7 +72,7 @@ json_t *json_attr_get_traits(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return NULL;
 	}
 
@@ -91,7 +91,7 @@ size_t json_attr_get_maxlen(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return STR_LEN_NAME;
 	}
 
@@ -113,13 +113,13 @@ int json_attr_get_min(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return 0;
 	}
 
 	if (!json_object_get(attr, "min"))
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find 'min' value in #attr");
+		logger->log(ach::LogLevel::llError, "Cannot find 'min' value in @attr");
 		return 0;
 	}
 
@@ -138,13 +138,13 @@ int json_attr_get_max(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return 0;
 	}
 
 	if (!json_object_get(attr, "max"))
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find 'max' value in #attr");
+		logger->log(ach::LogLevel::llError, "Cannot find 'max' value in @attr");
 		return 0;
 	}
 
@@ -163,13 +163,13 @@ float json_attr_get_min_real(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return 0;
 	}
 
 	if (!json_object_get(attr, "min"))
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find 'min' value in #attr");
+		logger->log(ach::LogLevel::llError, "Cannot find 'min' value in @attr");
 		return 0;
 	}
 
@@ -188,13 +188,13 @@ float json_attr_get_max_real(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return 0;
 	}
 
 	if (!json_object_get(attr, "max"))
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find 'max' value in #attr");
+		logger->log(ach::LogLevel::llError, "Cannot find 'max' value in @attr");
 		return 0;
 	}
 
@@ -213,7 +213,7 @@ const char *json_attr_get_data(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return NULL;
 	}
 
@@ -232,7 +232,7 @@ json_t *json_attr_get_enum(json_t *obj)
 
 	if (!attr)
 	{
-		logger->log(ach::LogLevel::llError, "Cannot find #attr object");
+		logger->log(ach::LogLevel::llError, "Cannot find @attr object");
 		return NULL;
 	}
 

@@ -167,3 +167,39 @@ sf::FloatRect vector_json_rect(json_t *j)
 	                     json_object_get_real(j, "width" ),
 	                     json_object_get_real(j, "height"));
 }
+
+
+
+/***********************************************************************
+     * vector_tile_coord
+
+***********************************************************************/
+sf::Vector2f vector_tile_coord(int x, int y, int size)
+{
+	return sf::Vector2f(x * size,
+	                    y * size);
+}
+
+
+
+/***********************************************************************
+     * vector_tile_center
+
+***********************************************************************/
+sf::Vector2f vector_tile_center(int x, int y, int size)
+{
+	return sf::Vector2f(x * size + size / 2,
+	                    y * size + size / 2);
+}
+
+
+
+/***********************************************************************
+     * vector_tile_bottom
+
+***********************************************************************/
+sf::Vector2f vector_tile_bottom(int x, int y, int size)
+{
+	return sf::Vector2f(x * size + size / 2,
+	                    y * size + y);
+}
