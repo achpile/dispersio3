@@ -17,7 +17,7 @@ ach::Sheet::Sheet(const char *filename, unsigned int _frames, ach::SheetOrigin o
 
 	if (!tex->loadFromFile(filename))
 	{
-		logger->log(ach::LogLevel::llError, "Error loading texture: \"%s\"", filename);
+		logger->log(ach::LogLevel::llError, "Error loading texture: '%s'", filename);
 		return;
 	}
 

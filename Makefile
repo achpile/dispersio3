@@ -10,10 +10,7 @@ HEADER   = $(INCLUDE)/meta/headers.hpp
 PCH      = $(HEADER).gch
 
 TOTAL    = $(words $(OBJ))
-LEN      = $(shell echo -n ${TOTAL} | wc -c)
-
-NPROCS   = $(shell grep -c ^processor /proc/cpuinfo)
-
+CORES    = $(shell grep -c ^processor /proc/cpuinfo)
 
 CMAKE    = CMakeFiles           \
            CMakeCache.txt       \
@@ -27,15 +24,15 @@ GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
 
 CC       = @g++
 STRIP    = @strip
-MAKE     = @make -j${NPROCS} --no-print-directory
+MAKE     = @make -j$(CORES) --no-print-directory
 ECHO     = @echo
 CLEAN    = @rm -rf
-PROGRESS = \[`echo $(OBJ) | sed "s/\ /\n/g" | grep -n $@ | cut -f1 -d: | tr -d '\n' | xargs -0 printf "%0$(LEN)d"`\/$(TOTAL)\]
 
 NORMAL   = "\033[0m"
 PURPLE   = "\033[1;35m"
 YELLOW   = "\033[0;33m"
 GREEN    = "\033[0;32m"
+BLUE     = "\033[1;34m"
 CYAN     = "\033[1;36m"
 RED      = "\033[1;31m"
 
@@ -61,41 +58,32 @@ all: info
 
 
 info:
-	$(ECHO) $(CYAN)
-	$(ECHO) "                                                         "
-	$(ECHO) "  ▗▄▄    █                             █             ▄▄▖ "
-	$(ECHO) "  ▐▛▀█   ▀                             ▀            ▐▀▀█▖"
-	$(ECHO) "  ▐▌ ▐▌ ██  ▗▟██▖▐▙█▙  ▟█▙  █▟█▌▗▟██▖ ██   ▟█▙         ▟▌"
-	$(ECHO) "  ▐▌ ▐▌  █  ▐▙▄▖▘▐▛ ▜▌▐▙▄▟▌ █▘  ▐▙▄▖▘  █  ▐▛ ▜▌      ▐██ "
-	$(ECHO) "  ▐▌ ▐▌  █   ▀▀█▖▐▌ ▐▌▐▛▀▀▘ █    ▀▀█▖  █  ▐▌ ▐▌        ▜▌"
-	$(ECHO) "  ▐▙▄█ ▗▄█▄▖▐▄▄▟▌▐█▄█▘▝█▄▄▌ █   ▐▄▄▟▌▗▄█▄▖▝█▄█▘     ▐▄▄█▘"
-	$(ECHO) "  ▝▀▀  ▝▀▀▀▘ ▀▀▀ ▐▌▀▘  ▝▀▀  ▀    ▀▀▀ ▝▀▀▀▘ ▝▀▘       ▀▀▘ "
-	$(ECHO) "                 ▐▌                                      "
-	$(ECHO) $(NORMAL)
-	$(ECHO) $(RED) "C  flags:" $(YELLOW) $(CFLAGS)  $(NORMAL)
-	$(ECHO) $(RED) "LD flags:" $(YELLOW) $(LDFLAGS) $(NORMAL)
 	$(ECHO)
-	$(ECHO) $(PURPLE) "Building $(TOTAL) files in $(NPROCS) threads" $(NORMAL)
-	$(ECHO) $(PURPLE) "Building: $(PROJECT)" $(NORMAL)
+	$(ECHO) $(PURPLE) "Threads " $(NORMAL) " :" $(YELLOW) $(CORES)   $(NORMAL)
+	$(ECHO) $(PURPLE) "Files   " $(NORMAL) " :" $(YELLOW) $(TOTAL)   $(NORMAL)
+	$(ECHO)
+	$(ECHO) $(RED) "C flags " $(NORMAL) " :" $(YELLOW) $(CFLAGS)  $(NORMAL)
+	$(ECHO) $(RED) "LD flags" $(NORMAL) " :" $(YELLOW) $(LDFLAGS) $(NORMAL)
 	$(ECHO)
 
 
 $(PROJECT): $(OBJ)
 	$(ECHO)
-	$(ECHO) $(CYAN) Linking $(PROJECT) $(NORMAL)
+	$(ECHO) $(CYAN) "Linking  " $(NORMAL) : $(PROJECT)
 	$(CC) $(OBJ) -o $(PROJECT) $(LDFLAGS)
 
-	$(ECHO) $(CYAN) Stripping $(PROJECT) $(NORMAL)
+	$(ECHO) $(CYAN) "Stripping" $(NORMAL) : $(PROJECT)
 	$(STRIP) $(PROJECT)
+	$(ECHO)
 
 $(OBJ) : $(PCH)
 $(PCH) : $(HPP)
-	$(ECHO) $(GREEN) "  Compiling main header:"$(NORMAL)" $(HEADER)"
+	$(ECHO) $(BLUE) "Header   " $(NORMAL) ": $(HEADER)"
 	$(ECHO)
 	$(CC) $(CFLAGS) -o $@ -c $(HEADER)
 
 .cpp.o:
-	$(ECHO) $(GREEN) "  Compiling" $(NORMAL)$(PROGRESS)$(GREEN) ": $(<)" $(NORMAL)
+	$(ECHO) $(GREEN) "Compiling" $(NORMAL) ": $(<)"
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 

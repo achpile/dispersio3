@@ -51,6 +51,13 @@
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
 
+#include "framework/html/base.hpp"
+#include "framework/html/include.hpp"
+#include "framework/html/list.hpp"
+#include "framework/html/link.hpp"
+#include "framework/html/section.hpp"
+#include "framework/html/table.hpp"
+
 #include "framework/json/array.hpp"
 #include "framework/json/branch.hpp"
 #include "framework/json/property.hpp"
@@ -66,6 +73,7 @@
 #include "framework/datamodel/check.hpp"
 #include "framework/datamodel/default.hpp"
 #include "framework/datamodel/preprocessor.hpp"
+#include "framework/datamodel/docs.hpp"
 #include "framework/datamodel/base.hpp"
 
 #include "framework/control/pair.hpp"

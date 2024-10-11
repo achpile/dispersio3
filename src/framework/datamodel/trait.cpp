@@ -29,7 +29,7 @@ void json_dm_trait_process(json_t *obj, json_t *traits)
 
 
 /***********************************************************************
-     * json_dm_trait_process
+     * json_dm_trait_add_list
 
 ***********************************************************************/
 void json_dm_trait_add_list(json_t *obj, json_t *traits, json_t *list)
@@ -56,7 +56,7 @@ void json_dm_trait_add_list(json_t *obj, json_t *traits, json_t *list)
 
 		if (!trait)
 		{
-			logger->log(ach::LogLevel::llError, "Trait \"%s\" is not found", json_string_value(t));
+			logger->log(ach::LogLevel::llError, "Trait '%s' is not found", json_string_value(t));
 			continue;
 		}
 

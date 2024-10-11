@@ -58,7 +58,7 @@ void ach::Datamodel::load()
 ***********************************************************************/
 void ach::Datamodel::loadPath(const char *path)
 {
-	logger->log(ach::llInfo, "Loading data from: \"%s\"", path);
+	logger->log(ach::LogLevel::llInfo, "Loading data from: '%s'", path);
 
 	json_t *pack = json_preprocess_include("json/main.json", path);
 

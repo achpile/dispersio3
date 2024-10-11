@@ -18,10 +18,10 @@ json_t *json_dm_generate_default(json_t *obj, json_t *dm)
 		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
-		     if (json_attr_get_type(i) == ach::jtObject) json_dm_generate_default_object(res, i, key);
-		else if (json_attr_get_type(i) == ach::jtMulti ) json_dm_generate_default_multi (res, i, key);
-		else if (json_attr_get_type(i) == ach::jtArray ) json_dm_generate_default_array (res, i, key);
-		else                                             json_dm_generate_default_value (res, i, key);
+		     if (json_attr_get_type(i) == ach::DataType::dtObject) json_dm_generate_default_object(res, i, key);
+		else if (json_attr_get_type(i) == ach::DataType::dtMulti ) json_dm_generate_default_multi (res, i, key);
+		else if (json_attr_get_type(i) == ach::DataType::dtArray ) json_dm_generate_default_array (res, i, key);
+		else                                                       json_dm_generate_default_value (res, i, key);
 	}
 
 	return res;

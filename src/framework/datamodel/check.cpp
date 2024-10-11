@@ -16,7 +16,7 @@ void json_dm_check_datatypes(json_t *obj, json_t *dm, const char *path)
 
 		if (!j)
 		{
-			logger->log(ach::LogLevel::llWarning, "Object \"%s\" is not found in the datamodel", key);
+			logger->log(ach::LogLevel::llWarning, "Object '%s' is not found in the datamodel", key);
 			json_object_del(obj, key);
 			continue;
 		}
@@ -45,14 +45,14 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 		j = json_object_get(dm, key);
 
 
-		if (json_attr_get_type(j) == ach::jtObject)
+		if (json_attr_get_type(j) == ach::DataType::dtObject)
 		{
 			json_dm_check_links(data, i, j);
 			continue;
 		}
 
 
-		if (json_attr_get_type(j) == ach::jtMulti)
+		if (json_attr_get_type(j) == ach::DataType::dtMulti)
 		{
 			json_t     *instance;
 			const char *name;
@@ -64,7 +64,7 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 		}
 
 
-		if (json_attr_get_type(j) == ach::jtLink)
+		if (json_attr_get_type(j) == ach::DataType::dtLink)
 		{
 			char path[STR_LEN_PATH];
 
@@ -72,7 +72,7 @@ void json_dm_check_links(json_t *data, json_t *obj, json_t *dm)
 
 			if (!json_object_get_branch(data, path))
 			{
-				logger->log(ach::LogLevel::llWarning, "Linked object \"%s\" is not found", path);
+				logger->log(ach::LogLevel::llWarning, "Linked object '%s' is not found", path);
 				json_string_set(i, json_string_value(json_attr_get_default(j)));
 			}
 		}

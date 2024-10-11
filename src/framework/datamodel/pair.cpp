@@ -7,17 +7,17 @@
 ***********************************************************************/
 ach::Pair pairAttrType[] =
 {
-	{.num = ach::JSONtype::jtObject  , .str = "object"  },
-	{.num = ach::JSONtype::jtString  , .str = "string"  },
-	{.num = ach::JSONtype::jtInteger , .str = "integer" },
-	{.num = ach::JSONtype::jtReal    , .str = "real"    },
-	{.num = ach::JSONtype::jtBoolean , .str = "boolean" },
-	{.num = ach::JSONtype::jtFilename, .str = "filename"},
-	{.num = ach::JSONtype::jtColor   , .str = "color"   },
-	{.num = ach::JSONtype::jtArray   , .str = "array"   },
-	{.num = ach::JSONtype::jtMulti   , .str = "multi"   },
-	{.num = ach::JSONtype::jtLink    , .str = "link"    },
-	{.num = ach::JSONtype::jtEnum    , .str = "enum"    },
+	{.num = ach::DataType::dtObject  , .str = "object"  },
+	{.num = ach::DataType::dtString  , .str = "string"  },
+	{.num = ach::DataType::dtInteger , .str = "integer" },
+	{.num = ach::DataType::dtReal    , .str = "real"    },
+	{.num = ach::DataType::dtBoolean , .str = "boolean" },
+	{.num = ach::DataType::dtFilename, .str = "filename"},
+	{.num = ach::DataType::dtColor   , .str = "color"   },
+	{.num = ach::DataType::dtArray   , .str = "array"   },
+	{.num = ach::DataType::dtMulti   , .str = "multi"   },
+	{.num = ach::DataType::dtLink    , .str = "link"    },
+	{.num = ach::DataType::dtEnum    , .str = "enum"    },
 
-	{.num = ach::JSONtype::jtUnknown , .str = NULL      },
+	{.num = ach::DataType::dtUnknown , .str = NULL      },
 };

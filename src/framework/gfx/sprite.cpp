@@ -13,7 +13,7 @@ ach::Sprite::Sprite(const char *filename, bool repeated, bool centered)
 
 	if (!tex->loadFromFile(filename))
 	{
-		logger->log(ach::LogLevel::llError, "Error loading texture: \"%s\"", filename);
+		logger->log(ach::LogLevel::llError, "Error loading texture: '%s'", filename);
 		return;
 	}
 

@@ -14,6 +14,6 @@ json_t* json_property_get(json_t *obj, const char *name)
 		if (!strcmp(name, json_object_get_string(item, "name")))
 			return json_object_get(item, "value");
 
-	logger->log(ach::LogLevel::llError, "JSON property \"%s\" is not found", name);
+	logger->log(ach::LogLevel::llError, "JSON property '%s' is not found", name);
 	return NULL;
 }

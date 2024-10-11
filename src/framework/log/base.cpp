@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Log::Log()
+ach::Log::Log(ach::LogLevel _level)
 {
 	char filename[256];
 
@@ -22,6 +22,7 @@ ach::Log::Log()
 	         tm->tm_min,
 	         tm->tm_sec);
 
+	level   = _level;
 	logfile = fopen(filename, "w");
 
 	log(ach::LogLevel::llInfo, PROJECT_NAME " v" PROJECT_VERS " started");
@@ -61,8 +62,11 @@ void ach::Log::update()
      * log
 
 ***********************************************************************/
-void ach::Log::log(ach::LogLevel level, const char *format, ...)
+void ach::Log::log(ach::LogLevel _level, const char *format, ...)
 {
+	if (level > _level)
+		return;
+
 	char buf[STR_LEN_LOG];
 	va_list args;
 
@@ -72,8 +76,8 @@ void ach::Log::log(ach::LogLevel level, const char *format, ...)
 
 	update();
 
-	put(stdout , buf, level);
-	put(logfile, buf, level);
+	put(stdout , buf, _level);
+	put(logfile, buf, _level);
 }
 
 

@@ -9,24 +9,27 @@ namespace ach
 		llDebug = 0,
 		llInfo,
 		llWarning,
-		llError
+		llError,
+		llOff
 	};
 
 
 	struct Log
 	{
+		ach::LogLevel level;
+
 		struct tm *tm;
 		FILE      *logfile;
 		time_t     now;
 
 
-		 Log();
+		 Log(ach::LogLevel _level = ach::LogLevel::llDebug);
 		~Log();
 
 		void update();
 
-		void log(ach::LogLevel level, const char *format, ...);
-		void put(FILE *fp, const char *str, ach::LogLevel level);
+		void log(ach::LogLevel _level, const char *format, ...);
+		void put(FILE *fp, const char *str, ach::LogLevel _level);
 	};
 }
 

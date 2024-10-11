@@ -63,7 +63,7 @@ json_t *json_preprocess_directive(const char *name, const char *dir)
 	else if (str_check_start(name, DM_DIRECTIVE_RECURSIVE)) return json_preprocess_dir    (json_preprocess_argument(name), dir, true );
 
 	else
-		logger->log(ach::LogLevel::llError, "Unknown directive \"%s\"", name);
+		logger->log(ach::LogLevel::llError, "Unknown directive '%s'", name);
 
 	return NULL;
 }
@@ -87,11 +87,11 @@ json_t *json_preprocess_include(const char *name, const char *dir)
 
 	snprintf(path, STR_LEN_PATH, "%s/%s", dir, name);
 
-	logger->log(ach::LogLevel::llInfo, "Loading file: \"%s\"", path);
+	logger->log(ach::LogLevel::llInfo, "Loading file: '%s'", path);
 
 	if (!file_exists(path))
 	{
-		logger->log(ach::LogLevel::llError, "File not found: \"%s\"", path);
+		logger->log(ach::LogLevel::llError, "File not found: '%s'", path);
 		return NULL;
 	}
 
@@ -99,13 +99,13 @@ json_t *json_preprocess_include(const char *name, const char *dir)
 
 	if (!res)
 	{
-		logger->log(ach::LogLevel::llError, "Error loading file: \"%s\" (%s)", path, error.text);
+		logger->log(ach::LogLevel::llError, "Error loading file: '%s' (%s)", path, error.text);
 		return NULL;
 	}
 
 	if (!json_is_object(res))
 	{
-		logger->log(ach::LogLevel::llError, "File has invalid format: \"%s\"", path);
+		logger->log(ach::LogLevel::llError, "File has invalid format: '%s'", path);
 		return NULL;
 	}
 
@@ -128,7 +128,7 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 
 	if (!file_exists(path))
 	{
-		logger->log(ach::LogLevel::llError, "Directory not found: \"%s\"", path);
+		logger->log(ach::LogLevel::llError, "Directory not found: '%s'", path);
 		return NULL;
 	}
 

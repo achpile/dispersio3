@@ -40,7 +40,7 @@ json_t* json_object_get_branch(json_t *root, const char *path)
 
 		if (!result)
 		{
-			logger->log(ach::LogLevel::llError, "json_object_get_branch: object not found \"%s\"", path);
+			logger->log(ach::LogLevel::llError, "json_object_get_branch: object not found '%s'", path);
 			return NULL;
 		}
 

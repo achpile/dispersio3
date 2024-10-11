@@ -42,7 +42,7 @@ void json_dm_class_check_object(json_t *obj, json_t *cls)
 		key = json_string_value(j);
 		if (!json_object_get(multi, key))
 		{
-			logger->log(ach::LogLevel::llError, "Object missing \"%s\" in \"%s\"", key, list);
+			logger->log(ach::LogLevel::llError, "Object missing '%s' in '%s'", key, list);
 			json_object_set_new(multi, key, json_object());
 		}
 	}
@@ -52,7 +52,7 @@ void json_dm_class_check_object(json_t *obj, json_t *cls)
 	{
 		if (!json_array_contains(json_object_get(cls, "Objects"), key))
 		{
-			logger->log(ach::LogLevel::llError, "Object should not have \"%s\" in \"%s\"", key, list);
+			logger->log(ach::LogLevel::llError, "Object should not have '%s' in '%s'", key, list);
 			json_object_del(multi, key);
 		}
 	}

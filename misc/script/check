@@ -15,34 +15,174 @@ RED="\033[1;31m"
 
 ########################################################################
 
-echo
-echo -e $YELLOW "\tProject status\n" $NORMAL
+function report_error {
+	if [ -z "${1}" ]
+	then
+		echo -e ${RED}error!${NORMAL}
+	fi
 
-STATUS_DEF=`grep -rn "ifndef" src include | grep hpp | sed "s/include\//__/" | sed "s/\:.\:\#ifndef//" | sed "s/\.hpp//" | tr a-z A-Z | sed "s/\//_/g" | while read A B; do if [ "$A" != "$B" ]; then echo "$A != $B"; fi; done`
-STATUS_LINES=`find ./ -name *.[ch]pp | while read A; do cat $A; done | wc -l`
-STATUS_FILES=`find ./ -name *.[ch]pp | wc -l`
-STATUS_COMMITS=`git log --oneline | wc -l`
-STATUS_DAYS=`git log --format=format:\"%ad\" --date=format:\"%Y.%m.%d\" | sort -u | wc -l`
-STATUS_SIZE=`du -hs --exclude=.git/* . | sed "s/\t.*//"`
-STATUS_FIRST=`git rev-list --max-parents=0 HEAD`
-STATUS_AGE=`git show -s --format=%cr $STATUS_FIRST`
-STATUS_DATE=`git show -s --format=%cd --date=format:'%d %B %Y' $STATUS_FIRST`
+	if [ -z "${2}" ]
+	then
+		echo -e ${RED}${3}${NORMAL}
+	fi
+}
 
-echo -en $GREEN"Checking headers   : "$NORMAL
-if [ -z "$STATUS_DEF" ]
-then
-	echo -e $YELLOW"good"$NORMAL
-else
-	echo
-	echo -e $RED"$STATUS_DEF"$NORMAL
-	echo
-fi
+########################################################################
+
+function check_headers {
+	REPORT=''
+	FILES=$(find include/ -name *.hpp)
+
+	for HEADER in $FILES
+	do
+		ERROR=''
+		LINE1=$(sed '1q;d' $HEADER)
+		LINE2=$(sed '2q;d' $HEADER)
+
+		CHECK=$(echo $HEADER | sed "s/include\//__/" | sed "s/\.hpp//" | tr a-z A-Z | sed "s/\//_/g")
+
+		if [ "#ifndef ${CHECK}" != "${LINE1}" ]
+		then
+			report_error "${REPORT}" "${ERROR}" "${HEADER}"
+			REPORT="done"
+			ERROR="done"
+		fi
+
+		if [ "#define ${CHECK}" != "${LINE2}" ]
+		then
+			report_error "${REPORT}" "${ERROR}" "${HEADER}"
+			REPORT="done"
+			ERROR="done"
+		fi
+	done
+
+	if [ -z "${REPORT}" ]
+	then
+		echo -e ${YELLOW}good.${NORMAL}
+	else
+		echo
+	fi
+}
+
+########################################################################
+
+function check_sources {
+	export REPORT=''
+	FILES=$(find src/ -name *.cpp)
+
+	for SRC in ${FILES}
+	do
+		LINES=$(grep -n "/\*\*\*\*" $SRC | sed "s/:.*//")
+
+		for LN in ${LINES}
+		do
+			CLASS=$((LN+1))
+			FUNC=$((LN+2))
+			DECL=$((LN+5))
+			CLASSED="y"
+
+			CLASS_STR=$(sed "${CLASS}q;d" $SRC | sed "s/.*\*\ //")
+			FUNC_STR=$(sed "${FUNC}q;d" $SRC | sed "s/.*\*\ //")
+
+			if [ -z "${FUNC_STR}" ]
+			then
+				FUNC_STR="${CLASS_STR}"
+				DECL=$((LN+4))
+				CLASSED=""
+			elif [ "${FUNC_STR}" == "constructor" ]
+			then
+				FUNC_STR="${CLASS_STR}"
+			elif [ "${FUNC_STR}" == "destructor" ]
+			then
+				FUNC_STR="~${CLASS_STR}"
+			fi
+
+			if [ -z "${CLASSED}" ]
+			then
+				DECL_EXP="${FUNC_STR}[([]"
+			else
+				DECL_EXP="ach::${CLASS_STR}::${FUNC_STR}[([]"
+			fi
+
+			DECL_STR=$(sed "${DECL}q;d" $SRC)
+			RESULT=$(echo ${DECL_STR} | grep "${DECL_EXP}")
+
+			if [ -z "$RESULT" ]
+			then
+				report_error "${REPORT}" "source"
+				REPORT="done"
+				echo -e ${RED}${SRC}${NORMAL}:${PURPLE}${LN}${NORMAL}
+				continue
+			fi
+
+			if [ "$LN" != "4" ] && [ "$LN" != "5" ]
+			then
+				LN1=$(sed "$((${LN}-1))q;d" $SRC)
+				LN2=$(sed "$((${LN}-2))q;d" $SRC)
+				LN3=$(sed "$((${LN}-3))q;d" $SRC)
+				LN4=$(sed "$((${LN}-4))q;d" $SRC)
+
+				if [ ! -z "${LN1}" ] || [ ! -z "${LN2}" ] || [ ! -z "${LN3}" ] || [ "${LN4}" != "}" -a "${LN4}" != "};" ]
+				then
+					report_error "${REPORT}" "source"
+					REPORT="done"
+					echo -e ${RED}${SRC}${NORMAL}:${PURPLE}${LN}${NORMAL}
+				fi
+			fi
+		done
+	done
+
+	if [ -z "${REPORT}" ]
+	then
+		echo -e ${YELLOW}good.${NORMAL}
+	else
+		echo
+	fi
+}
+
+########################################################################
+
+function check_enums {
+	RESULT=$(grep -rn "ach::[[:lower:]][[:lower:]]" *)
+
+	if [ -z "${RESULT}" ]
+	then
+		echo -e ${YELLOW}good.${NORMAL}
+	else
+		report_error "" "enum"
+		echo "${RESULT}"
+		echo
+	fi
+}
+
+########################################################################
+
+echo -e ${YELLOW} "\n\tProject status\n" ${NORMAL}
+
+echo -en ${GREEN}"Checking headers\t:" ${NORMAL}
+check_headers
+
+echo -en ${GREEN}"Checking sources\t:" ${NORMAL}
+check_sources
+
+echo -en ${GREEN}"Checking enums\t\t:" ${NORMAL}
+check_enums
+
+
+echo -e ${YELLOW} "\n\tStatistics\n" ${NORMAL}
+
+STATS_FILES=$(find ./ -name *.[ch]pp | wc -l)
+STATS_LINES=$(find ./ -name *.[ch]pp | while read A; do cat $A; done | wc -l)
+STATS_COMMITS=$(git log --oneline | wc -l)
+STATS_DAYS=$(git log --format=format:\"%ad\" --date=format:\"%Y.%m.%d\" | sort -u | wc -l)
+STATS_SIZE=$(du -hs --exclude=.git/* . | sed "s/\t.*//")
+STATS_AGE=$(git show -s --format=%cd --date=format:'%d %B %Y' $(git rev-list --max-parents=0 HEAD))
+
+echo -e ${PURPLE}"Total files\t:"   ${NORMAL}${CYAN}${STATS_FILES}  ${NORMAL}
+echo -e ${PURPLE}"Total lines\t:"   ${NORMAL}${CYAN}${STATS_LINES}  ${NORMAL}
+echo -e ${PURPLE}"Total commits\t:" ${NORMAL}${CYAN}${STATS_COMMITS}${NORMAL}
+echo -e ${PURPLE}"Total size\t:"    ${NORMAL}${CYAN}${STATS_SIZE}   ${NORMAL}
+echo -e ${PURPLE}"Total days\t:"    ${NORMAL}${CYAN}${STATS_DAYS}   ${NORMAL}
+echo -e ${PURPLE}"Created\t\t:"     ${NORMAL}${CYAN}${STATS_AGE}    ${NORMAL}
 
 echo
-echo -e $PURPLE"Total files  :"$NORMAL $CYAN"$STATUS_FILES"$NORMAL
-echo -e $PURPLE"Total lines  :"$NORMAL $CYAN"$STATUS_LINES"$NORMAL
-echo -e $PURPLE"Total commits:"$NORMAL $CYAN"$STATUS_COMMITS"$NORMAL
-echo -e $PURPLE"Total days   :"$NORMAL $CYAN"$STATUS_DAYS"$NORMAL
-echo -e $PURPLE"Total size   :"$NORMAL $CYAN"$STATUS_SIZE"$NORMAL
-echo
-echo -e $GREEN"Created:"$NORMAL $YELLOW"$STATUS_AGE ($STATUS_DATE)"$NORMAL
