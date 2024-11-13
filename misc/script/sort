@@ -123,7 +123,7 @@ def sort(filename, tmj = False):
     if verbose:
         if tmj:
             print("Cutting: ", filename);
-        else
+        else:
             print("Sorting: ", filename);
 
     f = open(filename, "r")
