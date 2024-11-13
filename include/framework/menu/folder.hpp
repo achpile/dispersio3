@@ -12,10 +12,10 @@ namespace ach
 		 MenuItemFolder(ach::Menu *_menu, const char *_name);
 		~MenuItemFolder();
 
+		void action();
+
 		void add(ach::MenuItem *item);
 		void finalize();
-
-		void action();
 
 		void pick();
 		void click();

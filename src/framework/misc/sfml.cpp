@@ -40,3 +40,17 @@ void sfml_load_image(sf::Image **image, const char *filename)
 	if (!(*image)->loadFromFile(filename))
 		logger->log(ach::LogLevel::llError, "Error loading image: '%s'", filename);
 }
+
+
+
+/***********************************************************************
+     * sfml_load_texture
+
+***********************************************************************/
+void sfml_load_texture(sf::Texture **texture, const char *filename)
+{
+	(*texture) = new sf::Texture();
+
+	if (!(*texture)->loadFromFile(filename))
+		logger->log(ach::LogLevel::llError, "Error loading texture: '%s'", filename);
+}

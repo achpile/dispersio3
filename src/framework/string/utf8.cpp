@@ -30,9 +30,9 @@ static void str_utf8_iterate(std::string::const_iterator& it, std::string::const
      * str_utf8_len
 
 ***********************************************************************/
-int str_utf8_len(std::string str)
+size_t str_utf8_len(std::string str)
 {
-	int res = 0;
+	size_t res = 0;
 
 	for (std::string::const_iterator it = str.begin(); it != str.end(); str_utf8_iterate(it, str.end()))
 		res++;

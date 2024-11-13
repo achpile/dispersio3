@@ -1,0 +1,93 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "AI": {
+        "@attr": {
+            "default": "idle",
+            "enum": [
+                "idle",
+                "player"
+            ],
+            "type": "enum"
+        }
+    },
+    "Body": {
+        "@attr": {
+            "data": "Data.GFX.Body",
+            "default": "None",
+            "type": "link"
+        }
+    },
+    "Color": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    },
+    "Hitbox": {
+        "@attr": {
+            "traits": [
+                "size"
+            ],
+            "type": "object"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "type": "object"
+        },
+        "Die": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Hurt": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Jump": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        },
+        "Land": {
+            "@attr": {
+                "default": "sfx/misc/default.wav",
+                "type": "filename"
+            }
+        }
+    },
+    "Stats": {
+        "@attr": {
+            "type": "object"
+        },
+        "Jump": {
+            "@attr": {
+                "default": 320.0,
+                "max": 1000.0,
+                "min": 0.0,
+                "type": "real"
+            }
+        },
+        "Speed": {
+            "@attr": {
+                "default": 100.0,
+                "max": 1000.0,
+                "min": 0.0,
+                "type": "real"
+            }
+        }
+    },
+    "Weapon": {
+        "@attr": {
+            "data": "Data.Game.Weapon",
+            "default": "Rifle",
+            "type": "link"
+        }
+    }
+}

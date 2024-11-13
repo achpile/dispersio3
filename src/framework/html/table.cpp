@@ -7,7 +7,7 @@
 ***********************************************************************/
 void html_table_start(FILE *fp)
 {
-	fprintf(fp, "<TABLE width='50%%' border='1' cellpadding='2' cellspacing='0'>\n");
+	fprintf(fp, "<TABLE width='80%%' border='1' cellpadding='2' cellspacing='0'>\n");
 	fprintf(fp, "<TBODY>\n");
 }
 

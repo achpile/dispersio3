@@ -8,7 +8,6 @@
 ***********************************************************************/
 ach::Language::Language()
 {
-	refresh();
 }
 
 
@@ -35,13 +34,13 @@ sf::String ach::Language::get(const char *path)
 
 	if (!token)
 	{
-		logger->log(ach::LogLevel::llError, "Language token \"%s\" is not found", path);
+		logger->log(ach::LogLevel::llError, "Language token '%s' is not found", path);
 		return "";
 	}
 
 	if (!json_is_string(token))
 	{
-		logger->log(ach::LogLevel::llError, "Language token \"%s\" is not string", path);
+		logger->log(ach::LogLevel::llError, "Language token '%s' is not string", path);
 		return "";
 	}
 
@@ -66,25 +65,6 @@ sf::String ach::Language::getv(const char *format, ...)
 	va_end(ap);
 
 	return get(path);
-}
-
-
-
-/***********************************************************************
-     * Language
-     * list
-
-***********************************************************************/
-json_t* ach::Language::list()
-{
-	json_t     *res = json_object();
-	json_t     *lang;
-	const char *key;
-
-	json_object_foreach(json_object_get(dm->data, "Translation"), key, lang)
-		json_object_set(res, key, json_object_get(lang, "Label"));
-
-	return res;
 }
 
 

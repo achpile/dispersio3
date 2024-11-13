@@ -19,6 +19,7 @@ namespace ach
 		 MenuItemCheckbox(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, const char *_var);
 		~MenuItemCheckbox();
 
+		void style();
 		void action();
 
 		void render(int i);

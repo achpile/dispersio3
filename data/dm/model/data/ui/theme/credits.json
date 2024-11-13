@@ -1,0 +1,13 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Font": {
+        "@attr": {
+            "traits": [
+                "font"
+            ],
+            "type": "object"
+        }
+    }
+}

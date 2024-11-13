@@ -1,0 +1,47 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Animation": {
+        "@attr": {
+            "type": "multi"
+        },
+        "End": {
+            "@attr": {
+                "default": -1,
+                "max": 1024,
+                "min": -1,
+                "type": "integer"
+            }
+        },
+        "Loop": {
+            "@attr": {
+                "default": true,
+                "type": "boolean"
+            }
+        },
+        "Rate": {
+            "@attr": {
+                "default": 0.0,
+                "max": 10.0,
+                "min": 0.0,
+                "type": "real"
+            }
+        },
+        "Start": {
+            "@attr": {
+                "default": 0,
+                "max": 1024,
+                "min": -1,
+                "type": "integer"
+            }
+        }
+    },
+    "Sheet": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Default",
+            "type": "link"
+        }
+    }
+}

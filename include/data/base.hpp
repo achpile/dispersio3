@@ -6,6 +6,8 @@ namespace ach
 {
 	struct Database
 	{
+		std::vector<ach::DataFont*      > font;
+		std::vector<ach::DataTheme*     > theme;
 		std::vector<ach::DataModel*     > model;
 		std::vector<ach::DataSheet*     > sheet;
 		std::vector<ach::DataProjectile*> projectile;
@@ -19,12 +21,19 @@ namespace ach
 
 		void load();
 
+		/*  base/get.cpp  */
+		ach::DataFont       *getFont      (const char *name);
+		ach::DataTheme      *getTheme     (const char *name);
 		ach::DataModel      *getModel     (const char *name);
 		ach::DataSheet      *getSheet     (const char *name);
 		ach::DataProjectile *getProjectile(const char *name);
 		ach::DataWeapon     *getWeapon    (const char *name);
 		ach::DataBody       *getBody      (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
+
+		/*  base/list.cpp  */
+		json_t *listLanguage();
+		json_t *listTheme();
 	};
 }
 

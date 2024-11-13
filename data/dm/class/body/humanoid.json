@@ -6,7 +6,7 @@
             "Legs"
         ],
         "Param": "Type",
-        "Path": "Data.Body",
+        "Path": "Data.GFX.Body",
         "Value": "humanoid"
     }
 }

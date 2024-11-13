@@ -4,6 +4,7 @@ INCLUDE  = include
 
 CPP      = $(shell find src/        -type f -name '*.cpp')
 HPP      = $(shell find $(INCLUDE)/ -type f -name '*.hpp')
+INL      = $(shell find $(INCLUDE)/ -type f -name '*.inl')
 OBJ      = $(patsubst %.cpp,%.o, $(CPP))
 
 HEADER   = $(INCLUDE)/meta/headers.hpp
@@ -77,7 +78,7 @@ $(PROJECT): $(OBJ)
 	$(ECHO)
 
 $(OBJ) : $(PCH)
-$(PCH) : $(HPP)
+$(PCH) : $(HPP) $(INL)
 	$(ECHO) $(BLUE) "Header   " $(NORMAL) ": $(HEADER)"
 	$(ECHO)
 	$(CC) $(CFLAGS) -o $@ -c $(HEADER)

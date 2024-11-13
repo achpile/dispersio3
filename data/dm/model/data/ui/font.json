@@ -1,0 +1,11 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Filename": {
+        "@attr": {
+            "default": "font/FSEX300.ttf",
+            "type": "filename"
+        }
+    }
+}

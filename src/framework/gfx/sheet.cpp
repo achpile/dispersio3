@@ -13,13 +13,7 @@ ach::Sheet::Sheet(const char *filename, unsigned int _frames, ach::SheetOrigin o
 
 	frames = _frames;
 
-	tex = new sf::Texture();
-
-	if (!tex->loadFromFile(filename))
-	{
-		logger->log(ach::LogLevel::llError, "Error loading texture: '%s'", filename);
-		return;
-	}
+	sfml_load_texture(&tex, filename);
 
 	tex->setSmooth(false);
 
@@ -79,6 +73,7 @@ sf::Vector2f ach::Sheet::getOrigin(ach::SheetOrigin origin)
 		case ach::SheetOrigin::soCenter: return sf::Vector2f(size.x / 2.0f, size.y / 2.0f);
 		case ach::SheetOrigin::soBottom: return sf::Vector2f(size.x / 2.0f, size.y       );
 		case ach::SheetOrigin::soNone  : return sf::Vector2f(0.0f         , 0.0f         );
-		default                        : return sf::Vector2f(0.0f         , 0.0f         );
 	}
+
+	return sf::Vector2f(0.0f , 0.0f);
 }

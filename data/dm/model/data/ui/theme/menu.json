@@ -1,0 +1,22 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Border": "@include menu/border.json",
+    "Font": {
+        "@attr": {
+            "traits": [
+                "font"
+            ],
+            "type": "object"
+        }
+    },
+    "Selector": {
+        "@attr": {
+            "default": ">",
+            "maxlen": 2,
+            "type": "string"
+        }
+    },
+    "Sound": "@include menu/sound.json"
+}

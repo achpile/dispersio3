@@ -1,0 +1,17 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Background": {
+        "@attr": {
+            "default": "#000000",
+            "type": "color"
+        }
+    },
+    "Color": {
+        "@attr": {
+            "default": "#00FF00",
+            "type": "color"
+        }
+    }
+}

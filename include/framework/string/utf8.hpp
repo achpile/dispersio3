@@ -3,6 +3,6 @@
 
 
 sf::String str_utf8(std::string str);
-int        str_utf8_len(std::string str);
+size_t     str_utf8_len(std::string str);
 
 #endif

@@ -31,7 +31,7 @@ function report_error {
 
 function check_headers {
 	REPORT=''
-	FILES=$(find include/ -name *.hpp)
+	FILES=$(find include/ -name *.hpp -o -name *.inl)
 
 	for HEADER in $FILES
 	do
@@ -39,7 +39,7 @@ function check_headers {
 		LINE1=$(sed '1q;d' $HEADER)
 		LINE2=$(sed '2q;d' $HEADER)
 
-		CHECK=$(echo $HEADER | sed "s/include\//__/" | sed "s/\.hpp//" | tr a-z A-Z | sed "s/\//_/g")
+		CHECK=$(echo $HEADER | sed "s/include\//__/" | sed "s/\.hpp//" | tr a-z A-Z | sed "s/\//_/g" | sed "s/\./_/g" )
 
 		if [ "#ifndef ${CHECK}" != "${LINE1}" ]
 		then
@@ -157,19 +157,18 @@ function check_enums {
 
 ########################################################################
 
-echo -e ${YELLOW} "\n\tProject status\n" ${NORMAL}
+echo
 
-echo -en ${GREEN}"Checking headers\t:" ${NORMAL}
+echo -en ${GREEN}" Headers  " ${NORMAL} ": "
 check_headers
 
-echo -en ${GREEN}"Checking sources\t:" ${NORMAL}
+echo -en ${GREEN}" Sources  " ${NORMAL} ": "
 check_sources
 
-echo -en ${GREEN}"Checking enums\t\t:" ${NORMAL}
+echo -en ${GREEN}" Enums    " ${NORMAL} ": "
 check_enums
 
-
-echo -e ${YELLOW} "\n\tStatistics\n" ${NORMAL}
+echo
 
 STATS_FILES=$(find ./ -name *.[ch]pp | wc -l)
 STATS_LINES=$(find ./ -name *.[ch]pp | while read A; do cat $A; done | wc -l)
@@ -178,11 +177,11 @@ STATS_DAYS=$(git log --format=format:\"%ad\" --date=format:\"%Y.%m.%d\" | sort -
 STATS_SIZE=$(du -hs --exclude=.git/* . | sed "s/\t.*//")
 STATS_AGE=$(git show -s --format=%cd --date=format:'%d %B %Y' $(git rev-list --max-parents=0 HEAD))
 
-echo -e ${PURPLE}"Total files\t:"   ${NORMAL}${CYAN}${STATS_FILES}  ${NORMAL}
-echo -e ${PURPLE}"Total lines\t:"   ${NORMAL}${CYAN}${STATS_LINES}  ${NORMAL}
-echo -e ${PURPLE}"Total commits\t:" ${NORMAL}${CYAN}${STATS_COMMITS}${NORMAL}
-echo -e ${PURPLE}"Total size\t:"    ${NORMAL}${CYAN}${STATS_SIZE}   ${NORMAL}
-echo -e ${PURPLE}"Total days\t:"    ${NORMAL}${CYAN}${STATS_DAYS}   ${NORMAL}
-echo -e ${PURPLE}"Created\t\t:"     ${NORMAL}${CYAN}${STATS_AGE}    ${NORMAL}
+echo -e ${PURPLE}" Files    " ${NORMAL} ":" ${CYAN}${STATS_FILES}  ${NORMAL}
+echo -e ${PURPLE}" Lines    " ${NORMAL} ":" ${CYAN}${STATS_LINES}  ${NORMAL}
+echo -e ${PURPLE}" Commits  " ${NORMAL} ":" ${CYAN}${STATS_COMMITS}${NORMAL}
+echo -e ${PURPLE}" Size     " ${NORMAL} ":" ${CYAN}${STATS_SIZE}   ${NORMAL}
+echo -e ${PURPLE}" Days     " ${NORMAL} ":" ${CYAN}${STATS_DAYS}   ${NORMAL}
+echo -e ${PURPLE}" Created  " ${NORMAL} ":" ${CYAN}${STATS_AGE}    ${NORMAL}
 
 echo

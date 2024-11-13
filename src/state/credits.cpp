@@ -184,12 +184,12 @@ void ach::StateCredits::add(sf::String string, ach::CreditsWeight weight)
 {
 	sf::Text *line = new sf::Text();
 
-	line->setFont(*resources->fonts.credits);
+	line->setFont(*theme->credits.font);
 	line->setString(string);
 	line->setCharacterSize(getSize(weight));
 	line->setPosition(text_align(line, CREDITS_LEFT, RENDER_LAYER_GUI_X - CREDITS_LEFT * 2, getAlign(weight)), pos);
 	line->setStyle(getStyle(weight));
-	line->setFillColor(sf::Color::White);
+	line->setFillColor(theme->credits.color);
 
 	pos += getOffset(weight);
 
@@ -219,9 +219,9 @@ int ach::StateCredits::getSize(ach::CreditsWeight weight)
 {
 	switch (weight)
 	{
-		case ach::CreditsWeight::cwTitle : return 48;
-		case ach::CreditsWeight::cwHeader: return 36;
-		case ach::CreditsWeight::cwEntry : return 24;
+		case ach::CreditsWeight::cwTitle : return theme->credits.size * 2;
+		case ach::CreditsWeight::cwHeader: return theme->credits.size * 1.5;
+		case ach::CreditsWeight::cwEntry : return theme->credits.size;
 	}
 
 	return 0;

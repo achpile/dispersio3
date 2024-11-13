@@ -1,0 +1,71 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Audio": {
+        "@attr": {
+            "default": "Audio",
+            "type": "string"
+        }
+    },
+    "Controls": {
+        "@attr": {
+            "default": "Controls",
+            "type": "string"
+        }
+    },
+    "Fullscreen": {
+        "@attr": {
+            "default": "Fullscreen",
+            "type": "string"
+        }
+    },
+    "Game": {
+        "@attr": {
+            "default": "Game",
+            "type": "string"
+        }
+    },
+    "Keyboard": {
+        "@attr": {
+            "default": "Keyboard",
+            "type": "string"
+        }
+    },
+    "Language": {
+        "@attr": {
+            "default": "Language",
+            "type": "string"
+        }
+    },
+    "Music": {
+        "@attr": {
+            "default": "Music",
+            "type": "string"
+        }
+    },
+    "Name": {
+        "@attr": {
+            "default": "Options",
+            "type": "string"
+        }
+    },
+    "Reset": {
+        "@attr": {
+            "default": "Reset to defaults",
+            "type": "string"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "default": "Sound",
+            "type": "string"
+        }
+    },
+    "Theme": {
+        "@attr": {
+            "default": "Theme",
+            "type": "string"
+        }
+    }
+}

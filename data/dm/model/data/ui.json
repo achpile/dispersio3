@@ -1,0 +1,7 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Font": "@include ui/font.json",
+    "Theme": "@include ui/theme.json"
+}

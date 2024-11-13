@@ -1,17 +1,5 @@
 {
-    "Audio": "Аудио",
-    "Back": "Назад",
-    "Controls": "Управление",
-    "Credits": "Авторы",
-    "Exit": "Выход",
-    "Fullscreen": "Полный экран",
-    "Game": "Игра",
-    "Keyboard": "Клавиатура",
-    "Language": "Язык",
-    "Main": "Главное меню",
-    "Music": "Музыка",
-    "Options": "Настройки",
-    "Reset": "Сбросить",
-    "Sound": "Звук",
-    "Start": "Начать игру"
+    "Main": "@include menu/main.json",
+    "Misc": "@include menu/misc.json",
+    "Options": "@include menu/options.json"
 }

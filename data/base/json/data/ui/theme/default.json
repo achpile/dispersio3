@@ -1,0 +1,14 @@
+{
+    "Default": {
+        "Credits": {
+            "Font": {
+                "Size": 24
+            }
+        },
+        "Menu": {
+            "Font": {
+                "Name": "DejaVu"
+            }
+        }
+    }
+}

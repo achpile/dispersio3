@@ -10,7 +10,8 @@ namespace ach
 		gsStart = 0,
 		gsMenu,
 		gsCredits,
-		gsGame
+		gsGame,
+		gsEnd
 	};
 
 
@@ -20,8 +21,10 @@ namespace ach
 		virtual ~StateBase()          {};
 
 		virtual void update()         {};
-		virtual void translate()      {};
 		virtual void event(sf::Event) {};
+
+		virtual void translate()      {};
+		virtual void style()          {};
 	};
 }
 

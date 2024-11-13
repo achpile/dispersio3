@@ -15,6 +15,7 @@ namespace ach
 		~MenuItemControl();
 
 		void render(int i);
+
 		void translate();
 		void action();
 

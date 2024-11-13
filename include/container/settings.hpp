@@ -16,6 +16,7 @@ namespace ach
 		bool isFullscreen();
 
 		const char   *getLanguage();
+		const char   *getTheme();
 
 		int           getVolumeSound();
 		int           getVolumeMusic();

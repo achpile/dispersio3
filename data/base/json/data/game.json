@@ -1,0 +1,5 @@
+{
+    "Character": "@recursive game/character",
+    "Projectile": "@recursive game/projectile",
+    "Weapon": "@recursive game/weapon"
+}

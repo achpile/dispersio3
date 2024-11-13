@@ -59,7 +59,7 @@ bool json_type_check_string(json_t *obj, json_t *dm, const char *name, const cha
 		return false;
 	}
 
-	if (strlen(json_string_value(obj)) >= json_attr_get_maxlen(dm))
+	if (str_utf8_len(json_string_value(obj)) >= json_attr_get_maxlen(dm))
 	{
 		logger->log(ach::LogLevel::llWarning, "Value '%s' is too long", name);
 		return false;

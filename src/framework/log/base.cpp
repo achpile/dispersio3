@@ -87,11 +87,11 @@ void ach::Log::log(ach::LogLevel _level, const char *format, ...)
      * put
 
 ***********************************************************************/
-void ach::Log::put(FILE *fp, const char *str, ach::LogLevel level)
+void ach::Log::put(FILE *fp, const char *str, ach::LogLevel _level)
 {
 	if (!fp)
 		return;
 
-	fprintf(fp, "[%02d:%02d:%02d] [ %-4s ]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, pair_get_string(level, pairLog), str);
+	fprintf(fp, "[%02d:%02d:%02d] [ %-4s ]: %s\n", tm->tm_hour, tm->tm_min, tm->tm_sec, pair_get_string(_level, pairLog), str);
 	fflush(fp);
 }

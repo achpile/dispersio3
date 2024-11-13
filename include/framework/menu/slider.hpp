@@ -19,6 +19,7 @@ namespace ach
 		 MenuItemSlider(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, int _min, int _max);
 		~MenuItemSlider();
 
+		void style();
 		void action(int d);
 
 		void render(int i);

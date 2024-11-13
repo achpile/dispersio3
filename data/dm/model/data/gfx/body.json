@@ -1,0 +1,35 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Parts": {
+        "@attr": {
+            "type": "multi"
+        },
+        "Model": {
+            "@attr": {
+                "data": "Data.GFX.Model",
+                "default": "Default",
+                "type": "link"
+            }
+        },
+        "Offset": {
+            "@attr": {
+                "traits": [
+                    "coord"
+                ],
+                "type": "object"
+            }
+        }
+    },
+    "Type": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "humanoid"
+            ],
+            "type": "enum"
+        }
+    }
+}

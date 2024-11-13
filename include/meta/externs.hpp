@@ -5,8 +5,8 @@ extern ach::App           *app;
 extern ach::Log           *logger;
 extern ach::ControlPad    *ctrl;
 
-extern ach::Resources     *resources;
 extern ach::Settings      *settings;
+extern ach::Theme         *theme;
 extern ach::Language      *lang;
 extern ach::Background    *bg;
 extern ach::Database      *db;

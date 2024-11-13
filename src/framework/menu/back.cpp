@@ -37,11 +37,10 @@ void ach::MenuItemBack::action()
 	}
 
 	if (parent->parent)
+	{
 		menu->go(parent->parent, parent);
-	else
-		menu->isActive = false;
-
-	sm->play(menu->sfxBack);
+		sm->play(menu->sfxBack);
+	}
 }
 
 

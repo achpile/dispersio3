@@ -20,8 +20,8 @@ ach::App::App()
 	dm        = new ach::Datamodel();
 	db        = new ach::Database();
 	settings  = new ach::Settings();
+	theme     = new ach::Theme();
 	lang      = new ach::Language();
-	resources = new ach::Resources();
 	bg        = new ach::Background();
 	ctrl      = new ach::ControlPad();
 
@@ -39,6 +39,9 @@ ach::App::App()
 	db->load();
 	tm->init();
 
+	lang->refresh();
+	theme->refresh();
+
 	stateSet(ach::GameState::gsStart);
 }
 
@@ -52,11 +55,11 @@ ach::App::App()
 ach::App::~App()
 {
 	delete settings;
+	delete theme;
 	delete bg;
 	delete db;
 	delete lang;
 	delete state;
-	delete resources;
 	delete window;
 	delete logger;
 	delete ctrl;
@@ -192,7 +195,11 @@ void ach::App::stateSwitch()
 		case ach::GameState::gsMenu   : state = new ach::StateMenu   (); return;
 		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
 		case ach::GameState::gsGame   : state = new ach::StateGame   (); return;
+		case ach::GameState::gsEnd    : state = new ach::StateEnd    (); return;
 	}
+
+	state->translate();
+	state->style();
 }
 
 
@@ -219,6 +226,10 @@ void ach::App::create()
 	if (window)
 		delete window;
 
+	sf::Image *icon;
+
+	sfml_load_image(&icon, json_object_get_branch_string(dm->data, "Meta.Icon"));
+
 	window = new sf::RenderWindow(settings->getWindowMode(),
 	                              PROJECT_NAME " v" PROJECT_VERS,
 	                              settings->getWindowStyle());
@@ -227,7 +238,9 @@ void ach::App::create()
 	window->setFramerateLimit(60);
 	window->setVerticalSyncEnabled(true);
 	window->setPosition(settings->getWindowPosition());
-	window->setIcon(resources->meta.icon->getSize().x,
-	                resources->meta.icon->getSize().y,
-	                resources->meta.icon->getPixelsPtr());
+	window->setIcon(icon->getSize().x,
+	                icon->getSize().y,
+	                icon->getPixelsPtr());
+
+	delete icon;
 }

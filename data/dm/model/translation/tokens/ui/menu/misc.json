@@ -1,0 +1,17 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Back": {
+        "@attr": {
+            "default": "Back",
+            "type": "string"
+        }
+    },
+    "Exit": {
+        "@attr": {
+            "default": "Exit",
+            "type": "string"
+        }
+    }
+}

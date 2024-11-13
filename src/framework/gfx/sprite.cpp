@@ -8,14 +8,9 @@
 ***********************************************************************/
 ach::Sprite::Sprite(const char *filename, bool repeated, bool centered)
 {
-	tex = new sf::Texture();
 	spr = new sf::Sprite();
 
-	if (!tex->loadFromFile(filename))
-	{
-		logger->log(ach::LogLevel::llError, "Error loading texture: '%s'", filename);
-		return;
-	}
+	sfml_load_texture(&tex, filename);
 
 	tex->setSmooth(false);
 	tex->setRepeated(repeated);

@@ -1,0 +1,23 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Credits": {
+        "@attr": {
+            "default": "Credits",
+            "type": "string"
+        }
+    },
+    "Name": {
+        "@attr": {
+            "default": "Main menu",
+            "type": "string"
+        }
+    },
+    "Start": {
+        "@attr": {
+            "default": "Start game",
+            "type": "string"
+        }
+    }
+}

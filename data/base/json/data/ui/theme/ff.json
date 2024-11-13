@@ -1,0 +1,19 @@
+{
+    "FF": {
+        "Credits": {
+            "Font": {
+                "Size": 24
+            }
+        },
+        "Menu": {
+            "Border": {
+                "Background": "#2F5296",
+                "Color": "#FFFFFF"
+            },
+            "Font": {
+                "Size": 19
+            },
+            "Selector": "☞"
+        }
+    }
+}

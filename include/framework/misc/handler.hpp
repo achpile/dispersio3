@@ -4,7 +4,7 @@
 
 namespace ach
 {
-	typedef void (*Handler)(json_t *);
+	typedef void (*Handler)(void *context, json_t *);
 }
 
 #endif

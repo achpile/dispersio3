@@ -48,7 +48,7 @@ void ach::MenuItemList::action(int d)
 	sm->play(menu->sfxPick);
 
 	if (handler)
-		handler(NULL);
+		handler(menu->context, NULL);
 }
 
 
@@ -92,7 +92,7 @@ void ach::MenuItemList::translate()
 
 	list_foreach(options)
 		if (token)
-			options[i].caption = lang->getv("UI.Options.%s", json_object_get_string(list, options[i].value));
+			options[i].caption = lang->get(json_object_get_string(list, options[i].value));
 		else
 			options[i].caption = str_utf8(json_object_get_string(list, options[i].value));
 }

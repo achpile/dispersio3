@@ -1,8 +1,5 @@
 {
-    "Body": "@recursive data/body",
-    "Character": "@recursive data/character",
-    "Model": "@recursive data/model",
-    "Projectile": "@recursive data/projectile",
-    "Sheet": "@recursive data/sheet",
-    "Weapon": "@recursive data/weapon"
+    "GFX": "@include data/gfx.json",
+    "Game": "@include data/game.json",
+    "UI": "@include data/ui.json"
 }

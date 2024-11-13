@@ -7,6 +7,8 @@ namespace ach
 	struct DataContent
 	{
 		char name[STR_LEN_NAME];
+
+		void setName(const char *_name);
 	};
 }
 

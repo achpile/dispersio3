@@ -68,7 +68,7 @@ float ach::TimeManager::get(ach::TimeSource source)
 	{
 		case ach::TimeSource::tsReal : return real;
 		case ach::TimeSource::tsFrame: return frame;
-
-		default                      : return 0.0f;
 	}
+
+	return 0.0f;
 }

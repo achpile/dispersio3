@@ -1,0 +1,8 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Body": "@include gfx/body.json",
+    "Model": "@include gfx/model.json",
+    "Sheet": "@include gfx/sheet.json"
+}

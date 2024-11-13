@@ -16,14 +16,10 @@ ach::MenuItemSlider::MenuItemSlider(ach::Menu *_menu, const char *_name, ach::Ha
 	box  = new sf::RectangleShape();
 	fill = new sf::RectangleShape();
 
-	box->setSize(sf::Vector2f(menu->size * MENU_SLIDER_SIZE, menu->size));
-	box->setOrigin(menu->size * MENU_SLIDER_SIZE, 0);
 	box->setFillColor(sf::Color::Transparent);
 	box->setOutlineThickness(MENU_THICKNESS);
-	box->setOutlineColor(menu->text->getFillColor());
 
-	fill->setOrigin(menu->size * MENU_SLIDER_SIZE - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
-	fill->setFillColor(menu->box->getOutlineColor());
+	style();
 }
 
 
@@ -37,6 +33,23 @@ ach::MenuItemSlider::~MenuItemSlider()
 {
 	delete box;
 	delete fill;
+}
+
+
+
+/***********************************************************************
+     * MenuItemSlider
+     * style
+
+***********************************************************************/
+void ach::MenuItemSlider::style()
+{
+	box->setSize(sf::Vector2f(menu->theme->spacing * MENU_SLIDER_SIZE, menu->theme->spacing));
+	box->setOrigin(menu->theme->spacing * MENU_SLIDER_SIZE, 0);
+	box->setOutlineColor(menu->theme->color);
+
+	fill->setOrigin(menu->theme->spacing * MENU_SLIDER_SIZE - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
+	fill->setFillColor(menu->theme->border);
 }
 
 
@@ -69,7 +82,7 @@ void ach::MenuItemSlider::render(int i)
 	box->setPosition (menu->right(), menu->line(i));
 	fill->setPosition(menu->right(), menu->line(i));
 
-	fill->setSize(sf::Vector2f((menu->size * MENU_SLIDER_SIZE - MENU_BOX_SHRINK) * (value - min) / (max - min), menu->size - MENU_BOX_SHRINK));
+	fill->setSize(sf::Vector2f((menu->theme->spacing * MENU_SLIDER_SIZE - MENU_BOX_SHRINK) * (value - min) / (max - min), menu->theme->spacing - MENU_BOX_SHRINK));
 
 	rm->draw(box , ach::RenderLayer::rlGUI);
 	rm->draw(fill, ach::RenderLayer::rlGUI);

@@ -1,0 +1,8 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Character": "@include game/character.json",
+    "Projectile": "@include game/projectile.json",
+    "Weapon": "@include game/weapon.json"
+}

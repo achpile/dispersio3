@@ -2,10 +2,7 @@
     "@attr": {
         "type": "object"
     },
-    "Body": "@include data/body.json",
-    "Character": "@include data/character.json",
-    "Model": "@include data/model.json",
-    "Projectile": "@include data/projectile.json",
-    "Sheet": "@include data/sheet.json",
-    "Weapon": "@include data/weapon.json"
+    "GFX": "@include data/gfx.json",
+    "Game": "@include data/game.json",
+    "UI": "@include data/ui.json"
 }

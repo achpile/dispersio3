@@ -1,0 +1,12 @@
+{
+    "weights": {
+        "Weight": {
+            "@attr": {
+                "default": 100,
+                "max": 1000,
+                "min": 0,
+                "type": "real"
+            }
+        }
+    }
+}

@@ -1,22 +1,8 @@
 #ifndef __META_HEADERS
 #define __META_HEADERS
 
-#include <sys/stat.h>
 
-#include <jansson.h>
-#include <string.h>
-#include <libgen.h>
-#include <regex.h>
-#include <math.h>
-
-#include <random>
-#include <ctime>
-#include <filesystem>
-
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
-
-
+#include "meta/system.hpp"
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
 
@@ -32,16 +18,23 @@
 #include "framework/log/base.hpp"
 
 #include "framework/misc/arch.hpp"
+#include "framework/misc/direction.hpp"
 #include "framework/misc/sfml.hpp"
 #include "framework/misc/flag.hpp"
 #include "framework/misc/handler.hpp"
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
 
+#include "framework/random/base.hpp"
+#include "framework/random/item.hpp"
+#include "framework/random/item.inl"
+#include "framework/random/list.hpp"
+#include "framework/random/list.inl"
+
 #include "framework/math/defines.hpp"
 #include "framework/math/base.hpp"
 #include "framework/math/interval.hpp"
-#include "framework/math/random.hpp"
+#include "framework/math/interval.inl"
 #include "framework/math/vector.hpp"
 #include "framework/math/projection.hpp"
 #include "framework/math/line.hpp"
@@ -93,6 +86,7 @@
 
 #include "framework/menu/defines.hpp"
 #include "framework/menu/forward.hpp"
+#include "framework/menu/theme.hpp"
 #include "framework/menu/item.hpp"
 #include "framework/menu/action.hpp"
 #include "framework/menu/back.hpp"
@@ -113,7 +107,6 @@
 #include "framework/collision/base.hpp"
 #include "framework/collision/algo.hpp"
 
-#include "misc/handler.hpp"
 #include "misc/camera.hpp"
 
 #include "particle/stars.hpp"
@@ -121,6 +114,8 @@
 #include "particle/splash.hpp"
 
 #include "data/content.hpp"
+#include "data/font.hpp"
+#include "data/theme.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"
 #include "data/projectile.hpp"
@@ -141,7 +136,7 @@
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"
 
-#include "container/resources.hpp"
+#include "container/theme.hpp"
 #include "container/settings.hpp"
 #include "container/background.hpp"
 #include "container/language.hpp"
@@ -180,6 +175,9 @@
 #include "state/menu.hpp"
 #include "state/game.hpp"
 #include "state/credits.hpp"
+#include "state/end.hpp"
+
+#include "handler/menu.hpp"
 
 #include "meta/app.hpp"
 #include "meta/externs.hpp"

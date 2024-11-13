@@ -5,8 +5,8 @@ ach::App           *app;
 ach::Log           *logger;
 ach::ControlPad    *ctrl;
 
-ach::Resources     *resources;
 ach::Settings      *settings;
+ach::Theme         *theme;
 ach::Language      *lang;
 ach::Background    *bg;
 ach::Database      *db;

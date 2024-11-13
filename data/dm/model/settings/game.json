@@ -8,5 +8,12 @@
             "default": "eng",
             "type": "link"
         }
+    },
+    "Theme": {
+        "@attr": {
+            "data": "Data.UI.Theme",
+            "default": "Default",
+            "type": "link"
+        }
     }
 }

@@ -1,0 +1,25 @@
+{
+    "font": {
+        "Color": {
+            "@attr": {
+                "default": "#FFFFFFFF",
+                "type": "color"
+            }
+        },
+        "Name": {
+            "@attr": {
+                "data": "Data.UI.Font",
+                "default": "Fixedsys",
+                "type": "link"
+            }
+        },
+        "Size": {
+            "@attr": {
+                "default": 16,
+                "max": 32,
+                "min": 12,
+                "type": "integer"
+            }
+        }
+    }
+}

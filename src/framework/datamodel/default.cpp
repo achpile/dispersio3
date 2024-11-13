@@ -18,10 +18,23 @@ json_t *json_dm_generate_default(json_t *obj, json_t *dm)
 		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
-		     if (json_attr_get_type(i) == ach::DataType::dtObject) json_dm_generate_default_object(res, i, key);
-		else if (json_attr_get_type(i) == ach::DataType::dtMulti ) json_dm_generate_default_multi (res, i, key);
-		else if (json_attr_get_type(i) == ach::DataType::dtArray ) json_dm_generate_default_array (res, i, key);
-		else                                                       json_dm_generate_default_value (res, i, key);
+
+		switch (json_attr_get_type(i))
+		{
+			case ach::DataType::dtObject  : json_dm_generate_default_object(res, i, key); break;
+			case ach::DataType::dtArray   : json_dm_generate_default_array (res, i, key); break;
+			case ach::DataType::dtMulti   : json_dm_generate_default_multi (res, i, key); break;
+
+			case ach::DataType::dtString  :
+			case ach::DataType::dtInteger : 
+			case ach::DataType::dtReal    :
+			case ach::DataType::dtBoolean :
+			case ach::DataType::dtFilename:
+			case ach::DataType::dtColor   :
+			case ach::DataType::dtLink    :
+			case ach::DataType::dtEnum    :
+			case ach::DataType::dtUnknown : json_dm_generate_default_value (res, i, key); break;
+		}
 	}
 
 	return res;

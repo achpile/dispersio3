@@ -8,12 +8,11 @@
 ***********************************************************************/
 ach::StateMenu::StateMenu()
 {
-	menu = new ach::Menu("Main", resources->fonts.menu);
+	menu = new ach::Menu(NULL, &theme->menu);
 
 	menu->setPosition(sf::Vector2f(200, 300));
 	menu->setWidth(400);
 	menu->setHeight(9);
-	menu->setSound(resources->sound.blip, resources->sound.back, resources->sound.pick);
 
 	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.Logo"), false, true);
 
@@ -45,9 +44,6 @@ ach::StateMenu::~StateMenu()
 ***********************************************************************/
 void ach::StateMenu::update()
 {
-	if (!menu->isActive)
-		app->isRunning = false;
-
 	menu->controls();
 	menu->update();
 	bg->stars->update();
@@ -98,30 +94,46 @@ void ach::StateMenu::translate()
 
 /***********************************************************************
      * StateMenu
+     * style
+
+***********************************************************************/
+void ach::StateMenu::style()
+{
+	menu->style(&theme->menu);
+}
+
+
+
+/***********************************************************************
+     * StateMenu
      * fill
 
 ***********************************************************************/
 void ach::StateMenu::fill()
 {
-	menu->add("Main"    , new ach::MenuItemAction  (menu, "Start"     , handlerState     , json_string("game"   )));
-	menu->add("Main"    , new ach::MenuItemFolder  (menu, "Options"   ));
-	menu->add("Main"    , new ach::MenuItemAction  (menu, "Credits"   , handlerState     , json_string("credits")));
+	menu->init("Main.Name");
 
-	menu->add("Options" , new ach::MenuItemFolder  (menu, "Game"      ));
-	menu->add("Options" , new ach::MenuItemFolder  (menu, "Audio"     ));
-	menu->add("Options" , new ach::MenuItemFolder  (menu, "Controls"  ));
+	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Start"        , handler_menu_state     , json_string("game"   )));
+	menu->add("Main.Name"       , new ach::MenuItemFolder  (menu, "Options.Name"      ));
+	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Credits"      , handler_menu_state     , json_string("credits")));
+	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Misc.Exit"         , handler_menu_state     , json_string("end"    )));
 
-	menu->add("Game"    , new ach::MenuItemList    (menu, "Language"  , handlerLanguage  , json_object_get_branch(settings->data, "Game.Language"), lang->list(), false));
-	menu->add("Game"    , new ach::MenuItemCheckbox(menu, "Fullscreen", handlerFullscreen, json_object_get_branch(settings->data, "Window"       ), "Fullscreen"));
+	menu->add("Options.Name"    , new ach::MenuItemFolder  (menu, "Options.Game"      ));
+	menu->add("Options.Name"    , new ach::MenuItemFolder  (menu, "Options.Audio"     ));
+	menu->add("Options.Name"    , new ach::MenuItemFolder  (menu, "Options.Controls"  ));
 
-	menu->add("Audio"   , new ach::MenuItemSlider  (menu, "Sound"     , handlerAudio     , json_object_get_branch(settings->data, "Audio.Sound"  ), 0, 10));
-	menu->add("Audio"   , new ach::MenuItemSlider  (menu, "Music"     , handlerAudio     , json_object_get_branch(settings->data, "Audio.Music"  ), 0, 10));
+	menu->add("Options.Game"    , new ach::MenuItemList    (menu, "Options.Language"  , handler_menu_language  , json_object_get_branch(settings->data, "Game.Language"), db->listLanguage(), false));
+	menu->add("Options.Game"    , new ach::MenuItemList    (menu, "Options.Theme"     , handler_menu_theme     , json_object_get_branch(settings->data, "Game.Theme"   ), db->listTheme()   , false));
+	menu->add("Options.Game"    , new ach::MenuItemCheckbox(menu, "Options.Fullscreen", handler_menu_fullscreen, json_object_get_branch(settings->data, "Window"       ), "Fullscreen"));
 
-	menu->add("Controls", new ach::MenuItemFolder  (menu, "Keyboard"  ));
-	menu->add("Controls", new ach::MenuItemAction  (menu, "Reset"     , handlerReset     , NULL));
+	menu->add("Options.Audio"   , new ach::MenuItemSlider  (menu, "Options.Sound"     , handler_menu_audio     , json_object_get_branch(settings->data, "Audio.Sound"  ), 0, 10));
+	menu->add("Options.Audio"   , new ach::MenuItemSlider  (menu, "Options.Music"     , handler_menu_audio     , json_object_get_branch(settings->data, "Audio.Music"  ), 0, 10));
+
+	menu->add("Options.Controls", new ach::MenuItemFolder  (menu, "Options.Keyboard"  ));
+	menu->add("Options.Controls", new ach::MenuItemAction  (menu, "Options.Reset"     , handler_menu_reset     , NULL));
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
-		menu->add("Keyboard", new ach::MenuItemControl(menu, (ach::ControlAction)i));
+		menu->add("Options.Keyboard", new ach::MenuItemControl(menu, (ach::ControlAction)i));
 
 	menu->finalize();
 }

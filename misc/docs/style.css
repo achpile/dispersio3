@@ -1,10 +1,10 @@
-li         { font-family: helvetica,arial,sans-serif; font-size: 8pt; }
-body       { font-family: helvetica,arial,sans-serif; font-size: 8pt; }
-h1         { font-family: helvetica,arial,sans-serif; font-size: 14pt; text-align: center; }
-h3         { font-family: helvetica,arial,sans-serif; font-size: 10pt; }
+body       { font-size: 12pt; font-family: sans-serif; }
+li         { font-size: 12pt; }
+h1         { font-size: 18pt; text-align: center; }
+h3         { font-size: 15pt; }
 table      { text-align: left; }
-th         { vertical-align: top; font-family: helvetica,arial,sans-serif; font-size: 8pt; background-color: rgb(153, 153, 153); }
-tr         { vertical-align: top; font-family: helvetica,arial,sans-serif; font-size: 8pt; }
-tr.o       { vertical-align: top; font-family: helvetica,arial,sans-serif; font-size: 8pt; background-color: rgb(255, 255, 153); }
+th         { vertical-align: top; font-size: 12pt; background-color: rgb(153, 153, 153); }
+tr         { vertical-align: top; font-size: 12pt; }
+tr.o       { vertical-align: top; font-size: 12pt; background-color: rgb(255, 255, 153); }
 tr:hover   { background-color: rgb(240, 240, 240); }
 tr.o:hover { background-color: rgb(240, 240, 120); }
