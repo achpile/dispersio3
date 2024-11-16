@@ -3,7 +3,7 @@
         "AI": "player",
         "Body": "Bat",
         "Sound": {
-            "Die": "sfx/character/player/die.wav"
+            "Die": "sfx/character/enemy/bat/die.wav"
         }
     }
 }
