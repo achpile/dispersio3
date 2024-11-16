@@ -47,7 +47,7 @@ void ach::BodyHumanoid::aim()
 ***********************************************************************/
 void ach::BodyHumanoid::animate()
 {
-	if (owner->phys.grounded)
+	if (owner->phys.ground)
 	{
 		if (owner->phys.moving)
 			legs->setAnimation("Walk");

@@ -6,6 +6,8 @@ namespace ach
 {
 	struct Phys
 	{
+		ach::Line    *ground;
+
 		sf::Vector2f  pos;
 		sf::Vector2f  vel;
 		sf::Vector2f  acc;
@@ -13,7 +15,6 @@ namespace ach
 		sf::Vector2f  size;
 		sf::FloatRect rect;
 
-		bool grounded;
 		bool moving;
 		bool jumpdown;
 

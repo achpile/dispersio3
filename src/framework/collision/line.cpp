@@ -126,7 +126,7 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	sf::Vector2f offset = offsetPhys();
 
 	if (offset.y < 0.0f)
-		p->grounded = true;
+		p->ground = &line;
 
 	if (offset.y != 0.0f)
 		p->vel.y = 0.0f;

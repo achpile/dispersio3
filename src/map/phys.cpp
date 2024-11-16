@@ -26,7 +26,7 @@ void ach::Map::collide()
 ***********************************************************************/
 void ach::Map::collidePhysSteps(ach::Phys *phys)
 {
-	phys->grounded = false;
+	phys->ground = NULL;
 
 	float left = tm->frame;
 	float velocity;
