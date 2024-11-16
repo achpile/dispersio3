@@ -149,6 +149,7 @@
 #include "character/body/pair.hpp"
 #include "character/body/part.hpp"
 #include "character/body/base.hpp"
+#include "character/body/simple.hpp"
 #include "character/body/humanoid.hpp"
 
 #include "character/projectile/pair.hpp"

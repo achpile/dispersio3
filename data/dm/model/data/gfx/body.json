@@ -27,7 +27,8 @@
             "default": "none",
             "enum": [
                 "none",
-                "humanoid"
+                "humanoid",
+                "simple"
             ],
             "type": "enum"
         }

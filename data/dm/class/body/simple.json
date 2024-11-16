@@ -1,0 +1,11 @@
+{
+    "BodySimple": {
+        "List": "Parts",
+        "Objects": [
+            "Body"
+        ],
+        "Param": "Type",
+        "Path": "Data.GFX.Body",
+        "Value": "simple"
+    }
+}

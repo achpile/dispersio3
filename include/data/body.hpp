@@ -7,6 +7,7 @@ namespace ach
 	enum BodyType
 	{
 		btNone = 0,
+		btSimple,
 		btHumanoid
 	};
 
