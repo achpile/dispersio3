@@ -12,6 +12,7 @@ namespace ach
 		sf::Vector2f       pos;
 
 		float angle;
+		float barrel;
 
 
 		 Weapon(ach::ProcessWorld *_world, ach::DataWeapon *_base);

@@ -18,6 +18,8 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 	speed   = base->speed;
 	jumping = base->jumping;
 
+	weapon->barrel = base->barrel;
+
 	body->setColor(base->color);
 	phys.init(base->hitbox);
 }

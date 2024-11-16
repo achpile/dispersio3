@@ -20,12 +20,13 @@ namespace ach
 		float range;
 
 
-		 Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base, sf::Vector2f pos);
+		 Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base);
 		~Projectile();
 
 		bool update();
 		void render();
 
+		void init();
 		void hit(sf::Vector2f n);
 		void destroy();
 

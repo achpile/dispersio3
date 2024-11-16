@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base, sf::Vector2f pos)
+ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base)
 {
 	world   = _world;
 	base    = _base;
@@ -18,13 +18,11 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 	tracer  = createTracer();
 
 	phys.init(sf::Vector2f(0.0f, 0.0f));
-	phys.pos = pos;
 
 	model->setScale(base->scale);
 	model->setColor(base->color);
 
 	tracer->color = base->colorTracer;
-	tracer->init();
 
 	if (base->gravity)
 		phys.acc.y = PHYS_GRAVITY / 4.0f;
@@ -94,6 +92,18 @@ void ach::Projectile::render()
 
 	tracer->render();
 	model->render(phys.pos);
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * init
+
+***********************************************************************/
+void ach::Projectile::init()
+{
+	tracer->init();
 }
 
 

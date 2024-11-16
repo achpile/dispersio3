@@ -1,6 +1,7 @@
 {
     "Player": {
         "AI": "player",
+        "Barrel": 8.0,
         "Body": "Player",
         "Sound": {
             "Die": "sfx/character/player/die.wav",

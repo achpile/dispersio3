@@ -12,6 +12,14 @@
             "type": "enum"
         }
     },
+    "Barrel": {
+        "@attr": {
+            "default": 0.0,
+            "max": 100.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    },
     "Body": {
         "@attr": {
             "data": "Data.GFX.Body",

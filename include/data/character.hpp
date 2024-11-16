@@ -25,6 +25,7 @@ namespace ach
 		sf::SoundBuffer *sndJump;
 		sf::SoundBuffer *sndLand;
 
+		float barrel;
 		float speed;
 		float jumping;
 

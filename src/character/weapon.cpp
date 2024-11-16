@@ -68,13 +68,16 @@ void ach::Weapon::shot()
 
 	for (int i = 0; i < base->count; i++)
 	{
-		ach::Projectile *proj = new ach::Projectile(world, base->projectile, pos);
+		ach::Projectile *proj = new ach::Projectile(world, base->projectile);
 
-		proj->range    = base->range;
-		proj->phys.vel = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
+		proj->range     = base->range;
+		proj->phys.vel  = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
+		proj->phys.pos  = pos + vector_set_len(proj->phys.vel, barrel);
 
 		if (proj->phys.vel.x < 0.0f)
 			proj->flip = true;
+
+		proj->init();
 
 		world->map->projectiles.push_back(proj);
 	}
