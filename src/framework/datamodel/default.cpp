@@ -26,7 +26,7 @@ json_t *json_dm_generate_default(json_t *obj, json_t *dm)
 			case ach::DataType::dtMulti   : json_dm_generate_default_multi (res, i, key); break;
 
 			case ach::DataType::dtString  :
-			case ach::DataType::dtInteger : 
+			case ach::DataType::dtInteger :
 			case ach::DataType::dtReal    :
 			case ach::DataType::dtBoolean :
 			case ach::DataType::dtFilename:
