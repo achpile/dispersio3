@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
+ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f spawn)
 {
 	world   = _world;
 	base    = _base;
@@ -22,6 +22,8 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base)
 
 	body->setColor(base->color);
 	phys.init(base->hitbox);
+
+	respawn(spawn);
 }
 
 

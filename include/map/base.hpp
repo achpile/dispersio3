@@ -10,6 +10,8 @@ namespace ach
 		std::vector<ach::MapObject*>  objects;
 		std::vector<ach::Projectile*> projectiles;
 
+		ach::ProcessWorld            *world;
+
 		ach::MapTile ***tiles;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
@@ -19,7 +21,7 @@ namespace ach
 		sf::Vector2f    spawn;
 
 
-		 Map(const char *filename);
+		 Map(ach::ProcessWorld *_world, const char *filename);
 		~Map();
 
 		void update();
@@ -43,6 +45,7 @@ namespace ach
 		void loadLayerObjects(json_t *layer);
 		void loadPhys(json_t *layer);
 		void loadObjects(json_t *layer);
+		void loadCharacters(json_t *layer);
 
 		sf::Vector2f getTilePos(sf::Vector2i v);
 		sf::Vector2f getTileCenter(sf::Vector2i v);

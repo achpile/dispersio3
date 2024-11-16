@@ -14,8 +14,8 @@ namespace ach
 
 		void update();
 
-		virtual void control() {};
-		virtual void aim()     {};
+		virtual void control();
+		virtual void aim()  {};
 
 		static ach::AI *create(ach::Character *_owner, ach::AIType type);
 	};

@@ -24,7 +24,7 @@ namespace ach
 		bool  landed;
 
 
-		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base);
+		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f spawn);
 		~Character();
 
 		bool update();

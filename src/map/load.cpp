@@ -147,8 +147,9 @@ void ach::Map::loadLayerTiles(json_t *layer)
 ***********************************************************************/
 void ach::Map::loadLayerObjects(json_t *layer)
 {
-		     if (!strcmp(json_object_get_string(layer, "name"), "phys"   )) loadPhys   (layer);
-		else if (!strcmp(json_object_get_string(layer, "name"), "objects")) loadObjects(layer);
+		     if (!strcmp(json_object_get_string(layer, "name"), "phys"      )) loadPhys      (layer);
+		else if (!strcmp(json_object_get_string(layer, "name"), "objects"   )) loadObjects   (layer);
+		else if (!strcmp(json_object_get_string(layer, "name"), "characters")) loadCharacters(layer);
 
 		else logger->log(ach::LogLevel::llWarning, "Unknown map layer \"%s\"", json_object_get_string(layer, "name"));
 }
@@ -205,6 +206,30 @@ void ach::Map::loadObjects(json_t *layer)
 	{
 		     if (!strcmp(json_object_get_string(obj, "type"), "decor")) objects.push_back(new ach::MapObjectDecor(obj));
 
-		else logger->log(ach::LogLevel::llWarning, "Unknown map object type \"%s\"", json_object_get_string(layer, "type"));
+		else logger->log(ach::LogLevel::llWarning, "Unknown map object type \"%s\"", json_object_get_string(obj, "type"));
+	}
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadCharacters
+
+***********************************************************************/
+void ach::Map::loadCharacters(json_t *layer)
+{
+	json_t *obj;
+	size_t  index;
+
+	json_array_foreach(json_object_get(layer, "objects"), index, obj)
+	{
+		if (strcmp(json_object_get_string(obj, "type"), "character") != 0)
+		{
+			logger->log(ach::LogLevel::llWarning, "Expected character instead of \"%s\"", json_object_get_string(obj, "type"));
+			continue;
+		}
+
+		characters.push_back(new ach::Character(world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj)));
 	}
 }

@@ -37,7 +37,7 @@ void ach::AIPlayer::control()
 	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1, ctrl->keys[ach::ControlAction::caHold].state);
 
 	owner->phys.jumpdown = ctrl->keys[ach::ControlAction::caJump].state &&
-	                           ctrl->keys[ach::ControlAction::caDown].state;
+	                       ctrl->keys[ach::ControlAction::caDown].state;
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) owner->jump();
 	if (ctrl->keys[ach::ControlAction::caShot ].state  ) owner->shot();

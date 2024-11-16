@@ -1,6 +1,6 @@
 {
     "Bat": {
-        "AI": "player",
+        "AI": "idle",
         "Body": "Bat",
         "Sound": {
             "Die": "sfx/character/enemy/bat/die.wav"

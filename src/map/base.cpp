@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Map::Map(const char *filename)
+ach::Map::Map(ach::ProcessWorld *_world, const char *filename)
 {
+	world     = _world;
 	collision = new ach::Collision();
 
 	load(filename);

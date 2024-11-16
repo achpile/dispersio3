@@ -171,6 +171,18 @@ sf::FloatRect vector_json_rect(json_t *j)
 
 
 /***********************************************************************
+     * vector_json_center
+
+***********************************************************************/
+sf::Vector2f vector_json_center(json_t *j)
+{
+	return sf::Vector2f(json_object_get_real(j, "x"     ) + json_object_get_real(j, "width" ) / 2.0f,
+	                    json_object_get_real(j, "y"     ) + json_object_get_real(j, "height") / 2.0f);
+}
+
+
+
+/***********************************************************************
      * vector_tile_coord
 
 ***********************************************************************/
