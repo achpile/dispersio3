@@ -1,0 +1,18 @@
+{
+    "Dispersio": {
+        "Credits": {
+            "Font": {
+                "Size": 24
+            }
+        },
+        "Menu": {
+            "Border": {
+                "Background": "#000000",
+                "Color": "#FF000096"
+            },
+            "Font": {
+                "Size": 19
+            }
+        }
+    }
+}
