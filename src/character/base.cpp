@@ -55,10 +55,10 @@ bool ach::Character::update()
 	weapon->aim(phys.pos + body->barrel, aim);
 	weapon->update();
 
-	if (phys.ground && !landed)
+	if (phys.grounded && !landed)
 		sm->play(base->sndLand);
 
-	landed = (phys.ground != NULL);
+	landed = phys.grounded;
 
 	return true;
 }
@@ -136,6 +136,9 @@ void ach::Character::move(int d)
 {
 	phys.moving = true;
 	phys.vel.x  = speed * d;
+
+	if (phys.grounded)
+		phys.vel.y = PHYS_GROUND_VEL;
 }
 
 
@@ -147,7 +150,7 @@ void ach::Character::move(int d)
 ***********************************************************************/
 void ach::Character::jump()
 {
-	if (!phys.ground)
+	if (!phys.grounded)
 		return;
 
 	if (phys.jumpdown)
