@@ -95,6 +95,8 @@ void ach::Collision::fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect
 	for (int x = from.x; x < to.x; x++)
 		for (int y = from.y; y < to.y; y++)
 			quad[x][y]->fill(list);
+
+	list->erase(std::unique(list->begin(), list->end()), list->end());
 }
 
 

@@ -70,11 +70,11 @@ bool ach::Map::collidePhys(ach::Phys *phys)
 	collision->fill(&list, &phys->rect);
 	collision->sort(&list, phys);
 
+	if (!list.size()) return false;
+
 	list_foreach(list)
-	{
 		if (list[i]->collide(phys))
 			return true;
-	}
 
 	return false;
 }

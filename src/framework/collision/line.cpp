@@ -122,6 +122,12 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	if (math_epsilon(d) || (math_epsilon(o)))
 		return false;
 
+	if (o < 0)
+		return false;
+
+	if (!v && d < 0 && p->vel.y < 0.0f)
+		return false;
+
 
 	sf::Vector2f offset = offsetPhys();
 
@@ -223,7 +229,7 @@ float ach::PhysLine::value(float x)
 ***********************************************************************/
 bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 {
-	return a->o > b->o;
+	return fabs(a->o) > fabs(b->o);
 }
 
 
