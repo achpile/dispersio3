@@ -49,13 +49,14 @@ ach::Map::~Map()
 void ach::Map::update()
 {
 	process();
-	collide();
 
 	bg->stars->update();
 
 	list_update(characters);
 	list_update(objects);
 	list_update(projectiles);
+
+	collide();
 }
 
 

@@ -53,11 +53,11 @@ bool ach::Projectile::update()
 	if (!alive)
 		return false;
 
-	line.a = phys.pos;
+	line.a = last;
+	last   = line.b;
 
 	phys.update();
 	model->update();
-	tracer->update();
 
 	line.b = phys.pos;
 	line.calc();
@@ -90,6 +90,7 @@ void ach::Projectile::render()
 	if (!alive)
 		return;
 
+	tracer->update();
 	tracer->render();
 	model->render(phys.pos);
 }
@@ -103,6 +104,10 @@ void ach::Projectile::render()
 ***********************************************************************/
 void ach::Projectile::init()
 {
+	line.a = phys.pos;
+	line.b = phys.pos;
+	last   = phys.pos;
+
 	tracer->init();
 }
 

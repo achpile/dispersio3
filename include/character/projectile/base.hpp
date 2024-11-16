@@ -13,6 +13,8 @@ namespace ach
 		ach::Line            line;
 		ach::Phys            phys;
 
+		sf::Vector2f         last;
+
 		bool  alive;
 		bool  flip;
 		int   bounces;
