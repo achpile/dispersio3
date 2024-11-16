@@ -37,19 +37,32 @@ ach::Collision::~Collision()
      * split
 
 ***********************************************************************/
-void ach::Collision::split(sf::Vector2i _size, sf::Vector2i _area)
+void ach::Collision::split(sf::Vector2i _size)
 {
-	area   = _area;
-	size.x = ceil((float)_size.x / _area.x);
-	size.y = ceil((float)_size.y / _area.y);
+	sf::FloatRect area;
+
+	area.width  = COLLISION_QUAD_X;
+	area.height = COLLISION_QUAD_Y;
+
+	size.x = ceil((float)_size.x / area.width);
+	size.y = ceil((float)_size.y / area.height);
 	quad   = new ach::Quadrant**[size.x];
 
-	for (int i = 0; i < size.x; i++)
+	for (int x = 0; x < size.x; x++)
 	{
-		quad[i] = new ach::Quadrant*[size.y];
+		quad[x] = new ach::Quadrant*[size.y];
 
-		for (int j = 0; j < size.y; j++)
-			quad[i][j] = new ach::Quadrant(vector_mult_i(area, sf::Vector2i(i, j)), area);
+		for (int y = 0; y < size.y; y++)
+		{
+			quad[x][y] = new ach::Quadrant();
+
+			area.left = area.width  * x;
+			area.top  = area.height * y;
+
+			list_foreach(lines)
+				if (collision_box_vs_line(area, lines[i]->line, NULL, NULL))
+					quad[x][y]->lines.push_back(lines[i]);
+		}
 	}
 }
 
@@ -60,12 +73,28 @@ void ach::Collision::split(sf::Vector2i _size, sf::Vector2i _area)
      * fill
 
 ***********************************************************************/
-void ach::Collision::fill(std::vector<ach::PhysLine*> *list)
+void ach::Collision::fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect)
 {
 	list->clear();
 
-	list_foreach(lines)
-		list->push_back(lines[i]);
+	sf::Vector2i from;
+	sf::Vector2i to;
+
+	from.x = floor((rect->left) / COLLISION_QUAD_X);
+	from.y = floor((rect->top ) / COLLISION_QUAD_Y);
+
+	to.x = ceil((rect->left + rect->width ) / COLLISION_QUAD_X);
+	to.y = ceil((rect->top  + rect->height) / COLLISION_QUAD_Y);
+
+	from.x = std::max(from.x, 0);
+	from.y = std::max(from.y, 0);
+
+	to.x = std::min(to.x, size.x);
+	to.y = std::min(to.y, size.y);
+
+	for (int x = from.x; x < to.x; x++)
+		for (int y = from.y; y < to.y; y++)
+			quad[x][y]->fill(list);
 }
 
 

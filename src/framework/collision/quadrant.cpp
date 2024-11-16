@@ -6,9 +6,8 @@
      * constructor
 
 ***********************************************************************/
-ach::Quadrant::Quadrant(sf::Vector2i pos, sf::Vector2i size)
+ach::Quadrant::Quadrant()
 {
-	rect = sf::FloatRect(sf::Vector2f(pos), sf::Vector2f(size));
 }
 
 
@@ -21,4 +20,17 @@ ach::Quadrant::Quadrant(sf::Vector2i pos, sf::Vector2i size)
 ach::Quadrant::~Quadrant()
 {
 	lines.clear();
+}
+
+
+
+/***********************************************************************
+     * Quadrant
+     * fill
+
+***********************************************************************/
+void ach::Quadrant::fill(std::vector<ach::PhysLine*> *list)
+{
+	list_foreach(lines)
+		list->push_back(lines[i]);
 }

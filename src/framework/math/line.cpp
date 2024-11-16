@@ -48,4 +48,9 @@ void ach::Line::calc()
 	v = b - a;
 	l = vector_len(v);
 	n = vector_norm(vector_perpendicular(v));
+
+	r.left   = std::min(a.x, b.x);
+	r.top    = std::min(a.y, b.y);
+	r.width  = fabs(a.x - b.x);
+	r.height = fabs(a.y - b.y);
 }

@@ -10,15 +10,14 @@ namespace ach
 
 		ach::Quadrant ***quad;
 		sf::Vector2i     size;
-		sf::Vector2i     area;
 
 
 		 Collision();
 		~Collision();
 
-		void split(sf::Vector2i _size, sf::Vector2i _area);
+		void split(sf::Vector2i _size);
 
-		void fill(std::vector<ach::PhysLine*> *list);
+		void fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect);
 
 		void sort(std::vector<ach::PhysLine*> *list);
 		void sort(std::vector<ach::PhysLine*> *list, ach::Line *line);

@@ -6,12 +6,13 @@ namespace ach
 {
 	struct Quadrant
 	{
-		sf::FloatRect               rect;
 		std::vector<ach::PhysLine*> lines;
 
 
-		 Quadrant(sf::Vector2i pos, sf::Vector2i size);
+		 Quadrant();
 		~Quadrant();
+
+		void fill(std::vector<ach::PhysLine*> *list);
 	};
 }
 

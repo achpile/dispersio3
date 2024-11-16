@@ -6,12 +6,13 @@ namespace ach
 {
 	struct Line
 	{
-		sf::Vector2f a;
-		sf::Vector2f b;
+		sf::Vector2f  a;
+		sf::Vector2f  b;
 
-		sf::Vector2f v;
-		sf::Vector2f n;
-		float        l;
+		sf::FloatRect r;
+		sf::Vector2f  v;
+		sf::Vector2f  n;
+		float         l;
 
 
 		 Line();

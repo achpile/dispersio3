@@ -186,7 +186,7 @@ void ach::Map::loadPhys(json_t *layer)
 		}
 	}
 
-	collision->split(vector_mult_i(sizeMap, sizeTile), sf::Vector2i(50, 50));
+	collision->split(vector_mult_i(sizeMap, sizeTile));
 }
 
 

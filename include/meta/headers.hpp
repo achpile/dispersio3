@@ -100,6 +100,7 @@
 #include "framework/particle/base.hpp"
 #include "framework/particle/system.hpp"
 
+#include "framework/collision/defines.hpp"
 #include "framework/collision/pair.hpp"
 #include "framework/collision/phys.hpp"
 #include "framework/collision/line.hpp"

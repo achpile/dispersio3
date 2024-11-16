@@ -67,7 +67,7 @@ bool ach::Map::collidePhys(ach::Phys *phys)
 {
 	std::vector<ach::PhysLine*> list;
 
-	collision->fill(&list);
+	collision->fill(&list, &phys->rect);
 	collision->sort(&list, phys);
 
 	list_foreach(list)
@@ -90,7 +90,7 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
 {
 	std::vector<ach::PhysLine*> list;
 
-	collision->fill(&list);
+	collision->fill(&list, &projectile->line.r);
 	collision->sort(&list, &projectile->line);
 
 	list_foreach(list)
