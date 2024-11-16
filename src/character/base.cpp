@@ -140,7 +140,7 @@ void ach::Character::move(int d)
 	phys.vel.x  = speed * d;
 
 	if (phys.grounded)
-		phys.vel.y = PHYS_GROUND_VEL;
+		phys.vel.y = 1.5 * speed;
 }
 
 
