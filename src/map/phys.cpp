@@ -11,8 +11,6 @@ void ach::Map::collide()
 	list_foreach(characters)
 		collidePhysSteps(&characters[i]->phys);
 
-	// collide bullets <-> characters
-
 	list_foreach(projectiles)
 		collideProjectile(projectiles[i]);
 }
@@ -88,6 +86,13 @@ bool ach::Map::collidePhys(ach::Phys *phys)
 ***********************************************************************/
 bool ach::Map::collideProjectile(ach::Projectile *projectile)
 {
+	list_foreach(characters)
+		if (projectile->enemy != characters[i]->enemy)
+		{
+			
+		}
+
+
 	std::vector<ach::PhysLine*> list;
 
 	collision->fill(&list, &projectile->line.r);

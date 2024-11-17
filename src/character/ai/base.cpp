@@ -9,6 +9,8 @@
 ach::AI::AI(ach::Character *_owner)
 {
 	owner = _owner;
+
+	owner->enemy = true;
 }
 
 

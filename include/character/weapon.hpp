@@ -7,6 +7,7 @@ namespace ach
 	struct Weapon
 	{
 		ach::ProcessWorld *world;
+		ach::Character    *owner;
 		ach::DataWeapon   *base;
 		ach::Timer         cooldown;
 		sf::Vector2f       pos;
@@ -15,7 +16,7 @@ namespace ach
 		float barrel;
 
 
-		 Weapon(ach::ProcessWorld *_world, ach::DataWeapon *_base);
+		 Weapon(ach::ProcessWorld *_world, ach::Character *_owner, ach::DataWeapon *_base);
 		~Weapon();
 
 		void update();

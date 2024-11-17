@@ -22,6 +22,7 @@ namespace ach
 		float jumping;
 		bool  dead;
 		bool  landed;
+		bool  enemy;
 
 
 		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f spawn);

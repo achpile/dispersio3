@@ -12,7 +12,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, 
 	base    = _base;
 	ai      = ach::AI::create(this, base->ai);
 	body    = ach::Body::create(this, base->body);
-	weapon  = new ach::Weapon(world, base->weapon);
+	weapon  = new ach::Weapon(world, this, base->weapon);
 	dead    = false;
 	landed  = true;
 	speed   = base->speed;

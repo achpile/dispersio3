@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::AIPlayer::AIPlayer(ach::Character *_owner) : AI(_owner)
 {
+	owner->enemy = false;
 }
 
 
