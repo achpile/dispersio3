@@ -21,6 +21,34 @@ bool collision_box_vs_box(sf::FloatRect box, sf::FloatRect rect, sf::Vector2f *c
 
 
 /***********************************************************************
+     * collision_box_vs_circle
+
+***********************************************************************/
+bool collision_box_vs_circle(sf::FloatRect box, sf::Vector2f center, float r, sf::Vector2f *c, sf::Vector2f *n)
+{
+	sf::Vector2f t;
+
+	t.x = center.x;
+	t.y = center.y;
+
+	if (center.x < box.left)             t.x = box.left;
+	if (center.x > box.left + box.width) t.x = box.left + box.width;
+
+	if (center.y < box.top             ) t.y = box.top;
+	if (center.y > box.top + box.height) t.y = box.top + box.height;
+
+	if (sqrt(math_sqr(center.x - t.x) + math_sqr(center.y - t.y)) > r)
+		return false;
+
+	if (c) *c = vector_center(box);
+	if (n) *n = vector_norm(vector_center(box) - center);
+
+	return true;
+}
+
+
+
+/***********************************************************************
      * collision_box_vs_line
 
 ***********************************************************************/

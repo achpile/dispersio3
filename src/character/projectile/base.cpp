@@ -17,7 +17,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 	model   = new ach::Model(base->sheet);
 	tracer  = createTracer();
 
-	phys.init(sf::Vector2f(0.0f, 0.0f));
+	phys.init(sf::Vector2f(base->radius * 2.0f, base->radius * 2.0f));
 
 	model->setScale(base->scale);
 	model->setColor(base->color);

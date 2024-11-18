@@ -53,8 +53,8 @@ void ach::Camera::center()
 	if (!follower)
 		return;
 
-	viewport.left = follower->pos.x - RENDER_LAYER_GAME_X / 2.0f;
-	viewport.top  = follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f;
+	viewport.left = floor(follower->pos.x - RENDER_LAYER_GAME_X / 2.0f);
+	viewport.top  = floor(follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f);
 }
 
 

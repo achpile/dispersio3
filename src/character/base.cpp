@@ -64,6 +64,9 @@ bool ach::Character::update()
 
 	landed = phys.grounded;
 
+	if (phys.grounded)
+		phys.vel.y = 1.5 * speed;
+
 	return true;
 }
 
@@ -192,9 +195,6 @@ void ach::Character::move(int d)
 {
 	phys.moving = true;
 	phys.vel.x  = speed * d;
-
-	if (phys.grounded)
-		phys.vel.y = 1.5 * speed;
 }
 
 
