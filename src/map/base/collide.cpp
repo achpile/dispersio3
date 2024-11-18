@@ -13,6 +13,9 @@ void ach::Map::collide()
 
 	list_foreach(projectiles)
 		collideProjectile(projectiles[i]);
+
+	list_foreach(characters)
+		collideCharacter(characters[i]);
 }
 
 
@@ -102,6 +105,42 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
 		{
 			projectile->phys.pos = projectile->line.b;
 			projectile->hit(vector_alike(list[i]->line.n, -projectile->line.v));
+			return true;
+		}
+	}
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * Map
+     * collideCharacter
+
+***********************************************************************/
+bool ach::Map::collideCharacter(ach::Character *character)
+{
+	if (character->enemy)
+		return false;
+
+	if (!character->alive)
+		return false;
+
+	sf::Vector2f c;
+	sf::Vector2f n;
+
+	list_foreach(characters)
+	{
+		if (!characters[i]->alive)
+			continue;
+
+		if (character->enemy == characters[i]->enemy)
+			continue;
+
+		if (collision_box_vs_box(character->phys.rect, characters[i]->phys.rect, &c, &n))
+		{
+			character->damage(1, c, n);
 			return true;
 		}
 	}

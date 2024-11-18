@@ -162,7 +162,7 @@ bool ach::Character::hit(ach::Projectile *projectile)
 
 	if (res)
 	{
-		damage(projectile, c, n);
+		damage(projectile->damage, c, n);
 		projectile->destroy();
 	}
 
@@ -176,9 +176,9 @@ bool ach::Character::hit(ach::Projectile *projectile)
      * damage
 
 ***********************************************************************/
-void ach::Character::damage(ach::Projectile *projectile, sf::Vector2f , sf::Vector2f )
+void ach::Character::damage(int damage, sf::Vector2f , sf::Vector2f )
 {
-	health -= projectile->damage;
+	health -= damage;
 }
 
 
