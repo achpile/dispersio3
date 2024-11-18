@@ -17,8 +17,9 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	hitbox  = vector_json_coord(json_object_get(obj, "Hitbox"), "X", "Y");
 	color   = str_to_color(json_object_get_string(obj, "Color"));
 
-	speed   = json_object_get_branch_real(obj, "Stats.Speed");
-	jumping = json_object_get_branch_real(obj, "Stats.Jump" );
+	speed   = json_object_get_branch_real   (obj, "Stats.Speed" );
+	jumping = json_object_get_branch_real   (obj, "Stats.Jump"  );
+	health  = json_object_get_branch_integer(obj, "Stats.Health");
 
 	sfml_load_sound(&sndHurt, json_object_get_branch_string(obj, "Sound.Hurt"));
 	sfml_load_sound(&sndDie , json_object_get_branch_string(obj, "Sound.Die" ));

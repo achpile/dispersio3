@@ -20,7 +20,8 @@ namespace ach
 
 		float speed;
 		float jumping;
-		bool  dead;
+		int   health;
+		bool  alive;
 		bool  landed;
 		bool  enemy;
 
@@ -35,6 +36,9 @@ namespace ach
 
 		void respawn(sf::Vector2f spawn);
 		void reset();
+
+		bool hit(ach::Projectile *projectile);
+		void damage(ach::Projectile *projectile, sf::Vector2f c, sf::Vector2f n);
 
 		void move(int d);
 		void jump();

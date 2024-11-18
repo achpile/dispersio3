@@ -87,10 +87,8 @@ bool ach::Map::collidePhys(ach::Phys *phys)
 bool ach::Map::collideProjectile(ach::Projectile *projectile)
 {
 	list_foreach(characters)
-		if (projectile->enemy != characters[i]->enemy)
-		{
-			
-		}
+		if (characters[i]->hit(projectile))
+			return true;
 
 
 	std::vector<ach::PhysLine*> list;

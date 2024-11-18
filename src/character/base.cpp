@@ -13,7 +13,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, 
 	ai      = ach::AI::create(this, base->ai);
 	body    = ach::Body::create(this, base->body);
 	weapon  = new ach::Weapon(world, this, base->weapon);
-	dead    = false;
+	alive   = true;
 	landed  = true;
 	speed   = base->speed;
 	jumping = base->jumping;
@@ -51,7 +51,7 @@ ach::Character::~Character()
 ***********************************************************************/
 bool ach::Character::update()
 {
-	if (dead)
+	if (!alive)
 		return false;
 
 	body->update();
@@ -76,7 +76,7 @@ bool ach::Character::update()
 ***********************************************************************/
 void ach::Character::render()
 {
-	if (dead)
+	if (!alive)
 		return;
 
 	body->render();
@@ -91,7 +91,7 @@ void ach::Character::render()
 ***********************************************************************/
 void ach::Character::process()
 {
-	if (dead)
+	if (!alive)
 		return;
 
 	ai->update();
@@ -106,6 +106,8 @@ void ach::Character::process()
 ***********************************************************************/
 void ach::Character::respawn(sf::Vector2f spawn)
 {
+	alive    = true;
+	health   = base->health;
 	phys.pos = spawn;
 
 	reset();
@@ -127,6 +129,56 @@ void ach::Character::reset()
 
 	phys.reset();
 	phys.acc.y = PHYS_GRAVITY;
+}
+
+
+
+/***********************************************************************
+     * Character
+     * hit
+
+***********************************************************************/
+bool ach::Character::hit(ach::Projectile *projectile)
+{
+	if (enemy == projectile->enemy)
+		return false;
+
+	if (!alive)
+		return false;
+
+	if (!projectile->alive)
+		return false;
+
+	bool res;
+
+	sf::Vector2f c;
+	sf::Vector2f n;
+
+	res = collision_box_vs_line(phys.rect, projectile->line, &c, &n);
+
+	if (!res)
+		res = collision_box_vs_box(phys.rect, projectile->phys.rect, &c, &n);
+
+
+	if (res)
+	{
+		damage(projectile, c, n);
+		projectile->destroy();
+	}
+
+	return res;
+}
+
+
+
+/***********************************************************************
+     * Character
+     * damage
+
+***********************************************************************/
+void ach::Character::damage(ach::Projectile *projectile, sf::Vector2f , sf::Vector2f )
+{
+	health -= projectile->damage;
 }
 
 

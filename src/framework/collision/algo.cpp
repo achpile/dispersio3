@@ -2,6 +2,25 @@
 
 
 /***********************************************************************
+     * collision_box_vs_box
+
+***********************************************************************/
+bool collision_box_vs_box(sf::FloatRect box, sf::FloatRect rect, sf::Vector2f *c, sf::Vector2f *n)
+{
+	sf::FloatRect intersection;
+
+	if (!box.intersects(rect, intersection))
+		return false;
+
+	if (c) *c = vector_center(intersection);
+	if (n) *n = vector_norm(vector_center(box) - vector_center(rect));
+
+	return true;
+}
+
+
+
+/***********************************************************************
      * collision_box_vs_line
 
 ***********************************************************************/

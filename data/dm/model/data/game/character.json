@@ -74,6 +74,14 @@
         "@attr": {
             "type": "object"
         },
+        "Health": {
+            "@attr": {
+                "default": 1,
+                "max": 1000,
+                "min": 1,
+                "type": "integer"
+            }
+        },
         "Jump": {
             "@attr": {
                 "default": 320.0,

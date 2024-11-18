@@ -19,6 +19,7 @@ namespace ach
 		bool  flip;
 		bool  enemy;
 		int   bounces;
+		int   damage;
 		float angle;
 		float range;
 

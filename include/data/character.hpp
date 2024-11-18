@@ -28,6 +28,7 @@ namespace ach
 		float barrel;
 		float speed;
 		float jumping;
+		int   health;
 
 
 		 DataCharacter(json_t *obj);

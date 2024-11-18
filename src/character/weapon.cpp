@@ -71,10 +71,11 @@ void ach::Weapon::shot()
 	{
 		ach::Projectile *proj = new ach::Projectile(world, base->projectile);
 
-		proj->range     = base->range;
-		proj->enemy     = owner->enemy;
-		proj->phys.vel  = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
-		proj->phys.pos  = pos + vector_set_len(proj->phys.vel, barrel);
+		proj->range    = base->range;
+		proj->damage   = base->damage;
+		proj->enemy    = owner->enemy;
+		proj->phys.vel = vector_set_len(vector_create(angle + random_float(base->cone * MATH_RAD)), base->speed);
+		proj->phys.pos = pos + vector_set_len(proj->phys.vel, barrel);
 
 		if (proj->phys.vel.x < 0.0f)
 			proj->flip = true;
