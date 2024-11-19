@@ -58,7 +58,7 @@ bool ach::ParticleSystemSmoke::process(ach::Particle *particle)
 {
 	particle->scale    = particle->age * (1.3f / life) + 1.0f;
 	particle->offset.x = (particle->age + 2.0f) * sin(particle->age * 20.0f);
-	particle->color.a  = math_linear(particle->age, -(250.0f / life), 255.0f);
+	particle->color.a  = math_linear(particle->age, -(250.0f / life), color.a);
 
 	return particle->age <= life;
 }

@@ -65,7 +65,7 @@ void ach::TracerLine::init()
 	for (unsigned int i = 0; i < line.getVertexCount(); i++)
 	{
 		line[i].color    = color;
-		line[i].color.a  = (i + 1) * 255 / line.getVertexCount();
+		line[i].color.a  = (i + 1) * color.a / line.getVertexCount();
 		line[i].position = phys->pos;
 	}
 }
