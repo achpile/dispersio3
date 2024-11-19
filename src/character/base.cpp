@@ -165,7 +165,9 @@ bool ach::Character::hit(ach::Projectile *projectile)
 
 	if (res)
 	{
-		damage(projectile->damage, c, n);
+		if (!projectile->base->explosive)
+			damage(projectile->damage, c, n);
+
 		projectile->destroy();
 	}
 

@@ -87,11 +87,11 @@ bool ach::Map::collidePhys(ach::Phys *phys)
      * collideProjectile
 
 ***********************************************************************/
-bool ach::Map::collideProjectile(ach::Projectile *projectile)
+void ach::Map::collideProjectile(ach::Projectile *projectile)
 {
 	list_foreach(characters)
 		if (characters[i]->hit(projectile))
-			return true;
+			return;
 
 
 	std::vector<ach::PhysLine*> list;
@@ -105,11 +105,32 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
 		{
 			projectile->phys.pos = projectile->line.b;
 			projectile->hit(vector_alike(list[i]->line.n, -projectile->line.v));
-			return true;
+
+			return;
 		}
 	}
+}
 
-	return false;
+
+
+/***********************************************************************
+     * Map
+     * collideExplosion
+
+***********************************************************************/
+void ach::Map::collideExplosion(ach::Projectile *projectile)
+{
+	sf::Vector2f c;
+	sf::Vector2f n;
+
+	list_foreach(characters)
+	{
+		if (characters[i]->enemy == projectile->enemy)
+			continue;
+
+		if (collision_box_vs_circle(characters[i]->phys.rect, projectile->phys.pos, projectile->base->explosionR, &c, &n))
+			characters[i]->damage(projectile->damage, c, n);
+	}
 }
 
 
@@ -119,13 +140,13 @@ bool ach::Map::collideProjectile(ach::Projectile *projectile)
      * collideCharacter
 
 ***********************************************************************/
-bool ach::Map::collideCharacter(ach::Character *character)
+void ach::Map::collideCharacter(ach::Character *character)
 {
 	if (character->enemy)
-		return false;
+		return;
 
 	if (!character->alive)
-		return false;
+		return;
 
 	sf::Vector2f c;
 	sf::Vector2f n;
@@ -141,9 +162,8 @@ bool ach::Map::collideCharacter(ach::Character *character)
 		if (collision_box_vs_box(character->phys.rect, characters[i]->phys.rect, &c, &n))
 		{
 			character->damage(1, c, n);
-			return true;
+
+			return;
 		}
 	}
-
-	return false;
 }

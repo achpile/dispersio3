@@ -198,6 +198,7 @@ void ach::Projectile::explode()
 		return;
 
 	world->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
+	world->map->collideExplosion(this);
 	sm->play(base->sfxExplosion);
 }
 

@@ -34,8 +34,9 @@ namespace ach
 		void collide();
 		void collidePhysSteps(ach::Phys *phys);
 		bool collidePhys(ach::Phys *phys);
-		bool collideProjectile(ach::Projectile *projectile);
-		bool collideCharacter(ach::Character *character);
+		void collideProjectile(ach::Projectile *projectile);
+		void collideExplosion(ach::Projectile *projectile);
+		void collideCharacter(ach::Character *character);
 
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);
