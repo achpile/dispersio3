@@ -9,7 +9,7 @@
 ach::ParticleSystemSmoke::ParticleSystemSmoke() : ParticleSystem(2.0f)
 {
 	age   = 0.0f;
-	freq  = 0.2f;
+	freq  = 0.07f;
 	life  = 0.35f;
 	pos   = sf::Vector2f(0.0f, 0.0f);
 	color = sf::Color::White;
