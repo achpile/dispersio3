@@ -15,6 +15,8 @@ ach::ProcessWorld::ProcessWorld()
 	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
 	cam->follow(&player->phys);
 
+	player->respawning = true;
+
 	map->characters.push_back(player);
 }
 

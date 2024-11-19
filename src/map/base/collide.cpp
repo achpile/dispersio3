@@ -9,7 +9,8 @@
 void ach::Map::collide()
 {
 	list_foreach(characters)
-		collidePhysSteps(&characters[i]->phys);
+		if (characters[i]->alive)
+			collidePhysSteps(&characters[i]->phys);
 
 	list_foreach(projectiles)
 		collideProjectile(projectiles[i]);

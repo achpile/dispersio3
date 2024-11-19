@@ -14,9 +14,11 @@ namespace ach
 		ach::Body          *body;
 		ach::Weapon        *weapon;
 		ach::Phys           phys;
+		ach::Timer          spawner;
 
 		sf::Vector2i        dir;
 		sf::Vector2f        aim;
+		sf::Vector2f        spawn;
 
 		float speed;
 		float jumping;
@@ -24,9 +26,10 @@ namespace ach
 		bool  alive;
 		bool  landed;
 		bool  enemy;
+		bool  respawning;
 
 
-		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f spawn);
+		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn);
 		~Character();
 
 		bool update();
@@ -34,7 +37,7 @@ namespace ach
 
 		void process();
 
-		void respawn(sf::Vector2f spawn);
+		void respawn();
 		void reset();
 
 		bool hit(ach::Projectile *projectile);

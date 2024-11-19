@@ -6,24 +6,26 @@
      * constructor
 
 ***********************************************************************/
-ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f spawn)
+ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn)
 {
-	world   = _world;
-	base    = _base;
-	ai      = ach::AI::create(this, base->ai);
-	body    = ach::Body::create(this, base->body);
-	weapon  = new ach::Weapon(world, this, base->weapon);
-	alive   = true;
-	landed  = true;
-	speed   = base->speed;
-	jumping = base->jumping;
+	world      = _world;
+	base       = _base;
+	spawn      = _spawn;
+	ai         = ach::AI::create(this, base->ai);
+	body       = ach::Body::create(this, base->body);
+	weapon     = new ach::Weapon(world, this, base->weapon);
+	speed      = base->speed;
+	jumping    = base->jumping;
+	respawning = false;
 
-	weapon->barrel = base->barrel;
+
+	phys.init(base->hitbox);
+	spawner.set(GAME_PLAYER_RESPAWN);
 
 	body->setColor(base->color);
-	phys.init(base->hitbox);
+	weapon->barrel = base->barrel;
 
-	respawn(spawn);
+	respawn();
 }
 
 
@@ -52,7 +54,16 @@ ach::Character::~Character()
 bool ach::Character::update()
 {
 	if (!alive)
-		return false;
+	{
+		if (!respawning)
+			return false;
+
+		if (spawner.update())
+			return true;
+
+		respawn();
+	}
+
 
 	body->update();
 
@@ -107,12 +118,14 @@ void ach::Character::process()
      * respawn
 
 ***********************************************************************/
-void ach::Character::respawn(sf::Vector2f spawn)
+void ach::Character::respawn()
 {
 	alive    = true;
+	landed   = true;
 	health   = base->health;
 	phys.pos = spawn;
 
+	spawner.reset();
 	reset();
 }
 
@@ -132,6 +145,7 @@ void ach::Character::reset()
 
 	phys.reset();
 	phys.acc.y = PHYS_GRAVITY;
+	phys.vel.y = speed;
 }
 
 
