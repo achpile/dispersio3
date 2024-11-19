@@ -1,0 +1,14 @@
+{
+    "Rocket": {
+        "Explosion": {
+            "Enable": true,
+            "Radius": 32
+        },
+        "Orientation": "direction",
+        "Radius": 2,
+        "Sheet": "ProjectileRocket",
+        "Tracer": {
+            "Type": "smoke"
+        }
+    }
+}
