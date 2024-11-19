@@ -19,7 +19,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 
 	phys.init(sf::Vector2f(base->radius * 2.0f, base->radius * 2.0f));
 
-	world->gfx.push_back(tracer);
+	world->map->gfx.push_back(tracer);
 
 	model->setScale(base->scale);
 	model->setColor(base->color);
@@ -121,7 +121,7 @@ void ach::Projectile::init()
 ***********************************************************************/
 void ach::Projectile::hit(sf::Vector2f n)
 {
-	world->gfx.push_back(createImpact(n));
+	world->map->gfx.push_back(createImpact(n));
 	sm->play(base->sfxBump);
 	tracer->correct();
 
@@ -197,7 +197,7 @@ void ach::Projectile::explode()
 	if (!base->explosive)
 		return;
 
-	world->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
+	world->map->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
 	world->map->collideExplosion(this);
 	sm->play(base->sfxExplosion);
 }

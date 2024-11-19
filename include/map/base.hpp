@@ -9,6 +9,7 @@ namespace ach
 		std::vector<ach::Character*>  characters;
 		std::vector<ach::MapObject*>  objects;
 		std::vector<ach::Projectile*> projectiles;
+		std::vector<ach::Effect*>     gfx;
 
 		ach::ProcessWorld            *world;
 

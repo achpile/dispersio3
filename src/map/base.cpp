@@ -37,6 +37,7 @@ ach::Map::~Map()
 
 	list_delete(characters);
 	list_delete(objects);
+	list_delete(gfx);
 	list_delete(projectiles);
 }
 
@@ -56,6 +57,7 @@ void ach::Map::update()
 
 	list_update(characters);
 	list_update(objects);
+	list_update(gfx);
 	list_update(projectiles);
 }
 
@@ -73,6 +75,7 @@ void ach::Map::render(sf::FloatRect viewport)
 
 	list_render(objects);
 	list_render(characters);
+	list_render(gfx);
 	list_render(projectiles);
 }
 
