@@ -108,8 +108,6 @@
 #include "framework/collision/base.hpp"
 #include "framework/collision/algo.hpp"
 
-#include "misc/camera.hpp"
-
 #include "particle/stars.hpp"
 #include "particle/smoke.hpp"
 #include "particle/splash.hpp"
@@ -166,6 +164,7 @@
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
 
+#include "map/camera.hpp"
 #include "map/base.hpp"
 
 #include "process/base.hpp"

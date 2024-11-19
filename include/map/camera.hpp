@@ -1,5 +1,5 @@
-#ifndef __MISC_CAMERA
-#define __MISC_CAMERA
+#ifndef __MAP_CAMERA
+#define __MAP_CAMERA
 
 
 namespace ach
