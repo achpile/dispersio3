@@ -33,10 +33,14 @@ ach::TracerSmoke::~TracerSmoke()
      * update
 
 ***********************************************************************/
-void ach::TracerSmoke::update()
+bool ach::TracerSmoke::update()
 {
-	correct();
+	if (alive)
+		correct();
+
 	smoke->update();
+
+	return alive;
 }
 
 

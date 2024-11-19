@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Tracer::Tracer(ach::Phys *_phys)
 {
-	phys = _phys;
+	phys  = _phys;
+	alive = true;
 }
 
 

@@ -19,6 +19,8 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 
 	phys.init(sf::Vector2f(base->radius * 2.0f, base->radius * 2.0f));
 
+	world->gfx.push_back(tracer);
+
 	model->setScale(base->scale);
 	model->setColor(base->color);
 
@@ -38,7 +40,8 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 ach::Projectile::~Projectile()
 {
 	delete model;
-	delete tracer;
+
+	tracer->alive = false;
 }
 
 
@@ -90,8 +93,6 @@ void ach::Projectile::render()
 	if (!alive)
 		return;
 
-	tracer->update();
-	tracer->render();
 	model->render(phys.pos);
 }
 

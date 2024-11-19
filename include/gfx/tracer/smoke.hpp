@@ -12,7 +12,7 @@ namespace ach
 		 TracerSmoke(ach::Phys *_phys);
 		~TracerSmoke();
 
-		void update();
+		bool update();
 		void render();
 
 		void init();

@@ -4,18 +4,16 @@
 
 namespace ach
 {
-	struct Tracer
+	struct Tracer : Effect
 	{
 		ach::Phys *phys;
-
 		sf::Color  color;
+
+		bool       alive;
 
 
 		         Tracer(ach::Phys *_phys);
 		virtual ~Tracer();
-
-		virtual void update() {};
-		virtual void render() {};
 
 		virtual void init()    {};
 		virtual void correct() {};

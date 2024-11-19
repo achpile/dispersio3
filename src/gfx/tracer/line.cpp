@@ -30,12 +30,15 @@ ach::TracerLine::~TracerLine()
      * update
 
 ***********************************************************************/
-void ach::TracerLine::update()
+bool ach::TracerLine::update()
 {
 	for (unsigned int i = 0; i < line.getVertexCount() - 1; i++)
 		line[i].position = line[i + 1].position;
 
-	correct();
+	if (alive)
+		correct();
+
+	return alive;
 }
 
 

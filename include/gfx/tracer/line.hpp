@@ -12,7 +12,7 @@ namespace ach
 		 TracerLine(ach::Phys *_phys);
 		~TracerLine();
 
-		void update();
+		bool update();
 		void render();
 
 		void init();
