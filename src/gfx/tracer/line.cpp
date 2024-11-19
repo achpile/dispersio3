@@ -38,7 +38,7 @@ bool ach::TracerLine::update()
 	if (alive)
 		correct();
 
-	return alive;
+	return alive || (line[0].position != line[1].position);
 }
 
 
