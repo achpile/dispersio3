@@ -181,9 +181,30 @@ bool ach::Character::hit(ach::Projectile *projectile)
      * damage
 
 ***********************************************************************/
-void ach::Character::damage(int damage, sf::Vector2f , sf::Vector2f )
+void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f )
 {
 	health -= damage;
+
+	// put blood
+
+	if (health < 0)
+		die(c);
+}
+
+
+
+/***********************************************************************
+     * Character
+     * die
+
+***********************************************************************/
+void ach::Character::die(sf::Vector2f )
+{
+	alive = false;
+
+	sm->play(base->sndDie);
+
+	// put chunks
 }
 
 

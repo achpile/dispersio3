@@ -39,6 +39,7 @@ namespace ach
 
 		bool hit(ach::Projectile *projectile);
 		void damage(int damage, sf::Vector2f c, sf::Vector2f n);
+		void die(sf::Vector2f c);
 
 		void move(int d);
 		void jump();
