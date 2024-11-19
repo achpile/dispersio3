@@ -175,7 +175,7 @@ void ach::Projectile::direction()
 	if (flip)
 	{
 		model->scale.x = -1.0f;
-		model->angle   = 180 - angle;
+		model->angle   = angle - 180;
 	}
 	else
 	{
