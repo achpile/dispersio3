@@ -9,10 +9,10 @@ namespace ach
 		sf::Vector2f pos;
 		sf::Color    color;
 
-
 		float age;
 		float freq;
 		float life;
+		bool  alive;
 
 
 		 ParticleSystemSmoke();

@@ -11,6 +11,7 @@ ach::ParticleSystemSmoke::ParticleSystemSmoke() : ParticleSystem(2.0f)
 	age   = 0.0f;
 	freq  = 0.07f;
 	life  = 0.35f;
+	alive = true;
 	pos   = sf::Vector2f(0.0f, 0.0f);
 	color = sf::Color::White;
 }
@@ -37,13 +38,13 @@ bool ach::ParticleSystemSmoke::update()
 {
 	age += tm->get(source);
 
-	while (age > freq)
+	while (alive && age > freq)
 	{
 		age -= freq;
 		add();
 	}
 
-	return true;
+	return alive || particles.size();
 }
 
 

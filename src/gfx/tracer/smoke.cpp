@@ -38,9 +38,9 @@ bool ach::TracerSmoke::update()
 	if (alive)
 		correct();
 
-	smoke->update();
+	smoke->alive = alive;
 
-	return alive;
+	return smoke->update();
 }
 
 
