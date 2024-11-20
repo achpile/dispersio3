@@ -126,6 +126,8 @@
 #include "model/base.hpp"
 
 #include "gfx/base.hpp"
+#include "gfx/blood.hpp"
+#include "gfx/chunk.hpp"
 #include "gfx/explosion.hpp"
 
 #include "gfx/impact/base.hpp"
