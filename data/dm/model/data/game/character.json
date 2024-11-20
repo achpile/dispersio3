@@ -20,11 +20,23 @@
             "type": "real"
         }
     },
+    "Blood": {
+        "@attr": {
+            "default": "#9600009B",
+            "type": "color"
+        }
+    },
     "Body": {
         "@attr": {
             "data": "Data.GFX.Body",
             "default": "None",
             "type": "link"
+        }
+    },
+    "Chunk": {
+        "@attr": {
+            "default": "#960000FF",
+            "type": "color"
         }
     },
     "Color": {

@@ -16,6 +16,8 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	ai      = (ach::AIType)pair_get_enum(json_object_get_string(obj, "AI"), pairAI);
 	hitbox  = vector_json_coord(json_object_get(obj, "Hitbox"), "X", "Y");
 	color   = str_to_color(json_object_get_string(obj, "Color"));
+	blood   = str_to_color(json_object_get_string(obj, "Blood"));
+	chunk   = str_to_color(json_object_get_string(obj, "Chunk"));
 
 	speed   = json_object_get_branch_real   (obj, "Stats.Speed" );
 	jumping = json_object_get_branch_real   (obj, "Stats.Jump"  );

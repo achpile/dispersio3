@@ -19,6 +19,8 @@ namespace ach
 
 		sf::Vector2f     hitbox;
 		sf::Color        color;
+		sf::Color        blood;
+		sf::Color        chunk;
 
 		sf::SoundBuffer *sndHurt;
 		sf::SoundBuffer *sndDie;
