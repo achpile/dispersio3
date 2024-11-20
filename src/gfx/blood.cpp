@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectBlood::EffectBlood()
+ach::EffectBlood::EffectBlood(sf::Vector2f , sf::Vector2f , sf::Color )
 {
 }
 
@@ -30,7 +30,7 @@ ach::EffectBlood::~EffectBlood()
 ***********************************************************************/
 bool ach::EffectBlood::update()
 {
-	return true;
+	return false;
 }
 
 

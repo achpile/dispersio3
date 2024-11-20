@@ -6,7 +6,7 @@ namespace ach
 {
 	struct EffectBlood : Effect
 	{
-		 EffectBlood();
+		 EffectBlood(sf::Vector2f pos, sf::Vector2f vel, sf::Color color);
 		~EffectBlood();
 
 		bool update();

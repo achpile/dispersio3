@@ -6,7 +6,7 @@ namespace ach
 {
 	struct EffectChunk : Effect
 	{
-		 EffectChunk();
+		 EffectChunk(sf::Vector2f pos, sf::Vector2f vel, sf::Color color);
 		~EffectChunk();
 
 		bool update();

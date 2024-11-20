@@ -195,11 +195,11 @@ bool ach::Character::hit(ach::Projectile *projectile)
      * damage
 
 ***********************************************************************/
-void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f )
+void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f n)
 {
 	health -= damage;
 
-	// put blood
+	world->map->gfx.push_back(new ach::EffectBlood(c, n, base->blood));
 
 	if (health < 0)
 		die(c);
@@ -212,13 +212,54 @@ void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f )
      * die
 
 ***********************************************************************/
-void ach::Character::die(sf::Vector2f )
+void ach::Character::die(sf::Vector2f c)
 {
 	alive = false;
 
 	sm->play(base->sndDie);
+	explode(c);
+}
 
-	// put chunks
+
+
+/***********************************************************************
+     * Character
+     * explode
+
+***********************************************************************/
+void ach::Character::explode(sf::Vector2f c)
+{
+	sf::Vector2f pos;
+	sf::Vector2f step;
+	sf::Vector2i amount;
+
+	amount.x = ceil(phys.rect.width  / GAME_CHUNK_SIZE);
+	amount.y = ceil(phys.rect.height / GAME_CHUNK_SIZE);
+
+	step.x = phys.rect.width  / (amount.x - 1);
+	step.y = phys.rect.height / (amount.y - 1);
+
+	for (int x = 0; x < amount.x; x++)
+		for (int y = 0; y < amount.y; y++)
+		{
+			pos.x = step.x * x + phys.rect.left;
+			pos.y = step.y * y + phys.rect.top;
+
+			chunk(pos, c - pos);
+		}
+}
+
+
+
+/***********************************************************************
+     * Character
+     * chunk
+
+***********************************************************************/
+void ach::Character::chunk(sf::Vector2f pos, sf::Vector2f vel)
+{
+	world->map->gfx.push_back(new ach::EffectBlood(pos, vel, base->blood));
+	world->map->gfx.push_back(new ach::EffectChunk(pos, vel, base->chunk));
 }
 
 

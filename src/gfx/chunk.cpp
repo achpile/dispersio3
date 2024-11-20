@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectChunk::EffectChunk()
+ach::EffectChunk::EffectChunk(sf::Vector2f , sf::Vector2f , sf::Color )
 {
 }
 
@@ -30,7 +30,7 @@ ach::EffectChunk::~EffectChunk()
 ***********************************************************************/
 bool ach::EffectChunk::update()
 {
-	return true;
+	return false;
 }
 
 
