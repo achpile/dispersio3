@@ -12,6 +12,7 @@ ach::EffectChunk::EffectChunk(ach::ProcessWorld *_world, sf::Vector2f pos, sf::V
 	color = _color;
 	spr   = _spr;
 	age   = 0.0f;
+	angle = 0.0f;
 
 	phys.init(sf::Vector2f(PARTICLE_CHUNK_SIZE, PARTICLE_CHUNK_SIZE));
 	phys.reset();
@@ -43,7 +44,8 @@ ach::EffectChunk::~EffectChunk()
 ***********************************************************************/
 bool ach::EffectChunk::update()
 {
-	age += tm->get(ach::TimeSource::tsFrame);
+	age   += tm->get(ach::TimeSource::tsFrame);
+	angle += phys.vel.x * 16.0f * tm->get(ach::TimeSource::tsFrame);
 
 	if (age > PARTICLE_CHUNK_LIFE)
 		return false;
@@ -70,6 +72,7 @@ void ach::EffectChunk::render()
 {
 	spr->setColor(sf::Color(color.r, color.g, color.b, color.a * math_decay(age, PARTICLE_CHUNK_CLEAR, PARTICLE_CHUNK_LIFE)));
 	spr->setPosition(phys.pos);
+	spr->setRotation(angle);
 
 	rm->draw(spr, ach::RenderLayer::rlGame);
 }

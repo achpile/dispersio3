@@ -66,11 +66,11 @@ void ach::Framer::zero()
      * update
 
 ***********************************************************************/
-int ach::Framer::update(bool real)
+int ach::Framer::update(ach::TimeSource source)
 {
 	int res = 0;
 
-	value -= real ? tm->real : tm->frame;
+	value -= tm->get(source);
 
 	while (value < 0.0f)
 	{

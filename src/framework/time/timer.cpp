@@ -66,12 +66,12 @@ void ach::Timer::zero()
      * update
 
 ***********************************************************************/
-bool ach::Timer::update(bool real)
+bool ach::Timer::update(ach::TimeSource source)
 {
 	if (value <= 0)
 		return false;
 
-	value -= real ? tm->real : tm->frame;
+	value -= tm->get(source);
 
 	if (value <= 0)
 	{

@@ -13,6 +13,7 @@ namespace ach
 		sf::Color   color;
 
 		float       age;
+		float       angle;
 
 
 		 EffectChunk(ach::ProcessWorld *_world, sf::Vector2f pos, sf::Vector2f vel, sf::Color _color, sf::Sprite *_spr);

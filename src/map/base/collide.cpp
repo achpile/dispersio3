@@ -30,11 +30,11 @@ void ach::Map::collidePhysSteps(ach::Phys *phys)
 {
 	phys->grounded = false;
 
-	float left = tm->frame;
+	float left = tm->get(ach::TimeSource::tsFrame);
 	float velocity;
 	float chunk;
 
-	phys->vel  += phys->acc * tm->frame;
+	phys->vel  += phys->acc * tm->get(ach::TimeSource::tsFrame);
 	phys->vel.x = interval_set(phys->vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 	phys->vel.y = interval_set(phys->vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 

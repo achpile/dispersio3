@@ -8,8 +8,8 @@
 ***********************************************************************/
 void ach::Phys::update()
 {
-	vel += acc * tm->frame;
-	pos += vel * tm->frame;
+	vel += acc * tm->get(ach::TimeSource::tsFrame);
+	pos += vel * tm->get(ach::TimeSource::tsFrame);
 
 	calc();
 }

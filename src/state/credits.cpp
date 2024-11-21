@@ -36,7 +36,7 @@ ach::StateCredits::~StateCredits()
 ***********************************************************************/
 void ach::StateCredits::update()
 {
-	float offset = tm->frame * CREDITS_SPEED;
+	float offset = tm->get(ach::TimeSource::tsReal) * CREDITS_SPEED;
 
 	list_foreach(lines)
 		lines[i]->move(0, -offset);

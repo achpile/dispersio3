@@ -40,7 +40,7 @@ ach::StateStart::~StateStart()
 ***********************************************************************/
 void ach::StateStart::update()
 {
-	offset += tm->frame;
+	offset += tm->get(ach::TimeSource::tsReal);
 
 	if (offset > START_FADE_SLOPE * 2 + START_FADE_LENGTH)
 		next();

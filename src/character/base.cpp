@@ -233,8 +233,8 @@ void ach::Character::explode(sf::Vector2f c, sf::Vector2f n)
 	sf::Vector2f step;
 	sf::Vector2i amount;
 
-	amount.x = ceil(phys.rect.width  / PARTICLE_CHUNK_SIZE);
-	amount.y = ceil(phys.rect.height / PARTICLE_CHUNK_SIZE);
+	amount.x = ceil(phys.rect.width  / PARTICLE_CHUNK_STEP);
+	amount.y = ceil(phys.rect.height / PARTICLE_CHUNK_STEP);
 
 	step.x = phys.rect.width  / (amount.x - 1);
 	step.y = phys.rect.height / (amount.y - 1);
