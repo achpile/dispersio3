@@ -15,6 +15,8 @@ namespace ach
 		         Tracer(ach::Phys *_phys);
 		virtual ~Tracer();
 
+		virtual bool update();
+
 		virtual void init()    {};
 		virtual void correct() {};
 	};
