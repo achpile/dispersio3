@@ -1,6 +1,8 @@
 {
     "Bladegun": {
         "Cooldown": 0.5,
+        "Cone": 25,
+        "Count": 3,
         "Projectile": "Blade",
         "Sound": {
             "Shot": "sfx/weapon/rifle_shot.wav"
