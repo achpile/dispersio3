@@ -60,11 +60,13 @@ all: info
 
 info:
 	$(ECHO)
-	$(ECHO) $(PURPLE) "Threads " $(NORMAL) " :" $(YELLOW) $(CORES)   $(NORMAL)
-	$(ECHO) $(PURPLE) "Files   " $(NORMAL) " :" $(YELLOW) $(TOTAL)   $(NORMAL)
+	$(ECHO) $(CYAN) "Building " $(NORMAL) : $(PROJECT)
 	$(ECHO)
-	$(ECHO) $(RED) "C flags " $(NORMAL) " :" $(YELLOW) $(CFLAGS)  $(NORMAL)
-	$(ECHO) $(RED) "LD flags" $(NORMAL) " :" $(YELLOW) $(LDFLAGS) $(NORMAL)
+	$(ECHO) $(PURPLE) "Threads  " $(NORMAL) : $(YELLOW)$(CORES)   $(NORMAL)
+	$(ECHO) $(PURPLE) "Files    " $(NORMAL) : $(YELLOW)$(TOTAL)   $(NORMAL)
+	$(ECHO)
+	$(ECHO) $(RED) "C flags  " $(NORMAL) : $(YELLOW)$(CFLAGS)  $(NORMAL)
+	$(ECHO) $(RED) "LD flags " $(NORMAL) : $(YELLOW)$(LDFLAGS) $(NORMAL)
 	$(ECHO)
 
 
