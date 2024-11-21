@@ -1,0 +1,10 @@
+{
+    "Bladegun": {
+        "Cooldown": 0.5,
+        "Projectile": "Blade",
+        "Sound": {
+            "Shot": "sfx/weapon/rifle_shot.wav"
+        },
+        "Speed": 400
+    }
+}

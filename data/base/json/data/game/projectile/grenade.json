@@ -1,0 +1,19 @@
+{
+    "Grenade": {
+        "Bounces": 5,
+        "Explosion": {
+            "Enable": true,
+            "Radius": 32
+        },
+        "Gravity": true,
+        "Impact": {
+            "Sound": "sfx/projectile/grenade_bump.wav"
+        },
+        "Orientation": "rotation",
+        "Radius": 2,
+        "Sheet": "ProjectileGrenade",
+        "Tracer": {
+            "Type": "line"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "Blade": {
+        "Bounces": 5,
+        "Impact": {
+            "Color": "#FFEF13",
+            "Sound": "sfx/projectile/blade_bump.wav",
+            "Type": "spark"
+        },
+        "Orientation": "rotation",
+        "Radius": 2,
+        "Sheet": "ProjectileBlade"
+    }
+}

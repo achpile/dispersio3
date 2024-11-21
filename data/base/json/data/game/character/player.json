@@ -9,6 +9,6 @@
             "Jump": "sfx/character/player/jump.wav",
             "Land": "sfx/character/player/land.wav"
         },
-        "Weapon": "Rifle"
+        "Weapon": "Bladegun"
     }
 }
