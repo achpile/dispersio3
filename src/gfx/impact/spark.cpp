@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::ImpactSpark::ImpactSpark(sf::Vector2f _pos, sf::Vector2f _dir, sf::Color _color) : Impact(_pos, _dir, _color)
 {
-	particle = new ach::ParticleSystemSplash();
+	particle = new ach::ParticleSystemSplash(PARTICLE_SPARK_SIZE);
 
 	particle->layer   = ach::RenderLayer::rlGame;
 	particle->source  = ach::TimeSource::tsFrame;

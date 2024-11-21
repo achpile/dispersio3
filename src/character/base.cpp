@@ -180,7 +180,7 @@ bool ach::Character::hit(ach::Projectile *projectile)
 	if (res)
 	{
 		if (!projectile->base->explosive)
-			damage(projectile->damage, c, n);
+			damage(projectile->damage, c, -projectile->line.v);
 
 		projectile->destroy();
 	}
@@ -233,8 +233,8 @@ void ach::Character::explode(sf::Vector2f c)
 	sf::Vector2f step;
 	sf::Vector2i amount;
 
-	amount.x = ceil(phys.rect.width  / GAME_CHUNK_SIZE);
-	amount.y = ceil(phys.rect.height / GAME_CHUNK_SIZE);
+	amount.x = ceil(phys.rect.width  / PARTICLE_CHUNK_SIZE);
+	amount.y = ceil(phys.rect.height / PARTICLE_CHUNK_SIZE);
 
 	step.x = phys.rect.width  / (amount.x - 1);
 	step.y = phys.rect.height / (amount.y - 1);

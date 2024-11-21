@@ -18,7 +18,7 @@ namespace ach
 		bool  gravity;
 
 
-		 ParticleSystemSplash();
+		 ParticleSystemSplash(float size);
 		~ParticleSystemSplash();
 
 		bool update();

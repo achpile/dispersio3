@@ -75,6 +75,20 @@
 
 ***********************************************************************/
 #define GAME_PLAYER_RESPAWN   3.0f
-#define GAME_CHUNK_SIZE       8.0f
+
+
+
+/***********************************************************************
+     * Particle
+
+***********************************************************************/
+#define PARTICLE_SPARK_SIZE   1.0f
+
+#define PARTICLE_BLOOD_SIZE   2.0f
+#define PARTICLE_BLOOD_LIFE   10.0f
+#define PARTICLE_BLOOD_CLEAR  9.0f
+#define PARTICLE_BLOOD_SPEED  200.0f
+
+#define PARTICLE_CHUNK_SIZE   8.0f
 
 #endif

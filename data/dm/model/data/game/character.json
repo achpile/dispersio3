@@ -22,7 +22,7 @@
     },
     "Blood": {
         "@attr": {
-            "default": "#9600009B",
+            "default": "#960000B0",
             "type": "color"
         }
     },

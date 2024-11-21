@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ParticleSystemSplash::ParticleSystemSplash() : ParticleSystem(1.0f)
+ach::ParticleSystemSplash::ParticleSystemSplash(float size) : ParticleSystem(size)
 {
 	age     = 0.0f;
 	life    = 1.0f;

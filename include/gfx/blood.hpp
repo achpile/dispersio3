@@ -6,7 +6,12 @@ namespace ach
 {
 	struct EffectBlood : Effect
 	{
-		 EffectBlood(sf::Vector2f pos, sf::Vector2f vel, sf::Color color);
+		ach::ParticleSystemSplash *particle;
+
+		sf::Color color;
+
+
+		 EffectBlood(sf::Vector2f pos, sf::Vector2f vel, sf::Color _color);
 		~EffectBlood();
 
 		bool update();
