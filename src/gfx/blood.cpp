@@ -55,6 +55,8 @@ bool ach::EffectBlood::update()
 			if (world->map->collideLine(&particle->particles[i]->line))
 				particle->particles[i]->moving = false;
 
+	particle->color.a = color.a * math_decay(particle->age, PARTICLE_BLOOD_CLEAR, PARTICLE_BLOOD_LIFE);
+
 	return true;
 }
 
