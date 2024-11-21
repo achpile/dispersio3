@@ -13,6 +13,7 @@ sf::Vector2f  vector_mirror(sf::Vector2f v, sf::Vector2f n);
 sf::Vector2f  vector_center(sf::FloatRect r);
 sf::Vector2f  vector_norm(sf::Vector2f v);
 sf::Vector2f  vector_set_len(sf::Vector2f v, float l);
+sf::Vector2f  vector_bisector(sf::Vector2f a, sf::Vector2f b);
 sf::Vector2f  vector_mult(sf::Vector2f a, sf::Vector2f b);
 sf::Vector2f  vector_mult(sf::Vector2i a, sf::Vector2i b);
 sf::Vector2i  vector_mult_i(sf::Vector2i a, sf::Vector2i b);

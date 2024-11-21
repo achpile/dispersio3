@@ -202,7 +202,7 @@ void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f n)
 	world->map->gfx.push_back(new ach::EffectBlood(world, c, n, base->blood));
 
 	if (health < 0)
-		die(c);
+		die(c, n);
 }
 
 
@@ -212,12 +212,12 @@ void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f n)
      * die
 
 ***********************************************************************/
-void ach::Character::die(sf::Vector2f c)
+void ach::Character::die(sf::Vector2f c, sf::Vector2f n)
 {
 	alive = false;
 
 	sm->play(base->sndDie);
-	explode(c);
+	explode(c, n);
 }
 
 
@@ -227,7 +227,7 @@ void ach::Character::die(sf::Vector2f c)
      * explode
 
 ***********************************************************************/
-void ach::Character::explode(sf::Vector2f c)
+void ach::Character::explode(sf::Vector2f c, sf::Vector2f n)
 {
 	sf::Vector2f pos;
 	sf::Vector2f step;
@@ -245,7 +245,7 @@ void ach::Character::explode(sf::Vector2f c)
 			pos.x = step.x * x + phys.rect.left;
 			pos.y = step.y * y + phys.rect.top;
 
-			chunk(pos, c - pos);
+			chunk(pos, -vector_bisector(c - pos, n));
 		}
 }
 
@@ -259,7 +259,7 @@ void ach::Character::explode(sf::Vector2f c)
 void ach::Character::chunk(sf::Vector2f pos, sf::Vector2f vel)
 {
 	world->map->gfx.push_back(new ach::EffectBlood(world, pos, vel, base->blood));
-	world->map->gfx.push_back(new ach::EffectChunk(world, pos, vel, base->chunk));
+	world->map->gfx.push_back(new ach::EffectChunk(world, pos, vel, base->chunk, base->chunks->sheet->getFrameRandom()));
 }
 
 

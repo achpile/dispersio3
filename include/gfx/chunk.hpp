@@ -7,11 +7,15 @@ namespace ach
 	struct EffectChunk : Effect
 	{
 		ach::ProcessWorld *world;
+		ach::Phys          phys;
 
-		sf::Color color;
+		sf::Sprite *spr;
+		sf::Color   color;
+
+		float       age;
 
 
-		 EffectChunk(ach::ProcessWorld *_world, sf::Vector2f pos, sf::Vector2f vel, sf::Color _color);
+		 EffectChunk(ach::ProcessWorld *_world, sf::Vector2f pos, sf::Vector2f vel, sf::Color _color, sf::Sprite *_spr);
 		~EffectChunk();
 
 		bool update();

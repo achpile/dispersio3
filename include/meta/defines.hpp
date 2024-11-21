@@ -67,6 +67,7 @@
 ***********************************************************************/
 #define PHYS_GRAVITY          1000.0f
 #define PHYS_MAX_VEL          2000.0f
+#define PHYS_VEL_EPSILON      10.0f
 
 
 
@@ -90,5 +91,9 @@
 #define PARTICLE_BLOOD_SPEED  200.0f
 
 #define PARTICLE_CHUNK_SIZE   8.0f
+#define PARTICLE_CHUNK_LIFE   10.0f
+#define PARTICLE_CHUNK_CLEAR  8.0f
+#define PARTICLE_CHUNK_SPEED  200.0f
+#define PARTICLE_CHUNK_SLOW   0.95f
 
 #endif
