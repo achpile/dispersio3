@@ -26,6 +26,7 @@ namespace ach
 		~Sheet();
 
 		sf::Sprite   *getFrame(unsigned int frame);
+		sf::Sprite   *getFrameRandom();
 		sf::Vector2f  getOrigin(ach::SheetOrigin origin);
 	};
 }
