@@ -9,11 +9,13 @@ namespace ach
 		sf::RectangleShape *spr;
 		sf::Color           color;
 
+		ach::Line    line;
 		sf::Vector2f offset;
 		sf::Vector2f pos;
 		sf::Vector2f vel;
 		sf::Vector2f acc;
 
+		bool  moving;
 		float age;
 		float scale;
 
@@ -23,6 +25,8 @@ namespace ach
 
 		void update(float frame);
 		void render(ach::RenderLayer layer);
+
+		void calc();
 	};
 }
 

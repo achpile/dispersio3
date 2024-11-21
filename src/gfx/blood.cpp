@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectBlood::EffectBlood(sf::Vector2f pos, sf::Vector2f vel, sf::Color _color)
+ach::EffectBlood::EffectBlood(ach::ProcessWorld *_world, sf::Vector2f pos, sf::Vector2f vel, sf::Color _color)
 {
+	world    = _world;
 	color    = _color;
 	particle = new ach::ParticleSystemSplash(PARTICLE_BLOOD_SIZE);
 
@@ -46,7 +47,15 @@ ach::EffectBlood::~EffectBlood()
 ***********************************************************************/
 bool ach::EffectBlood::update()
 {
-	return particle->update();
+	if (!particle->update())
+		return false;
+
+	list_foreach(particle->particles)
+		if (particle->particles[i]->moving)
+			if (world->map->collideLine(&particle->particles[i]->line))
+				particle->particles[i]->moving = false;
+
+	return true;
 }
 
 

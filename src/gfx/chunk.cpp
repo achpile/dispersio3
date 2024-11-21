@@ -6,8 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectChunk::EffectChunk(sf::Vector2f , sf::Vector2f , sf::Color )
+ach::EffectChunk::EffectChunk(ach::ProcessWorld *_world, sf::Vector2f , sf::Vector2f , sf::Color _color)
 {
+	world = _world;
+	color = _color;
 }
 
 

@@ -199,7 +199,7 @@ void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f n)
 {
 	health -= damage;
 
-	world->map->gfx.push_back(new ach::EffectBlood(c, n, base->blood));
+	world->map->gfx.push_back(new ach::EffectBlood(world, c, n, base->blood));
 
 	if (health < 0)
 		die(c);
@@ -258,8 +258,8 @@ void ach::Character::explode(sf::Vector2f c)
 ***********************************************************************/
 void ach::Character::chunk(sf::Vector2f pos, sf::Vector2f vel)
 {
-	world->map->gfx.push_back(new ach::EffectBlood(pos, vel, base->blood));
-	world->map->gfx.push_back(new ach::EffectChunk(pos, vel, base->chunk));
+	world->map->gfx.push_back(new ach::EffectBlood(world, pos, vel, base->blood));
+	world->map->gfx.push_back(new ach::EffectChunk(world, pos, vel, base->chunk));
 }
 
 

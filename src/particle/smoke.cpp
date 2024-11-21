@@ -78,4 +78,6 @@ void ach::ParticleSystemSmoke::add()
 	particles.back()->vel   = sf::Vector2f(0.0f, -20.0f);
 	particles.back()->spr   = spr;
 	particles.back()->color = color;
+
+	particles.back()->calc();
 }

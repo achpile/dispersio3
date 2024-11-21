@@ -79,4 +79,6 @@ void ach::ParticleSystemStars::add(float x)
 	particles.back()->vel   = sf::Vector2f(-120.0f - rnd * 20.0f, 0.0f);
 	particles.back()->spr   = spr;
 	particles.back()->color = sf::Color(clr, clr, clr);
+
+	particles.back()->calc();
 }

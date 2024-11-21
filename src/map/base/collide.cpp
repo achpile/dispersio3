@@ -85,6 +85,32 @@ bool ach::Map::collidePhys(ach::Phys *phys)
 
 /***********************************************************************
      * Map
+     * collideLine
+
+***********************************************************************/
+bool ach::Map::collideLine(ach::Line *line, sf::Vector2f *n)
+{
+	std::vector<ach::PhysLine*> list;
+
+	collision->fill(&list, &line->r);
+	collision->sort(&list,  line);
+
+	list_foreach(list)
+		if (list[i]->collide(line))
+		{
+			if (n)
+				*n = list[i]->line.n;
+
+			return true;
+		}
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * Map
      * collideProjectile
 
 ***********************************************************************/
@@ -94,21 +120,12 @@ void ach::Map::collideProjectile(ach::Projectile *projectile)
 		if (characters[i]->hit(projectile))
 			return;
 
+	sf::Vector2f n;
 
-	std::vector<ach::PhysLine*> list;
-
-	collision->fill(&list, &projectile->line.r);
-	collision->sort(&list, &projectile->line);
-
-	list_foreach(list)
+	if (collideLine(&projectile->line, &n))
 	{
-		if (list[i]->collide(&projectile->line))
-		{
-			projectile->phys.pos = projectile->line.b;
-			projectile->hit(vector_alike(list[i]->line.n, -projectile->line.v));
-
-			return;
-		}
+		projectile->phys.pos = projectile->line.b;
+		projectile->hit(vector_alike(n, -projectile->line.v));
 	}
 }
 

@@ -35,6 +35,7 @@ namespace ach
 		void collide();
 		void collidePhysSteps(ach::Phys *phys);
 		bool collidePhys(ach::Phys *phys);
+		bool collideLine(ach::Line *line, sf::Vector2f *n = NULL);
 		void collideProjectile(ach::Projectile *projectile);
 		void collideExplosion(ach::Projectile *projectile);
 		void collideCharacter(ach::Character *character);

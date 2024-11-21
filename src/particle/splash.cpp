@@ -74,6 +74,8 @@ void ach::ParticleSystemSplash::add()
 	particles.back()->spr   = spr;
 	particles.back()->color = color;
 
+	particles.back()->calc();
+
 	if (gravity)
 		particles.back()->acc = sf::Vector2f(0.0f, PHYS_GRAVITY / 2.0f);
 }
