@@ -39,6 +39,13 @@
             "type": "color"
         }
     },
+    "Chunks": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Chunks",
+            "type": "link"
+        }
+    },
     "Color": {
         "@attr": {
             "default": "#FFFFFFFF",

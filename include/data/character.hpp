@@ -15,6 +15,7 @@ namespace ach
 	{
 		ach::DataBody   *body;
 		ach::DataWeapon *weapon;
+		ach::DataSheet  *chunks;
 		ach::AIType      ai;
 
 		sf::Vector2f     hitbox;

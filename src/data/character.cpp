@@ -10,6 +10,7 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 {
 	body    = db->getBody  (json_object_get_string(obj, "Body"  ));
 	weapon  = db->getWeapon(json_object_get_string(obj, "Weapon"));
+	chunks  = db->getSheet (json_object_get_string(obj, "Chunks"));
 
 	barrel  = json_object_get_real(obj, "Barrel");
 
