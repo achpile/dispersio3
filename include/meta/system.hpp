@@ -7,11 +7,11 @@
 #include <jansson.h>
 #include <string.h>
 #include <libgen.h>
-#include <regex.h>
 #include <math.h>
 
 #include <random>
 #include <ctime>
+#include <regex>
 #include <filesystem>
 
 #include <SFML/Audio.hpp>
