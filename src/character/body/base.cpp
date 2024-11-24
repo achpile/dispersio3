@@ -80,7 +80,7 @@ ach::Body* ach::Body::create(ach::Character *_owner, ach::DataBody *_base)
 		case ach::BodyType::btNone    : return new ach::Body        (_owner, _base);
 		case ach::BodyType::btSimple  : return new ach::BodySimple  (_owner, _base);
 		case ach::BodyType::btHumanoid: return new ach::BodyHumanoid(_owner, _base);
-
-		default                       : return new ach::Body        (_owner, _base);
 	}
+
+	return new ach::Body(_owner, _base);
 }

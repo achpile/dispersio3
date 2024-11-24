@@ -65,7 +65,7 @@ ach::AI* ach::AI::create(ach::Character *_owner, ach::AIType type)
 	{
 		case ach::AIType::aiIdle  : return new ach::AI      (_owner);
 		case ach::AIType::aiPlayer: return new ach::AIPlayer(_owner);
-
-		default                   : return new ach::AI      (_owner);
 	}
+
+	return new ach::AI(_owner);
 }

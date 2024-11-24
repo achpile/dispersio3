@@ -75,7 +75,6 @@ bool ach::Projectile::update()
 		case ach::OrientType::otDirection: direction(); break;
 		case ach::OrientType::otRotation : rotation() ; break;
 		case ach::OrientType::otNone     :              break;
-		default                          :              break;
 	}
 
 	return alive;
@@ -223,9 +222,9 @@ ach::Tracer* ach::Projectile::createTracer()
 		case ach::TracerType::ttNone : return new ach::Tracer     (&phys);
 		case ach::TracerType::ttLine : return new ach::TracerLine (&phys);
 		case ach::TracerType::ttSmoke: return new ach::TracerSmoke(&phys);
-
-		default                      : return new ach::Tracer     (&phys);
 	}
+
+	return new ach::Tracer(&phys);
 }
 
 
@@ -241,7 +240,7 @@ ach::Impact* ach::Projectile::createImpact(sf::Vector2f n)
 	{
 		case ach::ImpactType::itNone : return new ach::Impact     (phys.pos, n, base->colorImpact);
 		case ach::ImpactType::itSpark: return new ach::ImpactSpark(phys.pos, n, base->colorImpact);
-
-		default                      : return new ach::Impact     (phys.pos, n, base->colorImpact);
 	}
+
+	return new ach::Impact(phys.pos, n, base->colorImpact);
 }
