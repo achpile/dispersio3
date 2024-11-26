@@ -29,11 +29,9 @@ ach::App::App()
 	sm        = new ach::SoundManager();
 	tm        = new ach::TimeManager();
 
-	rm->initLayer(ach::RenderLayer::rlBG  , RENDER_LAYER_BG_X  , RENDER_LAYER_BG_Y  );
-	rm->initLayer(ach::RenderLayer::rlGame, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
-	rm->initLayer(ach::RenderLayer::rlGUI , RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y );
-
-	rm->setSmooth(settings->isSmooth());
+	rm->initLayer(ach::RenderLayer::rlBG  , RENDER_LAYER_BG_X  , RENDER_LAYER_BG_Y  , settings->isSmooth());
+	rm->initLayer(ach::RenderLayer::rlGame, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y, settings->isSmooth());
+	rm->initLayer(ach::RenderLayer::rlGUI , RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y , settings->isSmooth());
 
 	create();
 	resize();

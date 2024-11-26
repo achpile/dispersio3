@@ -120,9 +120,9 @@ void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf
      * initLayer
 
 ***********************************************************************/
-void ach::RenderManager::initLayer(ach::RenderLayer layer, int width, int height)
+void ach::RenderManager::initLayer(ach::RenderLayer layer, int width, int height, bool smooth)
 {
-	getLayer(layer)->init(width, height);
+	getLayer(layer)->init(width, height, smooth);
 }
 
 

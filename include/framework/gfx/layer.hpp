@@ -16,7 +16,7 @@ namespace ach
 		 Layer();
 		~Layer();
 
-		void init  (int width, int height);
+		void init  (int width, int height, bool smooth);
 		void resize(sf::RenderWindow *window);
 		void render(sf::RenderTarget *target);
 

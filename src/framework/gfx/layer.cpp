@@ -34,12 +34,12 @@ ach::Layer::~Layer()
      * init
 
 ***********************************************************************/
-void ach::Layer::init(int width, int height)
+void ach::Layer::init(int width, int height, bool smooth)
 {
 	tex->create(width, height);
 	tex->setRepeated(false);
 	tex->setActive(true);
-	tex->setSmooth(true);
+	tex->setSmooth(smooth);
 
 	spr->setTexture(tex->getTexture());
 	spr->setOrigin(sf::Vector2f(width / 2.0f, height / 2.0f));

@@ -31,7 +31,7 @@ namespace ach
 
 		void draw(sf::Drawable *drawable, ach::RenderLayer layer = ach::RenderLayer::rlGUI, sf::RenderStates states = sf::RenderStates::Default);
 
-		void          initLayer(ach::RenderLayer layer, int width, int height);
+		void          initLayer(ach::RenderLayer layer, int width, int height, bool smooth);
 		ach::Layer   *getLayer (ach::RenderLayer layer);
 		sf::Vector2f  transform(ach::RenderLayer layer, sf::Vector2f v);
 	};
