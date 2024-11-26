@@ -79,11 +79,13 @@ $(PROJECT): $(OBJ)
 	$(STRIP) $(PROJECT)
 	$(ECHO)
 
+
 $(OBJ) : $(PCH)
 $(PCH) : $(HPP) $(INL)
 	$(ECHO) $(BLUE) "Header   " $(NORMAL) ": $(HEADER)"
 	$(ECHO)
 	$(CC) $(CFLAGS) -o $@ -c $(HEADER)
+
 
 .cpp.o:
 	$(ECHO) $(GREEN) "Compiling" $(NORMAL) ": $(<)"
