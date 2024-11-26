@@ -138,11 +138,11 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 	{
 		if (file_is_regular(entry))
 		{
-			res = json_preprocess_include(entry.path().filename().c_str(), path);
+			res = json_preprocess_include(entry.path().filename().string().c_str(), path);
 		}
 		else if (recursive && file_is_directory(entry))
 		{
-			res = json_preprocess_dir(entry.path().filename().c_str(), path, true);
+			res = json_preprocess_dir(entry.path().filename().string().c_str(), path, true);
 		}
 		else
 		{
