@@ -32,6 +32,7 @@ namespace ach
 
 		void process();
 
+		/*  collide.cpp  */
 		void collide();
 		void collidePhysSteps(ach::Phys *phys);
 		bool collidePhys(ach::Phys *phys);
@@ -40,6 +41,7 @@ namespace ach
 		void collideExplosion(ach::Projectile *projectile);
 		void collideCharacter(ach::Character *character);
 
+		/*  load.cpp  */
 		void load(const char *filename);
 		void loadMeta(json_t *mapdata);
 		void loadInit();
@@ -51,6 +53,7 @@ namespace ach
 		void loadObjects(json_t *layer);
 		void loadCharacters(json_t *layer);
 
+		/*  coord.cpp  */
 		sf::Vector2f getTilePos(sf::Vector2i v);
 		sf::Vector2f getTileCenter(sf::Vector2i v);
 	};

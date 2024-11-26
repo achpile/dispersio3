@@ -46,7 +46,7 @@ namespace ach
 		void translate();
 		void style(ach::MenuTheme *_theme);
 
-		/*  base/controls.cpp  */
+		/*  controls.cpp  */
 		void controls();
 		bool inside(sf::Vector2f pos);
 		void hover(sf::Vector2f pos);
@@ -54,7 +54,7 @@ namespace ach
 		void select(int i);
 		void move(int d);
 
-		/*  base/items.cpp  */
+		/*  items.cpp  */
 		void init(const char *_root);
 		void add(const char *_parent, ach::MenuItem *item);
 		void go(ach::MenuItemFolder *parent, ach::MenuItem *item);
@@ -63,14 +63,14 @@ namespace ach
 		void reset();
 		void finalize();
 
-		/*  base/dimensions.cpp  */
+		/*  dimensions.cpp  */
 		float left();
 		float right();
 		float top();
 		float line(int l);
 		void  calculate();
 
-		/*  base/set.cpp  */
+		/*  set.cpp  */
 		void setWidth(float _width);
 		void setWidthE(float _width);
 		void setHeight(int _height);
@@ -78,7 +78,7 @@ namespace ach
 		void setPosition(sf::Vector2f _pos);
 		void setPadding(sf::Vector2f _padding);
 
-		/*  base/print.cpp  */
+		/*  print.cpp  */
 		void print(sf::String string, float x, int y, ach::TextAlign align);
 		void printItem(sf::String string, int y);
 		void printCaption();

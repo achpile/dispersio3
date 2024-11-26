@@ -21,7 +21,7 @@ namespace ach
 
 		void load();
 
-		/*  base/get.cpp  */
+		/*  get.cpp  */
 		ach::DataFont       *getFont      (const char *name);
 		ach::DataTheme      *getTheme     (const char *name);
 		ach::DataModel      *getModel     (const char *name);
@@ -31,7 +31,7 @@ namespace ach
 		ach::DataBody       *getBody      (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
 
-		/*  base/list.cpp  */
+		/*  list.cpp  */
 		json_t *listLanguage();
 		json_t *listTheme();
 	};
