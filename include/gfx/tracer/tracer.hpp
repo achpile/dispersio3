@@ -1,5 +1,5 @@
-#ifndef __GFX_TRACER_BASE
-#define __GFX_TRACER_BASE
+#ifndef __GFX_TRACER_TRACER
+#define __GFX_TRACER_TRACER
 
 
 namespace ach

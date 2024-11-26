@@ -1,5 +1,5 @@
-#ifndef __GFX_IMPACT_BASE
-#define __GFX_IMPACT_BASE
+#ifndef __GFX_IMPACT_IMPACT
+#define __GFX_IMPACT_IMPACT
 
 
 namespace ach

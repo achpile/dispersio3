@@ -1,5 +1,5 @@
-#ifndef __CHARACTER_AI_BASE
-#define __CHARACTER_AI_BASE
+#ifndef __CHARACTER_AI_AI
+#define __CHARACTER_AI_AI
 
 
 namespace ach

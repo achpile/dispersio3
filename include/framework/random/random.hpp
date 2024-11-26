@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_RANDOM_BASE
-#define __FRAMEWORK_RANDOM_BASE
+#ifndef __FRAMEWORK_RANDOM_RANDOM
+#define __FRAMEWORK_RANDOM_RANDOM
 
 
 float random_float(float min, float max);

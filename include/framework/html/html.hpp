@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_HTML_BASE
-#define __FRAMEWORK_HTML_BASE
+#ifndef __FRAMEWORK_HTML_HTML
+#define __FRAMEWORK_HTML_HTML
 
 
 void html_start     (FILE *fp);

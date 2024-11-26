@@ -20,19 +20,19 @@
 #include "data/weapon.hpp"
 #include "data/body.hpp"
 #include "data/character.hpp"
-#include "data/base.hpp"
+#include "data/data.hpp"
 
-#include "model/base.hpp"
+#include "model/model.hpp"
 
-#include "gfx/base.hpp"
+#include "gfx/gfx.hpp"
 #include "gfx/blood.hpp"
 #include "gfx/chunk.hpp"
 #include "gfx/explosion.hpp"
 
-#include "gfx/impact/base.hpp"
+#include "gfx/impact/impact.hpp"
 #include "gfx/impact/spark.hpp"
 
-#include "gfx/tracer/base.hpp"
+#include "gfx/tracer/tracer.hpp"
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"
 
@@ -42,37 +42,37 @@
 #include "container/language.hpp"
 
 #include "character/ai/pair.hpp"
-#include "character/ai/base.hpp"
+#include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"
 
 #include "character/body/pair.hpp"
 #include "character/body/part.hpp"
-#include "character/body/base.hpp"
+#include "character/body/body.hpp"
 #include "character/body/simple.hpp"
 #include "character/body/humanoid.hpp"
 
 #include "character/projectile/pair.hpp"
-#include "character/projectile/base.hpp"
+#include "character/projectile/projectile.hpp"
 
 #include "character/weapon.hpp"
-#include "character/base.hpp"
+#include "character/character.hpp"
 
-#include "map/object/base.hpp"
+#include "map/object/object.hpp"
 #include "map/object/decor.hpp"
 
 #include "map/tile/pair.hpp"
-#include "map/tile/base.hpp"
+#include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
 
 #include "map/camera.hpp"
-#include "map/base.hpp"
+#include "map/map.hpp"
 
-#include "process/base.hpp"
+#include "process/process.hpp"
 #include "process/world.hpp"
 
 #include "state/pair.hpp"
-#include "state/base.hpp"
+#include "state/state.hpp"
 #include "state/start.hpp"
 #include "state/menu.hpp"
 #include "state/game.hpp"

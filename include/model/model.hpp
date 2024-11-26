@@ -1,5 +1,5 @@
-#ifndef __MODEL_BASE
-#define __MODEL_BASE
+#ifndef __MODEL_MODEL
+#define __MODEL_MODEL
 
 
 namespace ach

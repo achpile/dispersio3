@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MATH_BASE
-#define __FRAMEWORK_MATH_BASE
+#ifndef __FRAMEWORK_MATH_MATH
+#define __FRAMEWORK_MATH_MATH
 
 
 bool  math_epsilon(float x);

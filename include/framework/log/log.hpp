@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_LOG_BASE
-#define __FRAMEWORK_LOG_BASE
+#ifndef __FRAMEWORK_LOG_LOG
+#define __FRAMEWORK_LOG_LOG
 
 
 namespace ach

@@ -1,5 +1,5 @@
-#ifndef __STATE_BASE
-#define __STATE_BASE
+#ifndef __STATE_STATE
+#define __STATE_STATE
 
 
 namespace ach

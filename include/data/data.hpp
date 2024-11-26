@@ -1,5 +1,5 @@
-#ifndef __DATA_BASE
-#define __DATA_BASE
+#ifndef __DATA_DATA
+#define __DATA_DATA
 
 
 namespace ach

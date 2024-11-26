@@ -10,7 +10,7 @@
 #include "framework/string/utf8.hpp"
 
 #include "framework/log/pair.hpp"
-#include "framework/log/base.hpp"
+#include "framework/log/log.hpp"
 
 #include "framework/misc/arch.hpp"
 #include "framework/misc/direction.hpp"
@@ -20,21 +20,21 @@
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
 
-#include "framework/random/base.hpp"
+#include "framework/random/random.hpp"
 #include "framework/random/item.hpp"
 #include "framework/random/item.inl"
 #include "framework/random/list.hpp"
 #include "framework/random/list.inl"
 
 #include "framework/math/defines.hpp"
-#include "framework/math/base.hpp"
+#include "framework/math/math.hpp"
 #include "framework/math/interval.hpp"
 #include "framework/math/interval.inl"
 #include "framework/math/vector.hpp"
 #include "framework/math/projection.hpp"
 #include "framework/math/line.hpp"
 
-#include "framework/html/base.hpp"
+#include "framework/html/html.hpp"
 #include "framework/html/include.hpp"
 #include "framework/html/list.hpp"
 #include "framework/html/link.hpp"
@@ -57,7 +57,7 @@
 #include "framework/datamodel/default.hpp"
 #include "framework/datamodel/preprocessor.hpp"
 #include "framework/datamodel/docs.hpp"
-#include "framework/datamodel/base.hpp"
+#include "framework/datamodel/datamodel.hpp"
 
 #include "framework/control/pair.hpp"
 #include "framework/control/key.hpp"
@@ -90,17 +90,17 @@
 #include "framework/menu/folder.hpp"
 #include "framework/menu/list.hpp"
 #include "framework/menu/slider.hpp"
-#include "framework/menu/base.hpp"
+#include "framework/menu/menu.hpp"
 
-#include "framework/particle/base.hpp"
+#include "framework/particle/particle.hpp"
 #include "framework/particle/system.hpp"
 
 #include "framework/collision/defines.hpp"
 #include "framework/collision/pair.hpp"
 #include "framework/collision/phys.hpp"
 #include "framework/collision/line.hpp"
-#include "framework/collision/quadrant.hpp"
-#include "framework/collision/base.hpp"
 #include "framework/collision/algo.hpp"
+#include "framework/collision/quadrant.hpp"
+#include "framework/collision/collision.hpp"
 
 #endif

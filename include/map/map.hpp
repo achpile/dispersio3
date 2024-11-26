@@ -1,5 +1,5 @@
-#ifndef __MAP_BASE
-#define __MAP_BASE
+#ifndef __MAP_MAP
+#define __MAP_MAP
 
 
 namespace ach

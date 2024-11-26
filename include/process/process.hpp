@@ -1,5 +1,5 @@
-#ifndef __PROCESS_BASE
-#define __PROCESS_BASE
+#ifndef __PROCESS_PROCESS
+#define __PROCESS_PROCESS
 
 
 namespace ach
