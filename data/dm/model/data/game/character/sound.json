@@ -1,0 +1,29 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Die": {
+        "@attr": {
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
+        }
+    },
+    "Hurt": {
+        "@attr": {
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
+        }
+    },
+    "Jump": {
+        "@attr": {
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
+        }
+    },
+    "Land": {
+        "@attr": {
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
+        }
+    }
+}

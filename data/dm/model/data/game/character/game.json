@@ -1,0 +1,30 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "AI": {
+        "@attr": {
+            "default": "idle",
+            "enum": [
+                "idle",
+                "player"
+            ],
+            "type": "enum"
+        }
+    },
+    "Hitbox": {
+        "@attr": {
+            "traits": [
+                "size"
+            ],
+            "type": "object"
+        }
+    },
+    "Weapon": {
+        "@attr": {
+            "data": "Data.Game.Weapon",
+            "default": "Rifle",
+            "type": "link"
+        }
+    }
+}

@@ -1,14 +1,18 @@
 {
     "Player": {
-        "AI": "player",
-        "Barrel": 6,
-        "Body": "Player",
+        "Appearance": {
+            "Barrel": 6,
+            "Body": "Player"
+        },
+        "Game": {
+            "AI": "player",
+            "Weapon": "Rifle"
+        },
         "Sound": {
             "Die": "sfx/character/player/die.wav",
             "Hurt": "sfx/character/player/hurt.wav",
             "Jump": "sfx/character/player/jump.wav",
             "Land": "sfx/character/player/land.wav"
-        },
-        "Weapon": "Rifle"
+        }
     }
 }

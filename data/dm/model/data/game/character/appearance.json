@@ -1,0 +1,27 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Barrel": {
+        "@attr": {
+            "default": 0.0,
+            "max": 100.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    },
+    "Body": {
+        "@attr": {
+            "data": "Data.GFX.Body",
+            "default": "None",
+            "type": "link"
+        }
+    },
+    "Chunk": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Chunks",
+            "type": "link"
+        }
+    }
+}

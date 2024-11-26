@@ -1,0 +1,23 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Blood": {
+        "@attr": {
+            "default": "#960000B0",
+            "type": "color"
+        }
+    },
+    "Chunk": {
+        "@attr": {
+            "default": "#960000FF",
+            "type": "color"
+        }
+    },
+    "Model": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    }
+}

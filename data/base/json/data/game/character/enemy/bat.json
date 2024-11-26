@@ -1,7 +1,11 @@
 {
     "Bat": {
-        "AI": "idle",
-        "Body": "Bat",
+        "Appearance": {
+            "Body": "Bat"
+        },
+        "Game": {
+            "AI": "idle"
+        },
         "Sound": {
             "Die": "sfx/character/enemy/bat/die.wav"
         }
