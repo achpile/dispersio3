@@ -1,0 +1,4 @@
+IF ( WIN32 )
+        SET ( PLATFORM_RESOURCE "icon.o" )
+        ADD_CUSTOM_COMMAND ( OUTPUT ${PLATFORM_RESOURCE} COMMAND ${CMAKE_RC_COMPILER} -Imisc/icon -imisc/icon/icon.rc -o ${PLATFORM_RESOURCE} )
+ENDIF ()
