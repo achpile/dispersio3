@@ -1,0 +1,27 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Bounces": {
+        "@attr": {
+            "default": 0,
+            "max": 50,
+            "min": 0,
+            "type": "integer"
+        }
+    },
+    "Gravity": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Radius": {
+        "@attr": {
+            "default": 1,
+            "max": 100,
+            "min": 0,
+            "type": "real"
+        }
+    }
+}

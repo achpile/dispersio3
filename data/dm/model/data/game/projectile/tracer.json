@@ -1,0 +1,22 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Color": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    },
+    "Type": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "line",
+                "smoke"
+            ],
+            "type": "enum"
+        }
+    }
+}

@@ -2,9 +2,7 @@
     "Grenade": {
         "Cooldown": 0.7,
         "Projectile": "Grenade",
-        "Sound": {
-            "Shot": "sfx/weapon/rifle_shot.wav"
-        },
+        "Shot": "sfx/weapon/rifle_shot.wav",
         "Speed": 400
     }
 }

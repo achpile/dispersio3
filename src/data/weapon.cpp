@@ -18,7 +18,7 @@ ach::DataWeapon::DataWeapon(json_t *obj)
 
 	projectile = db->getProjectile(json_object_get_string(obj, "Projectile"));
 
-	sfml_load_sound(&shot, json_object_get_branch_string(obj, "Sound.Shot"));
+	sfml_load_sound(&shot, json_object_get_string(obj, "Shot"));
 }
 
 

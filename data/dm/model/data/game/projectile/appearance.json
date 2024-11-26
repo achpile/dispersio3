@@ -1,0 +1,37 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Color": {
+        "@attr": {
+            "default": "#FFFFFFFF",
+            "type": "color"
+        }
+    },
+    "Orientation": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "direction",
+                "rotation"
+            ],
+            "type": "enum"
+        }
+    },
+    "Scale": {
+        "@attr": {
+            "default": 1,
+            "max": 10,
+            "min": 0.5,
+            "type": "real"
+        }
+    },
+    "Sheet": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "ProjectileBullet",
+            "type": "link"
+        }
+    }
+}

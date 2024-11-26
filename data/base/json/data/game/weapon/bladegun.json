@@ -4,9 +4,7 @@
         "Cooldown": 0.5,
         "Count": 3,
         "Projectile": "Blade",
-        "Sound": {
-            "Shot": "sfx/weapon/rifle_shot.wav"
-        },
+        "Shot": "sfx/weapon/rifle_shot.wav",
         "Speed": 400
     }
 }

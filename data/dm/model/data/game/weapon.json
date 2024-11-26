@@ -49,15 +49,10 @@
             "type": "real"
         }
     },
-    "Sound": {
+    "Shot": {
         "@attr": {
-            "type": "object"
-        },
-        "Shot": {
-            "@attr": {
-                "default": "sfx/misc/default.wav",
-                "type": "filename"
-            }
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
         }
     },
     "Speed": {

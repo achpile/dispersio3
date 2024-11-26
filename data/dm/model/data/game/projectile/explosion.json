@@ -1,0 +1,32 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Enable": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Radius": {
+        "@attr": {
+            "default": 32,
+            "max": 100,
+            "min": 0,
+            "type": "real"
+        }
+    },
+    "Sheet": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Explosion",
+            "type": "link"
+        }
+    },
+    "Sound": {
+        "@attr": {
+            "default": "sfx/misc/explosion.wav",
+            "type": "filename"
+        }
+    }
+}
