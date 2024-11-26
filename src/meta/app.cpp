@@ -33,6 +33,8 @@ ach::App::App()
 	rm->initLayer(ach::RenderLayer::rlGame, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
 	rm->initLayer(ach::RenderLayer::rlGUI , RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y );
 
+	rm->setSmooth(settings->isSmooth());
+
 	create();
 	resize();
 

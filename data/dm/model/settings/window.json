@@ -16,6 +16,12 @@
             "type": "integer"
         }
     },
+    "Smooth": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
     "Width": {
         "@attr": {
             "default": 800,

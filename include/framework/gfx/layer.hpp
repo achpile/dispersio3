@@ -16,10 +16,12 @@ namespace ach
 		 Layer();
 		~Layer();
 
-		void init(int width, int height);
+		void init  (int width, int height);
 		void resize(sf::RenderWindow *window);
-		void setView(sf::View view);
 		void render(sf::RenderTarget *target);
+
+		void setView  (sf::View view);
+		void setSmooth(bool smooth);
 
 		void draw(sf::Drawable *drawable, sf::RenderStates states);
 		void clear(sf::Color color);

@@ -71,6 +71,21 @@ void ach::Layer::resize(sf::RenderWindow *window)
 
 /***********************************************************************
      * Layer
+     * render
+
+***********************************************************************/
+void ach::Layer::render(sf::RenderTarget *target)
+{
+	if (!initialized)
+		return;
+
+	target->draw(*spr);
+}
+
+
+
+/***********************************************************************
+     * Layer
      * setView
 
 ***********************************************************************/
@@ -86,15 +101,15 @@ void ach::Layer::setView(sf::View view)
 
 /***********************************************************************
      * Layer
-     * render
+     * setSmooth
 
 ***********************************************************************/
-void ach::Layer::render(sf::RenderTarget *target)
+void ach::Layer::setSmooth(bool smooth)
 {
 	if (!initialized)
 		return;
 
-	target->draw(*spr);
+	tex->setSmooth(smooth);
 }
 
 

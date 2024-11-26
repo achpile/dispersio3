@@ -25,7 +25,9 @@ namespace ach
 		void clear();
 		void display(sf::RenderWindow *window);
 		void resize (sf::RenderWindow *window);
-		void setView(sf::View view);
+
+		void setView  (sf::View view);
+		void setSmooth(bool smooth);
 
 		void draw(sf::Drawable *drawable, ach::RenderLayer layer = ach::RenderLayer::rlGUI, sf::RenderStates states = sf::RenderStates::Default);
 

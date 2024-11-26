@@ -14,6 +14,7 @@ namespace ach
 
 
 		bool isFullscreen();
+		bool isSmooth();
 
 		const char   *getLanguage();
 		const char   *getTheme();

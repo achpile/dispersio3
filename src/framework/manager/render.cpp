@@ -91,6 +91,20 @@ void ach::RenderManager::setView(sf::View view)
 
 /***********************************************************************
      * RenderManager
+     * setSmooth
+
+***********************************************************************/
+void ach::RenderManager::setSmooth(bool smooth)
+{
+	bg->setSmooth(smooth);
+	game->setSmooth(smooth);
+	gui->setSmooth(smooth);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
      * draw
 
 ***********************************************************************/

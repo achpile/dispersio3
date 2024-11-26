@@ -56,6 +56,12 @@
             "type": "string"
         }
     },
+    "Smooth": {
+        "@attr": {
+            "default": "Texture smoothing",
+            "type": "string"
+        }
+    },
     "Sound": {
         "@attr": {
             "default": "Sound",
