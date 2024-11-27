@@ -1,0 +1,5 @@
+IF ( WIN32 )
+        SET ( PLATFORM_CFLAGS "-s" )
+        SET ( PLATFORM_LFLAGS "-static-libgcc -static-libstdc++ -mwindows" )
+        SET ( PLATFORM_LIBS    stdc++fs )
+ENDIF ()

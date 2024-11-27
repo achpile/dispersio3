@@ -1,0 +1,5 @@
+IF ( UNIX )
+        SET ( PLATFORM_CFLAGS "-s" )
+        SET ( PLATFORM_LFLAGS "-static-libgcc -static-libstdc++ -s ${TOOLCHAIN_ARCH}" )
+        SET ( PLATFORM_LIBS    stdc++fs )
+ENDIF ()

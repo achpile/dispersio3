@@ -4,7 +4,7 @@ PROJECT ( dispersio3 )
 
 SET ( PROJECT_CFLAGS "-std=c++17" )
 SET ( PROJECT_LFLAGS "-L./lib -Wl,-rpath,./lib/" )
-SET ( PROJECT_LIBS   sfml-audio sfml-graphics sfml-window sfml-system m jansson stdc++fs )
+SET ( PROJECT_LIBS    sfml-audio sfml-graphics sfml-window sfml-system m jansson )
 
 SET ( PROJECT_INCLUDE "include" )
 SET ( PROJECT_HEADER  "${PROJECT_INCLUDE}/meta/headers.hpp" )
@@ -12,11 +12,14 @@ SET ( PROJECT_HEADER  "${PROJECT_INCLUDE}/meta/headers.hpp" )
 INCLUDE_DIRECTORIES ( ${PROJECT_INCLUDE} )
 FILE ( GLOB_RECURSE SRC "src/*.cpp" )
 
+INCLUDE ( misc/icon/icon.cmake NO_POLICY_SCOPE )
+INCLUDE ( misc/cmake/win.cmake NO_POLICY_SCOPE )
+INCLUDE ( misc/cmake/lXX.cmake NO_POLICY_SCOPE )
+INCLUDE ( misc/cmake/osx.cmake NO_POLICY_SCOPE )
+
 SET ( CMAKE_CXX_FLAGS         "${PROJECT_CFLAGS} ${PLATFORM_CFLAGS}" )
 SET ( CMAKE_EXE_LINKER_FLAGS  "${PROJECT_LFLAGS} ${PLATFORM_LFLAGS}" )
-SET ( CMAKE_LINK_LIBS          ${PROJECT_LIBS}    ${PLATFORM_LIBS}   )
-
-INCLUDE ( misc/icon/icon.cmake NO_POLICY_SCOPE )
+SET ( CMAKE_LINK_LIBS          ${PROJECT_LIBS}   ${PLATFORM_LIBS}    )
 
 ADD_EXECUTABLE ( ${CMAKE_PROJECT_NAME} ${SRC} ${PLATFORM_RESOURCE} )
 
