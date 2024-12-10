@@ -80,9 +80,9 @@ void ach::Camera::follow(ach::Phys *phys)
      * set
 
 ***********************************************************************/
-void ach::Camera::set(sf::FloatRect _area)
+void ach::Camera::set(ach::MapArea *_area)
 {
-	area = _area;
+	area = _area->rect;
 
 	update();
 }

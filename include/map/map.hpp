@@ -62,7 +62,10 @@ namespace ach
 		/*  coord.cpp  */
 		sf::Vector2f  getTilePos(sf::Vector2i v);
 		sf::Vector2f  getTileCenter(sf::Vector2i v);
-		sf::FloatRect getMapArea(sf::Vector2f v);
+
+		/*  find.cpp  */
+		ach::MapArea*   findMapArea(sf::Vector2f v);
+		ach::MapObject* findMapObject(int id);
 	};
 }
 

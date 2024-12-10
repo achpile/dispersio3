@@ -13,7 +13,7 @@ ach::ProcessWorld::ProcessWorld()
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
 
 	cam->follow(&player->phys);
-	cam->set(map->getMapArea(player->phys.pos));
+	cam->set(map->findMapArea(player->phys.pos));
 
 	player->respawning = true;
 
@@ -48,7 +48,7 @@ void ach::ProcessWorld::update()
 	map->touch(player);
 
 	if (!cam->check())
-		cam->set(map->getMapArea(player->phys.pos));
+		cam->set(map->findMapArea(player->phys.pos));
 
 	render();
 }

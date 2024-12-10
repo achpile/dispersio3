@@ -9,6 +9,7 @@ namespace ach
 		sf::FloatRect rect;
 
 		 MapArea(json_t *obj);
+		 MapArea(sf::FloatRect _rect);
 		~MapArea();
 	};
 }

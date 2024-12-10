@@ -20,7 +20,7 @@ namespace ach
 		bool check();
 
 		void follow(ach::Phys *phys);
-		void set(sf::FloatRect _area);
+		void set(ach::MapArea *_area);
 	};
 }
 

@@ -3,22 +3,30 @@
 
 /***********************************************************************
      * Map
-     * getTilePos
+     * findMapArea
 
 ***********************************************************************/
-sf::Vector2f ach::Map::getTilePos(sf::Vector2i v)
+ach::MapArea* ach::Map::findMapArea(sf::Vector2f v)
 {
-	return vector_mult(sizeTile, v);
+	list_foreach(areas)
+		if (areas[i]->rect.contains(v))
+			return areas[i];
+
+	return NULL;
 }
 
 
 
 /***********************************************************************
      * Map
-     * getTileCenter
+     * findMapObject
 
 ***********************************************************************/
-sf::Vector2f ach::Map::getTileCenter(sf::Vector2i v)
+ach::MapObject* ach::Map::findMapObject(int id)
 {
-	return getTilePos(v) + sf::Vector2f(sizeTile) / 2.0f;
+	list_foreach(objects)
+		if (objects[i]->id == id)
+			return objects[i];
+
+	return NULL;
 }
