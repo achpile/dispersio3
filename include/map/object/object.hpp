@@ -20,9 +20,9 @@ namespace ach
 		bool update();
 		void render();
 
-		virtual void init()  {};
-		virtual void touch() {};
-		virtual void use()   {};
+		virtual void init(ach::Map*) {};
+		virtual void touch()         {};
+		virtual void use()           {};
 	};
 }
 

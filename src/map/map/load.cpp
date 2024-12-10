@@ -76,7 +76,7 @@ void ach::Map::loadFinalize()
 	areas.push_back(new ach::MapArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(sizeMap, sizeTile))));
 
 	list_foreach(objects)
-		objects[i]->init();
+		objects[i]->init(this);
 }
 
 

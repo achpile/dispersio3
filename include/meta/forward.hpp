@@ -3,6 +3,7 @@
 
 namespace ach
 {
+	struct Map;
 	struct Character;
 	struct ProcessWorld;
 }

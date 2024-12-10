@@ -13,6 +13,9 @@ namespace ach
 
 		 MapObjectDoor(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectDoor();
+
+		void init(ach::Map *map);
+		void use();
 	};
 }
 
