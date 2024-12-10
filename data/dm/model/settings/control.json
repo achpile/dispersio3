@@ -57,5 +57,12 @@
             "maxlen": 12,
             "type": "string"
         }
+    },
+    "Use": {
+        "@attr": {
+            "default": "E",
+            "maxlen": 12,
+            "type": "string"
+        }
     }
 }

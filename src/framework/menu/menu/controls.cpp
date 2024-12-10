@@ -22,6 +22,7 @@ void ach::Menu::controls()
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) current->items[index]->pick();
 	if (ctrl->keys[ach::ControlAction::caShot ].pressed) current->items[index]->pick();
+	if (ctrl->keys[ach::ControlAction::caUse  ].pressed) current->items[index]->pick();
 
 	if (ctrl->keys[ach::ControlAction::caMenu ].pressed) current->items.back()->pick();
 }

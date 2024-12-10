@@ -12,6 +12,7 @@ namespace ach
 		caRight,
 		caJump,
 		caShot,
+		caUse,
 		caHold,
 		caMenu,
 		caCount

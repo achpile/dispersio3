@@ -48,6 +48,9 @@ void ach::AIPlayer::control()
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) owner->jump();
 	if (ctrl->keys[ach::ControlAction::caShot ].state  ) owner->shot();
+
+	if (ctrl->keys[ach::ControlAction::caUse  ].pressed)
+		owner->world->map->use(owner);
 }
 
 

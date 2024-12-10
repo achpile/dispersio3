@@ -49,5 +49,11 @@
             "default": "Up",
             "type": "string"
         }
+    },
+    "Use": {
+        "@attr": {
+            "default": "Use",
+            "type": "string"
+        }
     }
 }
