@@ -17,11 +17,10 @@ namespace ach
 		~Camera();
 
 		void update();
-		void check();
-		void center();
+		bool check();
 
 		void follow(ach::Phys *phys);
-		void setArea(sf::FloatRect _area);
+		void set(sf::FloatRect _area);
 	};
 }
 

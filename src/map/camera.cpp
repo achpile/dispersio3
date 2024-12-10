@@ -34,8 +34,14 @@ ach::Camera::~Camera()
 ***********************************************************************/
 void ach::Camera::update()
 {
-	center();
-	check();
+	if (!follower)
+		return;
+
+	viewport.left = round(follower->pos.x - RENDER_LAYER_GAME_X / 2.0f);
+	viewport.top  = round(follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f);
+
+	viewport.left = interval_set(viewport.left, area.left, area.left + area.width  - viewport.width );
+	viewport.top  = interval_set(viewport.top , area.top , area.top  + area.height - viewport.height);
 
 	view.reset(viewport);
 	rm->setView(view);
@@ -45,29 +51,12 @@ void ach::Camera::update()
 
 /***********************************************************************
      * Camera
-     * center
-
-***********************************************************************/
-void ach::Camera::center()
-{
-	if (!follower)
-		return;
-
-	viewport.left = round(follower->pos.x - RENDER_LAYER_GAME_X / 2.0f);
-	viewport.top  = round(follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f);
-}
-
-
-
-/***********************************************************************
-     * Camera
      * check
 
 ***********************************************************************/
-void ach::Camera::check()
+bool ach::Camera::check()
 {
-	viewport.left = interval_set(viewport.left, area.left, area.left + area.width  - viewport.width );
-	viewport.top  = interval_set(viewport.top , area.top , area.top  + area.height - viewport.height);
+	return area.contains(follower->pos);
 }
 
 
@@ -88,10 +77,10 @@ void ach::Camera::follow(ach::Phys *phys)
 
 /***********************************************************************
      * Camera
-     * setArea
+     * set
 
 ***********************************************************************/
-void ach::Camera::setArea(sf::FloatRect _area)
+void ach::Camera::set(sf::FloatRect _area)
 {
 	area = _area;
 

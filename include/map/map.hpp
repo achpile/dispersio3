@@ -56,8 +56,9 @@ namespace ach
 		void loadCamera(json_t *layer);
 
 		/*  coord.cpp  */
-		sf::Vector2f getTilePos(sf::Vector2i v);
-		sf::Vector2f getTileCenter(sf::Vector2i v);
+		sf::Vector2f  getTilePos(sf::Vector2i v);
+		sf::Vector2f  getTileCenter(sf::Vector2i v);
+		sf::FloatRect getMapArea(sf::Vector2f v);
 	};
 }
 

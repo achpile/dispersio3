@@ -12,8 +12,8 @@ ach::ProcessWorld::ProcessWorld()
 	cam    = new ach::Camera();
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
 
-	cam->setArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(map->sizeMap, map->sizeTile)));
 	cam->follow(&player->phys);
+	cam->set(map->getMapArea(player->phys.pos));
 
 	player->respawning = true;
 
@@ -44,6 +44,9 @@ void ach::ProcessWorld::update()
 {
 	map->update();
 	cam->update();
+
+	if (!cam->check())
+		cam->set(map->getMapArea(player->phys.pos));
 
 	render();
 }
