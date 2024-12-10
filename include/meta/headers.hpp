@@ -65,6 +65,7 @@
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
 
+#include "map/area.hpp"
 #include "map/camera.hpp"
 #include "map/map.hpp"
 
