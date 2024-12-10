@@ -33,6 +33,9 @@ namespace ach
 
 		void process();
 
+		void touch(ach::Character* character);
+		void use(ach::Character* character);
+
 		/*  collide.cpp  */
 		void collide();
 		void collidePhysSteps(ach::Phys *phys);

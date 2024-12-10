@@ -6,7 +6,7 @@ namespace ach
 {
 	struct MapObjectDecor : MapObject
 	{
-		 MapObjectDecor(json_t *obj);
+		 MapObjectDecor(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectDecor();
 	};
 }

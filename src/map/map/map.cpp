@@ -124,3 +124,31 @@ void ach::Map::process()
 	list_foreach(characters)
 		characters[i]->process();
 }
+
+
+
+/***********************************************************************
+     * Map
+     * touch
+
+***********************************************************************/
+void ach::Map::touch(ach::Character* character)
+{
+	list_foreach(objects)
+		if (objects[i]->phys.rect.intersects(character->phys.rect))
+			objects[i]->touch();
+}
+
+
+
+/***********************************************************************
+     * Map
+     * use
+
+***********************************************************************/
+void ach::Map::use(ach::Character* character)
+{
+	list_foreach(objects)
+		if (objects[i]->phys.rect.intersects(character->phys.rect))
+			objects[i]->use();
+}

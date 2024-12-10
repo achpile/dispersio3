@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::MapObject::MapObject(json_t *obj)
+ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 {
+	world = _world;
 	model = NULL;
 	alive = true;
 

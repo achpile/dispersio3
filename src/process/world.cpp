@@ -45,6 +45,8 @@ void ach::ProcessWorld::update()
 	map->update();
 	cam->update();
 
+	map->touch(player);
+
 	if (!cam->check())
 		cam->set(map->getMapArea(player->phys.pos));
 

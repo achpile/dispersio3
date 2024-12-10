@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::MapObjectDecor::MapObjectDecor(json_t *obj) : MapObject(obj)
+ach::MapObjectDecor::MapObjectDecor(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
 	model = new ach::Model(db->getSheet(json_object_get_string(obj, "name")));
 }

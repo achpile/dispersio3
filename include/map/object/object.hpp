@@ -6,17 +6,21 @@ namespace ach
 {
 	struct MapObject
 	{
-		ach::Model *model;
-		ach::Phys   phys;
+		ach::ProcessWorld *world;
+		ach::Model        *model;
+		ach::Phys          phys;
 
 		bool alive;
 
 
-		 MapObject(json_t *obj);
-		~MapObject();
+		         MapObject(ach::ProcessWorld *_world, json_t *obj);
+		virtual ~MapObject();
 
 		bool update();
 		void render();
+
+		virtual void touch() {};
+		virtual void use()   {};
 	};
 }
 
