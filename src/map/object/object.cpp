@@ -11,6 +11,7 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 	world = _world;
 	model = NULL;
 	alive = true;
+	id    = json_object_get_integer(obj, "id");
 
 	phys.init(vector_json_rect(obj));
 }

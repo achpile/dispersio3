@@ -40,6 +40,7 @@ void ach::Map::load(const char *filename)
 	loadInit();
 	loadTileset(mapdata, path);
 	loadLayers(mapdata);
+	loadFinalize();
 
 	json_decref(mapdata);
 }
@@ -61,6 +62,19 @@ void ach::Map::loadMeta(json_t *mapdata)
 
 	spawn = getTileCenter(sf::Vector2i(json_property_get_integer(mapdata, "spawnX"),
 	                                   json_property_get_integer(mapdata, "spawnY")));
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadFinalize
+
+***********************************************************************/
+void ach::Map::loadFinalize()
+{
+	list_foreach(objects)
+		objects[i]->init();
 }
 
 

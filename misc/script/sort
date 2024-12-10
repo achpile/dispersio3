@@ -45,7 +45,6 @@ def cut_properties(p):
 def cut_object(o):
     cut_properties(o)
 
-    delete(o, "id")
     delete(o, "visible")
     delete(o, "rotation")
 

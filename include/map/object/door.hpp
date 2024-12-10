@@ -6,15 +6,13 @@ namespace ach
 {
 	struct MapObjectDoor : MapObject
 	{
-		ach::MapObjectDoor *pair;
+		sf::FloatRect gateway;
 
-		int id;
+		int pair;
 
 
 		 MapObjectDoor(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectDoor();
-
-		void connect(ach::MapObjectDoor *_pair);
 	};
 }
 

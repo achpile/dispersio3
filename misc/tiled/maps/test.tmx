@@ -110,26 +110,32 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="8" name="camera">
+  <object id="30" type="area" x="0" y="0" width="640" height="240"/>
+  <object id="31" type="area" x="640" y="0" width="320" height="240"/>
+  <object id="32" type="area" x="640" y="240" width="320" height="240"/>
+  <object id="33" type="area" x="320" y="240" width="320" height="240"/>
+ </objectgroup>
  <objectgroup id="6" name="objects">
   <object id="7" name="DecorStatue" type="decor" x="288" y="192" width="32" height="32"/>
   <object id="40" name="DoorTest" type="door" x="880" y="128" width="32" height="32">
    <properties>
-    <property name="id" type="int" value="1"/>
+    <property name="pair" type="object" value="42"/>
    </properties>
   </object>
   <object id="41" name="DoorTest" type="door" x="704" y="384" width="32" height="32">
    <properties>
-    <property name="id" type="int" value="1"/>
+    <property name="pair" type="object" value="43"/>
    </properties>
   </object>
   <object id="42" name="DoorTest" type="door" x="864" y="384" width="32" height="32">
    <properties>
-    <property name="id" type="int" value="2"/>
+    <property name="pair" type="object" value="40"/>
    </properties>
   </object>
   <object id="43" name="DoorTest" type="door" x="512" y="304" width="32" height="32">
    <properties>
-    <property name="id" type="int" value="2"/>
+    <property name="pair" type="object" value="41"/>
    </properties>
   </object>
  </objectgroup>
@@ -187,11 +193,5 @@
   <object id="39" type="platform" x="512" y="416">
    <polyline points="0,0 80,0"/>
   </object>
- </objectgroup>
- <objectgroup id="8" name="camera">
-  <object id="30" type="area" x="0" y="0" width="640" height="240"/>
-  <object id="31" type="area" x="640" y="0" width="320" height="240"/>
-  <object id="32" type="area" x="640" y="240" width="320" height="240"/>
-  <object id="33" type="area" x="320" y="240" width="320" height="240"/>
  </objectgroup>
 </map>

@@ -10,6 +10,7 @@ namespace ach
 		ach::Model        *model;
 		ach::Phys          phys;
 
+		int  id;
 		bool alive;
 
 
@@ -19,6 +20,7 @@ namespace ach
 		bool update();
 		void render();
 
+		virtual void init()  {};
 		virtual void touch() {};
 		virtual void use()   {};
 	};

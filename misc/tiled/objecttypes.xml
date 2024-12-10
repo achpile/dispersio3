@@ -5,7 +5,7 @@
  <objecttype name="character" color="#e01b24"/>
  <objecttype name="decor" color="#57e389"/>
  <objecttype name="door" color="#865e3c">
-  <property name="id" type="int" default="0"/>
+  <property name="pair" type="object" default="0"/>
  </objecttype>
  <objecttype name="platform" color="#e5a50a"/>
  <objecttype name="solid" color="#a51d2d"/>
