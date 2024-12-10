@@ -16,6 +16,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void gateway(sf::FloatRect dest);
 	};
 }
 

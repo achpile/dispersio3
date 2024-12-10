@@ -156,6 +156,17 @@ sf::Vector2i vector_mult_i(sf::Vector2i a, sf::Vector2i b)
 
 
 /***********************************************************************
+     * vector_placement
+
+***********************************************************************/
+sf::Vector2f vector_placement(sf::FloatRect dest, sf::FloatRect rect)
+{
+	return sf::Vector2f(dest.left + dest.width / 2.0f, dest.top + dest.height - rect.height / 2.0f);
+}
+
+
+
+/***********************************************************************
      * vector_json_coord
 
 ***********************************************************************/

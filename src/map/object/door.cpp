@@ -47,4 +47,5 @@ void ach::MapObjectDoor::init(ach::Map *map)
 ***********************************************************************/
 void ach::MapObjectDoor::use()
 {
+	world->gateway(gateway);
 }

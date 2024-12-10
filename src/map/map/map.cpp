@@ -150,5 +150,8 @@ void ach::Map::use(ach::Character* character)
 {
 	list_foreach(objects)
 		if (objects[i]->phys.rect.intersects(character->phys.rect))
+		{
 			objects[i]->use();
+			return;
+		}
 }

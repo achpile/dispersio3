@@ -39,6 +39,7 @@ namespace ach
 
 		void respawn();
 		void reset();
+		void gateway(sf::FloatRect dest);
 
 		bool hit(ach::Projectile *projectile);
 		void damage(int damage, sf::Vector2f c, sf::Vector2f n);

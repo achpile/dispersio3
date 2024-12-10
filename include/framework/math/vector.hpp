@@ -17,6 +17,7 @@ sf::Vector2f  vector_bisector(sf::Vector2f a, sf::Vector2f b);
 sf::Vector2f  vector_mult(sf::Vector2f a, sf::Vector2f b);
 sf::Vector2f  vector_mult(sf::Vector2i a, sf::Vector2i b);
 sf::Vector2i  vector_mult_i(sf::Vector2i a, sf::Vector2i b);
+sf::Vector2f  vector_placement(sf::FloatRect dest, sf::FloatRect rect);
 
 sf::Vector2f  vector_json_coord (json_t *j, const char *x = "x", const char *y = "y");
 sf::FloatRect vector_json_rect  (json_t *j);

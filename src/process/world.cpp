@@ -64,3 +64,20 @@ void ach::ProcessWorld::render()
 {
 	map->render(cam->viewport);
 }
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * gateway
+
+***********************************************************************/
+void ach::ProcessWorld::gateway(sf::FloatRect dest)
+{
+	player->gateway(dest);
+
+	cam->update();
+
+	if (!cam->check())
+		cam->set(map->findMapArea(player->phys.pos));
+}

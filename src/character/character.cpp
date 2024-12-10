@@ -152,6 +152,23 @@ void ach::Character::reset()
 
 /***********************************************************************
      * Character
+     * gateway
+
+***********************************************************************/
+void ach::Character::gateway(sf::FloatRect dest)
+{
+	phys.pos      = vector_placement(dest, phys.rect);
+	phys.vel      = sf::Vector2f(0.0f, 0.0f);
+	phys.grounded = true;
+	phys.moving   = false;
+
+	phys.calc();
+}
+
+
+
+/***********************************************************************
+     * Character
      * hit
 
 ***********************************************************************/
