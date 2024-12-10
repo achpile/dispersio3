@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="40">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="44">
  <editorsettings>
   <export target="../../../data/base/maps/test.tmj" format="json"/>
  </editorsettings>
@@ -112,6 +112,26 @@
  </layer>
  <objectgroup id="6" name="objects">
   <object id="7" name="DecorStatue" type="decor" x="288" y="192" width="32" height="32"/>
+  <object id="40" name="DoorTest" type="door" x="880" y="128" width="32" height="32">
+   <properties>
+    <property name="id" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="41" name="DoorTest" type="door" x="704" y="384" width="32" height="32">
+   <properties>
+    <property name="id" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="42" name="DoorTest" type="door" x="864" y="384" width="32" height="32">
+   <properties>
+    <property name="id" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="43" name="DoorTest" type="door" x="512" y="304" width="32" height="32">
+   <properties>
+    <property name="id" type="int" value="2"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="336" y="112" width="16" height="16"/>

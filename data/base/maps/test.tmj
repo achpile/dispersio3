@@ -53,6 +53,74 @@
                  "width":32,
                  "x":288,
                  "y":192
+                }, 
+                {
+                 "height":32,
+                 "id":40,
+                 "name":"DoorTest",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"door",
+                 "visible":true,
+                 "width":32,
+                 "x":880,
+                 "y":128
+                }, 
+                {
+                 "height":32,
+                 "id":41,
+                 "name":"DoorTest",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "type":"door",
+                 "visible":true,
+                 "width":32,
+                 "x":704,
+                 "y":384
+                }, 
+                {
+                 "height":32,
+                 "id":42,
+                 "name":"DoorTest",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "type":"door",
+                 "visible":true,
+                 "width":32,
+                 "x":864,
+                 "y":384
+                }, 
+                {
+                 "height":32,
+                 "id":43,
+                 "name":"DoorTest",
+                 "properties":[
+                        {
+                         "name":"id",
+                         "type":"int",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "type":"door",
+                 "visible":true,
+                 "width":32,
+                 "x":512,
+                 "y":304
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -743,7 +811,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":40,
+ "nextobjectid":44,
  "orientation":"orthogonal",
  "properties":[
         {

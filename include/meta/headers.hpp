@@ -59,6 +59,7 @@
 
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
+#include "map/object/door.hpp"
 
 #include "map/tile/pair.hpp"
 #include "map/tile/tile.hpp"
