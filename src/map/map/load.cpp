@@ -150,6 +150,7 @@ void ach::Map::loadLayerObjects(json_t *layer)
 		     if (!strcmp(json_object_get_string(layer, "name"), "phys"      )) loadPhys      (layer);
 		else if (!strcmp(json_object_get_string(layer, "name"), "objects"   )) loadObjects   (layer);
 		else if (!strcmp(json_object_get_string(layer, "name"), "characters")) loadCharacters(layer);
+		else if (!strcmp(json_object_get_string(layer, "name"), "camera"    )) loadCamera    (layer);
 
 		else logger->log(ach::LogLevel::llWarning, "Unknown map layer \"%s\"", json_object_get_string(layer, "name"));
 }
@@ -231,5 +232,25 @@ void ach::Map::loadCharacters(json_t *layer)
 		}
 
 		characters.push_back(new ach::Character(world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj)));
+	}
+}
+
+
+
+/***********************************************************************
+     * Map
+     * loadCamera
+
+***********************************************************************/
+void ach::Map::loadCamera(json_t *layer)
+{
+	json_t *obj;
+	size_t  index;
+
+	json_array_foreach(json_object_get(layer, "objects"), index, obj)
+	{
+		     if (!strcmp(json_object_get_string(obj, "type"), "area")) areas.push_back(new ach::MapArea(obj));
+
+		else logger->log(ach::LogLevel::llWarning, "Unknown camera object type \"%s\"", json_object_get_string(obj, "type"));
 	}
 }

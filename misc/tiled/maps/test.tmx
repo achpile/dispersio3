@@ -168,7 +168,7 @@
    <polyline points="0,0 80,0"/>
   </object>
  </objectgroup>
- <objectgroup id="8" name="camera" visible="0">
+ <objectgroup id="8" name="camera">
   <object id="30" type="area" x="0" y="0" width="640" height="240"/>
   <object id="31" type="area" x="640" y="0" width="320" height="240"/>
   <object id="32" type="area" x="640" y="240" width="320" height="240"/>

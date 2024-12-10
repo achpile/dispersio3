@@ -8,6 +8,7 @@ namespace ach
 	{
 		std::vector<ach::Character*>  characters;
 		std::vector<ach::MapObject*>  objects;
+		std::vector<ach::MapArea*>    areas;
 		std::vector<ach::Projectile*> projectiles;
 		std::vector<ach::Effect*>     gfx;
 
@@ -52,6 +53,7 @@ namespace ach
 		void loadPhys(json_t *layer);
 		void loadObjects(json_t *layer);
 		void loadCharacters(json_t *layer);
+		void loadCamera(json_t *layer);
 
 		/*  coord.cpp  */
 		sf::Vector2f getTilePos(sf::Vector2i v);
