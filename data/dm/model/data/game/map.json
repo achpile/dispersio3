@@ -1,0 +1,32 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Background": {
+        "@attr": {
+            "data": "Data.GFX.Background",
+            "default": "Default",
+            "type": "link"
+        }
+    },
+    "Filename": {
+        "@attr": {
+            "default": "map/default.tmj",
+            "type": "filename"
+        }
+    },
+    "Spawn": {
+        "@attr": {
+            "traits": [
+                "coord"
+            ],
+            "type": "object"
+        }
+    },
+    "Stars": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    }
+}

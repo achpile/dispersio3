@@ -1,4 +1,5 @@
 {
+    "Background": "@recursive gfx/background",
     "Body": "@recursive gfx/body",
     "Model": "@recursive gfx/model",
     "Sheet": "@recursive gfx/sheet"
