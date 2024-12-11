@@ -35,7 +35,8 @@ ach::MapObjectDoor::~MapObjectDoor()
 ***********************************************************************/
 void ach::MapObjectDoor::init(ach::Map *map)
 {
-	gateway = map->findMapObject(pair)->phys.rect;
+	if (pair)
+		gateway = map->findMapObject(pair)->phys.rect;
 }
 
 
@@ -47,5 +48,6 @@ void ach::MapObjectDoor::init(ach::Map *map)
 ***********************************************************************/
 void ach::MapObjectDoor::use()
 {
-	world->gateway(gateway);
+	if (pair)
+		world->gateway(gateway);
 }
