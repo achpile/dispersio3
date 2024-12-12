@@ -6,29 +6,29 @@
      * load
 
 ***********************************************************************/
-void ach::Map::load(const char *filename)
+void ach::Map::load()
 {
 	json_error_t error;
-	json_t *mapdata = json_load_file(filename, 0, &error);
+	json_t *mapdata = json_load_file(base->filename, 0, &error);
 
 
-	logger->log(ach::LogLevel::llInfo, "Loading map: \"%s\"", filename);
+	logger->log(ach::LogLevel::llInfo, "Loading map: \"%s\"", base->filename);
 
 	if (!mapdata)
 	{
-		logger->log(ach::LogLevel::llError, "Error loading map: \"%s\" (%s)", filename, error.text);
+		logger->log(ach::LogLevel::llError, "Error loading map: \"%s\" (%s)", base->filename, error.text);
 		return;
 	}
 
 
 	char path[STR_LEN_PATH];
-	strncpy(path, filename, STR_LEN_PATH);
+	strncpy(path, base->filename, STR_LEN_PATH);
 
 	char *slash = strrchr(path, '/');
 
 	if (!slash)
 	{
-		logger->log(ach::LogLevel::llError, "Filename does not seem ok: \"%s\"", filename);
+		logger->log(ach::LogLevel::llError, "Filename does not seem ok: \"%s\"", base->filename);
 		json_decref(mapdata);
 		return;
 	}
@@ -60,8 +60,7 @@ void ach::Map::loadMeta(json_t *mapdata)
 	sizeTile = sf::Vector2i(json_object_get_integer(mapdata, "tilewidth" ),
 	                        json_object_get_integer(mapdata, "tileheight"));
 
-	spawn = getTileCenter(sf::Vector2i(json_property_get_integer(mapdata, "spawnX"),
-	                                   json_property_get_integer(mapdata, "spawnY")));
+	spawn = getTileCenter(base->spawn);
 }
 
 

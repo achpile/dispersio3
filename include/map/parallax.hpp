@@ -6,7 +6,10 @@ namespace ach
 {
 	struct Parallax
 	{
-		 Parallax();
+		ach::DataParallax *base;
+
+
+		 Parallax(ach::DataParallax *_base);
 		~Parallax();
 	};
 }

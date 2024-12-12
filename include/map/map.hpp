@@ -15,6 +15,7 @@ namespace ach
 		ach::ProcessWorld            *world;
 
 		ach::MapTile ***tiles;
+		ach::DataMap   *base;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
 		ach::Parallax  *parallax;
@@ -24,7 +25,7 @@ namespace ach
 		sf::Vector2f    spawn;
 
 
-		 Map(ach::ProcessWorld *_world, const char *filename);
+		 Map(ach::ProcessWorld *_world, ach::DataMap *_base);
 		~Map();
 
 		void update();
@@ -47,7 +48,7 @@ namespace ach
 		void collideCharacter(ach::Character *character);
 
 		/*  load.cpp  */
-		void load(const char *filename);
+		void load();
 		void loadMeta(json_t *mapdata);
 		void loadInit();
 		void loadFinalize();

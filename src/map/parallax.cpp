@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Parallax::Parallax()
+ach::Parallax::Parallax(ach::DataParallax *_base)
 {
+	base = _base;
 }
 
 

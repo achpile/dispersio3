@@ -6,13 +6,14 @@
      * constructor
 
 ***********************************************************************/
-ach::Map::Map(ach::ProcessWorld *_world, const char *filename)
+ach::Map::Map(ach::ProcessWorld *_world, ach::DataMap *_base)
 {
+	base      = _base;
 	world     = _world;
 	collision = new ach::Collision();
-	parallax  = new ach::Parallax();
+	parallax  = new ach::Parallax(base->parallax);
 
-	load(filename);
+	load();
 }
 
 
@@ -56,7 +57,8 @@ void ach::Map::update()
 	process();
 	collide();
 
-	stars->update();
+	if (base->stars)
+		stars->update();
 
 	list_update(characters);
 	list_update(objects);
@@ -73,7 +75,9 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render(sf::FloatRect viewport)
 {
-	stars->render();
+	if (base->stars)
+		stars->render();
+
 	renderTiles(viewport);
 
 	list_render(objects);

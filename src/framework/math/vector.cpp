@@ -179,6 +179,18 @@ sf::Vector2f vector_json_coord(json_t *j, const char *x, const char *y)
 
 
 /***********************************************************************
+     * vector_json_tile
+
+***********************************************************************/
+sf::Vector2i vector_json_tile(json_t *j, const char *x, const char *y)
+{
+	return sf::Vector2i(json_object_get_integer(j, x),
+	                    json_object_get_integer(j, y));
+}
+
+
+
+/***********************************************************************
      * vector_json_rect
 
 ***********************************************************************/

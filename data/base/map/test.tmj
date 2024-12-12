@@ -813,17 +813,6 @@
  "nextlayerid":9,
  "nextobjectid":44,
  "orientation":"orthogonal",
- "properties":[
-        {
-         "name":"spawnX",
-         "type":"int",
-         "value":13
-        }, 
-        {
-         "name":"spawnY",
-         "type":"int",
-         "value":6
-        }],
  "renderorder":"right-down",
  "tiledversion":"1.8.2",
  "tileheight":16,

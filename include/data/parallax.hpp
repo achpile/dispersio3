@@ -6,6 +6,9 @@ namespace ach
 {
 	struct DataParallax : DataContent
 	{
+		std::vector<ach::Background*> layers;
+
+
 		 DataParallax(json_t *obj);
 		~DataParallax();
 	};

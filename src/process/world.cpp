@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::ProcessWorld::ProcessWorld()
 {
-	map    = new ach::Map(this, PATH_BASE "/" "map/test.tmj");
+	map    = new ach::Map(this, db->getMap("Default"));
 	cam    = new ach::Camera();
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
 
