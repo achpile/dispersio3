@@ -51,7 +51,7 @@ void ach::StateStart::update()
 		return;
 	}
 
-	bg->stars->update();
+	stars->update();
 
 	render();
 }
@@ -65,7 +65,7 @@ void ach::StateStart::update()
 ***********************************************************************/
 void ach::StateStart::render()
 {
-	bg->stars->render();
+	stars->render();
 
 	sprites[index]->spr->setColor(sf::Color(255, 255, 255, 255 * math_fade(offset, START_FADE_SLOPE, START_FADE_LENGTH)));
 	sprites[index]->spr->setPosition(RENDER_LAYER_GUI_X / 2, RENDER_LAYER_GUI_Y / 2);

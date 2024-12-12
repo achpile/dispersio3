@@ -44,7 +44,7 @@ void ach::StateCredits::update()
 	if (lines.back()->getGlobalBounds().top < -lines.back()->getGlobalBounds().height)
 		app->stateSet(ach::GameState::gsMenu);
 
-	bg->stars->update();
+	stars->update();
 
 	render();
 }
@@ -58,7 +58,7 @@ void ach::StateCredits::update()
 ***********************************************************************/
 void ach::StateCredits::render()
 {
-	bg->stars->render();
+	stars->render();
 
 	list_foreach(lines)
 		rm->draw(lines[i], ach::RenderLayer::rlGUI);

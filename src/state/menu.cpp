@@ -46,7 +46,7 @@ void ach::StateMenu::update()
 {
 	menu->controls();
 	menu->update();
-	bg->stars->update();
+	stars->update();
 
 	render();
 }
@@ -60,7 +60,7 @@ void ach::StateMenu::update()
 ***********************************************************************/
 void ach::StateMenu::render()
 {
-	bg->stars->render();
+	stars->render();
 	menu->render();
 
 	rm->draw(logo->spr, ach::RenderLayer::rlGUI);

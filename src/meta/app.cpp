@@ -22,12 +22,13 @@ ach::App::App()
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
 	lang      = new ach::Language();
-	bg        = new ach::Background();
 	ctrl      = new ach::ControlPad();
 
 	rm        = new ach::RenderManager();
 	sm        = new ach::SoundManager();
 	tm        = new ach::TimeManager();
+
+	stars     = new ach::ParticleSystemStars(RENDER_LAYER_BG_X, RENDER_LAYER_BG_Y, 70);
 
 	rm->initLayer(ach::RenderLayer::rlBG  , RENDER_LAYER_BG_X  , RENDER_LAYER_BG_Y  , settings->isSmooth());
 	rm->initLayer(ach::RenderLayer::rlGame, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y, settings->isSmooth());
@@ -38,6 +39,9 @@ ach::App::App()
 
 	db->load();
 	tm->init();
+
+	stars->source = ach::TimeSource::tsReal;
+	stars->layer  = ach::RenderLayer::rlBG;
 
 	lang->refresh();
 	theme->refresh();
@@ -56,7 +60,7 @@ ach::App::~App()
 {
 	delete settings;
 	delete theme;
-	delete bg;
+	delete stars;
 	delete db;
 	delete lang;
 	delete state;

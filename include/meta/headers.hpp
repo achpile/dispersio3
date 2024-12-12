@@ -38,7 +38,6 @@
 
 #include "container/theme.hpp"
 #include "container/settings.hpp"
-#include "container/background.hpp"
 #include "container/language.hpp"
 
 #include "character/ai/pair.hpp"

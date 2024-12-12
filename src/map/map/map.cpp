@@ -54,7 +54,7 @@ void ach::Map::update()
 	process();
 	collide();
 
-	bg->stars->update();
+	stars->update();
 
 	list_update(characters);
 	list_update(objects);
@@ -71,7 +71,7 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render(sf::FloatRect viewport)
 {
-	bg->stars->render();
+	stars->render();
 	renderTiles(viewport);
 
 	list_render(objects);
