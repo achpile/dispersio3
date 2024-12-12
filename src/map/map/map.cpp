@@ -60,6 +60,8 @@ void ach::Map::update()
 	if (base->stars)
 		stars->update();
 
+	parallax->update();
+
 	list_update(characters);
 	list_update(objects);
 	list_update(gfx);
@@ -77,6 +79,8 @@ void ach::Map::render(sf::FloatRect viewport)
 {
 	if (base->stars)
 		stars->render();
+
+	parallax->render();
 
 	renderTiles(viewport);
 

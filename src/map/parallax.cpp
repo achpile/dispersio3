@@ -21,3 +21,27 @@ ach::Parallax::Parallax(ach::DataParallax *_base)
 ach::Parallax::~Parallax()
 {
 }
+
+
+
+/***********************************************************************
+     * Parallax
+     * update
+
+***********************************************************************/
+void ach::Parallax::update()
+{
+}
+
+
+
+/***********************************************************************
+     * Parallax
+     * render
+
+***********************************************************************/
+void ach::Parallax::render()
+{
+	list_foreach(base->layers)
+		rm->draw(base->layers[i]->spr->spr, ach::RenderLayer::rlBG);
+}
