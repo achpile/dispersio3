@@ -17,6 +17,7 @@ namespace ach
 		ach::MapTile ***tiles;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
+		ach::Parallax  *parallax;
 
 		sf::Vector2i    sizeMap;
 		sf::Vector2i    sizeTile;

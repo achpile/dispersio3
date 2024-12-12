@@ -10,6 +10,7 @@ ach::Map::Map(ach::ProcessWorld *_world, const char *filename)
 {
 	world     = _world;
 	collision = new ach::Collision();
+	parallax  = new ach::Parallax();
 
 	load(filename);
 }
@@ -34,6 +35,7 @@ ach::Map::~Map()
 	delete tiles;
 	delete tileset;
 	delete collision;
+	delete parallax;
 
 	list_delete(characters);
 	list_delete(objects);

@@ -111,3 +111,27 @@ ach::DataCharacter* ach::Database::getCharacter(const char *name)
 {
 	return getContent<ach::DataCharacter>(name, &character);
 }
+
+
+
+/***********************************************************************
+     * Database
+     * getParallax
+
+***********************************************************************/
+ach::DataParallax* ach::Database::getParallax(const char *name)
+{
+	return getContent<ach::DataParallax>(name, &parallax);
+}
+
+
+
+/***********************************************************************
+     * Database
+     * getMap
+
+***********************************************************************/
+ach::DataMap* ach::Database::getMap(const char *name)
+{
+	return getContent<ach::DataMap>(name, &map);
+}

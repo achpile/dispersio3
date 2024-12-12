@@ -20,6 +20,8 @@
 #include "data/weapon.hpp"
 #include "data/body.hpp"
 #include "data/character.hpp"
+#include "data/parallax.hpp"
+#include "data/map.hpp"
 #include "data/data.hpp"
 
 #include "model/model.hpp"
@@ -66,6 +68,7 @@
 #include "map/tile/maptile.hpp"
 
 #include "map/area.hpp"
+#include "map/parallax.hpp"
 #include "map/camera.hpp"
 #include "map/map.hpp"
 

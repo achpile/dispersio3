@@ -14,6 +14,8 @@ namespace ach
 		std::vector<ach::DataWeapon*    > weapon;
 		std::vector<ach::DataBody*      > body;
 		std::vector<ach::DataCharacter* > character;
+		std::vector<ach::DataParallax*  > parallax;
+		std::vector<ach::DataMap*       > map;
 
 
 		 Database();
@@ -30,6 +32,8 @@ namespace ach
 		ach::DataWeapon     *getWeapon    (const char *name);
 		ach::DataBody       *getBody      (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
+		ach::DataParallax   *getParallax  (const char *name);
+		ach::DataMap        *getMap       (const char *name);
 
 		/*  list.cpp  */
 		json_t *listLanguage();

@@ -66,6 +66,7 @@
 #include "framework/gfx/sprite.hpp"
 #include "framework/gfx/sheet.hpp"
 #include "framework/gfx/layer.hpp"
+#include "framework/gfx/background.hpp"
 
 #include "framework/manager/render.hpp"
 #include "framework/manager/sound.hpp"
