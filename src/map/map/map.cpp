@@ -82,7 +82,7 @@ void ach::Map::render()
 	if (base->stars)
 		stars->render();
 
-	parallax->render(0.0f);
+	parallax->render(cam->viewport.left);
 
 	renderTiles(cam->viewport);
 

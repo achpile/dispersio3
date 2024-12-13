@@ -12,6 +12,7 @@ namespace ach
 
 		float scale;
 		float factor;
+		float corr;
 
 
 		 Background(const char *filename, float _factor);
@@ -19,7 +20,7 @@ namespace ach
 
 		void render(float offset);
 
-		void setSize(int width, int height);
+		void setSize(int width, int height, float view);
 	};
 }
 

@@ -2,15 +2,15 @@
     "City": {
         "Layers": {
             "1": {
-                "Factor": 0.15,
+                "Factor": 0.2,
                 "Image": "gfx/game/background/city/1.png"
             },
             "2": {
-                "Factor": 0.3,
+                "Factor": 0.4,
                 "Image": "gfx/game/background/city/2.png"
             },
             "3": {
-                "Factor": 0.45,
+                "Factor": 0.6,
                 "Image": "gfx/game/background/city/3.png"
             }
         }

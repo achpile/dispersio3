@@ -33,7 +33,7 @@ ach::Background::~Background()
 ***********************************************************************/
 void ach::Background::render(float offset)
 {
-	spr->spr->setTextureRect(sf::IntRect(offset * factor, 0, rect.x, rect.y));
+	spr->spr->setTextureRect(sf::IntRect(offset * factor * corr / scale, 0, rect.x, rect.y));
 
 	rm->draw(spr->spr, ach::RenderLayer::rlBG);
 }
@@ -45,10 +45,12 @@ void ach::Background::render(float offset)
      * setSize
 
 ***********************************************************************/
-void ach::Background::setSize(int width, int height)
+void ach::Background::setSize(int width, int height, float view)
 {
 	size   = sf::Vector2i(width, height);
 	scale  = height / spr->size.y;
+	corr   = width  / view;
+
 	rect.x = ceil(width / scale);
 	rect.y = spr->size.y;
 
