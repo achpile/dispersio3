@@ -9,15 +9,12 @@
 ach::ProcessWorld::ProcessWorld()
 {
 	map    = new ach::Map(this, db->getMap("Default"));
-	cam    = new ach::Camera();
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
 
-	cam->follow(&player->phys);
-	cam->set(map->findMapArea(player->phys.pos));
+	map->cam->follow(&player->phys);
+	map->characters.push_back(player);
 
 	player->respawning = true;
-
-	map->characters.push_back(player);
 }
 
 
@@ -30,7 +27,6 @@ ach::ProcessWorld::ProcessWorld()
 ach::ProcessWorld::~ProcessWorld()
 {
 	delete map;
-	delete cam;
 }
 
 
@@ -43,12 +39,7 @@ ach::ProcessWorld::~ProcessWorld()
 void ach::ProcessWorld::update()
 {
 	map->update();
-	cam->update();
-
 	map->touch(player);
-
-	if (!cam->check())
-		cam->set(map->findMapArea(player->phys.pos));
 
 	render();
 }
@@ -62,7 +53,7 @@ void ach::ProcessWorld::update()
 ***********************************************************************/
 void ach::ProcessWorld::render()
 {
-	map->render(cam->viewport);
+	map->render();
 }
 
 
@@ -75,9 +66,5 @@ void ach::ProcessWorld::render()
 void ach::ProcessWorld::gateway(sf::FloatRect dest)
 {
 	player->gateway(dest);
-
-	cam->update();
-
-	if (!cam->check())
-		cam->set(map->findMapArea(player->phys.pos));
+	map->cam->update();
 }

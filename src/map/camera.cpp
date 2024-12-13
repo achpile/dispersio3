@@ -6,8 +6,9 @@
      * constructor
 
 ***********************************************************************/
-ach::Camera::Camera()
+ach::Camera::Camera(ach::Map *_map)
 {
+	map      = _map;
 	follower = NULL;
 	viewport = sf::FloatRect(0, 0, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
 
@@ -36,6 +37,9 @@ void ach::Camera::update()
 {
 	if (!follower)
 		return;
+
+	if (!area.contains(follower->pos))
+		set(map->findMapArea(follower->pos));
 
 	viewport.left = round(follower->pos.x - RENDER_LAYER_GAME_X / 2.0f);
 	viewport.top  = round(follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f);
@@ -83,6 +87,4 @@ void ach::Camera::follow(ach::Phys *phys)
 void ach::Camera::set(ach::MapArea *_area)
 {
 	area = _area->rect;
-
-	update();
 }

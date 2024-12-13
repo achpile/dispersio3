@@ -16,6 +16,7 @@ namespace ach
 
 		ach::MapTile ***tiles;
 		ach::DataMap   *base;
+		ach::Camera    *cam;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
 		ach::Parallax  *parallax;
@@ -29,7 +30,7 @@ namespace ach
 		~Map();
 
 		void update();
-		void render(sf::FloatRect viewport);
+		void render();
 
 		void renderTiles(sf::FloatRect viewport);
 

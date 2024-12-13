@@ -7,13 +7,14 @@ namespace ach
 	struct Camera
 	{
 		ach::Phys      *follower;
+		ach::Map       *map;
 
 		sf::FloatRect   viewport;
 		sf::FloatRect   area;
 		sf::View        view;
 
 
-		 Camera();
+		 Camera(ach::Map *_map);
 		~Camera();
 
 		void update();
