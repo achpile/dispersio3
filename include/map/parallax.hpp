@@ -12,8 +12,7 @@ namespace ach
 		 Parallax(ach::DataParallax *_base);
 		~Parallax();
 
-		void update();
-		void render();
+		void render(float offset);
 	};
 }
 
