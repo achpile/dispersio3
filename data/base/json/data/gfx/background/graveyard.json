@@ -1,0 +1,26 @@
+{
+    "Graveyard": {
+        "Layers": {
+            "1": {
+                "Factor": 0,
+                "Image": "gfx/game/background/graveyard/1.png"
+            },
+            "2": {
+                "Factor": 0.1,
+                "Image": "gfx/game/background/graveyard/2.png"
+            },
+            "3": {
+                "Factor": 0.2,
+                "Image": "gfx/game/background/graveyard/3.png"
+            },
+            "4": {
+                "Factor": 0.3,
+                "Image": "gfx/game/background/graveyard/4.png"
+            },
+            "5": {
+                "Factor": 0.4,
+                "Image": "gfx/game/background/graveyard/5.png"
+            }
+        }
+    }
+}

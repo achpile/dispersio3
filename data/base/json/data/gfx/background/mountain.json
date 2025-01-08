@@ -1,0 +1,30 @@
+{
+    "Mountain": {
+        "Layers": {
+            "1": {
+                "Factor": 0,
+                "Image": "gfx/game/background/mountain/1.png"
+            },
+            "2": {
+                "Factor": 0.1,
+                "Image": "gfx/game/background/mountain/2.png"
+            },
+            "3": {
+                "Factor": 0.2,
+                "Image": "gfx/game/background/mountain/3.png"
+            },
+            "4": {
+                "Factor": 0.3,
+                "Image": "gfx/game/background/mountain/4.png"
+            },
+            "5": {
+                "Factor": 0.4,
+                "Image": "gfx/game/background/mountain/5.png"
+            },
+            "6": {
+                "Factor": 0.5,
+                "Image": "gfx/game/background/mountain/6.png"
+            }
+        }
+    }
+}

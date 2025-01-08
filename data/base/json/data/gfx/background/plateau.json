@@ -1,0 +1,22 @@
+{
+    "Plateau": {
+        "Layers": {
+            "1": {
+                "Factor": 0,
+                "Image": "gfx/game/background/plateau/1.png"
+            },
+            "2": {
+                "Factor": 0.2,
+                "Image": "gfx/game/background/plateau/2.png"
+            },
+            "3": {
+                "Factor": 0.3,
+                "Image": "gfx/game/background/plateau/3.png"
+            },
+            "4": {
+                "Factor": 0.4,
+                "Image": "gfx/game/background/plateau/4.png"
+            }
+        }
+    }
+}
