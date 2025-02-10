@@ -31,47 +31,15 @@ ach::AIPlayer::~AIPlayer()
 ***********************************************************************/
 void ach::AIPlayer::control()
 {
-	owner->phys.vel.x  = 0.0f;
-	owner->phys.moving = false;
+	owner->phys.vel.x    = 0.0f;
+	owner->phys.moving   = false;
+	owner->phys.jumpdown = ctrl->keys[ach::ControlAction::caDown].state;
 
-	if (ctrl->keys[ach::ControlAction::caLeft ].state) move(-1, ctrl->keys[ach::ControlAction::caHold].state);
-	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1, ctrl->keys[ach::ControlAction::caHold].state);
-
-	owner->phys.jumpdown = ctrl->keys[ach::ControlAction::caJump].state &&
-	                       ctrl->keys[ach::ControlAction::caDown].state;
-
-	if (owner->phys.jumpdown && !settings->control.down && owner->phys.moving)
-		owner->phys.jumpdown = false;
-
-	if (settings->control.hold && ctrl->keys[ach::ControlAction::caHold].state)
-		owner->shot();
+	if (ctrl->keys[ach::ControlAction::caLeft ].state) move(-1);
+	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1);
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) owner->jump();
-	if (ctrl->keys[ach::ControlAction::caShot ].state  ) owner->shot();
-
-	if (ctrl->keys[ach::ControlAction::caUse  ].pressed)
-		owner->world->map->use(owner);
-}
-
-
-
-/***********************************************************************
-     * AIPlayer
-     * aim
-
-***********************************************************************/
-void ach::AIPlayer::aim()
-{
-	owner->aim = sf::Vector2f(0.0f, 0.0f);
-
-	if (ctrl->keys[ach::ControlAction::caLeft ].state) owner->aim.x = -1.0f;
-	if (ctrl->keys[ach::ControlAction::caRight].state) owner->aim.x =  1.0f;
-
-	if (ctrl->keys[ach::ControlAction::caUp  ].state) owner->aim.y = -1.0f;
-	if (ctrl->keys[ach::ControlAction::caDown].state) owner->aim.y =  1.0f;
-
-	if (owner->aim.y >= 0)
-		owner->aim.x = owner->dir.x;
+	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) owner->world->map->use(owner);
 }
 
 
@@ -81,10 +49,8 @@ void ach::AIPlayer::aim()
      * move
 
 ***********************************************************************/
-void ach::AIPlayer::move(int d, bool hold)
+void ach::AIPlayer::move(int d)
 {
 	owner->dir.x = d;
-
-	if (!hold)
-		owner->move(d);
+	owner->move(d);
 }

@@ -6,20 +6,12 @@ namespace ach
 {
 	struct Settings
 	{
-		struct
-		{
-			bool hold;
-			bool down;
-		} control;
-
 		json_t *data;
 
 
 		 Settings();
 		~Settings();
 
-
-		void update();
 
 		bool isFullscreen();
 		bool isSmooth();

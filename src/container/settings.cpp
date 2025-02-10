@@ -9,8 +9,6 @@
 ach::Settings::Settings()
 {
 	data = json_object_get(dm->data, "Settings");
-
-	update();
 }
 
 
@@ -24,19 +22,6 @@ ach::Settings::~Settings()
 {
 	if (data)
 		json_dump_file(data, FILE_SETTINGS, JSON_INDENT(4) | JSON_SORT_KEYS);
-}
-
-
-
-/***********************************************************************
-     * Settings
-     * update
-
-***********************************************************************/
-void ach::Settings::update()
-{
-	control.hold = json_object_get_branch_boolean(data, "Game.HoldShoot"   );
-	control.down = json_object_get_branch_boolean(data, "Game.DiagonalDown");
 }
 
 

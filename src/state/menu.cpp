@@ -125,8 +125,6 @@ void ach::StateMenu::fill()
 
 	menu->add("Options.Game"    , new ach::MenuItemList    (menu, "Options.Language"    , handler_menu_language  , json_object_get_branch(settings->data, "Game.Language"), db->listLanguage(), false));
 	menu->add("Options.Game"    , new ach::MenuItemList    (menu, "Options.Theme"       , handler_menu_theme     , json_object_get_branch(settings->data, "Game.Theme"   ), db->listTheme()   , false));
-	menu->add("Options.Game"    , new ach::MenuItemCheckbox(menu, "Options.HoldShoot"   , handler_menu_update    , json_object_get_branch(settings->data, "Game"         ), "HoldShoot"   ));
-	menu->add("Options.Game"    , new ach::MenuItemCheckbox(menu, "Options.DiagonalDown", handler_menu_update    , json_object_get_branch(settings->data, "Game"         ), "DiagonalDown"));
 
 	menu->add("Options.Video"   , new ach::MenuItemCheckbox(menu, "Options.Fullscreen"  , handler_menu_fullscreen, json_object_get_branch(settings->data, "Window"       ), "Fullscreen"  ));
 	menu->add("Options.Video"   , new ach::MenuItemCheckbox(menu, "Options.Smooth"      , handler_menu_smooth    , json_object_get_branch(settings->data, "Window"       ), "Smooth"      ));

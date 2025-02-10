@@ -14,12 +14,6 @@
             "type": "string"
         }
     },
-    "DiagonalDown": {
-        "@attr": {
-            "default": "Jump down when holding diagonal",
-            "type": "string"
-        }
-    },
     "Fullscreen": {
         "@attr": {
             "default": "Fullscreen",
@@ -29,12 +23,6 @@
     "Game": {
         "@attr": {
             "default": "Game",
-            "type": "string"
-        }
-    },
-    "HoldShoot": {
-        "@attr": {
-            "default": "Autofire while holding",
             "type": "string"
         }
     },

@@ -10,9 +10,7 @@ namespace ach
 		~AIPlayer();
 
 		void control();
-		void aim();
-
-		void move(int d, bool hold);
+		void move(int d);
 	};
 }
 

@@ -4,14 +4,7 @@
     },
     "Down": {
         "@attr": {
-            "default": "S",
-            "maxlen": 12,
-            "type": "string"
-        }
-    },
-    "Hold": {
-        "@attr": {
-            "default": "R-SHIFT",
+            "default": "DOWN",
             "maxlen": 12,
             "type": "string"
         }
@@ -25,7 +18,7 @@
     },
     "Left": {
         "@attr": {
-            "default": "A",
+            "default": "LEFT",
             "maxlen": 12,
             "type": "string"
         }
@@ -39,28 +32,14 @@
     },
     "Right": {
         "@attr": {
-            "default": "D",
-            "maxlen": 12,
-            "type": "string"
-        }
-    },
-    "Shot": {
-        "@attr": {
-            "default": "R-CTRL",
+            "default": "RIGHT",
             "maxlen": 12,
             "type": "string"
         }
     },
     "Up": {
         "@attr": {
-            "default": "W",
-            "maxlen": 12,
-            "type": "string"
-        }
-    },
-    "Use": {
-        "@attr": {
-            "default": "E",
+            "default": "UP",
             "maxlen": 12,
             "type": "string"
         }
