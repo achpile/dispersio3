@@ -19,7 +19,6 @@ namespace ach
 		ach::Camera    *cam;
 		ach::Tileset   *tileset;
 		ach::Collision *collision;
-		ach::Parallax  *parallax;
 
 		sf::Vector2i    sizeMap;
 		sf::Vector2i    sizeTile;

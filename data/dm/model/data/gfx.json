@@ -2,7 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "Background": "@include gfx/background.json",
     "Body": "@include gfx/body.json",
     "Model": "@include gfx/model.json",
     "Sheet": "@include gfx/sheet.json"

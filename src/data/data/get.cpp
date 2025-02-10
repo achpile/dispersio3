@@ -116,18 +116,6 @@ ach::DataCharacter* ach::Database::getCharacter(const char *name)
 
 /***********************************************************************
      * Database
-     * getParallax
-
-***********************************************************************/
-ach::DataParallax* ach::Database::getParallax(const char *name)
-{
-	return getContent<ach::DataParallax>(name, &parallax);
-}
-
-
-
-/***********************************************************************
-     * Database
      * getMap
 
 ***********************************************************************/

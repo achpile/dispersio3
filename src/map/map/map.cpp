@@ -12,7 +12,6 @@ ach::Map::Map(ach::ProcessWorld *_world, ach::DataMap *_base)
 	world     = _world;
 	collision = new ach::Collision();
 	cam       = new ach::Camera(this);
-	parallax  = new ach::Parallax(base->parallax);
 
 	load();
 }
@@ -38,7 +37,6 @@ ach::Map::~Map()
 	delete tileset;
 	delete collision;
 	delete cam;
-	delete parallax;
 
 	list_delete(characters);
 	list_delete(objects);
@@ -60,9 +58,7 @@ void ach::Map::update()
 	collide();
 
 	cam->update();
-
-	if (base->stars)
-		stars->update();
+	stars->update();
 
 	list_update(characters);
 	list_update(objects);
@@ -79,10 +75,7 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render()
 {
-	if (base->stars)
-		stars->render();
-
-	parallax->render(cam->viewport.left);
+	stars->render();
 
 	renderTiles(cam->viewport);
 

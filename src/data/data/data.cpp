@@ -27,7 +27,6 @@ ach::Database::~Database()
 	list_delete(weapon);
 	list_delete(body);
 	list_delete(character);
-	list_delete(parallax);
 	list_delete(map);
 }
 
@@ -64,7 +63,6 @@ void ach::Database::load()
 	loadContent<ach::DataSheet     >("GFX.Sheet"      , &sheet     );
 	loadContent<ach::DataModel     >("GFX.Model"      , &model     );
 	loadContent<ach::DataBody      >("GFX.Body"       , &body      );
-	loadContent<ach::DataParallax  >("GFX.Background" , &parallax  );
 
 	loadContent<ach::DataProjectile>("Game.Projectile", &projectile);
 	loadContent<ach::DataWeapon    >("Game.Weapon"    , &weapon    );

@@ -1,6 +1,5 @@
 {
     "Default": {
-        "Background": "City",
         "Filename": "map/test.tmj",
         "Spawn": {
             "X": 13,
