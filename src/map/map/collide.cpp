@@ -138,16 +138,13 @@ void ach::Map::collideProjectile(ach::Projectile *projectile)
 ***********************************************************************/
 void ach::Map::collideExplosion(ach::Projectile *projectile)
 {
-	sf::Vector2f c;
-	sf::Vector2f n;
-
 	list_foreach(characters)
 	{
 		if (characters[i]->enemy == projectile->enemy)
 			continue;
 
-		if (collision_box_vs_circle(characters[i]->phys.rect, projectile->phys.pos, projectile->base->explosionR, &c, &n))
-			characters[i]->damage(projectile->damage, c, n);
+		if (collision_box_vs_circle(characters[i]->phys.rect, projectile->phys.pos, projectile->base->explosionR, NULL, NULL))
+			characters[i]->die();
 	}
 }
 
@@ -166,9 +163,6 @@ void ach::Map::collideCharacter(ach::Character *character)
 	if (!character->alive)
 		return;
 
-	sf::Vector2f c;
-	sf::Vector2f n;
-
 	list_foreach(characters)
 	{
 		if (!characters[i]->alive)
@@ -177,9 +171,9 @@ void ach::Map::collideCharacter(ach::Character *character)
 		if (character->enemy == characters[i]->enemy)
 			continue;
 
-		if (collision_box_vs_box(character->phys.rect, characters[i]->phys.rect, &c, &n))
+		if (collision_box_vs_box(character->phys.rect, characters[i]->phys.rect, NULL, NULL))
 		{
-			character->damage(1, c, n);
+			character->die();
 
 			return;
 		}

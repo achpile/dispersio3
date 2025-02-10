@@ -15,15 +15,11 @@ namespace ach
 	{
 		ach::DataBody   *body;
 		ach::DataWeapon *weapon;
-		ach::DataSheet  *chunks;
 		ach::AIType      ai;
 
 		sf::Vector2f     hitbox;
 		sf::Color        color;
-		sf::Color        blood;
-		sf::Color        chunk;
 
-		sf::SoundBuffer *sndHurt;
 		sf::SoundBuffer *sndDie;
 		sf::SoundBuffer *sndJump;
 		sf::SoundBuffer *sndLand;
@@ -31,7 +27,6 @@ namespace ach
 		float barrel;
 		float speed;
 		float jumping;
-		int   health;
 
 
 		 DataCharacter(json_t *obj);

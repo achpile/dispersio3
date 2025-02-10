@@ -17,11 +17,10 @@
             "type": "link"
         }
     },
-    "Chunk": {
+    "Color": {
         "@attr": {
-            "data": "Data.GFX.Sheet",
-            "default": "Chunks",
-            "type": "link"
+            "default": "#FFFFFFFF",
+            "type": "color"
         }
     }
 }

@@ -8,12 +8,6 @@
             "type": "filename"
         }
     },
-    "Hurt": {
-        "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
-        }
-    },
     "Jump": {
         "@attr": {
             "default": "sfx/misc/default.wav",

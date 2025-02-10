@@ -22,7 +22,6 @@ namespace ach
 
 		float speed;
 		float jumping;
-		int   health;
 		bool  alive;
 		bool  landed;
 		bool  enemy;
@@ -42,10 +41,7 @@ namespace ach
 		void gateway(sf::FloatRect dest);
 
 		bool hit(ach::Projectile *projectile);
-		void damage(int damage, sf::Vector2f c, sf::Vector2f n);
-		void die(sf::Vector2f c, sf::Vector2f n);
-		void explode(sf::Vector2f c, sf::Vector2f n);
-		void chunk(sf::Vector2f pos, sf::Vector2f vel);
+		void die();
 
 		void move(int d);
 		void jump();

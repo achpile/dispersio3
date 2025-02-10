@@ -3,7 +3,6 @@
         "type": "multi"
     },
     "Appearance": "@include character/appearance.json",
-    "Color": "@include character/color.json",
     "Game": "@include character/game.json",
     "Sound": "@include character/sound.json",
     "Stats": "@include character/stats.json"

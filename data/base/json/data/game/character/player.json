@@ -10,7 +10,6 @@
         },
         "Sound": {
             "Die": "sfx/character/player/die.wav",
-            "Hurt": "sfx/character/player/hurt.wav",
             "Jump": "sfx/character/player/jump.wav",
             "Land": "sfx/character/player/land.wav"
         }

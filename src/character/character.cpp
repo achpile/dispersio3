@@ -122,7 +122,6 @@ void ach::Character::respawn()
 {
 	alive    = true;
 	landed   = true;
-	health   = base->health;
 	phys.pos = spawn;
 
 	spawner.reset();
@@ -185,21 +184,16 @@ bool ach::Character::hit(ach::Projectile *projectile)
 
 	bool res;
 
-	sf::Vector2f c;
-	sf::Vector2f n;
-
-	res = collision_box_vs_line(phys.rect, projectile->line, &c, &n);
+	res = collision_box_vs_line(phys.rect, projectile->line, NULL, NULL);
 
 	if (!res)
-		res = collision_box_vs_box(phys.rect, projectile->phys.rect, &c, &n);
+		res = collision_box_vs_box(phys.rect, projectile->phys.rect, NULL, NULL);
 
 
 	if (res)
 	{
-		if (!projectile->base->explosive)
-			damage(projectile->damage, c, -projectile->line.v);
-
 		projectile->destroy();
+		die();
 	}
 
 	return res;
@@ -209,74 +203,14 @@ bool ach::Character::hit(ach::Projectile *projectile)
 
 /***********************************************************************
      * Character
-     * damage
-
-***********************************************************************/
-void ach::Character::damage(int damage, sf::Vector2f c, sf::Vector2f n)
-{
-	health -= damage;
-
-	world->map->gfx.push_back(new ach::EffectBlood(world, c, n, base->blood));
-
-	if (health < 0)
-		die(c, n);
-}
-
-
-
-/***********************************************************************
-     * Character
      * die
 
 ***********************************************************************/
-void ach::Character::die(sf::Vector2f c, sf::Vector2f n)
+void ach::Character::die()
 {
 	alive = false;
 
 	sm->play(base->sndDie);
-	explode(c, n);
-}
-
-
-
-/***********************************************************************
-     * Character
-     * explode
-
-***********************************************************************/
-void ach::Character::explode(sf::Vector2f c, sf::Vector2f n)
-{
-	sf::Vector2f pos;
-	sf::Vector2f step;
-	sf::Vector2i amount;
-
-	amount.x = ceil(phys.rect.width  / PARTICLE_CHUNK_STEP);
-	amount.y = ceil(phys.rect.height / PARTICLE_CHUNK_STEP);
-
-	step.x = phys.rect.width  / (amount.x - 1);
-	step.y = phys.rect.height / (amount.y - 1);
-
-	for (int x = 0; x < amount.x; x++)
-		for (int y = 0; y < amount.y; y++)
-		{
-			pos.x = step.x * x + phys.rect.left;
-			pos.y = step.y * y + phys.rect.top;
-
-			chunk(pos, -vector_bisector(c - pos, n));
-		}
-}
-
-
-
-/***********************************************************************
-     * Character
-     * chunk
-
-***********************************************************************/
-void ach::Character::chunk(sf::Vector2f pos, sf::Vector2f vel)
-{
-	world->map->gfx.push_back(new ach::EffectBlood(world, pos, vel, base->blood));
-	world->map->gfx.push_back(new ach::EffectChunk(world, pos, vel, base->chunk, base->chunks->sheet->getFrameRandom()));
 }
 
 

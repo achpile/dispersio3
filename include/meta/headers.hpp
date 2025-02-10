@@ -27,8 +27,6 @@
 #include "model/model.hpp"
 
 #include "gfx/gfx.hpp"
-#include "gfx/blood.hpp"
-#include "gfx/chunk.hpp"
 #include "gfx/explosion.hpp"
 
 #include "gfx/impact/impact.hpp"
