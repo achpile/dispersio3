@@ -43,5 +43,16 @@
             "default": "Default",
             "type": "link"
         }
+    },
+    "Type": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "walking",
+                "simple"
+            ],
+            "type": "enum"
+        }
     }
 }

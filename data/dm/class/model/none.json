@@ -1,9 +1,9 @@
 {
-    "BodyNone": {
-        "List": "Parts",
+    "ModelNone": {
+        "List": "Animation",
         "Objects": [],
         "Param": "Type",
-        "Path": "Data.GFX.Body",
+        "Path": "Data.GFX.Model",
         "Value": "none"
     }
 }

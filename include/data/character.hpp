@@ -13,7 +13,7 @@ namespace ach
 
 	struct DataCharacter : DataContent
 	{
-		ach::DataBody   *body;
+		ach::DataModel  *model;
 		ach::DataWeapon *weapon;
 		ach::AIType      ai;
 

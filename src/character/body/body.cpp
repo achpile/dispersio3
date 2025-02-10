@@ -6,10 +6,11 @@
      * constructor
 
 ***********************************************************************/
-ach::Body::Body(ach::Character *_owner, ach::DataBody*)
+ach::Body::Body(ach::Character *_owner, ach::DataModel* _base)
 {
 	owner  = _owner;
 	barrel = sf::Vector2f(0.0f, 0.0f);
+	model  = new ach::Model(_base);
 }
 
 
@@ -21,7 +22,7 @@ ach::Body::Body(ach::Character *_owner, ach::DataBody*)
 ***********************************************************************/
 ach::Body::~Body()
 {
-	list_delete(parts);
+	delete model;
 }
 
 
@@ -37,7 +38,7 @@ void ach::Body::update()
 	animate();
 	flip();
 
-	list_update(parts);
+	model->update();
 }
 
 
@@ -49,8 +50,7 @@ void ach::Body::update()
 ***********************************************************************/
 void ach::Body::setColor(sf::Color color)
 {
-	list_foreach(parts)
-		parts[i]->model->color = color;
+	model->color = color;
 }
 
 
@@ -62,8 +62,7 @@ void ach::Body::setColor(sf::Color color)
 ***********************************************************************/
 void ach::Body::render()
 {
-	list_foreach(parts)
-		parts[i]->render(owner->phys.pos);
+	model->render(owner->phys.pos);
 }
 
 
@@ -73,13 +72,13 @@ void ach::Body::render()
      * create
 
 ***********************************************************************/
-ach::Body* ach::Body::create(ach::Character *_owner, ach::DataBody *_base)
+ach::Body* ach::Body::create(ach::Character *_owner, ach::DataModel *_base)
 {
 	switch (_base->type)
 	{
-		case ach::BodyType::btNone    : return new ach::Body        (_owner, _base);
-		case ach::BodyType::btSimple  : return new ach::BodySimple  (_owner, _base);
-		case ach::BodyType::btHumanoid: return new ach::BodyHumanoid(_owner, _base);
+		case ach::ModelType::mtNone   : return new ach::Body       (_owner, _base);
+		case ach::ModelType::mtSimple : return new ach::BodySimple (_owner, _base);
+		case ach::ModelType::mtWalking: return new ach::BodyWalking(_owner, _base);
 	}
 
 	return new ach::Body(_owner, _base);

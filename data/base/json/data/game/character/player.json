@@ -1,8 +1,7 @@
 {
     "Player": {
         "Appearance": {
-            "Barrel": 6,
-            "Body": "Player"
+            "Model": "Player"
         },
         "Game": {
             "AI": "player",

@@ -12,7 +12,7 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, 
 	base       = _base;
 	spawn      = _spawn;
 	ai         = ach::AI::create(this, base->ai);
-	body       = ach::Body::create(this, base->body);
+	body       = ach::Body::create(this, base->model);
 	weapon     = new ach::Weapon(world, this, base->weapon);
 	speed      = base->speed;
 	jumping    = base->jumping;
@@ -40,8 +40,6 @@ ach::Character::~Character()
 	delete ai;
 	delete body;
 	delete weapon;
-
-	list_delete(models);
 }
 
 

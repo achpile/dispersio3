@@ -1,0 +1,15 @@
+{
+    "BodyWalking": {
+        "List": "Animation",
+        "Objects": [
+            "Fall",
+            "Idle",
+            "Jump",
+            "Walk",
+            "Death"
+        ],
+        "Param": "Type",
+        "Path": "Data.GFX.Model",
+        "Value": "walking"
+    }
+}

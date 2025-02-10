@@ -6,6 +6,7 @@
                 "Start": 0
             }
         },
-        "Sheet": "EnemyBat"
+        "Sheet": "EnemyBat",
+        "Type": "simple"
     }
 }

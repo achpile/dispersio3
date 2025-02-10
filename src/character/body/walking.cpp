@@ -2,38 +2,33 @@
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * constructor
 
 ***********************************************************************/
-ach::BodyHumanoid::BodyHumanoid(ach::Character *_owner, ach::DataBody *_base) : Body(_owner, _base)
+ach::BodyWalking::BodyWalking(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
 {
-	legs = new ach::BodyPart(json_object_get(_base->parts, "Legs"));
-	body = new ach::BodyPart(json_object_get(_base->parts, "Body"));
-
-	parts.push_back(legs);
-	parts.push_back(body);
 }
 
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * destructor
 
 ***********************************************************************/
-ach::BodyHumanoid::~BodyHumanoid()
+ach::BodyWalking::~BodyWalking()
 {
 }
 
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * aim
 
 ***********************************************************************/
-void ach::BodyHumanoid::aim()
+void ach::BodyWalking::aim()
 {
 	barrel = sf::Vector2f(0.0f, 0.0f);
 }
@@ -41,67 +36,48 @@ void ach::BodyHumanoid::aim()
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * animate
 
 ***********************************************************************/
-void ach::BodyHumanoid::animate()
+void ach::BodyWalking::animate()
 {
 	if (owner->phys.grounded)
 	{
 		if (owner->phys.moving)
-			legs->setAnimation("Walk");
+			model->setAnimation("Walk");
 		else
-			legs->setAnimation("Idle");
+			model->setAnimation("Idle");
 	}
 	else
 	{
 		if (owner->phys.vel.y > 0.0f)
-			legs->setAnimation("Fall");
+			model->setAnimation("Fall");
 		else
-			legs->setAnimation("Jump");
-	}
-
-
-	if (owner->aim.y == 0.0f)
-	{
-		body->setAnimation("Front");
-	}
-	else if (owner->aim.y > 0.0f)
-	{
-		body->setAnimation("DiagonalDown");
-	}
-	else
-	{
-		if (owner->aim.x == 0.0f)
-			body->setAnimation("Up");
-		else
-			body->setAnimation("DiagonalUp");
+			model->setAnimation("Jump");
 	}
 }
 
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * flip
 
 ***********************************************************************/
-void ach::BodyHumanoid::flip()
+void ach::BodyWalking::flip()
 {
-	legs->model->scale.x = owner->dir.x;
-	body->model->scale.x = owner->dir.x;
+	model->scale.x = owner->dir.x;
 }
 
 
 
 /***********************************************************************
-     * BodyHumanoid
+     * BodyWalking
      * reset
 
 ***********************************************************************/
-void ach::BodyHumanoid::reset()
+void ach::BodyWalking::reset()
 {
-	legs->setAnimation("Idle");
-	body->setAnimation("Front");
+	model->setAnimation("Idle");
 }

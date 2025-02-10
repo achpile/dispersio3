@@ -18,11 +18,11 @@
 #include "data/model.hpp"
 #include "data/projectile.hpp"
 #include "data/weapon.hpp"
-#include "data/body.hpp"
 #include "data/character.hpp"
 #include "data/map.hpp"
 #include "data/data.hpp"
 
+#include "model/pair.hpp"
 #include "model/model.hpp"
 
 #include "gfx/gfx.hpp"
@@ -43,11 +43,9 @@
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"
 
-#include "character/body/pair.hpp"
-#include "character/body/part.hpp"
 #include "character/body/body.hpp"
 #include "character/body/simple.hpp"
-#include "character/body/humanoid.hpp"
+#include "character/body/walking.hpp"
 
 #include "character/projectile/pair.hpp"
 #include "character/projectile/projectile.hpp"

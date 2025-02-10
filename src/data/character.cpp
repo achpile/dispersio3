@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::DataCharacter::DataCharacter(json_t *obj)
 {
-	body    = db->getBody  (json_object_get_branch_string(obj, "Appearance.Body" ));
+	model   = db->getModel (json_object_get_branch_string(obj, "Appearance.Model"));
 	weapon  = db->getWeapon(json_object_get_branch_string(obj, "Game.Weapon"     ));
 
 	barrel  = json_object_get_branch_real(obj, "Appearance.Barrel");

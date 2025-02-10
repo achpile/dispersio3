@@ -10,17 +10,17 @@
             "type": "real"
         }
     },
-    "Body": {
-        "@attr": {
-            "data": "Data.GFX.Body",
-            "default": "None",
-            "type": "link"
-        }
-    },
     "Color": {
         "@attr": {
             "default": "#FFFFFFFF",
             "type": "color"
+        }
+    },
+    "Model": {
+        "@attr": {
+            "data": "Data.GFX.Model",
+            "default": "None",
+            "type": "link"
         }
     }
 }

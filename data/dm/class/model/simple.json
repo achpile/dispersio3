@@ -1,0 +1,11 @@
+{
+    "ModelSimple": {
+        "List": "Animation",
+        "Objects": [
+            "Idle"
+        ],
+        "Param": "Type",
+        "Path": "Data.GFX.Model",
+        "Value": "simple"
+    }
+}

@@ -6,8 +6,6 @@ namespace ach
 {
 	struct Character
 	{
-		std::vector<ach::Model*> models;
-
 		ach::ProcessWorld  *world;
 		ach::DataCharacter *base;
 		ach::AI            *ai;

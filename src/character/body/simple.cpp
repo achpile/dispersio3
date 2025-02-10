@@ -6,11 +6,8 @@
      * constructor
 
 ***********************************************************************/
-ach::BodySimple::BodySimple(ach::Character *_owner, ach::DataBody *_base) : Body(_owner, _base)
+ach::BodySimple::BodySimple(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
 {
-	body = new ach::BodyPart(json_object_get(_base->parts, "Body"));
-
-	parts.push_back(body);
 }
 
 
@@ -33,5 +30,5 @@ ach::BodySimple::~BodySimple()
 ***********************************************************************/
 void ach::BodySimple::reset()
 {
-	body->setAnimation("Idle");
+	model->setAnimation("Idle");
 }

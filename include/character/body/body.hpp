@@ -6,13 +6,13 @@ namespace ach
 {
 	struct Body
 	{
-		std::vector<ach::BodyPart*> parts;
-		ach::Character             *owner;
+		ach::Character *owner;
+		ach::Model     *model;
 
-		sf::Vector2f barrel;
+		sf::Vector2f    barrel;
 
 
-		         Body(ach::Character *_owner, ach::DataBody *_base);
+		         Body(ach::Character *_owner, ach::DataModel *_base);
 		virtual ~Body();
 
 		void update();
@@ -25,7 +25,7 @@ namespace ach
 		virtual void flip()    {};
 		virtual void reset()   {};
 
-		static ach::Body *create(ach::Character *_owner, ach::DataBody *_base);
+		static ach::Body *create(ach::Character *_owner, ach::DataModel *_base);
 	};
 }
 

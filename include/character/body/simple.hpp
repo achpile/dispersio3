@@ -6,9 +6,7 @@ namespace ach
 {
 	struct BodySimple : Body
 	{
-		ach::BodyPart *body;
-
-		 BodySimple(ach::Character *_owner, ach::DataBody *_base);
+		 BodySimple(ach::Character *_owner, ach::DataModel *_base);
 		~BodySimple();
 
 		void reset();

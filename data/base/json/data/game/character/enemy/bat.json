@@ -1,7 +1,7 @@
 {
     "Bat": {
         "Appearance": {
-            "Body": "Bat"
+            "Model": "EnemyBat"
         },
         "Game": {
             "AI": "idle"
