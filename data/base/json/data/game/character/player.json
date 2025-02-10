@@ -4,8 +4,7 @@
             "Model": "Player"
         },
         "Game": {
-            "AI": "player",
-            "Weapon": "Rifle"
+            "AI": "player"
         },
         "Sound": {
             "Die": "sfx/character/player/die.wav",

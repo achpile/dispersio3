@@ -23,7 +23,7 @@
     "Weapon": {
         "@attr": {
             "data": "Data.Game.Weapon",
-            "default": "Rifle",
+            "default": "Gun",
             "type": "link"
         }
     }

@@ -30,7 +30,7 @@
     "Sheet": {
         "@attr": {
             "data": "Data.GFX.Sheet",
-            "default": "ProjectileBullet",
+            "default": "ProjectileSimple",
             "type": "link"
         }
     }

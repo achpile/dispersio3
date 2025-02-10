@@ -13,8 +13,6 @@ namespace ach
 		float cooldown;
 		float range;
 		float speed;
-
-		int   damage;
 		int   count;
 
 

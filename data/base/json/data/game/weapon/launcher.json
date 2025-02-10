@@ -1,8 +1,0 @@
-{
-    "Launcher": {
-        "Cooldown": 0.8,
-        "Projectile": "Rocket",
-        "Shot": "sfx/weapon/launcher_shot.wav",
-        "Speed": 300
-    }
-}
