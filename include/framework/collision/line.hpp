@@ -8,7 +8,8 @@ namespace ach
 	{
 		ptSolid = 0,
 		ptPlatform,
-		ptBarrier
+		ptBarrier,
+		ptDeath
 	};
 
 
