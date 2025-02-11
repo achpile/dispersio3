@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_COLLISION_LINE
-#define __FRAMEWORK_COLLISION_LINE
+#ifndef __COLLISION_LINE
+#define __COLLISION_LINE
 
 
 namespace ach

@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_COLLISION_DEFINES
-#define __FRAMEWORK_COLLISION_DEFINES
+#ifndef __COLLISION_DEFINES
+#define __COLLISION_DEFINES
 
 
 /***********************************************************************

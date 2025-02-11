@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_COLLISION_ALGO
-#define __FRAMEWORK_COLLISION_ALGO
+#ifndef __COLLISION_ALGO
+#define __COLLISION_ALGO
 
 
 bool collision_box_vs_box(sf::FloatRect box, sf::FloatRect rect, sf::Vector2f *c = NULL, sf::Vector2f *n = NULL);

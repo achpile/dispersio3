@@ -7,6 +7,14 @@
 #include "meta/forward.hpp"
 #include "meta/framework.hpp"
 
+#include "collision/defines.hpp"
+#include "collision/pair.hpp"
+#include "collision/phys.hpp"
+#include "collision/line.hpp"
+#include "collision/algo.hpp"
+#include "collision/quadrant.hpp"
+#include "collision/collision.hpp"
+
 #include "particle/stars.hpp"
 #include "particle/smoke.hpp"
 #include "particle/splash.hpp"

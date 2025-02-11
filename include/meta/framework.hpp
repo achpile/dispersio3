@@ -96,12 +96,4 @@
 #include "framework/particle/particle.hpp"
 #include "framework/particle/system.hpp"
 
-#include "framework/collision/defines.hpp"
-#include "framework/collision/pair.hpp"
-#include "framework/collision/phys.hpp"
-#include "framework/collision/line.hpp"
-#include "framework/collision/algo.hpp"
-#include "framework/collision/quadrant.hpp"
-#include "framework/collision/collision.hpp"
-
 #endif

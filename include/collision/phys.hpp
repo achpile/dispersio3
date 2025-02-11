@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_COLLISION_PHYS
-#define __FRAMEWORK_COLLISION_PHYS
+#ifndef __COLLISION_PHYS
+#define __COLLISION_PHYS
 
 
 namespace ach
