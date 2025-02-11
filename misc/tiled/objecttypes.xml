@@ -3,10 +3,12 @@
  <objecttype name="area" color="#99c1f1"/>
  <objecttype name="barrier" color="#f66151"/>
  <objecttype name="character" color="#e01b24"/>
+ <objecttype name="checkpoint" color="#dc8add"/>
+ <objecttype name="death" color="#241f31"/>
  <objecttype name="decor" color="#57e389"/>
  <objecttype name="door" color="#865e3c">
   <property name="pair" type="object" default="0"/>
  </objecttype>
  <objecttype name="platform" color="#e5a50a"/>
- <objecttype name="solid" color="#986a44"/>
+ <objecttype name="solid" color="#c0bfbc"/>
 </objecttypes>
