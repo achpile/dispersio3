@@ -1,0 +1,12 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Checkpoint": {
+        "@attr": {
+            "data": "Data.GFX.Model",
+            "default": "Checkpoint",
+            "type": "link"
+        }
+    }
+}

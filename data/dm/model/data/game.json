@@ -4,6 +4,7 @@
     },
     "Character": "@include game/character.json",
     "Map": "@include game/map.json",
+    "Meta": "@include game/meta.json",
     "Projectile": "@include game/projectile.json",
     "Weapon": "@include game/weapon.json"
 }

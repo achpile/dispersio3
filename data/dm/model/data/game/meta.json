@@ -1,0 +1,6 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "GFX": "@include meta/gfx.json"
+}

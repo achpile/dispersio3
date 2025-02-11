@@ -1,0 +1,15 @@
+{
+    "Checkpoint": {
+        "Animation": {
+            "Active": {
+                "End": 15,
+                "Start": 8
+            },
+            "Inactive": {
+                "End": 7,
+                "Start": 0
+            }
+        },
+        "Sheet": "Checkpoint"
+    }
+}
