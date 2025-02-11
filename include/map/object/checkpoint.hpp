@@ -18,6 +18,7 @@ namespace ach
 		void touch();
 
 		void animate();
+		void deactivate();
 	};
 }
 
