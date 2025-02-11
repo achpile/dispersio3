@@ -121,7 +121,7 @@ void ach::Projectile::init()
 void ach::Projectile::hit(sf::Vector2f n)
 {
 	world->map->gfx.push_back(createImpact(n));
-	sm->play(base->sfxBump);
+	sm->play(base->sfxBump->snd);
 	tracer->correct();
 
 	if (bounces--)
@@ -205,7 +205,7 @@ void ach::Projectile::explode()
 
 	world->map->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
 	world->map->collideExplosion(this);
-	sm->play(base->sfxExplosion);
+	sm->play(base->sfxExplosion->snd);
 }
 
 

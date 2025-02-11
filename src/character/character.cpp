@@ -69,7 +69,7 @@ bool ach::Character::update()
 	weapon->update();
 
 	if (phys.grounded && !landed)
-		sm->play(base->sndLand);
+		sm->play(base->sndLand->snd);
 
 	landed = phys.grounded;
 
@@ -208,7 +208,7 @@ void ach::Character::die()
 {
 	alive = false;
 
-	sm->play(base->sndDie);
+	sm->play(base->sndDie->snd);
 }
 
 
@@ -241,7 +241,7 @@ void ach::Character::jump()
 
 	phys.vel.y = -jumping;
 
-	sm->play(base->sndJump);
+	sm->play(base->sndJump->snd);
 }
 
 

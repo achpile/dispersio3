@@ -14,9 +14,8 @@ ach::DataWeapon::DataWeapon(json_t *obj)
 	speed      = json_object_get_real   (obj, "Speed"   );
 	count      = json_object_get_integer(obj, "Count"   );
 
+	shot       = db->getSound(json_object_get_string(obj, "Shot"));
 	projectile = db->getProjectile(json_object_get_string(obj, "Projectile"));
-
-	sfml_load_sound(&shot, json_object_get_string(obj, "Shot"));
 }
 
 
@@ -28,5 +27,4 @@ ach::DataWeapon::DataWeapon(json_t *obj)
 ***********************************************************************/
 ach::DataWeapon::~DataWeapon()
 {
-	delete shot;
 }

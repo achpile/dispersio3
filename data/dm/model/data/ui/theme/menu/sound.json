@@ -4,20 +4,23 @@
     },
     "Back": {
         "@attr": {
-            "default": "sfx/menu/back.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "MenuBack",
+            "type": "link"
         }
     },
     "Blip": {
         "@attr": {
-            "default": "sfx/menu/blip.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "MenuBlip",
+            "type": "link"
         }
     },
     "Pick": {
         "@attr": {
-            "default": "sfx/menu/pick.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "MenuPick",
+            "type": "link"
         }
     }
 }

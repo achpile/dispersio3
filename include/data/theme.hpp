@@ -17,15 +17,16 @@ namespace ach
 		struct
 		{
 			ach::DataFont   *font;
-			sf::String       selector;
-			sf::Color        color;
 
+			ach::DataSound  *back;
+			ach::DataSound  *blip;
+			ach::DataSound  *pick;
+
+			sf::String       selector;
+
+			sf::Color        color;
 			sf::Color        border;
 			sf::Color        bg;
-
-			sf::SoundBuffer *back;
-			sf::SoundBuffer *blip;
-			sf::SoundBuffer *pick;
 
 			int              size;
 		} menu;

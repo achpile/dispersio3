@@ -44,9 +44,9 @@ void ach::Theme::refresh()
 	menu.border   = base->menu.border;
 	menu.bg       = base->menu.bg;
 
-	menu.back     = base->menu.back;
-	menu.blip     = base->menu.blip;
-	menu.pick     = base->menu.pick;
+	menu.back     = base->menu.back->snd;
+	menu.blip     = base->menu.blip->snd;
+	menu.pick     = base->menu.pick->snd;
 
 	menu.spacing  = menu.font->getLineSpacing(menu.size);
 }

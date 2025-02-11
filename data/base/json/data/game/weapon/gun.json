@@ -1,5 +1,5 @@
 {
     "Gun": {
-        "Shot": "sfx/weapon/gun_shot.wav"
+        "Shot": "GunShot"
     }
 }

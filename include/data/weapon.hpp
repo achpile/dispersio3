@@ -7,7 +7,7 @@ namespace ach
 	struct DataWeapon : DataContent
 	{
 		ach::DataProjectile *projectile;
-		sf::SoundBuffer     *shot;
+		ach::DataSound      *shot;
 
 		float cone;
 		float cooldown;

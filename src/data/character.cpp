@@ -11,6 +11,10 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	model   = db->getModel (json_object_get_branch_string(obj, "Appearance.Model"));
 	weapon  = db->getWeapon(json_object_get_branch_string(obj, "Game.Weapon"     ));
 
+	sndDie  = db->getSound(json_object_get_branch_string(obj, "Sound.Die" ));
+	sndJump = db->getSound(json_object_get_branch_string(obj, "Sound.Jump"));
+	sndLand = db->getSound(json_object_get_branch_string(obj, "Sound.Land"));
+
 	barrel  = json_object_get_branch_real(obj, "Appearance.Barrel");
 	color   = str_to_color(json_object_get_branch_string(obj, "Appearance.Color"));
 
@@ -19,10 +23,6 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 
 	speed   = json_object_get_branch_real   (obj, "Stats.Speed" );
 	jumping = json_object_get_branch_real   (obj, "Stats.Jump"  );
-
-	sfml_load_sound(&sndDie , json_object_get_branch_string(obj, "Sound.Die" ));
-	sfml_load_sound(&sndJump, json_object_get_branch_string(obj, "Sound.Jump"));
-	sfml_load_sound(&sndLand, json_object_get_branch_string(obj, "Sound.Land"));
 }
 
 
@@ -34,7 +34,4 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 ***********************************************************************/
 ach::DataCharacter::~DataCharacter()
 {
-	delete sndDie;
-	delete sndJump;
-	delete sndLand;
 }

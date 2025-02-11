@@ -43,8 +43,9 @@
     },
     "Shot": {
         "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
         }
     },
     "Speed": {

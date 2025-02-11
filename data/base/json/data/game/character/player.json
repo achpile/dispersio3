@@ -7,9 +7,9 @@
             "AI": "player"
         },
         "Sound": {
-            "Die": "sfx/character/player/die.wav",
-            "Jump": "sfx/character/player/jump.wav",
-            "Land": "sfx/character/player/land.wav"
+            "Die": "PlayerDie",
+            "Jump": "PlayerJump",
+            "Land": "PlayerLand"
         }
     }
 }

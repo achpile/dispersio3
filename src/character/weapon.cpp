@@ -65,7 +65,7 @@ void ach::Weapon::shot()
 		return;
 
 	cooldown.reset();
-	sm->play(base->shot);
+	sm->play(base->shot->snd);
 
 	for (int i = 0; i < base->count; i++)
 	{

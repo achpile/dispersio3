@@ -25,8 +25,9 @@
     },
     "Sound": {
         "@attr": {
-            "default": "sfx/misc/explosion.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "Explosion",
+            "type": "link"
         }
     }
 }

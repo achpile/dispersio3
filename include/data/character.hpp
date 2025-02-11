@@ -17,12 +17,12 @@ namespace ach
 		ach::DataWeapon *weapon;
 		ach::AIType      ai;
 
+		ach::DataSound  *sndDie;
+		ach::DataSound  *sndJump;
+		ach::DataSound  *sndLand;
+
 		sf::Vector2f     hitbox;
 		sf::Color        color;
-
-		sf::SoundBuffer *sndDie;
-		sf::SoundBuffer *sndJump;
-		sf::SoundBuffer *sndLand;
 
 		float barrel;
 		float speed;

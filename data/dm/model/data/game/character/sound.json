@@ -4,20 +4,23 @@
     },
     "Die": {
         "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
         }
     },
     "Jump": {
         "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
         }
     },
     "Land": {
         "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
         }
     }
 }

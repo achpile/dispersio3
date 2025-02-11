@@ -2,7 +2,7 @@
     "Bullet": {
         "Impact": {
             "Color": "#F58549",
-            "Sound": "sfx/projectile/bullet_bump.wav",
+            "Sound": "BulletBump",
             "Type": "spark"
         }
     }

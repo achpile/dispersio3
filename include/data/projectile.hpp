@@ -35,8 +35,8 @@ namespace ach
 		ach::TracerType  tracer;
 		ach::OrientType  orient;
 
-		sf::SoundBuffer *sfxBump;
-		sf::SoundBuffer *sfxExplosion;
+		ach::DataSound  *sfxBump;
+		ach::DataSound  *sfxExplosion;
 
 		sf::Color        color;
 		sf::Color        colorImpact;

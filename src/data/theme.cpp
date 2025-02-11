@@ -18,9 +18,9 @@ ach::DataTheme::DataTheme(json_t *obj)
 	menu.border   = str_to_color(json_object_get_branch_string(obj, "Menu.Border.Color"     ));
 	menu.bg       = str_to_color(json_object_get_branch_string(obj, "Menu.Border.Background"));
 
-	sfml_load_sound(&menu.blip,  json_object_get_branch_string(obj, "Menu.Sound.Blip"));
-	sfml_load_sound(&menu.back,  json_object_get_branch_string(obj, "Menu.Sound.Back"));
-	sfml_load_sound(&menu.pick,  json_object_get_branch_string(obj, "Menu.Sound.Pick"));
+	menu.blip     = db->getSound(json_object_get_branch_string(obj, "Menu.Sound.Blip"));
+	menu.back     = db->getSound(json_object_get_branch_string(obj, "Menu.Sound.Back"));
+	menu.pick     = db->getSound(json_object_get_branch_string(obj, "Menu.Sound.Pick"));
 
 	credits.size = json_object_get_branch_integer(obj, "Credits.Font.Size");
 	menu.size    = json_object_get_branch_integer(obj, "Menu.Font.Size"   );
@@ -35,7 +35,4 @@ ach::DataTheme::DataTheme(json_t *obj)
 ***********************************************************************/
 ach::DataTheme::~DataTheme()
 {
-	delete menu.blip;
-	delete menu.back;
-	delete menu.pick;
 }
