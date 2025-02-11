@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::MapObjectCheckpoint::MapObjectCheckpoint(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	model  = new ach::Model(db->getModel(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Checkpoint")));
+	model = new ach::Model(db->getModel(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Checkpoint")));
+	sfx   = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Checkpoint"));
 
 	deactivate();
 }
@@ -56,6 +57,8 @@ void ach::MapObjectCheckpoint::touch()
 
 	active = true;
 	animate();
+
+	sm->play(sfx->snd);
 }
 
 
