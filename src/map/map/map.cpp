@@ -38,6 +38,8 @@ ach::Map::~Map()
 	delete collision;
 	delete cam;
 
+	checkpoints.clear();
+
 	list_delete(characters);
 	list_delete(objects);
 	list_delete(areas);

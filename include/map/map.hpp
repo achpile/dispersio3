@@ -6,13 +6,14 @@ namespace ach
 {
 	struct Map
 	{
-		std::vector<ach::Character*>  characters;
-		std::vector<ach::MapObject*>  objects;
-		std::vector<ach::MapArea*>    areas;
-		std::vector<ach::Projectile*> projectiles;
-		std::vector<ach::Effect*>     gfx;
+		std::vector<ach::Character*>           characters;
+		std::vector<ach::MapObject*>           objects;
+		std::vector<ach::MapObjectCheckpoint*> checkpoints;
+		std::vector<ach::MapArea*>             areas;
+		std::vector<ach::Projectile*>          projectiles;
+		std::vector<ach::Effect*>              gfx;
 
-		ach::ProcessWorld            *world;
+		ach::ProcessWorld                     *world;
 
 		ach::MapTile ***tiles;
 		ach::DataMap   *base;

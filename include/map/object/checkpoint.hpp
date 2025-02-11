@@ -14,6 +14,7 @@ namespace ach
 		 MapObjectCheckpoint(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectCheckpoint();
 
+		void init(ach::Map *map);
 		void touch();
 
 		void animate();

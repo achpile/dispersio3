@@ -29,12 +29,26 @@ ach::MapObjectCheckpoint::~MapObjectCheckpoint()
 
 /***********************************************************************
      * MapObjectCheckpoint
+     * init
+
+***********************************************************************/
+void ach::MapObjectCheckpoint::init(ach::Map *map)
+{
+	map->checkpoints.push_back(this);
+}
+
+
+
+/***********************************************************************
+     * MapObjectCheckpoint
      * touch
 
 ***********************************************************************/
 void ach::MapObjectCheckpoint::touch()
 {
 	active = true;
+
+	world->player->spawn = phys.pos;
 
 	animate();
 }
