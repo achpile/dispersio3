@@ -6,6 +6,7 @@ namespace ach
 {
 	struct Database
 	{
+		std::vector<ach::DataSound*     > sound;
 		std::vector<ach::DataFont*      > font;
 		std::vector<ach::DataTheme*     > theme;
 		std::vector<ach::DataModel*     > model;
@@ -22,6 +23,7 @@ namespace ach
 		void load();
 
 		/*  get.cpp  */
+		ach::DataSound      *getSound     (const char *name);
 		ach::DataFont       *getFont      (const char *name);
 		ach::DataTheme      *getTheme     (const char *name);
 		ach::DataModel      *getModel     (const char *name);

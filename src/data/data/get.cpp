@@ -20,6 +20,18 @@ template <typename T> T* getContent(const char *name, std::vector<T*> *list)
 
 /***********************************************************************
      * Database
+     * getSound
+
+***********************************************************************/
+ach::DataSound* ach::Database::getSound(const char *name)
+{
+	return getContent<ach::DataSound>(name, &sound);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getFont
 
 ***********************************************************************/
