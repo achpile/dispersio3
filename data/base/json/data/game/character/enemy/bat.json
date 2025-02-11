@@ -5,9 +5,6 @@
         },
         "Game": {
             "AI": "idle"
-        },
-        "Sound": {
-            "Die": "sfx/character/enemy/bat/die.wav"
         }
     }
 }

@@ -4,5 +4,6 @@
     },
     "GFX": "@include data/gfx.json",
     "Game": "@include data/game.json",
+    "SFX": "@include data/sfx.json",
     "UI": "@include data/ui.json"
 }

@@ -1,0 +1,11 @@
+{
+    "@attr": {
+        "type": "multi"
+    },
+    "Filename": {
+        "@attr": {
+            "default": "sfx/misc/default.wav",
+            "type": "filename"
+        }
+    }
+}

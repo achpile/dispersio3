@@ -1,5 +1,6 @@
 {
     "GFX": "@include data/gfx.json",
     "Game": "@include data/game.json",
+    "SFX": "@recursive data/sfx",
     "UI": "@include data/ui.json"
 }
