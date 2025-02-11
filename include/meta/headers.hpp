@@ -27,6 +27,7 @@
 
 #include "gfx/gfx.hpp"
 #include "gfx/explosion.hpp"
+#include "gfx/splash.hpp"
 
 #include "gfx/impact/impact.hpp"
 #include "gfx/impact/spark.hpp"

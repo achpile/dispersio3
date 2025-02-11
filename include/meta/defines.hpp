@@ -85,6 +85,7 @@
 
 ***********************************************************************/
 #define PARTICLE_SPARK_SIZE   1.0f
+#define PARTICLE_SPLASH_SIZE  2.0f
 
 #define PARTICLE_BLOOD_SIZE   3.0f
 #define PARTICLE_BLOOD_LIFE   10.0f

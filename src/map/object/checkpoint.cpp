@@ -52,6 +52,7 @@ void ach::MapObjectCheckpoint::touch()
 		world->map->checkpoints[i]->deactivate();
 
 	world->player->spawn = phys.pos;
+	world->map->gfx.push_back(new ach::EffectSplash(phys.pos, sf::Color::White));
 
 	active = true;
 	animate();

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="46">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="47">
  <editorsettings>
   <export target="../../../data/base/map/test.tmj" format="json"/>
  </editorsettings>
@@ -136,6 +136,7 @@
   </object>
   <object id="44" type="checkpoint" x="784" y="400" width="16" height="16"/>
   <object id="45" type="checkpoint" x="112" y="160" width="16" height="16"/>
+  <object id="46" type="checkpoint" x="256" y="208" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="336" y="112" width="16" height="16"/>
