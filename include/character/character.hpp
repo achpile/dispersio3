@@ -23,7 +23,6 @@ namespace ach
 		bool  alive;
 		bool  landed;
 		bool  enemy;
-		bool  respawning;
 
 
 		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn);

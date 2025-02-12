@@ -13,8 +13,6 @@ ach::ProcessWorld::ProcessWorld()
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
-
-	player->respawning = true;
 }
 
 

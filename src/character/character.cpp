@@ -16,7 +16,6 @@ ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, 
 	weapon     = new ach::Weapon(world, this, base->weapon);
 	speed      = base->speed;
 	jumping    = base->jumping;
-	respawning = false;
 
 
 	phys.init(base->hitbox);
@@ -53,9 +52,6 @@ bool ach::Character::update()
 {
 	if (!alive)
 	{
-		if (!respawning)
-			return false;
-
 		if (spawner.update())
 			return true;
 
