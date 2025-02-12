@@ -116,6 +116,7 @@ void ach::Character::respawn()
 	phys.pos = spawn;
 
 	spawner.reset();
+	body->spawn();
 	reset();
 }
 

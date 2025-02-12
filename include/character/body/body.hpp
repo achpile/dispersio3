@@ -22,6 +22,7 @@ namespace ach
 
 		virtual void aim()     {};
 		virtual void animate() {};
+		virtual void spawn()   {};
 		virtual void flip()    {};
 		virtual void reset()   {};
 

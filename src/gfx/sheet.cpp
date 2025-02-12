@@ -2,28 +2,28 @@
 
 
 /***********************************************************************
-     * EffectExplosion
+     * EffectSheet
      * constructor
 
 ***********************************************************************/
-ach::EffectExplosion::EffectExplosion(ach::DataSheet *sheet, sf::Vector2f _pos, float radius)
+ach::EffectSheet::EffectSheet(ach::DataSheet *sheet, sf::Vector2f _pos, float size)
 {
 	pos   = _pos;
 	model = new ach::Model(sheet);
 
 	model->anim.loop = false;
 
-	model->setScale(sheet->sheet->size.y / (2 * radius));
+	model->setScale(sheet->sheet->size.y / size);
 }
 
 
 
 /***********************************************************************
-     * EffectExplosion
+     * EffectSheet
      * destructor
 
 ***********************************************************************/
-ach::EffectExplosion::~EffectExplosion()
+ach::EffectSheet::~EffectSheet()
 {
 	delete model;
 }
@@ -31,11 +31,11 @@ ach::EffectExplosion::~EffectExplosion()
 
 
 /***********************************************************************
-     * EffectExplosion
+     * EffectSheet
      * update
 
 ***********************************************************************/
-bool ach::EffectExplosion::update()
+bool ach::EffectSheet::update()
 {
 	model->update();
 
@@ -45,11 +45,11 @@ bool ach::EffectExplosion::update()
 
 
 /***********************************************************************
-     * EffectExplosion
+     * EffectSheet
      * render
 
 ***********************************************************************/
-void ach::EffectExplosion::render()
+void ach::EffectSheet::render()
 {
 	model->render(pos);
 }

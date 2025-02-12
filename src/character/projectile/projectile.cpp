@@ -203,7 +203,7 @@ void ach::Projectile::explode()
 	if (!base->explosive)
 		return;
 
-	world->map->gfx.push_back(new ach::EffectExplosion(base->explosion, phys.pos, base->explosionR));
+	world->map->gfx.push_back(new ach::EffectSheet(base->explosion, phys.pos, base->explosionR * 2.0f));
 	world->map->collideExplosion(this);
 	sm->play(base->sfxExplosion->snd);
 }

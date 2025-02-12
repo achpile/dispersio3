@@ -35,7 +35,7 @@
 #include "model/model.hpp"
 
 #include "gfx/gfx.hpp"
-#include "gfx/explosion.hpp"
+#include "gfx/sheet.hpp"
 #include "gfx/splash.hpp"
 
 #include "gfx/impact/impact.hpp"

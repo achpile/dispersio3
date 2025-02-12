@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::BodyPlayer::BodyPlayer(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
 {
+	spawning = db->getSheet(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Spawn"));
 }
 
 
@@ -60,6 +61,18 @@ void ach::BodyPlayer::animate()
 		else
 			model->setAnimation("Jump");
 	}
+}
+
+
+
+/***********************************************************************
+     * BodyPlayer
+     * spawn
+
+***********************************************************************/
+void ach::BodyPlayer::spawn()
+{
+	owner->world->map->gfx.push_back(new ach::EffectSheet(spawning, owner->phys.pos, spawning->sheet->size.y));
 }
 
 

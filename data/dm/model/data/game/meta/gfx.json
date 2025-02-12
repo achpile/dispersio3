@@ -8,5 +8,12 @@
             "default": "Checkpoint",
             "type": "link"
         }
+    },
+    "Spawn": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Spawn",
+            "type": "link"
+        }
     }
 }
