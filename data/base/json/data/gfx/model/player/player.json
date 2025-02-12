@@ -24,6 +24,6 @@
             }
         },
         "Sheet": "Player",
-        "Type": "walking"
+        "Type": "player"
     }
 }

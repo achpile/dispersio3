@@ -49,7 +49,7 @@
             "default": "none",
             "enum": [
                 "none",
-                "walking",
+                "player",
                 "simple"
             ],
             "type": "enum"

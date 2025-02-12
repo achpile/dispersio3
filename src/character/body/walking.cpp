@@ -2,33 +2,33 @@
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * constructor
 
 ***********************************************************************/
-ach::BodyWalking::BodyWalking(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
+ach::BodyPlayer::BodyPlayer(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
 {
 }
 
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * destructor
 
 ***********************************************************************/
-ach::BodyWalking::~BodyWalking()
+ach::BodyPlayer::~BodyPlayer()
 {
 }
 
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * aim
 
 ***********************************************************************/
-void ach::BodyWalking::aim()
+void ach::BodyPlayer::aim()
 {
 	barrel = sf::Vector2f(0.0f, 0.0f);
 }
@@ -36,11 +36,11 @@ void ach::BodyWalking::aim()
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * animate
 
 ***********************************************************************/
-void ach::BodyWalking::animate()
+void ach::BodyPlayer::animate()
 {
 	if (owner->phys.grounded)
 	{
@@ -61,11 +61,11 @@ void ach::BodyWalking::animate()
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * flip
 
 ***********************************************************************/
-void ach::BodyWalking::flip()
+void ach::BodyPlayer::flip()
 {
 	model->scale.x = owner->dir.x;
 }
@@ -73,11 +73,11 @@ void ach::BodyWalking::flip()
 
 
 /***********************************************************************
-     * BodyWalking
+     * BodyPlayer
      * reset
 
 ***********************************************************************/
-void ach::BodyWalking::reset()
+void ach::BodyPlayer::reset()
 {
 	model->setAnimation("Idle");
 }

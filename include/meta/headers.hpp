@@ -55,7 +55,7 @@
 
 #include "character/body/body.hpp"
 #include "character/body/simple.hpp"
-#include "character/body/walking.hpp"
+#include "character/body/player.hpp"
 
 #include "character/projectile/pair.hpp"
 #include "character/projectile/projectile.hpp"

@@ -1,5 +1,5 @@
 {
-    "BodyWalking": {
+    "BodyPlayer": {
         "List": "Animation",
         "Objects": [
             "Fall",
@@ -10,6 +10,6 @@
         ],
         "Param": "Type",
         "Path": "Data.GFX.Model",
-        "Value": "walking"
+        "Value": "player"
     }
 }

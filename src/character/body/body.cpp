@@ -76,9 +76,9 @@ ach::Body* ach::Body::create(ach::Character *_owner, ach::DataModel *_base)
 {
 	switch (_base->type)
 	{
-		case ach::ModelType::mtNone   : return new ach::Body       (_owner, _base);
-		case ach::ModelType::mtSimple : return new ach::BodySimple (_owner, _base);
-		case ach::ModelType::mtWalking: return new ach::BodyWalking(_owner, _base);
+		case ach::ModelType::mtNone  : return new ach::Body      (_owner, _base);
+		case ach::ModelType::mtSimple: return new ach::BodySimple(_owner, _base);
+		case ach::ModelType::mtPlayer: return new ach::BodyPlayer(_owner, _base);
 	}
 
 	return new ach::Body(_owner, _base);
