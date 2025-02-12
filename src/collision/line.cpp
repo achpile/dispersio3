@@ -128,6 +128,8 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	if (!v && d < 0 && p->vel.y < 0.0f)
 		return false;
 
+	if (type == ach::PhysType::ptDeath)
+		return true;
 
 	sf::Vector2f offset = offsetPhys();
 
