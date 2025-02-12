@@ -70,8 +70,17 @@ void ach::MapObjectCheckpoint::touch()
 ***********************************************************************/
 void ach::MapObjectCheckpoint::animate()
 {
+	int   offset;
+	float value;
+
+	offset = model->anim.frame - model->anim.start;
+	value  = model->anim.framer.value;
+
 	if (active) model->setAnimation("Active"  );
 	else        model->setAnimation("Inactive");
+
+	model->anim.frame = model->anim.start + offset;
+	model->anim.framer.value = value;
 }
 
 
