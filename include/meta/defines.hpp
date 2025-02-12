@@ -76,7 +76,7 @@
      * Game
 
 ***********************************************************************/
-#define GAME_PLAYER_RESPAWN   3.0f
+#define GAME_PLAYER_RESPAWN   1.0f
 
 
 

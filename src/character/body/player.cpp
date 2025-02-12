@@ -42,7 +42,11 @@ void ach::BodyPlayer::aim()
 ***********************************************************************/
 void ach::BodyPlayer::animate()
 {
-	if (owner->phys.grounded)
+	if (!owner->alive)
+	{
+		model->setAnimation("Death");
+	}
+	else if (owner->phys.grounded)
 	{
 		if (owner->phys.moving)
 			model->setAnimation("Walk");

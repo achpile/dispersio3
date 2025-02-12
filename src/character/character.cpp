@@ -50,6 +50,8 @@ ach::Character::~Character()
 ***********************************************************************/
 bool ach::Character::update()
 {
+	body->update();
+
 	if (!alive)
 	{
 		if (spawner.update())
@@ -58,8 +60,6 @@ bool ach::Character::update()
 		respawn();
 	}
 
-
-	body->update();
 
 	weapon->aim(phys.pos + body->barrel, aim);
 	weapon->update();
@@ -84,9 +84,6 @@ bool ach::Character::update()
 ***********************************************************************/
 void ach::Character::render()
 {
-	if (!alive)
-		return;
-
 	body->render();
 }
 
