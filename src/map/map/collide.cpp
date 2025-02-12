@@ -10,52 +10,55 @@ void ach::Map::collide()
 {
 	list_foreach(characters)
 		if (characters[i]->alive)
-			collidePhysSteps(&characters[i]->phys);
+			collideCharacter(characters[i]);
 
 	list_foreach(projectiles)
 		collideProjectile(projectiles[i]);
 
 	list_foreach(characters)
-		collideCharacter(characters[i]);
+		collideEnemies(characters[i]);
 }
 
 
 
 /***********************************************************************
      * Map
-     * collidePhysSteps
+     * collideCharacter
 
 ***********************************************************************/
-void ach::Map::collidePhysSteps(ach::Phys *phys)
+void ach::Map::collideCharacter(ach::Character *character)
 {
-	phys->grounded = false;
+	character->phys.grounded = false;
+
+	ach::PhysLine *line;
 
 	float left = tm->get(ach::TimeSource::tsFrame);
 	float velocity;
 	float chunk;
 
-	phys->vel  += phys->acc * tm->get(ach::TimeSource::tsFrame);
-	phys->vel.x = interval_set(phys->vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
-	phys->vel.y = interval_set(phys->vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
+	character->phys.vel  += character->phys.acc * tm->get(ach::TimeSource::tsFrame);
+	character->phys.vel.x = interval_set(character->phys.vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
+	character->phys.vel.y = interval_set(character->phys.vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 
 
 	while (left > 0.0f)
 	{
-		velocity = vector_len(phys->vel);
+		velocity = vector_len(character->phys.vel);
 		chunk    = (velocity == 0.0f) ? left : 1.5f / velocity;
 
 		if (chunk > left)
 			chunk = left;
 
-		phys->pos += phys->vel * chunk;
-		phys->calc();
+		character->phys.pos += character->phys.vel * chunk;
+		character->phys.calc();
 
-		while (collidePhys(phys));
+		while ((line = collidePhys(&character->phys)) != NULL)
+			character->ai->collide(line);
 
 		left -= chunk;
 	}
 
-	phys->calc();
+	character->phys.calc();
 }
 
 
@@ -65,20 +68,20 @@ void ach::Map::collidePhysSteps(ach::Phys *phys)
      * collidePhys
 
 ***********************************************************************/
-bool ach::Map::collidePhys(ach::Phys *phys)
+ach::PhysLine* ach::Map::collidePhys(ach::Phys *phys)
 {
 	std::vector<ach::PhysLine*> list;
 
 	collision->fill(&list, &phys->rect);
 	collision->sort(&list, phys);
 
-	if (!list.size()) return false;
+	if (!list.size()) return NULL;
 
 	list_foreach(list)
 		if (list[i]->collide(phys))
-			return true;
+			return list[i];
 
-	return false;
+	return NULL;
 }
 
 
@@ -152,10 +155,10 @@ void ach::Map::collideExplosion(ach::Projectile *projectile)
 
 /***********************************************************************
      * Map
-     * collideCharacter
+     * collideEnemies
 
 ***********************************************************************/
-void ach::Map::collideCharacter(ach::Character *character)
+void ach::Map::collideEnemies(ach::Character *character)
 {
 	if (character->enemy)
 		return;
