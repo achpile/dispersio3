@@ -112,7 +112,7 @@
                 {
                  "height":32,
                  "id":40,
-                 "name":"DoorTest",
+                 "name":"DoorDev",
                  "properties":[
                         {
                          "name":"pair",
@@ -129,7 +129,7 @@
                 {
                  "height":32,
                  "id":41,
-                 "name":"DoorTest",
+                 "name":"DoorDev",
                  "properties":[
                         {
                          "name":"pair",
@@ -146,7 +146,7 @@
                 {
                  "height":32,
                  "id":42,
-                 "name":"DoorTest",
+                 "name":"DoorDev",
                  "properties":[
                         {
                          "name":"pair",
@@ -163,7 +163,7 @@
                 {
                  "height":32,
                  "id":43,
-                 "name":"DoorTest",
+                 "name":"DoorDev",
                  "properties":[
                         {
                          "name":"pair",
