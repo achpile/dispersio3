@@ -126,6 +126,16 @@ void ach::Map::viewport(sf::Vector2f v)
 	cam->pos.y = floor(v.y / cam->viewport.height);
 
 	cam->calc();
+
+	list_delete(projectiles);
+	list_delete(gfx);
+
+	list_foreach(objects)
+		objects[i]->reset();
+
+	list_foreach(characters)
+		if (characters[i]->enemy)
+			characters[i]->reset();
 }
 
 
