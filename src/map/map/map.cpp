@@ -42,7 +42,6 @@ ach::Map::~Map()
 
 	list_delete(characters);
 	list_delete(objects);
-	list_delete(areas);
 	list_delete(gfx);
 	list_delete(projectiles);
 }
@@ -79,7 +78,7 @@ void ach::Map::render()
 {
 	stars->render();
 
-	renderTiles(cam->viewport);
+	renderTiles();
 
 	list_render(objects);
 	list_render(characters);
@@ -94,28 +93,10 @@ void ach::Map::render()
      * renderTiles
 
 ***********************************************************************/
-void ach::Map::renderTiles(sf::FloatRect viewport)
+void ach::Map::renderTiles()
 {
-	sf::Vector2i from;
-	sf::Vector2i to;
-
-
-	from.x = viewport.left / sizeTile.x - 1;
-	from.y = viewport.top  / sizeTile.y - 1;
-
-	to.x = (viewport.left + viewport.width ) / sizeTile.x + 1;
-	to.y = (viewport.top  + viewport.height) / sizeTile.y + 1;
-
-
-	from.x = std::max(from.x, 0);
-	from.y = std::max(from.y, 0);
-
-	to.x = std::min(to.x, sizeMap.x);
-	to.y = std::min(to.y, sizeMap.y);
-
-
-	for (int x = from.x; x < to.x; x++)
-		for (int y = from.y; y < to.y; y++)
+	for (int x = cam->tiles.left; x < cam->tiles.left + cam->tiles.width; x++)
+		for (int y = cam->tiles.top; y < cam->tiles.top + cam->tiles.height; y++)
 			tiles[x][y]->render(getTilePos(sf::Vector2i(x, y)));
 }
 
@@ -130,6 +111,21 @@ void ach::Map::process()
 {
 	list_foreach(characters)
 		characters[i]->process();
+}
+
+
+
+/***********************************************************************
+     * Map
+     * viewport
+
+***********************************************************************/
+void ach::Map::viewport(sf::Vector2f v)
+{
+	cam->pos.x = floor(v.x / cam->viewport.width );
+	cam->pos.y = floor(v.y / cam->viewport.height);
+
+	cam->calc();
 }
 
 

@@ -40,61 +40,6 @@
         }, 
         {
          "draworder":"topdown",
-         "id":8,
-         "name":"camera",
-         "objects":[
-                {
-                 "height":240,
-                 "id":30,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":640,
-                 "x":0,
-                 "y":0
-                }, 
-                {
-                 "height":240,
-                 "id":31,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":320,
-                 "x":640,
-                 "y":0
-                }, 
-                {
-                 "height":240,
-                 "id":32,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":320,
-                 "x":640,
-                 "y":240
-                }, 
-                {
-                 "height":240,
-                 "id":33,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":320,
-                 "x":320,
-                 "y":240
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
          "id":6,
          "name":"objects",
          "objects":[

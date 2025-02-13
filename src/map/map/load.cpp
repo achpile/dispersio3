@@ -60,7 +60,10 @@ void ach::Map::loadMeta(json_t *mapdata)
 	sizeTile = sf::Vector2i(json_object_get_integer(mapdata, "tilewidth" ),
 	                        json_object_get_integer(mapdata, "tileheight"));
 
-	spawn = getTileCenter(base->spawn);
+	spawn    = getTileCenter(base->spawn);
+
+	cam->tiles.width  = RENDER_LAYER_GAME_X / sizeTile.x;
+	cam->tiles.height = RENDER_LAYER_GAME_Y / sizeTile.y;
 }
 
 
@@ -72,8 +75,6 @@ void ach::Map::loadMeta(json_t *mapdata)
 ***********************************************************************/
 void ach::Map::loadFinalize()
 {
-	areas.push_back(new ach::MapArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(sizeMap, sizeTile))));
-
 	list_foreach(objects)
 		objects[i]->init(this);
 }
@@ -165,7 +166,6 @@ void ach::Map::loadLayerObjects(json_t *layer)
 		     if (!strcmp(json_object_get_string(layer, "name"), "phys"      )) loadPhys      (layer);
 		else if (!strcmp(json_object_get_string(layer, "name"), "objects"   )) loadObjects   (layer);
 		else if (!strcmp(json_object_get_string(layer, "name"), "characters")) loadCharacters(layer);
-		else if (!strcmp(json_object_get_string(layer, "name"), "camera"    )) loadCamera    (layer);
 
 		else logger->log(ach::LogLevel::llWarning, "Unknown map layer \"%s\"", json_object_get_string(layer, "name"));
 }
@@ -249,25 +249,5 @@ void ach::Map::loadCharacters(json_t *layer)
 		}
 
 		characters.push_back(new ach::Character(world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj)));
-	}
-}
-
-
-
-/***********************************************************************
-     * Map
-     * loadCamera
-
-***********************************************************************/
-void ach::Map::loadCamera(json_t *layer)
-{
-	json_t *obj;
-	size_t  index;
-
-	json_array_foreach(json_object_get(layer, "objects"), index, obj)
-	{
-		     if (!strcmp(json_object_get_string(obj, "type"), "area")) areas.push_back(new ach::MapArea(obj));
-
-		else logger->log(ach::LogLevel::llWarning, "Unknown camera object type \"%s\"", json_object_get_string(obj, "type"));
 	}
 }

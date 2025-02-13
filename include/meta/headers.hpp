@@ -7,7 +7,6 @@
 #include "meta/forward.hpp"
 #include "meta/framework.hpp"
 
-#include "collision/defines.hpp"
 #include "collision/pair.hpp"
 #include "collision/phys.hpp"
 #include "collision/line.hpp"
@@ -73,7 +72,6 @@
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
 
-#include "map/area.hpp"
 #include "map/camera.hpp"
 #include "map/map.hpp"
 

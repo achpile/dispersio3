@@ -9,8 +9,9 @@ namespace ach
 		ach::Phys      *follower;
 		ach::Map       *map;
 
+		sf::Vector2i    pos;
 		sf::FloatRect   viewport;
-		sf::FloatRect   area;
+		sf::IntRect     tiles;
 		sf::View        view;
 
 
@@ -18,10 +19,11 @@ namespace ach
 		~Camera();
 
 		void update();
-		bool check();
+		bool check(sf::Vector2f v);
+		bool check(sf::FloatRect r);
 
 		void follow(ach::Phys *phys);
-		void set(ach::MapArea *_area);
+		void calc();
 	};
 }
 

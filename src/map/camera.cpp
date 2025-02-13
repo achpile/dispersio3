@@ -10,6 +10,7 @@ ach::Camera::Camera(ach::Map *_map)
 {
 	map      = _map;
 	follower = NULL;
+	pos      = sf::Vector2i (0, 0);
 	viewport = sf::FloatRect(0, 0, RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y);
 
 	view.reset(viewport);
@@ -38,14 +39,8 @@ void ach::Camera::update()
 	if (!follower)
 		return;
 
-	if (!area.contains(follower->pos))
-		set(map->findMapArea(follower->pos));
-
-	viewport.left = round(follower->pos.x - RENDER_LAYER_GAME_X / 2.0f);
-	viewport.top  = round(follower->pos.y - RENDER_LAYER_GAME_Y / 2.0f);
-
-	viewport.left = interval_set(viewport.left, area.left, area.left + area.width  - viewport.width );
-	viewport.top  = interval_set(viewport.top , area.top , area.top  + area.height - viewport.height);
+	if (!check(follower->pos))
+		map->viewport(follower->pos);
 
 	view.reset(viewport);
 	rm->setView(view);
@@ -58,9 +53,21 @@ void ach::Camera::update()
      * check
 
 ***********************************************************************/
-bool ach::Camera::check()
+bool ach::Camera::check(sf::Vector2f v)
 {
-	return area.contains(follower->pos);
+	return viewport.contains(v);
+}
+
+
+
+/***********************************************************************
+     * Camera
+     * check
+
+***********************************************************************/
+bool ach::Camera::check(sf::FloatRect r)
+{
+	return viewport.intersects(r);
 }
 
 
@@ -81,10 +88,14 @@ void ach::Camera::follow(ach::Phys *phys)
 
 /***********************************************************************
      * Camera
-     * set
+     * calc
 
 ***********************************************************************/
-void ach::Camera::set(ach::MapArea *_area)
+void ach::Camera::calc()
 {
-	area = _area->rect;
+	viewport.left = pos.x * viewport.width;
+	viewport.top  = pos.y * viewport.height;
+
+	tiles.left    = pos.x * tiles.width;
+	tiles.top     = pos.y * tiles.height;
 }

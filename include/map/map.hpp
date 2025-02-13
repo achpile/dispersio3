@@ -9,21 +9,20 @@ namespace ach
 		std::vector<ach::Character*>           characters;
 		std::vector<ach::MapObject*>           objects;
 		std::vector<ach::MapObjectCheckpoint*> checkpoints;
-		std::vector<ach::MapArea*>             areas;
 		std::vector<ach::Projectile*>          projectiles;
 		std::vector<ach::Effect*>              gfx;
 
-		ach::ProcessWorld                     *world;
+		ach::ProcessWorld *world;
 
-		ach::MapTile ***tiles;
-		ach::DataMap   *base;
-		ach::Camera    *cam;
-		ach::Tileset   *tileset;
-		ach::Collision *collision;
+		ach::MapTile   ***tiles;
+		ach::DataMap     *base;
+		ach::Camera      *cam;
+		ach::Tileset     *tileset;
+		ach::Collision   *collision;
 
-		sf::Vector2i    sizeMap;
-		sf::Vector2i    sizeTile;
-		sf::Vector2f    spawn;
+		sf::Vector2i      sizeMap;
+		sf::Vector2i      sizeTile;
+		sf::Vector2f      spawn;
 
 
 		 Map(ach::ProcessWorld *_world, ach::DataMap *_base);
@@ -32,9 +31,10 @@ namespace ach
 		void update();
 		void render();
 
-		void renderTiles(sf::FloatRect viewport);
+		void renderTiles();
 
 		void process();
+		void viewport(sf::Vector2f v);
 
 		void touch(ach::Character* character);
 		void use(ach::Character* character);
@@ -61,14 +61,12 @@ namespace ach
 		void loadPhys(json_t *layer);
 		void loadObjects(json_t *layer);
 		void loadCharacters(json_t *layer);
-		void loadCamera(json_t *layer);
 
 		/*  coord.cpp  */
 		sf::Vector2f  getTilePos(sf::Vector2i v);
 		sf::Vector2f  getTileCenter(sf::Vector2i v);
 
 		/*  find.cpp  */
-		ach::MapArea*   findMapArea(sf::Vector2f v);
 		ach::MapObject* findMapObject(int id);
 	};
 }
