@@ -24,9 +24,11 @@ namespace ach
 		bool  v;
 
 
-		 PhysLine(ach::PhysType _type, sf::Vector2f _a, sf::Vector2f _b, sf::Vector2f pos);
+		 PhysLine();
+		 PhysLine(ach::PhysType _type, sf::Vector2f a, sf::Vector2f b, sf::Vector2f pos);
 		~PhysLine();
 
+		void  set(sf::Vector2f a, sf::Vector2f b);
 		void  calc();
 		float diff(float x, float left, float right, bool max);
 		float value(float x);

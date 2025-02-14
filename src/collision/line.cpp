@@ -6,12 +6,23 @@
      * constructor
 
 ***********************************************************************/
+ach::PhysLine::PhysLine()
+{
+	type = ach::PhysType::ptSolid;
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * constructor
+
+***********************************************************************/
 ach::PhysLine::PhysLine(ach::PhysType _type, sf::Vector2f a, sf::Vector2f b, sf::Vector2f pos)
 {
 	type = _type;
 
-	line.set(a + pos, b + pos);
-	calc();
+	set(a + pos, b + pos);
 }
 
 
@@ -23,6 +34,19 @@ ach::PhysLine::PhysLine(ach::PhysType _type, sf::Vector2f a, sf::Vector2f b, sf:
 ***********************************************************************/
 ach::PhysLine::~PhysLine()
 {
+}
+
+
+
+/***********************************************************************
+     * PhysLine
+     * set
+
+***********************************************************************/
+void ach::PhysLine::set(sf::Vector2f a, sf::Vector2f b)
+{
+	line.set(a, b);
+	calc();
 }
 
 

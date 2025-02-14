@@ -6,13 +6,16 @@ namespace ach
 {
 	struct MapObject
 	{
-		ach::ProcessWorld *world;
-		ach::Model        *model;
-		ach::Phys          phys;
+		std::vector<ach::PhysLine*> lines;
 
-		int  id;
-		bool alive;
-		bool solid;
+		ach::ProcessWorld          *world;
+
+		ach::Model *model;
+		ach::Phys   phys;
+
+		int         id;
+		bool        alive;
+		bool        solid;
 
 
 		         MapObject(ach::ProcessWorld *_world, json_t *obj);
@@ -23,10 +26,12 @@ namespace ach
 
 		bool visible();
 		void process();
+		void box();
 
 		virtual void reset();
 
 		virtual void init(ach::Map*) {};
+		virtual void handle()        {};
 		virtual void touch()         {};
 		virtual void use()           {};
 	};

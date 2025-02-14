@@ -15,6 +15,11 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 
 	phys.init(vector_json_rect(obj));
 
+	lines.push_back(new ach::PhysLine());
+	lines.push_back(new ach::PhysLine());
+	lines.push_back(new ach::PhysLine());
+	lines.push_back(new ach::PhysLine());
+
 	reset();
 }
 
@@ -29,6 +34,8 @@ ach::MapObject::~MapObject()
 {
 	if (model)
 		delete model;
+
+	list_delete(lines);
 }
 
 
@@ -92,9 +99,28 @@ void ach::MapObject::process()
 	if (!visible())
 		return;
 
-	// TODO: self-process
+	handle();
 
-	// TODO: if solid - recalculate lines and add to map solid lines
+	if (solid)
+		box();
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * box
+
+***********************************************************************/
+void ach::MapObject::box()
+{
+	lines[0]->set(rect_lt(phys.rect), rect_rt(phys.rect));
+	lines[1]->set(rect_rt(phys.rect), rect_rb(phys.rect));
+	lines[2]->set(rect_rb(phys.rect), rect_lb(phys.rect));
+	lines[3]->set(rect_lb(phys.rect), rect_lt(phys.rect));
+
+	list_foreach(lines)
+		world->map->solids.push_back(lines[i]);
 }
 
 

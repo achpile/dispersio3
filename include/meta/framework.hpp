@@ -33,6 +33,7 @@
 #include "framework/math/vector.hpp"
 #include "framework/math/projection.hpp"
 #include "framework/math/line.hpp"
+#include "framework/math/rect.hpp"
 
 #include "framework/html/html.hpp"
 #include "framework/html/include.hpp"
