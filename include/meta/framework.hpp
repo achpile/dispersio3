@@ -19,6 +19,7 @@
 #include "framework/misc/handler.hpp"
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
+#include "framework/misc/pair.hpp"
 
 #include "framework/random/random.hpp"
 #include "framework/random/item.hpp"
