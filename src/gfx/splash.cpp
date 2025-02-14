@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color) : Effect()
+ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color, float cone, int count) : Effect()
 {
 	particle = new ach::ParticleSystemSplash(PARTICLE_SPLASH_SIZE);
 
@@ -16,12 +16,12 @@ ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color) : Effect()
 	particle->pos     = pos;
 	particle->dir     = sf::Vector2f(0.0f, -1.0f);
 	particle->color   = color;
-	particle->cone    = MATH_PI / 2.0f;
+	particle->cone    = cone;
 	particle->life    = 0.06f;
 	particle->speed   = 300.0f;
 	particle->gravity = false;
 
-	particle->init(6);
+	particle->init(count);
 }
 
 

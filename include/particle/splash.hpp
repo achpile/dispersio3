@@ -24,7 +24,7 @@ namespace ach
 		bool update();
 		bool process(ach::Particle *particle);
 
-		void add();
+		void add(float angle);
 
 		void init(int count);
 	};

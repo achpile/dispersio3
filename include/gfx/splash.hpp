@@ -9,7 +9,7 @@ namespace ach
 		ach::ParticleSystemSplash *particle;
 
 
-		 EffectSplash(sf::Vector2f pos, sf::Color color);
+		 EffectSplash(sf::Vector2f pos, sf::Color color, float cone, int count);
 		~EffectSplash();
 
 		bool update();

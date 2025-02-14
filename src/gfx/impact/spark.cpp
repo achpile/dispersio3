@@ -17,11 +17,11 @@ ach::ImpactSpark::ImpactSpark(sf::Vector2f _pos, sf::Vector2f _dir, sf::Color _c
 	particle->dir     = dir;
 	particle->color   = color;
 	particle->cone    = MATH_PI / 2.0f;
-	particle->life    = 0.3f;
+	particle->life    = 0.03f;
 	particle->speed   = 100.0f;
 	particle->gravity = true;
 
-	particle->init(10);
+	particle->init(8);
 }
 
 

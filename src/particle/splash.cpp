@@ -63,14 +63,12 @@ bool ach::ParticleSystemSplash::process(ach::Particle *particle)
      * add
 
 ***********************************************************************/
-void ach::ParticleSystemSplash::add()
+void ach::ParticleSystemSplash::add(float angle)
 {
-	float angle = vector_angle(dir);
-
 	particles.push_back(new ach::Particle());
 
 	particles.back()->pos   = pos;
-	particles.back()->vel   = vector_set_len(vector_create(angle + random_float(cone)), random_float(speed / 2.0f, speed));
+	particles.back()->vel   = vector_set_len(vector_create(angle), speed);
 	particles.back()->spr   = spr;
 	particles.back()->color = color;
 
@@ -89,6 +87,9 @@ void ach::ParticleSystemSplash::add()
 ***********************************************************************/
 void ach::ParticleSystemSplash::init(int count)
 {
+	float angle = vector_angle(dir);
+	float step  = 2 * cone / (count - 1);
+
 	for (int i = 0; i < count; i++)
-		add();
+		add(angle + step * i - cone);
 }
