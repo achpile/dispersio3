@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
- <objecttype name="area" color="#99c1f1"/>
- <objecttype name="barrier" color="#f66151"/>
- <objecttype name="character" color="#e01b24"/>
+ <objecttype name="barrier" color="#a51d2d"/>
+ <objecttype name="character" color="#f66151"/>
  <objecttype name="checkpoint" color="#dc8add"/>
- <objecttype name="death" color="#241f31"/>
- <objecttype name="decor" color="#57e389"/>
- <objecttype name="door" color="#865e3c">
+ <objecttype name="collectable" color="#99c1f1"/>
+ <objecttype name="death" color="#deddda"/>
+ <objecttype name="decor" color="#26a269"/>
+ <objecttype name="door" color="#b5835a">
   <property name="pair" type="object" default="0"/>
  </objecttype>
- <objecttype name="platform" color="#e5a50a"/>
- <objecttype name="solid" color="#c0bfbc"/>
+ <objecttype name="fragile" color="#ff7800"/>
+ <objecttype name="moving" color="#e5a50a"/>
+ <objecttype name="platform" color="#f9f06b"/>
+ <objecttype name="solid" color="#77767b"/>
+ <objecttype name="water" color="#1a5fb4"/>
 </objecttypes>
