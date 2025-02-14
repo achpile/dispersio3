@@ -55,6 +55,8 @@ ach::Map::~Map()
 ***********************************************************************/
 void ach::Map::update()
 {
+	solids.clear();
+
 	process();
 	collide();
 
@@ -111,6 +113,9 @@ void ach::Map::process()
 {
 	list_foreach(characters)
 		characters[i]->process();
+
+	list_foreach(objects)
+		objects[i]->process();
 }
 
 

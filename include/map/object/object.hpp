@@ -12,6 +12,7 @@ namespace ach
 
 		int  id;
 		bool alive;
+		bool solid;
 
 
 		         MapObject(ach::ProcessWorld *_world, json_t *obj);
@@ -21,6 +22,7 @@ namespace ach
 		void render();
 
 		bool visible();
+		void process();
 
 		virtual void reset();
 

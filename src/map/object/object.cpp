@@ -10,6 +10,7 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 {
 	world = _world;
 	model = NULL;
+	solid = false;
 	id    = json_object_get_integer(obj, "id");
 
 	phys.init(vector_json_rect(obj));
@@ -77,6 +78,23 @@ void ach::MapObject::render()
 bool ach::MapObject::visible()
 {
 	return world->map->cam->check(phys.rect);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * process
+
+***********************************************************************/
+void ach::MapObject::process()
+{
+	if (!visible())
+		return;
+
+	// TODO: self-process
+
+	// TODO: if solid - recalculate lines and add to map solid lines
 }
 
 

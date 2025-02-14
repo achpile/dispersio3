@@ -78,6 +78,10 @@ ach::PhysLine* ach::Map::collidePhys(ach::Phys *phys)
 	std::vector<ach::PhysLine*> list;
 
 	collision->fill(&list, &phys->rect);
+
+	list_foreach(solids)
+		list.push_back(solids[i]);
+
 	collision->sort(&list, phys);
 
 	if (!list.size()) return NULL;
@@ -101,6 +105,10 @@ bool ach::Map::collideLine(ach::Line *line, sf::Vector2f *n)
 	std::vector<ach::PhysLine*> list;
 
 	collision->fill(&list, &line->r);
+
+	list_foreach(solids)
+		list.push_back(solids[i]);
+
 	collision->sort(&list,  line);
 
 	list_foreach(list)
