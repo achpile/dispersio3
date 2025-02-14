@@ -29,6 +29,8 @@ namespace ach
 		bool update();
 		void render();
 
+		bool visible();
+
 		void init();
 		void hit(sf::Vector2f n);
 		void destroy();

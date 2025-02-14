@@ -50,6 +50,9 @@ ach::Character::~Character()
 ***********************************************************************/
 bool ach::Character::update()
 {
+	if (!visible())
+		return true;
+
 	body->update();
 
 	if (!alive)
@@ -84,7 +87,22 @@ bool ach::Character::update()
 ***********************************************************************/
 void ach::Character::render()
 {
+	if (!visible())
+		return;
+
 	body->render();
+}
+
+
+
+/***********************************************************************
+     * Character
+     * visible
+
+***********************************************************************/
+bool ach::Character::visible()
+{
+	return world->map->cam->check(phys.rect);
 }
 
 
@@ -97,6 +115,9 @@ void ach::Character::render()
 void ach::Character::process()
 {
 	if (!alive)
+		return;
+
+	if (!visible())
 		return;
 
 	ai->update();

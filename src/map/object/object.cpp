@@ -10,10 +10,11 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 {
 	world = _world;
 	model = NULL;
-	alive = true;
 	id    = json_object_get_integer(obj, "id");
 
 	phys.init(vector_json_rect(obj));
+
+	reset();
 }
 
 
@@ -38,10 +39,13 @@ ach::MapObject::~MapObject()
 ***********************************************************************/
 bool ach::MapObject::update()
 {
+	if (!visible())
+		return true;
+
 	if (model)
 		model->update();
 
-	return alive;
+	return true;
 }
 
 
@@ -53,6 +57,36 @@ bool ach::MapObject::update()
 ***********************************************************************/
 void ach::MapObject::render()
 {
+	if (!alive)
+		return;
+
+	if (!visible())
+		return;
+
 	if (model)
 		model->render(phys.pos);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * visible
+
+***********************************************************************/
+bool ach::MapObject::visible()
+{
+	return world->map->cam->check(phys.rect);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * reset
+
+***********************************************************************/
+void ach::MapObject::reset()
+{
+	alive = true;
 }

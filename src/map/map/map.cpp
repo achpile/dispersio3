@@ -135,7 +135,7 @@ void ach::Map::viewport(sf::Vector2f v)
 
 	list_foreach(characters)
 		if (characters[i]->enemy)
-			characters[i]->reset();
+			characters[i]->respawn();
 }
 
 

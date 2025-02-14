@@ -56,6 +56,9 @@ bool ach::Projectile::update()
 	if (!alive)
 		return false;
 
+	if (!visible())
+		return false;
+
 	line.a = last;
 	last   = line.b;
 
@@ -93,6 +96,18 @@ void ach::Projectile::render()
 		return;
 
 	model->render(phys.pos);
+}
+
+
+
+/***********************************************************************
+     * Projectile
+     * visible
+
+***********************************************************************/
+bool ach::Projectile::visible()
+{
+	return world->map->cam->check(phys.rect);
 }
 
 

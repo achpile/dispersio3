@@ -20,10 +20,13 @@ namespace ach
 		bool update();
 		void render();
 
+		bool visible();
+
+		virtual void reset();
+
 		virtual void init(ach::Map*) {};
 		virtual void touch()         {};
 		virtual void use()           {};
-		virtual void reset()         {};
 	};
 }
 

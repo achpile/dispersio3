@@ -31,6 +31,7 @@ namespace ach
 		bool update();
 		void render();
 
+		bool visible();
 		void process();
 
 		void respawn();

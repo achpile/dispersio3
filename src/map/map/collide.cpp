@@ -9,7 +9,7 @@
 void ach::Map::collide()
 {
 	list_foreach(characters)
-		if (characters[i]->alive)
+		if (characters[i]->alive && characters[i]->visible())
 			collideCharacter(characters[i]);
 
 	list_foreach(projectiles)
@@ -174,6 +174,9 @@ void ach::Map::collideEnemies(ach::Character *character)
 	list_foreach(characters)
 	{
 		if (!characters[i]->alive)
+			continue;
+
+		if (!characters[i]->visible())
 			continue;
 
 		if (character->enemy == characters[i]->enemy)
