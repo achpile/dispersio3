@@ -47,6 +47,9 @@ ach::MapObject::~MapObject()
 ***********************************************************************/
 bool ach::MapObject::update()
 {
+	if (!alive)
+		return true;
+
 	if (!visible())
 		return true;
 
