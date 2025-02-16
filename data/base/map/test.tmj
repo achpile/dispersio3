@@ -730,97 +730,97 @@
          "tiles":[
                 {
                  "id":0,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_ld1.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_ld1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":1,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_ld2.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_ld2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":2,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_lu1.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_lu1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":3,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_lu2.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_lu2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":4,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_rd1.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_rd1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":5,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_rd2.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_rd2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":6,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_ru1.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_ru1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":7,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c22_ru2.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c22_ru2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":8,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c45_ld.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c45_ld.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":9,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c45_lu.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c45_lu.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":10,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c45_rd.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c45_rd.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":11,
-                 "image":"..\/gfx\/game\/tiles\/dev\/c45_ru.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/c45_ru.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":12,
-                 "image":"..\/gfx\/game\/tiles\/dev\/fill.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/fill.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":13,
-                 "image":"..\/gfx\/game\/tiles\/dev\/platform.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/platform.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":14,
-                 "image":"..\/gfx\/game\/tiles\/dev\/wall.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/wall.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":15,
-                 "image":"..\/gfx\/game\/tiles\/dev\/spike.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/spike.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],
