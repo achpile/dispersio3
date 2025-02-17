@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="54">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="55">
  <editorsettings>
   <export target="../../../data/base/map/test.tmj" format="json"/>
  </editorsettings>
@@ -135,6 +135,15 @@
   <object id="51" name="MovingDev" type="moving" x="352" y="304" width="32" height="96"/>
   <object id="52" name="CollectBag" type="collectable" x="432" y="320" width="16" height="16"/>
   <object id="53" name="CollectBag" type="collectable" x="224" y="96" width="16" height="16"/>
+  <object id="54" name="MovingDev" type="moving" x="688" y="368" width="224" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Orientation" propertytype="@orientation" value="horizontal"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="336" y="112" width="16" height="16"/>
