@@ -4,13 +4,14 @@
 
 #include "framework/string/defines.hpp"
 #include "framework/string/pair.hpp"
+#include "framework/string/pair.inl"
 #include "framework/string/option.hpp"
 #include "framework/string/check.hpp"
 #include "framework/string/color.hpp"
 #include "framework/string/utf8.hpp"
 
-#include "framework/log/pair.hpp"
 #include "framework/log/log.hpp"
+#include "framework/log/pair.hpp"
 
 #include "framework/misc/arch.hpp"
 #include "framework/misc/sfml.hpp"
@@ -52,7 +53,6 @@
 #include "framework/json/macros.hpp"
 
 #include "framework/datamodel/defines.hpp"
-#include "framework/datamodel/pair.hpp"
 #include "framework/datamodel/attr.hpp"
 #include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/class.hpp"
@@ -62,10 +62,11 @@
 #include "framework/datamodel/preprocessor.hpp"
 #include "framework/datamodel/docs.hpp"
 #include "framework/datamodel/datamodel.hpp"
+#include "framework/datamodel/pair.hpp"
 
-#include "framework/control/pair.hpp"
 #include "framework/control/key.hpp"
 #include "framework/control/pad.hpp"
+#include "framework/control/pair.hpp"
 
 #include "framework/gfx/sprite.hpp"
 #include "framework/gfx/sheet.hpp"

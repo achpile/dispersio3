@@ -7,12 +7,12 @@
 #include "meta/forward.hpp"
 #include "meta/framework.hpp"
 
-#include "collision/pair.hpp"
 #include "collision/phys.hpp"
 #include "collision/line.hpp"
 #include "collision/algo.hpp"
 #include "collision/quadrant.hpp"
 #include "collision/collision.hpp"
+#include "collision/pair.hpp"
 
 #include "particle/stars.hpp"
 #include "particle/smoke.hpp"
@@ -30,8 +30,8 @@
 #include "data/map.hpp"
 #include "data/data.hpp"
 
-#include "model/pair.hpp"
 #include "model/model.hpp"
+#include "model/pair.hpp"
 
 #include "gfx/gfx.hpp"
 #include "gfx/sheet.hpp"
@@ -48,16 +48,16 @@
 #include "container/settings.hpp"
 #include "container/language.hpp"
 
-#include "character/ai/pair.hpp"
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"
+#include "character/ai/pair.hpp"
 
 #include "character/body/body.hpp"
 #include "character/body/simple.hpp"
 #include "character/body/player.hpp"
 
-#include "character/projectile/pair.hpp"
 #include "character/projectile/projectile.hpp"
+#include "character/projectile/pair.hpp"
 
 #include "character/weapon.hpp"
 #include "character/character.hpp"
@@ -69,10 +69,10 @@
 #include "map/object/collectable.hpp"
 #include "map/object/moving.hpp"
 
-#include "map/tile/pair.hpp"
 #include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"
 #include "map/tile/maptile.hpp"
+#include "map/tile/pair.hpp"
 
 #include "map/camera.hpp"
 #include "map/map.hpp"
@@ -80,13 +80,13 @@
 #include "process/process.hpp"
 #include "process/world.hpp"
 
-#include "state/pair.hpp"
 #include "state/state.hpp"
 #include "state/start.hpp"
 #include "state/menu.hpp"
 #include "state/game.hpp"
 #include "state/credits.hpp"
 #include "state/end.hpp"
+#include "state/pair.hpp"
 
 #include "handler/menu.hpp"
 

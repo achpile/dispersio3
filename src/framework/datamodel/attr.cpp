@@ -34,7 +34,7 @@ ach::DataType json_attr_get_type(json_t *obj)
 		return ach::DataType::dtUnknown;
 	}
 
-	ach::DataType res = (ach::DataType)pair_get_enum(type, pairAttrType);
+	ach::DataType res = pair_get_enum(type, pairAttrType);
 
 	if (res == ach::DataType::dtUnknown)
 		logger->log(ach::LogLevel::llError, "Unknown type: '%s'", type);

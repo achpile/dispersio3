@@ -21,9 +21,9 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	sfxBump      = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"   ));
 	sfxExplosion = db->getSound(json_object_get_branch_string(obj, "Explosion.Sound"));
 
-	impact       = (ach::ImpactType)pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"           ), pairImpact);
-	tracer       = (ach::TracerType)pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"           ), pairTracer);
-	orient       = (ach::OrientType)pair_get_enum(json_object_get_branch_string(obj, "Appearance.Orientation"), pairOrient);
+	impact       = pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"           ), pairImpact);
+	tracer       = pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"           ), pairTracer);
+	orient       = pair_get_enum(json_object_get_branch_string(obj, "Appearance.Orientation"), pairOrient);
 
 	color        = str_to_color(json_object_get_branch_string(obj, "Appearance.Color"));
 	colorImpact  = str_to_color(json_object_get_branch_string(obj, "Impact.Color"    ));

@@ -2,6 +2,6 @@
 #define __COLLISION_PAIR
 
 
-extern ach::Pair pairPhysType[];
+extern ach::Pair<ach::PhysType> pairPhysType[];
 
 #endif

@@ -64,7 +64,7 @@ void handler_menu_audio(void *, json_t *)
 ***********************************************************************/
 void handler_menu_state(void *, json_t *data)
 {
-	app->stateSet((ach::GameState)pair_get_enum(json_string_value(data), pairGameState));
+	app->stateSet(pair_get_enum(json_string_value(data), pairGameState));
 }
 
 

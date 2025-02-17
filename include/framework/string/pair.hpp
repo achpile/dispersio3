@@ -4,16 +4,17 @@
 
 namespace ach
 {
+	template <typename T>
 	struct Pair
 	{
-		int         num;
+		T           num;
 		const char *str;
 	};
 }
 
 
-const char *pair_get_string(int val, ach::Pair pairs[]);
-int         pair_get_enum(const char *val, ach::Pair pairs[]);
-bool        pair_has_enum(int val, ach::Pair pairs[]);
+template <typename T> const char *pair_get_string(T val, ach::Pair<T> pairs[]);
+template <typename T> T           pair_get_enum(const char *val, ach::Pair<T> pairs[]);
+template <typename T> bool        pair_has_enum(T val, ach::Pair<T> pairs[]);
 
 #endif

@@ -5,7 +5,7 @@
      * pairDirection
 
 ***********************************************************************/
-ach::Pair pairDirection[] =
+ach::Pair<ach::Direction> pairDirection[] =
 {
 	{.num = ach::Direction::dUp   , .str = "up"   },
 	{.num = ach::Direction::dDown , .str = "down" },
@@ -21,7 +21,7 @@ ach::Pair pairDirection[] =
      * pairOrientation
 
 ***********************************************************************/
-ach::Pair pairOrientation[] =
+ach::Pair<ach::Orientation> pairOrientation[] =
 {
 	{.num = ach::Orientation::oVertical  , .str = "vertical"  },
 	{.num = ach::Orientation::oHorizontal, .str = "horizontal"},

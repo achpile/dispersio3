@@ -5,7 +5,7 @@
      * pairTracer
 
 ***********************************************************************/
-ach::Pair pairTracer[] =
+ach::Pair<ach::TracerType> pairTracer[] =
 {
 	{.num = ach::TracerType::ttNone , .str = "none" },
 	{.num = ach::TracerType::ttLine , .str = "line" },
@@ -20,7 +20,7 @@ ach::Pair pairTracer[] =
      * pairImpact
 
 ***********************************************************************/
-ach::Pair pairImpact[] =
+ach::Pair<ach::ImpactType> pairImpact[] =
 {
 	{.num = ach::ImpactType::itNone , .str = "none" },
 	{.num = ach::ImpactType::itSpark, .str = "spark"},
@@ -34,7 +34,7 @@ ach::Pair pairImpact[] =
      * pairOrient
 
 ***********************************************************************/
-ach::Pair pairOrient[] =
+ach::Pair<ach::OrientType> pairOrient[] =
 {
 	{.num = ach::OrientType::otNone     , .str = "none"     },
 	{.num = ach::OrientType::otDirection, .str = "direction"},

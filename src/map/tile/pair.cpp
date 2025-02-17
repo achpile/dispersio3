@@ -5,7 +5,7 @@
      * pairTileLayer
 
 ***********************************************************************/
-ach::Pair pairTileLayer[] =
+ach::Pair<ach::TileLayer> pairTileLayer[] =
 {
 	{.num = ach::TileLayer::tlWall , .str = "wall" },
 	{.num = ach::TileLayer::tlBlock, .str = "block"},

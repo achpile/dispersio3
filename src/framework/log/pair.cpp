@@ -5,7 +5,7 @@
      * pairLog
 
 ***********************************************************************/
-ach::Pair pairLog[] =
+ach::Pair<ach::LogLevel> pairLog[] =
 {
 	{.num = ach::LogLevel::llDebug  , .str = "DBG" },
 	{.num = ach::LogLevel::llInfo   , .str = "INFO"},

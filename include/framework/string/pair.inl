@@ -1,11 +1,13 @@
-#include "meta/headers.hpp"
+#ifndef __FRAMEWORK_STRING_PAIR_INL
+#define __FRAMEWORK_STRING_PAIR_INL
 
 
 /***********************************************************************
      * pair_get_string
 
 ***********************************************************************/
-const char *pair_get_string(int val, ach::Pair pairs[])
+template <typename T>
+const char *pair_get_string(T val, ach::Pair<T> pairs[])
 {
 	for (int i = 0; pairs[i].str; i++)
 		if (val == pairs[i].num)
@@ -20,10 +22,11 @@ const char *pair_get_string(int val, ach::Pair pairs[])
      * pair_get_enum
 
 ***********************************************************************/
-int pair_get_enum(const char * val, ach::Pair pairs[])
+template <typename T>
+T pair_get_enum(const char * val, ach::Pair<T> pairs[])
 {
 	if (!val)
-		return 0;
+		return (T)0;
 
 	int i;
 
@@ -40,7 +43,8 @@ int pair_get_enum(const char * val, ach::Pair pairs[])
      * pair_has_enum
 
 ***********************************************************************/
-bool pair_has_enum(int val, ach::Pair pairs[])
+template <typename T>
+bool pair_has_enum(T val, ach::Pair<T> pairs[])
 {
 	for (int i = 0; pairs[i].str; i++)
 		if (val == pairs[i].num)
@@ -48,3 +52,5 @@ bool pair_has_enum(int val, ach::Pair pairs[])
 
 	return false;
 }
+
+#endif

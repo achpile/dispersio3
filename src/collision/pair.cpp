@@ -5,7 +5,7 @@
      * pairPhysType
 
 ***********************************************************************/
-ach::Pair pairPhysType[] =
+ach::Pair<ach::PhysType> pairPhysType[] =
 {
 	{.num = ach::PhysType::ptSolid   , .str = "solid"   },
 	{.num = ach::PhysType::ptPlatform, .str = "platform"},

@@ -2,6 +2,6 @@
 #define __STATE_PAIR
 
 
-extern ach::Pair pairGameState[];
+extern ach::Pair<ach::GameState> pairGameState[];
 
 #endif

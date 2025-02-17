@@ -2,7 +2,7 @@
 #define __FRAMEWORK_ORIENTATION_PAIR
 
 
-extern ach::Pair pairDirection[];
-extern ach::Pair pairOrientation[];
+extern ach::Pair<ach::Direction>   pairDirection[];
+extern ach::Pair<ach::Orientation> pairOrientation[];
 
 #endif

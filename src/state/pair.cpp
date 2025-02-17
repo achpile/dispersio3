@@ -5,7 +5,7 @@
      * pairGameState
 
 ***********************************************************************/
-ach::Pair pairGameState[] =
+ach::Pair<ach::GameState> pairGameState[] =
 {
 	{.num = ach::GameState::gsStart  , .str = "start"  },
 	{.num = ach::GameState::gsMenu   , .str = "menu"   },

@@ -150,7 +150,7 @@ void ach::Map::loadLayers(json_t *mapdata)
 ***********************************************************************/
 void ach::Map::loadLayerTiles(json_t *layer)
 {
-	ach::TileLayer tl = (ach::TileLayer)pair_get_enum(json_object_get_string(layer, "name"), pairTileLayer);
+	ach::TileLayer tl = pair_get_enum(json_object_get_string(layer, "name"), pairTileLayer);
 
 	for (int x = 0; x < sizeMap.x; x++)
 		for (int y = 0; y < sizeMap.y; y++)
@@ -194,7 +194,7 @@ void ach::Map::loadPhys(json_t *layer)
 	json_array_foreach(json_object_get(layer, "objects"), index, obj)
 	{
 		pos  = vector_json_coord(obj);
-		type = (ach::PhysType)pair_get_enum(json_object_get_string(obj, "type"), pairPhysType);
+		type = pair_get_enum(json_object_get_string(obj, "type"), pairPhysType);
 
 		json_array_foreach(json_object_get(obj, "polyline"), i, coord)
 		{

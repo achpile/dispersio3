@@ -5,7 +5,7 @@
      * pairAction
 
 ***********************************************************************/
-ach::Pair pairAction[] =
+ach::Pair<ach::ControlAction> pairAction[] =
 {
 	{.num = ach::ControlAction::caUp   , .str = "Up"   },
 	{.num = ach::ControlAction::caDown , .str = "Down" },
@@ -23,7 +23,7 @@ ach::Pair pairAction[] =
      * pairKey
 
 ***********************************************************************/
-ach::Pair pairKey[] =
+ach::Pair<sf::Keyboard::Key> pairKey[] =
 {
 	{.num = sf::Keyboard::A        , .str = "A"        },
 	{.num = sf::Keyboard::B        , .str = "B"        },

@@ -18,7 +18,7 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	barrel  = json_object_get_branch_real(obj, "Appearance.Barrel");
 	color   = str_to_color(json_object_get_branch_string(obj, "Appearance.Color"));
 
-	ai      = (ach::AIType)pair_get_enum(json_object_get_branch_string(obj, "Game.AI"), pairAI);
+	ai      = pair_get_enum(json_object_get_branch_string(obj, "Game.AI"), pairAI);
 	hitbox  = vector_json_coord(json_object_get_branch(obj, "Game.Hitbox"), "X", "Y");
 
 	speed   = json_object_get_branch_real   (obj, "Stats.Speed" );

@@ -2,7 +2,7 @@
 #define __FRAMEWORK_CONTROL_PAIR
 
 
-extern ach::Pair pairAction[];
-extern ach::Pair pairKey[];
+extern ach::Pair<ach::ControlAction> pairAction[];
+extern ach::Pair<sf::Keyboard::Key>  pairKey[];
 
 #endif

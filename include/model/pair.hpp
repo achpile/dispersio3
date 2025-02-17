@@ -2,6 +2,6 @@
 #define __MODEL_PAIR
 
 
-extern ach::Pair pairModel[];
+extern ach::Pair<ach::ModelType> pairModel[];
 
 #endif

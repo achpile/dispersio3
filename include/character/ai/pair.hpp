@@ -2,6 +2,6 @@
 #define __CHARACTER_AI_PAIR
 
 
-extern ach::Pair pairAI[];
+extern ach::Pair<ach::AIType> pairAI[];
 
 #endif

@@ -5,7 +5,7 @@
      * pairModel
 
 ***********************************************************************/
-ach::Pair pairModel[] =
+ach::Pair<ach::ModelType> pairModel[] =
 {
 	{.num = ach::ModelType::mtNone  , .str = "none"  },
 	{.num = ach::ModelType::mtSimple, .str = "simple"},

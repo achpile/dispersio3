@@ -2,6 +2,6 @@
 #define __FRAMEWORK_LOG_PAIR
 
 
-extern ach::Pair pairLog[];
+extern ach::Pair<ach::LogLevel> pairLog[];
 
 #endif

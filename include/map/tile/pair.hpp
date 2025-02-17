@@ -2,6 +2,6 @@
 #define __MAP_TILE_PAIR
 
 
-extern ach::Pair pairTileLayer[];
+extern ach::Pair<ach::TileLayer> pairTileLayer[];
 
 #endif

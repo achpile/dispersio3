@@ -5,7 +5,7 @@
      * pairAttrType
 
 ***********************************************************************/
-ach::Pair pairAttrType[] =
+ach::Pair<ach::DataType> pairAttrType[] =
 {
 	{.num = ach::DataType::dtObject  , .str = "object"  },
 	{.num = ach::DataType::dtString  , .str = "string"  },

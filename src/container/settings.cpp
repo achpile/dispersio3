@@ -179,7 +179,7 @@ void ach::Settings::setWindowSize(sf::Vector2u size)
 ***********************************************************************/
 sf::Keyboard::Key ach::Settings::getKeyCode(ach::ControlAction action)
 {
-	return (sf::Keyboard::Key)pair_get_enum(json_object_getv_branch_string(data, "Control.%s", pair_get_string(action, pairAction)), pairKey);
+	return pair_get_enum(json_object_getv_branch_string(data, "Control.%s", pair_get_string(action, pairAction)), pairKey);
 }
 
 
