@@ -22,6 +22,7 @@ namespace ach
 		void calc();
 		void init(sf::Vector2f _size);
 		void init(sf::FloatRect _rect);
+		void resize(sf::Vector2f _size);
 		void reset();
 	};
 }
