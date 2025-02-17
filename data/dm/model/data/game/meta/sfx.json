@@ -2,17 +2,17 @@
     "@attr": {
         "type": "object"
     },
-    "Collect": {
-        "@attr": {
-            "data": "Data.SFX",
-            "default": "Collect",
-            "type": "link"
-        }
-    },
     "Checkpoint": {
         "@attr": {
             "data": "Data.SFX",
             "default": "Checkpoint",
+            "type": "link"
+        }
+    },
+    "Collect": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Collect",
             "type": "link"
         }
     }

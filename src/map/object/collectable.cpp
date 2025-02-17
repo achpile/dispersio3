@@ -38,6 +38,5 @@ void ach::MapObjectCollectable::touch()
 	alive = false;
 
 	world->map->gfx.push_back(new ach::EffectSplash(phys.pos, sf::Color::White, MATH_PI / 2.0f, 8));
-
 	sm->play(sfx->snd);
 }
