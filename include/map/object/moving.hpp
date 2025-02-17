@@ -6,8 +6,19 @@ namespace ach
 {
 	struct MapObjectMoving : MapObject
 	{
+		ach::Direction dir;
+		sf::Vector2f   spawn;
+
+		float speed;
+		float min;
+		float max;
+
+
 		 MapObjectMoving(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectMoving();
+
+		void reset();
+		void handle();
 	};
 }
 

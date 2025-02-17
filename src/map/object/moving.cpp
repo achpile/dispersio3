@@ -23,3 +23,25 @@ ach::MapObjectMoving::MapObjectMoving(ach::ProcessWorld *_world, json_t *obj) : 
 ach::MapObjectMoving::~MapObjectMoving()
 {
 }
+
+
+
+/***********************************************************************
+     * MapObjectMoving
+     * reset
+
+***********************************************************************/
+void ach::MapObjectMoving::reset()
+{
+}
+
+
+
+/***********************************************************************
+     * MapObjectMoving
+     * handle
+
+***********************************************************************/
+void ach::MapObjectMoving::handle()
+{
+}
