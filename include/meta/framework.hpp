@@ -13,13 +13,11 @@
 #include "framework/log/log.hpp"
 
 #include "framework/misc/arch.hpp"
-#include "framework/misc/direction.hpp"
 #include "framework/misc/sfml.hpp"
 #include "framework/misc/flag.hpp"
 #include "framework/misc/handler.hpp"
 #include "framework/misc/list.hpp"
 #include "framework/misc/file.hpp"
-#include "framework/misc/pair.hpp"
 
 #include "framework/random/random.hpp"
 #include "framework/random/item.hpp"
@@ -35,6 +33,10 @@
 #include "framework/math/projection.hpp"
 #include "framework/math/line.hpp"
 #include "framework/math/rect.hpp"
+
+#include "framework/orientation/orientation.hpp"
+#include "framework/orientation/direction.hpp"
+#include "framework/orientation/pair.hpp"
 
 #include "framework/html/html.hpp"
 #include "framework/html/include.hpp"

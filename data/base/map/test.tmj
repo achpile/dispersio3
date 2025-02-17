@@ -253,7 +253,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up",
+                             "Orientation":"vertical",
                              "Speed":0
                             }
                         }],
@@ -275,7 +275,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up",
+                             "Orientation":"vertical",
                              "Speed":0
                             }
                         }],

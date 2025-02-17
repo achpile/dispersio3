@@ -14,3 +14,17 @@ ach::Pair pairDirection[] =
 
 	{.num = ach::Direction::dCount, .str = NULL   },
 };
+
+
+
+/***********************************************************************
+     * pairOrientation
+
+***********************************************************************/
+ach::Pair pairOrientation[] =
+{
+	{.num = ach::Orientation::oVertical  , .str = "vertical"  },
+	{.num = ach::Orientation::oHorizontal, .str = "horizontal"},
+
+	{.num = ach::Orientation::oCount     , .str = NULL        },
+};

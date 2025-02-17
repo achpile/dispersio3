@@ -24,15 +24,26 @@
             "valuesAsFlags": false
         },
         {
+            "id": 15,
+            "name": "@orientation",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "vertical",
+                "horizontal"
+            ],
+            "valuesAsFlags": false
+        },
+        {
             "color": "#ffa0a0a4",
             "drawFill": true,
             "id": 2,
             "members": [
                 {
-                    "name": "Direction",
-                    "propertyType": "@direction",
+                    "name": "Orientation",
+                    "propertyType": "@orientation",
                     "type": "string",
-                    "value": "up"
+                    "value": "vertical"
                 },
                 {
                     "name": "Speed",
