@@ -9,5 +9,36 @@
     ],
     "objectTypesFile": "objecttypes.xml",
     "propertyTypes": [
+        {
+            "id": 1,
+            "name": "direction",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "up",
+                "down",
+                "left",
+                "right"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "id": 2,
+            "members": [
+                {
+                    "name": "direction",
+                    "propertyType": "direction",
+                    "type": "string",
+                    "value": "up"
+                },
+                {
+                    "name": "speed",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "moving",
+            "type": "class"
+        }
     ]
 }

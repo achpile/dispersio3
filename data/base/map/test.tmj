@@ -187,6 +187,17 @@
                  "width":16,
                  "x":432,
                  "y":320
+                }, 
+                {
+                 "height":16,
+                 "id":53,
+                 "name":"CollectBag",
+                 "rotation":0,
+                 "type":"collectable",
+                 "visible":true,
+                 "width":16,
+                 "x":224,
+                 "y":96
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -452,7 +463,7 @@
                  "polyline":[
                         {
                          "x":0,
-                         "y":16
+                         "y":0
                         }, 
                         {
                          "x":0,
@@ -740,7 +751,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":53,
+ "nextobjectid":54,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",
