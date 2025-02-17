@@ -7,22 +7,48 @@
         "maps",
         "tilesets"
     ],
-    "objectTypesFile": "objecttypes.xml",
+    "properties": [
+    ],
     "propertyTypes": [
         {
-            "id": 1,
-            "name": "direction",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "up",
-                "down",
-                "left",
-                "right"
+            "color": "#ffa51d2d",
+            "drawFill": true,
+            "id": 3,
+            "members": [
             ],
-            "valuesAsFlags": false
+            "name": "barrier",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
         },
         {
+            "color": "#fff66151",
+            "drawFill": true,
+            "id": 4,
+            "members": [
+            ],
+            "name": "character",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffdc8add",
+            "drawFill": true,
+            "id": 5,
+            "members": [
+            ],
+            "name": "checkpoint",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
             "id": 2,
             "members": [
                 {
@@ -37,8 +63,144 @@
                     "value": 0
                 }
             ],
+            "name": "class-moving",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff99c1f1",
+            "drawFill": true,
+            "id": 6,
+            "members": [
+            ],
+            "name": "collectable",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffdeddda",
+            "drawFill": true,
+            "id": 7,
+            "members": [
+            ],
+            "name": "death",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ff26a269",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+            ],
+            "name": "decor",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "direction",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "up",
+                "down",
+                "left",
+                "right"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffb5835a",
+            "drawFill": true,
+            "id": 9,
+            "members": [
+                {
+                    "name": "pair",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "door",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffff7800",
+            "drawFill": true,
+            "id": 10,
+            "members": [
+            ],
+            "name": "fragile",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffe5a50a",
+            "drawFill": true,
+            "id": 11,
+            "members": [
+                {
+                    "name": "moving",
+                    "propertyType": "class-moving",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
             "name": "moving",
-            "type": "class"
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#fff9f06b",
+            "drawFill": true,
+            "id": 12,
+            "members": [
+            ],
+            "name": "platform",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ff77767b",
+            "drawFill": true,
+            "id": 13,
+            "members": [
+            ],
+            "name": "solid",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ff1a5fb4",
+            "drawFill": true,
+            "id": 14,
+            "members": [
+            ],
+            "name": "water",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
         }
     ]
 }
