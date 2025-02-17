@@ -6,8 +6,13 @@ namespace ach
 {
 	struct MapObjectCollectable : MapObject
 	{
+		ach::DataSound *sfx;
+
+
 		 MapObjectCollectable(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectCollectable();
+
+		void touch();
 	};
 }
 

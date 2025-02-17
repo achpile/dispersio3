@@ -11,6 +11,7 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 	world = _world;
 	model = NULL;
 	solid = false;
+	alive = true;
 	id    = json_object_get_integer(obj, "id");
 
 	phys.init(vector_json_rect(obj));
@@ -124,16 +125,4 @@ void ach::MapObject::box()
 
 	list_foreach(lines)
 		world->map->solids.push_back(lines[i]);
-}
-
-
-
-/***********************************************************************
-     * MapObject
-     * reset
-
-***********************************************************************/
-void ach::MapObject::reset()
-{
-	alive = true;
 }

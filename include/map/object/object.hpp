@@ -28,9 +28,8 @@ namespace ach
 		void process();
 		void box();
 
-		virtual void reset();
-
 		virtual void init(ach::Map*) {};
+		virtual void reset()         {};
 		virtual void handle()        {};
 		virtual void touch()         {};
 		virtual void use()           {};
