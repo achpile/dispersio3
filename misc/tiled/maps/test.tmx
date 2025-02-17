@@ -110,22 +110,22 @@
   <object id="7" name="DecorStatue" type="decor" x="288" y="192" width="32" height="32"/>
   <object id="40" name="DoorDev" type="door" x="880" y="128" width="32" height="32">
    <properties>
-    <property name="pair" type="object" value="42"/>
+    <property name="Pair" type="object" value="42"/>
    </properties>
   </object>
   <object id="41" name="DoorDev" type="door" x="704" y="384" width="32" height="32">
    <properties>
-    <property name="pair" type="object" value="43"/>
+    <property name="Pair" type="object" value="43"/>
    </properties>
   </object>
   <object id="42" name="DoorDev" type="door" x="864" y="384" width="32" height="32">
    <properties>
-    <property name="pair" type="object" value="40"/>
+    <property name="Pair" type="object" value="40"/>
    </properties>
   </object>
   <object id="43" name="DoorDev" type="door" x="512" y="304" width="32" height="32">
    <properties>
-    <property name="pair" type="object" value="41"/>
+    <property name="Pair" type="object" value="41"/>
    </properties>
   </object>
   <object id="44" type="checkpoint" x="784" y="400" width="16" height="16"/>

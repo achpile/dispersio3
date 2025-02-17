@@ -11,6 +11,42 @@
     ],
     "propertyTypes": [
         {
+            "id": 1,
+            "name": "@direction",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "up",
+                "down",
+                "left",
+                "right"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 2,
+            "members": [
+                {
+                    "name": "Direction",
+                    "propertyType": "@direction",
+                    "type": "string",
+                    "value": "up"
+                },
+                {
+                    "name": "Speed",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "#moving",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
             "color": "#ffa51d2d",
             "drawFill": true,
             "id": 3,
@@ -44,29 +80,6 @@
             "type": "class",
             "useAs": [
                 "object"
-            ]
-        },
-        {
-            "color": "#ffa0a0a4",
-            "drawFill": true,
-            "id": 2,
-            "members": [
-                {
-                    "name": "direction",
-                    "propertyType": "direction",
-                    "type": "string",
-                    "value": "up"
-                },
-                {
-                    "name": "speed",
-                    "type": "float",
-                    "value": 0
-                }
-            ],
-            "name": "class-moving",
-            "type": "class",
-            "useAs": [
-                "property"
             ]
         },
         {
@@ -106,25 +119,12 @@
             ]
         },
         {
-            "id": 1,
-            "name": "direction",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "up",
-                "down",
-                "left",
-                "right"
-            ],
-            "valuesAsFlags": false
-        },
-        {
             "color": "#ffb5835a",
             "drawFill": true,
             "id": 9,
             "members": [
                 {
-                    "name": "pair",
+                    "name": "Pair",
                     "type": "object",
                     "value": 0
                 }
@@ -153,8 +153,8 @@
             "id": 11,
             "members": [
                 {
-                    "name": "moving",
-                    "propertyType": "class-moving",
+                    "name": "Moving",
+                    "propertyType": "#moving",
                     "type": "class",
                     "value": {
                     }

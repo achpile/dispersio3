@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::MapObjectDoor::MapObjectDoor(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	pair = json_property_get_integer(obj, "pair");
+	pair = json_property_get_integer(obj, "Pair");
 
 	if (!pair)
 		logger->log(ach::LogLevel::llError, "Orphaned door ID#%d", id);

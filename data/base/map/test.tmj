@@ -147,7 +147,7 @@
                  "name":"DoorDev",
                  "properties":[
                         {
-                         "name":"pair",
+                         "name":"Pair",
                          "type":"object",
                          "value":42
                         }],
@@ -164,7 +164,7 @@
                  "name":"DoorDev",
                  "properties":[
                         {
-                         "name":"pair",
+                         "name":"Pair",
                          "type":"object",
                          "value":43
                         }],
@@ -181,7 +181,7 @@
                  "name":"DoorDev",
                  "properties":[
                         {
-                         "name":"pair",
+                         "name":"Pair",
                          "type":"object",
                          "value":40
                         }],
@@ -198,7 +198,7 @@
                  "name":"DoorDev",
                  "properties":[
                         {
-                         "name":"pair",
+                         "name":"Pair",
                          "type":"object",
                          "value":41
                         }],
@@ -248,13 +248,13 @@
                  "name":"MovingDev",
                  "properties":[
                         {
-                         "name":"moving",
-                         "propertytype":"class-moving",
+                         "name":"Moving",
+                         "propertytype":"#moving",
                          "type":"class",
                          "value":
                             {
-                             "direction":"up",
-                             "speed":0
+                             "Direction":"up",
+                             "Speed":0
                             }
                         }],
                  "rotation":0,
@@ -270,13 +270,13 @@
                  "name":"MovingDev",
                  "properties":[
                         {
-                         "name":"moving",
-                         "propertytype":"class-moving",
+                         "name":"Moving",
+                         "propertytype":"#moving",
                          "type":"class",
                          "value":
                             {
-                             "direction":"up",
-                             "speed":0
+                             "Direction":"up",
+                             "Speed":0
                             }
                         }],
                  "rotation":0,
