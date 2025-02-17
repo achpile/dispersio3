@@ -8,8 +8,9 @@
 ***********************************************************************/
 ach::MapObjectCollectable::MapObjectCollectable(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	model = new ach::Model(db->getSheet(json_object_get_string(obj, "name")));
-	sfx   = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Collect"));
+	sfx = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Collect"));
+
+	setSheet(json_object_get_string(obj, "name"));
 }
 
 

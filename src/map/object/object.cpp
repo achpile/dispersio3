@@ -104,9 +104,7 @@ void ach::MapObject::process()
 		return;
 
 	handle();
-
-	if (solid)
-		box();
+	box();
 }
 
 
@@ -118,6 +116,9 @@ void ach::MapObject::process()
 ***********************************************************************/
 void ach::MapObject::box()
 {
+	if (!solid)
+		return;
+
 	lines[0]->set(rect_lt(phys.rect), rect_rt(phys.rect));
 	lines[1]->set(rect_rt(phys.rect), rect_rb(phys.rect));
 	lines[2]->set(rect_rb(phys.rect), rect_lb(phys.rect));
@@ -125,4 +126,38 @@ void ach::MapObject::box()
 
 	list_foreach(lines)
 		world->map->solids.push_back(lines[i]);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * setModel
+
+***********************************************************************/
+void ach::MapObject::setModel(const char *_model)
+{
+	if (model)
+		delete model;
+
+	model = new ach::Model(db->getModel(_model));
+
+	phys.resize(model->sheet->size);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * setModel
+
+***********************************************************************/
+void ach::MapObject::setSheet(const char *_sheet)
+{
+	if (model)
+		delete model;
+
+	model = new ach::Model(db->getSheet(_sheet));
+
+	phys.resize(model->sheet->size);
 }

@@ -28,6 +28,9 @@ namespace ach
 		void process();
 		void box();
 
+		void setModel(const char *_model);
+		void setSheet(const char *_sheet);
+
 		virtual void init(ach::Map*) {};
 		virtual void reset()         {};
 		virtual void handle()        {};
