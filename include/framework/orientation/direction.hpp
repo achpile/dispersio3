@@ -16,7 +16,7 @@ namespace ach
 
 
 
-sf::Vector2i   dir_vector(ach::Direction dir);
-ach::Direction dir_invert(ach::Direction dir);
+sf::Vector2i   dir_vector(ach::Direction d);
+ach::Direction dir_invert(ach::Direction d);
 
 #endif

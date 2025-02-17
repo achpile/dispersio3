@@ -5,9 +5,9 @@
      * dir_vector
 
 ***********************************************************************/
-sf::Vector2i dir_vector(ach::Direction dir)
+sf::Vector2i dir_vector(ach::Direction d)
 {
-	switch (dir)
+	switch (d)
 	{
 		case ach::Direction::dUp   : return sf::Vector2i( 0, -1);
 		case ach::Direction::dDown : return sf::Vector2i( 0,  1);
@@ -25,9 +25,9 @@ sf::Vector2i dir_vector(ach::Direction dir)
      * dir_invert
 
 ***********************************************************************/
-ach::Direction dir_invert(ach::Direction dir)
+ach::Direction dir_invert(ach::Direction d)
 {
-	switch (dir)
+	switch (d)
 	{
 		case ach::Direction::dUp   : return ach::Direction::dDown;
 		case ach::Direction::dDown : return ach::Direction::dUp;
