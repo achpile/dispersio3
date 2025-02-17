@@ -76,7 +76,10 @@ void ach::Map::loadMeta(json_t *mapdata)
 void ach::Map::loadFinalize()
 {
 	list_foreach(objects)
+	{
+		objects[i]->reset();
 		objects[i]->init(this);
+	}
 }
 
 

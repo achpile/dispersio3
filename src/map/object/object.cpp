@@ -149,7 +149,7 @@ void ach::MapObject::setModel(const char *_model)
 
 /***********************************************************************
      * MapObject
-     * setModel
+     * setSheet
 
 ***********************************************************************/
 void ach::MapObject::setSheet(const char *_sheet)
