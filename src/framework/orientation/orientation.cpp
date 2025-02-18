@@ -56,10 +56,10 @@ float orient_rect_size(ach::Orientation o, sf::FloatRect r)
 
 
 /***********************************************************************
-     * orient_vector
+     * orient_v_create
 
 ***********************************************************************/
-sf::Vector2f orient_vector(ach::Orientation o)
+sf::Vector2f orient_v_create(ach::Orientation o)
 {
 	switch (o)
 	{
@@ -74,10 +74,10 @@ sf::Vector2f orient_vector(ach::Orientation o)
 
 
 /***********************************************************************
-     * orient_coord
+     * orient_v_coord
 
 ***********************************************************************/
-float orient_coord(ach::Orientation o, sf::Vector2f v)
+float orient_v_coord(ach::Orientation o, sf::Vector2f v)
 {
 	switch (o)
 	{
@@ -87,4 +87,20 @@ float orient_coord(ach::Orientation o, sf::Vector2f v)
 	}
 
 	return 0.0f;
+}
+
+
+
+/***********************************************************************
+     * orient_v_set
+
+***********************************************************************/
+void orient_v_set(ach::Orientation o, sf::Vector2f *v, float x)
+{
+	switch (o)
+	{
+		case ach::Orientation::oVertical   : v->y = x; break;
+		case ach::Orientation::oHorizontal : v->x = x; break;
+		case ach::Orientation::oCount      : return;
+	}
 }

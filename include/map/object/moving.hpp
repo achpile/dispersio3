@@ -6,8 +6,8 @@ namespace ach
 {
 	struct MapObjectMoving : MapObject
 	{
-		ach::Direction dir;
-		sf::Vector2f   spawn;
+		ach::Orientation orient;
+		sf::Vector2f     spawn;
 
 		float speed;
 		float min;

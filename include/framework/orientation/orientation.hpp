@@ -18,7 +18,8 @@ float orient_rect_min (ach::Orientation o, sf::FloatRect r);
 float orient_rect_max (ach::Orientation o, sf::FloatRect r);
 float orient_rect_size(ach::Orientation o, sf::FloatRect r);
 
-sf::Vector2f orient_vector(ach::Orientation o);
-float        orient_coord (ach::Orientation o, sf::Vector2f v);
+sf::Vector2f orient_v_create(ach::Orientation o);
+float        orient_v_coord (ach::Orientation o, sf::Vector2f  v);
+void         orient_v_set   (ach::Orientation o, sf::Vector2f *v, float x);
 
 #endif
