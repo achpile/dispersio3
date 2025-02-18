@@ -70,3 +70,21 @@ sf::Vector2f orient_vector(ach::Orientation o)
 
 	return sf::Vector2f(0.0f, 0.0f);
 }
+
+
+
+/***********************************************************************
+     * orient_coord
+
+***********************************************************************/
+float orient_coord(ach::Orientation o, sf::Vector2f v)
+{
+	switch (o)
+	{
+		case ach::Orientation::oVertical   : return v.y;
+		case ach::Orientation::oHorizontal : return v.x;
+		case ach::Orientation::oCount      : return 0.0f;
+	}
+
+	return 0.0f;
+}

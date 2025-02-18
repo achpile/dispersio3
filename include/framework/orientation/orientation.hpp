@@ -19,5 +19,6 @@ float orient_rect_max (ach::Orientation o, sf::FloatRect r);
 float orient_rect_size(ach::Orientation o, sf::FloatRect r);
 
 sf::Vector2f orient_vector(ach::Orientation o);
+float        orient_coord (ach::Orientation o, sf::Vector2f v);
 
 #endif
