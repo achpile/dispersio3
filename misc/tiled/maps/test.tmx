@@ -135,7 +135,7 @@
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
-      <property name="Speed" type="float" value="-200"/>
+      <property name="Speed" type="float" value="-100"/>
      </properties>
     </property>
    </properties>

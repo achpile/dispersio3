@@ -254,7 +254,7 @@
                          "value":
                             {
                              "Orientation":"vertical",
-                             "Speed":-200
+                             "Speed":-100
                             }
                         }, 
                         {
@@ -281,7 +281,7 @@
                          "value":
                             {
                              "Orientation":"vertical",
-                             "Speed":200
+                             "Speed":100
                             }
                         }, 
                         {
@@ -330,7 +330,7 @@
                          "value":
                             {
                              "Orientation":"horizontal",
-                             "Speed":200
+                             "Speed":100
                             }
                         }, 
                         {

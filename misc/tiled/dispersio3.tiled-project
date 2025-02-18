@@ -48,7 +48,7 @@
                 {
                     "name": "Speed",
                     "type": "float",
-                    "value": 200
+                    "value": 100
                 }
             ],
             "name": "#moving",

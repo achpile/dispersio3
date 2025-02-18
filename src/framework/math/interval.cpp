@@ -15,20 +15,3 @@ int interval_loop(int x, int min, int max)
 
 	return x;
 }
-
-
-
-/***********************************************************************
-     * interval_side
-
-***********************************************************************/
-int interval_side(int x, int left, int right)
-{
-	if (x < left)
-		return SIDE_LEFT;
-
-	if (x > right)
-		return SIDE_RIGHT;
-
-	return SIDE_MIDDLE;
-}
