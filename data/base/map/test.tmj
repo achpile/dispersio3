@@ -254,8 +254,13 @@
                          "value":
                             {
                              "Orientation":"vertical",
-                             "Speed":0
+                             "Speed":-200
                             }
+                        }, 
+                        {
+                         "name":"Spawn",
+                         "type":"float",
+                         "value":0.5
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -276,8 +281,13 @@
                          "value":
                             {
                              "Orientation":"vertical",
-                             "Speed":0
+                             "Speed":200
                             }
+                        }, 
+                        {
+                         "name":"Spawn",
+                         "type":"float",
+                         "value":0.5
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -320,8 +330,13 @@
                          "value":
                             {
                              "Orientation":"horizontal",
-                             "Speed":0
+                             "Speed":200
                             }
+                        }, 
+                        {
+                         "name":"Spawn",
+                         "type":"float",
+                         "value":0.5
                         }],
                  "rotation":0,
                  "type":"moving",

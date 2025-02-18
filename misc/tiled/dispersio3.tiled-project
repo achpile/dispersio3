@@ -48,7 +48,7 @@
                 {
                     "name": "Speed",
                     "type": "float",
-                    "value": 0
+                    "value": 200
                 }
             ],
             "name": "#moving",
@@ -169,6 +169,11 @@
                     "type": "class",
                     "value": {
                     }
+                },
+                {
+                    "name": "Spawn",
+                    "type": "float",
+                    "value": 0.5
                 }
             ],
             "name": "moving",

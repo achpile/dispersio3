@@ -131,7 +131,15 @@
   <object id="44" type="checkpoint" x="784" y="400" width="16" height="16"/>
   <object id="45" type="checkpoint" x="112" y="160" width="16" height="16"/>
   <object id="46" type="checkpoint" x="256" y="208" width="16" height="16"/>
-  <object id="50" name="MovingDev" type="moving" x="576" y="304" width="32" height="96"/>
+  <object id="50" name="MovingDev" type="moving" x="576" y="304" width="32" height="96">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Speed" type="float" value="-200"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
   <object id="51" name="MovingDev" type="moving" x="352" y="304" width="32" height="96"/>
   <object id="52" name="CollectBag" type="collectable" x="432" y="320" width="16" height="16"/>
   <object id="53" name="CollectBag" type="collectable" x="224" y="96" width="16" height="16"/>
