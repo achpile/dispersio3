@@ -2,6 +2,7 @@
 #define __FRAMEWORK_MATH_MATH
 
 
+int   math_sign(float x);
 bool  math_epsilon(float x);
 float math_fade(float x, float slope, float length);
 float math_decay(float x, float start, float end);
