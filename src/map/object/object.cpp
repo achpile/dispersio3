@@ -16,10 +16,10 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 
 	phys.init(vector_json_rect(obj));
 
-	lines.push_back(new ach::PhysLine());
-	lines.push_back(new ach::PhysLine());
-	lines.push_back(new ach::PhysLine());
-	lines.push_back(new ach::PhysLine());
+	lines.push_back(new ach::PhysLine(this));
+	lines.push_back(new ach::PhysLine(this));
+	lines.push_back(new ach::PhysLine(this));
+	lines.push_back(new ach::PhysLine(this));
 
 	reset();
 }

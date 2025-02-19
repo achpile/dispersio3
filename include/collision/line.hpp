@@ -15,6 +15,7 @@ namespace ach
 
 	struct PhysLine
 	{
+		ach::MapObject  *owner;
 		ach::PhysType    type;
 		ach::Line        line;
 		ach::Orientation o;
@@ -24,7 +25,7 @@ namespace ach
 		float f;
 
 
-		 PhysLine();
+		 PhysLine(ach::MapObject *_owner);
 		 PhysLine(ach::PhysType _type, sf::Vector2f a, sf::Vector2f b, sf::Vector2f pos);
 		~PhysLine();
 

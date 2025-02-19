@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::PhysLine::PhysLine()
+ach::PhysLine::PhysLine(ach::MapObject *_owner)
 {
-	type = ach::PhysType::ptSolid;
+	type  = ach::PhysType::ptSolid;
+	owner = _owner;
 }
 
 
@@ -20,7 +21,8 @@ ach::PhysLine::PhysLine()
 ***********************************************************************/
 ach::PhysLine::PhysLine(ach::PhysType _type, sf::Vector2f a, sf::Vector2f b, sf::Vector2f pos)
 {
-	type = _type;
+	type  = _type;
+	owner = NULL;
 
 	set(a + pos, b + pos);
 }
@@ -158,7 +160,12 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	sf::Vector2f offset = offsetPhys();
 
 	if (offset.y < 0.0f)
+	{
 		p->grounded = true;
+
+		if (owner)
+			owner->stand(p);
+	}
 
 	if (math_sign(offset.y) && math_sign(offset.y) != math_sign(p->vel.y))
 		p->vel.y = 0.0f;

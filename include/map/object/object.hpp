@@ -31,11 +31,12 @@ namespace ach
 		void setModel(const char *_model);
 		void setSheet(const char *_sheet);
 
-		virtual void init(ach::Map*) {};
-		virtual void reset()         {};
-		virtual void handle()        {};
-		virtual void touch()         {};
-		virtual void use()           {};
+		virtual void reset()           {};
+		virtual void handle()          {};
+		virtual void touch()           {};
+		virtual void use()             {};
+		virtual void init(ach::Map*)   {};
+		virtual void stand(ach::Phys*) {};
 	};
 }
 
