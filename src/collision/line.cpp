@@ -58,8 +58,8 @@ void ach::PhysLine::set(sf::Vector2f a, sf::Vector2f b)
 ***********************************************************************/
 void ach::PhysLine::calc()
 {
-	v = (fabs(line.v.x) < fabs(line.v.y));
-	k = projection_vector(line.v, !v) / projection_vector(line.v, v);
+	o = orient_get(line);
+	k = orient_v_coord(!o, line.v) / orient_v_coord(o, line.v);
 }
 
 
@@ -72,29 +72,29 @@ void ach::PhysLine::calc()
 bool ach::PhysLine::check(ach::Phys *p)
 {
 	d = 0.0f;
-	o = 0.0f;
+	f = 0.0f;
 
-	if (type == ach::PhysType::ptPlatform && (v || p->jumpdown || p->vel.y < 0.0f))
+	if (type == ach::PhysType::ptPlatform && (o == ach::Orientation::oVertical || p->jumpdown || p->vel.y < 0.0f))
 		return false;
 
 	if (!collision_box_vs_line(p->rect, line))
 		return false;
 
 
-	float left  = std::min(projection_vector(line.a, v), projection_vector(line.b, v));
-	float right = std::max(projection_vector(line.a, v), projection_vector(line.b, v));
+	float left  = std::min(orient_v_coord(o, line.a), orient_v_coord(o, line.b));
+	float right = std::max(orient_v_coord(o, line.a), orient_v_coord(o, line.b));
 
-	o = std::min(projection_rect_tip(p->rect, v), right) - std::max(projection_rect_pos(p->rect, v), left);
+	f = std::min(orient_rect_max(o, p->rect), right) - std::max(orient_rect_min(o, p->rect), left);
 
-	if (o == 0.0f)
+	if (f == 0.0f)
 		return false;
 
 
 	float d1 = 0.0f;
 	float d2 = 0.0f;
 
-	d1 = diff(projection_rect_pos(p->rect, v), projection_rect_pos(p->rect, !v), projection_rect_tip(p->rect, !v), false);
-	d2 = diff(projection_rect_tip(p->rect, v), projection_rect_pos(p->rect, !v), projection_rect_tip(p->rect, !v), true );
+	d1 = diff(orient_rect_min(o, p->rect), orient_rect_min(!o, p->rect), orient_rect_max(!o, p->rect), false);
+	d2 = diff(orient_rect_max(o, p->rect), orient_rect_min(!o, p->rect), orient_rect_max(!o, p->rect), true );
 
 
 	d = (fabs(d1) > fabs(d2)) ? d1 : d2;
@@ -118,7 +118,7 @@ bool ach::PhysLine::check(ach::Phys *p)
 bool ach::PhysLine::check(ach::Line *l)
 {
 	d = 0.0f;
-	o = 0.0f;
+	f = 0.0f;
 
 	if (type != ach::PhysType::ptSolid)
 		return false;
@@ -128,8 +128,8 @@ bool ach::PhysLine::check(ach::Line *l)
 	if (!collision_line_vs_line(*l, line, &c))
 		return false;
 
-	o = vector_len(l->b - c);
-	d = l->l - o;
+	f = vector_len(l->b - c);
+	d = l->l - f;
 
 	return false;
 }
@@ -143,13 +143,13 @@ bool ach::PhysLine::check(ach::Line *l)
 ***********************************************************************/
 bool ach::PhysLine::collide(ach::Phys *p)
 {
-	if (math_epsilon(d) || (math_epsilon(o)))
+	if (math_epsilon(d) || (math_epsilon(f)))
 		return false;
 
-	if (o < 0)
+	if (f < 0)
 		return false;
 
-	if (!v && d < 0 && p->vel.y < 0.0f)
+	if (o == ach::Orientation::oHorizontal && d < 0 && p->vel.y < 0.0f)
 		return false;
 
 	if (type == ach::PhysType::ptDeath)
@@ -184,10 +184,10 @@ bool ach::PhysLine::collide(ach::Phys *p)
 ***********************************************************************/
 bool ach::PhysLine::collide(ach::Line *l)
 {
-	if (math_epsilon(d) || (math_epsilon(o)))
+	if (math_epsilon(d) || (math_epsilon(f)))
 		return false;
 
-	l->b -= vector_set_len(l->v, o);
+	l->b -= vector_set_len(l->v, f);
 
 	return true;
 }
@@ -201,12 +201,7 @@ bool ach::PhysLine::collide(ach::Line *l)
 ***********************************************************************/
 sf::Vector2f ach::PhysLine::offsetPhys()
 {
-	sf::Vector2f result(0.0f, 0.0f);
-
-	if (v) result.x = d;
-	else   result.y = d;
-
-	return result;
+	return orient_v_create(!o) * d;
 }
 
 
@@ -220,12 +215,12 @@ float ach::PhysLine::diff(float x, float left, float right, bool max)
 {
 	float val;
 
-	if (interval_check(x, projection_vector(line.a, v), projection_vector(line.b, v)))
+	if (interval_check(x, orient_v_coord(o, line.a), orient_v_coord(o, line.b)))
 		val = value(x);
 	else if (max)
-		val = value(std::max(projection_vector(line.a, v), projection_vector(line.b, v)));
+		val = value(std::max(orient_v_coord(o, line.a), orient_v_coord(o, line.b)));
 	else
-		val = value(std::min(projection_vector(line.a, v), projection_vector(line.b, v)));
+		val = value(std::min(orient_v_coord(o, line.a), orient_v_coord(o, line.b)));
 
 
 	if (!interval_check(val, left, right))
@@ -243,7 +238,7 @@ float ach::PhysLine::diff(float x, float left, float right, bool max)
 ***********************************************************************/
 float ach::PhysLine::value(float x)
 {
-	return math_linear(x - projection_vector(line.a, v), k, projection_vector(line.a, !v));
+	return math_linear(x - orient_v_coord(o, line.a), k, orient_v_coord(!o, line.a));
 }
 
 
@@ -255,7 +250,7 @@ float ach::PhysLine::value(float x)
 ***********************************************************************/
 bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 {
-	return fabs(a->o) > fabs(b->o);
+	return fabs(a->f) > fabs(b->f);
 }
 
 
@@ -267,5 +262,5 @@ bool ach::PhysLine::sort(ach::PhysLine *a, ach::PhysLine *b)
 ***********************************************************************/
 bool ach::PhysLine::remove(ach::PhysLine *l)
 {
-	return (math_epsilon(l->d)) || (math_epsilon(l->o));
+	return (math_epsilon(l->d)) || (math_epsilon(l->f));
 }

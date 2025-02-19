@@ -2,6 +2,36 @@
 
 
 /***********************************************************************
+     * operator!
+
+***********************************************************************/
+ach::Orientation operator!(ach::Orientation o)
+{
+	switch (o)
+	{
+		case ach::Orientation::oVertical  : return ach::Orientation::oHorizontal;
+		case ach::Orientation::oHorizontal: return ach::Orientation::oVertical;
+		case ach::Orientation::oCount     : return ach::Orientation::oCount;
+	}
+
+	return ach::Orientation::oCount;
+}
+
+
+
+/***********************************************************************
+     * orient_get
+
+***********************************************************************/
+ach::Orientation orient_get(ach::Line l)
+{
+	if ((fabs(l.v.x) < fabs(l.v.y))) return ach::Orientation::oVertical;
+	else                             return ach::Orientation::oHorizontal;
+}
+
+
+
+/***********************************************************************
      * orient_rect_min
 
 ***********************************************************************/

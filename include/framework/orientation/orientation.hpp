@@ -14,6 +14,9 @@ namespace ach
 
 
 
+ach::Orientation operator! (ach::Orientation o);
+ach::Orientation orient_get(ach::Line l);
+
 float orient_rect_min (ach::Orientation o, sf::FloatRect r);
 float orient_rect_max (ach::Orientation o, sf::FloatRect r);
 float orient_rect_size(ach::Orientation o, sf::FloatRect r);

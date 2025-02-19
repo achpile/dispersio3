@@ -15,13 +15,13 @@ namespace ach
 
 	struct PhysLine
 	{
-		ach::PhysType type;
-		ach::Line     line;
+		ach::PhysType    type;
+		ach::Line        line;
+		ach::Orientation o;
 
 		float d;
 		float k;
-		float o;
-		bool  v;
+		float f;
 
 
 		 PhysLine();

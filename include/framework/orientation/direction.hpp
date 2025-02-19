@@ -15,8 +15,8 @@ namespace ach
 }
 
 
+ach::Direction operator!(ach::Direction d);
 
 sf::Vector2i   dir_vector(ach::Direction d);
-ach::Direction dir_invert(ach::Direction d);
 
 #endif

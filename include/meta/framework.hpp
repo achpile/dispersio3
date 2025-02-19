@@ -31,7 +31,6 @@
 #include "framework/math/interval.hpp"
 #include "framework/math/interval.inl"
 #include "framework/math/vector.hpp"
-#include "framework/math/projection.hpp"
 #include "framework/math/line.hpp"
 #include "framework/math/rect.hpp"
 
