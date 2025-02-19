@@ -160,7 +160,7 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	if (offset.y < 0.0f)
 		p->grounded = true;
 
-	if (offset.y != 0.0f)
+	if (math_sign(offset.y) && math_sign(offset.y) != math_sign(p->vel.y))
 		p->vel.y = 0.0f;
 
 	if (offset.x != 0.0f)
