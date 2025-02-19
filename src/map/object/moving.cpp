@@ -59,6 +59,8 @@ void ach::MapObjectMoving::reset()
 ***********************************************************************/
 void ach::MapObjectMoving::handle()
 {
+	move = phys.pos;
+
 	phys.update();
 
 	if (!interval_check(orient_v_coord(orient, phys.pos), min, max))
@@ -68,4 +70,26 @@ void ach::MapObjectMoving::handle()
 	}
 
 	phys.calc();
+
+	move = phys.pos - move;
+
+	list_foreach(linked)
+	{
+		linked[i]->pos += move;
+		linked[i]->calc();
+	}
+
+	linked.clear();
+}
+
+
+
+/***********************************************************************
+     * MapObjectMoving
+     * stand
+
+***********************************************************************/
+void ach::MapObjectMoving::stand(ach::Phys *p)
+{
+	linked.push_back(p);
 }

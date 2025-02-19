@@ -6,8 +6,11 @@ namespace ach
 {
 	struct MapObjectMoving : MapObject
 	{
-		ach::Orientation orient;
-		sf::Vector2f     spawn;
+		std::vector<ach::Phys*> linked;
+
+		ach::Orientation        orient;
+		sf::Vector2f            spawn;
+		sf::Vector2f            move;
 
 		float speed;
 		float min;
@@ -19,6 +22,7 @@ namespace ach
 
 		void reset();
 		void handle();
+		void stand(ach::Phys *p);
 	};
 }
 
