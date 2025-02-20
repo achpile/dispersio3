@@ -344,6 +344,17 @@
                  "width":224,
                  "x":688,
                  "y":368
+                }, 
+                {
+                 "height":16,
+                 "id":56,
+                 "name":"BlockDev",
+                 "rotation":0,
+                 "type":"fragile",
+                 "visible":true,
+                 "width":16,
+                 "x":176,
+                 "y":144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -897,7 +908,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":55,
+ "nextobjectid":57,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

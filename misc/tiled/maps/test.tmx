@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="55">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="57">
  <editorsettings>
   <export target="../../../data/base/map/test.tmj" format="json"/>
  </editorsettings>
@@ -152,6 +152,7 @@
     </property>
    </properties>
   </object>
+  <object id="56" name="BlockDev" type="fragile" x="176" y="144" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="336" y="112" width="16" height="16"/>
