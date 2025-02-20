@@ -9,6 +9,13 @@
             "type": "link"
         }
     },
+    "Crack": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Crack",
+            "type": "link"
+        }
+    },
     "Spawn": {
         "@attr": {
             "data": "Data.GFX.Sheet",
