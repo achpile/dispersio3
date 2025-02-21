@@ -6,7 +6,8 @@ namespace ach
 {
 	struct MapObjectFragile : MapObject
 	{
-		ach::Timer cracking;
+		ach::DataSound *sfx;
+		ach::Timer      cracking;
 
 		bool cracked;
 

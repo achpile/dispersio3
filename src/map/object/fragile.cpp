@@ -9,6 +9,7 @@
 ach::MapObjectFragile::MapObjectFragile(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
 	solid = true;
+	sfx   = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Break"));
 
 	cracking.set(GAME_FRAGILE_BREAKING);
 
@@ -53,8 +54,11 @@ void ach::MapObjectFragile::handle()
 	if (!cracked)
 		return;
 
-	if (!cracking.update())
+	if (!cracking.update() && alive)
+	{
 		alive = false;
+		sm->play(sfx->snd);
+	}
 }
 
 

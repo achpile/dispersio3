@@ -2,6 +2,13 @@
     "@attr": {
         "type": "object"
     },
+    "Break": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Break",
+            "type": "link"
+        }
+    },
     "Checkpoint": {
         "@attr": {
             "data": "Data.SFX",
