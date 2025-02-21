@@ -77,6 +77,7 @@
 
 ***********************************************************************/
 #define GAME_PLAYER_RESPAWN   1.0f
+#define GAME_FRAGILE_BREAKING 0.3f
 
 
 

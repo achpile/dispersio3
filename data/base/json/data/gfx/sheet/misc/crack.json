@@ -1,6 +1,7 @@
 {
     "Crack": {
         "Filename": "gfx/game/sheet/misc/crack.png",
-        "Frames": 10
+        "Frames": 10,
+        "Rate": 0.03
     }
 }

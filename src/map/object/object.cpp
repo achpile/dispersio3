@@ -119,6 +119,9 @@ void ach::MapObject::box()
 	if (!solid)
 		return;
 
+	if (!alive)
+		return;
+
 	lines[0]->set(rect_lt(phys.rect), rect_rt(phys.rect));
 	lines[1]->set(rect_rt(phys.rect), rect_rb(phys.rect));
 	lines[2]->set(rect_rb(phys.rect), rect_lb(phys.rect));

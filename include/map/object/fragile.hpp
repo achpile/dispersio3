@@ -6,8 +6,17 @@ namespace ach
 {
 	struct MapObjectFragile : MapObject
 	{
+		ach::Timer cracking;
+
+		bool cracked;
+
+
 		 MapObjectFragile(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectFragile();
+
+		void reset();
+		void handle();
+		void stand(ach::Phys *p);
 	};
 }
 
