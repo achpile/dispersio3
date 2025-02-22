@@ -17,6 +17,20 @@ ach::ParticleSystem::ParticleSystem(float size)
 
 /***********************************************************************
      * ParticleSystem
+     * constructor
+
+***********************************************************************/
+ach::ParticleSystem::ParticleSystem(sf::Vector2f size)
+{
+	spr = new sf::RectangleShape(size);
+
+	spr->setOrigin(size.x / 2.0f, size.y / 2.0f);
+}
+
+
+
+/***********************************************************************
+     * ParticleSystem
      * destructor
 
 ***********************************************************************/

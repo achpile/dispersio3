@@ -15,9 +15,9 @@ namespace ach
 		sf::Vector2f vel;
 		sf::Vector2f acc;
 
-		bool  moving;
-		float age;
-		float scale;
+		bool         moving;
+		float        age;
+		float        scale;
 
 
 		 Particle();

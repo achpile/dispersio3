@@ -34,6 +34,7 @@
 #include "model/pair.hpp"
 
 #include "gfx/gfx.hpp"
+#include "gfx/break.hpp"
 #include "gfx/sheet.hpp"
 #include "gfx/splash.hpp"
 

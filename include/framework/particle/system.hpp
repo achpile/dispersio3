@@ -14,6 +14,7 @@ namespace ach
 
 
 		         ParticleSystem(float size);
+		         ParticleSystem(sf::Vector2f size);
 		virtual ~ParticleSystem();
 
 		virtual bool update();
