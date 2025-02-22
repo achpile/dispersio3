@@ -33,6 +33,7 @@ namespace ach
 
 		virtual void reset()           {};
 		virtual void handle()          {};
+		virtual void post()            {};
 		virtual void touch()           {};
 		virtual void use()             {};
 		virtual void init(ach::Map*)   {};

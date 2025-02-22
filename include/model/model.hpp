@@ -28,6 +28,7 @@ namespace ach
 
 		void setColor(sf::Color _color);
 		void setScale(float _scale);
+		void setScale(sf::Vector2f _size);
 		void setAnimation(const char *name);
 	};
 }

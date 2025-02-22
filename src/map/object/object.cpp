@@ -77,6 +77,8 @@ void ach::MapObject::render()
 
 	if (model)
 		model->render(phys.pos);
+
+	post();
 }
 
 

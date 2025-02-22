@@ -7,6 +7,7 @@ namespace ach
 	struct MapObjectFragile : MapObject
 	{
 		ach::DataSound *sfx;
+		ach::Model     *crack;
 		ach::Timer      cracking;
 
 		bool cracked;
@@ -17,6 +18,7 @@ namespace ach
 
 		void reset();
 		void handle();
+		void post();
 		void stand(ach::Phys *p);
 	};
 }
