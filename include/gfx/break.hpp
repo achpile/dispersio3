@@ -6,8 +6,14 @@ namespace ach
 {
 	struct EffectBreak : Effect
 	{
-		 EffectBreak();
+		ach::ParticleSystemSplash *particle;
+
+
+		 EffectBreak(sf::Vector2f pos);
 		~EffectBreak();
+
+		bool update();
+		void render();
 	};
 }
 

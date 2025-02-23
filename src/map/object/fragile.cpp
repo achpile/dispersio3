@@ -64,6 +64,8 @@ void ach::MapObjectFragile::handle()
 	{
 		alive = false;
 		sm->play(sfx->snd);
+
+		world->map->gfx.push_back(new ach::EffectBreak(phys.pos));
 	}
 }
 
