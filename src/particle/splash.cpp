@@ -10,6 +10,7 @@ ach::ParticleSystemSplash::ParticleSystemSplash(float size) : ParticleSystem(siz
 {
 	age     = 0.0f;
 	life    = 1.0f;
+	scale   = 1.0f;
 	cone    = 0.0f;
 	speed   = 0.0f;
 	pos     = sf::Vector2f(0.0f, 0.0f);
@@ -52,6 +53,7 @@ bool ach::ParticleSystemSplash::update()
 bool ach::ParticleSystemSplash::process(ach::Particle *particle)
 {
 	particle->color = color;
+	particle->scale = scale;
 
 	return true;
 }

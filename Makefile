@@ -25,7 +25,7 @@ GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
 
 CC       = @g++
 STRIP    = @strip
-MAKE     = @make -j$(CORES) --no-print-directory
+MAKE     = @make -j$(CORES) -s
 ECHO     = @echo
 CLEAN    = @rm -rf
 

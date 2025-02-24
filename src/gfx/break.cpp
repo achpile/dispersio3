@@ -15,12 +15,14 @@ ach::EffectBreak::EffectBreak(sf::Vector2f pos)
 
 	particle->pos     = pos;
 	particle->dir     = sf::Vector2f(0.0f, -1.0f);
-	particle->cone    = MATH_PI;
 	particle->life    = 0.25f;
-	particle->speed   = 75.0f;
+	particle->speed   = 100.0f;
 	particle->gravity = true;
 
-	particle->init(4);
+	particle->add( 3.0f * MATH_PI / 4.0f);
+	particle->add( 1.0f * MATH_PI / 4.0f);
+	particle->add(-1.0f * MATH_PI / 4.0f);
+	particle->add(-3.0f * MATH_PI / 4.0f);
 }
 
 
@@ -44,6 +46,8 @@ ach::EffectBreak::~EffectBreak()
 ***********************************************************************/
 bool ach::EffectBreak::update()
 {
+	particle->scale = (particle->life - particle->age) / particle->life;
+
 	return particle->update();
 }
 

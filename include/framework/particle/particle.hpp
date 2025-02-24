@@ -7,6 +7,7 @@ namespace ach
 	struct Particle
 	{
 		sf::RectangleShape *spr;
+		sf::IntRect         rect;
 		sf::Color           color;
 
 		ach::Line    line;

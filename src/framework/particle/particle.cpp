@@ -12,6 +12,7 @@ ach::Particle::Particle()
 	scale  = 1.0f;
 	moving = true;
 	color  = sf::Color::White;
+	rect   = sf::IntRect (0, 0, 0, 0);
 	pos    = sf::Vector2f(0.0f, 0.0f);
 	vel    = sf::Vector2f(0.0f, 0.0f);
 	acc    = sf::Vector2f(0.0f, 0.0f);
@@ -61,6 +62,7 @@ void ach::Particle::update(float frame)
 void ach::Particle::render(ach::RenderLayer layer)
 {
 	spr->setPosition(pos + offset);
+	spr->setTextureRect(rect);
 	spr->setFillColor(color);
 	spr->setScale(scale, scale);
 

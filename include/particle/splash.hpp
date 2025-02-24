@@ -14,6 +14,7 @@ namespace ach
 		float life;
 		float cone;
 		float speed;
+		float scale;
 
 		bool  gravity;
 
