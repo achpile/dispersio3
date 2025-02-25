@@ -16,6 +16,7 @@ ach::ParticleSystemSplash::ParticleSystemSplash(float size) : ParticleSystem(siz
 	pos     = sf::Vector2f(0.0f, 0.0f);
 	color   = sf::Color::White;
 	gravity = false;
+	rotate  = false;
 }
 
 
@@ -69,10 +70,11 @@ void ach::ParticleSystemSplash::add(float angle)
 {
 	particles.push_back(new ach::Particle());
 
-	particles.back()->pos   = pos;
-	particles.back()->vel   = vector_set_len(vector_create(angle), speed);
-	particles.back()->spr   = spr;
-	particles.back()->color = color;
+	particles.back()->pos    = pos;
+	particles.back()->vel    = vector_set_len(vector_create(angle), speed);
+	particles.back()->spr    = spr;
+	particles.back()->color  = color;
+	particles.back()->rotate = rotate;
 
 	particles.back()->calc();
 

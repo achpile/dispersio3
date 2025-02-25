@@ -17,6 +17,7 @@ namespace ach
 		float scale;
 
 		bool  gravity;
+		bool  rotate;
 
 
 		 ParticleSystemSplash(float size);

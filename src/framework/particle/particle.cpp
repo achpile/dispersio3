@@ -10,7 +10,9 @@ ach::Particle::Particle()
 {
 	age    = 0.0f;
 	scale  = 1.0f;
+	angle  = 0.0f;
 	moving = true;
+	rotate = false;
 	color  = sf::Color::White;
 	rect   = sf::IntRect (0, 0, 0, 0);
 	pos    = sf::Vector2f(0.0f, 0.0f);
@@ -50,6 +52,11 @@ void ach::Particle::update(float frame)
 		line.a = pos;
 		line.calc();
 	}
+
+	if (rotate)
+	{
+		angle += vel.x * frame * 4.0f;
+	}
 }
 
 
@@ -65,6 +72,7 @@ void ach::Particle::render(ach::RenderLayer layer)
 	spr->setTextureRect(rect);
 	spr->setFillColor(color);
 	spr->setScale(scale, scale);
+	spr->setRotation(angle);
 
 	rm->draw(spr, layer);
 }

@@ -17,8 +17,10 @@ namespace ach
 		sf::Vector2f acc;
 
 		bool         moving;
+		bool         rotate;
 		float        age;
 		float        scale;
+		float        angle;
 
 
 		 Particle();
