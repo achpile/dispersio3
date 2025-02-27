@@ -16,7 +16,7 @@ ach::MapObjectMoving::MapObjectMoving(ach::ProcessWorld *_world, json_t *obj) : 
 	sf::FloatRect  r = vector_json_rect(obj);
 
 	orient  = dir_orient(d);
-	speed   = json_class_get_real(obj, "Moving", "Speed") * dir_sign(d);
+	speed   = json_property_get_real(obj, "Speed") * dir_sign(d);
 	spawn   = phys.pos;
 
 	min     = orient_rect_min(orient, r) + orient_v_coord(orient, phys.size) / 2.0f;

@@ -253,14 +253,18 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"down",
-                             "Speed":100
+                             "Direction":"down"
                             }
                         }, 
                         {
                          "name":"Spawn",
                          "type":"float",
                          "value":0
+                        }, 
+                        {
+                         "name":"Speed",
+                         "type":"float",
+                         "value":100
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -280,14 +284,18 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up",
-                             "Speed":100
+                             "Direction":"up"
                             }
                         }, 
                         {
                          "name":"Spawn",
                          "type":"float",
                          "value":0
+                        }, 
+                        {
+                         "name":"Speed",
+                         "type":"float",
+                         "value":100
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -330,14 +338,18 @@
                          "value":
                             {
                              "Direction":"right",
-                             "Orientation":"horizontal",
-                             "Speed":100
+                             "Orientation":"horizontal"
                             }
                         }, 
                         {
                          "name":"Spawn",
                          "type":"float",
                          "value":0.5
+                        }, 
+                        {
+                         "name":"Speed",
+                         "type":"float",
+                         "value":100
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -372,6 +384,27 @@
                  "height":16,
                  "id":13,
                  "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"up",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
                  "rotation":0,
                  "type":"character",
                  "visible":true,
@@ -383,6 +416,27 @@
                  "height":16,
                  "id":15,
                  "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"up",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
                  "rotation":0,
                  "type":"character",
                  "visible":true,
@@ -394,6 +448,27 @@
                  "height":16,
                  "id":16,
                  "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"up",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
                  "rotation":0,
                  "type":"character",
                  "visible":true,
@@ -405,6 +480,27 @@
                  "height":16,
                  "id":17,
                  "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"up",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
                  "rotation":0,
                  "type":"character",
                  "visible":true,
@@ -416,6 +512,27 @@
                  "height":16,
                  "id":18,
                  "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"up",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
                  "rotation":0,
                  "type":"character",
                  "visible":true,

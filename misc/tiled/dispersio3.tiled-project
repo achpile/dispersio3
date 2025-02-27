@@ -44,14 +44,37 @@
                     "propertyType": "@direction",
                     "type": "string",
                     "value": "up"
-                },
-                {
-                    "name": "Speed",
-                    "type": "float",
-                    "value": 100
                 }
             ],
             "name": "#moving",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 16,
+            "members": [
+                {
+                    "name": "Aim",
+                    "propertyType": "@direction",
+                    "type": "string",
+                    "value": "up"
+                },
+                {
+                    "name": "Cooldown",
+                    "type": "float",
+                    "value": 0.8
+                },
+                {
+                    "name": "Offset",
+                    "type": "float",
+                    "value": 0.8
+                }
+            ],
+            "name": "#shooting",
             "type": "class",
             "useAs": [
                 "property"
@@ -74,6 +97,20 @@
             "drawFill": true,
             "id": 4,
             "members": [
+                {
+                    "name": "Moving",
+                    "propertyType": "#moving",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "Shooting",
+                    "propertyType": "#shooting",
+                    "type": "class",
+                    "value": {
+                    }
+                }
             ],
             "name": "character",
             "type": "class",
@@ -174,6 +211,11 @@
                     "name": "Spawn",
                     "type": "float",
                     "value": 0.5
+                },
+                {
+                    "name": "Speed",
+                    "type": "float",
+                    "value": 100
                 }
             ],
             "name": "moving",
