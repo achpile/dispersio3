@@ -9,7 +9,7 @@ namespace ach
 		ach::Character *owner;
 
 
-		         AI(ach::Character *_owner);
+		         AI(ach::Character *_owner, json_t *obj);
 		virtual ~AI();
 
 		void update();
@@ -19,7 +19,7 @@ namespace ach
 
 		virtual void collide(ach::PhysLine *line);
 
-		static ach::AI *create(ach::Character *_owner, ach::AIType type);
+		static ach::AI *create(ach::Character *_owner, ach::AIType type, json_t *obj);
 	};
 }
 

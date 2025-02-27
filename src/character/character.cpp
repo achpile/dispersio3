@@ -6,25 +6,21 @@
      * constructor
 
 ***********************************************************************/
+ach::Character::Character(ach::ProcessWorld *_world, json_t *obj)
+{
+	init(_world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj), obj);
+}
+
+
+
+/***********************************************************************
+     * Character
+     * constructor
+
+***********************************************************************/
 ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn)
 {
-	world      = _world;
-	base       = _base;
-	spawn      = _spawn;
-	ai         = ach::AI::create(this, base->ai);
-	body       = ach::Body::create(this, base->model);
-	weapon     = new ach::Weapon(world, this, base->weapon);
-	speed      = base->speed;
-	jumping    = base->jumping;
-
-
-	phys.init(base->hitbox);
-	spawner.set(GAME_PLAYER_RESPAWN);
-
-	body->setColor(base->color);
-	weapon->barrel = base->barrel;
-
-	respawn();
+	init(_world, _base, _spawn, NULL);
 }
 
 
@@ -91,6 +87,34 @@ void ach::Character::render()
 		return;
 
 	body->render();
+}
+
+
+
+/***********************************************************************
+     * Character
+     * init
+
+***********************************************************************/
+void ach::Character::init(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn, json_t *obj)
+{
+	world      = _world;
+	base       = _base;
+	spawn      = _spawn;
+	ai         = ach::AI::create(this, base->ai, obj);
+	body       = ach::Body::create(this, base->model);
+	weapon     = new ach::Weapon(world, this, base->weapon);
+	speed      = base->speed;
+	jumping    = base->jumping;
+
+
+	phys.init(base->hitbox);
+	spawner.set(GAME_PLAYER_RESPAWN);
+
+	body->setColor(base->color);
+	weapon->barrel = base->barrel;
+
+	respawn();
 }
 
 

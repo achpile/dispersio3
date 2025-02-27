@@ -254,6 +254,6 @@ void ach::Map::loadCharacters(json_t *layer)
 			continue;
 		}
 
-		characters.push_back(new ach::Character(world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj)));
+		characters.push_back(new ach::Character(world, obj));
 	}
 }

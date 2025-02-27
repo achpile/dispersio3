@@ -6,7 +6,7 @@ namespace ach
 {
 	struct AIPlayer : AI
 	{
-		 AIPlayer(ach::Character *_owner);
+		 AIPlayer(ach::Character *_owner, json_t *obj);
 		~AIPlayer();
 
 		void control();

@@ -7,7 +7,10 @@ namespace ach
 	enum AIType
 	{
 		aiIdle = 0,
-		aiPlayer
+		aiPlayer,
+		aiFloat,
+		aiCrawl,
+		aiCannon
 	};
 
 

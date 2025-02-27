@@ -25,11 +25,14 @@ namespace ach
 		bool  enemy;
 
 
+		 Character(ach::ProcessWorld *_world, json_t *obj);
 		 Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn);
 		~Character();
 
 		bool update();
 		void render();
+
+		void init(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn, json_t *obj);
 
 		bool visible();
 		void process();

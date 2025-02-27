@@ -51,6 +51,9 @@
 
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"
+#include "character/ai/float.hpp"
+#include "character/ai/crawl.hpp"
+#include "character/ai/cannon.hpp"
 #include "character/ai/pair.hpp"
 
 #include "character/body/body.hpp"

@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::AIPlayer::AIPlayer(ach::Character *_owner) : AI(_owner)
+ach::AIPlayer::AIPlayer(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	owner->enemy = false;
 }
