@@ -1,0 +1,12 @@
+{
+    "EnemyCannon": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyCannon",
+        "Type": "simple"
+    }
+}

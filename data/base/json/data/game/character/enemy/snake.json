@@ -1,0 +1,10 @@
+{
+    "Snake": {
+        "Appearance": {
+            "Model": "EnemySnake"
+        },
+        "Game": {
+            "AI": "crawl"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "Cannon": {
+        "Appearance": {
+            "Model": "EnemyCannon"
+        },
+        "Game": {
+            "AI": "cannon"
+        }
+    }
+}
