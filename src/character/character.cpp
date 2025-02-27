@@ -68,9 +68,6 @@ bool ach::Character::update()
 
 	landed = phys.grounded;
 
-	if (phys.grounded)
-		phys.vel.y = 1.5 * speed;
-
 	return true;
 }
 
@@ -177,12 +174,10 @@ void ach::Character::reset()
 	aim = sf::Vector2f(1.0f, 0.0f);
 	dir = sf::Vector2i(1, 0);
 
+	phys.reset();
+
 	body->reset();
 	ai->reset();
-
-	phys.reset();
-	phys.acc.y = PHYS_GRAVITY;
-	phys.vel.y = speed;
 }
 
 

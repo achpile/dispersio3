@@ -25,15 +25,11 @@ ach::AIFloat::~AIFloat()
 
 /***********************************************************************
      * AIFloat
-     * control
+     * reset
 
 ***********************************************************************/
-void ach::AIFloat::control()
+void ach::AIFloat::reset()
 {
-	owner->phys.vel.x = 0.0f;
-	owner->phys.vel.y = 0.0f;
-	owner->phys.acc.x = 0.0f;
-	owner->phys.acc.y = 0.0f;
 }
 
 

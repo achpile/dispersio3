@@ -31,6 +31,8 @@ ach::AIPlayer::~AIPlayer()
 ***********************************************************************/
 void ach::AIPlayer::control()
 {
+	ground();
+
 	owner->phys.vel.x    = 0.0f;
 	owner->phys.moving   = false;
 	owner->phys.jumpdown = ctrl->keys[ach::ControlAction::caDown].state;
@@ -40,6 +42,18 @@ void ach::AIPlayer::control()
 
 	if (ctrl->keys[ach::ControlAction::caJump ].pressed) owner->jump();
 	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) owner->world->map->use(owner);
+}
+
+
+
+/***********************************************************************
+     * AIPlayer
+     * reset
+
+***********************************************************************/
+void ach::AIPlayer::reset()
+{
+	owner->phys.acc.y = PHYS_GRAVITY;
 }
 
 

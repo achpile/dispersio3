@@ -14,11 +14,13 @@ namespace ach
 
 		void update();
 
-		virtual void control();
-		virtual void aim()   {};
-		virtual void reset() {};
+		void ground();
 
-		virtual void collide(ach::PhysLine *line);
+		virtual void control() {};
+		virtual void aim()     {};
+		virtual void reset()   {};
+
+		virtual void collide(ach::PhysLine*) {};
 
 		static ach::AI *create(ach::Character *_owner, ach::AIType type, json_t *obj);
 	};

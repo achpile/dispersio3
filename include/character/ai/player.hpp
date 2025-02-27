@@ -10,6 +10,7 @@ namespace ach
 		~AIPlayer();
 
 		void control();
+		void reset();
 
 		void collide(ach::PhysLine *line);
 

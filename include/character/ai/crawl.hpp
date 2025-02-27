@@ -10,6 +10,7 @@ namespace ach
 		~AICrawl();
 
 		void control();
+		void reset();
 
 		void collide(ach::PhysLine *line);
 	};

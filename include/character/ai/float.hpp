@@ -9,7 +9,7 @@ namespace ach
 		 AIFloat(ach::Character *_owner, json_t *obj);
 		~AIFloat();
 
-		void control();
+		void reset();
 
 		void collide(ach::PhysLine *line);
 	};

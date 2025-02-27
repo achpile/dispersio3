@@ -9,7 +9,7 @@ namespace ach
 		 AICannon(ach::Character *_owner, json_t *obj);
 		~AICannon();
 
-		void control();
+		void reset();
 
 		void collide(ach::PhysLine *line);
 	};
