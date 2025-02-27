@@ -40,10 +40,10 @@
             "id": 2,
             "members": [
                 {
-                    "name": "Orientation",
-                    "propertyType": "@orientation",
+                    "name": "Direction",
+                    "propertyType": "@direction",
                     "type": "string",
-                    "value": "vertical"
+                    "value": "up"
                 },
                 {
                     "name": "Speed",

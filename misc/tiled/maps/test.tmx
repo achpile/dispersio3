@@ -135,18 +135,24 @@
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
-      <property name="Speed" type="float" value="-100"/>
+      <property name="Direction" propertytype="@direction" value="down"/>
      </properties>
     </property>
+    <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
-  <object id="51" name="MovingDev" type="moving" x="352" y="304" width="32" height="96"/>
+  <object id="51" name="MovingDev" type="moving" x="352" y="304" width="32" height="96">
+   <properties>
+    <property name="Spawn" type="float" value="0"/>
+   </properties>
+  </object>
   <object id="52" name="CollectBag" type="collectable" x="432" y="320" width="16" height="16"/>
   <object id="53" name="CollectBag" type="collectable" x="224" y="96" width="16" height="16"/>
   <object id="54" name="MovingDev" type="moving" x="688" y="368" width="224" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
       <property name="Orientation" propertytype="@orientation" value="horizontal"/>
      </properties>
     </property>

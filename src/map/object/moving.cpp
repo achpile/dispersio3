@@ -12,16 +12,22 @@ ach::MapObjectMoving::MapObjectMoving(ach::ProcessWorld *_world, json_t *obj) : 
 
 	setSheet(json_object_get_string(obj, "name"));
 
-	sf::FloatRect r = vector_json_rect(obj);
+	ach::Direction d = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
+	sf::FloatRect  r = vector_json_rect(obj);
 
-	orient = pair_get_enum(json_class_get_string(obj, "Moving", "Orientation"), pairOrientation);
-	speed  = json_class_get_real(obj, "Moving", "Speed");
-	spawn  = phys.pos;
+	orient  = dir_orient(d);
+	speed   = json_class_get_real(obj, "Moving", "Speed") * dir_sign(d);
+	spawn   = phys.pos;
 
-	min    = orient_rect_min(orient, r) + orient_v_coord(orient, phys.size) / 2.0f;
-	max    = orient_rect_max(orient, r) - orient_v_coord(orient, phys.size) / 2.0f;
+	min     = orient_rect_min(orient, r) + orient_v_coord(orient, phys.size) / 2.0f;
+	max     = orient_rect_max(orient, r) - orient_v_coord(orient, phys.size) / 2.0f;
 
-	orient_v_set(orient, &spawn, min + (max - min) * interval_set(json_property_get_real(obj, "Spawn"), 0.0, 1.0));
+	float s = interval_set(json_property_get_real(obj, "Spawn"), 0.0, 1.0);
+
+	if (dir_sign(d) == -1)
+		s = 1.0f - s;
+
+	orient_v_set(orient, &spawn, min + (max - min) * s);
 }
 
 

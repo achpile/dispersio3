@@ -253,14 +253,14 @@
                          "type":"class",
                          "value":
                             {
-                             "Orientation":"vertical",
-                             "Speed":-100
+                             "Direction":"down",
+                             "Speed":100
                             }
                         }, 
                         {
                          "name":"Spawn",
                          "type":"float",
-                         "value":0.5
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -280,14 +280,14 @@
                          "type":"class",
                          "value":
                             {
-                             "Orientation":"vertical",
+                             "Direction":"up",
                              "Speed":100
                             }
                         }, 
                         {
                          "name":"Spawn",
                          "type":"float",
-                         "value":0.5
+                         "value":0
                         }],
                  "rotation":0,
                  "type":"moving",
@@ -329,6 +329,7 @@
                          "type":"class",
                          "value":
                             {
+                             "Direction":"right",
                              "Orientation":"horizontal",
                              "Speed":100
                             }
