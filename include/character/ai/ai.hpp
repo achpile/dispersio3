@@ -15,7 +15,8 @@ namespace ach
 		void update();
 
 		virtual void control();
-		virtual void aim()  {};
+		virtual void aim()   {};
+		virtual void reset() {};
 
 		virtual void collide(ach::PhysLine *line);
 

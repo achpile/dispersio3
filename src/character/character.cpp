@@ -178,6 +178,7 @@ void ach::Character::reset()
 	dir = sf::Vector2i(1, 0);
 
 	body->reset();
+	ai->reset();
 
 	phys.reset();
 	phys.acc.y = PHYS_GRAVITY;
