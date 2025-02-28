@@ -34,6 +34,7 @@ ach::AICannon::~AICannon()
 void ach::AICannon::reset()
 {
 	owner->aim = dir_vector_f(dir);
+	owner->body->setDirection(dir);
 
 	owner->weapon->setCooldown(cooldown);
 	owner->weapon->setOffset  (offset);

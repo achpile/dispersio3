@@ -19,6 +19,7 @@ namespace ach
 		void render();
 
 		void setColor(sf::Color color);
+		void setDirection(ach::Direction dir);
 
 		virtual void aim()     {};
 		virtual void animate() {};
