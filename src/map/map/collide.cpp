@@ -36,6 +36,8 @@ void ach::Map::collideCharacter(ach::Character *character)
 	float velocity;
 	float chunk;
 
+	long filter = (character->enemy) ? filterPhysEnemy : filterPhysPlayer;
+
 	character->phys.vel  += character->phys.acc * tm->get(ach::TimeSource::tsFrame);
 	character->phys.vel.x = interval_set(character->phys.vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 	character->phys.vel.y = interval_set(character->phys.vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
@@ -52,13 +54,8 @@ void ach::Map::collideCharacter(ach::Character *character)
 		character->phys.pos += character->phys.vel * chunk;
 		character->phys.calc();
 
-		while ((line = collidePhys(&character->phys)) != NULL)
-		{
+		while ((line = collidePhys(&character->phys, filter)) != NULL)
 			character->ai->collide(line);
-
-			if (line->type == ach::PhysType::ptDeath)
-				break;
-		}
 
 		left -= chunk;
 	}
@@ -73,16 +70,16 @@ void ach::Map::collideCharacter(ach::Character *character)
      * collidePhys
 
 ***********************************************************************/
-ach::PhysLine* ach::Map::collidePhys(ach::Phys *phys)
+ach::PhysLine* ach::Map::collidePhys(ach::Phys *phys, long filter)
 {
 	std::vector<ach::PhysLine*> list;
 
-	collision->fill(&list, &phys->rect);
+	collision->fill(&list, filter, &phys->rect);
 
 	list_foreach(solids)
 		list.push_back(solids[i]);
 
-	collision->sort(&list, phys);
+	collision->sort(&list, filter, phys);
 
 	if (!list.size()) return NULL;
 
@@ -100,16 +97,16 @@ ach::PhysLine* ach::Map::collidePhys(ach::Phys *phys)
      * collideLine
 
 ***********************************************************************/
-bool ach::Map::collideLine(ach::Line *line, sf::Vector2f *n)
+bool ach::Map::collideLine(ach::Line *line, long filter, sf::Vector2f *n)
 {
 	std::vector<ach::PhysLine*> list;
 
-	collision->fill(&list, &line->r);
+	collision->fill(&list, filter, &line->r);
 
 	list_foreach(solids)
 		list.push_back(solids[i]);
 
-	collision->sort(&list,  line);
+	collision->sort(&list, filter, line);
 
 	list_foreach(list)
 		if (list[i]->collide(line))
@@ -138,7 +135,7 @@ void ach::Map::collideProjectile(ach::Projectile *projectile)
 
 	sf::Vector2f n;
 
-	if (collideLine(&projectile->line, &n))
+	if (collideLine(&projectile->line, filterPhysProjectile, &n))
 	{
 		projectile->phys.pos = projectile->line.b;
 		projectile->hit(vector_alike(n, -projectile->line.v));

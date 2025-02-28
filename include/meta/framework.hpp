@@ -32,11 +32,10 @@
 #include "framework/math/interval.inl"
 #include "framework/math/vector.hpp"
 #include "framework/math/line.hpp"
+#include "framework/math/orientation.hpp"
+#include "framework/math/direction.hpp"
+#include "framework/math/pair.hpp"
 #include "framework/math/rect.hpp"
-
-#include "framework/orientation/orientation.hpp"
-#include "framework/orientation/direction.hpp"
-#include "framework/orientation/pair.hpp"
 
 #include "framework/html/html.hpp"
 #include "framework/html/include.hpp"

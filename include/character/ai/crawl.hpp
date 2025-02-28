@@ -9,6 +9,8 @@ namespace ach
 		ach::Direction initial;
 		ach::Direction dir;
 
+		ach::Line      front;
+
 
 		 AICrawl(ach::Character *_owner, json_t *obj);
 		~AICrawl();
@@ -17,6 +19,8 @@ namespace ach
 		void reset();
 
 		void collide(ach::PhysLine *line);
+
+		void check();
 	};
 }
 

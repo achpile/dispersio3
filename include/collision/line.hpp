@@ -34,8 +34,8 @@ namespace ach
 		float diff(float x, float left, float right, bool max);
 		float value(float x);
 
-		bool  check(ach::Phys *p);
-		bool  check(ach::Line *l);
+		bool  check(ach::Phys *p, long filter);
+		bool  check(ach::Line *l, long filter);
 
 		bool  collide(ach::Phys *p);
 		bool  collide(ach::Line *l);

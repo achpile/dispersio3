@@ -43,12 +43,12 @@ namespace ach
 		/*  collide.cpp  */
 		void collide();
 		void collideCharacter(ach::Character *character);
-		bool collideLine(ach::Line *line, sf::Vector2f *n = NULL);
+		bool collideLine(ach::Line *line, long filter, sf::Vector2f *n = NULL);
 		void collideProjectile(ach::Projectile *projectile);
 		void collideExplosion(ach::Projectile *projectile);
 		void collideEnemies(ach::Character *character);
 
-		ach::PhysLine *collidePhys(ach::Phys *phys);
+		ach::PhysLine *collidePhys(ach::Phys *phys, long filter);
 
 		/*  load.cpp  */
 		void load();

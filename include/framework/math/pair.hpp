@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_ORIENTATION_PAIR
-#define __FRAMEWORK_ORIENTATION_PAIR
+#ifndef __FRAMEWORK_MATH_PAIR
+#define __FRAMEWORK_MATH_PAIR
 
 
 extern ach::Pair<ach::Direction>   pairDirection[];

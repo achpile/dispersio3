@@ -12,7 +12,7 @@ namespace ach
 		 Quadrant();
 		~Quadrant();
 
-		void fill(std::vector<ach::PhysLine*> *list);
+		void fill(std::vector<ach::PhysLine*> *list, long filter);
 	};
 }
 

@@ -13,6 +13,7 @@
 #include "collision/quadrant.hpp"
 #include "collision/collision.hpp"
 #include "collision/pair.hpp"
+#include "collision/filter.hpp"
 
 #include "particle/stars.hpp"
 #include "particle/smoke.hpp"

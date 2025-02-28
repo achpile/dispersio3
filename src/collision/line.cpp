@@ -71,10 +71,13 @@ void ach::PhysLine::calc()
      * check
 
 ***********************************************************************/
-bool ach::PhysLine::check(ach::Phys *p)
+bool ach::PhysLine::check(ach::Phys *p, long filter)
 {
 	d = 0.0f;
 	f = 0.0f;
+
+	if (!flag_get(filter, type))
+		return false;
 
 	if (type == ach::PhysType::ptPlatform && (o == ach::Orientation::oVertical || p->jumpdown || p->vel.y < 0.0f))
 		return false;
@@ -117,12 +120,12 @@ bool ach::PhysLine::check(ach::Phys *p)
      * check
 
 ***********************************************************************/
-bool ach::PhysLine::check(ach::Line *l)
+bool ach::PhysLine::check(ach::Line *l, long filter)
 {
 	d = 0.0f;
 	f = 0.0f;
 
-	if (type != ach::PhysType::ptSolid)
+	if (!flag_get(filter, type))
 		return false;
 
 	sf::Vector2f c;
@@ -153,9 +156,6 @@ bool ach::PhysLine::collide(ach::Phys *p)
 
 	if (o == ach::Orientation::oHorizontal && d < 0 && p->vel.y < 0.0f)
 		return false;
-
-	if (type == ach::PhysType::ptDeath)
-		return true;
 
 	sf::Vector2f offset = offsetPhys();
 

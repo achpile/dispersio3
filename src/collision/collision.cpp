@@ -73,7 +73,7 @@ void ach::Collision::split(sf::Vector2i _size)
      * fill
 
 ***********************************************************************/
-void ach::Collision::fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect)
+void ach::Collision::fill(std::vector<ach::PhysLine*> *list, long filter, sf::FloatRect *rect)
 {
 	list->clear();
 
@@ -94,7 +94,7 @@ void ach::Collision::fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect
 
 	for (int x = from.x; x < to.x; x++)
 		for (int y = from.y; y < to.y; y++)
-			quad[x][y]->fill(list);
+			quad[x][y]->fill(list, filter);
 
 	list->erase(std::unique(list->begin(), list->end()), list->end());
 }
@@ -106,10 +106,10 @@ void ach::Collision::fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect
      * sort
 
 ***********************************************************************/
-void ach::Collision::sort(std::vector<ach::PhysLine*> *list, ach::Phys *phys)
+void ach::Collision::sort(std::vector<ach::PhysLine*> *list, long filter, ach::Phys *phys)
 {
 	list_foreach(*list)
-		(*list)[i]->check(phys);
+		(*list)[i]->check(phys, filter);
 
 	sort(list);
 }
@@ -121,10 +121,10 @@ void ach::Collision::sort(std::vector<ach::PhysLine*> *list, ach::Phys *phys)
      * sort
 
 ***********************************************************************/
-void ach::Collision::sort(std::vector<ach::PhysLine*> *list, ach::Line *line)
+void ach::Collision::sort(std::vector<ach::PhysLine*> *list, long filter, ach::Line *line)
 {
 	list_foreach(*list)
-		(*list)[i]->check(line);
+		(*list)[i]->check(line, filter);
 
 	sort(list);
 }

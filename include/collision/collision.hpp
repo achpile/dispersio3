@@ -17,11 +17,11 @@ namespace ach
 
 		void split(sf::Vector2i _size);
 
-		void fill(std::vector<ach::PhysLine*> *list, sf::FloatRect *rect);
+		void fill(std::vector<ach::PhysLine*> *list, long filter, sf::FloatRect *rect);
 
 		void sort(std::vector<ach::PhysLine*> *list);
-		void sort(std::vector<ach::PhysLine*> *list, ach::Line *line);
-		void sort(std::vector<ach::PhysLine*> *list, ach::Phys *phys);
+		void sort(std::vector<ach::PhysLine*> *list, long filter, ach::Line *line);
+		void sort(std::vector<ach::PhysLine*> *list, long filter, ach::Phys *phys);
 	};
 }
 
