@@ -10,18 +10,10 @@
             "type": "real"
         }
     },
-    "Cooldown": {
-        "@attr": {
-            "default": 1,
-            "max": 60,
-            "min": 0,
-            "type": "real"
-        }
-    },
     "Count": {
         "@attr": {
             "default": 1,
-            "max": 32,
+            "max": 8,
             "min": 1,
             "type": "integer"
         }
@@ -31,14 +23,6 @@
             "data": "Data.Game.Projectile",
             "default": "Bullet",
             "type": "link"
-        }
-    },
-    "Range": {
-        "@attr": {
-            "default": 2000,
-            "max": 2000,
-            "min": 0,
-            "type": "real"
         }
     },
     "Shot": {

@@ -68,11 +68,6 @@ bool ach::Projectile::update()
 	line.b = phys.pos;
 	line.calc();
 
-	range -= line.l;
-
-	if (range <= 0.0f)
-		destroy();
-
 	switch (base->orient)
 	{
 		case ach::OrientType::otDirection: direction(); break;

@@ -1,6 +1,7 @@
 {
     "Cannon": {
         "Appearance": {
+            "Barrel": 8,
             "Model": "EnemyCannon"
         },
         "Game": {

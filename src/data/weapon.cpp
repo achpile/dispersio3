@@ -9,8 +9,6 @@
 ach::DataWeapon::DataWeapon(json_t *obj)
 {
 	cone       = json_object_get_real   (obj, "Cone"    );
-	cooldown   = json_object_get_real   (obj, "Cooldown");
-	range      = json_object_get_real   (obj, "Range"   );
 	speed      = json_object_get_real   (obj, "Speed"   );
 	count      = json_object_get_integer(obj, "Count"   );
 

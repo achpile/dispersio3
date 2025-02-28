@@ -20,7 +20,6 @@ namespace ach
 		bool  enemy;
 		int   bounces;
 		float angle;
-		float range;
 
 
 		 Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_base);

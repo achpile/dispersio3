@@ -10,8 +10,6 @@ namespace ach
 		ach::DataSound      *shot;
 
 		float cone;
-		float cooldown;
-		float range;
 		float speed;
 		int   count;
 
