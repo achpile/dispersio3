@@ -4,7 +4,11 @@
             "Model": "EnemyBat"
         },
         "Game": {
-            "AI": "float"
+            "AI": "float",
+            "Hitbox": {
+                "X": 14,
+                "Y": 8
+            }
         },
         "Stats": {
             "Speed": 50

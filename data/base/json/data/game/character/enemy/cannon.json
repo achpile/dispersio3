@@ -5,7 +5,11 @@
             "Model": "EnemyCannon"
         },
         "Game": {
-            "AI": "cannon"
+            "AI": "cannon",
+            "Hitbox": {
+                "X": 14,
+                "Y": 14
+            }
         }
     }
 }

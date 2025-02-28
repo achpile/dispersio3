@@ -4,7 +4,11 @@
             "Model": "EnemySnake"
         },
         "Game": {
-            "AI": "crawl"
+            "AI": "crawl",
+            "Hitbox": {
+                "X": 12,
+                "Y": 12
+            }
         },
         "Stats": {
             "Speed": 50
