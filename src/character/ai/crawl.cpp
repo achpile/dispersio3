@@ -8,6 +8,10 @@
 ***********************************************************************/
 ach::AICrawl::AICrawl(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
+	initial = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
+
+	if (dir_orient(initial) == ach::Orientation::oVertical)
+		initial = ach::Direction::dRight;
 }
 
 
@@ -31,6 +35,9 @@ ach::AICrawl::~AICrawl()
 void ach::AICrawl::control()
 {
 	ground();
+
+	owner->dir.x      = dir_sign(dir);
+	owner->phys.vel.x = dir_sign(dir) * owner->speed;
 }
 
 
@@ -42,6 +49,7 @@ void ach::AICrawl::control()
 ***********************************************************************/
 void ach::AICrawl::reset()
 {
+	dir = initial;
 	owner->phys.acc.y = PHYS_GRAVITY;
 }
 
@@ -52,6 +60,8 @@ void ach::AICrawl::reset()
      * collide
 
 ***********************************************************************/
-void ach::AICrawl::collide(ach::PhysLine*)
+void ach::AICrawl::collide(ach::PhysLine *line)
 {
+	if (line->o == ach::Orientation::oVertical)
+		dir = !dir;
 }

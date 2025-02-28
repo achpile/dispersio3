@@ -9,6 +9,7 @@ namespace ach
 		 BodySimple(ach::Character *_owner, ach::DataModel *_base);
 		~BodySimple();
 
+		void flip();
 		void reset();
 	};
 }

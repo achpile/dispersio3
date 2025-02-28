@@ -6,6 +6,10 @@ namespace ach
 {
 	struct AICrawl : AI
 	{
+		ach::Direction initial;
+		ach::Direction dir;
+
+
 		 AICrawl(ach::Character *_owner, json_t *obj);
 		~AICrawl();
 
