@@ -119,6 +119,7 @@ void ach::Projectile::init()
 	last   = phys.pos;
 
 	tracer->init();
+	phys.calc();
 }
 
 

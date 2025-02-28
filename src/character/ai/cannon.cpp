@@ -8,6 +8,9 @@
 ***********************************************************************/
 ach::AICannon::AICannon(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
+	dir      = pair_get_enum(json_class_get_string(obj, "Shooting", "Aim"), pairDirection);
+	cooldown = json_class_get_real(obj, "Shooting", "Cooldown");
+	offset   = json_class_get_real(obj, "Shooting", "Offset"  );
 }
 
 
@@ -30,6 +33,10 @@ ach::AICannon::~AICannon()
 ***********************************************************************/
 void ach::AICannon::reset()
 {
+	owner->aim = dir_vector_f(dir);
+
+	owner->weapon->setCooldown(cooldown);
+	owner->weapon->setOffset  (offset);
 }
 
 

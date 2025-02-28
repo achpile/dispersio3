@@ -1,7 +1,6 @@
 {
     "Bullet": {
         "Impact": {
-            "Color": "#F58549",
             "Sound": "BulletBump",
             "Type": "spark"
         }
