@@ -5,6 +5,9 @@
         },
         "Game": {
             "AI": "crawl"
+        },
+        "Stats": {
+            "Speed": 50
         }
     }
 }

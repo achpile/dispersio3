@@ -42,10 +42,10 @@ ach::Orientation dir_orient(ach::Direction d)
 
 
 /***********************************************************************
-     * dir_vector
+     * dir_vector_i
 
 ***********************************************************************/
-sf::Vector2i dir_vector(ach::Direction d)
+sf::Vector2i dir_vector_i(ach::Direction d)
 {
 	switch (d)
 	{
@@ -57,6 +57,26 @@ sf::Vector2i dir_vector(ach::Direction d)
 	}
 
 	return sf::Vector2i(0, 0);
+}
+
+
+
+/***********************************************************************
+     * dir_vector_f
+
+***********************************************************************/
+sf::Vector2f dir_vector_f(ach::Direction d)
+{
+	switch (d)
+	{
+		case ach::Direction::dUp   : return sf::Vector2f( 0.0f, -1.0f);
+		case ach::Direction::dDown : return sf::Vector2f( 0.0f,  1.0f);
+		case ach::Direction::dLeft : return sf::Vector2f(-1.0f,  0.0f);
+		case ach::Direction::dRight: return sf::Vector2f( 1.0f,  0.0f);
+		case ach::Direction::dCount: return sf::Vector2f( 0.0f,  0.0f);
+	}
+
+	return sf::Vector2f(0.0f, 0.0f);
 }
 
 

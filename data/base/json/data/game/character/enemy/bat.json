@@ -5,6 +5,9 @@
         },
         "Game": {
             "AI": "float"
+        },
+        "Stats": {
+            "Speed": 50
         }
     }
 }
