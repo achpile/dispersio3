@@ -2,8 +2,8 @@
     "Default": {
         "Filename": "map/test.tmj",
         "Spawn": {
-            "X": 13,
-            "Y": 6
+            "X": 3,
+            "Y": 15
         }
     }
 }
