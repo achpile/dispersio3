@@ -33,6 +33,8 @@ void ach::AIPlayer::control()
 {
 	ground();
 
+	jumped &= ctrl->keys[ach::ControlAction::caJump].state;
+
 	owner->phys.vel.x    = 0.0f;
 	owner->phys.moving   = false;
 	owner->phys.jumpdown = ctrl->keys[ach::ControlAction::caDown].state;
@@ -40,7 +42,7 @@ void ach::AIPlayer::control()
 	if (ctrl->keys[ach::ControlAction::caLeft ].state) move(-1);
 	if (ctrl->keys[ach::ControlAction::caRight].state) move( 1);
 
-	if (ctrl->keys[ach::ControlAction::caJump ].pressed) owner->jump();
+	if (ctrl->keys[ach::ControlAction::caJump ].state  ) jump();
 	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) owner->use();
 }
 
@@ -53,6 +55,8 @@ void ach::AIPlayer::control()
 ***********************************************************************/
 void ach::AIPlayer::reset()
 {
+	jumped = false;
+
 	owner->phys.acc.y = PHYS_GRAVITY;
 }
 
@@ -80,4 +84,20 @@ void ach::AIPlayer::move(int d)
 {
 	owner->dir.x = d;
 	owner->move(d);
+}
+
+
+
+/***********************************************************************
+     * AIPlayer
+     * jump
+
+***********************************************************************/
+void ach::AIPlayer::jump()
+{
+	if (jumped)
+		return;
+
+	if (owner->jump())
+		jumped = true;
 }

@@ -6,6 +6,9 @@ namespace ach
 {
 	struct AIPlayer : AI
 	{
+		bool jumped;
+
+
 		 AIPlayer(ach::Character *_owner, json_t *obj);
 		~AIPlayer();
 
@@ -15,6 +18,7 @@ namespace ach
 		void collide(ach::PhysLine *line);
 
 		void move(int d);
+		void jump();
 	};
 }
 

@@ -267,17 +267,19 @@ void ach::Character::move(int d)
      * jump
 
 ***********************************************************************/
-void ach::Character::jump()
+bool ach::Character::jump()
 {
 	if (!phys.grounded)
-		return;
+		return false;
 
 	if (phys.jumpdown)
-		return;
+		return false;
 
 	phys.vel.y = -jumping;
 
 	sm->play(base->sndJump->snd);
+
+	return true;
 }
 
 

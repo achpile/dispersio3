@@ -45,7 +45,7 @@ namespace ach
 		void die();
 
 		void move(int d);
-		void jump();
+		bool jump();
 		void use();
 	};
 }
