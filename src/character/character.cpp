@@ -279,3 +279,18 @@ void ach::Character::jump()
 
 	sm->play(base->sndJump->snd);
 }
+
+
+
+/***********************************************************************
+     * Character
+     * use
+
+***********************************************************************/
+void ach::Character::use()
+{
+	if (!phys.grounded)
+		return;
+
+	world->map->use(this);
+}
