@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::ProcessWorld::ProcessWorld()
 {
-	map    = new ach::Map(this, db->getMap("01_Lab"));
+	map    = new ach::Map(this, db->getMap("01-MilitaryBase"));
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
 
 	map->cam->follow(&player->phys);
