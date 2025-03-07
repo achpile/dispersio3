@@ -188,6 +188,11 @@
             "drawFill": true,
             "id": 10,
             "members": [
+                {
+                    "name": "Respawn",
+                    "type": "bool",
+                    "value": true
+                }
             ],
             "name": "fragile",
             "type": "class",
