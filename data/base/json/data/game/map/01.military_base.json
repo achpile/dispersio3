@@ -2,8 +2,8 @@
     "01-MilitaryBase": {
         "Filename": "map/01.military_base.tmj",
         "Spawn": {
-            "X": 71,
-            "Y": 28
+            "X": 26,
+            "Y": 23
         }
     }
 }
