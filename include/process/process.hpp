@@ -6,8 +6,11 @@ namespace ach
 {
 	struct Process
 	{
-		         Process()            {};
-		virtual ~Process()            {};
+		ach::StateGame *owner;
+
+
+		         Process(ach::StateGame *_owner);
+		virtual ~Process();
 
 		virtual void update()         {};
 		virtual void render()         {};

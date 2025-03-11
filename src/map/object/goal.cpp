@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::MapObjectGoal::MapObjectGoal(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
+	sfx = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Goal"));
 }
 
 
@@ -30,4 +31,6 @@ ach::MapObjectGoal::~MapObjectGoal()
 ***********************************************************************/
 void ach::MapObjectGoal::touch()
 {
+	sm->play(sfx->snd);
+	world->goal();
 }

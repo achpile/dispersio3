@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::StateGame::StateGame()
 {
-	proc = new ach::ProcessWorld();
+	proc = new ach::ProcessWorld(this);
 
 	app->mouse(false);
 }
@@ -47,4 +47,16 @@ void ach::StateGame::update()
 void ach::StateGame::event(sf::Event e)
 {
 	proc->event(e);
+}
+
+
+
+/***********************************************************************
+     * StateGame
+     * next
+
+***********************************************************************/
+void ach::StateGame::next()
+{
+	app->stateSet(ach::GameState::gsMenu);
 }

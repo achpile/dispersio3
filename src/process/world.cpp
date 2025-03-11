@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ProcessWorld::ProcessWorld()
+ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 {
 	map    = new ach::Map(this, db->getMap("01-MilitaryBase"));
 	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
@@ -65,4 +65,16 @@ void ach::ProcessWorld::gateway(sf::FloatRect dest)
 {
 	player->gateway(dest);
 	map->cam->update();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * goal
+
+***********************************************************************/
+void ach::ProcessWorld::goal()
+{
+	owner->next();
 }

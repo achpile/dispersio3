@@ -10,13 +10,14 @@ namespace ach
 		ach::Character *player;
 
 
-		 ProcessWorld();
+		 ProcessWorld(ach::StateGame *_owner);
 		~ProcessWorld();
 
 		void update();
 		void render();
 
 		void gateway(sf::FloatRect dest);
+		void goal();
 	};
 }
 
