@@ -380,6 +380,12 @@
                  "height":16,
                  "id":56,
                  "name":"BlockDev",
+                 "properties":[
+                        {
+                         "name":"Respawn",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"fragile",
                  "visible":true,
@@ -391,6 +397,12 @@
                  "height":16,
                  "id":67,
                  "name":"BlockDev",
+                 "properties":[
+                        {
+                         "name":"Respawn",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"fragile",
                  "visible":true,
@@ -408,6 +420,17 @@
                  "width":16,
                  "x":656,
                  "y":368
+                }, 
+                {
+                 "height":32,
+                 "id":87,
+                 "name":"",
+                 "rotation":0,
+                 "type":"goal",
+                 "visible":true,
+                 "width":16,
+                 "x":528,
+                 "y":352
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1354,7 +1377,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":87,
+ "nextobjectid":88,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
@@ -1372,7 +1395,7 @@
          "margin":0,
          "name":"Dev",
          "spacing":0,
-         "tilecount":16,
+         "tilecount":19,
          "tileheight":16,
          "tiles":[
                 {
@@ -1467,7 +1490,25 @@
                 }, 
                 {
                  "id":15,
-                 "image":"..\/gfx\/game\/tile\/dev\/spike.png",
+                 "image":"..\/gfx\/game\/tile\/dev\/spike_u.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/gfx\/game\/tile\/dev\/spike_d.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/gfx\/game\/tile\/dev\/spike_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/gfx\/game\/tile\/dev\/spike_r.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],

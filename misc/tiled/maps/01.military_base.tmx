@@ -287,7 +287,6 @@
   <object id="103" type="checkpoint" x="816" y="832" width="16" height="16"/>
   <object id="104" type="checkpoint" x="792" y="1024" width="16" height="16"/>
   <object id="105" name="CollectBag" type="collectable" x="1056" y="928" width="16" height="16"/>
-  <object id="117" type="goal" x="720" y="1008" width="16" height="32"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
   <object id="2" name="Snake" type="character" x="584" y="1008" width="16" height="16">
