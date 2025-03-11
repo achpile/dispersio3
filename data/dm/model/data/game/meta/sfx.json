@@ -16,17 +16,17 @@
             "type": "link"
         }
     },
-    "Goal": {
-        "@attr": {
-            "data": "Data.SFX",
-            "default": "Goal",
-            "type": "link"
-        }
-    },
     "Collect": {
         "@attr": {
             "data": "Data.SFX",
             "default": "Collect",
+            "type": "link"
+        }
+    },
+    "Goal": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Goal",
             "type": "link"
         }
     }
