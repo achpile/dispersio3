@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="72" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="88">
  <editorsettings>
-  <export target="../../../data/base/map/test.tmj" format="json"/>
+  <export target="../../../data/base/map/00.dev.tmj" format="json"/>
  </editorsettings>
  <tileset firstgid="1" source="../tilesets/dev.tsx"/>
  <layer id="1" name="wall" width="72" height="36">
