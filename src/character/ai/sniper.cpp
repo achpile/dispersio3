@@ -44,6 +44,10 @@ void ach::AISniper::control()
 ***********************************************************************/
 void ach::AISniper::aim()
 {
+	if (!target)
+		return;
+
+	owner->aim = vector_norm(target->phys.pos - owner->phys.pos);
 }
 
 
