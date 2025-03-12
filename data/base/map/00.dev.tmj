@@ -826,6 +826,38 @@
                  "width":16,
                  "x":496,
                  "y":128
+                }, 
+                {
+                 "height":16,
+                 "id":88,
+                 "name":"CannonOrb",
+                 "properties":[
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"up"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"down",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":208,
+                 "y":72
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1377,7 +1409,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":88,
+ "nextobjectid":89,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

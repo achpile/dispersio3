@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::AI::AI(ach::Character *_owner, json_t*)
 {
-	owner = _owner;
+	owner  = _owner;
+	target = NULL;
 
 	owner->enemy = true;
 }
@@ -48,6 +49,38 @@ void ach::AI::ground()
 {
 	if (owner->phys.grounded)
 		owner->phys.vel.y = 1.5f * owner->speed;
+}
+
+
+
+/***********************************************************************
+     * AI
+     * search
+
+***********************************************************************/
+void ach::AI::search()
+{
+	ach::Character *candidate = NULL;
+	float dist = 0.0f;
+
+	target = NULL;
+
+	list_foreach(owner->world->map->characters)
+	{
+		candidate = owner->world->map->characters[i];
+
+		if (owner->enemy == candidate->enemy)
+			continue;
+
+		if (!candidate->visible())
+			continue;
+
+		if (!target || vector_len(owner->phys.pos - candidate->phys.pos) < dist)
+		{
+			target = candidate;
+			dist   = vector_len(owner->phys.pos - candidate->phys.pos);
+		}
+	}
 }
 
 

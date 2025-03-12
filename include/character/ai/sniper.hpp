@@ -6,8 +6,6 @@ namespace ach
 {
 	struct AISniper : AI
 	{
-		ach::Direction dir;
-
 		float cooldown;
 		float offset;
 
@@ -15,6 +13,8 @@ namespace ach
 		 AISniper(ach::Character *_owner, json_t *obj);
 		~AISniper();
 
+		void control();
+		void aim();
 		void reset();
 	};
 }

@@ -7,6 +7,7 @@ namespace ach
 	struct AI
 	{
 		ach::Character *owner;
+		ach::Character *target;
 
 
 		         AI(ach::Character *_owner, json_t *obj);
@@ -15,6 +16,7 @@ namespace ach
 		void update();
 
 		void ground();
+		void search();
 
 		virtual void control() {};
 		virtual void aim()     {};

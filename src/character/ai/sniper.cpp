@@ -8,7 +8,6 @@
 ***********************************************************************/
 ach::AISniper::AISniper(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
-	dir      = pair_get_enum(json_class_get_string(obj, "Shooting", "Aim"), pairDirection);
 	cooldown = json_class_get_real(obj, "Shooting", "Cooldown");
 	offset   = json_class_get_real(obj, "Shooting", "Offset"  );
 }
@@ -28,13 +27,35 @@ ach::AISniper::~AISniper()
 
 /***********************************************************************
      * AISniper
+     * control
+
+***********************************************************************/
+void ach::AISniper::control()
+{
+	search();
+}
+
+
+
+/***********************************************************************
+     * AISniper
+     * aim
+
+***********************************************************************/
+void ach::AISniper::aim()
+{
+}
+
+
+
+/***********************************************************************
+     * AISniper
      * reset
 
 ***********************************************************************/
 void ach::AISniper::reset()
 {
-	owner->aim = dir_vector_f(dir);
-	owner->body->setDirection(dir);
+	owner->aim = dir_vector_f(ach::Direction::dDown);
 
 	owner->weapon->setCooldown(cooldown);
 	owner->weapon->setOffset  (offset);

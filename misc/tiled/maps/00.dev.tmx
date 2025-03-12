@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="72" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="88">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="72" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="89">
  <editorsettings>
   <export target="../../../data/base/map/00.dev.tmj" format="json"/>
  </editorsettings>
@@ -274,6 +274,15 @@
    </properties>
   </object>
   <object id="65" name="Cannon" type="character" x="496" y="128" width="16" height="16">
+   <properties>
+    <property name="Shooting" type="class" propertytype="#shooting">
+     <properties>
+      <property name="Aim" propertytype="@direction" value="down"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="88" name="CannonOrb" type="character" x="208" y="72" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
