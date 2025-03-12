@@ -66,6 +66,7 @@ ach::AI* ach::AI::create(ach::Character *_owner, ach::AIType type, json_t *obj)
 		case ach::AIType::aiFloat : return new ach::AIFloat (_owner, obj);
 		case ach::AIType::aiCrawl : return new ach::AICrawl (_owner, obj);
 		case ach::AIType::aiCannon: return new ach::AICannon(_owner, obj);
+		case ach::AIType::aiSniper: return new ach::AISniper(_owner, obj);
 	}
 
 	return new ach::AI(_owner, obj);

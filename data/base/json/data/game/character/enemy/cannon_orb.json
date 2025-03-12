@@ -1,0 +1,15 @@
+{
+    "CannonOrb": {
+        "Appearance": {
+            "Barrel": 0,
+            "Model": "EnemyCannonOrb"
+        },
+        "Game": {
+            "AI": "sniper",
+            "Hitbox": {
+                "X": 12,
+                "Y": 12
+            }
+        }
+    }
+}

@@ -10,7 +10,8 @@
                 "player",
                 "float",
                 "crawl",
-                "cannon"
+                "cannon",
+                "sniper"
             ],
             "type": "enum"
         }

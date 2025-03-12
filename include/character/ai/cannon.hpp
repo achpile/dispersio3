@@ -16,8 +16,6 @@ namespace ach
 		~AICannon();
 
 		void reset();
-
-		void collide(ach::PhysLine *line);
 	};
 }
 

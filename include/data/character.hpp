@@ -10,7 +10,8 @@ namespace ach
 		aiPlayer,
 		aiFloat,
 		aiCrawl,
-		aiCannon
+		aiCannon,
+		aiSniper
 	};
 
 

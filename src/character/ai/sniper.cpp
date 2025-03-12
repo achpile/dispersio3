@@ -2,11 +2,11 @@
 
 
 /***********************************************************************
-     * AICannon
+     * AISniper
      * constructor
 
 ***********************************************************************/
-ach::AICannon::AICannon(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
+ach::AISniper::AISniper(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	dir      = pair_get_enum(json_class_get_string(obj, "Shooting", "Aim"), pairDirection);
 	cooldown = json_class_get_real(obj, "Shooting", "Cooldown");
@@ -16,22 +16,22 @@ ach::AICannon::AICannon(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 
 
 /***********************************************************************
-     * AICannon
+     * AISniper
      * destructor
 
 ***********************************************************************/
-ach::AICannon::~AICannon()
+ach::AISniper::~AISniper()
 {
 }
 
 
 
 /***********************************************************************
-     * AICannon
+     * AISniper
      * reset
 
 ***********************************************************************/
-void ach::AICannon::reset()
+void ach::AISniper::reset()
 {
 	owner->aim = dir_vector_f(dir);
 	owner->body->setDirection(dir);
