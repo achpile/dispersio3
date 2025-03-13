@@ -4886,98 +4886,98 @@
              "width":1
             },
          "margin":0,
-         "name":"Bridges",
+         "name":"Bridge",
          "spacing":0,
          "tilecount":15,
          "tileheight":16,
          "tiles":[
                 {
                  "id":0,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_l_1.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_l_1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":1,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_l_2.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_l_2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":2,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_l_3.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_l_3.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":3,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_r_1.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_r_1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":4,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_r_2.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_r_2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":5,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_slope_r_3.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_slope_r_3.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":6,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_ladder_l_1.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_ladder_l_1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":7,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_ladder_l_2.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_ladder_l_2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":8,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_ladder_r_1.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_ladder_r_1.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":9,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_ladder_r_2.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_ladder_r_2.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":10,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_bridge_left.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_bridge_left.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":11,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_bridge_mid.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_bridge_mid.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":12,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_bridge_right.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_bridge_right.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":13,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_bridge_support_lt.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_bridge_support_lt.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":14,
-                 "image":"..\/gfx\/game\/tile\/bridges\/metal_bridge_support_rt.png",
+                 "image":"..\/gfx\/game\/tile\/bridge\/metal_bridge_support_rt.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],
@@ -4993,104 +4993,104 @@
              "width":1
             },
          "margin":0,
-         "name":"Blocks",
+         "name":"Block",
          "spacing":0,
          "tilecount":16,
          "tileheight":16,
          "tiles":[
                 {
                  "id":0,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":1,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_h_left.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_h_left.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":2,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_h_mid.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_h_mid.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":3,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_h_right.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_h_right.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":4,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_v_top.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_v_top.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":5,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_v_mid.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_v_mid.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":6,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_v_bot.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_v_bot.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":7,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_tl.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_tl.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":8,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_tm.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_tm.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":9,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_tr.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_tr.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":10,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_ml.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_ml.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":11,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_m.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_m.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":12,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_mr.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_mr.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":13,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_bl.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_bl.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":14,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_bm.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_bm.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
                 {
                  "id":15,
-                 "image":"..\/gfx\/game\/tile\/blocks\/concrete_b_br.png",
+                 "image":"..\/gfx\/game\/tile\/block\/concrete_b_br.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],

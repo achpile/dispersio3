@@ -6,8 +6,8 @@
  <tileset firstgid="1" source="../tilesets/dev.tsx"/>
  <tileset firstgid="20" source="../tilesets/misc.tsx"/>
  <tileset firstgid="21" source="../tilesets/nature.tsx"/>
- <tileset firstgid="29" source="../tilesets/bridges.tsx"/>
- <tileset firstgid="44" source="../tilesets/blocks.tsx"/>
+ <tileset firstgid="29" source="../tilesets/bridge.tsx"/>
+ <tileset firstgid="44" source="../tilesets/block.tsx"/>
  <layer id="1" name="wall" width="96" height="72">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
