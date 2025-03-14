@@ -55,7 +55,12 @@ void ach::Map::collideCharacter(ach::Character *character)
 		character->phys.calc();
 
 		while ((line = collidePhys(&character->phys, filter)) != NULL)
+		{
 			character->ai->collide(line);
+
+			if (!character->alive)
+				return;
+		}
 
 		left -= chunk;
 	}
