@@ -125,7 +125,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="objects">
-  <object id="7" name="DecorStatue" type="decor" x="336" y="224" width="32" height="32"/>
+  <object id="7" name="DecorWallFan" type="decor" x="248" y="216" width="16" height="16"/>
   <object id="40" name="DoorDev" type="door" x="1056" y="144" width="32" height="32">
    <properties>
     <property name="Pair" type="object" value="42"/>
