@@ -254,22 +254,22 @@
   </object>
   <object id="9" type="checkpoint" x="1120" y="448" width="16" height="16"/>
   <object id="30" type="checkpoint" x="1184" y="816" width="16" height="16"/>
-  <object id="40" name="BlockConcrete" type="fragile" x="1376" y="832" width="16" height="16">
+  <object id="40" name="BlockBrickGreyTop" type="fragile" x="1376" y="832" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="41" name="BlockConcrete" type="fragile" x="1392" y="832" width="16" height="16">
+  <object id="41" name="BlockBrickGreyTop" type="fragile" x="1392" y="832" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="42" name="BlockConcrete" type="fragile" x="1376" y="848" width="16" height="16">
+  <object id="42" name="BlockBrickGreyBot" type="fragile" x="1376" y="848" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="43" name="BlockConcrete" type="fragile" x="1392" y="848" width="16" height="16">
+  <object id="43" name="BlockBrickGreyBot" type="fragile" x="1392" y="848" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
