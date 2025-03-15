@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Bridge" tilewidth="16" tileheight="16" tilecount="14" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Bridge" tilewidth="16" tileheight="16" tilecount="18" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="2">
   <image source="../../../data/base/gfx/game/tile/bridge/metal_slope_l_3.png" width="16" height="16"/>
@@ -42,5 +42,17 @@
  </tile>
  <tile id="25">
   <image source="../../../data/base/gfx/game/tile/bridge/metal_support_rt.png" width="16" height="16"/>
+ </tile>
+ <tile id="26">
+  <image source="../../../data/base/gfx/game/tile/bridge/handrail_l.png" width="16" height="16"/>
+ </tile>
+ <tile id="27">
+  <image source="../../../data/base/gfx/game/tile/bridge/handrail_m.png" width="16" height="16"/>
+ </tile>
+ <tile id="28">
+  <image source="../../../data/base/gfx/game/tile/bridge/handrail_r.png" width="16" height="16"/>
+ </tile>
+ <tile id="29">
+  <image source="../../../data/base/gfx/game/tile/bridge/metal_platform.png" width="16" height="16"/>
  </tile>
 </tileset>
