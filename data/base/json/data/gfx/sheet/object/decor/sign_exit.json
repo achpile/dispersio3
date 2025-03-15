@@ -1,0 +1,7 @@
+{
+    "DecorSignExit": {
+        "Filename": "gfx/game/sheet/object/decor/sign_exit.png",
+        "Frames": 2,
+"Rate": 0.7
+    }
+}

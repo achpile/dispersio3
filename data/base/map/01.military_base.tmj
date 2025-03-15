@@ -259,7 +259,7 @@
                 {
                  "height":32,
                  "id":3,
-                 "name":"DoorDev",
+                 "name":"DoorMetal",
                  "properties":[
                         {
                          "name":"Pair",
@@ -276,7 +276,7 @@
                 {
                  "height":32,
                  "id":4,
-                 "name":"DoorDev",
+                 "name":"DoorMetal",
                  "properties":[
                         {
                          "name":"Pair",
@@ -1005,6 +1005,17 @@
                  "width":16,
                  "x":192,
                  "y":448
+                }, 
+                {
+                 "height":16,
+                 "id":202,
+                 "name":"DecorSignExit",
+                 "rotation":0,
+                 "type":"decor",
+                 "visible":true,
+                 "width":32,
+                 "x":240,
+                 "y":1008
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4763,7 +4774,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":202,
+ "nextobjectid":203,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
