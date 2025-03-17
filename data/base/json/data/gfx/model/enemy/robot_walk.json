@@ -1,0 +1,12 @@
+{
+    "EnemyRobotWalk": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyRobotWalk",
+        "Type": "simple"
+    }
+}

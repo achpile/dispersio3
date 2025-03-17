@@ -352,7 +352,7 @@
   <object id="202" name="DecorSignExit" type="decor" x="240" y="1008" width="32" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
-  <object id="2" name="Snake" type="character" x="584" y="1008" width="16" height="16">
+  <object id="2" name="RobotWalk" type="character" x="584" y="1008" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -361,7 +361,7 @@
     </property>
    </properties>
   </object>
-  <object id="10" name="Cannon" type="character" x="864" y="352" width="16" height="16">
+  <object id="10" name="Cannon2" type="character" x="864" y="352" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -370,7 +370,7 @@
     </property>
    </properties>
   </object>
-  <object id="11" name="Cannon" type="character" x="960" y="352" width="16" height="16">
+  <object id="11" name="Cannon2" type="character" x="960" y="352" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -379,7 +379,7 @@
     </property>
    </properties>
   </object>
-  <object id="12" name="Cannon" type="character" x="1056" y="352" width="16" height="16">
+  <object id="12" name="Cannon2" type="character" x="1056" y="352" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -388,7 +388,7 @@
     </property>
    </properties>
   </object>
-  <object id="31" name="Snake" type="character" x="1312" y="720" width="16" height="16">
+  <object id="31" name="RobotWalk" type="character" x="1312" y="720" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -397,7 +397,7 @@
     </property>
    </properties>
   </object>
-  <object id="32" name="Snake" type="character" x="1376" y="768" width="16" height="16">
+  <object id="32" name="RobotWalk" type="character" x="1376" y="768" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -406,7 +406,7 @@
     </property>
    </properties>
   </object>
-  <object id="33" name="Snake" type="character" x="1376" y="672" width="16" height="16">
+  <object id="33" name="RobotWalk" type="character" x="1376" y="672" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -415,7 +415,7 @@
     </property>
    </properties>
   </object>
-  <object id="36" name="Snake" type="character" x="1280" y="624" width="16" height="16">
+  <object id="36" name="RobotWalk" type="character" x="1280" y="624" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -424,7 +424,7 @@
     </property>
    </properties>
   </object>
-  <object id="49" name="Cannon" type="character" x="1440" y="1056" width="16" height="16">
+  <object id="49" name="Cannon2" type="character" x="1440" y="1056" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -433,7 +433,7 @@
     </property>
    </properties>
   </object>
-  <object id="50" name="Cannon" type="character" x="1472" y="992" width="16" height="16">
+  <object id="50" name="Cannon2" type="character" x="1472" y="992" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -442,7 +442,7 @@
     </property>
    </properties>
   </object>
-  <object id="51" name="Cannon" type="character" x="1264" y="896" width="16" height="16">
+  <object id="51" name="Cannon2" type="character" x="1264" y="896" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -451,7 +451,7 @@
     </property>
    </properties>
   </object>
-  <object id="52" name="Snake" type="character" x="1296" y="1072" width="16" height="16">
+  <object id="52" name="RobotWalk" type="character" x="1296" y="1072" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -460,7 +460,7 @@
     </property>
    </properties>
   </object>
-  <object id="53" name="Bat" type="character" x="1368" y="1024" width="16" height="16">
+  <object id="53" name="RobotFly" type="character" x="1368" y="1024" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -469,8 +469,8 @@
     </property>
    </properties>
   </object>
-  <object id="54" name="Bat" type="character" x="1400" y="1072" width="16" height="16"/>
-  <object id="58" name="Snake" type="character" x="496" y="384" width="16" height="16">
+  <object id="54" name="RobotFly" type="character" x="1400" y="1072" width="16" height="16"/>
+  <object id="58" name="RobotWalk" type="character" x="496" y="384" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -479,7 +479,7 @@
     </property>
    </properties>
   </object>
-  <object id="59" name="Snake" type="character" x="544" y="432" width="16" height="16">
+  <object id="59" name="RobotWalk" type="character" x="544" y="432" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -488,7 +488,7 @@
     </property>
    </properties>
   </object>
-  <object id="60" name="Snake" type="character" x="496" y="480" width="16" height="16">
+  <object id="60" name="RobotWalk" type="character" x="496" y="480" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -497,7 +497,7 @@
     </property>
    </properties>
   </object>
-  <object id="61" name="Snake" type="character" x="640" y="480" width="16" height="16">
+  <object id="61" name="RobotWalk" type="character" x="640" y="480" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -506,7 +506,7 @@
     </property>
    </properties>
   </object>
-  <object id="62" name="Snake" type="character" x="592" y="432" width="16" height="16">
+  <object id="62" name="RobotWalk" type="character" x="592" y="432" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -515,7 +515,7 @@
     </property>
    </properties>
   </object>
-  <object id="63" name="Snake" type="character" x="640" y="384" width="16" height="16">
+  <object id="63" name="RobotWalk" type="character" x="640" y="384" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -524,7 +524,7 @@
     </property>
    </properties>
   </object>
-  <object id="65" name="Snake" type="character" x="568" y="528" width="16" height="16">
+  <object id="65" name="RobotWalk" type="character" x="568" y="528" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -533,7 +533,7 @@
     </property>
    </properties>
   </object>
-  <object id="73" name="Bat" type="character" x="664" y="344" width="16" height="16">
+  <object id="73" name="RobotFly" type="character" x="664" y="344" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -542,7 +542,7 @@
     </property>
    </properties>
   </object>
-  <object id="77" name="Bat" type="character" x="472" y="344" width="16" height="16">
+  <object id="77" name="RobotFly" type="character" x="472" y="344" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -551,7 +551,7 @@
     </property>
    </properties>
   </object>
-  <object id="78" name="Cannon" type="character" x="1264" y="320" width="16" height="16">
+  <object id="78" name="Cannon2" type="character" x="1264" y="320" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -560,7 +560,7 @@
     </property>
    </properties>
   </object>
-  <object id="79" name="Cannon" type="character" x="1320" y="320" width="16" height="16">
+  <object id="79" name="Cannon2" type="character" x="1320" y="320" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -569,7 +569,7 @@
     </property>
    </properties>
   </object>
-  <object id="80" name="Cannon" type="character" x="1320" y="432" width="16" height="16">
+  <object id="80" name="Cannon2" type="character" x="1320" y="432" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -578,7 +578,7 @@
     </property>
    </properties>
   </object>
-  <object id="81" name="Cannon" type="character" x="1264" y="432" width="16" height="16">
+  <object id="81" name="Cannon2" type="character" x="1264" y="432" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -587,7 +587,7 @@
     </property>
    </properties>
   </object>
-  <object id="82" name="Cannon" type="character" x="1408" y="424" width="16" height="16">
+  <object id="82" name="Cannon2" type="character" x="1408" y="424" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -596,7 +596,7 @@
     </property>
    </properties>
   </object>
-  <object id="86" name="Snake" type="character" x="48" y="464" width="16" height="16">
+  <object id="86" name="RobotWalk" type="character" x="48" y="464" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -605,7 +605,7 @@
     </property>
    </properties>
   </object>
-  <object id="90" name="Cannon" type="character" x="336" y="496" width="16" height="16">
+  <object id="90" name="Cannon2" type="character" x="336" y="496" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -614,7 +614,7 @@
     </property>
    </properties>
   </object>
-  <object id="91" name="Cannon" type="character" x="336" y="512" width="16" height="16">
+  <object id="91" name="Cannon2" type="character" x="336" y="512" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -623,7 +623,7 @@
     </property>
    </properties>
   </object>
-  <object id="106" name="Bat" type="character" x="1024" y="912" width="16" height="16">
+  <object id="106" name="RobotFly" type="character" x="1024" y="912" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -632,7 +632,7 @@
     </property>
    </properties>
   </object>
-  <object id="107" name="Cannon" type="character" x="1008" y="896" width="16" height="16">
+  <object id="107" name="Cannon2" type="character" x="1008" y="896" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -641,7 +641,7 @@
     </property>
    </properties>
   </object>
-  <object id="108" name="Cannon" type="character" x="1040" y="896" width="16" height="16">
+  <object id="108" name="Cannon2" type="character" x="1040" y="896" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -650,7 +650,7 @@
     </property>
    </properties>
   </object>
-  <object id="109" name="Snake" type="character" x="896" y="1072" width="16" height="16">
+  <object id="109" name="RobotWalk" type="character" x="896" y="1072" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -659,7 +659,7 @@
     </property>
    </properties>
   </object>
-  <object id="110" name="Snake" type="character" x="960" y="1072" width="16" height="16">
+  <object id="110" name="RobotWalk" type="character" x="960" y="1072" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -668,7 +668,7 @@
     </property>
    </properties>
   </object>
-  <object id="127" name="Cannon" type="character" x="704" y="688" width="16" height="16">
+  <object id="127" name="Cannon2" type="character" x="704" y="688" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -679,7 +679,7 @@
     </property>
    </properties>
   </object>
-  <object id="130" name="Snake" type="character" x="144" y="704" width="16" height="16">
+  <object id="130" name="RobotWalk" type="character" x="144" y="704" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -688,7 +688,7 @@
     </property>
    </properties>
   </object>
-  <object id="131" name="Snake" type="character" x="208" y="752" width="16" height="16">
+  <object id="131" name="RobotWalk" type="character" x="208" y="752" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -697,7 +697,7 @@
     </property>
    </properties>
   </object>
-  <object id="132" name="Snake" type="character" x="288" y="704" width="16" height="16">
+  <object id="132" name="RobotWalk" type="character" x="288" y="704" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -706,7 +706,7 @@
     </property>
    </properties>
   </object>
-  <object id="161" name="Cannon" type="character" x="16" y="192" width="16" height="16">
+  <object id="161" name="Cannon2" type="character" x="16" y="192" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -715,7 +715,7 @@
     </property>
    </properties>
   </object>
-  <object id="163" name="Cannon" type="character" x="16" y="128" width="16" height="16">
+  <object id="163" name="Cannon2" type="character" x="16" y="128" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -724,7 +724,7 @@
     </property>
    </properties>
   </object>
-  <object id="165" name="Cannon" type="character" x="16" y="64" width="16" height="16">
+  <object id="165" name="Cannon2" type="character" x="16" y="64" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -744,7 +744,7 @@
     </property>
    </properties>
   </object>
-  <object id="184" name="Cannon" type="character" x="824" y="240" width="16" height="16">
+  <object id="184" name="Cannon2" type="character" x="824" y="240" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -754,7 +754,7 @@
     </property>
    </properties>
   </object>
-  <object id="185" name="Cannon" type="character" x="912" y="240" width="16" height="16">
+  <object id="185" name="Cannon2" type="character" x="912" y="240" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -764,7 +764,7 @@
     </property>
    </properties>
   </object>
-  <object id="186" name="Cannon" type="character" x="984" y="240" width="16" height="16">
+  <object id="186" name="Cannon2" type="character" x="984" y="240" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -774,7 +774,7 @@
     </property>
    </properties>
   </object>
-  <object id="188" name="Snake" type="character" x="1040" y="144" width="16" height="16">
+  <object id="188" name="RobotWalk" type="character" x="1040" y="144" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>

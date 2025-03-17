@@ -1,0 +1,17 @@
+{
+    "RobotFly": {
+        "Appearance": {
+            "Model": "EnemyRobotFly"
+        },
+        "Game": {
+            "AI": "float",
+            "Hitbox": {
+                "X": 16,
+                "Y": 16
+            }
+        },
+        "Stats": {
+            "Speed": 50
+        }
+    }
+}

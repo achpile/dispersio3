@@ -1,6 +1,7 @@
 {
     "EnemyCannonOrb": {
         "Filename": "gfx/game/sheet/character/enemy/cannon_orb.png",
-        "Frames": 1
+        "Frames": 2,
+        "Rate": 0.15
     }
 }

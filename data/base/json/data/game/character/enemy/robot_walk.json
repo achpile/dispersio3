@@ -1,0 +1,17 @@
+{
+    "RobotWalk": {
+        "Appearance": {
+            "Model": "EnemyRobotWalk"
+        },
+        "Game": {
+            "AI": "crawl",
+            "Hitbox": {
+                "X": 16,
+                "Y": 16
+            }
+        },
+        "Stats": {
+            "Speed": 50
+        }
+    }
+}

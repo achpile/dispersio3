@@ -1,0 +1,15 @@
+{
+    "Cannon2": {
+        "Appearance": {
+            "Barrel": 0,
+            "Model": "EnemyCannon2"
+        },
+        "Game": {
+            "AI": "cannon",
+            "Hitbox": {
+                "X": 16,
+                "Y": 16
+            }
+        }
+    }
+}
