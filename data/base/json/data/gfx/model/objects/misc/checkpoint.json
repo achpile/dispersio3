@@ -2,11 +2,11 @@
     "Checkpoint": {
         "Animation": {
             "Active": {
-                "End": 15,
-                "Start": 8
+                "End": 19,
+                "Start": 10
             },
             "Inactive": {
-                "End": 7,
+                "End": 9,
                 "Start": 0
             }
         },
