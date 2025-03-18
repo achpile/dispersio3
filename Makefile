@@ -35,7 +35,7 @@ MAKE     = @make -j$(CORES) -s
 ECHO     = @echo
 PYTHON   = @python3
 BASH     = @bash
-MKDIR    = @mkdir
+MKDIR    = @mkdir -p
 INSTALL  = @cp -R -t
 CLEAN    = @rm -rf
 
