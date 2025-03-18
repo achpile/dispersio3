@@ -8,6 +8,13 @@
             "type": "filename"
         }
     },
+    "Player": {
+        "@attr": {
+            "data": "Data.Game.Character",
+            "default": "Player",
+            "type": "link"
+        }
+    },
     "Spawn": {
         "@attr": {
             "traits": [

@@ -6,7 +6,8 @@ namespace ach
 {
 	struct DataMap : DataContent
 	{
-		sf::Vector2i spawn;
+		ach::DataCharacter *player;
+		sf::Vector2i        spawn;
 
 		char filename[STR_LEN_PATH];
 

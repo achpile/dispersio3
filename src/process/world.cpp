@@ -9,7 +9,7 @@
 ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 {
 	map    = new ach::Map(this, db->getMap("01-MilitaryBase"));
-	player = new ach::Character(this, db->getCharacter("Player"), map->spawn);
+	player = new ach::Character(this, map->base->player, map->spawn);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
