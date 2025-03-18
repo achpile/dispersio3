@@ -23,11 +23,14 @@ namespace ach
 		~RenderManager();
 
 		void clear();
+		void reset();
 		void display(sf::RenderWindow *window);
 		void resize (sf::RenderWindow *window);
 
 		void setView  (sf::View view);
 		void setSmooth(bool smooth);
+		void setColor (sf::Color color);
+		void setFade  (float value);
 
 		void draw(sf::Drawable *drawable, ach::RenderLayer layer = ach::RenderLayer::rlGUI, sf::RenderStates states = sf::RenderStates::Default);
 

@@ -22,6 +22,7 @@ namespace ach
 
 		void setView  (sf::View view);
 		void setSmooth(bool smooth);
+		void setColor (sf::Color color);
 
 		void draw(sf::Drawable *drawable, sf::RenderStates states);
 		void clear(sf::Color color);

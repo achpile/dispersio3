@@ -45,6 +45,18 @@ void ach::RenderManager::clear()
 
 /***********************************************************************
      * RenderManager
+     * reset
+
+***********************************************************************/
+void ach::RenderManager::reset()
+{
+	setColor(sf::Color::White);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
      * display
 
 ***********************************************************************/
@@ -99,6 +111,34 @@ void ach::RenderManager::setSmooth(bool smooth)
 	bg->setSmooth(smooth);
 	game->setSmooth(smooth);
 	gui->setSmooth(smooth);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * setColor
+
+***********************************************************************/
+void ach::RenderManager::setColor(sf::Color color)
+{
+	bg->setColor(color);
+	game->setColor(color);
+	gui->setColor(color);
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * setFade
+
+***********************************************************************/
+void ach::RenderManager::setFade(float value)
+{
+	int c = 255 * interval_set(value, 0.0f, 1.0f);
+
+	setColor(sf::Color(c, c, c, 255));
 }
 
 
