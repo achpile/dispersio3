@@ -81,12 +81,46 @@
             ]
         },
         {
-            "color": "#ffa51d2d",
+            "color": "#ffff7800",
             "drawFill": true,
-            "id": 3,
+            "id": 10,
             "members": [
+                {
+                    "name": "Respawn",
+                    "type": "bool",
+                    "value": true
+                }
             ],
-            "name": "barrier",
+            "name": "block_fragile",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ffe5a50a",
+            "drawFill": true,
+            "id": 11,
+            "members": [
+                {
+                    "name": "Moving",
+                    "propertyType": "#moving",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "Spawn",
+                    "type": "float",
+                    "value": 0.5
+                },
+                {
+                    "name": "Speed",
+                    "type": "float",
+                    "value": 100
+                }
+            ],
+            "name": "block_moving",
             "type": "class",
             "useAs": [
                 "object"
@@ -119,12 +153,24 @@
             ]
         },
         {
+            "color": "#ff26a269",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+            ],
+            "name": "obj_decor",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
             "color": "#ffdc8add",
             "drawFill": true,
             "id": 5,
             "members": [
             ],
-            "name": "checkpoint",
+            "name": "obj_checkpoint",
             "type": "class",
             "useAs": [
                 "object"
@@ -136,31 +182,7 @@
             "id": 6,
             "members": [
             ],
-            "name": "collectable",
-            "type": "class",
-            "useAs": [
-                "object"
-            ]
-        },
-        {
-            "color": "#fff66151",
-            "drawFill": true,
-            "id": 7,
-            "members": [
-            ],
-            "name": "death",
-            "type": "class",
-            "useAs": [
-                "object"
-            ]
-        },
-        {
-            "color": "#ff26a269",
-            "drawFill": true,
-            "id": 8,
-            "members": [
-            ],
-            "name": "decor",
+            "name": "obj_collectable",
             "type": "class",
             "useAs": [
                 "object"
@@ -177,73 +199,31 @@
                     "value": 0
                 }
             ],
-            "name": "door",
+            "name": "obj_door",
             "type": "class",
             "useAs": [
                 "object"
             ]
         },
         {
-            "color": "#ffff7800",
+            "color": "#ffa51d2d",
             "drawFill": true,
-            "id": 10,
+            "id": 3,
             "members": [
-                {
-                    "name": "Respawn",
-                    "type": "bool",
-                    "value": true
-                }
             ],
-            "name": "fragile",
+            "name": "phys_barrier",
             "type": "class",
             "useAs": [
                 "object"
             ]
         },
         {
-            "color": "#ffffffff",
+            "color": "#fff66151",
             "drawFill": true,
-            "id": 17,
+            "id": 7,
             "members": [
             ],
-            "name": "goal",
-            "type": "class",
-            "useAs": [
-                "property",
-                "map",
-                "layer",
-                "object",
-                "tile",
-                "tileset",
-                "wangcolor",
-                "wangset",
-                "project"
-            ]
-        },
-        {
-            "color": "#ffe5a50a",
-            "drawFill": true,
-            "id": 11,
-            "members": [
-                {
-                    "name": "Moving",
-                    "propertyType": "#moving",
-                    "type": "class",
-                    "value": {
-                    }
-                },
-                {
-                    "name": "Spawn",
-                    "type": "float",
-                    "value": 0.5
-                },
-                {
-                    "name": "Speed",
-                    "type": "float",
-                    "value": 100
-                }
-            ],
-            "name": "moving",
+            "name": "phys_death",
             "type": "class",
             "useAs": [
                 "object"
@@ -255,7 +235,7 @@
             "id": 12,
             "members": [
             ],
-            "name": "platform",
+            "name": "phys_platform",
             "type": "class",
             "useAs": [
                 "object"
@@ -267,10 +247,30 @@
             "id": 13,
             "members": [
             ],
-            "name": "solid",
+            "name": "phys_solid",
             "type": "class",
             "useAs": [
                 "object"
+            ]
+        },
+        {
+            "color": "#ffffffff",
+            "drawFill": true,
+            "id": 17,
+            "members": [
+            ],
+            "name": "trigger_goal",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
             ]
         },
         {

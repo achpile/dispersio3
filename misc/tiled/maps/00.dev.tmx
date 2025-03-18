@@ -125,31 +125,31 @@
 </data>
  </layer>
  <objectgroup id="6" name="objects">
-  <object id="7" name="DecorWallFan" type="decor" x="248" y="216" width="16" height="16"/>
-  <object id="40" name="DoorDev" type="door" x="1056" y="144" width="32" height="32">
+  <object id="7" name="DecorWallFan" type="obj_decor" x="248" y="216" width="16" height="16"/>
+  <object id="40" name="DoorDev" type="obj_door" x="1056" y="144" width="32" height="32">
    <properties>
     <property name="Pair" type="object" value="42"/>
    </properties>
   </object>
-  <object id="41" name="DoorDev" type="door" x="848" y="416" width="32" height="32">
+  <object id="41" name="DoorDev" type="obj_door" x="848" y="416" width="32" height="32">
    <properties>
     <property name="Pair" type="object" value="43"/>
    </properties>
   </object>
-  <object id="42" name="DoorDev" type="door" x="1040" y="416" width="32" height="32">
+  <object id="42" name="DoorDev" type="obj_door" x="1040" y="416" width="32" height="32">
    <properties>
     <property name="Pair" type="object" value="40"/>
    </properties>
   </object>
-  <object id="43" name="DoorDev" type="door" x="624" y="352" width="32" height="32">
+  <object id="43" name="DoorDev" type="obj_door" x="624" y="352" width="32" height="32">
    <properties>
     <property name="Pair" type="object" value="41"/>
    </properties>
   </object>
-  <object id="44" type="checkpoint" x="1008" y="160" width="16" height="16"/>
-  <object id="45" type="checkpoint" x="208" y="160" width="16" height="16"/>
-  <object id="46" type="checkpoint" x="720" y="240" width="16" height="16"/>
-  <object id="50" name="MovingDev" type="moving" x="688" y="384" width="32" height="96">
+  <object id="44" type="obj_checkpoint" x="1008" y="160" width="16" height="16"/>
+  <object id="45" type="obj_checkpoint" x="208" y="160" width="16" height="16"/>
+  <object id="46" type="obj_checkpoint" x="720" y="240" width="16" height="16"/>
+  <object id="50" name="MovingDev" type="block_moving" x="688" y="384" width="32" height="96">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -159,14 +159,14 @@
     <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
-  <object id="51" name="MovingDev" type="moving" x="432" y="384" width="32" height="96">
+  <object id="51" name="MovingDev" type="block_moving" x="432" y="384" width="32" height="96">
    <properties>
     <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
-  <object id="52" name="CollectBag" type="collectable" x="504" y="368" width="16" height="16"/>
-  <object id="53" name="CollectBag" type="collectable" x="288" y="144" width="16" height="16"/>
-  <object id="54" name="MovingDev" type="moving" x="464" y="496" width="224" height="16">
+  <object id="52" name="CollectBag" type="obj_collectable" x="504" y="368" width="16" height="16"/>
+  <object id="53" name="CollectBag" type="obj_collectable" x="288" y="144" width="16" height="16"/>
+  <object id="54" name="MovingDev" type="block_moving" x="464" y="496" width="224" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -176,10 +176,10 @@
     </property>
    </properties>
   </object>
-  <object id="56" name="BlockDev" type="fragile" x="928" y="448" width="16" height="16"/>
-  <object id="67" name="BlockDev" type="fragile" x="976" y="448" width="16" height="16"/>
-  <object id="86" type="checkpoint" x="656" y="368" width="16" height="16"/>
-  <object id="87" type="goal" x="528" y="352" width="16" height="32"/>
+  <object id="56" name="BlockDev" type="block_fragile" x="928" y="448" width="16" height="16"/>
+  <object id="67" name="BlockDev" type="block_fragile" x="976" y="448" width="16" height="16"/>
+  <object id="86" type="obj_checkpoint" x="656" y="368" width="16" height="16"/>
+  <object id="87" type="trigger_goal" x="528" y="352" width="16" height="32"/>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="544" y="48" width="16" height="16">
@@ -293,46 +293,46 @@
   </object>
  </objectgroup>
  <objectgroup id="5" name="phys">
-  <object id="68" type="barrier" x="0" y="32">
+  <object id="68" type="phys_barrier" x="0" y="32">
    <polyline points="0,0 0,224"/>
   </object>
-  <object id="69" type="platform" x="160" y="208">
+  <object id="69" type="phys_platform" x="160" y="208">
    <polyline points="0,0 32,0"/>
   </object>
-  <object id="70" type="platform" x="240" y="208">
+  <object id="70" type="phys_platform" x="240" y="208">
    <polyline points="0,0 32,0"/>
   </object>
-  <object id="71" type="platform" x="128" y="112">
+  <object id="71" type="phys_platform" x="128" y="112">
    <polyline points="0,0 176,0"/>
   </object>
-  <object id="72" type="platform" x="496" y="192">
+  <object id="72" type="phys_platform" x="496" y="192">
    <polyline points="0,0 160,0"/>
   </object>
-  <object id="73" type="platform" x="832" y="448">
+  <object id="73" type="phys_platform" x="832" y="448">
    <polyline points="0,0 64,0"/>
   </object>
-  <object id="74" type="platform" x="1024" y="448">
+  <object id="74" type="phys_platform" x="1024" y="448">
    <polyline points="0,0 64,0"/>
   </object>
-  <object id="75" type="death" x="832" y="528">
+  <object id="75" type="phys_death" x="832" y="528">
    <polyline points="0,0 256,0"/>
   </object>
-  <object id="76" type="death" x="416" y="528">
+  <object id="76" type="phys_death" x="416" y="528">
    <polyline points="0,0 320,0"/>
   </object>
-  <object id="77" type="solid" x="0" y="256">
+  <object id="77" type="phys_solid" x="0" y="256">
    <polyline points="0,0 112,0 112,-48 128,-64 144,-64 160,-48 160,0 192,0 192,-64 208,-80 224,-80 240,-64 240,0 272,0 272,-80 288,-96 304,-96 320,-80 320,0 832,0 992,-80 1120,-80 1120,-224 1024,-224 1024,-144 1008,-144 992,-160 992,-224 672,-224 672,-144 656,-128 640,-128 624,-144 624,-224 528,-224 528,-144 512,-128 496,-128 480,-144 480,-224 0,-224"/>
   </object>
-  <object id="81" type="solid" x="832" y="544">
+  <object id="81" type="phys_solid" x="832" y="544">
    <polyline points="0,0 0,-96 -32,-96 -32,-224 288,-224 288,-96 256,-96 256,0 0,0"/>
   </object>
-  <object id="82" type="solid" x="416" y="544">
+  <object id="82" type="phys_solid" x="416" y="544">
    <polyline points="0,0 0,-224 128,-224 128,-160 64,-160 64,-128 256,-128 256,-160 192,-160 192,-224 320,-224 320,0 0,0"/>
   </object>
-  <object id="83" type="solid" x="160" y="80">
+  <object id="83" type="phys_solid" x="160" y="80">
    <polyline points="0,0 16,-16 32,0 16,16 0,0"/>
   </object>
-  <object id="85" type="solid" x="240" y="80">
+  <object id="85" type="phys_solid" x="240" y="80">
    <polyline points="0,0 16,-16 32,0 16,16 0,0"/>
   </object>
  </objectgroup>
