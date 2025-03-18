@@ -16,9 +16,19 @@ verbose  = False
 mode     = "JSON"
 
 
+##### COLORS #####
+
+c_red    = "\033[1;31m"
+c_normal = "\033[0m"
+c_yellow = "\033[0;33m"
+c_green  = "\033[0;32m"
+c_cyan   = "\033[1;36m"
+
+
 ##### USAGE #####
 
 def usage():
+    print(c_yellow)
     print("JSON sorting script\n")
     print("\t-M : sort maps")
     print("\t-A : sort all")
@@ -26,6 +36,7 @@ def usage():
     print("\t-v : verbose output")
     print("\t-m : minimize")
     print("\t-h : usage")
+    print(c_normal)
 
 
 ##### DELETE #####
@@ -121,9 +132,9 @@ def cut(j):
 def sort(filename, tmj = False):
     if verbose:
         if tmj:
-            print("Cutting: ", filename);
+            print(c_cyan  + " Cutting   " + c_normal + " : " + c_yellow + filename + c_normal)
         else:
-            print("Sorting: ", filename);
+            print(c_green + " Sorting   " + c_normal + " : " + c_yellow + filename + c_normal)
 
     f = open(filename, "r")
     a = {}
@@ -156,7 +167,7 @@ def sort(filename, tmj = False):
 try:
     opts, args = getopt.getopt(sys.argv[1:], "mvhMA")
 except getopt.GetoptError as err:
-    print(err)
+    print(c_red + str(err) + c_normal)
     usage()
     sys.exit(2)
 
@@ -178,14 +189,21 @@ if args:
     usage()
     sys.exit(2)
 
+if verbose:
+    print()
 
-for root, dirs, files in os.walk("data"):
-    if mode in ["JSON", "All"]:
-        for file in files:
-            if file.endswith(".json"):
-                sort(os.path.join(root, file))
-
-    if mode in ["Maps", "All"]:
+if mode in ["Maps", "All"]:
+    for root, dirs, files in os.walk("data"):
         for file in files:
             if file.endswith(".tmj"):
                 sort(os.path.join(root, file), True)
+    if verbose:
+        print()
+
+if mode in ["JSON", "All"]:
+    for root, dirs, files in os.walk("data"):
+        for file in files:
+            if file.endswith(".json"):
+                sort(os.path.join(root, file))
+    if verbose:
+        print()
