@@ -13,11 +13,12 @@ namespace ach
 		 Timer();
 		~Timer();
 
-		void set(float _timer);
-		void reset();
-		void zero();
-		bool update(ach::TimeSource source = ach::TimeSource::tsFrame);
-		bool isActive();
+		void  set(float _timer);
+		void  reset();
+		void  zero();
+		float progress(bool invert = false);
+		bool  update(ach::TimeSource source = ach::TimeSource::tsFrame);
+		bool  isActive();
 	};
 }
 

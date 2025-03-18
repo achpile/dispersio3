@@ -4,10 +4,19 @@
 
 namespace ach
 {
+	enum WorldState
+	{
+		wsFadeIn,
+		wsFadeOut,
+		wsGame
+	};
+
+
 	struct ProcessWorld : Process
 	{
-		ach::Map       *map;
-		ach::Character *player;
+		ach::Map        *map;
+		ach::Character  *player;
+		ach::WorldState  state;
 
 
 		 ProcessWorld(ach::StateGame *_owner);
@@ -15,6 +24,9 @@ namespace ach
 
 		void update();
 		void render();
+
+		void prepare();
+		void finalize();
 
 		void gateway(sf::FloatRect dest);
 		void goal();

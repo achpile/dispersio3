@@ -26,6 +26,7 @@ namespace ach
 
 		void init();
 		void update();
+		void pause();
 
 		float get(ach::TimeSource source);
 	};
