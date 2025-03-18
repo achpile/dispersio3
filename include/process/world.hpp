@@ -16,7 +16,9 @@ namespace ach
 	{
 		ach::Map        *map;
 		ach::Character  *player;
+
 		ach::WorldState  state;
+		ach::Timer       fader;
 
 
 		 ProcessWorld(ach::StateGame *_owner);

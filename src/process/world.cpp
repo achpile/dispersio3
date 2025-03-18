@@ -14,6 +14,8 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
+
+	fader.set(1.0f);
 }
 
 
@@ -25,6 +27,8 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 ***********************************************************************/
 ach::ProcessWorld::~ProcessWorld()
 {
+	rm->reset();
+
 	delete map;
 }
 
@@ -38,10 +42,6 @@ ach::ProcessWorld::~ProcessWorld()
 void ach::ProcessWorld::update()
 {
 	prepare();
-
-	map->update();
-	map->touch(player);
-
 	render();
 	finalize();
 }
@@ -67,6 +67,27 @@ void ach::ProcessWorld::render()
 ***********************************************************************/
 void ach::ProcessWorld::prepare()
 {
+	switch (state)
+	{
+		case ach::WorldState::wsFadeIn:
+			tm->pause();
+			fader.update(ach::TimeSource::tsReal);
+			rm->setFade(fader.progress());
+		break;
+
+
+		case ach::WorldState::wsFadeOut:
+			tm->pause();
+			fader.update(ach::TimeSource::tsReal);
+			rm->setFade(fader.progress(true));
+		break;
+
+
+		case ach::WorldState::wsGame:
+			map->update();
+			map->touch(player);
+		break;
+	}
 }
 
 
@@ -78,6 +99,26 @@ void ach::ProcessWorld::prepare()
 ***********************************************************************/
 void ach::ProcessWorld::finalize()
 {
+	switch (state)
+	{
+		case ach::WorldState::wsFadeIn:
+			if (!fader.isActive())
+			{
+				state = ach::WorldState::wsGame;
+				rm->reset();
+			}
+		break;
+
+
+		case ach::WorldState::wsFadeOut:
+			if (!fader.isActive())
+				owner->next();
+		break;
+
+
+		case ach::WorldState::wsGame:
+		break;
+	}
 }
 
 
@@ -102,5 +143,7 @@ void ach::ProcessWorld::gateway(sf::FloatRect dest)
 ***********************************************************************/
 void ach::ProcessWorld::goal()
 {
-	owner->next();
+	state = ach::WorldState::wsFadeOut;
+
+	fader.reset();
 }
