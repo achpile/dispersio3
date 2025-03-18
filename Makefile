@@ -9,6 +9,7 @@ OBJ      = $(patsubst %.cpp,%.o, $(CPP))
 
 HEADER   = $(INCLUDE)/meta/headers.hpp
 PCH      = $(HEADER).gch
+SORT     = misc/script/sort
 
 TOTAL    = $(words $(OBJ))
 CORES    = $(shell grep -c ^processor /proc/cpuinfo)
@@ -18,15 +19,22 @@ CMAKE    = CMakeFiles           \
            cmake_install.cmake  \
            install_manifest.txt
 
-DATA     = settings.json        \
+SESSION  = settings.json        \
            logs/
 
-GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(DATA)
+GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(SESSION)
+
+DATA     = data/
+
+DEST    ?= /tmp
+
 
 CC       = @g++
 STRIP    = @strip
 MAKE     = @make -j$(CORES) -s
 ECHO     = @echo
+PYTHON   = @python3
+INSTALL  = @cp -R -t
 CLEAN    = @rm -rf
 
 NORMAL   = "\033[0m"
@@ -53,6 +61,9 @@ CFLAGS   = -Wall            \
            -std=c++17       \
            -I$(INCLUDE)
 
+SFLAGS   = -v               \
+           -A               \
+           -m
 
 all: info
 	$(MAKE) $(PROJECT)
@@ -90,6 +101,14 @@ $(PCH) : $(HPP) $(INL)
 .cpp.o:
 	$(ECHO) $(GREEN) "Compiling" $(NORMAL) ": $(<)"
 	$(CC) $(CFLAGS) -o $@ -c $<
+
+
+prepare: $(DATA)
+	$(PYTHON) $(SORT) $(SFLAGS)
+
+
+install: prepare
+	$(INSTALL) $(DEST) $(DATA)
 
 
 clean:
