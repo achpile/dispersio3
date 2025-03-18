@@ -9,7 +9,7 @@ OBJ      = $(patsubst %.cpp,%.o, $(CPP))
 
 HEADER   = $(INCLUDE)/meta/headers.hpp
 PCH      = $(HEADER).gch
-SORT     = misc/script/sort
+SCRIPT   = misc/script/sort
 
 TOTAL    = $(words $(OBJ))
 CORES    = $(shell grep -c ^processor /proc/cpuinfo)
@@ -22,9 +22,9 @@ CMAKE    = CMakeFiles           \
 SESSION  = settings.json        \
            logs/
 
-GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(SESSION)
-
 DATA     = data/
+
+GARBAGE  = $(PCH) $(OBJ) $(PROJECT) $(CMAKE) $(SESSION)
 
 DEST    ?= /tmp
 
@@ -34,6 +34,8 @@ STRIP    = @strip
 MAKE     = @make -j$(CORES) -s
 ECHO     = @echo
 PYTHON   = @python3
+BASH     = @bash
+MKDIR    = @mkdir
 INSTALL  = @cp -R -t
 CLEAN    = @rm -rf
 
@@ -64,6 +66,7 @@ CFLAGS   = -Wall            \
 SFLAGS   = -v               \
            -A               \
            -m
+
 
 all: info
 	$(MAKE) $(PROJECT)
@@ -103,11 +106,12 @@ $(PCH) : $(HPP) $(INL)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 
-prepare: $(DATA)
-	$(PYTHON) $(SORT) $(SFLAGS)
+prepare:
+	$(PYTHON) $(SCRIPT) $(SFLAGS)
 
 
-install: prepare
+install: prepare $(DATA)
+	$(MKDIR) $(DEST)
 	$(INSTALL) $(DEST) $(DATA)
 
 
