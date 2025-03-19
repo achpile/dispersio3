@@ -76,6 +76,7 @@
 #include "map/object/collectable.hpp"
 #include "map/object/moving.hpp"
 #include "map/object/fragile.hpp"
+#include "map/object/break.hpp"
 
 #include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"

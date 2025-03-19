@@ -431,6 +431,23 @@
                  "width":16,
                  "x":528,
                  "y":352
+                }, 
+                {
+                 "height":16,
+                 "id":89,
+                 "name":"BlockDev",
+                 "properties":[
+                        {
+                         "name":"Respawn",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"block_break",
+                 "visible":true,
+                 "width":16,
+                 "x":208,
+                 "y":128
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1409,7 +1426,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":89,
+ "nextobjectid":110,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

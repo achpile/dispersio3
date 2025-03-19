@@ -38,6 +38,7 @@ namespace ach
 		virtual void use()             {};
 		virtual void init(ach::Map*)   {};
 		virtual void stand(ach::Phys*) {};
+		virtual void hit()             {};
 	};
 }
 

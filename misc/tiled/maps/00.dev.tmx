@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="72" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="89">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="72" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="110">
  <editorsettings>
   <export target="../../../data/base/map/00.dev.tmj" format="json"/>
  </editorsettings>
@@ -180,6 +180,7 @@
   <object id="67" name="BlockDev" type="block_fragile" x="976" y="448" width="16" height="16"/>
   <object id="86" type="obj_checkpoint" x="656" y="368" width="16" height="16"/>
   <object id="87" type="trigger_goal" x="528" y="352" width="16" height="32"/>
+  <object id="89" name="BlockDev" type="block_break" x="208" y="128" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="544" y="48" width="16" height="16">

@@ -229,6 +229,7 @@ void ach::Map::loadObjects(json_t *layer)
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_collectable")) objects.push_back(new ach::MapObjectCollectable(world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "block_moving"   )) objects.push_back(new ach::MapObjectMoving     (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "block_fragile"  )) objects.push_back(new ach::MapObjectFragile    (world, obj));
+		else if (!strcmp(json_object_get_string(obj, "type"), "block_break"    )) objects.push_back(new ach::MapObjectBreak      (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "trigger_goal"   )) objects.push_back(new ach::MapObjectGoal       (world, obj));
 
 		else logger->log(ach::LogLevel::llWarning, "Unknown map object type \"%s\"", json_object_get_string(obj, "type"));

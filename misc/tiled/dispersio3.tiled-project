@@ -81,6 +81,25 @@
             ]
         },
         {
+            "color": "#ffc64600",
+            "drawFill": true,
+            "id": 18,
+            "members": [
+                {
+                    "name": "Respawn",
+                    "type": "bool",
+                    "value": true
+                }
+            ],
+            "name": "block_break",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffff7800",
             "drawFill": true,
             "id": 10,
@@ -153,18 +172,6 @@
             ]
         },
         {
-            "color": "#ff26a269",
-            "drawFill": true,
-            "id": 8,
-            "members": [
-            ],
-            "name": "obj_decor",
-            "type": "class",
-            "useAs": [
-                "object"
-            ]
-        },
-        {
             "color": "#ffdc8add",
             "drawFill": true,
             "id": 5,
@@ -183,6 +190,18 @@
             "members": [
             ],
             "name": "obj_collectable",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ff26a269",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+            ],
+            "name": "obj_decor",
             "type": "class",
             "useAs": [
                 "object"

@@ -199,6 +199,9 @@ bool ach::PhysLine::collide(ach::Line *l)
 
 	l->b -= vector_set_len(l->v, f);
 
+	if (owner)
+		owner->hit();
+
 	return true;
 }
 
