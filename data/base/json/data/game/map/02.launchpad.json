@@ -2,8 +2,8 @@
     "02-LaunchPad": {
         "Filename": "map/02.launchpad.tmj",
         "Spawn": {
-            "X": 25,
-            "Y": 69
+            "X": 1,
+            "Y": 67
         }
     }
 }
