@@ -390,7 +390,6 @@
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
-      <property name="Aim" propertytype="@direction" value="down"/>
       <property name="Cooldown" type="float" value="0.5"/>
       <property name="Offset" type="float" value="0.5"/>
      </properties>

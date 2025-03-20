@@ -469,7 +469,15 @@
     </property>
    </properties>
   </object>
-  <object id="54" name="RobotFly" type="character" x="1400" y="1072" width="16" height="16"/>
+  <object id="54" name="RobotFly" type="character" x="1400" y="1072" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="up"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
   <object id="58" name="RobotWalk" type="character" x="496" y="384" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -737,7 +745,6 @@
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
-      <property name="Aim" propertytype="@direction" value="down"/>
       <property name="Cooldown" type="float" value="0.6"/>
       <property name="Offset" type="float" value="0.6"/>
      </properties>
@@ -748,6 +755,7 @@
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
+      <property name="Aim" propertytype="@direction" value="up"/>
       <property name="Cooldown" type="float" value="0.4"/>
       <property name="Offset" type="float" value="0.4"/>
      </properties>
@@ -758,6 +766,7 @@
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
+      <property name="Aim" propertytype="@direction" value="up"/>
       <property name="Cooldown" type="float" value="0.4"/>
       <property name="Offset" type="float" value="0.4"/>
      </properties>
@@ -768,6 +777,7 @@
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
+      <property name="Aim" propertytype="@direction" value="up"/>
       <property name="Cooldown" type="float" value="0.4"/>
       <property name="Offset" type="float" value="0.4"/>
      </properties>

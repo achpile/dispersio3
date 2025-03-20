@@ -161,6 +161,11 @@
   </object>
   <object id="51" name="MovingDev" type="block_moving" x="432" y="384" width="32" height="96">
    <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="up"/>
+     </properties>
+    </property>
     <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
@@ -192,7 +197,15 @@
     </property>
    </properties>
   </object>
-  <object id="16" name="Bat" type="character" x="544" y="80" width="16" height="16"/>
+  <object id="16" name="Bat" type="character" x="544" y="80" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="up"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
   <object id="17" name="Snake" type="character" x="624" y="176" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -285,11 +298,7 @@
   </object>
   <object id="88" name="CannonOrb" type="character" x="208" y="72" width="16" height="16">
    <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="down"/>
-     </properties>
-    </property>
+    <property name="Shooting" type="class" propertytype="#shooting"/>
    </properties>
   </object>
  </objectgroup>

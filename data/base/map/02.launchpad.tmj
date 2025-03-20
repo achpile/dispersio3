@@ -636,7 +636,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -668,7 +668,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -691,7 +691,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -723,7 +723,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -755,7 +755,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -787,7 +787,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -828,7 +828,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -851,7 +851,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -860,7 +860,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"down",
+                             "Aim":"none",
                              "Cooldown":0.5,
                              "Offset":0.5
                             }
@@ -892,7 +892,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -915,7 +915,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -947,7 +947,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -988,7 +988,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -1020,7 +1020,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -1043,7 +1043,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -1084,7 +1084,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"up",
+                             "Aim":"none",
                              "Cooldown":0.8,
                              "Offset":0.8
                             }
@@ -1107,7 +1107,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -1139,7 +1139,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {
@@ -1171,7 +1171,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"none"
                             }
                         }, 
                         {

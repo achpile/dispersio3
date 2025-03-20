@@ -19,7 +19,8 @@
                 "up",
                 "down",
                 "left",
-                "right"
+                "right",
+                "none"
             ],
             "valuesAsFlags": false
         },
@@ -30,7 +31,8 @@
             "type": "enum",
             "values": [
                 "vertical",
-                "horizontal"
+                "horizontal",
+                "none"
             ],
             "valuesAsFlags": false
         },
@@ -43,7 +45,7 @@
                     "name": "Direction",
                     "propertyType": "@direction",
                     "type": "string",
-                    "value": "up"
+                    "value": "none"
                 }
             ],
             "name": "#moving",
@@ -61,7 +63,7 @@
                     "name": "Aim",
                     "propertyType": "@direction",
                     "type": "string",
-                    "value": "up"
+                    "value": "none"
                 },
                 {
                     "name": "Cooldown",
