@@ -6,6 +6,9 @@ namespace ach
 {
 	struct AISniper : AI
 	{
+		ach::Direction initial;
+		ach::Direction dir;
+
 		float cooldown;
 		float offset;
 
@@ -16,6 +19,8 @@ namespace ach
 		void control();
 		void aim();
 		void reset();
+
+		void collide(ach::PhysLine *line);
 	};
 }
 
