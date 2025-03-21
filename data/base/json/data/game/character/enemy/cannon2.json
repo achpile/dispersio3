@@ -5,11 +5,7 @@
             "Model": "EnemyCannon2"
         },
         "Game": {
-            "AI": "cannon",
-            "Hitbox": {
-                "X": 16,
-                "Y": 16
-            }
+            "AI": "cannon"
         },
         "Stats": {
             "Speed": 50

@@ -6,8 +6,8 @@
         "Game": {
             "AI": "float",
             "Hitbox": {
-                "X": 16,
-                "Y": 16
+                "X": 14,
+                "Y": 8
             }
         },
         "Stats": {

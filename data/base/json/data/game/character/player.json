@@ -4,7 +4,11 @@
             "Model": "Player"
         },
         "Game": {
-            "AI": "player"
+            "AI": "player",
+            "Hitbox": {
+                "X": 10,
+                "Y": 16
+            }
         },
         "Sound": {
             "Die": "PlayerDie",
