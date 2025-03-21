@@ -38,6 +38,12 @@
             "type": "string"
         }
     },
+    "PrimaryTesting": {
+        "@attr": {
+            "default": "Primary testing",
+            "type": "string"
+        }
+    },
     "Translations": {
         "@attr": {
             "default": "Translations",
