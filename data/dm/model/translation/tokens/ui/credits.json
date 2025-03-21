@@ -26,6 +26,12 @@
             "type": "string"
         }
     },
+    "PrimaryTesting": {
+        "@attr": {
+            "default": "Primary testing",
+            "type": "string"
+        }
+    },
     "Sound": {
         "@attr": {
             "default": "Sound effects",
@@ -35,12 +41,6 @@
     "Special": {
         "@attr": {
             "default": "Special thanks",
-            "type": "string"
-        }
-    },
-    "PrimaryTesting": {
-        "@attr": {
-            "default": "Primary testing",
             "type": "string"
         }
     },

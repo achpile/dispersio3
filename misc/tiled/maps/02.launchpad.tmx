@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="96" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="197">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="96" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="225">
  <editorsettings>
   <export target="../../../data/base/map/02.launchpad.tmj" format="json"/>
  </editorsettings>
@@ -9,6 +9,7 @@
  <tileset firstgid="40" source="../tilesets/block.tsx"/>
  <tileset firstgid="56" source="../tilesets/spike.tsx"/>
  <tileset firstgid="60" source="../tilesets/beam.tsx"/>
+ <tileset firstgid="71" source="../tilesets/plant.tsx"/>
  <layer id="1" name="wall" width="96" height="72">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,64,0,0,0,0,64,0,0,0,65,0,0,0,64,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -67,13 +68,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,65,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,65,0,68,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,64,0,68,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,65,0,68,0,0,0,68,0,68,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,64,0,68,0,0,0,68,0,68,0,70,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 62,63,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,65,0,69,0,0,0,69,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,37,37,37,37,38,0,0,0,69,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,65,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,63,62,70,63,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,64,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,65,0,0,0,0,0,0,0,0,36,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-63,62,70,63,62,63,62,63,62,63,62,63,62,63,62,0,0,0,62,63,0,0,0,63,62,70,63,62,63,62,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,64,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+63,62,70,63,62,63,62,63,62,63,62,63,62,63,62,0,0,0,62,63,0,0,0,63,62,70,63,62,63,62,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,65,0,0,0,65,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,64,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -149,9 +150,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,51,51,51,51,51,52,0,0,0,0,0,0,21,21,21,0,0,21,21,21,0,0,0,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,21,21,21,21,21,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,50,51,51,51,51,51,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,51,51,51,51,51,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,49,0,0,47,48,49,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,53,54,54,54,54,54,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,21,21,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,54,55,0,0,53,54,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,49,0,0,0,0,0,0,0,0,0,0,0,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,54,55,0,0,0,0,0,0,0,0,0,0,0,53,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,48,49,0,0,47,48,49,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,53,54,54,54,54,54,55,0,0,0,47,48,49,0,0,0,0,0,0,0,0,21,21,21,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,54,55,0,0,53,54,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,54,55,0,0,0,0,0,0,0,0,0,0,0,50,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,49,0,0,0,0,0,0,0,47,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,14,47,48,48,48,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,52,0,0,0,0,0,0,0,50,52,0,0,0,0,0,18,47,48,48,48,48,48,48,49,16,0,0,0,0,0,0,0,0,13,14,15,0,50,51,51,51,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,55,0,0,0,0,0,0,0,53,55,0,0,0,0,0,40,53,54,54,54,54,54,54,55,35,16,0,0,0,0,0,13,14,15,0,0,0,53,54,54,54,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -232,7 +233,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+71,71,71,71,71,71,71,71,71,71,72,71,71,71,71,71,71,71,71,72,71,71,71,71,71,71,71,71,71,71,71,71,72,71,71,71,71,71,71,71,71,71,71,71,72,71,71,71,71,71,71,71,71,71,71,71,71,72,71,71,71,71,71,71,71,71,71,71,71,71,72,71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -242,84 +243,64 @@
   <object id="19" name="CollectBag" type="obj_collectable" x="256" y="976" width="16" height="16"/>
   <object id="20" name="CollectBag" type="obj_collectable" x="336" y="976" width="16" height="16"/>
   <object id="25" type="obj_checkpoint" x="816" y="1040" width="16" height="16"/>
-  <object id="32" name="CollectBag" type="obj_collectable" x="912" y="992" width="16" height="16"/>
+  <object id="32" name="CollectBag" type="obj_collectable" x="912" y="976" width="16" height="16"/>
   <object id="34" type="obj_checkpoint" x="960" y="832" width="16" height="16"/>
-  <object id="35" name="BlockDev" type="block_fragile" x="864" y="768" width="16" height="16">
+  <object id="39" name="BlockConcreteCornerTL" type="block_break" x="1120" y="768" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="36" name="BlockDev" type="block_fragile" x="880" y="768" width="16" height="16">
+  <object id="40" name="BlockConcreteCornerTR" type="block_break" x="1136" y="768" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="37" name="BlockDev" type="block_fragile" x="880" y="784" width="16" height="16">
+  <object id="41" name="BlockConcreteCornerBR" type="block_break" x="1136" y="784" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="38" name="BlockDev" type="block_fragile" x="864" y="784" width="16" height="16">
+  <object id="42" name="BlockConcreteCornerBL" type="block_break" x="1120" y="784" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="39" name="BlockDev" type="block_break" x="1120" y="768" width="16" height="16">
+  <object id="58" name="BlockConcrete" type="block_fragile" x="1232" y="800" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="40" name="BlockDev" type="block_break" x="1136" y="768" width="16" height="16">
+  <object id="59" name="BlockConcrete" type="block_fragile" x="1280" y="800" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="41" name="BlockDev" type="block_break" x="1136" y="784" width="16" height="16">
+  <object id="60" name="BlockConcrete" type="block_fragile" x="1328" y="800" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="42" name="BlockDev" type="block_break" x="1120" y="784" width="16" height="16">
+  <object id="61" name="BlockConcrete" type="block_fragile" x="1376" y="800" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="58" name="BlockDev" type="block_fragile" x="1232" y="800" width="16" height="16">
+  <object id="62" name="BlockConcrete" type="block_fragile" x="1376" y="720" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="59" name="BlockDev" type="block_fragile" x="1280" y="800" width="16" height="16">
+  <object id="63" name="BlockConcrete" type="block_fragile" x="1328" y="720" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="60" name="BlockDev" type="block_fragile" x="1328" y="800" width="16" height="16">
+  <object id="64" name="BlockConcrete" type="block_fragile" x="1280" y="720" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="61" name="BlockDev" type="block_fragile" x="1376" y="800" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="62" name="BlockDev" type="block_fragile" x="1376" y="720" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="63" name="BlockDev" type="block_fragile" x="1328" y="720" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="64" name="BlockDev" type="block_fragile" x="1280" y="720" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="65" name="BlockDev" type="block_fragile" x="1232" y="720" width="16" height="16">
+  <object id="65" name="BlockConcrete" type="block_fragile" x="1232" y="720" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="false"/>
    </properties>
@@ -327,77 +308,17 @@
   <object id="70" name="CollectBag" type="obj_collectable" x="1440" y="736" width="16" height="16"/>
   <object id="72" type="obj_checkpoint" x="736" y="816" width="16" height="16"/>
   <object id="91" type="obj_checkpoint" x="704" y="592" width="16" height="16"/>
-  <object id="94" name="BlockDev" type="block_break" x="384" y="528" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="95" name="BlockDev" type="block_break" x="400" y="528" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="96" name="BlockDev" type="block_break" x="400" y="544" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="97" name="BlockDev" type="block_break" x="384" y="544" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="98" name="BlockDev" type="block_break" x="464" y="528" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="99" name="BlockDev" type="block_break" x="480" y="528" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="100" name="BlockDev" type="block_break" x="480" y="544" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="101" name="BlockDev" type="block_break" x="464" y="544" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="103" name="BlockDev" type="block_fragile" x="560" y="512" width="16" height="16">
+  <object id="103" name="BlockConcreteBarLeft" type="block_fragile" x="560" y="512" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="104" name="BlockDev" type="block_fragile" x="576" y="512" width="16" height="16">
+  <object id="104" name="BlockConcreteBarRight" type="block_fragile" x="576" y="512" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="106" name="BlockDev" type="block_fragile" x="568" y="448" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="119" name="BlockDev" type="block_break" x="560" y="352" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="120" name="BlockDev" type="block_break" x="560" y="336" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="121" name="BlockDev" type="block_break" x="576" y="336" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="122" name="BlockDev" type="block_break" x="576" y="352" width="16" height="16">
+  <object id="106" name="BlockConcrete" type="block_fragile" x="568" y="448" width="16" height="16">
    <properties>
     <property name="Respawn" type="bool" value="true"/>
    </properties>
@@ -415,66 +336,6 @@
    </properties>
   </object>
   <object id="155" type="obj_checkpoint" x="736" y="352" width="16" height="16"/>
-  <object id="156" name="BlockDev" type="block_fragile" x="800" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="157" name="BlockDev" type="block_fragile" x="816" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="158" name="BlockDev" type="block_fragile" x="832" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="159" name="BlockDev" type="block_fragile" x="896" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="160" name="BlockDev" type="block_fragile" x="912" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="161" name="BlockDev" type="block_fragile" x="928" y="496" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="162" name="BlockDev" type="block_fragile" x="960" y="448" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="163" name="BlockDev" type="block_fragile" x="976" y="448" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="168" name="BlockDev" type="block_fragile" x="912" y="400" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="169" name="BlockDev" type="block_fragile" x="928" y="400" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="170" name="BlockDev" type="block_fragile" x="960" y="352" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="171" name="BlockDev" type="block_fragile" x="976" y="352" width="16" height="16">
-   <properties>
-    <property name="Respawn" type="bool" value="true"/>
-   </properties>
-  </object>
   <object id="178" type="obj_checkpoint" x="1088" y="256" width="16" height="16"/>
   <object id="179" name="MovingMetal" type="block_moving" x="976" y="176" width="112" height="16">
    <properties>
@@ -504,6 +365,146 @@
    </properties>
   </object>
   <object id="196" type="trigger_goal" x="496" y="128" width="112" height="80"/>
+  <object id="197" name="BlockConcreteCornerTL" type="block_fragile" x="864" y="768" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="198" name="BlockConcreteCornerTR" type="block_fragile" x="880" y="768" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="199" name="BlockConcreteCornerBR" type="block_fragile" x="880" y="784" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="200" name="BlockConcreteCornerBL" type="block_fragile" x="864" y="784" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="201" name="BlockConcreteCornerTL" type="block_break" x="464" y="528" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="202" name="BlockConcreteCornerTR" type="block_break" x="480" y="528" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="203" name="BlockConcreteCornerBR" type="block_break" x="480" y="544" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="204" name="BlockConcreteCornerBL" type="block_break" x="464" y="544" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="205" name="BlockConcreteCornerTL" type="block_break" x="384" y="528" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="206" name="BlockConcreteCornerTR" type="block_break" x="400" y="528" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="207" name="BlockConcreteCornerBR" type="block_break" x="400" y="544" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="208" name="BlockConcreteCornerBL" type="block_break" x="384" y="544" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="209" name="BlockConcreteCornerTL" type="block_break" x="560" y="336" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="210" name="BlockConcreteCornerTR" type="block_break" x="576" y="336" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="211" name="BlockConcreteCornerBR" type="block_break" x="576" y="352" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="212" name="BlockConcreteCornerBL" type="block_break" x="560" y="352" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="213" name="BlockConcreteBarLeft" type="block_fragile" x="960" y="448" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="214" name="BlockConcreteBarRight" type="block_fragile" x="976" y="448" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="215" name="BlockConcreteBarLeft" type="block_fragile" x="912" y="400" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="216" name="BlockConcreteBarRight" type="block_fragile" x="928" y="400" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="217" name="BlockConcreteBarLeft" type="block_fragile" x="960" y="352" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="218" name="BlockConcreteBarRight" type="block_fragile" x="976" y="352" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="219" name="BlockConcreteBarLeft" type="block_fragile" x="896" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="220" name="BlockConcreteBarRight" type="block_fragile" x="928" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="221" name="BlockConcreteBarLeft" type="block_fragile" x="800" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="222" name="BlockConcreteBarRight" type="block_fragile" x="832" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="223" name="BlockConcreteBarMid" type="block_fragile" x="912" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="224" name="BlockConcreteBarMid" type="block_fragile" x="816" y="496" width="16" height="16">
+   <properties>
+    <property name="Respawn" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="characters">
   <object id="3" name="RobotFly" type="character" x="336" y="1040" width="16" height="16">
@@ -569,7 +570,7 @@
     </property>
    </properties>
   </object>
-  <object id="22" name="CannonOrb" type="character" x="864" y="928" width="16" height="16">
+  <object id="22" name="CannonOrb" type="character" x="1088" y="912" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -579,7 +580,7 @@
     </property>
    </properties>
   </object>
-  <object id="26" name="RobotFly" type="character" x="912" y="1040" width="16" height="16">
+  <object id="26" name="RobotFly" type="character" x="912" y="1024" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -813,7 +814,7 @@
   <object id="17" type="phys_solid" x="544" y="1024">
    <polyline points="0,0 0,16 16,16 16,0 0,0"/>
   </object>
-  <object id="24" type="phys_solid" x="896" y="1008">
+  <object id="24" type="phys_solid" x="896" y="992">
    <polyline points="0,0 0,32 48,32 48,0 0,0"/>
   </object>
   <object id="27" type="phys_platform" x="944" y="896">
