@@ -132,6 +132,7 @@ void ach::StateCredits::fill()
 	add(lang->get("UI.Credits.PrimaryTesting"), ach::CreditsWeight::cwHeader);
 	add("Grisha92", ach::CreditsWeight::cwEntry);
 	add("T1tan"   , ach::CreditsWeight::cwEntry);
+	add("Smokey"  , ach::CreditsWeight::cwEntry);
 	space();
 
 

@@ -1,0 +1,7 @@
+{
+    "DecorRocketEngine": {
+        "Filename": "gfx/game/sheet/object/decor/rocket_engine.png",
+        "Frames": 3,
+        "Rate": 0.06
+    }
+}
