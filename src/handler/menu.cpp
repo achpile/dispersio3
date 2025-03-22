@@ -7,7 +7,7 @@
 ***********************************************************************/
 void handler_menu_language(void *, json_t *)
 {
-	lang->refresh();
+	lm->refresh();
 	app->state->translate();
 }
 

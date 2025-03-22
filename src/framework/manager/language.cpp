@@ -2,33 +2,33 @@
 
 
 /***********************************************************************
-     * Language
+     * LanguageManager
      * constructor
 
 ***********************************************************************/
-ach::Language::Language()
+ach::LanguageManager::LanguageManager()
 {
 }
 
 
 
 /***********************************************************************
-     * Language
+     * LanguageManager
      * destructor
 
 ***********************************************************************/
-ach::Language::~Language()
+ach::LanguageManager::~LanguageManager()
 {
 }
 
 
 
 /***********************************************************************
-     * Language
+     * LanguageManager
      * get
 
 ***********************************************************************/
-sf::String ach::Language::get(const char *path)
+sf::String ach::LanguageManager::get(const char *path)
 {
 	json_t *token = json_object_get_branch(data, path);
 
@@ -50,11 +50,11 @@ sf::String ach::Language::get(const char *path)
 
 
 /***********************************************************************
-     * Language
+     * LanguageManager
      * getv
 
 ***********************************************************************/
-sf::String ach::Language::getv(const char *format, ...)
+sf::String ach::LanguageManager::getv(const char *format, ...)
 {
 	char path[STR_LEN_PATH];
 
@@ -70,11 +70,11 @@ sf::String ach::Language::getv(const char *format, ...)
 
 
 /***********************************************************************
-     * Language
+     * LanguageManager
      * refresh
 
 ***********************************************************************/
-void ach::Language::refresh()
+void ach::LanguageManager::refresh()
 {
 	data = json_object_getv_branch(dm->data, "Translation.%s.Tokens", settings->getLanguage());
 }

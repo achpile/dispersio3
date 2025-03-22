@@ -7,11 +7,11 @@ extern ach::ControlPad          *ctrl;
 
 extern ach::Settings            *settings;
 extern ach::Theme               *theme;
-extern ach::Language            *lang;
 extern ach::Database            *db;
 
 extern ach::ParticleSystemStars *stars;
 
+extern ach::LanguageManager     *lm;
 extern ach::RenderManager       *rm;
 extern ach::SoundManager        *sm;
 extern ach::TimeManager         *tm;

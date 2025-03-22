@@ -88,11 +88,11 @@ void ach::MenuItemList::finalize()
 ***********************************************************************/
 void ach::MenuItemList::translate()
 {
-	caption = lang->getv("UI.Menu.%s", name);
+	caption = lm->getv("UI.Menu.%s", name);
 
 	list_foreach(options)
 		if (token)
-			options[i].caption = lang->get(json_object_get_string(list, options[i].value));
+			options[i].caption = lm->get (json_object_get_string(list, options[i].value));
 		else
 			options[i].caption = str_utf8(json_object_get_string(list, options[i].value));
 }

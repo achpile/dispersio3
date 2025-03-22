@@ -60,7 +60,7 @@ void ach::MenuItemControl::render(int i)
 ***********************************************************************/
 void ach::MenuItemControl::translate()
 {
-	caption = lang->getv("UI.Control.%s", pair_get_string(act, pairAction));
+	caption = lm->getv("UI.Control.%s", pair_get_string(act, pairAction));
 }
 
 

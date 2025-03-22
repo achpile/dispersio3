@@ -7,11 +7,11 @@ ach::ControlPad          *ctrl;
 
 ach::Settings            *settings;
 ach::Theme               *theme;
-ach::Language            *lang;
 ach::Database            *db;
 
 ach::ParticleSystemStars *stars;
 
+ach::LanguageManager     *lm;
 ach::RenderManager       *rm;
 ach::SoundManager        *sm;
 ach::TimeManager         *tm;

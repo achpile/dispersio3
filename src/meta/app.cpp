@@ -21,9 +21,9 @@ ach::App::App()
 	db        = new ach::Database();
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
-	lang      = new ach::Language();
 	ctrl      = new ach::ControlPad();
 
+	lm        = new ach::LanguageManager();
 	rm        = new ach::RenderManager();
 	sm        = new ach::SoundManager();
 	tm        = new ach::TimeManager();
@@ -43,7 +43,7 @@ ach::App::App()
 	stars->source = ach::TimeSource::tsReal;
 	stars->layer  = ach::RenderLayer::rlBG;
 
-	lang->refresh();
+	lm->refresh();
 	theme->refresh();
 
 	stateSet(ach::GameState::gsStart);
@@ -62,12 +62,12 @@ ach::App::~App()
 	delete theme;
 	delete stars;
 	delete db;
-	delete lang;
 	delete state;
 	delete window;
 	delete logger;
 	delete ctrl;
 
+	delete lm;
 	delete rm;
 	delete sm;
 	delete tm;

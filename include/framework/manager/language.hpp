@@ -1,16 +1,16 @@
-#ifndef __CONTAINER_LANGUAGE
-#define __CONTAINER_LANGUAGE
+#ifndef __FRAMEWORK_MANAGER_LANGUAGE
+#define __FRAMEWORK_MANAGER_LANGUAGE
 
 
 namespace ach
 {
-	struct Language
+	struct LanguageManager
 	{
 		json_t *data;
 
 
-		 Language();
-		~Language();
+		 LanguageManager();
+		~LanguageManager();
 
 		sf::String get (const char *path);
 		sf::String getv(const char *format, ...);

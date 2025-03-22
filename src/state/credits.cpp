@@ -91,7 +91,7 @@ void ach::StateCredits::fill()
 	space();
 
 
-	add(lang->get("UI.Credits.Developer"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Developer"), ach::CreditsWeight::cwHeader);
 
 	add("Achpile"                 , ach::CreditsWeight::cwEntry);
 	add("http://achpile.github.io", ach::CreditsWeight::cwEntry);
@@ -99,7 +99,7 @@ void ach::StateCredits::fill()
 	space();
 
 
-	add(lang->get("UI.Credits.Music"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Music"), ach::CreditsWeight::cwHeader);
 
 	add("Creepue"                       , ach::CreditsWeight::cwEntry);
 	add("https://vk.com/creepue_music"  , ach::CreditsWeight::cwEntry);
@@ -108,41 +108,41 @@ void ach::StateCredits::fill()
 	space();
 
 
-	add(lang->get("UI.Credits.Sound"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Sound"), ach::CreditsWeight::cwHeader);
 
 	add("ChipTone by SFBGames"             , ach::CreditsWeight::cwEntry);
 	add("https://sfbgames.itch.io/chiptone", ach::CreditsWeight::cwEntry);
 	space();
 
 
-	add(lang->get("UI.Credits.Lib"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Lib"), ach::CreditsWeight::cwHeader);
 
 	add("SFML"                , ach::CreditsWeight::cwEntry);
 	add("http://sfml-dev.org/", ach::CreditsWeight::cwEntry);
 	space();
 
 
-	add(lang->get("UI.Credits.MapEditor"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.MapEditor"), ach::CreditsWeight::cwHeader);
 
 	add("Tiled"                , ach::CreditsWeight::cwEntry);
 	add("http://mapeditor.org/", ach::CreditsWeight::cwEntry);
 	space();
 
 
-	add(lang->get("UI.Credits.PrimaryTesting"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.PrimaryTesting"), ach::CreditsWeight::cwHeader);
 	add("Grisha92", ach::CreditsWeight::cwEntry);
 	add("T1tan"   , ach::CreditsWeight::cwEntry);
 	add("Smokey"  , ach::CreditsWeight::cwEntry);
 	space();
 
 
-	add(lang->get("UI.Credits.Translations"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Translations"), ach::CreditsWeight::cwHeader);
 
 	translations();
 	space();
 
 
-	add(lang->get("UI.Credits.Special"), ach::CreditsWeight::cwHeader);
+	add(lm->get("UI.Credits.Special"), ach::CreditsWeight::cwHeader);
 
 	add("garett90", ach::CreditsWeight::cwEntry);
 }

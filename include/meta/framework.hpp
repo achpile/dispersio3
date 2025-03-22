@@ -71,6 +71,7 @@
 #include "framework/gfx/layer.hpp"
 #include "framework/gfx/background.hpp"
 
+#include "framework/manager/language.hpp"
 #include "framework/manager/render.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"

@@ -48,7 +48,6 @@
 
 #include "container/theme.hpp"
 #include "container/settings.hpp"
-#include "container/language.hpp"
 
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"
