@@ -1,8 +1,11 @@
-#ifndef __META_FRAMEWORK
-#define __META_FRAMEWORK
+#ifndef __FRAMEWORK_META_HEADERS
+#define __FRAMEWORK_META_HEADERS
 
 
-#include "framework/string/defines.hpp"
+#include "framework/meta/system.hpp"
+#include "framework/meta/defines.hpp"
+#include "framework/meta/forward.hpp"
+
 #include "framework/string/pair.hpp"
 #include "framework/string/pair.inl"
 #include "framework/string/option.hpp"
@@ -26,7 +29,6 @@
 #include "framework/random/list.hpp"
 #include "framework/random/list.inl"
 
-#include "framework/math/defines.hpp"
 #include "framework/math/math.hpp"
 #include "framework/math/interval.hpp"
 #include "framework/math/interval.inl"
@@ -50,7 +52,6 @@
 #include "framework/json/merge.hpp"
 #include "framework/json/macros.hpp"
 
-#include "framework/datamodel/defines.hpp"
 #include "framework/datamodel/attr.hpp"
 #include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/class.hpp"
@@ -76,7 +77,6 @@
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
 
-#include "framework/time/defines.hpp"
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
@@ -84,8 +84,6 @@
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"
 
-#include "framework/menu/defines.hpp"
-#include "framework/menu/forward.hpp"
 #include "framework/menu/theme.hpp"
 #include "framework/menu/item.hpp"
 #include "framework/menu/action.hpp"
@@ -99,5 +97,7 @@
 
 #include "framework/particle/particle.hpp"
 #include "framework/particle/system.hpp"
+
+#include "framework/meta/externs.hpp"
 
 #endif

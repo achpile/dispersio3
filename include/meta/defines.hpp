@@ -16,7 +16,6 @@
 
 ***********************************************************************/
 #define FILE_SETTINGS         "settings.json"
-#define PATH_BASE             "data/base"
 
 
 
@@ -85,17 +84,5 @@
 ***********************************************************************/
 #define PARTICLE_SPARK_SIZE   1.0f
 #define PARTICLE_SPLASH_SIZE  2.0f
-
-#define PARTICLE_BLOOD_SIZE   3.0f
-#define PARTICLE_BLOOD_LIFE   10.0f
-#define PARTICLE_BLOOD_CLEAR  8.0f
-#define PARTICLE_BLOOD_SPEED  200.0f
-
-#define PARTICLE_CHUNK_SIZE   3.0f
-#define PARTICLE_CHUNK_STEP   8.0f
-#define PARTICLE_CHUNK_LIFE   10.0f
-#define PARTICLE_CHUNK_CLEAR  8.0f
-#define PARTICLE_CHUNK_SPEED  200.0f
-#define PARTICLE_CHUNK_SLOW   0.95f
 
 #endif

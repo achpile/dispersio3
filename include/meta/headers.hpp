@@ -2,10 +2,10 @@
 #define __META_HEADERS
 
 
-#include "meta/system.hpp"
+#include "framework/meta/headers.hpp"
+
 #include "meta/defines.hpp"
 #include "meta/forward.hpp"
-#include "meta/framework.hpp"
 
 #include "collision/phys.hpp"
 #include "collision/line.hpp"

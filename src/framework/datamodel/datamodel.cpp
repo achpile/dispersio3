@@ -46,7 +46,7 @@ void ach::Datamodel::load()
 {
 	data = json_dm_generate_default(NULL, dm);
 
-	loadPath("data/base");
+	loadPath(DM_PATH_BASE);
 }
 
 

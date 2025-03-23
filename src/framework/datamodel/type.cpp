@@ -163,9 +163,9 @@ bool json_type_check_filename(json_t *obj, json_t *, const char *name, const cha
 
 	if (!file_exists(filename))
 	{
-		logger->log(ach::LogLevel::llWarning, "File '%s' is not found: using %s dir instead", filename, PATH_BASE);
+		logger->log(ach::LogLevel::llWarning, "File '%s' is not found: using %s dir instead", filename, DM_PATH_BASE);
 
-		snprintf(filename, STR_LEN_PATH, "%s/%s", PATH_BASE, json_string_value(obj));
+		snprintf(filename, STR_LEN_PATH, "%s/%s", DM_PATH_BASE, json_string_value(obj));
 	}
 
 	if (!file_exists(filename))

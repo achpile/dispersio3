@@ -1,5 +1,5 @@
-#ifndef __META_SYSTEM
-#define __META_SYSTEM
+#ifndef __FRAMEWORK_META_SYSTEM
+#define __FRAMEWORK_META_SYSTEM
 
 
 #include <sys/stat.h>

@@ -92,7 +92,7 @@ json_t *json_attr_get_default(json_t *obj)
 	{
 		char path[STR_LEN_PATH];
 
-		snprintf(path, STR_LEN_PATH, PATH_BASE "/%s", json_string_value(def));
+		snprintf(path, STR_LEN_PATH, DM_PATH_BASE "/%s", json_string_value(def));
 		return json_string(path);
 	}
 
