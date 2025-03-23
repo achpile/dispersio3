@@ -1,0 +1,17 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Icon": {
+        "@attr": {
+            "default": "gfx/ui/misc/icon.png",
+            "type": "filename"
+        }
+    },
+    "Logo": {
+        "@attr": {
+            "default": "gfx/ui/misc/logo.png",
+            "type": "filename"
+        }
+    }
+}

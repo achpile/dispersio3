@@ -22,5 +22,11 @@
             ],
             "type": "object"
         }
+    },
+    "Track": {
+        "@attr": {
+            "default": "track/default.ogg",
+            "type": "filename"
+        }
     }
 }

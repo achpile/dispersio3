@@ -12,6 +12,7 @@ ach::DataMap::DataMap(json_t *obj)
 	player = db->getCharacter(json_object_get_branch_string(obj, "Player"));
 
 	strncpy(filename, json_object_get_string(obj, "Filename"), STR_LEN_PATH);
+	strncpy(track   , json_object_get_string(obj, "Track"   ), STR_LEN_PATH);
 }
 
 

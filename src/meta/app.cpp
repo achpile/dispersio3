@@ -232,7 +232,7 @@ void ach::App::create()
 
 	sf::Image *icon;
 
-	sfml_load_image(&icon, json_object_get_branch_string(dm->data, "Meta.Icon"));
+	sfml_load_image(&icon, json_object_get_branch_string(dm->data, "Meta.GFX.Icon"));
 
 	window = new sf::RenderWindow(settings->getWindowMode(),
 	                              PROJECT_NAME " v" PROJECT_VERS,

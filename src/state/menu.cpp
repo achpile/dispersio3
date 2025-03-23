@@ -14,7 +14,7 @@ ach::StateMenu::StateMenu()
 	menu->setWidth(400);
 	menu->setHeight(10);
 
-	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.Logo"), false, true);
+	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Logo"), false, true);
 
 	logo->spr->setPosition(RENDER_LAYER_GUI_X / 2, logo->tex->getSize().y / 2 + MENU_LOGO_OFFSET);
 

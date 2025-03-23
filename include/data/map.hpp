@@ -10,6 +10,7 @@ namespace ach
 		sf::Vector2i        spawn;
 
 		char filename[STR_LEN_PATH];
+		char track   [STR_LEN_PATH];
 
 
 		 DataMap(json_t *obj);

@@ -1,0 +1,17 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Credits": {
+        "@attr": {
+            "default": "track/default.ogg",
+            "type": "filename"
+        }
+    },
+    "Menu": {
+        "@attr": {
+            "default": "track/default.ogg",
+            "type": "filename"
+        }
+    }
+}
