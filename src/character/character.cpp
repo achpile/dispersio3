@@ -175,6 +175,7 @@ void ach::Character::reset()
 	dir = sf::Vector2i(1, 0);
 
 	phys.reset();
+	phys.acc.y = base->gravity;
 
 	body->reset();
 	ai->reset();

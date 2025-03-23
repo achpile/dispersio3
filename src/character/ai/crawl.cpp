@@ -51,7 +51,6 @@ void ach::AICrawl::control()
 void ach::AICrawl::reset()
 {
 	dir = initial;
-	owner->phys.acc.y = PHYS_GRAVITY;
 }
 
 

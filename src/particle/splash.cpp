@@ -79,7 +79,7 @@ void ach::ParticleSystemSplash::add(float angle)
 	particles.back()->calc();
 
 	if (gravity)
-		particles.back()->acc = sf::Vector2f(0.0f, PHYS_GRAVITY / 2.0f);
+		particles.back()->acc = sf::Vector2f(0.0f, 500.0f);
 }
 
 

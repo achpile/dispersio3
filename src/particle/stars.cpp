@@ -71,7 +71,7 @@ bool ach::ParticleSystemStars::process(ach::Particle *particle)
 void ach::ParticleSystemStars::add(float x)
 {
 	unsigned char rnd = rand() % 7;
-	unsigned char clr = 63 + rnd * 32;
+	unsigned char clr = 32 + rnd * 16;
 
 	particles.push_back(new ach::Particle());
 

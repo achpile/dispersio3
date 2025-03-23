@@ -12,8 +12,10 @@
     },
     "Gravity": {
         "@attr": {
-            "default": false,
-            "type": "boolean"
+            "default": 0.0,
+            "max": 10000.0,
+            "min": -10000.0,
+            "type": "real"
         }
     },
     "Radius": {

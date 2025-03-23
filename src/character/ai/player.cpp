@@ -56,8 +56,6 @@ void ach::AIPlayer::control()
 void ach::AIPlayer::reset()
 {
 	jumped = false;
-
-	owner->phys.acc.y = PHYS_GRAVITY;
 }
 
 

@@ -2,6 +2,14 @@
     "@attr": {
         "type": "object"
     },
+    "Gravity": {
+        "@attr": {
+            "default": 1000.0,
+            "max": 10000.0,
+            "min": -10000.0,
+            "type": "real"
+        }
+    },
     "Jump": {
         "@attr": {
             "default": 320.0,

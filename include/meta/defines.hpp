@@ -65,10 +65,8 @@
      * Phys
 
 ***********************************************************************/
-#define PHYS_GRAVITY          1000.0f
 #define PHYS_MAX_VEL          2000.0f
 #define PHYS_VEL_EPSILON      10.0f
-#define PHYS_PROJECTILE_SLOW  0.9f
 
 
 

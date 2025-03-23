@@ -26,8 +26,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 
 	tracer->color = base->colorTracer;
 
-	if (base->gravity)
-		phys.acc.y = PHYS_GRAVITY / 2.0f;
+	phys.acc.y = base->gravity;
 }
 
 
@@ -136,16 +135,9 @@ void ach::Projectile::hit(sf::Vector2f n)
 	tracer->correct();
 
 	if (bounces--)
-	{
 		phys.vel = vector_mirror(phys.vel, n);
-
-		if (base->gravity)
-			phys.vel *= PHYS_PROJECTILE_SLOW;
-	}
 	else
-	{
 		destroy();
-	}
 }
 
 

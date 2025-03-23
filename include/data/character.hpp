@@ -31,6 +31,7 @@ namespace ach
 		float barrel;
 		float speed;
 		float jumping;
+		float gravity;
 
 
 		 DataCharacter(json_t *obj);

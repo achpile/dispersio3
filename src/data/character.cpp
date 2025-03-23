@@ -21,8 +21,9 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	ai      = pair_get_enum(json_object_get_branch_string(obj, "Game.AI"), pairAI);
 	hitbox  = vector_json_coord(json_object_get_branch(obj, "Game.Hitbox"), "X", "Y");
 
-	speed   = json_object_get_branch_real   (obj, "Stats.Speed" );
-	jumping = json_object_get_branch_real   (obj, "Stats.Jump"  );
+	speed   = json_object_get_branch_real(obj, "Stats.Speed"  );
+	jumping = json_object_get_branch_real(obj, "Stats.Jump"   );
+	gravity = json_object_get_branch_real(obj, "Stats.Gravity");
 }
 
 

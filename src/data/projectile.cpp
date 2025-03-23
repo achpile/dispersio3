@@ -10,8 +10,8 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 {
 	radius       = json_object_get_branch_real   (obj, "Physics.Radius"  );
 	scale        = json_object_get_branch_real   (obj, "Appearance.Scale");
+	gravity      = json_object_get_branch_real   (obj, "Physics.Gravity" );
 	bounces      = json_object_get_branch_integer(obj, "Physics.Bounces" );
-	gravity      = json_object_get_branch_boolean(obj, "Physics.Gravity" );
 	explosive    = json_object_get_branch_boolean(obj, "Explosion.Enable");
 	explosionR   = json_object_get_branch_real   (obj, "Explosion.Radius");
 

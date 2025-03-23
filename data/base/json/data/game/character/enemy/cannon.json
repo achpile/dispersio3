@@ -12,6 +12,7 @@
             }
         },
         "Stats": {
+            "Gravity": 0,
             "Speed": 50
         }
     }

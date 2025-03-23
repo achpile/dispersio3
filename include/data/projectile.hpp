@@ -44,11 +44,11 @@ namespace ach
 
 
 		float explosionR;
+		float gravity;
 		float radius;
 		float scale;
 
 		bool  explosive;
-		bool  gravity;
 		int   bounces;
 
 
