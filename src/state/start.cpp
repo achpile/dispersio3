@@ -17,6 +17,7 @@ ach::StateStart::StateStart()
 	sprites.push_back(new ach::Sprite("data/base/gfx/ui/start/04.png", false, true));
 
 	app->mouse(false);
+	mm->play(json_object_get_branch_string(dm->data, "Meta.Track.Menu"));
 }
 
 

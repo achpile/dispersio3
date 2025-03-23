@@ -74,6 +74,7 @@
 
 #include "framework/manager/language.hpp"
 #include "framework/manager/render.hpp"
+#include "framework/manager/music.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
 

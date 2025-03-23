@@ -19,7 +19,9 @@ ach::StateMenu::StateMenu()
 	logo->spr->setPosition(RENDER_LAYER_GUI_X / 2, logo->tex->getSize().y / 2 + MENU_LOGO_OFFSET);
 
 	fill();
+
 	app->mouse(true);
+	mm->play(json_object_get_branch_string(dm->data, "Meta.Track.Menu"));
 }
 
 

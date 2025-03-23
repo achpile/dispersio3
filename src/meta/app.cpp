@@ -25,6 +25,7 @@ ach::App::App()
 
 	lm        = new ach::LanguageManager();
 	rm        = new ach::RenderManager();
+	mm        = new ach::MusicManager();
 	sm        = new ach::SoundManager();
 	tm        = new ach::TimeManager();
 
@@ -69,6 +70,7 @@ ach::App::~App()
 
 	delete lm;
 	delete rm;
+	delete mm;
 	delete sm;
 	delete tm;
 	delete dm;

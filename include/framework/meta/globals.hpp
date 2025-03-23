@@ -7,6 +7,7 @@ ach::ControlPad      *ctrl;
 
 ach::LanguageManager *lm;
 ach::RenderManager   *rm;
+ach::MusicManager    *mm;
 ach::SoundManager    *sm;
 ach::TimeManager     *tm;
 

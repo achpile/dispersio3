@@ -7,6 +7,7 @@ extern ach::ControlPad      *ctrl;
 
 extern ach::LanguageManager *lm;
 extern ach::RenderManager   *rm;
+extern ach::MusicManager    *mm;
 extern ach::SoundManager    *sm;
 extern ach::TimeManager     *tm;
 

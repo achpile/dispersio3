@@ -8,9 +8,6 @@
 ***********************************************************************/
 ach::SoundManager::SoundManager()
 {
-	track = new sf::Music();
-	track->setLoop(true);
-
 	volume();
 }
 
@@ -24,8 +21,6 @@ ach::SoundManager::SoundManager()
 ach::SoundManager::~SoundManager()
 {
 	list_delete(sound);
-
-	delete track;
 }
 
 
@@ -100,5 +95,4 @@ void ach::SoundManager::add()
 ***********************************************************************/
 void ach::SoundManager::volume()
 {
-	track->setVolume(settings->getVolumeMusic());
 }

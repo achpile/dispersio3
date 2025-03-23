@@ -15,6 +15,8 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
 
+	mm->play(map->base->track);
+
 	fader.set(1.0f);
 }
 
