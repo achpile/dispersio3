@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Block" tilewidth="16" tileheight="16" tilecount="16" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Block" tilewidth="16" tileheight="16" tilecount="20" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/block/concrete.png" width="16" height="16"/>
@@ -48,5 +48,17 @@
  </tile>
  <tile id="15">
   <image source="../../../data/base/gfx/game/tile/block/concrete_b_br.png" width="16" height="16"/>
+ </tile>
+ <tile id="16">
+  <image source="../../../data/base/gfx/game/tile/block/concrete_corner_tr.png" width="16" height="16"/>
+ </tile>
+ <tile id="18">
+  <image source="../../../data/base/gfx/game/tile/block/decor_top.png" width="16" height="16"/>
+ </tile>
+ <tile id="17">
+  <image source="../../../data/base/gfx/game/tile/block/decor_bot.png" width="16" height="16"/>
+ </tile>
+ <tile id="23">
+  <image source="../../../data/base/gfx/game/tile/block/decor_bot_cut.png" width="16" height="16"/>
  </tile>
 </tileset>
