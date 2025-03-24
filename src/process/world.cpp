@@ -9,7 +9,7 @@
 ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
 {
 	state  = ach::WorldState::wsFadeIn;
-	map    = new ach::Map(this, db->getMap("02-LaunchPad"));
+	map    = new ach::Map(this, db->getMap("00-Rocket"));
 	player = new ach::Character(this, map->base->player, map->spawn);
 
 	map->cam->follow(&player->phys);
