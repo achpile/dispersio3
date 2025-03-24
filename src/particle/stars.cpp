@@ -38,7 +38,7 @@ ach::ParticleSystemStars::~ParticleSystemStars()
 ***********************************************************************/
 bool ach::ParticleSystemStars::update()
 {
-	age += tm->get(real);
+	age += tm->get(realtime);
 
 	while (age > freq)
 	{

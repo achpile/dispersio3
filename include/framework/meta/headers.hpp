@@ -72,15 +72,15 @@
 #include "framework/gfx/layer.hpp"
 #include "framework/gfx/background.hpp"
 
+#include "framework/time/timer.hpp"
+#include "framework/time/framer.hpp"
+#include "framework/time/animation.hpp"
+
 #include "framework/manager/language.hpp"
 #include "framework/manager/render.hpp"
 #include "framework/manager/music.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
-
-#include "framework/time/timer.hpp"
-#include "framework/time/framer.hpp"
-#include "framework/time/animation.hpp"
 
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"

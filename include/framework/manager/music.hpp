@@ -6,14 +6,17 @@ namespace ach
 {
 	struct MusicManager
 	{
-		sf::Music *track;
+		ach::Timer  fade;
+		sf::Music  *track;
 
+		int  vol;
 		char current[STR_LEN_PATH];
 
 
 		 MusicManager();
 		~MusicManager();
 
+		void update();
 		void play(const char *name);
 
 		void volume();

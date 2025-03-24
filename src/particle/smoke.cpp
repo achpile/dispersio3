@@ -36,7 +36,7 @@ ach::ParticleSystemSmoke::~ParticleSystemSmoke()
 ***********************************************************************/
 bool ach::ParticleSystemSmoke::update()
 {
-	age += tm->get(real);
+	age += tm->get(realtime);
 
 	while (alive && age > freq)
 	{

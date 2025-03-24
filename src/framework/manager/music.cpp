@@ -11,7 +11,10 @@ ach::MusicManager::MusicManager()
 	track = new sf::Music();
 	track->setLoop(true);
 
+	fade.set(TIME_MUSIC_FADE);
+
 	current[0] = 0;
+	vol        = 100;
 }
 
 
@@ -30,6 +33,21 @@ ach::MusicManager::~MusicManager()
 
 /***********************************************************************
      * MusicManager
+     * update
+
+***********************************************************************/
+void ach::MusicManager::update()
+{
+	fade.update(true);
+
+	if (fade.isActive()) track->setVolume(vol * math_sqr(fade.progress()));
+	else                 track->setVolume(vol);
+}
+
+
+
+/***********************************************************************
+     * MusicManager
      * play
 
 ***********************************************************************/
@@ -40,7 +58,10 @@ void ach::MusicManager::play(const char *name)
 
 	strncpy(current, name, STR_LEN_PATH);
 
+	fade.reset();
+
 	track->stop();
+	track->setVolume(0);
 	track->openFromFile(current);
 	track->play();
 }
@@ -54,5 +75,5 @@ void ach::MusicManager::play(const char *name)
 ***********************************************************************/
 void ach::MusicManager::volume()
 {
-	track->setVolume(settings->getVolumeMusic());
+	vol = settings->getVolumeMusic();
 }

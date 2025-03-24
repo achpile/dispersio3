@@ -41,8 +41,8 @@ ach::App::App()
 	db->load();
 	tm->init();
 
-	stars->real   = true;
-	stars->layer  = ach::RenderLayer::rlBG;
+	stars->realtime = true;
+	stars->layer    = ach::RenderLayer::rlBG;
 
 	lm->refresh();
 	theme->refresh();
@@ -101,6 +101,8 @@ void ach::App::update()
 
 	ctrl->update();
 	state->update();
+
+	mm->update();
 	sm->update();
 
 	rm->display(window);

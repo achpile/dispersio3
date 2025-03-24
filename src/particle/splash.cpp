@@ -39,7 +39,7 @@ ach::ParticleSystemSplash::~ParticleSystemSplash()
 ***********************************************************************/
 bool ach::ParticleSystemSplash::update()
 {
-	age += tm->get(real);
+	age += tm->get(realtime);
 
 	return age < life;
 }

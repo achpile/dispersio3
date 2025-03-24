@@ -10,16 +10,16 @@ ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color, float cone, i
 {
 	particle = new ach::ParticleSystemSplash(PARTICLE_SPLASH_SIZE);
 
-	particle->layer   = ach::RenderLayer::rlGame;
-	particle->real    = false;
+	particle->layer    = ach::RenderLayer::rlGame;
+	particle->realtime = false;
 
-	particle->pos     = pos;
-	particle->dir     = sf::Vector2f(0.0f, -1.0f);
-	particle->color   = color;
-	particle->cone    = cone;
-	particle->life    = 0.06f;
-	particle->speed   = 300.0f;
-	particle->gravity = false;
+	particle->pos      = pos;
+	particle->dir      = sf::Vector2f(0.0f, -1.0f);
+	particle->color    = color;
+	particle->cone     = cone;
+	particle->life     = 0.06f;
+	particle->speed    = 300.0f;
+	particle->gravity  = false;
 
 	particle->init(count);
 }

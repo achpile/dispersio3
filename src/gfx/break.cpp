@@ -10,17 +10,17 @@ ach::EffectBreak::EffectBreak(sf::Vector2f pos, sf::Sprite *spr)
 {
 	particle = new ach::ParticleSystemSplash(8.0f);
 
-	particle->layer   = ach::RenderLayer::rlGame;
-	particle->real    = false;
+	particle->layer    = ach::RenderLayer::rlGame;
+	particle->realtime = false;
 
-	particle->pos     = pos;
-	particle->dir     = sf::Vector2f(0.0f, -1.0f);
-	particle->life    = 0.25f;
-	particle->speed   = 100.0f;
-	particle->gravity = true;
-	particle->rotate  = true;
+	particle->pos      = pos;
+	particle->dir      = sf::Vector2f(0.0f, -1.0f);
+	particle->life     = 0.25f;
+	particle->speed    = 100.0f;
+	particle->gravity  = true;
+	particle->rotate   = true;
 
-	sf::IntRect r     = spr->getTextureRect();
+	sf::IntRect r      = spr->getTextureRect();
 
 	particle->spr->setTexture(spr->getTexture());
 	particle->spr->setTextureRect(r);

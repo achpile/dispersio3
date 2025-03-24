@@ -11,7 +11,7 @@ namespace ach
 
 		ach::RenderLayer            layer;
 
-		bool real;
+		bool realtime;
 
 
 		         ParticleSystem(float size);
