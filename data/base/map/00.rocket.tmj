@@ -1372,7 +1372,7 @@
          "margin":0,
          "name":"Beam",
          "spacing":0,
-         "tilecount":9,
+         "tilecount":7,
          "tileheight":16,
          "tiles":[
                 {
@@ -1402,18 +1402,6 @@
                 {
                  "id":5,
                  "image":"..\/gfx\/game\/tile\/beam\/metal_v_2.png",
-                 "imageheight":16,
-                 "imagewidth":16
-                }, 
-                {
-                 "id":6,
-                 "image":"..\/gfx\/game\/tile\/beam\/metal_v_1_half.png",
-                 "imageheight":16,
-                 "imagewidth":16
-                }, 
-                {
-                 "id":7,
-                 "image":"..\/gfx\/game\/tile\/beam\/metal_v_2_half.png",
                  "imageheight":16,
                  "imagewidth":16
                 }, 
