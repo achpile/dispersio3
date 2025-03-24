@@ -2,8 +2,8 @@
     "00-Rocket": {
         "Filename": "map/00.rocket.tmj",
         "Spawn": {
-            "X": 63,
-            "Y": 13
+            "X": 59,
+            "Y": 11
         }
     }
 }
