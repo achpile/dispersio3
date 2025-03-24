@@ -10,7 +10,7 @@ ach::TracerSmoke::TracerSmoke(ach::Phys *_phys) : Tracer(_phys)
 {
 	smoke = new ach::ParticleSystemSmoke();
 
-	smoke->source = ach::TimeSource::tsFrame;
+	smoke->real   = false;
 	smoke->layer  = ach::RenderLayer::rlGame;
 }
 

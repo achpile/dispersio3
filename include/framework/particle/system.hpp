@@ -9,8 +9,9 @@ namespace ach
 		std::vector<ach::Particle*> particles;
 		sf::RectangleShape         *spr;
 
-		ach::TimeSource  source;
-		ach::RenderLayer layer;
+		ach::RenderLayer            layer;
+
+		bool real;
 
 
 		         ParticleSystem(float size);

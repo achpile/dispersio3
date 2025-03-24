@@ -17,7 +17,7 @@ namespace ach
 		void  reset();
 		void  zero();
 		float progress(bool invert = false);
-		bool  update(ach::TimeSource source = ach::TimeSource::tsFrame);
+		bool  update(bool real = false);
 		bool  isActive();
 	};
 }

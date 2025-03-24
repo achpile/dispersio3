@@ -11,7 +11,7 @@ ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color, float cone, i
 	particle = new ach::ParticleSystemSplash(PARTICLE_SPLASH_SIZE);
 
 	particle->layer   = ach::RenderLayer::rlGame;
-	particle->source  = ach::TimeSource::tsFrame;
+	particle->real    = false;
 
 	particle->pos     = pos;
 	particle->dir     = sf::Vector2f(0.0f, -1.0f);

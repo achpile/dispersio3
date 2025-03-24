@@ -4,13 +4,6 @@
 
 namespace ach
 {
-	enum TimeSource
-	{
-		tsReal,
-		tsFrame
-	};
-
-
 	struct TimeManager
 	{
 		sf::Clock *clock;
@@ -28,7 +21,7 @@ namespace ach
 		void update();
 		void pause();
 
-		float get(ach::TimeSource source);
+		float get(bool isReal = false);
 	};
 }
 

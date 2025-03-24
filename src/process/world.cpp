@@ -73,14 +73,14 @@ void ach::ProcessWorld::prepare()
 	{
 		case ach::WorldState::wsFadeIn:
 			tm->pause();
-			fader.update(ach::TimeSource::tsReal);
+			fader.update(true);
 			rm->setFade(fader.progress());
 		break;
 
 
 		case ach::WorldState::wsFadeOut:
 			tm->pause();
-			fader.update(ach::TimeSource::tsReal);
+			fader.update(true);
 			rm->setFade(fader.progress(true));
 		break;
 

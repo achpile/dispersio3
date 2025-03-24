@@ -74,13 +74,7 @@ void ach::TimeManager::pause()
      * get
 
 ***********************************************************************/
-float ach::TimeManager::get(ach::TimeSource source)
+float ach::TimeManager::get(bool isReal)
 {
-	switch (source)
-	{
-		case ach::TimeSource::tsReal : return real;
-		case ach::TimeSource::tsFrame: return frame;
-	}
-
-	return 0.0f;
+	return isReal ? real : frame;
 }

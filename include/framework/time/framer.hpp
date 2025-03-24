@@ -16,7 +16,7 @@ namespace ach
 		void set(float _timer);
 		void reset();
 		void zero();
-		int  update(ach::TimeSource source = ach::TimeSource::tsFrame);
+		int  update(bool real = false);
 	};
 }
 

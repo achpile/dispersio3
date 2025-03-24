@@ -81,12 +81,12 @@ float ach::Timer::progress(bool invert)
      * update
 
 ***********************************************************************/
-bool ach::Timer::update(ach::TimeSource source)
+bool ach::Timer::update(bool real)
 {
 	if (value <= 0)
 		return false;
 
-	value -= tm->get(source);
+	value -= tm->get(real);
 
 	if (value <= 0)
 	{

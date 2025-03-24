@@ -163,7 +163,7 @@ void ach::Projectile::destroy()
 ***********************************************************************/
 void ach::Projectile::rotation()
 {
-	angle += phys.vel.x * 4.0f * tm->get(ach::TimeSource::tsFrame);
+	angle += phys.vel.x * 4.0f * tm->get();
 
 	model->angle = angle;
 }

@@ -32,13 +32,13 @@ void ach::Map::collideCharacter(ach::Character *character)
 
 	ach::PhysLine *line;
 
-	float left = tm->get(ach::TimeSource::tsFrame);
+	float left = tm->get();
 	float velocity;
 	float chunk;
 
 	long filter = (character->enemy) ? filterPhysEnemy : filterPhysPlayer;
 
-	character->phys.vel  += character->phys.acc * tm->get(ach::TimeSource::tsFrame);
+	character->phys.vel  += character->phys.acc * tm->get();
 	character->phys.vel.x = interval_set(character->phys.vel.x, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 	character->phys.vel.y = interval_set(character->phys.vel.y, -PHYS_MAX_VEL, PHYS_MAX_VEL);
 

@@ -78,7 +78,7 @@ void ach::ParticleSystem::render()
 
 	while (i < particles.size())
 	{
-		particles[i]->update(tm->get(source));
+		particles[i]->update(tm->get(real));
 
 		if (!process(particles[i]))
 		{

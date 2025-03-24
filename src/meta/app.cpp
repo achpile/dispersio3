@@ -41,7 +41,7 @@ ach::App::App()
 	db->load();
 	tm->init();
 
-	stars->source = ach::TimeSource::tsReal;
+	stars->real   = true;
 	stars->layer  = ach::RenderLayer::rlBG;
 
 	lm->refresh();
