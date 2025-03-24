@@ -2,8 +2,8 @@ IDI_ICON1 ICON DISCARDABLE "icon.ico"
 
 #include <windows.h>
 
-#define PROJECT_VER           0,4,2,0
-#define PROJECT_VERS         "0.4.2\0"
+#define PROJECT_VER           0,4,3,0
+#define PROJECT_VERS         "0.4.3\0"
 #define PROJECT_NAME         "Dispersio 3"
 #define PROJECT_EXE          "dispersio3.exe"
 
@@ -21,7 +21,7 @@ BEGIN
             VALUE "CompanyName",        "Achpile"
             VALUE "FileDescription",    PROJECT_NAME
             VALUE "InternalName",       PROJECT_NAME
-            VALUE "LegalCopyright",     "Copyright (C) 2024 Achpile"
+            VALUE "LegalCopyright",     "Copyright (C) 2025 Achpile"
             VALUE "LegalTrademarks1",   "All Rights Reserved"
             VALUE "LegalTrademarks2",   "All Rights Reserved"
             VALUE "OriginalFilename",   PROJECT_EXE
