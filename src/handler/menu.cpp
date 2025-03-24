@@ -54,6 +54,7 @@ void handler_menu_smooth(void *, json_t *)
 void handler_menu_audio(void *, json_t *)
 {
 	sm->volume();
+	mm->volume();
 }
 
 

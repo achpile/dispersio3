@@ -14,7 +14,8 @@ ach::MusicManager::MusicManager()
 	fade.set(TIME_MUSIC_FADE);
 
 	current[0] = 0;
-	vol        = 100;
+
+	volume();
 }
 
 
