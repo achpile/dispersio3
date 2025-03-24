@@ -506,10 +506,10 @@
     <property name="Respawn" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="225" name="DecorRocketEngine" type="obj_decor" x="520" y="208" width="16" height="32"/>
+  <object id="225" name="DecorRocketEngine" type="obj_decor" x="528" y="208" width="16" height="32"/>
   <object id="226" name="DecorRocketMain" type="obj_decor" x="504" y="48" width="96" height="160"/>
   <object id="227" name="DecorRocketEngine" type="obj_decor" x="544" y="208" width="16" height="32"/>
-  <object id="228" name="DecorRocketEngine" type="obj_decor" x="568" y="208" width="16" height="32"/>
+  <object id="228" name="DecorRocketEngine" type="obj_decor" x="560" y="208" width="16" height="32"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
   <object id="3" name="RobotFly" type="character" x="336" y="1040" width="16" height="16">

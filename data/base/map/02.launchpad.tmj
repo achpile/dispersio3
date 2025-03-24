@@ -1277,7 +1277,7 @@
                  "type":"obj_decor",
                  "visible":true,
                  "width":16,
-                 "x":520,
+                 "x":528,
                  "y":208
                 }, 
                 {
@@ -1310,7 +1310,7 @@
                  "type":"obj_decor",
                  "visible":true,
                  "width":16,
-                 "x":568,
+                 "x":560,
                  "y":208
                 }],
          "opacity":1,
