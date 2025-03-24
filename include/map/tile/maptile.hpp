@@ -6,7 +6,8 @@ namespace ach
 {
 	enum TileLayer
 	{
-		tlWall = 0,
+		tlBack = 0,
+		tlWall,
 		tlBlock,
 		tlDecor
 	};
@@ -14,6 +15,7 @@ namespace ach
 
 	struct MapTile
 	{
+		ach::Tile *back;
 		ach::Tile *wall;
 		ach::Tile *block;
 		ach::Tile *decor;
