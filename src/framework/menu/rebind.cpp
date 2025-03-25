@@ -8,9 +8,9 @@
 ***********************************************************************/
 ach::MenuItemRebind::MenuItemRebind(ach::Menu *_menu, const char *_name, bool _keyboard) : MenuItem(_menu, _name)
 {
-	keyboard  = _keyboard;
-	isBinding = false;
-	binder    = menu->binder;
+	keyboard = _keyboard;
+	binding  = false;
+	binder   = menu->binder;
 }
 
 
@@ -34,8 +34,8 @@ ach::MenuItemRebind::~MenuItemRebind()
 void ach::MenuItemRebind::action()
 {
 	act           = 0;
+	binding       = true;
 	menu->binding = this;
-	isBinding     = true;
 
 	binder->clear(keyboard);
 }
@@ -70,7 +70,7 @@ void ach::MenuItemRebind::click()
 	{
 		binder->init();
 
-		isBinding = false;
+		binding       = false;
 		menu->binding = NULL;
 	}
 }
@@ -117,6 +117,6 @@ void ach::MenuItemRebind::next()
 
 	apply();
 
-	isBinding = false;
+	binding       = false;
 	menu->binding = NULL;
 }

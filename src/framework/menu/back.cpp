@@ -32,8 +32,8 @@ void ach::MenuItemBack::action()
 {
 	if (menu->binding)
 	{
-		menu->binding->isBinding = false;
-		menu->binding = NULL;
+		menu->binding->binding = false;
+		menu->binding          = NULL;
 	}
 
 	if (parent->parent)

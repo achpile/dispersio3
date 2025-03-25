@@ -8,10 +8,10 @@
 ***********************************************************************/
 ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _act, bool _keyboard) : MenuItem(_menu, NULL)
 {
-	act       = _act;
-	keyboard  = _keyboard;
-	isBinding = false;
-	binder    = menu->binder;
+	act      = _act;
+	keyboard = _keyboard;
+	binding  = false;
+	binder   = menu->binder;
 }
 
 
@@ -34,8 +34,8 @@ ach::MenuItemControl::~MenuItemControl()
 ***********************************************************************/
 void ach::MenuItemControl::action()
 {
+	binding       = true;
 	menu->binding = this;
-	isBinding     = true;
 
 	binder->keys[act].clear(keyboard);
 }
@@ -95,7 +95,7 @@ void ach::MenuItemControl::click()
 	{
 		binder->init();
 
-		isBinding = false;
+		binding       = false;
 		menu->binding = NULL;
 	}
 }
@@ -110,12 +110,7 @@ void ach::MenuItemControl::click()
 void ach::MenuItemControl::bind(sf::Keyboard::Key code)
 {
 	if (assign(act, code))
-	{
-		apply();
-
-		isBinding = false;
-		menu->binding = NULL;
-	}
+		finish();
 }
 
 
@@ -128,10 +123,20 @@ void ach::MenuItemControl::bind(sf::Keyboard::Key code)
 void ach::MenuItemControl::bind(ach::JoystickCode code)
 {
 	if (assign(act, code))
-	{
-		apply();
+		finish();
+}
 
-		isBinding = false;
-		menu->binding = NULL;
-	}
+
+
+/***********************************************************************
+     * MenuItemControl
+     * finish
+
+***********************************************************************/
+void ach::MenuItemControl::finish()
+{
+	apply();
+
+	binding       = false;
+	menu->binding = NULL;
 }

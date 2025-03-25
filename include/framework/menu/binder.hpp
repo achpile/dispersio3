@@ -8,7 +8,7 @@ namespace ach
 	{
 		ach::ControlPad *binder;
 
-		bool isBinding;
+		bool binding;
 		bool keyboard;
 
 
