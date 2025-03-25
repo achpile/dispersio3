@@ -29,6 +29,8 @@ namespace ach
 		void clear();
 
 		void init();
+		void dump();
+
 		bool bind(ach::ControlAction action, sf::Keyboard::Key code);
 		bool bind(ach::ControlAction action, ach::JoystickCode code);
 	};

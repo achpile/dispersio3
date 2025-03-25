@@ -82,6 +82,22 @@ void ach::ControlPad::init()
 
 /***********************************************************************
      * ControlPad
+     * dump
+
+***********************************************************************/
+void ach::ControlPad::dump()
+{
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+	{
+		settings->setKeyCode((ach::ControlAction)i, keys[i].key);
+		settings->setJoyCode((ach::ControlAction)i, keys[i].joy);
+	}
+}
+
+
+
+/***********************************************************************
+     * ControlPad
      * bind
 
 ***********************************************************************/
