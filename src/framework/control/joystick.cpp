@@ -8,6 +8,9 @@
 ***********************************************************************/
 ach::Joystick::Joystick()
 {
+	for (int i = 0; i < CONTROL_GAMEPAD_COUNT; i++)
+		if (sf::Joystick::isConnected(i))
+			id.push_back(i);
 }
 
 
@@ -19,6 +22,7 @@ ach::Joystick::Joystick()
 ***********************************************************************/
 ach::Joystick::~Joystick()
 {
+	id.clear();
 }
 
 
@@ -44,22 +48,22 @@ bool ach::Joystick::check(ach::JoystickCode code)
 {
 	switch (code)
 	{
-		case ach::JoystickCode::jcAxisXminus   : return axis(sf::Joystick::X   , false);
-		case ach::JoystickCode::jcAxisXplus    : return axis(sf::Joystick::X   , true );
-		case ach::JoystickCode::jcAxisYminus   : return axis(sf::Joystick::Y   , false);
-		case ach::JoystickCode::jcAxisYplus    : return axis(sf::Joystick::Y   , true );
-		case ach::JoystickCode::jcAxisZminus   : return axis(sf::Joystick::Z   , false);
-		case ach::JoystickCode::jcAxisZplus    : return axis(sf::Joystick::Z   , true );
-		case ach::JoystickCode::jcAxisRminus   : return axis(sf::Joystick::R   , false);
-		case ach::JoystickCode::jcAxisRplus    : return axis(sf::Joystick::R   , true );
-		case ach::JoystickCode::jcAxisUminus   : return axis(sf::Joystick::U   , false);
-		case ach::JoystickCode::jcAxisUplus    : return axis(sf::Joystick::U   , true );
-		case ach::JoystickCode::jcAxisVminus   : return axis(sf::Joystick::V   , false);
-		case ach::JoystickCode::jcAxisVplus    : return axis(sf::Joystick::V   , true );
-		case ach::JoystickCode::jcAxisPovXminus: return axis(sf::Joystick::PovX, false);
-		case ach::JoystickCode::jcAxisPovXplus : return axis(sf::Joystick::PovX, true );
-		case ach::JoystickCode::jcAxisPovYminus: return axis(sf::Joystick::PovY, false);
-		case ach::JoystickCode::jcAxisPovYplus : return axis(sf::Joystick::PovY, true );
+		case ach::JoystickCode::jcAxisXminus   : return axis(sf::Joystick::X   , -1);
+		case ach::JoystickCode::jcAxisXplus    : return axis(sf::Joystick::X   ,  1);
+		case ach::JoystickCode::jcAxisYminus   : return axis(sf::Joystick::Y   , -1);
+		case ach::JoystickCode::jcAxisYplus    : return axis(sf::Joystick::Y   ,  1);
+		case ach::JoystickCode::jcAxisZminus   : return axis(sf::Joystick::Z   , -1);
+		case ach::JoystickCode::jcAxisZplus    : return axis(sf::Joystick::Z   ,  1);
+		case ach::JoystickCode::jcAxisRminus   : return axis(sf::Joystick::R   , -1);
+		case ach::JoystickCode::jcAxisRplus    : return axis(sf::Joystick::R   ,  1);
+		case ach::JoystickCode::jcAxisUminus   : return axis(sf::Joystick::U   , -1);
+		case ach::JoystickCode::jcAxisUplus    : return axis(sf::Joystick::U   ,  1);
+		case ach::JoystickCode::jcAxisVminus   : return axis(sf::Joystick::V   , -1);
+		case ach::JoystickCode::jcAxisVplus    : return axis(sf::Joystick::V   ,  1);
+		case ach::JoystickCode::jcAxisPovXminus: return axis(sf::Joystick::PovX, -1);
+		case ach::JoystickCode::jcAxisPovXplus : return axis(sf::Joystick::PovX,  1);
+		case ach::JoystickCode::jcAxisPovYminus: return axis(sf::Joystick::PovY, -1);
+		case ach::JoystickCode::jcAxisPovYplus : return axis(sf::Joystick::PovY,  1);
 
 		case ach::JoystickCode::jcButton1      : return button( 0);
 		case ach::JoystickCode::jcButton2      : return button( 1);
@@ -108,10 +112,17 @@ bool ach::Joystick::check(ach::JoystickCode code)
      * axis
 
 ***********************************************************************/
-bool ach::Joystick::axis(sf::Joystick::Axis axis, bool plus)
+bool ach::Joystick::axis(sf::Joystick::Axis axis, int sign)
 {
-	(void)axis;
-	(void)plus;
+	float pos;
+
+	list_foreach(id)
+	{
+		pos = sf::Joystick::getAxisPosition(id[i], axis);
+
+		if (sign == math_sign(pos) && fabs(pos) > CONTROL_GAMEPAD_GATE)
+			return true;
+	}
 
 	return false;
 }
@@ -123,9 +134,11 @@ bool ach::Joystick::axis(sf::Joystick::Axis axis, bool plus)
      * button
 
 ***********************************************************************/
-bool ach::Joystick::button(unsigned int button)
+bool ach::Joystick::button(int button)
 {
-	(void)button;
+	list_foreach(id)
+		if (sf::Joystick::isButtonPressed(id[i], button))
+			return true;
 
 	return false;
 }

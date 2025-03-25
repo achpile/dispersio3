@@ -61,6 +61,9 @@ namespace ach
 
 	struct Joystick
 	{
+		std::vector<int> id;
+
+
 		 Joystick();
 		~Joystick();
 
@@ -68,8 +71,8 @@ namespace ach
 
 		bool check(ach::JoystickCode code);
 
-		bool axis(sf::Joystick::Axis axis, bool plus);
-		bool button(unsigned int button);
+		bool axis(sf::Joystick::Axis axis, int sign);
+		bool button(int button);
 	};
 }
 
