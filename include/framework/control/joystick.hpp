@@ -73,6 +73,9 @@ namespace ach
 		bool button(int button);
 
 		bool check(ach::JoystickCode code);
+
+		ach::JoystickCode action(int button);
+		ach::JoystickCode action(sf::Joystick::Axis axis, float value);
 	};
 }
 

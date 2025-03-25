@@ -155,3 +155,78 @@ bool ach::Joystick::check(ach::JoystickCode code)
 
 	return false;
 }
+
+
+
+/***********************************************************************
+     * Joystick
+     * action
+
+***********************************************************************/
+ach::JoystickCode ach::Joystick::action(int button)
+{
+	switch (button)
+	{
+		case  0: return ach::JoystickCode::jcButton1;
+		case  1: return ach::JoystickCode::jcButton2;
+		case  2: return ach::JoystickCode::jcButton3;
+		case  3: return ach::JoystickCode::jcButton4;
+		case  4: return ach::JoystickCode::jcButton5;
+		case  5: return ach::JoystickCode::jcButton6;
+		case  6: return ach::JoystickCode::jcButton7;
+		case  7: return ach::JoystickCode::jcButton8;
+		case  8: return ach::JoystickCode::jcButton9;
+		case  9: return ach::JoystickCode::jcButton10;
+		case 10: return ach::JoystickCode::jcButton11;
+		case 11: return ach::JoystickCode::jcButton12;
+		case 12: return ach::JoystickCode::jcButton13;
+		case 13: return ach::JoystickCode::jcButton14;
+		case 14: return ach::JoystickCode::jcButton15;
+		case 15: return ach::JoystickCode::jcButton16;
+		case 16: return ach::JoystickCode::jcButton17;
+		case 17: return ach::JoystickCode::jcButton18;
+		case 18: return ach::JoystickCode::jcButton19;
+		case 19: return ach::JoystickCode::jcButton20;
+		case 20: return ach::JoystickCode::jcButton21;
+		case 21: return ach::JoystickCode::jcButton22;
+		case 22: return ach::JoystickCode::jcButton23;
+		case 23: return ach::JoystickCode::jcButton24;
+		case 24: return ach::JoystickCode::jcButton25;
+		case 25: return ach::JoystickCode::jcButton26;
+		case 26: return ach::JoystickCode::jcButton27;
+		case 27: return ach::JoystickCode::jcButton28;
+		case 28: return ach::JoystickCode::jcButton29;
+		case 29: return ach::JoystickCode::jcButton30;
+		case 30: return ach::JoystickCode::jcButton31;
+		case 31: return ach::JoystickCode::jcButton32;
+	}
+
+	return ach::JoystickCode::jcUnknown;
+}
+
+
+
+/***********************************************************************
+     * Joystick
+     * action
+
+***********************************************************************/
+ach::JoystickCode ach::Joystick::action(sf::Joystick::Axis axis, float value)
+{
+	if (fabs(value) < CONTROL_GAMEPAD_GATE)
+		return ach::JoystickCode::jcUnknown;
+
+	switch (axis)
+	{
+		case sf::Joystick::X   : return (value < 0) ? ach::JoystickCode::jcAxisXminus    : ach::JoystickCode::jcAxisXplus;
+		case sf::Joystick::Y   : return (value < 0) ? ach::JoystickCode::jcAxisYminus    : ach::JoystickCode::jcAxisYplus;
+		case sf::Joystick::Z   : return (value < 0) ? ach::JoystickCode::jcAxisZminus    : ach::JoystickCode::jcAxisZplus;
+		case sf::Joystick::R   : return (value < 0) ? ach::JoystickCode::jcAxisRminus    : ach::JoystickCode::jcAxisRplus;
+		case sf::Joystick::U   : return (value < 0) ? ach::JoystickCode::jcAxisUminus    : ach::JoystickCode::jcAxisUplus;
+		case sf::Joystick::V   : return (value < 0) ? ach::JoystickCode::jcAxisVminus    : ach::JoystickCode::jcAxisVplus;
+		case sf::Joystick::PovX: return (value < 0) ? ach::JoystickCode::jcAxisPovXminus : ach::JoystickCode::jcAxisPovXplus;
+		case sf::Joystick::PovY: return (value < 0) ? ach::JoystickCode::jcAxisPovYminus : ach::JoystickCode::jcAxisPovYplus;
+	}
+
+	return ach::JoystickCode::jcUnknown;
+}

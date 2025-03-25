@@ -140,8 +140,8 @@ void ach::StateMenu::fill()
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
 	{
-		menu->add("Options.Keyboard", new ach::MenuItemControl(menu, (ach::ControlAction)i));
-		menu->add("Options.Gamepad" , new ach::MenuItemControl(menu, (ach::ControlAction)i));
+		menu->add("Options.Keyboard", new ach::MenuItemControl(menu, (ach::ControlAction)i, true ));
+		menu->add("Options.Gamepad" , new ach::MenuItemControl(menu, (ach::ControlAction)i, false));
 	}
 
 	menu->add("Options.Keyboard", new ach::MenuItemAction  (menu, "Options.Redefine"    , handler_menu_redefine  , json_string("key")));

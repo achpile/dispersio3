@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _act) : MenuItem(_menu, NULL)
+ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _act, bool _keyboard) : MenuItem(_menu, NULL)
 {
 	act       = _act;
+	keyboard  = _keyboard;
 	isBinding = false;
 }
 
@@ -48,7 +49,10 @@ void ach::MenuItemControl::render(int i)
 	if (isBinding)
 		menu->print("...", 0, i, ach::TextAlign::taRight);
 	else
-		menu->print(pair_get_string(ctrl->keys[act].key, pairKey), 0, i, ach::TextAlign::taRight);
+	{
+		if (keyboard) menu->print(pair_get_string(ctrl->keys[act].key, pairKey), 0, i, ach::TextAlign::taRight);
+		else          menu->print(pair_get_string(ctrl->keys[act].joy, pairJoy), 0, i, ach::TextAlign::taRight);
+	}
 }
 
 

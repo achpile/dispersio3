@@ -9,9 +9,10 @@ namespace ach
 		ach::ControlAction act;
 
 		bool isBinding;
+		bool keyboard;
 
 
-		 MenuItemControl(ach::Menu *_menu, ach::ControlAction _act);
+		 MenuItemControl(ach::Menu *_menu, ach::ControlAction _act, bool _keyboard);
 		~MenuItemControl();
 
 		void render(int i);
