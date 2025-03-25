@@ -150,7 +150,6 @@ bool ach::Joystick::check(ach::JoystickCode code)
 		case ach::JoystickCode::jcButton31     : return button(30);
 		case ach::JoystickCode::jcButton32     : return button(31);
 
-		case ach::JoystickCode::jcUnknown      : return false;
 		case ach::JoystickCode::jcCount        : return false;
 	}
 

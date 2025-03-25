@@ -6,7 +6,6 @@ namespace ach
 {
 	enum JoystickCode
 	{
-		jcUnknown    = -1,
 		jcAxisXminus =  0,
 		jcAxisXplus,
 		jcAxisYminus,
