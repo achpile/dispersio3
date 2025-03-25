@@ -63,16 +63,9 @@ void ach::MenuItemRebind::pick()
 void ach::MenuItemRebind::click()
 {
 	if (!menu->binding)
-	{
 		action();
-	}
 	else if (menu->binding == this)
-	{
-		binder->init();
-
-		binding       = false;
-		menu->binding = NULL;
-	}
+		cancel();
 }
 
 
@@ -118,6 +111,23 @@ void ach::MenuItemRebind::next()
 		return;
 
 	apply();
+
+	binding       = false;
+	menu->binding = NULL;
+}
+
+
+
+/***********************************************************************
+     * MenuItemRebind
+     * cancel
+
+***********************************************************************/
+void ach::MenuItemRebind::cancel()
+{
+	sm->play(menu->sfxBack);
+
+	binder->init();
 
 	binding       = false;
 	menu->binding = NULL;

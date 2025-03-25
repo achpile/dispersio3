@@ -24,6 +24,7 @@ namespace ach
 		void bind(ach::JoystickCode code);
 
 		void finish();
+		void cancel();
 	};
 }
 

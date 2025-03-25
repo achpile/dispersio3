@@ -15,6 +15,8 @@ namespace ach
 		virtual void bind(sf::Keyboard::Key) {};
 		virtual void bind(ach::JoystickCode) {};
 
+		virtual void cancel() {};
+
 		bool assign(ach::ControlAction act, sf::Keyboard::Key code);
 		bool assign(ach::ControlAction act, ach::JoystickCode code);
 

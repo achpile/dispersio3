@@ -20,6 +20,8 @@ namespace ach
 		void update();
 		void reset();
 		void clear(bool keyboard);
+
+		bool get(bool keyboard);
 	};
 }
 

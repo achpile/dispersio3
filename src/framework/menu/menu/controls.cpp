@@ -12,7 +12,13 @@ void ach::Menu::controls()
 		return;
 
 	if (binding)
+	{
+		if (ctrl->keys[ach::ControlAction::caMenu ].pressed &&
+		    ctrl->keys[ach::ControlAction::caMenu ].get(!binding->keyboard))
+			binding->cancel();
+
 		return;
+	}
 
 	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) move(-1);
 	if (ctrl->keys[ach::ControlAction::caDown ].pressed) move( 1);

@@ -88,16 +88,9 @@ void ach::MenuItemControl::pick()
 void ach::MenuItemControl::click()
 {
 	if (!menu->binding)
-	{
 		action();
-	}
 	else if (menu->binding == this)
-	{
-		binder->init();
-
-		binding       = false;
-		menu->binding = NULL;
-	}
+		cancel();
 }
 
 
@@ -135,9 +128,26 @@ void ach::MenuItemControl::bind(ach::JoystickCode code)
 ***********************************************************************/
 void ach::MenuItemControl::finish()
 {
+	sm->play(menu->sfxPick);
+
 	apply();
 
-	sm->play(menu->sfxPick);
+	binding       = false;
+	menu->binding = NULL;
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * cancel
+
+***********************************************************************/
+void ach::MenuItemControl::cancel()
+{
+	sm->play(menu->sfxBack);
+
+	binder->init();
 
 	binding       = false;
 	menu->binding = NULL;
