@@ -13,9 +13,11 @@ namespace ach
 		sf::Vector2f  size;
 		sf::FloatRect rect;
 
-		bool grounded;
-		bool moving;
-		bool jumpdown;
+		float slope;
+
+		bool  grounded;
+		bool  moving;
+		bool  jumpdown;
 
 
 		void update();

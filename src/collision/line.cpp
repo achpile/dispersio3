@@ -165,6 +165,7 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	if (offset.y < 0.0f)
 	{
 		p->grounded = true;
+		p->slope    = fabs(line.n.x);
 
 		if (owner)
 			owner->stand(p);

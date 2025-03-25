@@ -87,6 +87,8 @@ void ach::Phys::reset()
 	acc = sf::Vector2f(0.0f, 0.0f);
 	vel = sf::Vector2f(0.0f, 0.0f);
 
+	slope    = 0.0f;
+
 	grounded = true;
 	moving   = false;
 	jumpdown = false;
