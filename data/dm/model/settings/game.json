@@ -2,18 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "DiagonalDown": {
-        "@attr": {
-            "default": true,
-            "type": "boolean"
-        }
-    },
-    "HoldShoot": {
-        "@attr": {
-            "default": false,
-            "type": "boolean"
-        }
-    },
     "Language": {
         "@attr": {
             "data": "Translation",
