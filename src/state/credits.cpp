@@ -74,8 +74,16 @@ void ach::StateCredits::render()
 ***********************************************************************/
 void ach::StateCredits::event(sf::Event e)
 {
-	if ((e.type == sf::Event::MouseButtonReleased) || (e.type == sf::Event::KeyPressed))
-		app->stateSet(ach::GameState::gsMenu);
+	switch (e.type)
+	{
+		case sf::Event::MouseButtonReleased:
+		case sf::Event::KeyPressed:
+		case sf::Event::JoystickButtonPressed:
+			app->stateSet(ach::GameState::gsMenu);
+
+		default:
+			break;
+	}
 }
 
 

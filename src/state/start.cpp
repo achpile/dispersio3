@@ -83,8 +83,16 @@ void ach::StateStart::render()
 ***********************************************************************/
 void ach::StateStart::event(sf::Event e)
 {
-	if ((e.type == sf::Event::MouseButtonReleased) || (e.type == sf::Event::KeyPressed))
-		next();
+	switch (e.type)
+	{
+		case sf::Event::MouseButtonReleased:
+		case sf::Event::KeyPressed:
+		case sf::Event::JoystickButtonPressed:
+			next();
+
+		default:
+			break;
+	}
 }
 
 
