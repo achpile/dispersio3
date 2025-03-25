@@ -8,10 +8,10 @@
 ***********************************************************************/
 ach::MapObjectFragile::MapObjectFragile(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	solid   = true;
-	sfx     = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Break"));
-	crack   = new ach::Model(db->getSheet(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Crack")));
-	respawn = json_property_get_boolean(obj, "Respawn");
+	solid  = true;
+	sfx    = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Break"));
+	crack  = new ach::Model(db->getSheet(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Crack")));
+	secret = json_property_get_boolean(obj, "Secret");
 
 	cracking.set(GAME_FRAGILE_BREAKING);
 
@@ -42,7 +42,7 @@ ach::MapObjectFragile::~MapObjectFragile()
 ***********************************************************************/
 void ach::MapObjectFragile::reset()
 {
-	if (!alive && !respawn)
+	if (!alive && secret)
 		return;
 
 	alive   = true;
@@ -50,6 +50,9 @@ void ach::MapObjectFragile::reset()
 
 	cracking.reset();
 	crack->anim.reset();
+
+	if (!secret)
+		crack->anim.frame = (crack->anim.end - crack->anim.start) / 3;
 }
 
 
@@ -63,6 +66,8 @@ void ach::MapObjectFragile::handle()
 {
 	if (!cracked)
 		return;
+
+	crack->update();
 
 	if (!cracking.update() && alive)
 	{
@@ -82,10 +87,6 @@ void ach::MapObjectFragile::handle()
 ***********************************************************************/
 void ach::MapObjectFragile::post()
 {
-	if (!cracked)
-		return;
-
-	crack->update();
 	crack->render(phys.pos);
 }
 

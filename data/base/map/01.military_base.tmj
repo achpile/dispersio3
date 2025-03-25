@@ -80,7 +80,7 @@
          "name":"back",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":96,
          "x":0,
          "y":0
@@ -401,9 +401,9 @@
                  "name":"BlockBrickGreyTop",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -418,9 +418,9 @@
                  "name":"BlockBrickGreyTop",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -435,9 +435,9 @@
                  "name":"BlockBrickGreyBot",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -452,9 +452,9 @@
                  "name":"BlockBrickGreyBot",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -621,9 +621,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -638,9 +638,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -655,9 +655,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -672,9 +672,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -689,9 +689,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -706,9 +706,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -754,9 +754,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -890,9 +890,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -907,9 +907,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -924,9 +924,9 @@
                  "name":"BlockConcrete",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -1102,7 +1102,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -2649,7 +2649,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -4852,7 +4852,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],

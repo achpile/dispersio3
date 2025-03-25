@@ -429,9 +429,9 @@
                  "name":"BlockDev",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -446,9 +446,9 @@
                  "name":"BlockDev",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_fragile",
@@ -485,9 +485,9 @@
                  "name":"BlockDev",
                  "properties":[
                         {
-                         "name":"Respawn",
+                         "name":"Secret",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"block_break",

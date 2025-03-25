@@ -11,7 +11,7 @@ namespace ach
 		ach::Timer      cracking;
 
 		bool cracked;
-		bool respawn;
+		bool secret;
 
 
 		 MapObjectBreak(ach::ProcessWorld *_world, json_t *obj);

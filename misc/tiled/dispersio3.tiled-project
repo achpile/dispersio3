@@ -88,9 +88,9 @@
             "id": 18,
             "members": [
                 {
-                    "name": "Respawn",
+                    "name": "Secret",
                     "type": "bool",
-                    "value": true
+                    "value": false
                 }
             ],
             "name": "block_break",
@@ -107,9 +107,9 @@
             "id": 10,
             "members": [
                 {
-                    "name": "Respawn",
+                    "name": "Secret",
                     "type": "bool",
-                    "value": true
+                    "value": false
                 }
             ],
             "name": "block_fragile",
