@@ -6,7 +6,7 @@ namespace ach
 {
 	enum JoystickCode
 	{
-		jcAxisXminus =  0,
+		jcAxisXminus,
 		jcAxisXplus,
 		jcAxisYminus,
 		jcAxisYplus,
@@ -54,7 +54,7 @@ namespace ach
 		jcButton30,
 		jcButton31,
 		jcButton32,
-		jcCount
+		jcUnknown
 	};
 
 

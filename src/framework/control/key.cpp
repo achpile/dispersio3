@@ -63,5 +63,5 @@ void ach::ControlKey::reset()
 void ach::ControlKey::clear()
 {
 	key      = sf::Keyboard::Unknown;
-	joy      = ach::JoystickCode::jcCount;
+	joy      = ach::JoystickCode::jcUnknown;
 }

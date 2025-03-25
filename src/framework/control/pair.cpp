@@ -74,7 +74,7 @@ ach::Pair<ach::JoystickCode> pairJoy[] =
 	{.num = ach::JoystickCode::jcButton31     , .str = "B 31"  },
 	{.num = ach::JoystickCode::jcButton32     , .str = "B 32"  },
 
-	{.num = ach::JoystickCode::jcCount        , .str = NULL    },
+	{.num = ach::JoystickCode::jcUnknown      , .str = NULL    },
 };
 
 
