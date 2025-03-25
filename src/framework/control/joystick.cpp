@@ -30,4 +30,20 @@ ach::Joystick::~Joystick()
 ***********************************************************************/
 void ach::Joystick::update()
 {
+	sf::Joystick::update();
+}
+
+
+
+/***********************************************************************
+     * Joystick
+     * check
+
+***********************************************************************/
+bool ach::Joystick::check(ach::JoystickCode code)
+{
+	if (code)
+		return false;
+
+	return false;
 }

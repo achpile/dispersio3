@@ -6,7 +6,8 @@ namespace ach
 {
 	struct ControlKey
 	{
-		sf::Keyboard::Key code;
+		sf::Keyboard::Key key;
+		ach::JoystickCode joy;
 
 		bool state;
 		bool pressed;
@@ -18,6 +19,7 @@ namespace ach
 
 		void update();
 		void reset();
+		void clear();
 	};
 }
 

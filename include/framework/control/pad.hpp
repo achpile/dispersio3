@@ -26,6 +26,7 @@ namespace ach
 
 		void update();
 		void reset();
+		void clear();
 
 		void init();
 		bool bind(ach::ControlAction action, sf::Keyboard::Key code);

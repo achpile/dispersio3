@@ -3,6 +3,7 @@
 
 
 extern ach::Pair<ach::ControlAction> pairAction[];
+extern ach::Pair<ach::JoystickCode>  pairJoystick[];
 extern ach::Pair<sf::Keyboard::Key>  pairKey[];
 
 #endif

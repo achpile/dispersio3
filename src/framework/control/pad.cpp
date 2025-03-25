@@ -53,13 +53,26 @@ void ach::ControlPad::reset()
 
 /***********************************************************************
      * ControlPad
+     * clear
+
+***********************************************************************/
+void ach::ControlPad::clear()
+{
+	for (unsigned int i = 0; i < ach::ControlAction::caCount; i++)
+		keys[i].clear();
+}
+
+
+
+/***********************************************************************
+     * ControlPad
      * init
 
 ***********************************************************************/
 void ach::ControlPad::init()
 {
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
-		keys[i].code = settings->getKeyCode((ach::ControlAction)i);
+		keys[i].key = settings->getKeyCode((ach::ControlAction)i);
 }
 
 
@@ -76,10 +89,10 @@ bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
 		if (i != action)
-			if (keys[i].code == code)
+			if (keys[i].key == code)
 				return false;
 
-	keys[action].code = code;
+	keys[action].key = code;
 
 	settings->setKeyCode(action, code);
 	reset();

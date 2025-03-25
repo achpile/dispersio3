@@ -20,6 +20,67 @@ ach::Pair<ach::ControlAction> pairAction[] =
 
 
 /***********************************************************************
+     * pairJoystick
+
+***********************************************************************/
+ach::Pair<ach::JoystickCode> pairJoystick[] =
+{
+	{.num = ach::JoystickCode::jcUnknown      , .str = "..."   },
+	{.num = ach::JoystickCode::jcAxisXminus   , .str = "X -"   },
+	{.num = ach::JoystickCode::jcAxisXplus    , .str = "X +"   },
+	{.num = ach::JoystickCode::jcAxisYminus   , .str = "Y -"   },
+	{.num = ach::JoystickCode::jcAxisYplus    , .str = "Y +"   },
+	{.num = ach::JoystickCode::jcAxisZminus   , .str = "Z -"   },
+	{.num = ach::JoystickCode::jcAxisZplus    , .str = "Z +"   },
+	{.num = ach::JoystickCode::jcAxisRminus   , .str = "R -"   },
+	{.num = ach::JoystickCode::jcAxisRplus    , .str = "R +"   },
+	{.num = ach::JoystickCode::jcAxisUminus   , .str = "U -"   },
+	{.num = ach::JoystickCode::jcAxisUplus    , .str = "U +"   },
+	{.num = ach::JoystickCode::jcAxisVminus   , .str = "V -"   },
+	{.num = ach::JoystickCode::jcAxisVplus    , .str = "V +"   },
+	{.num = ach::JoystickCode::jcAxisPovXminus, .str = "PovX -"},
+	{.num = ach::JoystickCode::jcAxisPovXplus , .str = "PovX +"},
+	{.num = ach::JoystickCode::jcAxisPovYminus, .str = "PovY -"},
+	{.num = ach::JoystickCode::jcAxisPovYplus , .str = "PovY +"},
+	{.num = ach::JoystickCode::jcButton1      , .str = "B 01"  },
+	{.num = ach::JoystickCode::jcButton2      , .str = "B 02"  },
+	{.num = ach::JoystickCode::jcButton3      , .str = "B 03"  },
+	{.num = ach::JoystickCode::jcButton4      , .str = "B 04"  },
+	{.num = ach::JoystickCode::jcButton5      , .str = "B 05"  },
+	{.num = ach::JoystickCode::jcButton6      , .str = "B 06"  },
+	{.num = ach::JoystickCode::jcButton7      , .str = "B 07"  },
+	{.num = ach::JoystickCode::jcButton8      , .str = "B 08"  },
+	{.num = ach::JoystickCode::jcButton9      , .str = "B 09"  },
+	{.num = ach::JoystickCode::jcButton10     , .str = "B 10"  },
+	{.num = ach::JoystickCode::jcButton11     , .str = "B 11"  },
+	{.num = ach::JoystickCode::jcButton12     , .str = "B 12"  },
+	{.num = ach::JoystickCode::jcButton13     , .str = "B 13"  },
+	{.num = ach::JoystickCode::jcButton14     , .str = "B 14"  },
+	{.num = ach::JoystickCode::jcButton15     , .str = "B 15"  },
+	{.num = ach::JoystickCode::jcButton16     , .str = "B 16"  },
+	{.num = ach::JoystickCode::jcButton17     , .str = "B 17"  },
+	{.num = ach::JoystickCode::jcButton18     , .str = "B 18"  },
+	{.num = ach::JoystickCode::jcButton19     , .str = "B 19"  },
+	{.num = ach::JoystickCode::jcButton20     , .str = "B 20"  },
+	{.num = ach::JoystickCode::jcButton21     , .str = "B 21"  },
+	{.num = ach::JoystickCode::jcButton22     , .str = "B 22"  },
+	{.num = ach::JoystickCode::jcButton23     , .str = "B 23"  },
+	{.num = ach::JoystickCode::jcButton24     , .str = "B 24"  },
+	{.num = ach::JoystickCode::jcButton25     , .str = "B 25"  },
+	{.num = ach::JoystickCode::jcButton26     , .str = "B 26"  },
+	{.num = ach::JoystickCode::jcButton27     , .str = "B 27"  },
+	{.num = ach::JoystickCode::jcButton28     , .str = "B 28"  },
+	{.num = ach::JoystickCode::jcButton29     , .str = "B 29"  },
+	{.num = ach::JoystickCode::jcButton30     , .str = "B 30"  },
+	{.num = ach::JoystickCode::jcButton31     , .str = "B 31"  },
+	{.num = ach::JoystickCode::jcButton32     , .str = "B 32"  },
+
+	{.num = ach::JoystickCode::jcCount        , .str = NULL    },
+};
+
+
+
+/***********************************************************************
      * pairKey
 
 ***********************************************************************/

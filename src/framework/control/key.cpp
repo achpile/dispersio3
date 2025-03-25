@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::ControlKey::ControlKey()
 {
+	clear();
 	reset();
 }
 
@@ -31,7 +32,7 @@ ach::ControlKey::~ControlKey()
 ***********************************************************************/
 void ach::ControlKey::update()
 {
-	bool current = sf::Keyboard::isKeyPressed(code);
+	bool current = sf::Keyboard::isKeyPressed(key) || joystick->check(joy);
 
 	pressed  =  current && current != state;
 	released = !current && current != state;
@@ -50,4 +51,17 @@ void ach::ControlKey::reset()
 	state    = true;
 	pressed  = false;
 	released = false;
+}
+
+
+
+/***********************************************************************
+     * ControlKey
+     * clear
+
+***********************************************************************/
+void ach::ControlKey::clear()
+{
+	key      = sf::Keyboard::Unknown;
+	joy      = ach::JoystickCode::jcUnknown;
 }
