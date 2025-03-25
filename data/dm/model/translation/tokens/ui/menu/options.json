@@ -26,6 +26,12 @@
             "type": "string"
         }
     },
+    "Gamepad": {
+        "@attr": {
+            "default": "Gamepad",
+            "type": "string"
+        }
+    },
     "Keyboard": {
         "@attr": {
             "default": "Keyboard",
@@ -47,6 +53,12 @@
     "Name": {
         "@attr": {
             "default": "Options",
+            "type": "string"
+        }
+    },
+    "Redefine": {
+        "@attr": {
+            "default": "Redefine all",
             "type": "string"
         }
     },

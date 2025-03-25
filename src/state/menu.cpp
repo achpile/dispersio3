@@ -135,10 +135,17 @@ void ach::StateMenu::fill()
 	menu->add("Options.Audio"   , new ach::MenuItemSlider  (menu, "Options.Music"       , handler_menu_audio     , json_object_get_branch(settings->data, "Audio.Music"  ), 0, 10));
 
 	menu->add("Options.Controls", new ach::MenuItemFolder  (menu, "Options.Keyboard"    ));
+	menu->add("Options.Controls", new ach::MenuItemFolder  (menu, "Options.Gamepad"     ));
 	menu->add("Options.Controls", new ach::MenuItemAction  (menu, "Options.Reset"       , handler_menu_reset     , NULL));
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
+	{
 		menu->add("Options.Keyboard", new ach::MenuItemControl(menu, (ach::ControlAction)i));
+		menu->add("Options.Gamepad" , new ach::MenuItemControl(menu, (ach::ControlAction)i));
+	}
+
+	menu->add("Options.Keyboard", new ach::MenuItemAction  (menu, "Options.Redefine"    , handler_menu_redefine  , json_string("key")));
+	menu->add("Options.Gamepad" , new ach::MenuItemAction  (menu, "Options.Redefine"    , handler_menu_redefine  , json_string("joy")));
 
 	menu->finalize();
 }
