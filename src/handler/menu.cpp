@@ -74,11 +74,13 @@ void handler_menu_state(void *, json_t *data)
      * handler_menu_reset
 
 ***********************************************************************/
-void handler_menu_reset(void *, json_t *)
+void handler_menu_reset(void *context, json_t *)
 {
 	json_object_del(settings->data, "Control");
 	json_dm_generate_default(settings->data, json_object_get(dm->dm, "Settings"));
 
 	ctrl->init();
 	ctrl->reset();
+
+	((ach::Menu*)context)->binder->init();
 }

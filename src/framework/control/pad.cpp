@@ -56,10 +56,10 @@ void ach::ControlPad::reset()
      * clear
 
 ***********************************************************************/
-void ach::ControlPad::clear()
+void ach::ControlPad::clear(bool keyboard)
 {
 	for (unsigned int i = 0; i < ach::ControlAction::caCount; i++)
-		keys[i].clear();
+		keys[i].clear(keyboard);
 }
 
 
@@ -116,7 +116,6 @@ bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 
 	keys[action].key = code;
 
-	settings->setKeyCode(action, code);
 	reset();
 
 	return true;
@@ -144,7 +143,6 @@ bool ach::ControlPad::bind(ach::ControlAction action, ach::JoystickCode code)
 
 	keys[action].joy = code;
 
-	settings->setJoyCode(action, code);
 	reset();
 
 	return true;

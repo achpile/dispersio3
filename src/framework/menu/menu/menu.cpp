@@ -10,6 +10,7 @@ ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
 {
 	box      = new sf::RectangleShape();
 	text     = new sf::Text();
+	binder   = new ach::ControlPad();
 	binding  = NULL;
 
 	index    = 0;
@@ -21,6 +22,9 @@ ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
 	padding  = sf::Vector2f(MENU_PADDING, MENU_PADDING);
 
 	box->setOutlineThickness(MENU_THICKNESS);
+
+	if (!context)
+		context = this;
 
 	style(_theme);
 }
@@ -36,6 +40,7 @@ ach::Menu::~Menu()
 {
 	delete text;
 	delete box;
+	delete binder;
 
 	clear();
 }

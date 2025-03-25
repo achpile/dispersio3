@@ -11,6 +11,7 @@ ach::MenuItemControl::MenuItemControl(ach::Menu *_menu, ach::ControlAction _act,
 	act       = _act;
 	keyboard  = _keyboard;
 	isBinding = false;
+	binder    = menu->binder;
 }
 
 
@@ -35,6 +36,8 @@ void ach::MenuItemControl::action()
 {
 	menu->binding = this;
 	isBinding     = true;
+
+	binder->keys[act].clear(keyboard);
 }
 
 
@@ -46,13 +49,8 @@ void ach::MenuItemControl::action()
 ***********************************************************************/
 void ach::MenuItemControl::render(int i)
 {
-	if (isBinding)
-		menu->print("...", 0, i, ach::TextAlign::taRight);
-	else
-	{
-		if (keyboard) menu->print(pair_get_string(ctrl->keys[act].key, pairKey), 0, i, ach::TextAlign::taRight);
-		else          menu->print(pair_get_string(ctrl->keys[act].joy, pairJoy), 0, i, ach::TextAlign::taRight);
-	}
+	if (keyboard) menu->print(pair_get_string(binder->keys[act].key, pairKey), 0, i, ach::TextAlign::taRight);
+	else          menu->print(pair_get_string(binder->keys[act].joy, pairJoy), 0, i, ach::TextAlign::taRight);
 }
 
 
@@ -95,6 +93,8 @@ void ach::MenuItemControl::click()
 	}
 	else if (menu->binding == this)
 	{
+		binder->init();
+
 		isBinding = false;
 		menu->binding = NULL;
 	}
@@ -109,14 +109,10 @@ void ach::MenuItemControl::click()
 ***********************************************************************/
 void ach::MenuItemControl::bind(sf::Keyboard::Key code)
 {
-	if (!keyboard)
-		return;
-
-	if (code == sf::Keyboard::Unknown)
-		return;
-
-	if (ctrl->bind(act, code))
+	if (assign(act, code))
 	{
+		apply();
+
 		isBinding = false;
 		menu->binding = NULL;
 	}
@@ -131,14 +127,10 @@ void ach::MenuItemControl::bind(sf::Keyboard::Key code)
 ***********************************************************************/
 void ach::MenuItemControl::bind(ach::JoystickCode code)
 {
-	if (keyboard)
-		return;
-
-	if (code == ach::JoystickCode::jcUnknown)
-		return;
-
-	if (ctrl->bind(act, code))
+	if (assign(act, code))
 	{
+		apply();
+
 		isBinding = false;
 		menu->binding = NULL;
 	}

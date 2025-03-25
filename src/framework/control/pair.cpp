@@ -74,7 +74,7 @@ ach::Pair<ach::JoystickCode> pairJoy[] =
 	{.num = ach::JoystickCode::jcButton31     , .str = "B 31"  },
 	{.num = ach::JoystickCode::jcButton32     , .str = "B 32"  },
 
-	{.num = ach::JoystickCode::jcUnknown      , .str = NULL    },
+	{.num = ach::JoystickCode::jcUnknown      , .str = "..."   },
 };
 
 
@@ -187,5 +187,5 @@ ach::Pair<sf::Keyboard::Key> pairKey[] =
 	{.num = sf::Keyboard::F15      , .str = "F15"      },
 	{.num = sf::Keyboard::Pause    , .str = "PAUSE"    },
 
-	{.num = sf::Keyboard::Unknown  , .str = NULL       },
+	{.num = sf::Keyboard::Unknown  , .str = "..."      },
 };

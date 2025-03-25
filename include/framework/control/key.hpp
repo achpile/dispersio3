@@ -19,7 +19,7 @@ namespace ach
 
 		void update();
 		void reset();
-		void clear();
+		void clear(bool keyboard);
 	};
 }
 

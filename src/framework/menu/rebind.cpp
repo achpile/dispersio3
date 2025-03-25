@@ -10,6 +10,7 @@ ach::MenuItemRebind::MenuItemRebind(ach::Menu *_menu, const char *_name, bool _k
 {
 	keyboard  = _keyboard;
 	isBinding = false;
+	binder    = menu->binder;
 }
 
 
@@ -32,8 +33,11 @@ ach::MenuItemRebind::~MenuItemRebind()
 ***********************************************************************/
 void ach::MenuItemRebind::action()
 {
+	act           = 0;
 	menu->binding = this;
 	isBinding     = true;
+
+	binder->clear(keyboard);
 }
 
 
@@ -64,6 +68,8 @@ void ach::MenuItemRebind::click()
 	}
 	else if (menu->binding == this)
 	{
+		binder->init();
+
 		isBinding = false;
 		menu->binding = NULL;
 	}
@@ -78,18 +84,8 @@ void ach::MenuItemRebind::click()
 ***********************************************************************/
 void ach::MenuItemRebind::bind(sf::Keyboard::Key code)
 {
-	if (!keyboard)
-		return;
-
-	if (code == sf::Keyboard::Unknown)
-		return;
-/*
-	if (ctrl->bind(act, code))
-	{
-		isBinding = false;
-		menu->binding = NULL;
-	}
-*/
+	if (assign((ach::ControlAction)act, code))
+		next();
 }
 
 
@@ -101,16 +97,26 @@ void ach::MenuItemRebind::bind(sf::Keyboard::Key code)
 ***********************************************************************/
 void ach::MenuItemRebind::bind(ach::JoystickCode code)
 {
-	if (keyboard)
+	if (assign((ach::ControlAction)act, code))
+		next();
+}
+
+
+
+/***********************************************************************
+     * MenuItemRebind
+     * next
+
+***********************************************************************/
+void ach::MenuItemRebind::next()
+{
+	act++;
+
+	if (act < ach::ControlAction::caCount)
 		return;
 
-	if (code == ach::JoystickCode::jcUnknown)
-		return;
-/*
-	if (ctrl->bind(act, code))
-	{
-		isBinding = false;
-		menu->binding = NULL;
-	}
-*/
+	apply();
+
+	isBinding = false;
+	menu->binding = NULL;
 }

@@ -13,6 +13,7 @@ namespace ach
 		ach::MenuItemBinder  *binding;
 
 		ach::MenuTheme       *theme;
+		ach::ControlPad      *binder;
 
 		sf::SoundBuffer      *sfxBlip;
 		sf::SoundBuffer      *sfxBack;

@@ -8,7 +8,9 @@
 ***********************************************************************/
 ach::ControlKey::ControlKey()
 {
-	clear();
+	clear(true);
+	clear(false);
+
 	reset();
 }
 
@@ -60,8 +62,8 @@ void ach::ControlKey::reset()
      * clear
 
 ***********************************************************************/
-void ach::ControlKey::clear()
+void ach::ControlKey::clear(bool keyboard)
 {
-	key      = sf::Keyboard::Unknown;
-	joy      = ach::JoystickCode::jcUnknown;
+	if (keyboard) key = sf::Keyboard::Unknown;
+	else          joy = ach::JoystickCode::jcUnknown;
 }
