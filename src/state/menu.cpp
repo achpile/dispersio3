@@ -144,8 +144,8 @@ void ach::StateMenu::fill()
 		menu->add("Options.Gamepad" , new ach::MenuItemControl(menu, (ach::ControlAction)i, false));
 	}
 
-	menu->add("Options.Keyboard", new ach::MenuItemAction  (menu, "Options.Redefine"    , handler_menu_redefine  , json_string("key")));
-	menu->add("Options.Gamepad" , new ach::MenuItemAction  (menu, "Options.Redefine"    , handler_menu_redefine  , json_string("joy")));
+	menu->add("Options.Keyboard", new ach::MenuItemRebind  (menu, "Options.Redefine"    , true ));
+	menu->add("Options.Gamepad" , new ach::MenuItemRebind  (menu, "Options.Redefine"    , false));
 
 	menu->finalize();
 }

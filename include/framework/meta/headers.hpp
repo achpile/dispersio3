@@ -88,10 +88,12 @@
 
 #include "framework/menu/theme.hpp"
 #include "framework/menu/item.hpp"
+#include "framework/menu/binder.hpp"
 #include "framework/menu/action.hpp"
 #include "framework/menu/back.hpp"
 #include "framework/menu/checkbox.hpp"
 #include "framework/menu/control.hpp"
+#include "framework/menu/rebind.hpp"
 #include "framework/menu/folder.hpp"
 #include "framework/menu/list.hpp"
 #include "framework/menu/slider.hpp"

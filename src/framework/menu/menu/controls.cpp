@@ -80,7 +80,7 @@ void ach::Menu::click(sf::Vector2f v, bool left)
 ***********************************************************************/
 void ach::Menu::select(int i)
 {
-	if (binding && current->items[i] != binding && i != (int)current->items.size() - 1)
+	if (binding && (void*)current->items[i] != (void*)binding && i != (int)current->items.size() - 1)
 		return;
 
 	if (index != i)

@@ -10,7 +10,7 @@ namespace ach
 
 		ach::MenuItemFolder  *root;
 		ach::MenuItemFolder  *current;
-		ach::MenuItemControl *binding;
+		ach::MenuItemBinder  *binding;
 
 		ach::MenuTheme       *theme;
 

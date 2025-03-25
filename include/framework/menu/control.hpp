@@ -4,12 +4,9 @@
 
 namespace ach
 {
-	struct MenuItemControl : MenuItem
+	struct MenuItemControl : MenuItem, MenuItemBinder
 	{
 		ach::ControlAction act;
-
-		bool isBinding;
-		bool keyboard;
 
 
 		 MenuItemControl(ach::Menu *_menu, ach::ControlAction _act, bool _keyboard);
