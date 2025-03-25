@@ -743,7 +743,7 @@
     </property>
    </properties>
   </object>
-  <object id="110" name="RobotWalk" type="character" x="960" y="1072" width="16" height="16">
+  <object id="110" name="RobotWalk" type="character" x="992" y="1072" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
