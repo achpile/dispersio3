@@ -9,8 +9,7 @@
 ach::Joystick::Joystick()
 {
 	for (int i = 0; i < CONTROL_GAMEPAD_COUNT; i++)
-		if (sf::Joystick::isConnected(i))
-			id.push_back(i);
+		state[i] = sf::Joystick::isConnected(i);
 }
 
 
@@ -22,7 +21,6 @@ ach::Joystick::Joystick()
 ***********************************************************************/
 ach::Joystick::~Joystick()
 {
-	id.clear();
 }
 
 
@@ -35,6 +33,58 @@ ach::Joystick::~Joystick()
 void ach::Joystick::update()
 {
 	sf::Joystick::update();
+}
+
+
+
+/***********************************************************************
+     * Joystick
+     * connection
+
+***********************************************************************/
+void ach::Joystick::connection(int id, bool value)
+{
+	state[id] = value;
+}
+
+
+
+/***********************************************************************
+     * Joystick
+     * axis
+
+***********************************************************************/
+bool ach::Joystick::axis(sf::Joystick::Axis axis, int sign)
+{
+	float pos;
+
+	for (int i = 0; i < CONTROL_GAMEPAD_COUNT; i++)
+		if (state[i])
+		{
+			pos = sf::Joystick::getAxisPosition(i, axis);
+
+			if (sign == math_sign(pos) && fabs(pos) > CONTROL_GAMEPAD_GATE)
+				return true;
+		}
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * Joystick
+     * button
+
+***********************************************************************/
+bool ach::Joystick::button(int button)
+{
+	for (int i = 0; i < CONTROL_GAMEPAD_COUNT; i++)
+		if (state[i])
+			if (sf::Joystick::isButtonPressed(i, button))
+				return true;
+
+	return false;
 }
 
 
@@ -101,44 +151,6 @@ bool ach::Joystick::check(ach::JoystickCode code)
 		case ach::JoystickCode::jcUnknown      : return false;
 		case ach::JoystickCode::jcCount        : return false;
 	}
-
-	return false;
-}
-
-
-
-/***********************************************************************
-     * Joystick
-     * axis
-
-***********************************************************************/
-bool ach::Joystick::axis(sf::Joystick::Axis axis, int sign)
-{
-	float pos;
-
-	list_foreach(id)
-	{
-		pos = sf::Joystick::getAxisPosition(id[i], axis);
-
-		if (sign == math_sign(pos) && fabs(pos) > CONTROL_GAMEPAD_GATE)
-			return true;
-	}
-
-	return false;
-}
-
-
-
-/***********************************************************************
-     * Joystick
-     * button
-
-***********************************************************************/
-bool ach::Joystick::button(int button)
-{
-	list_foreach(id)
-		if (sf::Joystick::isButtonPressed(id[i], button))
-			return true;
 
 	return false;
 }

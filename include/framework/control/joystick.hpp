@@ -61,18 +61,19 @@ namespace ach
 
 	struct Joystick
 	{
-		std::vector<int> id;
+		bool state[CONTROL_GAMEPAD_COUNT];
 
 
 		 Joystick();
 		~Joystick();
 
 		void update();
-
-		bool check(ach::JoystickCode code);
+		void connection(int id, bool value);
 
 		bool axis(sf::Joystick::Axis axis, int sign);
 		bool button(int button);
+
+		bool check(ach::JoystickCode code);
 	};
 }
 

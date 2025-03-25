@@ -148,6 +148,16 @@ void ach::App::event(sf::Event e)
 			break;
 
 
+		case sf::Event::JoystickConnected:
+			joystick->connection(e.joystickConnect.joystickId, true);
+			break;
+
+
+		case sf::Event::JoystickDisconnected:
+			joystick->connection(e.joystickConnect.joystickId, false);
+			break;
+
+
 		default:
 			break;
 	}
