@@ -64,6 +64,7 @@
 #include "framework/datamodel/pair.hpp"
 
 #include "framework/control/key.hpp"
+#include "framework/control/joystick.hpp"
 #include "framework/control/pad.hpp"
 #include "framework/control/pair.hpp"
 
@@ -98,7 +99,5 @@
 
 #include "framework/particle/particle.hpp"
 #include "framework/particle/system.hpp"
-
-#include "framework/meta/externs.hpp"
 
 #endif

@@ -21,6 +21,7 @@ ach::App::App()
 	db        = new ach::Database();
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
+	joystick  = new ach::Joystick();
 	ctrl      = new ach::ControlPad();
 
 	lm        = new ach::LanguageManager();
@@ -66,6 +67,7 @@ ach::App::~App()
 	delete state;
 	delete window;
 	delete logger;
+	delete joystick;
 	delete ctrl;
 
 	delete lm;
@@ -99,6 +101,7 @@ void ach::App::update()
 	window->clear();
 	rm->clear();
 
+	joystick->update();
 	ctrl->update();
 	state->update();
 
