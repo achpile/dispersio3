@@ -112,6 +112,8 @@ void ach::MenuItemRebind::next()
 {
 	act++;
 
+	sm->play(menu->sfxPick);
+
 	if (act < ach::ControlAction::caCount)
 		return;
 

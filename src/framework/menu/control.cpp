@@ -137,6 +137,8 @@ void ach::MenuItemControl::finish()
 {
 	apply();
 
+	sm->play(menu->sfxPick);
+
 	binding       = false;
 	menu->binding = NULL;
 }
