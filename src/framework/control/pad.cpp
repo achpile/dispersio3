@@ -90,6 +90,9 @@ bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 	if (!pair_has_enum(code, pairKey))
 		return false;
 
+	if (code == sf::Keyboard::Unknown)
+		return false;
+
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
 		if (i != action)
 			if (keys[i].key == code)
@@ -98,6 +101,34 @@ bool ach::ControlPad::bind(ach::ControlAction action, sf::Keyboard::Key code)
 	keys[action].key = code;
 
 	settings->setKeyCode(action, code);
+	reset();
+
+	return true;
+}
+
+
+
+/***********************************************************************
+     * ControlPad
+     * bind
+
+***********************************************************************/
+bool ach::ControlPad::bind(ach::ControlAction action, ach::JoystickCode code)
+{
+	if (!pair_has_enum(code, pairJoy))
+		return false;
+
+	if (code == ach::JoystickCode::jcUnknown)
+		return false;
+
+	for (int i = 0; i < ach::ControlAction::caCount; i++)
+		if (i != action)
+			if (keys[i].joy == code)
+				return false;
+
+	keys[action].joy = code;
+
+	settings->setJoyCode(action, code);
 	reset();
 
 	return true;

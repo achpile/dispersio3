@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Joystick::Joystick()
 {
-	sf::Joystick::update();
+	update();
 
 	for (int i = 0; i < CONTROL_GAMEPAD_COUNT; i++)
 		state[i] = sf::Joystick::isConnected(i);

@@ -30,6 +30,7 @@ namespace ach
 
 		void init();
 		bool bind(ach::ControlAction action, sf::Keyboard::Key code);
+		bool bind(ach::ControlAction action, ach::JoystickCode code);
 	};
 }
 

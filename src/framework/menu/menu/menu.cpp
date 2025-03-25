@@ -102,9 +102,24 @@ void ach::Menu::event(sf::Event e)
 			click(rm->transform(ach::RenderLayer::rlGUI, sf::Vector2f(e.mouseButton.x, e.mouseButton.y)), e.mouseButton.button == sf::Mouse::Button::Left);
 			break;
 
+
 		case sf::Event::KeyPressed:
 			if (binding)
 				binding->bind(e.key.code);
+
+			break;
+
+
+		case sf::Event::JoystickButtonPressed:
+			if (binding)
+				binding->bind(joystick->action(e.joystickButton.button));
+
+			break;
+
+
+		case sf::Event::JoystickMoved:
+			if (binding)
+				binding->bind(joystick->action(e.joystickMove.axis, e.joystickMove.position));
 
 			break;
 

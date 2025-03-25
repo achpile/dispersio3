@@ -109,6 +109,34 @@ void ach::MenuItemControl::click()
 ***********************************************************************/
 void ach::MenuItemControl::bind(sf::Keyboard::Key code)
 {
+	if (!keyboard)
+		return;
+
+	if (code == sf::Keyboard::Unknown)
+		return;
+
+	if (ctrl->bind(act, code))
+	{
+		isBinding = false;
+		menu->binding = NULL;
+	}
+}
+
+
+
+/***********************************************************************
+     * MenuItemControl
+     * bind
+
+***********************************************************************/
+void ach::MenuItemControl::bind(ach::JoystickCode code)
+{
+	if (keyboard)
+		return;
+
+	if (code == ach::JoystickCode::jcUnknown)
+		return;
+
 	if (ctrl->bind(act, code))
 	{
 		isBinding = false;

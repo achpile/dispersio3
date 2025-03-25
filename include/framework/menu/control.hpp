@@ -24,6 +24,7 @@ namespace ach
 		void click();
 
 		void bind(sf::Keyboard::Key code);
+		void bind(ach::JoystickCode code);
 	};
 }
 
