@@ -74,9 +74,14 @@ void handler_menu_state(void *, json_t *data)
      * handler_menu_reset
 
 ***********************************************************************/
-void handler_menu_reset(void *context, json_t *)
+void handler_menu_reset(void *context, json_t *data)
 {
-	json_object_del(settings->data, "Control");
+	json_t     *action;
+	const char *i;
+
+	json_object_foreach(json_object_get(settings->data, "Control"), i, action)
+		json_object_del(action, json_string_value(data));
+
 	json_dm_generate_default(settings->data, json_object_get(dm->dm, "Settings"));
 
 	ctrl->init();

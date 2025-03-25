@@ -136,7 +136,6 @@ void ach::StateMenu::fill()
 
 	menu->add("Options.Controls", new ach::MenuItemFolder  (menu, "Options.Keyboard"    ));
 	menu->add("Options.Controls", new ach::MenuItemFolder  (menu, "Options.Gamepad"     ));
-	menu->add("Options.Controls", new ach::MenuItemAction  (menu, "Options.Reset"       , handler_menu_reset     , NULL));
 
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
 	{
@@ -146,6 +145,9 @@ void ach::StateMenu::fill()
 
 	menu->add("Options.Keyboard", new ach::MenuItemRebind  (menu, "Options.Redefine"    , true ));
 	menu->add("Options.Gamepad" , new ach::MenuItemRebind  (menu, "Options.Redefine"    , false));
+
+	menu->add("Options.Keyboard", new ach::MenuItemAction  (menu, "Options.Reset"       , handler_menu_reset     , json_string("Key"    )));
+	menu->add("Options.Gamepad" , new ach::MenuItemAction  (menu, "Options.Reset"       , handler_menu_reset     , json_string("Joy"    )));
 
 	menu->finalize();
 }
