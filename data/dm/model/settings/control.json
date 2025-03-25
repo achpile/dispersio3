@@ -4,44 +4,116 @@
     },
     "Down": {
         "@attr": {
-            "default": "DOWN",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "Y +",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "DOWN",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     },
     "Jump": {
         "@attr": {
-            "default": "SPACE",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "B 02",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "SPACE",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     },
     "Left": {
         "@attr": {
-            "default": "LEFT",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "X -",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "LEFT",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     },
     "Menu": {
         "@attr": {
-            "default": "ESC",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "B 03",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "ESC",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     },
     "Right": {
         "@attr": {
-            "default": "RIGHT",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "X +",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "RIGHT",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     },
     "Up": {
         "@attr": {
-            "default": "UP",
-            "maxlen": 12,
-            "type": "string"
+            "type": "object"
+        },
+        "Joy": {
+            "@attr": {
+                "default": "Y -",
+                "maxlen": 12,
+                "type": "string"
+            }
+        },
+        "Key": {
+            "@attr": {
+                "default": "UP",
+                "maxlen": 12,
+                "type": "string"
+            }
         }
     }
 }

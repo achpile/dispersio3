@@ -20,10 +20,10 @@ ach::Pair<ach::ControlAction> pairAction[] =
 
 
 /***********************************************************************
-     * pairJoystick
+     * pairJoy
 
 ***********************************************************************/
-ach::Pair<ach::JoystickCode> pairJoystick[] =
+ach::Pair<ach::JoystickCode> pairJoy[] =
 {
 	{.num = ach::JoystickCode::jcUnknown      , .str = "..."   },
 	{.num = ach::JoystickCode::jcAxisXminus   , .str = "X -"   },

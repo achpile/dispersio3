@@ -72,7 +72,10 @@ void ach::ControlPad::clear()
 void ach::ControlPad::init()
 {
 	for (int i = 0; i < ach::ControlAction::caCount; i++)
+	{
 		keys[i].key = settings->getKeyCode((ach::ControlAction)i);
+		keys[i].joy = settings->getJoyCode((ach::ControlAction)i);
+	}
 }
 
 

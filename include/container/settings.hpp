@@ -29,7 +29,9 @@ namespace ach
 		void          setWindowSize(sf::Vector2u size);
 
 		sf::Keyboard::Key getKeyCode(ach::ControlAction action);
+		ach::JoystickCode getJoyCode(ach::ControlAction action);
 		void              setKeyCode(ach::ControlAction action, sf::Keyboard::Key code);
+		void              setJoyCode(ach::ControlAction action, ach::JoystickCode code);
 	};
 }
 

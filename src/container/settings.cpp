@@ -179,7 +179,19 @@ void ach::Settings::setWindowSize(sf::Vector2u size)
 ***********************************************************************/
 sf::Keyboard::Key ach::Settings::getKeyCode(ach::ControlAction action)
 {
-	return pair_get_enum(json_object_getv_branch_string(data, "Control.%s", pair_get_string(action, pairAction)), pairKey);
+	return pair_get_enum(json_object_getv_branch_string(data, "Control.%s.Key", pair_get_string(action, pairAction)), pairKey);
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * getJoyCode
+
+***********************************************************************/
+ach::JoystickCode ach::Settings::getJoyCode(ach::ControlAction action)
+{
+	return pair_get_enum(json_object_getv_branch_string(data, "Control.%s.Joy", pair_get_string(action, pairAction)), pairJoy);
 }
 
 
@@ -191,5 +203,17 @@ sf::Keyboard::Key ach::Settings::getKeyCode(ach::ControlAction action)
 ***********************************************************************/
 void ach::Settings::setKeyCode(ach::ControlAction action, sf::Keyboard::Key code)
 {
-	json_object_setv_branch_string(data, pair_get_string(code, pairKey), "Control.%s", pair_get_string(action, pairAction));
+	json_object_setv_branch_string(data, pair_get_string(code, pairKey), "Control.%s.Key", pair_get_string(action, pairAction));
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * setJoyCode
+
+***********************************************************************/
+void ach::Settings::setJoyCode(ach::ControlAction action, ach::JoystickCode code)
+{
+	json_object_setv_branch_string(data, pair_get_string(code, pairJoy), "Control.%s.Joy", pair_get_string(action, pairAction));
 }
