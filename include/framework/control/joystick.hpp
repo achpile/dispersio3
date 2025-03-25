@@ -67,6 +67,9 @@ namespace ach
 		void update();
 
 		bool check(ach::JoystickCode code);
+
+		bool axis(sf::Joystick::Axis axis, bool plus);
+		bool button(unsigned int button);
 	};
 }
 
