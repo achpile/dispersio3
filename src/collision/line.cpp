@@ -176,6 +176,9 @@ bool ach::PhysLine::collide(ach::Phys *p)
 				p->vel.y  *= -1.0f;
 				p->bounce  =  true;
 
+				if (fabs(p->vel.y) < PHYS_MIN_BOUNCE)
+					p->vel.y = math_sign(p->vel.y) * PHYS_MIN_BOUNCE;
+
 				return true;
 			}
 
