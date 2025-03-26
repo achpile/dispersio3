@@ -66,6 +66,9 @@ bool ach::Character::update()
 	if (phys.grounded && !landed)
 		sm->play(base->sndLand->snd);
 
+	if (phys.bounce)
+		sm->play(base->sndJump->snd);
+
 	landed = phys.grounded;
 
 	return true;

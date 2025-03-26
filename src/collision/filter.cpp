@@ -9,7 +9,8 @@ long filterPhysAll =
 	1 << ach::PhysType::ptSolid    |
 	1 << ach::PhysType::ptPlatform |
 	1 << ach::PhysType::ptBarrier  |
-	1 << ach::PhysType::ptDeath;
+	1 << ach::PhysType::ptDeath    |
+	1 << ach::PhysType::ptBounce;
 
 
 
@@ -21,7 +22,8 @@ long filterPhysPlayer =
 	1 << ach::PhysType::ptSolid    |
 	1 << ach::PhysType::ptPlatform |
 	1 << ach::PhysType::ptBarrier  |
-	1 << ach::PhysType::ptDeath;
+	1 << ach::PhysType::ptDeath    |
+	1 << ach::PhysType::ptBounce;
 
 
 
@@ -32,7 +34,8 @@ long filterPhysPlayer =
 long filterPhysEnemy =
 	1 << ach::PhysType::ptSolid    |
 	1 << ach::PhysType::ptPlatform |
-	1 << ach::PhysType::ptBarrier;
+	1 << ach::PhysType::ptBarrier  |
+	1 << ach::PhysType::ptBounce;
 
 
 
@@ -41,7 +44,8 @@ long filterPhysEnemy =
 
 ***********************************************************************/
 long filterPhysProjectile =
-	1 << ach::PhysType::ptSolid;
+	1 << ach::PhysType::ptSolid    |
+	1 << ach::PhysType::ptBounce;
 
 
 

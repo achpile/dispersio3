@@ -28,6 +28,7 @@ void ach::Map::collide()
 ***********************************************************************/
 void ach::Map::collideCharacter(ach::Character *character)
 {
+	character->phys.bounce   = false;
 	character->phys.grounded = false;
 	character->phys.slope    = 0.0f;
 

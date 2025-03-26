@@ -9,7 +9,8 @@ namespace ach
 		ptSolid = 0,
 		ptPlatform,
 		ptBarrier,
-		ptDeath
+		ptDeath,
+		ptBounce
 	};
 
 

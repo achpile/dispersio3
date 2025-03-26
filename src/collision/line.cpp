@@ -162,26 +162,38 @@ bool ach::PhysLine::collide(ach::Phys *p)
 
 	sf::Vector2f offset = offsetPhys();
 
-	if (offset.y < 0.0f)
+
+	p->pos += offset;
+	p->calc();
+
+
+	if (math_sign(offset.y))
 	{
-		p->grounded = true;
-		p->slope    = fabs(line.n.x);
+		if (math_sign(offset.y) == -math_sign(p->acc.y))
+		{
+			if (type == ach::PhysType::ptBounce)
+			{
+				p->vel.y  *= -1.0f;
+				p->bounce  =  true;
 
-		if (owner)
-			owner->stand(p);
+				return true;
+			}
+
+			p->grounded = true;
+			p->slope    = fabs(line.n.x);
+
+			if (owner)
+				owner->stand(p);
+		}
+
+		if (math_sign(offset.y) == -math_sign(p->vel.y))
+			p->vel.y = 0.0f;
 	}
-
-	if (math_sign(offset.y) && math_sign(offset.y) != math_sign(p->vel.y))
-		p->vel.y = 0.0f;
-
-	if (offset.x != 0.0f)
+	else
 	{
 		p->moving = false;
 		p->vel.x  = 0.0f;
 	}
-
-	p->pos += offset;
-	p->calc();
 
 	return true;
 }

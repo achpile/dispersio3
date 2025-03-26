@@ -8,7 +8,7 @@ namespace ach
 	{
 		sf::Clock *clock;
 
-		long       last;
+		long long  last;
 		float      frame;
 		float      real;
 		float      passed;

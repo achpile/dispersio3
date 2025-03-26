@@ -47,9 +47,9 @@ void ach::TimeManager::init()
 ***********************************************************************/
 void ach::TimeManager::update()
 {
-	long current = clock->getElapsedTime().asMilliseconds();
+	long long current = clock->getElapsedTime().asMicroseconds();
 
-	frame   = (current - last) / 1000.0;
+	frame   = (current - last) / 1000000.0;
 	real    = frame;
 	last    = current;
 	passed += frame;

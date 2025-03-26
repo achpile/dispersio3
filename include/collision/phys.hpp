@@ -19,6 +19,9 @@ namespace ach
 		bool  moving;
 		bool  jumpdown;
 
+		bool  water;
+		bool  bounce;
+
 
 		void update();
 		void calc();

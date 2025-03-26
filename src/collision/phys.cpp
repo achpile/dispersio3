@@ -93,5 +93,8 @@ void ach::Phys::reset()
 	moving   = false;
 	jumpdown = false;
 
+	water    = false;
+	bounce   = false;
+
 	calc();
 }
