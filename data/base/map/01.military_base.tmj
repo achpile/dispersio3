@@ -1117,6 +1117,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1148,6 +1157,15 @@
                  "id":10,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1181,6 +1199,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1212,6 +1239,15 @@
                  "id":12,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1245,6 +1281,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1276,6 +1321,15 @@
                  "id":32,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1309,6 +1363,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1340,6 +1403,15 @@
                  "id":36,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1373,6 +1445,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1404,6 +1485,15 @@
                  "id":50,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1437,6 +1527,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1468,6 +1567,15 @@
                  "id":52,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1501,6 +1609,15 @@
                  "name":"RobotFly",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1532,6 +1649,15 @@
                  "id":54,
                  "name":"RobotFly",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1565,6 +1691,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1596,6 +1731,15 @@
                  "id":59,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1629,6 +1773,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1660,6 +1813,15 @@
                  "id":61,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1693,6 +1855,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1724,6 +1895,15 @@
                  "id":63,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1757,6 +1937,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1788,6 +1977,15 @@
                  "id":73,
                  "name":"RobotFly",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1821,6 +2019,15 @@
                  "name":"RobotFly",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1852,6 +2059,15 @@
                  "id":78,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1885,6 +2101,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1916,6 +2141,15 @@
                  "id":80,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -1949,6 +2183,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -1980,6 +2223,15 @@
                  "id":82,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2013,6 +2265,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2044,6 +2305,15 @@
                  "id":90,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2077,6 +2347,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2108,6 +2387,15 @@
                  "id":106,
                  "name":"RobotFly",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2141,6 +2429,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2172,6 +2469,15 @@
                  "id":108,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2205,6 +2511,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2236,6 +2551,15 @@
                  "id":110,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2269,6 +2593,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2300,6 +2633,15 @@
                  "id":130,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2333,6 +2675,15 @@
                  "name":"RobotWalk",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2364,6 +2715,15 @@
                  "id":132,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2397,6 +2757,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2428,6 +2797,15 @@
                  "id":163,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2461,6 +2839,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2492,6 +2879,15 @@
                  "id":174,
                  "name":"CannonOrb",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2525,6 +2921,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2556,6 +2961,15 @@
                  "id":185,
                  "name":"Cannon2",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -2589,6 +3003,15 @@
                  "name":"Cannon2",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -2620,6 +3043,15 @@
                  "id":188,
                  "name":"RobotWalk",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",

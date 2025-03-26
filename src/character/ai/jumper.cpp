@@ -10,7 +10,7 @@ ach::AIJumper::AIJumper(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	dir = 0;
 
-	cooldown.set(1.0f);
+	cooldown.set(json_class_get_real(obj, "Jumping", "Cooldown"));
 }
 
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="120" height="90" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
+ <editorsettings>
+  <export target="../../../data/base/map/03.1.forest.tmj" format="json"/>
+ </editorsettings>
  <tileset firstgid="1" source="../tilesets/dev.tsx"/>
  <tileset firstgid="20" source="../tilesets/misc.tsx"/>
  <layer id="7" name="back" width="120" height="90">

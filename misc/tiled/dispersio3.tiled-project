@@ -39,6 +39,23 @@
         {
             "color": "#ffa0a0a4",
             "drawFill": false,
+            "id": 20,
+            "members": [
+                {
+                    "name": "Cooldown",
+                    "type": "float",
+                    "value": 0.5
+                }
+            ],
+            "name": "#jumping",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": false,
             "id": 2,
             "members": [
                 {
@@ -96,7 +113,6 @@
             "name": "block_break",
             "type": "class",
             "useAs": [
-                "property",
                 "object",
                 "project"
             ]
@@ -152,6 +168,13 @@
             "drawFill": true,
             "id": 4,
             "members": [
+                {
+                    "name": "Jumping",
+                    "propertyType": "#jumping",
+                    "type": "class",
+                    "value": {
+                    }
+                },
                 {
                     "name": "Moving",
                     "propertyType": "#moving",
@@ -296,7 +319,6 @@
             "name": "trigger_goal",
             "type": "class",
             "useAs": [
-                "property",
                 "map",
                 "layer",
                 "object",

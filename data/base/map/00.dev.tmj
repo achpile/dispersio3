@@ -463,6 +463,15 @@
                  "name":"Bat",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -494,6 +503,15 @@
                  "id":16,
                  "name":"Bat",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -527,6 +545,15 @@
                  "name":"Snake",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -558,6 +585,15 @@
                  "id":18,
                  "name":"Bat",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -591,6 +627,15 @@
                  "name":"Cannon",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -622,6 +667,15 @@
                  "id":58,
                  "name":"Cannon",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -655,6 +709,15 @@
                  "name":"Cannon",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -686,6 +749,15 @@
                  "id":60,
                  "name":"Cannon",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -719,6 +791,15 @@
                  "name":"Cannon",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -750,6 +831,15 @@
                  "id":62,
                  "name":"Bat",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",
@@ -783,6 +873,15 @@
                  "name":"Snake",
                  "properties":[
                         {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
                          "name":"Moving",
                          "propertytype":"#moving",
                          "type":"class",
@@ -814,6 +913,15 @@
                  "id":65,
                  "name":"Cannon",
                  "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
                         {
                          "name":"Moving",
                          "propertytype":"#moving",

@@ -158,7 +158,7 @@ void ach::Character::respawn()
 {
 	alive    = true;
 	landed   = true;
-	phys.pos = spawn;
+	phys.pos = spawn - base->offset;
 
 	spawner.reset();
 	body->spawn();
