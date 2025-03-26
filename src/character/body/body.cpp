@@ -105,7 +105,7 @@ void ach::Body::setDirection(ach::Direction dir)
 ***********************************************************************/
 void ach::Body::render()
 {
-	model->render(owner->phys.pos);
+	model->render(owner->phys.pos + owner->base->offset);
 }
 
 

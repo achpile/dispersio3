@@ -27,6 +27,7 @@ namespace ach
 		ach::DataSound  *sndLand;
 
 		sf::Vector2f     hitbox;
+		sf::Vector2f     offset;
 		sf::Color        color;
 
 		float barrel;
