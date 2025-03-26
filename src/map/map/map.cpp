@@ -61,7 +61,6 @@ void ach::Map::update()
 	collide();
 
 	cam->update();
-	stars->update();
 
 	list_update(characters);
 	list_update(objects);
@@ -78,8 +77,6 @@ void ach::Map::update()
 ***********************************************************************/
 void ach::Map::render()
 {
-	stars->render();
-
 	renderTiles();
 
 	list_render(objects);

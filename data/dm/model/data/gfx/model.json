@@ -50,7 +50,8 @@
             "enum": [
                 "none",
                 "player",
-                "simple"
+                "simple",
+                "jumper"
             ],
             "type": "enum"
         }

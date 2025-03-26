@@ -13,6 +13,7 @@ ach::Pair<ach::AIType> pairAI[] =
 	{.num = ach::AIType::aiCrawl , .str = "crawl" },
 	{.num = ach::AIType::aiCannon, .str = "cannon"},
 	{.num = ach::AIType::aiSniper, .str = "sniper"},
+	{.num = ach::AIType::aiJumper, .str = "jumper"},
 
 	{.num = ach::AIType::aiIdle  , .str = NULL    },
 };

@@ -1,0 +1,25 @@
+{
+    "EnemySlime": {
+        "Animation": {
+            "Fall": {
+                "End": 18,
+                "Loop": false,
+                "Rate": 0.1,
+                "Start": 14
+            },
+            "Idle": {
+                "End": 3,
+                "Rate": 0.2,
+                "Start": 0
+            },
+            "Jump": {
+                "End": 14,
+                "Loop": false,
+                "Rate": 0.035,
+                "Start": 4
+            }
+        },
+        "Sheet": "EnemySlime",
+        "Type": "jumper"
+    }
+}

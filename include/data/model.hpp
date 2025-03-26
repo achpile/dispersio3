@@ -8,7 +8,8 @@ namespace ach
 	{
 		mtNone = 0,
 		mtSimple,
-		mtPlayer
+		mtPlayer,
+		mtJumper
 	};
 
 

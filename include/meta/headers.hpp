@@ -55,11 +55,13 @@
 #include "character/ai/crawl.hpp"
 #include "character/ai/cannon.hpp"
 #include "character/ai/sniper.hpp"
+#include "character/ai/jumper.hpp"
 #include "character/ai/pair.hpp"
 
 #include "character/body/body.hpp"
 #include "character/body/simple.hpp"
 #include "character/body/player.hpp"
+#include "character/body/jumper.hpp"
 
 #include "character/projectile/projectile.hpp"
 #include "character/projectile/pair.hpp"

@@ -2,64 +2,65 @@
 
 
 /***********************************************************************
-     * StateGame
+     * BodyJumper
      * constructor
 
 ***********************************************************************/
-ach::StateGame::StateGame()
+ach::BodyJumper::BodyJumper(ach::Character *_owner, ach::DataModel *_base) : Body(_owner, _base)
 {
-	proc = new ach::ProcessWorld(this);
-
-	app->mouse(false);
 }
 
 
 
 /***********************************************************************
-     * StateGame
+     * BodyJumper
      * destructor
 
 ***********************************************************************/
-ach::StateGame::~StateGame()
+ach::BodyJumper::~BodyJumper()
 {
-	delete proc;
 }
 
 
 
 /***********************************************************************
-     * StateGame
-     * update
+     * BodyJumper
+     * animate
 
 ***********************************************************************/
-void ach::StateGame::update()
+void ach::BodyJumper::animate()
 {
-	stars->update();
-	stars->render();
-
-	proc->update();
+	if (!owner->phys.grounded)
+	{
+		if (owner->phys.vel.y > 0.0f)
+			model->setAnimation("Fall");
+		else
+			model->setAnimation("Jump");
+	}
+	else
+		model->setAnimation("Idle");
 }
 
 
 
 /***********************************************************************
-     * StateGame
-     * event
+     * BodyJumper
+     * flip
 
 ***********************************************************************/
-void ach::StateGame::event(sf::Event e)
+void ach::BodyJumper::flip()
 {
-	proc->event(e);
+	model->scale.x = owner->dir.x;
 }
 
 
 
 /***********************************************************************
-     * StateGame
-     * next
+     * BodyJumper
+     * reset
 
 ***********************************************************************/
-void ach::StateGame::next()
+void ach::BodyJumper::reset()
 {
-	app->stateSet(ach::GameState::gsMenu);
+	model->setAnimation("Idle");
 }

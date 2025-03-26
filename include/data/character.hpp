@@ -11,7 +11,8 @@ namespace ach
 		aiFloat,
 		aiCrawl,
 		aiCannon,
-		aiSniper
+		aiSniper,
+		aiJumper
 	};
 
 

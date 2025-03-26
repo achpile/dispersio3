@@ -1,0 +1,18 @@
+{
+    "Slime": {
+        "Appearance": {
+            "Model": "EnemySlime"
+        },
+        "Game": {
+            "AI": "jumper",
+            "Hitbox": {
+                "X": 14,
+                "Y": 10
+            }
+        },
+        "Stats": {
+            "Gravity": 750,
+            "Jump": 250
+        }
+    }
+}
