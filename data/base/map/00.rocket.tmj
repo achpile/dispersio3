@@ -267,6 +267,17 @@
                  "height":16,
                  "id":10,
                  "name":"DecorSignExit",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -278,6 +289,17 @@
                  "height":16,
                  "id":11,
                  "name":"DecorSignExit",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -289,6 +311,17 @@
                  "height":16,
                  "id":12,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -300,6 +333,17 @@
                  "height":16,
                  "id":13,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -311,6 +355,17 @@
                  "height":32,
                  "id":14,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -322,6 +377,17 @@
                  "height":32,
                  "id":25,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -333,6 +399,17 @@
                  "height":32,
                  "id":26,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -344,6 +421,17 @@
                  "height":32,
                  "id":27,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -355,6 +443,17 @@
                  "height":32,
                  "id":28,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -366,12 +465,287 @@
                  "height":32,
                  "id":29,
                  "name":"DecorRocketEngineSide",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
                  "width":96,
                  "x":48,
                  "y":464
+                }, 
+                {
+                 "height":48,
+                 "id":30,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":192,
+                 "y":16
+                }, 
+                {
+                 "height":48,
+                 "id":31,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":192,
+                 "y":224
+                }, 
+                {
+                 "height":48,
+                 "id":32,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":192,
+                 "y":304
+                }, 
+                {
+                 "height":48,
+                 "id":33,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":192,
+                 "y":512
+                }, 
+                {
+                 "height":48,
+                 "id":34,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":400,
+                 "y":16
+                }, 
+                {
+                 "height":48,
+                 "id":35,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":608,
+                 "y":16
+                }, 
+                {
+                 "height":48,
+                 "id":36,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":400,
+                 "y":224
+                }, 
+                {
+                 "height":48,
+                 "id":37,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":608,
+                 "y":224
+                }, 
+                {
+                 "height":48,
+                 "id":38,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":400,
+                 "y":304
+                }, 
+                {
+                 "height":48,
+                 "id":39,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":608,
+                 "y":304
+                }, 
+                {
+                 "height":48,
+                 "id":40,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":400,
+                 "y":512
+                }, 
+                {
+                 "height":48,
+                 "id":41,
+                 "name":"DecorRocketWing",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":96,
+                 "x":608,
+                 "y":512
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -598,7 +972,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":30,
+ "nextobjectid":42,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

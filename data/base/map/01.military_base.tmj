@@ -961,6 +961,17 @@
                  "height":16,
                  "id":190,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -972,6 +983,17 @@
                  "height":16,
                  "id":191,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -983,6 +1005,17 @@
                  "height":16,
                  "id":192,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -994,6 +1027,17 @@
                  "height":16,
                  "id":193,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1005,6 +1049,17 @@
                  "height":16,
                  "id":194,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1016,6 +1071,17 @@
                  "height":16,
                  "id":195,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1027,6 +1093,17 @@
                  "height":16,
                  "id":196,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1038,6 +1115,17 @@
                  "height":16,
                  "id":197,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1049,6 +1137,17 @@
                  "height":16,
                  "id":198,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1060,6 +1159,17 @@
                  "height":16,
                  "id":199,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1071,6 +1181,17 @@
                  "height":16,
                  "id":200,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1082,6 +1203,17 @@
                  "height":16,
                  "id":201,
                  "name":"DecorWallFan",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1093,6 +1225,17 @@
                  "height":16,
                  "id":202,
                  "name":"DecorSignExit",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,

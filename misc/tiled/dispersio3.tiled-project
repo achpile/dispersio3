@@ -225,6 +225,16 @@
             "drawFill": true,
             "id": 8,
             "members": [
+                {
+                    "name": "FlipX",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "FlipY",
+                    "type": "bool",
+                    "value": false
+                }
             ],
             "name": "obj_decor",
             "type": "class",

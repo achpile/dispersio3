@@ -1322,6 +1322,17 @@
                  "height":32,
                  "id":225,
                  "name":"DecorRocketEngine",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1333,6 +1344,17 @@
                  "height":160,
                  "id":226,
                  "name":"DecorRocketMain",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1344,6 +1366,17 @@
                  "height":32,
                  "id":227,
                  "name":"DecorRocketEngine",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
@@ -1355,6 +1388,17 @@
                  "height":32,
                  "id":228,
                  "name":"DecorRocketEngine",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"obj_decor",
                  "visible":true,
