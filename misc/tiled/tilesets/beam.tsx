@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Beam" tilewidth="16" tileheight="16" tilecount="7" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Beam" tilewidth="16" tileheight="16" tilecount="10" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="10">
   <image source="../../../data/base/gfx/game/tile/beam/metal_c.png" width="16" height="16"/>
@@ -21,5 +21,14 @@
  </tile>
  <tile id="9">
   <image source="../../../data/base/gfx/game/tile/beam/metal_rope_end.png" width="16" height="16"/>
+ </tile>
+ <tile id="11">
+  <image source="../../../data/base/gfx/game/tile/beam/wood_c.png" width="16" height="16"/>
+ </tile>
+ <tile id="12">
+  <image source="../../../data/base/gfx/game/tile/beam/wood_h.png" width="16" height="16"/>
+ </tile>
+ <tile id="13">
+  <image source="../../../data/base/gfx/game/tile/beam/wood_v.png" width="16" height="16"/>
  </tile>
 </tileset>

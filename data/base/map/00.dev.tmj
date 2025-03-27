@@ -1389,7 +1389,7 @@
          "margin":0,
          "name":"Dev",
          "spacing":0,
-         "tilecount":19,
+         "tilecount":20,
          "tileheight":16,
          "tiles":[
                 {
@@ -1503,6 +1503,12 @@
                 {
                  "id":18,
                  "image":"..\/gfx\/game\/tile\/dev\/spike_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/gfx\/game\/tile\/dev\/dirt.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],

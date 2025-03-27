@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Dev" tilewidth="16" tileheight="16" tilecount="19" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Dev" tilewidth="16" tileheight="16" tilecount="20" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/dev/c22_ld1.png" width="16" height="16"/>
@@ -57,5 +57,8 @@
  </tile>
  <tile id="18">
   <image source="../../../data/base/gfx/game/tile/dev/spike_r.png" width="16" height="16"/>
+ </tile>
+ <tile id="19">
+  <image source="../../../data/base/gfx/game/tile/dev/dirt.png" width="16" height="16"/>
  </tile>
 </tileset>
