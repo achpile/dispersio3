@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Plant" tilewidth="16" tileheight="16" tilecount="8" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Plant" tilewidth="16" tileheight="16" tilecount="14" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/plant/grass.png" width="16" height="16"/>
@@ -24,5 +24,23 @@
  </tile>
  <tile id="11">
   <image source="../../../data/base/gfx/game/tile/plant/pine_r_t.png" width="16" height="16"/>
+ </tile>
+ <tile id="12">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom1.png" width="16" height="16"/>
+ </tile>
+ <tile id="13">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom2.png" width="16" height="16"/>
+ </tile>
+ <tile id="14">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom3.png" width="16" height="16"/>
+ </tile>
+ <tile id="15">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom4.png" width="16" height="16"/>
+ </tile>
+ <tile id="16">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom5_1.png" width="16" height="16"/>
+ </tile>
+ <tile id="17">
+  <image source="../../../data/base/gfx/game/tile/plant/shroom5_2.png" width="16" height="16"/>
  </tile>
 </tileset>
