@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Nature" tilewidth="16" tileheight="16" tilecount="16" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Nature" tilewidth="16" tileheight="16" tilecount="17" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/nature/dirt_top.png" width="16" height="16"/>
@@ -9,6 +9,9 @@
  </tile>
  <tile id="2">
   <image source="../../../data/base/gfx/game/tile/nature/dirt_bot.png" width="16" height="16"/>
+ </tile>
+ <tile id="17">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_top_2.png" width="16" height="16"/>
  </tile>
  <tile id="11">
   <image source="../../../data/base/gfx/game/tile/nature/dirt_c_br.png" width="16" height="16"/>
