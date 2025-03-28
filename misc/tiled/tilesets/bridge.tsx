@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Bridge" tilewidth="16" tileheight="16" tilecount="18" columns="0">
+<tileset version="1.11" tiledversion="1.11.2" name="Bridge" tilewidth="16" tileheight="16" tilecount="23" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="2">
   <image source="../../../data/base/gfx/game/tile/bridge/metal_slope_l_3.png" width="16" height="16"/>
@@ -54,5 +54,20 @@
  </tile>
  <tile id="29">
   <image source="../../../data/base/gfx/game/tile/bridge/metal_platform.png" width="16" height="16"/>
+ </tile>
+ <tile id="30">
+  <image source="../../../data/base/gfx/game/tile/bridge/wood_bridge.png" width="16" height="16"/>
+ </tile>
+ <tile id="31">
+  <image source="../../../data/base/gfx/game/tile/bridge/wood_support_lt.png" width="16" height="16"/>
+ </tile>
+ <tile id="32">
+  <image source="../../../data/base/gfx/game/tile/bridge/wood_support_rt.png" width="16" height="16"/>
+ </tile>
+ <tile id="33">
+  <image source="../../../data/base/gfx/game/tile/bridge/wood_support_lb.png" width="16" height="16"/>
+ </tile>
+ <tile id="34">
+  <image source="../../../data/base/gfx/game/tile/bridge/wood_support_rb.png" width="16" height="16"/>
  </tile>
 </tileset>
