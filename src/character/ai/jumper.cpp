@@ -50,10 +50,11 @@ void ach::AIJumper::control()
 		return;
 	}
 
+	if (owner->phys.grounded || owner->phys.bounce)
+		dir = math_sign(target->phys.pos.x - owner->phys.pos.x);
+
 	if (!owner->phys.grounded)
 		move();
-	else
-		dir = math_sign(target->phys.pos.x - owner->phys.pos.x);
 
 	if (!cooldown.isActive())
 		jump();
