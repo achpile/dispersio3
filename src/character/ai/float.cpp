@@ -31,6 +31,16 @@ ach::AIFloat::~AIFloat()
 ***********************************************************************/
 void ach::AIFloat::control()
 {
+	if (dir_orient(dir) == ach::Orientation::oHorizontal)
+		owner->dir.x = dir_sign(dir);
+	else
+	{
+		search();
+
+		if (target)
+			owner->dir.x = math_sign(target->phys.pos.x - owner->phys.pos.x);
+	}
+
 	owner->phys.vel = dir_vector_f(dir) * owner->speed;
 }
 

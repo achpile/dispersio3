@@ -45,7 +45,10 @@ void ach::AIJumper::control()
 	owner->phys.moving   = false;
 
 	if (!target)
+	{
+		cooldown.reset();
 		return;
+	}
 
 	if (!owner->phys.grounded)
 		move();

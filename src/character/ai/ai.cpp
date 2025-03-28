@@ -81,6 +81,9 @@ void ach::AI::search()
 			dist   = vector_len(owner->phys.pos - candidate->phys.pos);
 		}
 	}
+
+	if (!target)
+		owner->weapon->cooldown.reset();
 }
 
 

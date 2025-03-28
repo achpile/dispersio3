@@ -1732,6 +1732,47 @@
                  "width":16,
                  "x":1376,
                  "y":672
+                }, 
+                {
+                 "height":16,
+                 "id":138,
+                 "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"right"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":912,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4940,7 +4981,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":138,
+ "nextobjectid":140,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

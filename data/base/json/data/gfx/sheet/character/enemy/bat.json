@@ -1,6 +1,7 @@
 {
     "EnemyBat": {
         "Filename": "gfx/game/sheet/character/enemy/bat.png",
-        "Frames": 4
+        "Frames": 10,
+        "Rate": 0.05
     }
 }
