@@ -6,7 +6,10 @@ namespace ach
 {
 	struct AIPlayer : AI
 	{
+		ach::DataSound *splash;
+
 		bool jumped;
+		bool water;
 
 
 		 AIPlayer(ach::Character *_owner, json_t *obj);

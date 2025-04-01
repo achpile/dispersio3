@@ -9,6 +9,7 @@
 ach::AIPlayer::AIPlayer(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	owner->enemy = false;
+	splash = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Splash"));
 }
 
 
@@ -38,7 +39,14 @@ void ach::AIPlayer::physics()
 	owner->jumping    = owner->base->jumping * (owner->phys.water ? PHYS_WATER : 1.0f);
 
 	if (owner->phys.water)
+	{
 		owner->phys.vel.y = interval_set(owner->phys.vel.y, -PHYS_MAX_VEL, PHYS_WATER_FALL);
+
+		if (!water)
+			sm->play(splash->snd);
+	}
+
+	water = owner->phys.water;
 }
 
 
@@ -73,6 +81,7 @@ void ach::AIPlayer::control()
 void ach::AIPlayer::reset()
 {
 	jumped = false;
+	water  = true;
 }
 
 

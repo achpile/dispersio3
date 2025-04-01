@@ -29,5 +29,12 @@
             "default": "Goal",
             "type": "link"
         }
+    },
+    "Splash": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Splash",
+            "type": "link"
+        }
     }
 }
