@@ -52,8 +52,8 @@ void ach::Phys::init(sf::Vector2f _size)
 void ach::Phys::init(sf::FloatRect _rect)
 {
 	rect = _rect;
-	size = sf::Vector2f(rect.width, rect.height);
-	pos  = vector_center(rect);
+	size = rect_size(rect);
+	pos  = rect_center(rect);
 
 	reset();
 }

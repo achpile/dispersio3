@@ -12,8 +12,8 @@ bool collision_box_vs_box(sf::FloatRect box, sf::FloatRect rect, sf::Vector2f *c
 	if (!box.intersects(rect, intersection))
 		return false;
 
-	if (c) *c = vector_center(intersection);
-	if (n) *n = vector_norm(vector_center(box) - vector_center(rect));
+	if (c) *c = rect_center(intersection);
+	if (n) *n = vector_norm(rect_center(box) - rect_center(rect));
 
 	return true;
 }
@@ -40,8 +40,8 @@ bool collision_box_vs_circle(sf::FloatRect box, sf::Vector2f center, float r, sf
 	if (sqrt(math_sqr(center.x - t.x) + math_sqr(center.y - t.y)) > r)
 		return false;
 
-	if (c) *c = vector_center(box);
-	if (n) *n = vector_norm(vector_center(box) - center);
+	if (c) *c = rect_center(box);
+	if (n) *n = vector_norm(rect_center(box) - center);
 
 	return true;
 }
