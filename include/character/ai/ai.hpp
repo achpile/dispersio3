@@ -18,6 +18,7 @@ namespace ach
 		void ground();
 		void search();
 
+		virtual void physics() {};
 		virtual void control() {};
 		virtual void aim()     {};
 		virtual void reset()   {};

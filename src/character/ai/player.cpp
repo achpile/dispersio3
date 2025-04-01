@@ -26,13 +26,30 @@ ach::AIPlayer::~AIPlayer()
 
 /***********************************************************************
      * AIPlayer
+     * physics
+
+***********************************************************************/
+void ach::AIPlayer::physics()
+{
+	ground();
+
+	owner->phys.acc.y = owner->base->gravity * (owner->phys.water ? PHYS_WATER : 1.0f);
+	owner->speed      = owner->base->speed   * (owner->phys.water ? PHYS_WATER : 1.0f);
+	owner->jumping    = owner->base->jumping * (owner->phys.water ? PHYS_WATER : 1.0f);
+
+	if (owner->phys.water)
+		owner->phys.vel.y = interval_set(owner->phys.vel.y, -PHYS_MAX_VEL, PHYS_WATER_FALL);
+}
+
+
+
+/***********************************************************************
+     * AIPlayer
      * control
 
 ***********************************************************************/
 void ach::AIPlayer::control()
 {
-	ground();
-
 	jumped &= ctrl->keys[ach::ControlAction::caJump].state;
 
 	owner->phys.vel.x    = 0.0f;

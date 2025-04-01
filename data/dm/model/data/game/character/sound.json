@@ -22,5 +22,12 @@
             "default": "Default",
             "type": "link"
         }
+    },
+    "Swim": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
+        }
     }
 }

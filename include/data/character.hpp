@@ -25,6 +25,7 @@ namespace ach
 		ach::DataSound  *sndDie;
 		ach::DataSound  *sndJump;
 		ach::DataSound  *sndLand;
+		ach::DataSound  *sndSwim;
 
 		sf::Vector2f     hitbox;
 		sf::Vector2f     offset;

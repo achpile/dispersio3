@@ -13,7 +13,8 @@
         "Sound": {
             "Die": "PlayerDie",
             "Jump": "PlayerJump",
-            "Land": "PlayerLand"
+            "Land": "PlayerLand",
+            "Swim": "PlayerSwim"
         }
     }
 }

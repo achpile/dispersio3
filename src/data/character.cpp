@@ -14,6 +14,7 @@ ach::DataCharacter::DataCharacter(json_t *obj)
 	sndDie  = db->getSound(json_object_get_branch_string(obj, "Sound.Die" ));
 	sndJump = db->getSound(json_object_get_branch_string(obj, "Sound.Jump"));
 	sndLand = db->getSound(json_object_get_branch_string(obj, "Sound.Land"));
+	sndSwim = db->getSound(json_object_get_branch_string(obj, "Sound.Swim"));
 
 	barrel  = json_object_get_branch_real(obj, "Appearance.Barrel");
 	color   = str_to_color(json_object_get_branch_string(obj, "Appearance.Color"));

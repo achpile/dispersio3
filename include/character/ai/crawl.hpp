@@ -15,6 +15,7 @@ namespace ach
 		 AICrawl(ach::Character *_owner, json_t *obj);
 		~AICrawl();
 
+		void physics();
 		void control();
 		void reset();
 

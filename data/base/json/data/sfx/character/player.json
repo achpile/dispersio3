@@ -7,5 +7,8 @@
     },
     "PlayerLand": {
         "Filename": "sfx/character/player/land.wav"
+    },
+    "PlayerSwim": {
+        "Filename": "sfx/character/player/swim.wav"
     }
 }

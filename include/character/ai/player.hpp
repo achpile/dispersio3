@@ -12,6 +12,7 @@ namespace ach
 		 AIPlayer(ach::Character *_owner, json_t *obj);
 		~AIPlayer();
 
+		void physics();
 		void control();
 		void reset();
 

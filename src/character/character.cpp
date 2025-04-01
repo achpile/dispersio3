@@ -273,7 +273,7 @@ void ach::Character::move(int d)
 ***********************************************************************/
 bool ach::Character::jump()
 {
-	if (!phys.grounded)
+	if (!phys.grounded && !phys.water)
 		return false;
 
 	if (phys.jumpdown)
@@ -281,7 +281,7 @@ bool ach::Character::jump()
 
 	phys.vel.y = -jumping;
 
-	sm->play(base->sndJump->snd);
+	sm->play(phys.water ? base->sndSwim->snd : base->sndJump->snd);
 
 	return true;
 }

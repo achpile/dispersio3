@@ -14,6 +14,7 @@ namespace ach
 		 AIJumper(ach::Character *_owner, json_t *obj);
 		~AIJumper();
 
+		void physics();
 		void control();
 		void reset();
 
