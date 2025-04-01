@@ -19,6 +19,9 @@ ach::MapObjectBreak::MapObjectBreak(ach::ProcessWorld *_world, json_t *obj) : Ma
 
 	crack->anim.loop = false;
 	crack->setScale(phys.size);
+
+	crack->layer = ach::RenderLayer::rlFront;
+	model->layer = ach::RenderLayer::rlFront;
 }
 
 

@@ -12,6 +12,8 @@ ach::MapObjectMoving::MapObjectMoving(ach::ProcessWorld *_world, json_t *obj) : 
 
 	setSheet(json_object_get_string(obj, "name"));
 
+	model->layer = ach::RenderLayer::rlFront;
+
 	ach::Direction d = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
 	sf::FloatRect  r = vector_json_rect(obj);
 

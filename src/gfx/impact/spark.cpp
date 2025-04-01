@@ -10,7 +10,7 @@ ach::ImpactSpark::ImpactSpark(sf::Vector2f _pos, sf::Vector2f _dir, sf::Color _c
 {
 	particle = new ach::ParticleSystemSplash(PARTICLE_SPARK_SIZE);
 
-	particle->layer    = ach::RenderLayer::rlGame;
+	particle->layer    = ach::RenderLayer::rlFront;
 	particle->realtime = false;
 
 	particle->pos      = pos;

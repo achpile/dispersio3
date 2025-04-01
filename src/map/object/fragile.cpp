@@ -19,6 +19,9 @@ ach::MapObjectFragile::MapObjectFragile(ach::ProcessWorld *_world, json_t *obj) 
 
 	crack->anim.loop = false;
 	crack->setScale(phys.size);
+
+	crack->layer = ach::RenderLayer::rlFront;
+	model->layer = ach::RenderLayer::rlFront;
 }
 
 

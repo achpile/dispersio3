@@ -10,7 +10,7 @@ ach::EffectBreak::EffectBreak(sf::Vector2f pos, sf::Sprite *spr)
 {
 	particle = new ach::ParticleSystemSplash(8.0f);
 
-	particle->layer    = ach::RenderLayer::rlGame;
+	particle->layer    = ach::RenderLayer::rlFront;
 	particle->realtime = false;
 
 	particle->pos      = pos;
