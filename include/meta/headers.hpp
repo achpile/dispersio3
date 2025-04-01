@@ -73,6 +73,7 @@
 #include "map/object/decor.hpp"
 #include "map/object/door.hpp"
 #include "map/object/goal.hpp"
+#include "map/object/water.hpp"
 #include "map/object/checkpoint.hpp"
 #include "map/object/collectable.hpp"
 #include "map/object/moving.hpp"
