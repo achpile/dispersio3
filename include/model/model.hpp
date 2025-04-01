@@ -6,12 +6,14 @@ namespace ach
 {
 	struct Model
 	{
-		ach::DataModel *base;
-		ach::Sheet     *sheet;
-		ach::Animation  anim;
+		ach::DataModel   *base;
+		ach::Sheet       *sheet;
+		ach::Animation    anim;
 
-		sf::Vector2f    scale;
-		sf::Color       color;
+		ach::RenderLayer  layer;
+
+		sf::Vector2f      scale;
+		sf::Color         color;
 
 		char  animation[STR_LEN_NAME];
 		float angle;

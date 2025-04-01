@@ -8,9 +8,10 @@
 ***********************************************************************/
 ach::RenderManager::RenderManager()
 {
-	bg   = new ach::Layer();
-	game = new ach::Layer();
-	gui  = new ach::Layer();
+	bg    = new ach::Layer();
+	game  = new ach::Layer();
+	front = new ach::Layer();
+	gui   = new ach::Layer();
 }
 
 
@@ -24,6 +25,7 @@ ach::RenderManager::~RenderManager()
 {
 	delete bg;
 	delete game;
+	delete front;
 	delete gui;
 }
 
@@ -38,6 +40,7 @@ void ach::RenderManager::clear()
 {
 	bg->clear(sf::Color::Black);
 	game->clear(sf::Color::Transparent);
+	front->clear(sf::Color::Transparent);
 	gui->clear(sf::Color::Transparent);
 }
 
@@ -64,10 +67,12 @@ void ach::RenderManager::display(sf::RenderWindow *window)
 {
 	bg->display();
 	game->display();
+	front->display();
 	gui->display();
 
 	bg->render(window);
 	game->render(window);
+	front->render(window);
 	gui->render(window);
 }
 
@@ -84,6 +89,7 @@ void ach::RenderManager::resize(sf::RenderWindow *window)
 
 	bg->resize(window);
 	game->resize(window);
+	front->resize(window);
 	gui->resize(window);
 }
 
@@ -97,6 +103,7 @@ void ach::RenderManager::resize(sf::RenderWindow *window)
 void ach::RenderManager::setView(sf::View view)
 {
 	game->setView(view);
+	front->setView(view);
 }
 
 
@@ -110,6 +117,7 @@ void ach::RenderManager::setSmooth(bool smooth)
 {
 	bg->setSmooth(smooth);
 	game->setSmooth(smooth);
+	front->setSmooth(smooth);
 	gui->setSmooth(smooth);
 }
 
@@ -124,6 +132,7 @@ void ach::RenderManager::setColor(sf::Color color)
 {
 	bg->setColor(color);
 	game->setColor(color);
+	front->setColor(color);
 	gui->setColor(color);
 }
 
@@ -176,9 +185,10 @@ ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
 {
 	switch (layer)
 	{
-		case ach::RenderLayer::rlBG  : return bg;
-		case ach::RenderLayer::rlGame: return game;
-		case ach::RenderLayer::rlGUI : return gui;
+		case ach::RenderLayer::rlBG   : return bg;
+		case ach::RenderLayer::rlGame : return game;
+		case ach::RenderLayer::rlFront: return front;
+		case ach::RenderLayer::rlGUI  : return gui;
 	}
 
 	return NULL;

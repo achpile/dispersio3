@@ -34,10 +34,10 @@ ach::MapTile::~MapTile()
 ***********************************************************************/
 void ach::MapTile::render(sf::Vector2f pos)
 {
-	renderTile(back , pos);
-	renderTile(wall , pos);
-	renderTile(block, pos);
-	renderTile(decor, pos);
+	renderTile(back , pos, ach::RenderLayer::rlGame );
+	renderTile(wall , pos, ach::RenderLayer::rlGame );
+	renderTile(block, pos, ach::RenderLayer::rlFront);
+	renderTile(decor, pos, ach::RenderLayer::rlFront);
 }
 
 
@@ -47,13 +47,13 @@ void ach::MapTile::render(sf::Vector2f pos)
      * renderTile
 
 ***********************************************************************/
-void ach::MapTile::renderTile(ach::Tile *tile, sf::Vector2f pos)
+void ach::MapTile::renderTile(ach::Tile *tile, sf::Vector2f pos, ach::RenderLayer layer)
 {
 	if (!tile)
 		return;
 
 	tile->spr->spr->setPosition(pos);
-	rm->draw(tile->spr->spr, ach::RenderLayer::rlGame);
+	rm->draw(tile->spr->spr, layer);
 }
 
 

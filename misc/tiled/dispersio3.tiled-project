@@ -234,6 +234,11 @@
                     "name": "FlipY",
                     "type": "bool",
                     "value": false
+                },
+                {
+                    "name": "Foreground",
+                    "type": "bool",
+                    "value": false
                 }
             ],
             "name": "obj_decor",

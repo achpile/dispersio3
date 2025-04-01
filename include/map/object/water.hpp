@@ -6,10 +6,14 @@ namespace ach
 {
 	struct MapObjectWater : MapObject
 	{
+		sf::RectangleShape *shape;
+
+
 		 MapObjectWater(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectWater();
 
 		void touch();
+		void post();
 	};
 }
 

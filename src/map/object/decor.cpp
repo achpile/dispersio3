@@ -15,6 +15,9 @@ ach::MapObjectDecor::MapObjectDecor(ach::ProcessWorld *_world, json_t *obj) : Ma
 
 	if (json_property_get_boolean(obj, "FlipY"))
 		model->scale.y = -1.0f;
+
+	if (json_property_get_boolean(obj, "Foreground"))
+		model->layer = ach::RenderLayer::rlFront;
 }
 
 

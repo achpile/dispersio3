@@ -812,6 +812,11 @@
                          "name":"FlipY",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
                         }],
                  "rotation":0,
                  "type":"obj_decor",
