@@ -2019,6 +2019,47 @@
                  "width":16,
                  "x":1040,
                  "y":928
+                }, 
+                {
+                 "height":16,
+                 "id":149,
+                 "name":"Snake",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"left"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":880,
+                 "y":480
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5235,7 +5276,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":149,
+ "nextobjectid":150,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
