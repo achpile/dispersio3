@@ -87,5 +87,6 @@
 ***********************************************************************/
 #define PARTICLE_SPARK_SIZE   1.0f
 #define PARTICLE_SPLASH_SIZE  2.0f
+#define PARTICLE_WIND_DENSITY 0.00163f
 
 #endif

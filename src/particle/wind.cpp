@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::ParticleSystemWind::ParticleSystemWind(sf::FloatRect _rect, ach::Direction _dir, float speed) : ParticleSystem(1.0f)
 {
+	int count;
+
 	age    = 0.0f;
 	dir    = _dir;
 	rect   = _rect;
@@ -18,13 +20,10 @@ ach::ParticleSystemWind::ParticleSystemWind(sf::FloatRect _rect, ach::Direction 
 	side   = orient_rect_size(!dir_orient(dir), rect);
 	offset = orient_rect_min (!dir_orient(dir), rect);
 
-	freq   = side * 0.0005f;
+	count  = ceil(rect.width * rect.height * PARTICLE_WIND_DENSITY);
+	freq   = orient_rect_size(dir_orient(dir), rect) / (count * speed * 4.0f);
 
-	//   TODO:
-	// freq depends on side AND speed
-	// start count depends on side AND speed
-
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < count; i++)
 		add(random_float(orient_rect_min(dir_orient(dir), rect), orient_rect_max(dir_orient(dir), rect)));
 }
 
