@@ -579,7 +579,7 @@
                         {
                          "name":"Speed",
                          "type":"float",
-                         "value":100
+                         "value":50
                         }],
                  "rotation":0,
                  "type":"trigger_wind",

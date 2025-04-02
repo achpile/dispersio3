@@ -370,7 +370,7 @@
                 {
                     "name": "Speed",
                     "type": "float",
-                    "value": 100
+                    "value": 50
                 }
             ],
             "name": "trigger_wind",
