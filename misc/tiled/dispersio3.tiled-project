@@ -355,6 +355,30 @@
             "useAs": [
                 "object"
             ]
+        },
+        {
+            "color": "#ffc0bfbc",
+            "drawFill": true,
+            "id": 21,
+            "members": [
+                {
+                    "name": "Direction",
+                    "propertyType": "@direction",
+                    "type": "string",
+                    "value": "none"
+                },
+                {
+                    "name": "Speed",
+                    "type": "float",
+                    "value": 100
+                }
+            ],
+            "name": "trigger_wind",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
         }
     ]
 }
