@@ -11,6 +11,7 @@ sf::Vector2f rect_rt(sf::FloatRect r);
 sf::Vector2f rect_lb(sf::FloatRect r);
 sf::Vector2f rect_rb(sf::FloatRect r);
 
-ach::Line rect_line(sf::FloatRect r, ach::Direction d);
+float     rect_value(sf::FloatRect r, ach::Direction d);
+ach::Line rect_line (sf::FloatRect r, ach::Direction d);
 
 #endif

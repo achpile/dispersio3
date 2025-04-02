@@ -6,8 +6,9 @@ namespace ach
 {
 	struct MapObjectWind : MapObject
 	{
-		ach::Direction dir;
-		sf::Vector2f   stream;
+		ach::ParticleSystemWind *wind;
+		ach::Direction           dir;
+		sf::Vector2f             stream;
 
 		float speed;
 

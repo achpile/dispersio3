@@ -16,6 +16,7 @@
 #include "collision/filter.hpp"
 
 #include "particle/stars.hpp"
+#include "particle/wind.hpp"
 #include "particle/smoke.hpp"
 #include "particle/splash.hpp"
 

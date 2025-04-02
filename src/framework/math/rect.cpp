@@ -79,6 +79,26 @@ sf::Vector2f rect_rb(sf::FloatRect r)
 
 
 /***********************************************************************
+     * rect_value
+
+***********************************************************************/
+float rect_value(sf::FloatRect r, ach::Direction d)
+{
+	switch (d)
+	{
+		case ach::Direction::dUp   : return r.top;
+		case ach::Direction::dDown : return r.top + r.height;
+		case ach::Direction::dLeft : return r.left;
+		case ach::Direction::dRight: return r.left + r.width;
+		case ach::Direction::dCount: return 0.0f;
+	}
+
+	return 0.0f;
+}
+
+
+
+/***********************************************************************
      * rect_line
 
 ***********************************************************************/

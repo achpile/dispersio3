@@ -12,6 +12,7 @@ ach::MapObjectWind::MapObjectWind(ach::ProcessWorld *_world, json_t *obj) : MapO
 	speed = json_property_get_real(obj, "Speed");
 
 	stream = dir_vector_f(dir) * speed;
+	wind   = new ach::ParticleSystemWind(phys.rect, dir, speed);
 }
 
 
@@ -23,6 +24,7 @@ ach::MapObjectWind::MapObjectWind(ach::ProcessWorld *_world, json_t *obj) : MapO
 ***********************************************************************/
 ach::MapObjectWind::~MapObjectWind()
 {
+	delete wind;
 }
 
 
@@ -46,4 +48,6 @@ void ach::MapObjectWind::touch()
 ***********************************************************************/
 void ach::MapObjectWind::post()
 {
+	wind->update();
+	wind->render();
 }
