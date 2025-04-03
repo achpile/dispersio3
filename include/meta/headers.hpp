@@ -57,6 +57,8 @@
 #include "character/ai/cannon.hpp"
 #include "character/ai/sniper.hpp"
 #include "character/ai/jumper.hpp"
+#include "character/ai/follow.hpp"
+#include "character/ai/leveler.hpp"
 #include "character/ai/pair.hpp"
 
 #include "character/body/body.hpp"

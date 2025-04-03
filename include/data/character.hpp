@@ -12,7 +12,9 @@ namespace ach
 		aiCrawl,
 		aiCannon,
 		aiSniper,
-		aiJumper
+		aiJumper,
+		aiFollow,
+		aiLeveler
 	};
 
 

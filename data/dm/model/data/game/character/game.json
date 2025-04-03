@@ -12,7 +12,9 @@
                 "crawl",
                 "cannon",
                 "sniper",
-                "jumper"
+                "jumper",
+                "follow",
+                "leveler"
             ],
             "type": "enum"
         }
