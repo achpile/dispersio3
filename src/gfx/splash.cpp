@@ -10,7 +10,7 @@ ach::EffectSplash::EffectSplash(sf::Vector2f pos, sf::Color color, float cone, i
 {
 	particle = new ach::ParticleSystemSplash(PARTICLE_SPLASH_SIZE);
 
-	particle->layer    = ach::RenderLayer::rlFront;
+	particle->layer    = ach::RenderLayer::rlEffect;
 	particle->realtime = false;
 
 	particle->pos      = pos;

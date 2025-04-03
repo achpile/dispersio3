@@ -14,7 +14,7 @@ ach::ParticleSystemWind::ParticleSystemWind(sf::FloatRect _rect, ach::Direction 
 	dir    = _dir;
 	rect   = _rect;
 	vel    = dir_vector_f(dir) * speed * 4.0f;
-	layer  = ach::RenderLayer::rlGame;
+	layer  = ach::RenderLayer::rlEffect;
 
 	start  = rect_value(rect, !dir);
 	side   = orient_rect_size(!dir_orient(dir), rect);
@@ -86,7 +86,7 @@ void ach::ParticleSystemWind::add(float x)
 
 	particles.back()->vel   = vel * random_float(0.75f, 1.25f);
 	particles.back()->spr   = spr;
-	particles.back()->color = sf::Color(255, 255, 255, 150);
+	particles.back()->color = sf::Color(255, 255, 255, 180);
 
 	particles.back()->calc();
 }

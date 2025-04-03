@@ -48,5 +48,5 @@ void ach::MapObjectWater::touch()
 ***********************************************************************/
 void ach::MapObjectWater::post()
 {
-	rm->draw(shape, ach::RenderLayer::rlFront);
+	rm->draw(shape, ach::RenderLayer::rlEffect);
 }
