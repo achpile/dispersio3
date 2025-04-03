@@ -6,8 +6,8 @@ namespace ach
 {
 	struct AILeveler : AI
 	{
-		ach::Direction initial;
-		ach::Direction dir;
+		float cooldown;
+		float offset;
 
 
 		 AILeveler(ach::Character *_owner, json_t *obj);
@@ -15,8 +15,6 @@ namespace ach
 
 		void control();
 		void reset();
-
-		void collide(ach::PhysLine *line);
 	};
 }
 

@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::AILeveler::AILeveler(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
-	initial = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
+	cooldown = json_class_get_real(obj, "Shooting", "Cooldown");
+	offset   = json_class_get_real(obj, "Shooting", "Offset"  );
 }
 
 
@@ -31,17 +32,13 @@ ach::AILeveler::~AILeveler()
 ***********************************************************************/
 void ach::AILeveler::control()
 {
-	if (dir_orient(dir) == ach::Orientation::oHorizontal)
-		owner->dir.x = dir_sign(dir);
-	else
-	{
-		search();
+	search();
 
-		if (target)
-			owner->dir.x = math_sign(target->phys.pos.x - owner->phys.pos.x);
-	}
+	if (target)
+		owner->dir.x = math_sign(target->phys.pos.x - owner->phys.pos.x);
 
-	owner->phys.vel = dir_vector_f(dir) * owner->speed;
+	owner->aim      = sf::Vector2f(owner->dir.x, 0.0f);
+	owner->phys.vel = sf::Vector2f(0.0f, math_sign(math_sign(target->phys.pos.y - owner->phys.pos.y))) * owner->speed;
 }
 
 
@@ -53,17 +50,6 @@ void ach::AILeveler::control()
 ***********************************************************************/
 void ach::AILeveler::reset()
 {
-	dir = initial;
-}
-
-
-
-/***********************************************************************
-     * AILeveler
-     * collide
-
-***********************************************************************/
-void ach::AILeveler::collide(ach::PhysLine*)
-{
-	dir = !dir;
+	owner->weapon->setCooldown(cooldown);
+	owner->weapon->setOffset  (offset);
 }
