@@ -1,0 +1,12 @@
+{
+    "EnemyRobotPuffer": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyRobotPuffer",
+        "Type": "simple"
+    }
+}

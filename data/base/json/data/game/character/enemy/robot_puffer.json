@@ -1,0 +1,18 @@
+{
+    "RobotPuffer": {
+        "Appearance": {
+            "Model": "EnemyRobotPuffer"
+        },
+        "Game": {
+            "AI": "idle",
+            "Hitbox": {
+                "X": 10,
+                "Y": 10
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 30
+        }
+    }
+}
