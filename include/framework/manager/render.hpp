@@ -8,6 +8,7 @@ namespace ach
 	{
 		rlBG,
 		rlGame,
+		rlEffect,
 		rlFront,
 		rlGUI
 	};
@@ -17,6 +18,7 @@ namespace ach
 	{
 		ach::Layer *bg;
 		ach::Layer *game;
+		ach::Layer *effect;
 		ach::Layer *front;
 		ach::Layer *gui;
 
