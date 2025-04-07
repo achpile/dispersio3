@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="96" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="152">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="96" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="153">
  <editorsettings>
   <export target="../../../data/base/map/03.2.cave.tmj" format="json"/>
  </editorsettings>
@@ -363,6 +363,7 @@
   <object id="119" name="CollectBag" type="obj_collectable" x="1264" y="544" width="16" height="16"/>
   <object id="120" type="trigger_water" x="960" y="440" width="192" height="88"/>
   <object id="121" type="trigger_goal" x="848" y="368" width="48" height="48"/>
+  <object id="152" name="CollectBag" type="obj_collectable" x="1200" y="800" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
   <object id="10" name="Snake" type="character" x="512" y="144" width="16" height="16">

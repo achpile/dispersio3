@@ -759,6 +759,17 @@
                  "width":48,
                  "x":848,
                  "y":368
+                }, 
+                {
+                 "height":16,
+                 "id":152,
+                 "name":"CollectBag",
+                 "rotation":0,
+                 "type":"obj_collectable",
+                 "visible":true,
+                 "width":16,
+                 "x":1200,
+                 "y":800
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5336,7 +5347,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":152,
+ "nextobjectid":153,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
