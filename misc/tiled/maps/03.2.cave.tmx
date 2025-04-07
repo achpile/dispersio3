@@ -345,7 +345,7 @@
   </object>
   <object id="69" type="obj_checkpoint" x="720" y="944" width="16" height="16"/>
   <object id="76" type="trigger_water" x="1296" y="1048" width="80" height="72"/>
-  <object id="77" name="BlockDev" type="block_break" x="1136" y="912" width="16" height="48">
+  <object id="77" name="BlockRockBig" type="block_break" x="1136" y="912" width="16" height="48">
    <properties>
     <property name="Secret" type="bool" value="true"/>
    </properties>
