@@ -149,6 +149,9 @@ void ach::Map::viewport(sf::Vector2f v)
 ***********************************************************************/
 void ach::Map::touch(ach::Character* character)
 {
+	if (!character->alive)
+		return;
+
 	list_foreach(objects)
 		if (objects[i]->phys.rect.intersects(character->phys.rect))
 			objects[i]->touch();
@@ -163,6 +166,9 @@ void ach::Map::touch(ach::Character* character)
 ***********************************************************************/
 void ach::Map::use(ach::Character* character)
 {
+	if (!character->alive)
+		return;
+
 	list_foreach(objects)
 		if (objects[i]->phys.rect.intersects(character->phys.rect))
 		{
