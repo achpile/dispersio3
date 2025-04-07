@@ -2,8 +2,8 @@
     "03-2-Cave": {
         "Filename": "map/03.2.cave.tmj",
         "Spawn": {
-            "X": 28,
-            "Y": 40
+            "X": 20,
+            "Y": 51
         }
     }
 }
