@@ -244,7 +244,11 @@
    </properties>
   </object>
   <object id="121" name="BlockDevYoku" type="block_yoku" x="96" y="112" width="16" height="16"/>
-  <object id="123" name="BlockDevYoku" type="block_yoku" x="304" y="144" width="16" height="16"/>
+  <object id="123" name="BlockDevYoku" type="block_yoku" x="304" y="144" width="16" height="16">
+   <properties>
+    <property name="Offset" type="float" value="-1"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="7" name="characters">
   <object id="13" name="Bat" type="character" x="544" y="48" width="16" height="16">

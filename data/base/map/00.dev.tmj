@@ -569,6 +569,22 @@
                  "height":16,
                  "id":121,
                  "name":"BlockDevYoku",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }],
                  "rotation":0,
                  "type":"block_yoku",
                  "visible":true,
@@ -580,6 +596,22 @@
                  "height":16,
                  "id":123,
                  "name":"BlockDevYoku",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":2
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":-1
+                        }],
                  "rotation":0,
                  "type":"block_yoku",
                  "visible":true,

@@ -168,6 +168,21 @@
             "drawFill": true,
             "id": 22,
             "members": [
+                {
+                    "name": "Cooldown",
+                    "type": "float",
+                    "value": 2
+                },
+                {
+                    "name": "Duration",
+                    "type": "float",
+                    "value": 2
+                },
+                {
+                    "name": "Offset",
+                    "type": "float",
+                    "value": 1
+                }
             ],
             "name": "block_yoku",
             "type": "class",

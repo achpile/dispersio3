@@ -7,6 +7,11 @@ namespace ach
 	struct MapObjectYoku : MapObject
 	{
 		ach::DataSound *sfx;
+		ach::Framer     timer;
+
+		float duration;
+		float cooldown;
+		float offset;
 
 
 		 MapObjectYoku(ach::ProcessWorld *_world, json_t *obj);
@@ -14,6 +19,8 @@ namespace ach
 
 		void reset();
 		void handle();
+
+		void state();
 	};
 }
 
