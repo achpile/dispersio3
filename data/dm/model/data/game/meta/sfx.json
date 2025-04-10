@@ -36,5 +36,12 @@
             "default": "Splash",
             "type": "link"
         }
+    },
+    "Yoku": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Yoku",
+            "type": "link"
+        }
     }
 }

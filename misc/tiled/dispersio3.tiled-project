@@ -164,6 +164,19 @@
             ]
         },
         {
+            "color": "#ffffbe6f",
+            "drawFill": true,
+            "id": 22,
+            "members": [
+            ],
+            "name": "block_yoku",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#fff66151",
             "drawFill": true,
             "id": 4,

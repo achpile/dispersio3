@@ -566,27 +566,26 @@
                  "y":168
                 }, 
                 {
-                 "height":80,
-                 "id":118,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"Direction",
-                         "propertytype":"@direction",
-                         "type":"string",
-                         "value":"left"
-                        }, 
-                        {
-                         "name":"Speed",
-                         "type":"float",
-                         "value":50
-                        }],
+                 "height":16,
+                 "id":121,
+                 "name":"BlockDevYoku",
                  "rotation":0,
-                 "type":"trigger_wind",
+                 "type":"block_yoku",
                  "visible":true,
-                 "width":192,
-                 "x":128,
-                 "y":32
+                 "width":16,
+                 "x":96,
+                 "y":112
+                }, 
+                {
+                 "height":16,
+                 "id":123,
+                 "name":"BlockDevYoku",
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":304,
+                 "y":144
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1090,88 +1089,6 @@
                  "width":16,
                  "x":496,
                  "y":128
-                }, 
-                {
-                 "height":16,
-                 "id":119,
-                 "name":"RobotOcto",
-                 "properties":[
-                        {
-                         "name":"Jumping",
-                         "propertytype":"#jumping",
-                         "type":"class",
-                         "value":
-                            {
-                             "Cooldown":0.5
-                            }
-                        }, 
-                        {
-                         "name":"Moving",
-                         "propertytype":"#moving",
-                         "type":"class",
-                         "value":
-                            {
-                             "Direction":"none"
-                            }
-                        }, 
-                        {
-                         "name":"Shooting",
-                         "propertytype":"#shooting",
-                         "type":"class",
-                         "value":
-                            {
-                             "Aim":"none",
-                             "Cooldown":0.8,
-                             "Offset":0.8
-                            }
-                        }],
-                 "rotation":0,
-                 "type":"character",
-                 "visible":true,
-                 "width":16,
-                 "x":352,
-                 "y":128
-                }, 
-                {
-                 "height":16,
-                 "id":120,
-                 "name":"RobotPuffer",
-                 "properties":[
-                        {
-                         "name":"Jumping",
-                         "propertytype":"#jumping",
-                         "type":"class",
-                         "value":
-                            {
-                             "Cooldown":0.5
-                            }
-                        }, 
-                        {
-                         "name":"Moving",
-                         "propertytype":"#moving",
-                         "type":"class",
-                         "value":
-                            {
-                             "Direction":"none"
-                            }
-                        }, 
-                        {
-                         "name":"Shooting",
-                         "propertytype":"#shooting",
-                         "type":"class",
-                         "value":
-                            {
-                             "Aim":"none",
-                             "Cooldown":0.8,
-                             "Offset":0.8
-                            }
-                        }],
-                 "rotation":0,
-                 "type":"character",
-                 "visible":true,
-                 "width":16,
-                 "x":80,
-                 "y":96
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1615,7 +1532,7 @@
          "y":0
         }],
  "nextlayerid":10,
- "nextobjectid":121,
+ "nextobjectid":124,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

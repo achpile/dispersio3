@@ -83,6 +83,7 @@
 #include "map/object/moving.hpp"
 #include "map/object/fragile.hpp"
 #include "map/object/break.hpp"
+#include "map/object/yoku.hpp"
 
 #include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"
