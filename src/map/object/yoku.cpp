@@ -68,6 +68,7 @@ void ach::MapObjectYoku::handle()
 
 	if (alive)
 	{
+		push(&world->player->phys);
 		model->anim.reset();
 		sm->play(sfx->snd);
 	}
@@ -85,4 +86,36 @@ void ach::MapObjectYoku::state()
 	timer.set(alive ? duration : cooldown);
 
 	solid = alive;
+}
+
+
+
+/***********************************************************************
+     * MapObjectYoku
+     * push
+
+***********************************************************************/
+void ach::MapObjectYoku::push(ach::Phys *character)
+{
+	if (!phys.rect.contains(character->pos))
+		return;
+
+	sf::Vector2f off = sf::Vector2f(0.0f, 0.0f);
+
+	sf::Vector2f lt  = rect_lt(phys.rect) - character->pos;
+	sf::Vector2f rb  = rect_rb(phys.rect) - character->pos;
+
+	lt.x -= character->rect.width  / 2.0f;
+	lt.y -= character->rect.height / 2.0f;
+	rb.x += character->rect.width  / 2.0f;
+	rb.y += character->rect.height / 2.0f;
+
+	off.x = (fabs(lt.x) < fabs(rb.x)) ? lt.x : rb.x;
+	off.y = (fabs(lt.y) < fabs(rb.y)) ? lt.y : rb.y;
+
+	if (fabs(off.x) < fabs(off.y)) off.y = 0.0f;
+	else                           off.x = 0.0f;
+
+	character->pos += off;
+	character->calc();
 }

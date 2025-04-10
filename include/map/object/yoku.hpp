@@ -21,6 +21,7 @@ namespace ach
 		void handle();
 
 		void state();
+		void push(ach::Phys *character);
 	};
 }
 
