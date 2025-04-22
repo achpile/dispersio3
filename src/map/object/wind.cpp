@@ -36,6 +36,9 @@ ach::MapObjectWind::~MapObjectWind()
 ***********************************************************************/
 void ach::MapObjectWind::touch()
 {
+	if (dir == ach::Direction::dUp && world->player->phys.grounded)
+		return;
+
 	world->player->phys.pos += stream * tm->get();
 }
 
