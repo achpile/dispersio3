@@ -34,7 +34,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 144, 43, 43, 43, 43, 144, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 144, 43, 43, 43, 144, 43, 43, 43, 43, 43, 43, 43, 144, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 144, 43, 144, 43, 144, 43, 144, 43, 144, 43, 144, 43, 144, 43, 144, 43, 144, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 145, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 147, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -390,7 +390,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -423,7 +423,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -456,7 +456,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -707,7 +707,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -740,7 +740,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -773,7 +773,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -806,7 +806,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -839,7 +839,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -927,7 +927,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1081,7 +1081,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1114,7 +1114,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1147,7 +1147,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1213,7 +1213,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1279,7 +1279,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1859,7 +1859,7 @@
                 {
                  "height":16,
                  "id":134,
-                 "name":"BlockYokuConcrete",
+                 "name":"BlockYokuConcreteHLeft",
                  "properties":[
                         {
                          "name":"Cooldown",
@@ -1880,13 +1880,13 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
                  "visible":true,
                  "width":16,
-                 "x":432,
+                 "x":416,
                  "y":496
                 }, 
                 {
@@ -1980,7 +1980,7 @@
                 {
                  "height":16,
                  "id":169,
-                 "name":"BlockYokuConcrete",
+                 "name":"BlockYokuConcreteHMid",
                  "properties":[
                         {
                          "name":"Cooldown",
@@ -2001,7 +2001,73 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":432,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":170,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":448,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":171,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2012,8 +2078,8 @@
                 }, 
                 {
                  "height":16,
-                 "id":170,
-                 "name":"BlockYokuConcrete",
+                 "id":172,
+                 "name":"BlockYokuConcreteHMid",
                  "properties":[
                         {
                          "name":"Cooldown",
@@ -2034,7 +2100,40 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":480,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":173,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2045,8 +2144,8 @@
                 }, 
                 {
                  "height":16,
-                 "id":171,
-                 "name":"BlockYokuConcrete",
+                 "id":174,
+                 "name":"BlockYokuConcreteHMid",
                  "properties":[
                         {
                          "name":"Cooldown",
@@ -2067,7 +2166,40 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":512,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":175,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2078,140 +2210,8 @@
                 }, 
                 {
                  "height":16,
-                 "id":172,
-                 "name":"BlockYokuConcrete",
-                 "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":0.4
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":0.8
-                        }, 
-                        {
-                         "name":"Offset",
-                         "type":"float",
-                         "value":1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
-                        }],
-                 "rotation":0,
-                 "type":"block_yoku",
-                 "visible":true,
-                 "width":16,
-                 "x":560,
-                 "y":496
-                }, 
-                {
-                 "height":16,
-                 "id":173,
-                 "name":"BlockYokuConcrete",
-                 "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":0.4
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":0.8
-                        }, 
-                        {
-                         "name":"Offset",
-                         "type":"float",
-                         "value":1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
-                        }],
-                 "rotation":0,
-                 "type":"block_yoku",
-                 "visible":true,
-                 "width":16,
-                 "x":592,
-                 "y":496
-                }, 
-                {
-                 "height":16,
-                 "id":174,
-                 "name":"BlockYokuConcrete",
-                 "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":0.4
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":0.8
-                        }, 
-                        {
-                         "name":"Offset",
-                         "type":"float",
-                         "value":1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
-                        }],
-                 "rotation":0,
-                 "type":"block_yoku",
-                 "visible":true,
-                 "width":16,
-                 "x":624,
-                 "y":496
-                }, 
-                {
-                 "height":16,
-                 "id":175,
-                 "name":"BlockYokuConcrete",
-                 "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":0.4
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":0.8
-                        }, 
-                        {
-                         "name":"Offset",
-                         "type":"float",
-                         "value":1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
-                        }],
-                 "rotation":0,
-                 "type":"block_yoku",
-                 "visible":true,
-                 "width":16,
-                 "x":656,
-                 "y":496
-                }, 
-                {
-                 "height":16,
                  "id":176,
-                 "name":"BlockYokuConcrete",
+                 "name":"BlockYokuConcreteHRight",
                  "properties":[
                         {
                          "name":"Cooldown",
@@ -2232,13 +2232,13 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
                  "visible":true,
                  "width":16,
-                 "x":688,
+                 "x":704,
                  "y":496
                 }, 
                 {
@@ -2276,7 +2276,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2309,7 +2309,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"horizontal"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2544,7 +2544,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2577,7 +2577,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2610,7 +2610,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2643,7 +2643,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2676,7 +2676,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2709,7 +2709,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2742,7 +2742,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2775,7 +2775,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2808,7 +2808,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2841,7 +2841,7 @@
                          "name":"Push",
                          "propertytype":"@orientation",
                          "type":"string",
-                         "value":"none"
+                         "value":"vertical"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -2867,7 +2867,7 @@
                         {
                          "name":"Spawn",
                          "type":"float",
-                         "value":0.5
+                         "value":1
                         }, 
                         {
                          "name":"Speed",
@@ -2891,6 +2891,336 @@
                  "width":48,
                  "x":1776,
                  "y":32
+                }, 
+                {
+                 "height":16,
+                 "id":224,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":544,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":225,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":560,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":226,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":576,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":227,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":592,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":228,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":608,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":229,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":624,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":230,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":640,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":231,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":656,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":232,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":672,
+                 "y":496
+                }, 
+                {
+                 "height":16,
+                 "id":233,
+                 "name":"BlockYokuConcreteHMid",
+                 "properties":[
+                        {
+                         "name":"Cooldown",
+                         "type":"float",
+                         "value":0.4
+                        }, 
+                        {
+                         "name":"Duration",
+                         "type":"float",
+                         "value":0.8
+                        }, 
+                        {
+                         "name":"Offset",
+                         "type":"float",
+                         "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"block_yoku",
+                 "visible":true,
+                 "width":16,
+                 "x":688,
+                 "y":496
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5262,7 +5592,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":224,
+ "nextobjectid":234,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

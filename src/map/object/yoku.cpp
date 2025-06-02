@@ -122,6 +122,7 @@ void ach::MapObjectYoku::push(ach::Phys *character)
 		default:
 			if (fabs(off.x) < fabs(off.y)) off.y = 0.0f;
 			else                           off.x = 0.0f;
+		break;
 	}
 
 	character->pos += off;

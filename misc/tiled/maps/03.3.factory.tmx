@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="120" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="224">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="120" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="234">
  <editorsettings>
   <export target="../../../data/base/map/03.3.factory.tmj" format="json"/>
  </editorsettings>
@@ -45,7 +45,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,144,43,43,43,43,144,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,144,43,43,43,144,43,43,43,43,43,43,43,144,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,144,43,144,43,144,43,144,43,144,43,144,43,144,43,144,43,144,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,145,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,147,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,43,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -318,9 +318,21 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="2" name="DecorRocketMain" type="obj_decor" x="48" y="960" width="96" height="160"/>
-  <object id="6" name="BlockYokuConcreteVBot" type="block_yoku" x="352" y="1072" width="16" height="16"/>
-  <object id="7" name="BlockYokuConcreteVTop" type="block_yoku" x="352" y="1040" width="16" height="16"/>
-  <object id="8" name="BlockYokuConcreteVMid" type="block_yoku" x="352" y="1056" width="16" height="16"/>
+  <object id="6" name="BlockYokuConcreteVBot" type="block_yoku" x="352" y="1072" width="16" height="16">
+   <properties>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
+   </properties>
+  </object>
+  <object id="7" name="BlockYokuConcreteVTop" type="block_yoku" x="352" y="1040" width="16" height="16">
+   <properties>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
+   </properties>
+  </object>
+  <object id="8" name="BlockYokuConcreteVMid" type="block_yoku" x="352" y="1056" width="16" height="16">
+   <properties>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
+   </properties>
+  </object>
   <object id="9" name="BlockYokuConcrete" type="block_yoku" x="496" y="1088" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="3"/>
@@ -373,6 +385,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="0"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="41" name="BlockYokuConcreteHMid" type="block_yoku" x="944" y="1104" width="16" height="16">
@@ -380,6 +393,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="0"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="42" name="BlockYokuConcreteHRight" type="block_yoku" x="960" y="1104" width="16" height="16">
@@ -387,6 +401,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="0"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="43" name="BlockYokuConcreteHLeft" type="block_yoku" x="976" y="1104" width="16" height="16">
@@ -394,6 +409,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="44" name="BlockYokuConcreteHMid" type="block_yoku" x="992" y="1104" width="16" height="16">
@@ -401,6 +417,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="45" name="BlockYokuConcrete" type="block_yoku" x="896" y="944" width="16" height="16">
@@ -417,6 +434,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="53" name="CollectBag" type="obj_collectable" x="800" y="912" width="16" height="16"/>
@@ -444,6 +462,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
   <object id="76" name="BlockYokuConcrete" type="block_yoku" x="1456" y="672" width="16" height="16">
@@ -451,6 +470,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
   <object id="77" name="BlockYokuConcrete" type="block_yoku" x="1456" y="720" width="16" height="16">
@@ -458,6 +478,7 @@
     <property name="Cooldown" type="float" value="1"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="0"/>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
   <object id="83" name="CollectBag" type="obj_collectable" x="1248" y="672" width="16" height="16"/>
@@ -468,6 +489,7 @@
     <property name="Cooldown" type="float" value="12"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="107" name="BlockYokuConcrete" type="block_yoku" x="1456" y="464" width="16" height="16">
@@ -482,6 +504,7 @@
     <property name="Cooldown" type="float" value="12"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="3"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="109" name="BlockYokuConcrete" type="block_yoku" x="1456" y="400" width="16" height="16">
@@ -595,11 +618,12 @@
     <property name="Speed" type="float" value="35"/>
    </properties>
   </object>
-  <object id="134" name="BlockYokuConcrete" type="block_yoku" x="432" y="496" width="16" height="16">
+  <object id="134" name="BlockYokuConcreteHLeft" type="block_yoku" x="416" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="140" name="BlockYokuConcrete" type="block_yoku" x="512" y="448" width="16" height="16">
@@ -618,60 +642,68 @@
   </object>
   <object id="162" name="CollectBag" type="obj_collectable" x="560" y="384" width="16" height="16"/>
   <object id="168" type="obj_checkpoint" x="736" y="400" width="16" height="16"/>
-  <object id="169" name="BlockYokuConcrete" type="block_yoku" x="464" y="496" width="16" height="16">
+  <object id="169" name="BlockYokuConcreteHMid" type="block_yoku" x="432" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="170" name="BlockYokuConcrete" type="block_yoku" x="496" y="496" width="16" height="16">
+  <object id="170" name="BlockYokuConcreteHMid" type="block_yoku" x="448" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="171" name="BlockYokuConcrete" type="block_yoku" x="528" y="496" width="16" height="16">
+  <object id="171" name="BlockYokuConcreteHMid" type="block_yoku" x="464" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="172" name="BlockYokuConcrete" type="block_yoku" x="560" y="496" width="16" height="16">
+  <object id="172" name="BlockYokuConcreteHMid" type="block_yoku" x="480" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="173" name="BlockYokuConcrete" type="block_yoku" x="592" y="496" width="16" height="16">
+  <object id="173" name="BlockYokuConcreteHMid" type="block_yoku" x="496" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="174" name="BlockYokuConcrete" type="block_yoku" x="624" y="496" width="16" height="16">
+  <object id="174" name="BlockYokuConcreteHMid" type="block_yoku" x="512" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="175" name="BlockYokuConcrete" type="block_yoku" x="656" y="496" width="16" height="16">
+  <object id="175" name="BlockYokuConcreteHMid" type="block_yoku" x="528" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="176" name="BlockYokuConcrete" type="block_yoku" x="688" y="496" width="16" height="16">
+  <object id="176" name="BlockYokuConcreteHRight" type="block_yoku" x="704" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.8"/>
     <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="181" type="obj_checkpoint" x="432" y="240" width="16" height="16"/>
@@ -680,6 +712,7 @@
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.85"/>
     <property name="Offset" type="float" value="-1"/>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
   <object id="183" name="BlockYokuConcreteVTop" type="block_yoku" x="704" y="192" width="16" height="16">
@@ -687,6 +720,7 @@
     <property name="Cooldown" type="float" value="0.4"/>
     <property name="Duration" type="float" value="0.85"/>
     <property name="Offset" type="float" value="-1"/>
+    <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
   <object id="188" name="MovingMetal" type="block_moving" x="832" y="224" width="264" height="16">
@@ -723,6 +757,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="2"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="213" name="BlockYokuConcrete" type="block_yoku" x="1232" y="160" width="16" height="16">
@@ -730,6 +765,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="2.5"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="214" name="BlockYokuConcrete" type="block_yoku" x="1248" y="160" width="16" height="16">
@@ -737,6 +773,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="3"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="215" name="BlockYokuConcrete" type="block_yoku" x="1264" y="160" width="16" height="16">
@@ -744,6 +781,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="3.5"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="216" name="BlockYokuConcrete" type="block_yoku" x="1280" y="160" width="16" height="16">
@@ -751,6 +789,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="4"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="217" name="BlockYokuConcrete" type="block_yoku" x="1392" y="160" width="16" height="16">
@@ -758,6 +797,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="6"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="218" name="BlockYokuConcrete" type="block_yoku" x="1408" y="160" width="16" height="16">
@@ -765,6 +805,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="6.5"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="219" name="BlockYokuConcrete" type="block_yoku" x="1424" y="160" width="16" height="16">
@@ -772,6 +813,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="7"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="220" name="BlockYokuConcrete" type="block_yoku" x="1440" y="160" width="16" height="16">
@@ -779,6 +821,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="8"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="221" name="BlockYokuConcrete" type="block_yoku" x="1456" y="160" width="16" height="16">
@@ -786,6 +829,7 @@
     <property name="Cooldown" type="float" value="8.5"/>
     <property name="Duration" type="float" value="1"/>
     <property name="Offset" type="float" value="7.5"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
   <object id="222" name="MovingMetal" type="block_moving" x="1712" y="80" width="32" height="144">
@@ -795,11 +839,91 @@
       <property name="Direction" propertytype="@direction" value="down"/>
      </properties>
     </property>
-    <property name="Spawn" type="float" value="0.5"/>
+    <property name="Spawn" type="float" value="1"/>
     <property name="Speed" type="float" value="75"/>
    </properties>
   </object>
   <object id="223" type="trigger_goal" x="1776" y="32" width="48" height="48"/>
+  <object id="224" name="BlockYokuConcreteHMid" type="block_yoku" x="544" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="225" name="BlockYokuConcreteHMid" type="block_yoku" x="560" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="226" name="BlockYokuConcreteHMid" type="block_yoku" x="576" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="227" name="BlockYokuConcreteHMid" type="block_yoku" x="592" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="228" name="BlockYokuConcreteHMid" type="block_yoku" x="608" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="229" name="BlockYokuConcreteHMid" type="block_yoku" x="624" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="230" name="BlockYokuConcreteHMid" type="block_yoku" x="640" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="231" name="BlockYokuConcreteHMid" type="block_yoku" x="656" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="232" name="BlockYokuConcreteHMid" type="block_yoku" x="672" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
+  <object id="233" name="BlockYokuConcreteHMid" type="block_yoku" x="688" y="496" width="16" height="16">
+   <properties>
+    <property name="Cooldown" type="float" value="0.4"/>
+    <property name="Duration" type="float" value="0.8"/>
+    <property name="Offset" type="float" value="1"/>
+    <property name="Push" propertytype="@orientation" value="vertical"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="characters">
   <object id="12" name="Cannon2" type="character" x="496" y="928" width="16" height="16">
