@@ -12,6 +12,7 @@ ach::MapObjectYoku::MapObjectYoku(ach::ProcessWorld *_world, json_t *obj) : MapO
 	cooldown = json_property_get_real(obj, "Cooldown");
 	offset   = json_property_get_real(obj, "Offset"  );
 
+	pushing  = pair_get_enum(json_property_get_string(obj, "Push"), pairOrientation);
 	sfx      = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Yoku"));
 
 	setSheet(json_object_get_string(obj, "name"));
@@ -113,8 +114,15 @@ void ach::MapObjectYoku::push(ach::Phys *character)
 	off.x = (fabs(lt.x) < fabs(rb.x)) ? lt.x : rb.x;
 	off.y = (fabs(lt.y) < fabs(rb.y)) ? lt.y : rb.y;
 
-	if (fabs(off.x) < fabs(off.y)) off.y = 0.0f;
-	else                           off.x = 0.0f;
+	switch (pushing)
+	{
+		case ach::oVertical  : off.x = 0.0f; break;
+		case ach::oHorizontal: off.y = 0.0f; break;
+
+		default:
+			if (fabs(off.x) < fabs(off.y)) off.y = 0.0f;
+			else                           off.x = 0.0f;
+	}
 
 	character->pos += off;
 	character->calc();

@@ -6,8 +6,9 @@ namespace ach
 {
 	struct MapObjectYoku : MapObject
 	{
-		ach::DataSound *sfx;
-		ach::Framer     timer;
+		ach::DataSound   *sfx;
+		ach::Framer       timer;
+		ach::Orientation  pushing;
 
 		float duration;
 		float cooldown;

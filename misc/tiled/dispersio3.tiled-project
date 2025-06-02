@@ -182,6 +182,12 @@
                     "name": "Offset",
                     "type": "float",
                     "value": 1
+                },
+                {
+                    "name": "Push",
+                    "propertyType": "@orientation",
+                    "type": "string",
+                    "value": "none"
                 }
             ],
             "name": "block_yoku",
