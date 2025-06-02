@@ -5620,7 +5620,7 @@
  "nextobjectid":163,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":16,
  "tilesets":[
         {

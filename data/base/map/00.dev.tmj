@@ -584,6 +584,12 @@
                          "name":"Offset",
                          "type":"float",
                          "value":1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"none"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -611,6 +617,12 @@
                          "name":"Offset",
                          "type":"float",
                          "value":-1
+                        }, 
+                        {
+                         "name":"Push",
+                         "propertytype":"@orientation",
+                         "type":"string",
+                         "value":"none"
                         }],
                  "rotation":0,
                  "type":"block_yoku",
@@ -1567,7 +1579,7 @@
  "nextobjectid":124,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":16,
  "tilesets":[
         {

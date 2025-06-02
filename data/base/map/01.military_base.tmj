@@ -5504,7 +5504,7 @@
  "nextobjectid":203,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.11.2",
+ "tiledversion":"1.11.0",
  "tileheight":16,
  "tilesets":[
         {
@@ -6597,7 +6597,7 @@
          "margin":0,
          "name":"Brick",
          "spacing":0,
-         "tilecount":21,
+         "tilecount":20,
          "tileheight":16,
          "tiles":[
                 {
@@ -6717,12 +6717,6 @@
                 {
                  "id":14,
                  "image":"..\/gfx\/game\/tile\/brick\/red_s22_rb_1.png",
-                 "imageheight":16,
-                 "imagewidth":16
-                }, 
-                {
-                 "id":20,
-                 "image":"..\/gfx\/game\/tile\/brick\/back.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],
