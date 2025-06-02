@@ -98,7 +98,7 @@ void ach::MapObjectYoku::state()
 ***********************************************************************/
 void ach::MapObjectYoku::push(ach::Phys *character)
 {
-	if (!phys.rect.contains(character->pos))
+	if (!phys.rect.intersects(character->rect))
 		return;
 
 	sf::Vector2f off = sf::Vector2f(0.0f, 0.0f);
