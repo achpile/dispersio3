@@ -84,6 +84,7 @@
 #include "map/object/fragile.hpp"
 #include "map/object/break.hpp"
 #include "map/object/yoku.hpp"
+#include "map/object/antigrav.hpp"
 
 #include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"

@@ -243,8 +243,8 @@
     <property name="Foreground" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="121" name="BlockDevYoku" type="block_yoku" x="96" y="112" width="16" height="16"/>
-  <object id="123" name="BlockDevYoku" type="block_yoku" x="304" y="144" width="16" height="16">
+  <object id="121" name="AntigravUp" type="obj_antigrav" x="0" y="240" width="32" height="16"/>
+  <object id="123" name="AntigravDown" type="obj_antigrav" x="208" y="32" width="32" height="16">
    <properties>
     <property name="Offset" type="float" value="-1"/>
    </properties>

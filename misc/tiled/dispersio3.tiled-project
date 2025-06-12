@@ -231,6 +231,19 @@
             ]
         },
         {
+            "color": "#ff613583",
+            "drawFill": true,
+            "id": 23,
+            "members": [
+            ],
+            "name": "obj_antigrav",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffdc8add",
             "drawFill": true,
             "id": 5,

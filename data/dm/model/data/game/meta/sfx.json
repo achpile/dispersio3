@@ -2,6 +2,13 @@
     "@attr": {
         "type": "object"
     },
+    "Antigrav": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Antigrav",
+            "type": "link"
+        }
+    },
     "Break": {
         "@attr": {
             "data": "Data.SFX",

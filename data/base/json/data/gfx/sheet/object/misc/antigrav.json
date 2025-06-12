@@ -1,0 +1,10 @@
+{
+    "AntigravDown": {
+        "Filename": "gfx/game/sheet/object/misc/antigrav_down.png",
+        "Frames": 3
+    },
+    "AntigravUp": {
+        "Filename": "gfx/game/sheet/object/misc/antigrav_up.png",
+        "Frames": 3
+    }
+}

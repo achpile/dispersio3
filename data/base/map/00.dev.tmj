@@ -568,68 +568,30 @@
                 {
                  "height":16,
                  "id":121,
-                 "name":"BlockDevYoku",
-                 "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":2
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":2
-                        }, 
-                        {
-                         "name":"Offset",
-                         "type":"float",
-                         "value":1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
-                        }],
+                 "name":"AntigravUp",
                  "rotation":0,
-                 "type":"block_yoku",
+                 "type":"obj_antigrav",
                  "visible":true,
-                 "width":16,
-                 "x":96,
-                 "y":112
+                 "width":32,
+                 "x":0,
+                 "y":240
                 }, 
                 {
                  "height":16,
                  "id":123,
-                 "name":"BlockDevYoku",
+                 "name":"AntigravDown",
                  "properties":[
-                        {
-                         "name":"Cooldown",
-                         "type":"float",
-                         "value":2
-                        }, 
-                        {
-                         "name":"Duration",
-                         "type":"float",
-                         "value":2
-                        }, 
                         {
                          "name":"Offset",
                          "type":"float",
                          "value":-1
-                        }, 
-                        {
-                         "name":"Push",
-                         "propertytype":"@orientation",
-                         "type":"string",
-                         "value":"none"
                         }],
                  "rotation":0,
-                 "type":"block_yoku",
+                 "type":"obj_antigrav",
                  "visible":true,
-                 "width":16,
-                 "x":304,
-                 "y":144
+                 "width":32,
+                 "x":208,
+                 "y":32
                 }],
          "opacity":1,
          "type":"objectgroup",
