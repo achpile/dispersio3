@@ -85,6 +85,7 @@ void ach::BodyPlayer::spawn()
 void ach::BodyPlayer::flip()
 {
 	model->scale.x = owner->dir.x;
+	model->scale.y = owner->dir.y;
 }
 
 

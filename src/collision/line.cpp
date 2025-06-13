@@ -154,7 +154,7 @@ bool ach::PhysLine::collide(ach::Phys *p)
 	if (f < 0)
 		return false;
 
-	if (o == ach::Orientation::oHorizontal && d < 0 && p->vel.y < 0.0f)
+	if (o == ach::Orientation::oHorizontal && d * p->gravity < 0 && p->vel.y * p->gravity < 0.0f)
 		return false;
 
 	if (type == ach::PhysType::ptDeath)

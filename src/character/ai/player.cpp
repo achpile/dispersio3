@@ -8,8 +8,9 @@
 ***********************************************************************/
 ach::AIPlayer::AIPlayer(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
+	splash  = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Splash"));
+
 	owner->enemy = false;
-	splash = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Splash"));
 }
 
 
@@ -34,9 +35,10 @@ void ach::AIPlayer::physics()
 {
 	ground();
 
-	owner->phys.acc.y = owner->base->gravity * (owner->phys.water ? PHYS_WATER : 1.0f);
+	owner->dir.y      = owner->phys.gravity;
+	owner->phys.acc.y = owner->base->gravity * (owner->phys.water ? PHYS_WATER : 1.0f) * owner->phys.gravity;
+	owner->jumping    = owner->base->jumping * (owner->phys.water ? PHYS_WATER : 1.0f) * owner->phys.gravity;
 	owner->speed      = owner->base->speed   * (owner->phys.water ? PHYS_WATER : 1.0f);
-	owner->jumping    = owner->base->jumping * (owner->phys.water ? PHYS_WATER : 1.0f);
 
 	if (owner->phys.water)
 	{

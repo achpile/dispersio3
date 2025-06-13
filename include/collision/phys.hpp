@@ -14,6 +14,7 @@ namespace ach
 		sf::FloatRect rect;
 
 		float slope;
+		int   gravity;
 
 		bool  grounded;
 		bool  moving;

@@ -32,7 +32,8 @@ ach::MapObjectAntigrav::~MapObjectAntigrav()
      * stand
 
 ***********************************************************************/
-void ach::MapObjectAntigrav::stand(ach::Phys*)
+void ach::MapObjectAntigrav::stand(ach::Phys *p)
 {
+	p->gravity *= -1;
 	sm->play(sfx->snd);
 }
