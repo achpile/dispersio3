@@ -49,7 +49,7 @@ void ach::AI::update()
 void ach::AI::ground()
 {
 	if (owner->phys.grounded)
-		owner->phys.vel.y = 2.0f * owner->phys.slope * owner->speed;
+		owner->phys.vel.y = 2.0f * owner->phys.slope * owner->speed * owner->phys.gravity;
 }
 
 
