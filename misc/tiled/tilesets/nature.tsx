@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.2" name="Nature" tilewidth="16" tileheight="16" tilecount="28" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Nature" tilewidth="16" tileheight="16" tilecount="31" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/nature/dirt_top.png" width="16" height="16"/>
@@ -40,6 +40,9 @@
  <tile id="24">
   <image source="../../../data/base/gfx/game/tile/nature/rock_solo.png" width="16" height="16"/>
  </tile>
+ <tile id="29">
+  <image source="../../../data/base/gfx/game/tile/nature/rock_bot_2.png" width="16" height="16"/>
+ </tile>
  <tile id="26">
   <image source="../../../data/base/gfx/game/tile/nature/rock_solo_t.png" width="16" height="16"/>
  </tile>
@@ -48,6 +51,12 @@
  </tile>
  <tile id="27">
   <image source="../../../data/base/gfx/game/tile/nature/rock_c_bl.png" width="16" height="16"/>
+ </tile>
+ <tile id="31">
+  <image source="../../../data/base/gfx/game/tile/nature/rock_c_tr.png" width="16" height="16"/>
+ </tile>
+ <tile id="30">
+  <image source="../../../data/base/gfx/game/tile/nature/rock_c_tl.png" width="16" height="16"/>
  </tile>
  <tile id="7">
   <image source="../../../data/base/gfx/game/tile/nature/grass_bot.png" width="16" height="16"/>
