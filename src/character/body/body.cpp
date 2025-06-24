@@ -123,6 +123,7 @@ ach::Body* ach::Body::create(ach::Character *_owner, ach::DataModel *_base)
 		case ach::ModelType::mtSimple: return new ach::BodySimple(_owner, _base);
 		case ach::ModelType::mtPlayer: return new ach::BodyPlayer(_owner, _base);
 		case ach::ModelType::mtJumper: return new ach::BodyJumper(_owner, _base);
+		case ach::ModelType::mtMoving: return new ach::BodyMoving(_owner, _base);
 	}
 
 	return new ach::Body(_owner, _base);

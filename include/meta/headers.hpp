@@ -66,6 +66,7 @@
 #include "character/body/simple.hpp"
 #include "character/body/player.hpp"
 #include "character/body/jumper.hpp"
+#include "character/body/moving.hpp"
 
 #include "character/projectile/projectile.hpp"
 #include "character/projectile/pair.hpp"

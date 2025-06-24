@@ -1,0 +1,12 @@
+{
+    "ModelMoving": {
+        "List": "Animation",
+        "Objects": [
+            "Idle",
+            "Moving"
+        ],
+        "Param": "Type",
+        "Path": "Data.GFX.Model",
+        "Value": "moving"
+    }
+}

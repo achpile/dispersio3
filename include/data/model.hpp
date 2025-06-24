@@ -9,7 +9,8 @@ namespace ach
 		mtNone = 0,
 		mtSimple,
 		mtPlayer,
-		mtJumper
+		mtJumper,
+		mtMoving
 	};
 
 
