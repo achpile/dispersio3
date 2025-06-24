@@ -1,0 +1,18 @@
+{
+    "RobotBounce": {
+        "Appearance": {
+            "Model": "EnemySlime"
+        },
+        "Game": {
+            "AI": "bouncer",
+            "Hitbox": {
+                "X": 12,
+                "Y": 12
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 250
+        }
+    }
+}

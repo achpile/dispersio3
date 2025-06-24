@@ -6,8 +6,20 @@ namespace ach
 {
 	struct AIBouncer : AI
 	{
+		ach::Direction   initial;
+		ach::Direction   dir;
+		ach::Orientation orient;
+
+		bool grounded;
+
+
 		 AIBouncer(ach::Character *_owner, json_t *obj);
 		~AIBouncer();
+
+		void control();
+		void reset();
+
+		void collide(ach::PhysLine *line);
 	};
 }
 
