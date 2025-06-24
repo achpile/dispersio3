@@ -107,6 +107,7 @@ ach::AI* ach::AI::create(ach::Character *_owner, ach::AIType type, json_t *obj)
 		case ach::AIType::aiJumper : return new ach::AIJumper (_owner, obj);
 		case ach::AIType::aiFollow : return new ach::AIFollow (_owner, obj);
 		case ach::AIType::aiLeveler: return new ach::AILeveler(_owner, obj);
+		case ach::AIType::aiBouncer: return new ach::AIBouncer(_owner, obj);
 	}
 
 	return new ach::AI(_owner, obj);

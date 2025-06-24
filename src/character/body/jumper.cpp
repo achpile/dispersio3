@@ -32,7 +32,7 @@ void ach::BodyJumper::animate()
 {
 	if (!owner->phys.grounded)
 	{
-		if (owner->phys.vel.y > 0.0f)
+		if (math_sign(owner->phys.vel.y) == owner->phys.gravity)
 			model->setAnimation("Fall");
 		else
 			model->setAnimation("Jump");

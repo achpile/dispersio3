@@ -14,7 +14,8 @@
                 "sniper",
                 "jumper",
                 "follow",
-                "leveler"
+                "leveler",
+                "bouncer"
             ],
             "type": "enum"
         }
