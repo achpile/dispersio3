@@ -10,6 +10,8 @@ namespace ach
 		ach::Direction   dir;
 		ach::Orientation orient;
 
+		ach::Timer       cooldown;
+
 		bool  grounded;
 		float range;
 

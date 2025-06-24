@@ -1,7 +1,7 @@
 {
     "RobotBounce": {
         "Appearance": {
-            "Model": "EnemySlime"
+            "Model": "EnemyRobotBounce"
         },
         "Game": {
             "AI": "bouncer",

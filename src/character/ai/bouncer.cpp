@@ -10,6 +10,8 @@ ach::AIBouncer::AIBouncer(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	initial = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
 	orient  = dir_orient(initial);
+
+	cooldown.set(0.5f);
 }
 
 
@@ -38,6 +40,9 @@ void ach::AIBouncer::control()
 		return;
 	}
 
+	if (cooldown.update())
+		return;
+
 	search();
 
 	if (!target)
@@ -63,6 +68,7 @@ void ach::AIBouncer::reset()
 	grounded = true;
 	range    = 2.0f * vector_len(owner->phys.size);
 
+	cooldown.reset();
 	owner->body->setDirection(dir);
 }
 
@@ -77,6 +83,8 @@ void ach::AIBouncer::collide(ach::PhysLine*)
 {
 	dir      = !dir;
 	grounded = true;
+
+	cooldown.reset();
 
 	owner->phys.vel = sf::Vector2f(0.0f, 0.0f);
 	owner->body->setDirection(dir);

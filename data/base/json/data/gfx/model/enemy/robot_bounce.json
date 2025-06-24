@@ -1,0 +1,19 @@
+{
+    "EnemyRobotBounce": {
+        "Animation": {
+            "Idle": {
+                "End": 0,
+                "Loop": false,
+                "Start": 0
+            },
+            "Moving": {
+                "End": -1,
+                "Loop": false,
+                "Rate": 0.035,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyRobotBounce",
+        "Type": "moving"
+    }
+}
