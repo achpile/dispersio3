@@ -55,7 +55,7 @@ void ach::AIJumper::control()
 	owner->phys.vel.x    = 0.0f;
 	owner->phys.moving   = false;
 
-	if (!target)
+	if (!target || !target->alive)
 	{
 		cooldown.reset();
 		return;

@@ -10,7 +10,8 @@ namespace ach
 		ach::Direction   dir;
 		ach::Orientation orient;
 
-		bool grounded;
+		bool  grounded;
+		float range;
 
 
 		 AIBouncer(ach::Character *_owner, json_t *obj);

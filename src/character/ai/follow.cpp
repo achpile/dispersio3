@@ -32,9 +32,9 @@ void ach::AIFollow::control()
 {
 	search();
 
-	if (target)
-	{
-		owner->phys.vel = vector_set_len(target->phys.pos - owner->phys.pos, owner->speed);
-		owner->dir.x    = math_sign(owner->phys.vel.x);
-	}
+	if (!target || !target->alive)
+		return;
+
+	owner->phys.vel = vector_set_len(target->phys.pos - owner->phys.pos, owner->speed);
+	owner->dir.x    = math_sign(owner->phys.vel.x);
 }

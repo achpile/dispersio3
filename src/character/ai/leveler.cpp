@@ -34,7 +34,7 @@ void ach::AILeveler::control()
 {
 	search();
 
-	if (!target)
+	if (!target || !target->alive)
 		return;
 
 	owner->dir.x    = math_sign(target->phys.pos.x - owner->phys.pos.x);

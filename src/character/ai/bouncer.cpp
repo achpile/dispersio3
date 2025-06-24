@@ -32,7 +32,22 @@ ach::AIBouncer::~AIBouncer()
 ***********************************************************************/
 void ach::AIBouncer::control()
 {
-	owner->phys.vel = dir_vector_f(dir) * owner->speed;
+	if (!grounded)
+	{
+		owner->phys.vel = dir_vector_f(dir) * owner->speed;
+		return;
+	}
+
+	search();
+
+	if (!target)
+		return;
+
+	if (!target->alive)
+		return;
+
+	if (fabs(orient_v_coord(!orient, target->phys.pos - owner->phys.pos)) < range)
+		grounded = false;
 }
 
 
@@ -46,6 +61,7 @@ void ach::AIBouncer::reset()
 {
 	dir      = initial;
 	grounded = true;
+	range    = 2.0f * vector_len(owner->phys.size);
 
 	owner->body->setDirection(dir);
 }
@@ -59,7 +75,9 @@ void ach::AIBouncer::reset()
 ***********************************************************************/
 void ach::AIBouncer::collide(ach::PhysLine*)
 {
-	dir = !dir;
+	dir      = !dir;
+	grounded = true;
 
+	owner->phys.vel = sf::Vector2f(0.0f, 0.0f);
 	owner->body->setDirection(dir);
 }
