@@ -52,7 +52,10 @@ void ach::AIBouncer::control()
 		return;
 
 	if (fabs(orient_v_coord(!orient, target->phys.pos - owner->phys.pos)) < range)
+	{
+		sm->play(owner->base->sndJump->snd);
 		grounded = false;
+	}
 }
 
 
@@ -85,6 +88,7 @@ void ach::AIBouncer::collide(ach::PhysLine*)
 	grounded = true;
 
 	cooldown.reset();
+	sm->play(owner->base->sndLand->snd);
 
 	owner->phys.vel = sf::Vector2f(0.0f, 0.0f);
 	owner->body->setDirection(dir);
