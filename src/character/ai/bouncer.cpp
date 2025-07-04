@@ -69,9 +69,9 @@ void ach::AIBouncer::reset()
 {
 	dir      = initial;
 	grounded = true;
-	range    = 2.0f * vector_len(owner->phys.size);
+	range    = 1.5f * vector_len(owner->phys.size);
 
-	cooldown.reset();
+	cooldown.zero();
 	owner->body->setDirection(dir);
 }
 
