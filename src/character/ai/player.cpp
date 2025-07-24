@@ -42,7 +42,10 @@ void ach::AIPlayer::physics()
 
 	if (owner->phys.water)
 	{
-		owner->phys.vel.y = interval_set(owner->phys.vel.y, -PHYS_MAX_VEL, PHYS_WATER_FALL);
+		if (owner->phys.gravity > 0)
+			owner->phys.vel.y = interval_set(owner->phys.vel.y, -PHYS_MAX_VEL, PHYS_WATER_FALL);
+		else
+			owner->phys.vel.y = interval_set(owner->phys.vel.y, -PHYS_WATER_FALL, PHYS_MAX_VEL);
 
 		if (!water)
 			sm->play(splash->snd);
