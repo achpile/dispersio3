@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Brick" tilewidth="16" tileheight="16" tilecount="20" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Brick" tilewidth="16" tileheight="16" tilecount="23" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/brick/grey.png" width="16" height="16"/>
@@ -60,5 +60,14 @@
  </tile>
  <tile id="14">
   <image source="../../../data/base/gfx/game/tile/brick/red_s22_rb_1.png" width="16" height="16"/>
+ </tile>
+ <tile id="23">
+  <image source="../../../data/base/gfx/game/tile/brick/back.png" width="16" height="16"/>
+ </tile>
+ <tile id="24">
+  <image source="../../../data/base/gfx/game/tile/brick/back_left.png" width="16" height="16"/>
+ </tile>
+ <tile id="25">
+  <image source="../../../data/base/gfx/game/tile/brick/back_right.png" width="16" height="16"/>
  </tile>
 </tileset>

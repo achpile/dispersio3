@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Slab" tilewidth="16" tileheight="16" tilecount="22" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Slab" tilewidth="16" tileheight="16" tilecount="21" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="3">
   <image source="../../../data/base/gfx/game/tile/slab/block.png" width="16" height="16"/>
@@ -63,8 +63,5 @@
  </tile>
  <tile id="15">
   <image source="../../../data/base/gfx/game/tile/slab/s_r1.png" width="16" height="16"/>
- </tile>
- <tile id="1">
-  <image source="../../../data/base/gfx/game/tile/slab/back.png" width="16" height="16"/>
  </tile>
 </tileset>
