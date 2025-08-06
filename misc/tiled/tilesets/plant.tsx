@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Plant" tilewidth="16" tileheight="16" tilecount="37" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Plant" tilewidth="16" tileheight="16" tilecount="45" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/plant/grass.png" width="16" height="16"/>
@@ -111,5 +111,29 @@
  </tile>
  <tile id="36">
   <image source="../../../data/base/gfx/game/tile/plant/bush2_rb.png" width="16" height="16"/>
+ </tile>
+ <tile id="41">
+  <image source="../../../data/base/gfx/game/tile/plant/palm.png" width="16" height="16"/>
+ </tile>
+ <tile id="42">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_l1.png" width="16" height="16"/>
+ </tile>
+ <tile id="48">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_t.png" width="16" height="16"/>
+ </tile>
+ <tile id="45">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_r1.png" width="16" height="16"/>
+ </tile>
+ <tile id="44">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_l3.png" width="16" height="16"/>
+ </tile>
+ <tile id="43">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_l2.png" width="16" height="16"/>
+ </tile>
+ <tile id="46">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_r2.png" width="16" height="16"/>
+ </tile>
+ <tile id="47">
+  <image source="../../../data/base/gfx/game/tile/plant/palm_r3.png" width="16" height="16"/>
  </tile>
 </tileset>
