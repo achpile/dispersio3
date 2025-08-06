@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Plant" tilewidth="16" tileheight="16" tilecount="45" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Plant" tilewidth="16" tileheight="16" tilecount="49" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/plant/grass.png" width="16" height="16"/>
@@ -135,5 +135,17 @@
  </tile>
  <tile id="47">
   <image source="../../../data/base/gfx/game/tile/plant/palm_r3.png" width="16" height="16"/>
+ </tile>
+ <tile id="49">
+  <image source="../../../data/base/gfx/game/tile/plant/tree_l.png" width="16" height="16"/>
+ </tile>
+ <tile id="50">
+  <image source="../../../data/base/gfx/game/tile/plant/tree_l_b.png" width="16" height="16"/>
+ </tile>
+ <tile id="51">
+  <image source="../../../data/base/gfx/game/tile/plant/tree_r.png" width="16" height="16"/>
+ </tile>
+ <tile id="52">
+  <image source="../../../data/base/gfx/game/tile/plant/tree_r_b.png" width="16" height="16"/>
  </tile>
 </tileset>
