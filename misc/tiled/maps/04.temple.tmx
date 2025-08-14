@@ -463,7 +463,7 @@
   <object id="16" name="BlockGrass" type="block_fragile" x="640" y="1328" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
-  <object id="17" name="Bat" type="character" x="448" y="1344" width="16" height="16">
+  <object id="17" name="Bat" type="character" x="496" y="1344" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -472,29 +472,20 @@
     </property>
    </properties>
   </object>
-  <object id="18" name="Bat" type="character" x="592" y="1344" width="16" height="16">
+  <object id="18" name="Bat" type="character" x="560" y="1344" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="20" name="Bat" type="character" x="640" y="1344" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="19" name="Bat" type="character" x="528" y="1344" width="16" height="16">
-   <properties>
-    <property name="Moving" type="class" propertytype="#moving">
-     <properties>
-      <property name="Direction" propertytype="@direction" value="right"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="20" name="Bat" type="character" x="672" y="1344" width="16" height="16">
-   <properties>
-    <property name="Moving" type="class" propertytype="#moving">
-     <properties>
-      <property name="Direction" propertytype="@direction" value="right"/>
      </properties>
     </property>
    </properties>

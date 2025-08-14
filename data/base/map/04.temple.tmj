@@ -627,12 +627,53 @@
                  "type":"character",
                  "visible":true,
                  "width":16,
-                 "x":448,
+                 "x":496,
                  "y":1344
                 }, 
                 {
                  "height":16,
                  "id":18,
+                 "name":"Bat",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.5
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"right"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":560,
+                 "y":1344
+                }, 
+                {
+                 "height":16,
+                 "id":20,
                  "name":"Bat",
                  "properties":[
                         {
@@ -668,89 +709,7 @@
                  "type":"character",
                  "visible":true,
                  "width":16,
-                 "x":592,
-                 "y":1344
-                }, 
-                {
-                 "height":16,
-                 "id":19,
-                 "name":"Bat",
-                 "properties":[
-                        {
-                         "name":"Jumping",
-                         "propertytype":"#jumping",
-                         "type":"class",
-                         "value":
-                            {
-                             "Cooldown":0.5
-                            }
-                        }, 
-                        {
-                         "name":"Moving",
-                         "propertytype":"#moving",
-                         "type":"class",
-                         "value":
-                            {
-                             "Direction":"right"
-                            }
-                        }, 
-                        {
-                         "name":"Shooting",
-                         "propertytype":"#shooting",
-                         "type":"class",
-                         "value":
-                            {
-                             "Aim":"none",
-                             "Cooldown":0.8,
-                             "Offset":0.8
-                            }
-                        }],
-                 "rotation":0,
-                 "type":"character",
-                 "visible":true,
-                 "width":16,
-                 "x":528,
-                 "y":1344
-                }, 
-                {
-                 "height":16,
-                 "id":20,
-                 "name":"Bat",
-                 "properties":[
-                        {
-                         "name":"Jumping",
-                         "propertytype":"#jumping",
-                         "type":"class",
-                         "value":
-                            {
-                             "Cooldown":0.5
-                            }
-                        }, 
-                        {
-                         "name":"Moving",
-                         "propertytype":"#moving",
-                         "type":"class",
-                         "value":
-                            {
-                             "Direction":"right"
-                            }
-                        }, 
-                        {
-                         "name":"Shooting",
-                         "propertytype":"#shooting",
-                         "type":"class",
-                         "value":
-                            {
-                             "Aim":"none",
-                             "Cooldown":0.8,
-                             "Offset":0.8
-                            }
-                        }],
-                 "rotation":0,
-                 "type":"character",
-                 "visible":true,
-                 "width":16,
-                 "x":672,
+                 "x":640,
                  "y":1344
                 }],
          "opacity":1,
