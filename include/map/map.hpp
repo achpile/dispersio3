@@ -62,6 +62,7 @@ namespace ach
 		void loadPhys(json_t *layer);
 		void loadObjects(json_t *layer);
 		void loadCharacters(json_t *layer);
+		void loadCamera(json_t *layer);
 
 		/*  coord.cpp  */
 		sf::Vector2f  getTilePos(sf::Vector2i v);
