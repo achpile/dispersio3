@@ -1012,7 +1012,7 @@
    <polyline points="0,0 16,0"/>
   </object>
   <object id="145" type="phys_barrier" x="1920" y="0">
-   <polyline points="0,0 384,0 384,192"/>
+   <polyline points="-768,0 384,0 384,192"/>
   </object>
   <object id="146" type="phys_platform" x="2240" y="272">
    <polyline points="0,0 48,0"/>
