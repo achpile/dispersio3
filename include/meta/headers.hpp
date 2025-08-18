@@ -93,6 +93,7 @@
 #include "map/tile/maptile.hpp"
 #include "map/tile/pair.hpp"
 
+#include "map/area.hpp"
 #include "map/camera.hpp"
 #include "map/map.hpp"
 

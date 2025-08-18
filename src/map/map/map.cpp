@@ -42,6 +42,7 @@ ach::Map::~Map()
 
 	list_delete(characters);
 	list_delete(objects);
+	list_delete(areas);
 	list_delete(gfx);
 	list_delete(projectiles);
 }

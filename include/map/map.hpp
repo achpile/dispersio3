@@ -9,6 +9,7 @@ namespace ach
 		std::vector<ach::Character*>           characters;
 		std::vector<ach::PhysLine*>            solids;
 		std::vector<ach::MapObject*>           objects;
+		std::vector<ach::MapArea*>             areas;
 		std::vector<ach::MapObjectCheckpoint*> checkpoints;
 		std::vector<ach::Projectile*>          projectiles;
 		std::vector<ach::Effect*>              gfx;
@@ -70,6 +71,7 @@ namespace ach
 
 		/*  find.cpp  */
 		ach::MapObject* findMapObject(int id);
+		ach::MapArea*   findMapArea(sf::Vector2f v);
 	};
 }
 

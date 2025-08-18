@@ -14,3 +14,19 @@ ach::MapObject* ach::Map::findMapObject(int id)
 
 	return NULL;
 }
+
+
+
+/***********************************************************************
+     * Map
+     * findMapArea
+
+***********************************************************************/
+ach::MapArea* ach::Map::findMapArea(sf::Vector2f v)
+{
+	list_foreach(areas)
+		if (areas[i]->rect.contains(v))
+			return areas[i];
+
+	return NULL;
+}

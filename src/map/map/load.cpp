@@ -75,6 +75,8 @@ void ach::Map::loadMeta(json_t *mapdata)
 ***********************************************************************/
 void ach::Map::loadFinalize()
 {
+	areas.push_back(new ach::MapArea(sf::FloatRect(sf::Vector2f(0, 0), vector_mult(sizeMap, sizeTile))));
+
 	list_foreach(objects)
 	{
 		objects[i]->reset();
@@ -285,6 +287,6 @@ void ach::Map::loadCamera(json_t *layer)
 			continue;
 		}
 
-		continue;
+		areas.push_back(new ach::MapArea(obj));
 	}
 }
