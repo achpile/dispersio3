@@ -2,8 +2,8 @@
     "04-Temple": {
         "Filename": "map/04.temple.tmj",
         "Spawn": {
-            "X": 121,
-            "Y": 86
+            "X": 118,
+            "Y": 32
         }
     }
 }
