@@ -1853,6 +1853,129 @@
                  "width":16,
                  "x":1968,
                  "y":992
+                }, 
+                {
+                 "height":16,
+                 "id":130,
+                 "name":"Slime",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.75
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"none"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":1376,
+                 "y":640
+                }, 
+                {
+                 "height":16,
+                 "id":131,
+                 "name":"Slime",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.75
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"none"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":1424,
+                 "y":624
+                }, 
+                {
+                 "height":16,
+                 "id":132,
+                 "name":"Slime",
+                 "properties":[
+                        {
+                         "name":"Jumping",
+                         "propertytype":"#jumping",
+                         "type":"class",
+                         "value":
+                            {
+                             "Cooldown":0.75
+                            }
+                        }, 
+                        {
+                         "name":"Moving",
+                         "propertytype":"#moving",
+                         "type":"class",
+                         "value":
+                            {
+                             "Direction":"none"
+                            }
+                        }, 
+                        {
+                         "name":"Shooting",
+                         "propertytype":"#shooting",
+                         "type":"class",
+                         "value":
+                            {
+                             "Aim":"none",
+                             "Cooldown":0.8,
+                             "Offset":0.8
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"character",
+                 "visible":true,
+                 "width":16,
+                 "x":1472,
+                 "y":608
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5045,7 +5168,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":130,
+ "nextobjectid":133,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
