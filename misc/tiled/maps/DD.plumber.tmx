@@ -109,6 +109,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -118,6 +119,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -127,6 +129,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -136,6 +139,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -145,6 +149,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -154,6 +159,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -163,6 +169,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -172,6 +179,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -190,6 +198,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -199,6 +208,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -208,6 +218,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -217,6 +228,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -226,6 +238,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -235,6 +248,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -244,6 +258,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -253,6 +268,7 @@
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
       <property name="Direction" propertytype="@direction" value="left"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>
@@ -335,7 +351,7 @@
    <polyline points="0,0 0,16 80,16 80,0 0,0"/>
   </object>
  </objectgroup>
- <objectgroup id="8" name="camera" visible="0">
+ <objectgroup id="8" name="camera">
   <object id="69" type="area" x="0" y="0" width="3392" height="288"/>
  </objectgroup>
 </map>
