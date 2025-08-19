@@ -1,0 +1,17 @@
+{
+    "EnemyShroom": {
+        "Animation": {
+            "Idle": {
+                "End": 0,
+                "Loop": false,
+                "Start": 0
+            },
+            "Moving": {
+                "End": -1,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyShroom",
+        "Type": "moving"
+    }
+}

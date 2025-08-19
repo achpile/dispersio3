@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="212" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="70">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="212" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="87">
  <editorsettings>
   <export target="../../../data/base/map/DD.mario.tmj" format="json"/>
  </editorsettings>
@@ -103,7 +103,161 @@
  <objectgroup id="4" name="objects">
   <object id="50" type="trigger_goal" x="3168" y="80" width="16" height="160"/>
  </objectgroup>
- <objectgroup id="5" name="characters"/>
+ <objectgroup id="5" name="characters">
+  <object id="70" name="Shroom" type="character" x="352" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="71" name="Shroom" type="character" x="640" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="72" name="Shroom" type="character" x="816" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="73" name="Shroom" type="character" x="840" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="74" name="Shroom" type="character" x="1280" y="112" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="75" name="Shroom" type="character" x="1312" y="112" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="76" name="Shroom" type="character" x="1576" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="77" name="Shroom" type="character" x="1552" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="78" name="Turtle" type="character" x="1712" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="79" name="Shroom" type="character" x="1824" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="80" name="Shroom" type="character" x="1848" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="81" name="Shroom" type="character" x="2056" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="82" name="Shroom" type="character" x="2080" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="83" name="Shroom" type="character" x="2024" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="84" name="Shroom" type="character" x="2000" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="85" name="Shroom" type="character" x="2816" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="86" name="Shroom" type="character" x="2792" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="6" name="phys">
   <object id="41" type="phys_barrier" x="0" y="256">
    <polyline points="0,0 0,-256 3392,-256 3392,0"/>
@@ -181,7 +335,7 @@
    <polyline points="0,0 0,16 80,16 80,0 0,0"/>
   </object>
  </objectgroup>
- <objectgroup id="8" name="camera">
+ <objectgroup id="8" name="camera" visible="0">
   <object id="69" type="area" x="0" y="0" width="3392" height="288"/>
  </objectgroup>
 </map>

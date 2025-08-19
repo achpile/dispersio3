@@ -1,0 +1,17 @@
+{
+    "Turtle": {
+        "Appearance": {
+            "Model": "EnemyTurtle"
+        },
+        "Game": {
+            "AI": "crawl",
+            "Hitbox": {
+                "X": 28,
+                "Y": 12
+            }
+        },
+        "Stats": {
+            "Speed": 50
+        }
+    }
+}
