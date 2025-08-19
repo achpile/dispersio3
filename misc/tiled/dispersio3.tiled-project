@@ -63,6 +63,11 @@
                     "propertyType": "@direction",
                     "type": "string",
                     "value": "none"
+                },
+                {
+                    "name": "Fall",
+                    "type": "bool",
+                    "value": false
                 }
             ],
             "name": "#moving",

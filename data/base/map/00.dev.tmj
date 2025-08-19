@@ -296,7 +296,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"down"
+                             "Direction":"down",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -327,7 +328,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"up",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -370,6 +372,7 @@
                          "value":
                             {
                              "Direction":"right",
+                             "Fall":false,
                              "Orientation":"horizontal"
                             }
                         }, 
@@ -505,7 +508,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"left"
+                             "Direction":"left",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -546,7 +550,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"up",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -587,7 +592,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"left"
+                             "Direction":"left",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -628,7 +634,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"right"
+                             "Direction":"right",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -669,7 +676,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -710,7 +718,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -751,7 +760,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -792,7 +802,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -833,7 +844,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -874,7 +886,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"down"
+                             "Direction":"down",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -915,7 +928,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"right"
+                             "Direction":"right",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -956,7 +970,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"none"
+                             "Direction":"none",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -997,7 +1012,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"up"
+                             "Direction":"up",
+                             "Fall":false
                             }
                         }, 
                         {
@@ -1038,7 +1054,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Direction":"left"
+                             "Direction":"left",
+                             "Fall":false
                             }
                         }, 
                         {
