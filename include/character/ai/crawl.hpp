@@ -11,6 +11,8 @@ namespace ach
 
 		ach::Line      front;
 
+		bool fall;
+
 
 		 AICrawl(ach::Character *_owner, json_t *obj);
 		~AICrawl();

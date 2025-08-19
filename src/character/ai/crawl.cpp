@@ -9,6 +9,7 @@
 ach::AICrawl::AICrawl(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 {
 	initial = pair_get_enum(json_class_get_string(obj, "Moving", "Direction"), pairDirection);
+	fall    = json_class_get_boolean(obj, "Moving", "Fall");
 
 	if (dir_orient(initial) == ach::Orientation::oVertical)
 		initial = ach::Direction::dRight;
@@ -85,6 +86,9 @@ void ach::AICrawl::collide(ach::PhysLine *line)
 ***********************************************************************/
 void ach::AICrawl::check()
 {
+	if (fall)
+		return;
+
 	front = rect_line(owner->phys.rect, dir);
 
 	front.b.y += front.v.y / 2.0f;
