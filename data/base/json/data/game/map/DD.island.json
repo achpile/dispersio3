@@ -3,8 +3,8 @@
         "Filename": "map/DD.island.tmj",
         "Player": "PlayerBill",
         "Spawn": {
-            "X": 0,
-            "Y": 0
+            "X": 3,
+            "Y": 9
         }
     }
 }
