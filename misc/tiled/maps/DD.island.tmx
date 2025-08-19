@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="208" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="184">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="208" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="201">
  <editorsettings>
   <export target="../../../data/base/map/DD.island.tmj" format="json"/>
  </editorsettings>
@@ -532,6 +532,159 @@
       <property name="Aim" propertytype="@direction" value="left"/>
       <property name="Cooldown" type="float" value="1"/>
       <property name="Offset" type="float" value="1"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="184" name="Soldier" type="character" x="272" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="185" name="Soldier" type="character" x="400" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="186" name="Soldier" type="character" x="528" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="187" name="Soldier" type="character" x="928" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="188" name="Soldier" type="character" x="992" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="189" name="Soldier" type="character" x="1408" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="190" name="Soldier" type="character" x="1536" y="192" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="191" name="Soldier" type="character" x="1680" y="112" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="192" name="Soldier" type="character" x="1728" y="112" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="193" name="Soldier" type="character" x="1776" y="112" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="194" name="Soldier" type="character" x="1888" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="195" name="Soldier" type="character" x="2208" y="176" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="196" name="Soldier" type="character" x="2416" y="208" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="197" name="Soldier" type="character" x="2496" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="198" name="Soldier" type="character" x="2752" y="240" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="199" name="Soldier" type="character" x="2880" y="208" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="200" name="Soldier" type="character" x="3088" y="144" width="16" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
      </properties>
     </property>
    </properties>

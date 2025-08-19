@@ -1,0 +1,17 @@
+{
+    "Soldier": {
+        "Appearance": {
+            "Model": "EnemySoldier"
+        },
+        "Game": {
+            "AI": "crawl",
+            "Hitbox": {
+                "X": 12,
+                "Y": 16
+            }
+        },
+        "Stats": {
+            "Speed": 60
+        }
+    }
+}
