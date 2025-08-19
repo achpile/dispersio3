@@ -1,0 +1,8 @@
+{
+    "PlayerMarioDie": {
+        "Filename": "sfx/character/player/mario/die.wav"
+    },
+    "PlayerMarioJump": {
+        "Filename": "sfx/character/player/mario/jump.wav"
+    }
+}

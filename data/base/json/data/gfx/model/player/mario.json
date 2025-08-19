@@ -1,0 +1,29 @@
+{
+    "PlayerMario": {
+        "Animation": {
+            "Death": {
+                "End": -1,
+                "Loop": false,
+                "Start": 7
+            },
+            "Fall": {
+                "End": 6,
+                "Start": 6
+            },
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            },
+            "Jump": {
+                "End": 5,
+                "Start": 5
+            },
+            "Walk": {
+                "End": 4,
+                "Start": 1
+            }
+        },
+        "Sheet": "PlayerMario",
+        "Type": "player"
+    }
+}
