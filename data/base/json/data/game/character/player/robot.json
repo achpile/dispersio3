@@ -1,7 +1,7 @@
 {
-    "PlayerMegaman": {
+    "PlayerRobot": {
         "Appearance": {
-            "Model": "Player"
+            "Model": "PlayerRobot"
         },
         "Game": {
             "AI": "player",

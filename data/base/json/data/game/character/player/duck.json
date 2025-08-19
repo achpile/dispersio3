@@ -1,7 +1,7 @@
 {
-    "PlayerScrooge": {
+    "PlayerDuck": {
         "Appearance": {
-            "Model": "Player"
+            "Model": "PlayerDuck"
         },
         "Game": {
             "AI": "player",

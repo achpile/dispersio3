@@ -1,0 +1,10 @@
+{
+    "DD-Duck": {
+        "Filename": "map/DD.duck.tmj",
+        "Player": "PlayerDuck",
+        "Spawn": {
+            "X": 0,
+            "Y": 0
+        }
+    }
+}

@@ -1,7 +1,7 @@
 {
     "PlayerBill": {
         "Appearance": {
-            "Model": "Player"
+            "Model": "PlayerBill"
         },
         "Game": {
             "AI": "player",

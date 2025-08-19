@@ -1,7 +1,7 @@
 {
-    "PlayerMario": {
+    "PlayerPlumber": {
         "Appearance": {
-            "Model": "PlayerMario"
+            "Model": "PlayerPlumber"
         },
         "Game": {
             "AI": "player",
@@ -11,8 +11,8 @@
             }
         },
         "Sound": {
-            "Die": "PlayerMarioDie",
-            "Jump": "PlayerMarioJump"
+            "Die": "PlayerPlumberDie",
+            "Jump": "PlayerPlumberJump"
         },
         "Stats": {
             "Jump": 380

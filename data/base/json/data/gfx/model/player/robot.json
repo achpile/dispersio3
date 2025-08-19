@@ -1,5 +1,5 @@
 {
-    "PlayerMario": {
+    "PlayerRobot": {
         "Animation": {
             "Death": {
                 "End": -1,
@@ -23,7 +23,7 @@
                 "Start": 1
             }
         },
-        "Sheet": "PlayerMario",
+        "Sheet": "PlayerRobot",
         "Type": "player"
     }
 }
