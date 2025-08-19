@@ -1,0 +1,20 @@
+{
+    "PlayerScrooge": {
+        "Appearance": {
+            "Model": "Player"
+        },
+        "Game": {
+            "AI": "player",
+            "Hitbox": {
+                "X": 10,
+                "Y": 16
+            }
+        },
+        "Sound": {
+            "Die": "PlayerDie",
+            "Jump": "PlayerJump",
+            "Land": "PlayerLand",
+            "Swim": "PlayerSwim"
+        }
+    }
+}

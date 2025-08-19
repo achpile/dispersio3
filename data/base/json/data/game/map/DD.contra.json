@@ -1,6 +1,7 @@
 {
     "DD-Contra": {
         "Filename": "map/DD.contra.tmj",
+        "Player": "PlayerBill",
         "Spawn": {
             "X": 0,
             "Y": 0

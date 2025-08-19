@@ -1,6 +1,7 @@
 {
     "DD-Ducktales": {
         "Filename": "map/DD.ducktales.tmj",
+        "Player": "PlayerScrooge",
         "Spawn": {
             "X": 0,
             "Y": 0

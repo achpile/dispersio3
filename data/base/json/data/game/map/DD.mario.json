@@ -1,6 +1,7 @@
 {
     "DD-Mario": {
         "Filename": "map/DD.mario.tmj",
+        "Player": "PlayerMario",
         "Spawn": {
             "X": 2,
             "Y": 15
