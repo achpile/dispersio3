@@ -95,8 +95,17 @@ void ach::Map::render()
 ***********************************************************************/
 void ach::Map::renderTiles()
 {
-	for (int x = cam->tiles.left; x < cam->tiles.left + cam->tiles.width; x++)
-		for (int y = cam->tiles.top; y < cam->tiles.top + cam->tiles.height; y++)
+	sf::Vector2i from = getTileCoord(rect_lt(cam->viewport));
+	sf::Vector2i to   = getTileCoord(rect_rb(cam->viewport));
+
+	from.x = interval_set(from.x, 0, to.x);
+	from.y = interval_set(from.y, 0, to.x);
+
+	to.x   = interval_set(to.x, from.x, sizeMap.x - 1);
+	to.y   = interval_set(to.y, from.y, sizeMap.y - 1);
+
+	for (int x = from.x; x <= to.x; x++)
+		for (int y = from.y; y <= to.y; y++)
 			tiles[x][y]->render(getTilePos(sf::Vector2i(x, y)));
 }
 
@@ -123,13 +132,8 @@ void ach::Map::process()
      * viewport
 
 ***********************************************************************/
-void ach::Map::viewport(sf::Vector2f v)
+void ach::Map::viewport()
 {
-	cam->pos.x = floor(v.x / cam->viewport.width );
-	cam->pos.y = floor(v.y / cam->viewport.height);
-
-	cam->calc();
-
 	list_delete(projectiles);
 	list_delete(gfx);
 

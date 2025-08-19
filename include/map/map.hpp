@@ -36,7 +36,7 @@ namespace ach
 		void renderTiles();
 
 		void process();
-		void viewport(sf::Vector2f v);
+		void viewport();
 
 		void touch(ach::Character* character);
 		void use(ach::Character* character);
@@ -67,6 +67,7 @@ namespace ach
 
 		/*  coord.cpp  */
 		sf::Vector2f  getTilePos(sf::Vector2i v);
+		sf::Vector2i  getTileCoord(sf::Vector2f v);
 		sf::Vector2f  getTileCenter(sf::Vector2i v);
 
 		/*  find.cpp  */

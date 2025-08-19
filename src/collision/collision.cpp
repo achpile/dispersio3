@@ -41,8 +41,8 @@ void ach::Collision::split(sf::Vector2i _size)
 {
 	sf::FloatRect area;
 
-	area.width  = RENDER_LAYER_GAME_X;
-	area.height = RENDER_LAYER_GAME_Y;
+	area.width  = PHYS_AREA_WIDTH;
+	area.height = PHYS_AREA_HEIGHT;
 
 	size.x = ceil((float)_size.x / area.width);
 	size.y = ceil((float)_size.y / area.height);
@@ -80,11 +80,11 @@ void ach::Collision::fill(std::vector<ach::PhysLine*> *list, long filter, sf::Fl
 	sf::Vector2i from;
 	sf::Vector2i to;
 
-	from.x = floor((rect->left) / RENDER_LAYER_GAME_X);
-	from.y = floor((rect->top ) / RENDER_LAYER_GAME_Y);
+	from.x = floor((rect->left) / PHYS_AREA_WIDTH );
+	from.y = floor((rect->top ) / PHYS_AREA_HEIGHT);
 
-	to.x = ceil((rect->left + rect->width ) / RENDER_LAYER_GAME_X);
-	to.y = ceil((rect->top  + rect->height) / RENDER_LAYER_GAME_Y);
+	to.x = ceil((rect->left + rect->width ) / PHYS_AREA_WIDTH );
+	to.y = ceil((rect->top  + rect->height) / PHYS_AREA_HEIGHT);
 
 	from.x = std::max(from.x, 0);
 	from.y = std::max(from.y, 0);

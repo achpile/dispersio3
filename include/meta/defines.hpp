@@ -67,8 +67,12 @@
 #define PHYS_MAX_VEL          500.0f
 #define PHYS_VEL_EPSILON      10.0f
 #define PHYS_MIN_BOUNCE       200.0f
+
 #define PHYS_WATER            0.6f
 #define PHYS_WATER_FALL       100.0f
+
+#define PHYS_AREA_WIDTH       384
+#define PHYS_AREA_HEIGHT      288
 
 
 

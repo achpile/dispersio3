@@ -61,9 +61,6 @@ void ach::Map::loadMeta(json_t *mapdata)
 	                        json_object_get_integer(mapdata, "tileheight"));
 
 	spawn    = getTileCenter(base->spawn);
-
-	cam->tiles.width  = RENDER_LAYER_GAME_X / sizeTile.x;
-	cam->tiles.height = RENDER_LAYER_GAME_Y / sizeTile.y;
 }
 
 
