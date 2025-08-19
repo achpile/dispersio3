@@ -18,8 +18,8 @@ namespace ach
 		~Camera();
 
 		void update();
-		bool check(sf::Vector2f v);
-		bool check(sf::FloatRect r);
+		bool check(sf::Vector2f v, bool _area = false);
+		bool check(sf::FloatRect r, bool _area = false);
 
 		void follow(ach::Phys *phys);
 		void set(ach::MapArea *_area);

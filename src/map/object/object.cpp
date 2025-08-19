@@ -90,7 +90,7 @@ void ach::MapObject::render()
 ***********************************************************************/
 bool ach::MapObject::visible()
 {
-	return world->map->cam->check(phys.rect);
+	return world->map->cam->check(phys.rect, true);
 }
 
 

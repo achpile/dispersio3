@@ -58,9 +58,10 @@ void ach::Camera::update()
      * check
 
 ***********************************************************************/
-bool ach::Camera::check(sf::Vector2f v)
+bool ach::Camera::check(sf::Vector2f v, bool _area)
 {
-	return viewport.contains(v);
+	if (_area) return area.contains(v);
+	else       return viewport.contains(v);
 }
 
 
@@ -70,9 +71,10 @@ bool ach::Camera::check(sf::Vector2f v)
      * check
 
 ***********************************************************************/
-bool ach::Camera::check(sf::FloatRect r)
+bool ach::Camera::check(sf::FloatRect r, bool _area)
 {
-	return viewport.intersects(r);
+	if (_area) return area.intersects(r);
+	else       return viewport.intersects(r);
 }
 
 
