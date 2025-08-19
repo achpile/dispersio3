@@ -24,7 +24,7 @@ namespace ach
 		bool update();
 		void render();
 
-		bool visible();
+		bool visible(bool area);
 		void process();
 		void box();
 

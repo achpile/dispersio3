@@ -51,7 +51,7 @@ bool ach::MapObject::update()
 	if (!alive)
 		return true;
 
-	if (!visible())
+	if (!visible(true))
 		return true;
 
 	if (model)
@@ -72,7 +72,7 @@ void ach::MapObject::render()
 	if (!alive)
 		return;
 
-	if (!visible())
+	if (!visible(false))
 		return;
 
 	if (model)
@@ -88,9 +88,9 @@ void ach::MapObject::render()
      * visible
 
 ***********************************************************************/
-bool ach::MapObject::visible()
+bool ach::MapObject::visible(bool area)
 {
-	return world->map->cam->check(phys.rect, true);
+	return world->map->cam->check(phys.rect, area);
 }
 
 
@@ -102,7 +102,7 @@ bool ach::MapObject::visible()
 ***********************************************************************/
 void ach::MapObject::process()
 {
-	if (!visible())
+	if (!visible(true))
 		return;
 
 	handle();
