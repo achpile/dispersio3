@@ -1093,29 +1093,7 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":384,
-                 "x":768,
-                 "y":0
-                }, 
-                {
-                 "height":288,
-                 "id":43,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":384,
-                 "x":384,
-                 "y":0
-                }, 
-                {
-                 "height":288,
-                 "id":44,
-                 "name":"",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":384,
+                 "width":1152,
                  "x":0,
                  "y":0
                 }, 

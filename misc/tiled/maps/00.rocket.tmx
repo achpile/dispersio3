@@ -258,9 +258,7 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="camera">
-  <object id="42" type="area" x="768" y="0" width="384" height="288"/>
-  <object id="43" type="area" x="384" y="0" width="384" height="288"/>
-  <object id="44" type="area" x="0" y="0" width="384" height="288"/>
+  <object id="42" type="area" x="0" y="0" width="1152" height="288"/>
   <object id="45" type="area" x="0" y="288" width="384" height="288"/>
   <object id="46" type="area" x="384" y="288" width="384" height="288"/>
  </objectgroup>
