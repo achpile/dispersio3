@@ -881,7 +881,7 @@
    <polyline points="0,0 -96,0 -96,-16 -80,-32 -80,-48 -96,-64 -96,-80 0,-80"/>
   </object>
  </objectgroup>
- <objectgroup id="8" name="camera" visible="0">
+ <objectgroup id="8" name="camera">
   <object id="1" type="area" x="0" y="0" width="3328" height="288"/>
  </objectgroup>
 </map>
