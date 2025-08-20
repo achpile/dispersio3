@@ -52,6 +52,7 @@
                 "player",
                 "simple",
                 "jumper",
+                "sniper",
                 "moving"
             ],
             "type": "enum"

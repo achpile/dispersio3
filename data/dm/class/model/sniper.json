@@ -1,0 +1,15 @@
+{
+    "ModelSniper": {
+        "List": "Animation",
+        "Objects": [
+            "Front",
+            "Up",
+            "Down",
+            "DiagonalUp",
+            "DiagonalDown"
+        ],
+        "Param": "Type",
+        "Path": "Data.GFX.Model",
+        "Value": "sniper"
+    }
+}

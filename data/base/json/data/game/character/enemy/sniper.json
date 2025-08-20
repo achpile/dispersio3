@@ -1,0 +1,15 @@
+{
+    "Sniper": {
+        "Appearance": {
+            "Barrel": 6,
+            "Model": "EnemySniper"
+        },
+        "Game": {
+            "AI": "sniper",
+            "Hitbox": {
+                "X": 16,
+                "Y": 12
+            }
+        }
+    }
+}
