@@ -50,7 +50,11 @@ void ach::AISniper::aim()
 	if (!target)
 		return;
 
-	owner->aim = vector_norm(target->phys.pos - owner->phys.pos);
+	owner->aim    = vector_norm(target->phys.pos - owner->phys.pos);
+	owner->dir.x  = math_sign(owner->aim.x);
+
+	if (!owner->dir.x)
+		owner->dir.x = 1;
 }
 
 

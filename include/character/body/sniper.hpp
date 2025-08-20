@@ -9,6 +9,7 @@ namespace ach
 		 BodySniper(ach::Character *_owner, ach::DataModel *_base);
 		~BodySniper();
 
+		void animate();
 		void flip();
 		void reset();
 	};

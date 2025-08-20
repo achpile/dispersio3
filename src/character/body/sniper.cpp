@@ -25,6 +25,22 @@ ach::BodySniper::~BodySniper()
 
 /***********************************************************************
      * BodySniper
+     * animate
+
+***********************************************************************/
+void ach::BodySniper::animate()
+{
+	     if (owner->aim.y < -0.90f)  model->setAnimation("Up"         );
+	else if (owner->aim.y < -0.38f) model->setAnimation("DiagonalUp"  );
+	else if (owner->aim.y <  0.38f) model->setAnimation("Front"       );
+	else if (owner->aim.y <  0.90f) model->setAnimation("DiagonalDown");
+	else                            model->setAnimation("Down"        );
+}
+
+
+
+/***********************************************************************
+     * BodySniper
      * flip
 
 ***********************************************************************/
