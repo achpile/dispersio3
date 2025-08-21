@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="240" height="90" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="46">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="240" height="90" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="69">
  <editorsettings>
   <export target="../../../data/base/map/DD.robot.tmj" format="json"/>
  </editorsettings>
@@ -388,14 +388,103 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="objects"/>
+ <objectgroup id="4" name="objects">
+  <object id="65" name="MovingMetal" type="block_moving" x="488" y="112" width="304" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+    <property name="Spawn" type="float" value="0.5"/>
+    <property name="Speed" type="float" value="75"/>
+   </properties>
+  </object>
+  <object id="66" name="MovingMetal" type="block_moving" x="616" y="176" width="288" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="left"/>
+     </properties>
+    </property>
+    <property name="Spawn" type="float" value="0"/>
+    <property name="Speed" type="float" value="75"/>
+   </properties>
+  </object>
+  <object id="67" name="MovingMetal" type="block_moving" x="744" y="240" width="384" height="16">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
+     </properties>
+    </property>
+    <property name="Spawn" type="float" value="0.5"/>
+    <property name="Speed" type="float" value="75"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="5" name="characters"/>
- <objectgroup id="6" name="phys"/>
- <objectgroup id="8" name="camera" visible="0">
+ <objectgroup id="6" name="phys">
+  <object id="46" type="phys_barrier" x="0" y="240">
+   <polyline points="0,0 0,-240 2528,-240"/>
+  </object>
+  <object id="47" type="phys_solid" x="0" y="240">
+   <polyline points="0,0 192,0 192,-32 224,-32 224,-64 320,-64 320,-96 384,-96 384,-128 480,-128 480,48"/>
+  </object>
+  <object id="48" type="phys_death" x="480" y="288">
+   <polyline points="0,0 704,0"/>
+  </object>
+  <object id="49" type="phys_solid" x="1184" y="288">
+   <polyline points="0,0 0,-48 288,-48 288,-80 320,-80 320,-112 416,-112 416,-144 448,-144 448,-176 480,-176 480,-144 512,-144 512,-112 544,-112 544,-144 576,-144 576,-176 608,-176 608,-48 800,-48 800,-80 832,-80 832,-112 1040,-112 1040,-96 880,-96 880,0"/>
+  </object>
+  <object id="50" type="phys_solid" x="2256" y="176">
+   <polyline points="0,0 32,0 32,16 0,16 0,0"/>
+  </object>
+  <object id="51" type="phys_death" x="2064" y="288">
+   <polyline points="0,0 240,0"/>
+  </object>
+  <object id="52" type="phys_solid" x="2304" y="288">
+   <polyline points="0,0 0,-16 144,-16 144,-96 32,-96 32,-112 192,-112 192,-80 208,-80 208,-64 192,-64 192,0 32,0 32,112 64,112 64,352 32,352 32,416 64,416 64,480 96,480 96,448 128,448 128,608 32,608 32,672 64,672 64,1040 128,1040 128,1072 192,1072 192,1104 416,1104 416,1072 512,1072"/>
+  </object>
+  <object id="53" type="phys_solid" x="2528" y="0">
+   <polyline points="0,0 0,256 -16,256 -16,272 0,272 0,1072 -128,1072 -128,1152 240,1152 240,1296 288,1296"/>
+  </object>
+  <object id="54" type="phys_solid" x="2400" y="384">
+   <polyline points="0,0 32,0 32,256 0,256 0,0"/>
+  </object>
+  <object id="55" type="phys_solid" x="2464" y="416">
+   <polyline points="0,0 32,0 32,224 0,224 0,0"/>
+  </object>
+  <object id="56" type="phys_solid" x="2464" y="672">
+   <polyline points="0,0 32,0 32,64 0,64 0,0"/>
+  </object>
+  <object id="57" type="phys_solid" x="2464" y="768">
+   <polyline points="0,0 32,0 32,128 0,128 0,0"/>
+  </object>
+  <object id="58" type="phys_solid" x="2400" y="928">
+   <polyline points="0,0 32,0 32,112 0,112 0,0"/>
+  </object>
+  <object id="59" type="phys_death" x="2304" y="272">
+   <polyline points="0,0 8,-8 40,-8 48,0"/>
+  </object>
+  <object id="60" type="phys_death" x="2368" y="272">
+   <polyline points="0,0 8,-8 16,0"/>
+  </object>
+  <object id="61" type="phys_death" x="2400" y="272">
+   <polyline points="0,0 8,-8 48,-8"/>
+  </object>
+  <object id="62" type="phys_death" x="2368" y="760">
+   <polyline points="0,0 32,0"/>
+  </object>
+  <object id="63" type="phys_death" x="2496" y="1072">
+   <polyline points="0,0 8,-8 32,-8"/>
+  </object>
+ </objectgroup>
+ <objectgroup id="8" name="camera">
   <object id="1" type="area" x="0" y="0" width="2688" height="288"/>
   <object id="42" type="area" x="2304" y="288" width="384" height="288"/>
   <object id="43" type="area" x="2304" y="576" width="384" height="288"/>
   <object id="44" type="area" x="2304" y="864" width="384" height="288"/>
-  <object id="45" type="area" x="2304" y="1152" width="1536" height="288"/>
+  <object id="45" type="area" x="2304" y="1152" width="512" height="288"/>
  </objectgroup>
 </map>
