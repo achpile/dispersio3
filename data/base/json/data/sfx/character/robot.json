@@ -1,0 +1,8 @@
+{
+    "PlayerRobotDie": {
+        "Filename": "sfx/character/player/robot/die.wav"
+    },
+    "PlayerRobotLand": {
+        "Filename": "sfx/character/player/robot/land.wav"
+    }
+}

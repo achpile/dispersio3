@@ -11,10 +11,8 @@
             }
         },
         "Sound": {
-            "Die": "PlayerDie",
-            "Jump": "PlayerJump",
-            "Land": "PlayerLand",
-            "Swim": "PlayerSwim"
+            "Die": "PlayerRobotDie",
+            "Land": "PlayerRobotLand"
         }
     }
 }
