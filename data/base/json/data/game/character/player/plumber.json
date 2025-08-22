@@ -5,6 +5,10 @@
         },
         "Game": {
             "AI": "player",
+                        "Offset": {
+                            "X": 0,
+                            "Y": -1
+                        },
             "Hitbox": {
                 "X": 10,
                 "Y": 16
