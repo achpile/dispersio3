@@ -5,13 +5,13 @@
         },
         "Game": {
             "AI": "player",
-                        "Offset": {
-                            "X": 0,
-                            "Y": -3
-                        },
             "Hitbox": {
                 "X": 10,
                 "Y": 16
+            },
+            "Offset": {
+                "X": 0,
+                "Y": -3
             }
         },
         "Sound": {

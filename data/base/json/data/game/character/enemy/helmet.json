@@ -1,0 +1,19 @@
+{
+    "Helmet": {
+        "Appearance": {
+            "Barrel": 0,
+            "Model": "EnemyHelmet"
+        },
+        "Game": {
+            "AI": "cannon",
+            "Hitbox": {
+                "X": 10,
+                "Y": 8
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 50
+        }
+    }
+}
