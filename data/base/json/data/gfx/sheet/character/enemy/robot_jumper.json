@@ -1,6 +1,7 @@
 {
     "EnemyRobotJumper": {
         "Filename": "gfx/game/sheet/character/enemy/robot_jumper.png",
-        "Frames": 4
+        "Frames": 4,
+        "Rate": 0.05
     }
 }

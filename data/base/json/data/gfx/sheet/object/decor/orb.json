@@ -1,0 +1,7 @@
+{
+    "DecorOrb": {
+        "Filename": "gfx/game/sheet/object/decor/orb.png",
+        "Frames": 2,
+        "Rate": 0.25
+    }
+}

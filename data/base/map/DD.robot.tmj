@@ -508,7 +508,7 @@
                  "y":240
                 }, 
                 {
-                 "height":32,
+                 "height":24,
                  "id":71,
                  "name":"",
                  "rotation":0,
@@ -516,7 +516,34 @@
                  "visible":true,
                  "width":32,
                  "x":3680,
-                 "y":1360
+                 "y":1368
+                }, 
+                {
+                 "height":16,
+                 "id":89,
+                 "name":"DecorOrb",
+                 "properties":[
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":16,
+                 "x":3688,
+                 "y":1376
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2117,7 +2144,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":89,
+ "nextobjectid":91,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
