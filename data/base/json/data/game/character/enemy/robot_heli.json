@@ -1,7 +1,7 @@
 {
-    "RobotGreen": {
+    "RobotHeli": {
         "Appearance": {
-            "Model": "EnemyRobotGreen"
+            "Model": "EnemyRobotHeli"
         },
         "Game": {
             "AI": "follow",

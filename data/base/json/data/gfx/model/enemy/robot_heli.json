@@ -1,5 +1,5 @@
 {
-    "EnemyRobotGreen": {
+    "EnemyRobotHeli": {
         "Animation": {
             "Idle": {
                 "End": -1,
@@ -7,7 +7,7 @@
                 "Start": 0
             }
         },
-        "Sheet": "EnemyRobotGreen",
+        "Sheet": "EnemyRobotHeli",
         "Type": "simple"
     }
 }
