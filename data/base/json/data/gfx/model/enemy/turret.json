@@ -1,0 +1,28 @@
+{
+    "EnemyTurret": {
+        "Animation": {
+            "DiagonalDown": {
+                "End": 3,
+                "Start": 3
+            },
+            "DiagonalUp": {
+                "End": 1,
+                "Start": 1
+            },
+            "Down": {
+                "End": 4,
+                "Start": 4
+            },
+            "Front": {
+                "End": 2,
+                "Start": 2
+            },
+            "Up": {
+                "End": 0,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyTurret",
+        "Type": "sniper"
+    }
+}

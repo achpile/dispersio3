@@ -1,0 +1,19 @@
+{
+    "Turret": {
+        "Appearance": {
+            "Barrel": 6,
+            "Model": "EnemyTurret"
+        },
+        "Game": {
+            "AI": "sniper",
+            "Hitbox": {
+                "X": 12,
+                "Y": 12
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 50
+        }
+    }
+}

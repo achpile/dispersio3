@@ -1,0 +1,6 @@
+{
+    "EnemyTurret": {
+        "Filename": "gfx/game/sheet/character/enemy/turret.png",
+        "Frames": 5
+    }
+}
