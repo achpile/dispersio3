@@ -1,0 +1,22 @@
+{
+    "RobotOctoRed": {
+        "Appearance": {
+            "Model": "EnemyRobotOctoRed"
+        },
+        "Game": {
+            "AI": "float",
+            "Hitbox": {
+                "X": 14,
+                "Y": 8
+            },
+            "Offset": {
+                "X": 0,
+                "Y": 3
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 50
+        }
+    }
+}

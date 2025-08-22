@@ -1,0 +1,12 @@
+{
+    "EnemyRobotOctoRed": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyRobotOctoRed",
+        "Type": "simple"
+    }
+}
