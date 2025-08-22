@@ -1,0 +1,13 @@
+{
+    "EnemyRobotGreen": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Rate": 0.05,
+                "Start": 0
+            }
+        },
+        "Sheet": "EnemyRobotGreen",
+        "Type": "simple"
+    }
+}

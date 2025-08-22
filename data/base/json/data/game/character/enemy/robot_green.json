@@ -1,0 +1,18 @@
+{
+    "RobotGreen": {
+        "Appearance": {
+            "Model": "EnemyRobotGreen"
+        },
+        "Game": {
+            "AI": "follow",
+            "Hitbox": {
+                "X": 10,
+                "Y": 10
+            }
+        },
+        "Stats": {
+            "Gravity": 0,
+            "Speed": 60
+        }
+    }
+}

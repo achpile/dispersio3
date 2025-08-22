@@ -1,0 +1,20 @@
+{
+    "EnemyRobotJumper": {
+        "Animation": {
+            "Fall": {
+                "End": 3,
+                "Start": 2
+            },
+            "Idle": {
+                "End": 1,
+                "Start": 0
+            },
+            "Jump": {
+                "End": 3,
+                "Start": 2
+            }
+        },
+        "Sheet": "EnemyRobotJumper",
+        "Type": "jumper"
+    }
+}

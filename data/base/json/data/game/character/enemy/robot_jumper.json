@@ -1,0 +1,26 @@
+{
+    "RobotJumper": {
+        "Appearance": {
+            "Model": "EnemyRobotJumper"
+        },
+        "Game": {
+            "AI": "jumper",
+            "Hitbox": {
+                "X": 30,
+                "Y": 34
+            },
+            "Offset": {
+                "X": 0,
+                "Y": 3
+            }
+        },
+        "Sound": {
+            "Jump": "SlimeJump",
+            "Land": "PlayerLand"
+        },
+        "Stats": {
+            "Gravity": 750,
+            "Jump": 300
+        }
+    }
+}
