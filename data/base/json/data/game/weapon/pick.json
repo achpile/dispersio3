@@ -1,0 +1,8 @@
+{
+    "PickThrow": {
+        "Cone": 0,
+        "Count": 1,
+        "Projectile": "Pick",
+        "Speed": 250
+    }
+}

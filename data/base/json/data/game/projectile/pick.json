@@ -1,0 +1,16 @@
+{
+    "Pick": {
+        "Appearance": {
+            "Orientation": "rotation",
+            "Sheet": "ProjectilePick"
+        },
+        "Impact": {
+            "Sound": "BulletBump",
+            "Type": "spark"
+        },
+        "Physics": {
+            "Gravity": 1000.0,
+            "Radius": 4
+        }
+    }
+}
