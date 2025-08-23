@@ -170,7 +170,7 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="43" type="trigger_goal" x="920" y="456" width="32" height="24"/>
-  <object id="59" name="MovingMetal" type="block_moving" x="1312" y="192" width="160" height="16">
+  <object id="59" name="MovingBlock" type="block_moving" x="1312" y="192" width="160" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
