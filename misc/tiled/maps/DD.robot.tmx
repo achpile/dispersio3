@@ -565,7 +565,7 @@
     </property>
    </properties>
   </object>
-  <object id="86" name="RobotHeli" type="character" x="2352" y="656" width="16" height="16">
+  <object id="86" name="RobotHeli" type="character" x="2336" y="656" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -575,7 +575,7 @@
     </property>
    </properties>
   </object>
-  <object id="87" name="RobotHeli" type="character" x="2384" y="688" width="16" height="16">
+  <object id="87" name="RobotHeli" type="character" x="2368" y="688" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -585,7 +585,7 @@
     </property>
    </properties>
   </object>
-  <object id="88" name="RobotHeli" type="character" x="2416" y="656" width="16" height="16">
+  <object id="88" name="RobotHeli" type="character" x="2400" y="656" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
