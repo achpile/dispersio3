@@ -3,8 +3,8 @@
         "Filename": "map/DD.robot.tmj",
         "Player": "PlayerRobot",
         "Spawn": {
-            "X": 150,
-            "Y": 66
+            "X": 2,
+            "Y": 14
         }
     }
 }
