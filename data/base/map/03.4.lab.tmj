@@ -3043,7 +3043,7 @@
                 {
                  "height":16,
                  "id":47,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3085,7 +3085,7 @@
                 {
                  "height":16,
                  "id":48,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3421,7 +3421,7 @@
                 {
                  "height":16,
                  "id":67,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3505,7 +3505,7 @@
                 {
                  "height":16,
                  "id":86,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3547,7 +3547,7 @@
                 {
                  "height":16,
                  "id":112,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3589,7 +3589,7 @@
                 {
                  "height":16,
                  "id":125,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3799,7 +3799,7 @@
                 {
                  "height":16,
                  "id":159,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3841,7 +3841,7 @@
                 {
                  "height":16,
                  "id":160,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",

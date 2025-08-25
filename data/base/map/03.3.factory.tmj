@@ -3591,7 +3591,7 @@
                 {
                  "height":16,
                  "id":12,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3633,7 +3633,7 @@
                 {
                  "height":16,
                  "id":13,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3675,7 +3675,7 @@
                 {
                  "height":16,
                  "id":16,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3801,7 +3801,7 @@
                 {
                  "height":16,
                  "id":56,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3843,7 +3843,7 @@
                 {
                  "height":16,
                  "id":57,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3885,7 +3885,7 @@
                 {
                  "height":16,
                  "id":58,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3927,7 +3927,7 @@
                 {
                  "height":16,
                  "id":59,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -3969,7 +3969,7 @@
                 {
                  "height":16,
                  "id":78,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4011,7 +4011,7 @@
                 {
                  "height":16,
                  "id":79,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4053,7 +4053,7 @@
                 {
                  "height":16,
                  "id":80,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4221,7 +4221,7 @@
                 {
                  "height":16,
                  "id":178,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4263,7 +4263,7 @@
                 {
                  "height":16,
                  "id":179,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4305,7 +4305,7 @@
                 {
                  "height":16,
                  "id":191,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4347,7 +4347,7 @@
                 {
                  "height":16,
                  "id":192,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",
@@ -4389,7 +4389,7 @@
                 {
                  "height":16,
                  "id":193,
-                 "name":"Cannon2",
+                 "name":"Cannon",
                  "properties":[
                         {
                          "name":"Jumping",

@@ -488,7 +488,7 @@
     </property>
    </properties>
   </object>
-  <object id="6" name="Cannon2" type="character" x="544" y="1040" width="16" height="16">
+  <object id="6" name="Cannon" type="character" x="544" y="1040" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -497,7 +497,7 @@
     </property>
    </properties>
   </object>
-  <object id="7" name="Cannon2" type="character" x="560" y="1024" width="16" height="16">
+  <object id="7" name="Cannon" type="character" x="560" y="1024" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -506,7 +506,7 @@
     </property>
    </properties>
   </object>
-  <object id="8" name="Cannon2" type="character" x="544" y="1008" width="16" height="16">
+  <object id="8" name="Cannon" type="character" x="544" y="1008" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -515,7 +515,7 @@
     </property>
    </properties>
   </object>
-  <object id="9" name="Cannon2" type="character" x="528" y="1024" width="16" height="16">
+  <object id="9" name="Cannon" type="character" x="528" y="1024" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -552,7 +552,7 @@
     </property>
    </properties>
   </object>
-  <object id="43" name="Cannon2" type="character" x="800" y="784" width="16" height="16">
+  <object id="43" name="Cannon" type="character" x="800" y="784" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -561,7 +561,7 @@
     </property>
    </properties>
   </object>
-  <object id="44" name="Cannon2" type="character" x="800" y="768" width="16" height="16">
+  <object id="44" name="Cannon" type="character" x="800" y="768" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -588,7 +588,7 @@
     </property>
    </properties>
   </object>
-  <object id="48" name="Cannon2" type="character" x="800" y="752" width="16" height="16">
+  <object id="48" name="Cannon" type="character" x="800" y="752" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -606,7 +606,7 @@
     </property>
    </properties>
   </object>
-  <object id="66" name="Cannon2" type="character" x="1256" y="592" width="16" height="16">
+  <object id="66" name="Cannon" type="character" x="1256" y="592" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -615,7 +615,7 @@
     </property>
    </properties>
   </object>
-  <object id="67" name="Cannon2" type="character" x="1304" y="592" width="16" height="16">
+  <object id="67" name="Cannon" type="character" x="1304" y="592" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -624,7 +624,7 @@
     </property>
    </properties>
   </object>
-  <object id="68" name="Cannon2" type="character" x="1352" y="592" width="16" height="16">
+  <object id="68" name="Cannon" type="character" x="1352" y="592" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>
@@ -633,7 +633,7 @@
     </property>
    </properties>
   </object>
-  <object id="80" name="Cannon2" type="character" x="656" y="624" width="16" height="16">
+  <object id="80" name="Cannon" type="character" x="656" y="624" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -686,7 +686,7 @@
     </property>
    </properties>
   </object>
-  <object id="175" name="Cannon2" type="character" x="1104" y="432" width="16" height="16">
+  <object id="175" name="Cannon" type="character" x="1104" y="432" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
      <properties>
@@ -700,7 +700,7 @@
     </property>
    </properties>
   </object>
-  <object id="189" name="Cannon2" type="character" x="1056" y="64" width="16" height="16">
+  <object id="189" name="Cannon" type="character" x="1056" y="64" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving"/>
     <property name="Shooting" type="class" propertytype="#shooting">
@@ -712,7 +712,7 @@
     </property>
    </properties>
   </object>
-  <object id="190" name="Cannon2" type="character" x="992" y="64" width="16" height="16">
+  <object id="190" name="Cannon" type="character" x="992" y="64" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving"/>
     <property name="Shooting" type="class" propertytype="#shooting">
@@ -724,7 +724,7 @@
     </property>
    </properties>
   </object>
-  <object id="191" name="Cannon2" type="character" x="928" y="64" width="16" height="16">
+  <object id="191" name="Cannon" type="character" x="928" y="64" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving"/>
     <property name="Shooting" type="class" propertytype="#shooting">
@@ -736,7 +736,7 @@
     </property>
    </properties>
   </object>
-  <object id="192" name="Cannon2" type="character" x="864" y="64" width="16" height="16">
+  <object id="192" name="Cannon" type="character" x="864" y="64" width="16" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving"/>
     <property name="Shooting" type="class" propertytype="#shooting">

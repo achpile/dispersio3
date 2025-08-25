@@ -525,7 +525,7 @@
     </property>
    </properties>
   </object>
-  <object id="182" name="Cannon2" type="character" x="3232" y="160" width="16" height="16">
+  <object id="182" name="Cannon" type="character" x="3232" y="160" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
      <properties>

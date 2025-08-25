@@ -1,15 +1,11 @@
 {
     "Cannon": {
         "Appearance": {
-            "Barrel": 5,
+            "Barrel": 0,
             "Model": "EnemyCannon"
         },
         "Game": {
-            "AI": "cannon",
-            "Hitbox": {
-                "X": 14,
-                "Y": 14
-            }
+            "AI": "cannon"
         },
         "Stats": {
             "Gravity": 0,
