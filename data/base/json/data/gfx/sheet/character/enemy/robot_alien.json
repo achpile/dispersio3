@@ -1,0 +1,7 @@
+{
+    "EnemyRobotAlien": {
+        "Filename": "gfx/game/sheet/character/enemy/robot_alien.png",
+        "Frames": 4,
+        "Rate": 0.05
+    }
+}

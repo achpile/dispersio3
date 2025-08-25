@@ -1,0 +1,26 @@
+{
+    "RobotAlien": {
+        "Appearance": {
+            "Model": "EnemyRobotAlien"
+        },
+        "Game": {
+            "AI": "jumper",
+            "Hitbox": {
+                "X": 28,
+                "Y": 24
+            },
+            "Offset": {
+                "X": 0,
+                "Y": 4
+            }
+        },
+        "Sound": {
+            "Jump": "SlimeJump",
+            "Land": "PlayerLand"
+        },
+        "Stats": {
+            "Gravity": 750,
+            "Jump": 180
+        }
+    }
+}
