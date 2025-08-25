@@ -10,7 +10,7 @@ ach::Datamodel::Datamodel()
 {
 	traits  = json_preprocess_dir("trait", "data/dm", true);
 	classes = json_preprocess_dir("class", "data/dm", true);
-	dm      = json_preprocess_include("main.json", "data/dm/model");
+	dm      = json_preprocess_include("main.json", "data/dm/model", false);
 
 	json_dm_trait_process(dm, traits);
 
@@ -60,7 +60,7 @@ void ach::Datamodel::loadPath(const char *path)
 {
 	logger->log(ach::LogLevel::llInfo, "Loading data from: '%s'", path);
 
-	json_t *pack = json_preprocess_include("json/main.json", path);
+	json_t *pack = json_preprocess_include("json/main.json", path, false);
 
 	json_dm_check_datatypes(pack, dm, path);
 	json_merge(data, pack);
