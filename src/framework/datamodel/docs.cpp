@@ -112,10 +112,10 @@ void dm_docs_generate_recursive(FILE *fp, json_t *obj, bool listing, const char 
 		if (listing) dm_docs_generate_item_link(fp,      current      );
 		else         dm_docs_generate_item_row (fp, obj, current, name);
 	}
-
+/* TODO
 	if (!json_attr_get_container(obj))
 		return;
-
+*/
 	dm_docs_generate_foreach(fp, obj, listing, current, false);
 	dm_docs_generate_foreach(fp, obj, listing, current, true );
 }
@@ -136,9 +136,11 @@ void dm_docs_generate_foreach(FILE *fp, json_t *obj, bool listing, const char *c
 		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
+(void)container;
+/* TODO
 		if (json_attr_get_container(i) != container)
 			continue;
-
+*/
 		dm_docs_generate_recursive(fp, i, listing, current, key, false);
 	}
 }
@@ -164,11 +166,16 @@ void dm_docs_generate_item_link(FILE *fp, const char *path)
 ***********************************************************************/
 void dm_docs_generate_item_row(FILE *fp, json_t *obj, const char *path, const char *name)
 {
+
+(void)path;
+(void)name;
+/* TODO
 	html_table_row_start(fp, json_attr_get_container(obj) ? "o" : "");
 
 	html_table_data_start(fp);
 	html_link_set(fp, path, json_attr_get_container(obj) ? path : name);
 	html_table_data_end(fp);
+*/
 
 	html_table_data_start(fp);
 	fprintf(fp, "%s", json_attr_get_type_raw(obj));

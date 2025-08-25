@@ -21,6 +21,25 @@ const char *json_attr_get_type_raw(json_t *obj)
 
 
 /***********************************************************************
+     * json_attr_get_container_raw
+
+***********************************************************************/
+const char *json_attr_get_container_raw(json_t *obj)
+{
+	json_t *attr = json_object_get(obj, DM_DIRECTIVE_ATTR);
+
+	if (!attr)
+	{
+		logger->log(ach::LogLevel::llError, "Cannot find " DM_DIRECTIVE_ATTR " object");
+		return NULL;
+	}
+
+	return json_object_get_string(attr, "container");
+}
+
+
+
+/***********************************************************************
      * json_attr_get_type
 
 ***********************************************************************/
@@ -48,26 +67,19 @@ ach::DataType json_attr_get_type(json_t *obj)
      * json_attr_get_container
 
 ***********************************************************************/
-bool json_attr_get_container(json_t *obj)
+ach::ContainerType json_attr_get_container(json_t *obj)
 {
-	switch (json_attr_get_type(obj))
-	{
-		case ach::DataType::dtObject  :
-		case ach::DataType::dtArray   :
-		case ach::DataType::dtMulti   : return true;
+	const char *container = json_attr_get_container_raw(obj);
 
-		case ach::DataType::dtString  :
-		case ach::DataType::dtInteger :
-		case ach::DataType::dtReal    :
-		case ach::DataType::dtBoolean :
-		case ach::DataType::dtFilename:
-		case ach::DataType::dtColor   :
-		case ach::DataType::dtLink    :
-		case ach::DataType::dtEnum    :
-		case ach::DataType::dtUnknown : return false;
-	}
+	if (!container)
+		return ach::ContainerType::ctSimple;
 
-	return false;
+	ach::ContainerType res = pair_get_enum(container, pairAttrContainer);
+
+	if (res == ach::ContainerType::ctUnknown)
+		logger->log(ach::LogLevel::llError, "Unknown container: '%s'", container);
+
+	return res;
 }
 
 

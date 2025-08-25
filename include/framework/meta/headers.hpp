@@ -56,6 +56,7 @@
 #include "framework/datamodel/trait.hpp"
 #include "framework/datamodel/class.hpp"
 #include "framework/datamodel/type.hpp"
+#include "framework/datamodel/container.hpp"
 #include "framework/datamodel/check.hpp"
 #include "framework/datamodel/default.hpp"
 #include "framework/datamodel/preprocessor.hpp"

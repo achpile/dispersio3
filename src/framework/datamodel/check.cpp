@@ -21,7 +21,7 @@ void json_dm_check_datatypes(json_t *obj, json_t *dm, const char *path)
 			continue;
 		}
 
-		if (!json_type_check(i, j, key, path))
+		if (!json_container_check(i, j, key, path))
 		{
 			json_object_del(obj, key);
 			continue;

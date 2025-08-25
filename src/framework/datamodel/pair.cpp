@@ -21,3 +21,18 @@ ach::Pair<ach::DataType> pairAttrType[] =
 
 	{.num = ach::DataType::dtUnknown , .str = NULL      },
 };
+
+
+
+/***********************************************************************
+     * pairAttrContainer
+
+***********************************************************************/
+ach::Pair<ach::ContainerType> pairAttrContainer[] =
+{
+	{.num = ach::ContainerType::ctSimple , .str = "simple"},
+	{.num = ach::ContainerType::ctArray  , .str = "array" },
+	{.num = ach::ContainerType::ctMulti  , .str = "multi" },
+
+	{.num = ach::ContainerType::ctUnknown, .str = NULL    },
+};
