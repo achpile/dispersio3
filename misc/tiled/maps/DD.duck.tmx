@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="128" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="113">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="128" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="117">
  <editorsettings>
   <export target="../../../data/base/map/DD.duck.tmj" format="json"/>
  </editorsettings>
@@ -446,6 +446,42 @@
     </property>
    </properties>
   </object>
+  <object id="113" name="RobotAlien" type="character" x="240" y="176" width="32" height="32">
+   <properties>
+    <property name="Jumping" type="class" propertytype="#jumping">
+     <properties>
+      <property name="Cooldown" type="float" value="0.5"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="114" name="RobotAlien" type="character" x="1264" y="208" width="32" height="32">
+   <properties>
+    <property name="Jumping" type="class" propertytype="#jumping">
+     <properties>
+      <property name="Cooldown" type="float" value="0.5"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="115" name="RobotAlien" type="character" x="832" y="208" width="32" height="32">
+   <properties>
+    <property name="Jumping" type="class" propertytype="#jumping">
+     <properties>
+      <property name="Cooldown" type="float" value="0.5"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="116" name="RobotAlien" type="character" x="1840" y="208" width="32" height="32">
+   <properties>
+    <property name="Jumping" type="class" propertytype="#jumping">
+     <properties>
+      <property name="Cooldown" type="float" value="0.5"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="phys">
   <object id="44" type="phys_barrier" x="0" y="240">
@@ -467,7 +503,7 @@
    <polyline points="0,0 0,-48 16,-48 32,-64 64,-64 80,-48 128,-48 128,0"/>
   </object>
   <object id="50" type="phys_solid" x="1728" y="288">
-   <polyline points="0,0 0,-48 176,-48 176,112 -448,112 -448,208 -576,208 -576,192 -496,192 -496,16 -816,16 -816,192 -736,192 -736,208 -816,208 -816,240 -320,240 -320,224 -288,224 -288,192 -256,192 -256,208 -224,208 -224,224 -176,224 -176,240 -144,240 -144,192 -96,192 -96,208 -48,208 -48,192 -16,192 -16,240 16,240 16,208 48,208 48,224 80,224 80,208 112,208 112,224 160,224 160,240 288,240 288,112 208,112 208,-48 240,-48 240,-64 256,-64 256,-96 272,-96 272,-144 288,-144 288,-240 320,-240"/>
+   <polyline points="0,0 0,-48 176,-48 176,112 -448,112 -448,208 -576,208 -576,192 -496,192 -496,64 -816,64 -816,192 -736,192 -736,208 -816,208 -816,240 -320,240 -320,224 -288,224 -288,192 -256,192 -256,208 -224,208 -224,224 -176,224 -176,240 -144,240 -144,192 -96,192 -96,208 -48,208 -48,192 -16,192 -16,240 16,240 16,208 48,208 48,224 80,224 80,208 112,208 112,224 160,224 160,240 288,240 288,112 208,112 208,-48 240,-48 240,-64 256,-64 256,-96 272,-96 272,-144 288,-144 288,-240 320,-240"/>
   </object>
   <object id="51" type="phys_solid" x="1904" y="160">
    <polyline points="0,0 32,0 32,16 0,16 0,0"/>
