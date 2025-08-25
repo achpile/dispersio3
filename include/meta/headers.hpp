@@ -60,6 +60,7 @@
 #include "character/ai/follow.hpp"
 #include "character/ai/leveler.hpp"
 #include "character/ai/bouncer.hpp"
+#include "character/ai/thrower.hpp"
 #include "character/ai/pair.hpp"
 
 #include "character/body/body.hpp"

@@ -5,12 +5,12 @@
             "Model": "EnemyMiner"
         },
         "Game": {
-            "AI": "sniper",
-            "Weapon": "PickThrow",
+            "AI": "thrower",
             "Hitbox": {
                 "X": 16,
                 "Y": 18
-            }
+            },
+            "Weapon": "PickThrow"
         }
     }
 }

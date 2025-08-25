@@ -15,7 +15,8 @@ namespace ach
 		aiJumper,
 		aiFollow,
 		aiLeveler,
-		aiBouncer
+		aiBouncer,
+		aiThrower
 	};
 
 

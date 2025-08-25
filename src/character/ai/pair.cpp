@@ -17,6 +17,7 @@ ach::Pair<ach::AIType> pairAI[] =
 	{.num = ach::AIType::aiFollow , .str = "follow" },
 	{.num = ach::AIType::aiLeveler, .str = "leveler"},
 	{.num = ach::AIType::aiBouncer, .str = "bouncer"},
+	{.num = ach::AIType::aiThrower, .str = "thrower"},
 
 	{.num = ach::AIType::aiIdle   , .str = NULL     },
 };

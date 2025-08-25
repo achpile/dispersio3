@@ -3,8 +3,8 @@
         "Animation": {
             "Idle": {
                 "End": -1,
-                "Start": 0,
-                "Loop": false
+                "Loop": false,
+                "Start": 0
             }
         },
         "Sheet": "EnemyMiner",
