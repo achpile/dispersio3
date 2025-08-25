@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Nature" tilewidth="16" tileheight="16" tilecount="38" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Nature" tilewidth="16" tileheight="16" tilecount="43" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/nature/dirt_top.png" width="16" height="16"/>
@@ -114,5 +114,20 @@
  </tile>
  <tile id="22">
   <image source="../../../data/base/gfx/game/tile/nature/shroom_r.png" width="16" height="16"/>
+ </tile>
+ <tile id="41">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_wall_cave_top.png" width="16" height="16"/>
+ </tile>
+ <tile id="39">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_wall_cave_tl.png" width="16" height="16"/>
+ </tile>
+ <tile id="40">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_wall_cave_tl_2.png" width="16" height="16"/>
+ </tile>
+ <tile id="42">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_wall_cave_tr.png" width="16" height="16"/>
+ </tile>
+ <tile id="43">
+  <image source="../../../data/base/gfx/game/tile/nature/dirt_wall_cave_tr_2.png" width="16" height="16"/>
  </tile>
 </tileset>
