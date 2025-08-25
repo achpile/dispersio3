@@ -922,8 +922,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -964,8 +964,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1006,8 +1006,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1048,8 +1048,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1090,8 +1090,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1132,8 +1132,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1174,8 +1174,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1216,8 +1216,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],
@@ -1258,8 +1258,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Aim":"left",
-                             "Cooldown":2,
+                             "Aim":"none",
+                             "Cooldown":0.8,
                              "Offset":0.8
                             }
                         }],

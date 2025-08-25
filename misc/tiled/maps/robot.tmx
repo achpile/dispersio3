@@ -396,7 +396,6 @@
       <property name="Direction" propertytype="@direction" value="left"/>
      </properties>
     </property>
-    <property name="Spawn" type="float" value="0.5"/>
     <property name="Speed" type="float" value="75"/>
    </properties>
   </object>
@@ -418,7 +417,6 @@
       <property name="Direction" propertytype="@direction" value="right"/>
      </properties>
     </property>
-    <property name="Spawn" type="float" value="0.5"/>
     <property name="Speed" type="float" value="75"/>
    </properties>
   </object>
@@ -505,96 +503,15 @@
     </property>
    </properties>
   </object>
-  <object id="80" name="RobotHeli" type="character" x="1456" y="96" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="81" name="RobotHeli" type="character" x="1408" y="144" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="82" name="RobotHeli" type="character" x="1360" y="96" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="83" name="RobotHeli" type="character" x="2352" y="304" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="84" name="RobotHeli" type="character" x="2384" y="336" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="85" name="RobotHeli" type="character" x="2416" y="304" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="86" name="RobotHeli" type="character" x="2336" y="656" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="87" name="RobotHeli" type="character" x="2368" y="688" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
-  <object id="88" name="RobotHeli" type="character" x="2400" y="656" width="16" height="16">
-   <properties>
-    <property name="Shooting" type="class" propertytype="#shooting">
-     <properties>
-      <property name="Aim" propertytype="@direction" value="left"/>
-      <property name="Cooldown" type="float" value="2"/>
-     </properties>
-    </property>
-   </properties>
-  </object>
+  <object id="80" name="RobotHeli" type="character" x="1456" y="96" width="16" height="16"/>
+  <object id="81" name="RobotHeli" type="character" x="1408" y="144" width="16" height="16"/>
+  <object id="82" name="RobotHeli" type="character" x="1360" y="96" width="16" height="16"/>
+  <object id="83" name="RobotHeli" type="character" x="2352" y="304" width="16" height="16"/>
+  <object id="84" name="RobotHeli" type="character" x="2384" y="336" width="16" height="16"/>
+  <object id="85" name="RobotHeli" type="character" x="2416" y="304" width="16" height="16"/>
+  <object id="86" name="RobotHeli" type="character" x="2336" y="656" width="16" height="16"/>
+  <object id="87" name="RobotHeli" type="character" x="2368" y="688" width="16" height="16"/>
+  <object id="88" name="RobotHeli" type="character" x="2400" y="656" width="16" height="16"/>
   <object id="91" name="Miner" type="character" x="1936" y="224" width="16" height="16">
    <properties>
     <property name="Shooting" type="class" propertytype="#shooting">
