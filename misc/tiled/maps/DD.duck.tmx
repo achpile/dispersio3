@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="128" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="117">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="128" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="121">
  <editorsettings>
   <export target="../../../data/base/map/DD.duck.tmj" format="json"/>
  </editorsettings>
@@ -253,6 +253,36 @@
     <property name="Jumping" type="class" propertytype="#jumping">
      <properties>
       <property name="Cooldown" type="float" value="0.5"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="117" name="Monkey" type="character" x="1792" y="440" width="16" height="24">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
+      <property name="Fall" type="bool" value="true"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="118" name="Monkey" type="character" x="1632" y="440" width="16" height="24">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
+      <property name="Fall" type="bool" value="true"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="120" name="Monkey" type="character" x="1440" y="440" width="16" height="24">
+   <properties>
+    <property name="Moving" type="class" propertytype="#moving">
+     <properties>
+      <property name="Direction" propertytype="@direction" value="right"/>
+      <property name="Fall" type="bool" value="true"/>
      </properties>
     </property>
    </properties>

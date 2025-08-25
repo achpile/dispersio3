@@ -3,8 +3,8 @@
         "Filename": "map/DD.duck.tmj",
         "Player": "PlayerDuck",
         "Spawn": {
-            "X": 4,
-            "Y": 14
+            "X": 124,
+            "Y": 32
         }
     }
 }
