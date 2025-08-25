@@ -1,6 +1,6 @@
 {
-    "03-2-Cave": {
-        "Filename": "map/03.2.cave.tmj",
+    "Cave": {
+        "Filename": "map/cave.tmj",
         "Spawn": {
             "X": 6,
             "Y": 9

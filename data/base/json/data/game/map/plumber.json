@@ -1,6 +1,6 @@
 {
-    "DD-Plumber": {
-        "Filename": "map/DD.plumber.tmj",
+    "Plumber": {
+        "Filename": "map/plumber.tmj",
         "Player": "PlayerPlumber",
         "Spawn": {
             "X": 2,

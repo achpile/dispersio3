@@ -1,6 +1,6 @@
 {
     "Default": {
-        "Filename": "map/00.default.tmj",
+        "Filename": "map/default.tmj",
         "Spawn": {
             "X": 3,
             "Y": 15

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="120" height="72" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="263">
  <editorsettings>
-  <export target="../../../data/base/map/03.3.factory.tmj" format="json"/>
+  <export target="../../../data/base/map/factory.tmj" format="json"/>
  </editorsettings>
  <tileset firstgid="1" source="../tilesets/dev.tsx"/>
  <tileset firstgid="22" source="../tilesets/misc.tsx"/>

@@ -1,6 +1,6 @@
 {
-    "04-Temple": {
-        "Filename": "map/04.temple.tmj",
+    "Temple": {
+        "Filename": "map/temple.tmj",
         "Spawn": {
             "X": 12,
             "Y": 69

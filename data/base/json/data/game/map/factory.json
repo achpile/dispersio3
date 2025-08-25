@@ -1,6 +1,6 @@
 {
-    "03-3-Factory": {
-        "Filename": "map/03.3.factory.tmj",
+    "Factory": {
+        "Filename": "map/factory.tmj",
         "Spawn": {
             "X": 8,
             "Y": 69

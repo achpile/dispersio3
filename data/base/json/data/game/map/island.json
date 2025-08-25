@@ -1,6 +1,6 @@
 {
-    "DD-Island": {
-        "Filename": "map/DD.island.tmj",
+    "Island": {
+        "Filename": "map/island.tmj",
         "Player": "PlayerBill",
         "Spawn": {
             "X": 3,

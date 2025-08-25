@@ -1,6 +1,6 @@
 {
-    "DD-Robot": {
-        "Filename": "map/DD.robot.tmj",
+    "Robot": {
+        "Filename": "map/robot.tmj",
         "Player": "PlayerRobot",
         "Spawn": {
             "X": 2,

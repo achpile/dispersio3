@@ -1,6 +1,6 @@
 {
-    "05-Boss": {
-        "Filename": "map/05.boss.tmj",
+    "Boss": {
+        "Filename": "map/boss.tmj",
         "Spawn": {
             "X": 11,
             "Y": 14

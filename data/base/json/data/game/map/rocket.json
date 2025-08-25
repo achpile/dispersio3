@@ -1,6 +1,6 @@
 {
-    "00-Rocket": {
-        "Filename": "map/00.rocket.tmj",
+    "Rocket": {
+        "Filename": "map/rocket.tmj",
         "Spawn": {
             "X": 59,
             "Y": 11
