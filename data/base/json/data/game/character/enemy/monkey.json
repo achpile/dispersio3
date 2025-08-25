@@ -1,0 +1,17 @@
+{
+    "Monkey": {
+        "Appearance": {
+            "Model": "EnemyMonkey"
+        },
+        "Game": {
+            "AI": "crawl",
+            "Hitbox": {
+                "X": 12,
+                "Y": 24
+            }
+        },
+        "Stats": {
+            "Speed": 50
+        }
+    }
+}
