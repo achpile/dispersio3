@@ -1,0 +1,13 @@
+{
+    "EnemyMiner": {
+        "Animation": {
+            "Idle": {
+                "End": -1,
+                "Start": 0,
+                "Loop": false
+            }
+        },
+        "Sheet": "EnemyMiner",
+        "Type": "simple"
+    }
+}

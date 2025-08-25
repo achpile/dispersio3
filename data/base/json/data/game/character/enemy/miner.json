@@ -1,0 +1,16 @@
+{
+    "Miner": {
+        "Appearance": {
+            "Barrel": 0,
+            "Model": "EnemyMiner"
+        },
+        "Game": {
+            "AI": "sniper",
+            "Weapon": "PickThrow",
+            "Hitbox": {
+                "X": 16,
+                "Y": 18
+            }
+        }
+    }
+}
