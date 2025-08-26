@@ -1,6 +1,7 @@
 {
     "@attr": {
-        "type": "multi"
+        "container": "multi",
+        "type": "object"
     },
     "Filename": {
         "@attr": {

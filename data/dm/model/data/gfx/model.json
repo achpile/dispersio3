@@ -1,10 +1,12 @@
 {
     "@attr": {
-        "type": "multi"
+        "container": "multi",
+        "type": "object"
     },
     "Animation": {
         "@attr": {
-            "type": "multi"
+            "container": "multi",
+            "type": "object"
         },
         "End": {
             "@attr": {

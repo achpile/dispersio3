@@ -16,8 +16,6 @@ bool json_type_check(json_t *obj, json_t *dm, const char *name, const char *path
 		case ach::DataType::dtBoolean : return json_type_check_boolean (obj, dm, name, path);
 		case ach::DataType::dtFilename: return json_type_check_filename(obj, dm, name, path);
 		case ach::DataType::dtColor   : return json_type_check_color   (obj, dm, name, path);
-		case ach::DataType::dtArray   : return json_type_check_array   (obj, dm, name, path);
-		case ach::DataType::dtMulti   : return json_type_check_multi   (obj, dm, name, path);
 		case ach::DataType::dtLink    : return json_type_check_link    (obj, dm, name, path);
 		case ach::DataType::dtEnum    : return json_type_check_enum    (obj, dm, name, path);
 		case ach::DataType::dtUnknown : return false;
@@ -175,77 +173,6 @@ bool json_type_check_filename(json_t *obj, json_t *, const char *name, const cha
 	}
 
 	json_string_set(obj, filename);
-	return true;
-}
-
-
-
-/***********************************************************************
-     * json_type_check_array
-
-***********************************************************************/
-bool json_type_check_array(json_t *obj, json_t *dm, const char *name, const char *path)
-{
-	if (!json_is_array(obj))
-	{
-		logger->log(ach::LogLevel::llWarning, "Value '%s' must be an array", name);
-		return false;
-	}
-
-	size_t  i;
-	json_t *j;
-
-	json_array_foreach(obj, i, j)
-	{
-		if (!json_is_object(j))
-		{
-			logger->log(ach::LogLevel::llWarning, "Item [%zu] of array '%s' is not an object", i, name);
-			json_array_remove(obj, i);
-			continue;
-		}
-
-		json_dm_check_datatypes(j, dm, path);
-	}
-
-	return true;
-}
-
-
-
-/***********************************************************************
-     * json_type_check_multi
-
-***********************************************************************/
-bool json_type_check_multi(json_t *obj, json_t *dm, const char *name, const char *path)
-{
-	if (!json_is_object(obj))
-	{
-		logger->log(ach::LogLevel::llError, "Value '%s' should be object", name);
-		return false;
-	}
-
-	const char *key;
-	json_t     *instance;
-
-	json_object_foreach(obj, key, instance)
-	{
-		if (strlen(key) >= STR_LEN_NAME)
-		{
-			logger->log(ach::LogLevel::llError, "Name is too long: '%s'", key);
-			json_object_del(obj, key);
-			continue;
-		}
-
-		if (!str_check_regex(key, STR_REGEX_NAME))
-		{
-			logger->log(ach::LogLevel::llError, "Name has wrong symbols: '%s'", key);
-			json_object_del(obj, key);
-			continue;
-		}
-
-		json_dm_check_datatypes(instance, dm, path);
-	}
-
 	return true;
 }
 

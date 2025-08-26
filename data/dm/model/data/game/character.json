@@ -1,6 +1,7 @@
 {
     "@attr": {
-        "type": "multi"
+        "container": "multi",
+        "type": "object"
     },
     "Appearance": "@include character/appearance.json",
     "Game": "@include character/game.json",

@@ -1,10 +1,12 @@
 {
     "@attr": {
-        "type": "multi"
+        "container": "multi",
+        "type": "object"
     },
     "Author": {
         "@attr": {
-            "type": "array"
+            "container": "array",
+            "type": "object"
         },
         "Name": {
             "@attr": {

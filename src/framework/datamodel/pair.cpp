@@ -14,8 +14,6 @@ ach::Pair<ach::DataType> pairAttrType[] =
 	{.num = ach::DataType::dtBoolean , .str = "boolean" },
 	{.num = ach::DataType::dtFilename, .str = "filename"},
 	{.num = ach::DataType::dtColor   , .str = "color"   },
-	{.num = ach::DataType::dtArray   , .str = "array"   },
-	{.num = ach::DataType::dtMulti   , .str = "multi"   },
 	{.num = ach::DataType::dtLink    , .str = "link"    },
 	{.num = ach::DataType::dtEnum    , .str = "enum"    },
 

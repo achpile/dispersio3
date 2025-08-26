@@ -203,8 +203,8 @@ const char *dm_docs_get_postfix(json_t *obj)
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : return ".";
-		case ach::DataType::dtArray   : return ".[i].";
-		case ach::DataType::dtMulti   : return ".{i}.";
+		//case ach::DataType::dtArray   : return ".[i].";
+		//case ach::DataType::dtMulti   : return ".{i}.";
 
 		case ach::DataType::dtString  :
 		case ach::DataType::dtInteger :
@@ -231,8 +231,8 @@ void dm_docs_put_default(FILE *fp, json_t *obj)
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : fprintf(fp, "-"); break;
-		case ach::DataType::dtArray   : fprintf(fp, "-"); break;
-		case ach::DataType::dtMulti   : fprintf(fp, "-"); break;
+		//case ach::DataType::dtArray   : fprintf(fp, "-"); break;
+		//case ach::DataType::dtMulti   : fprintf(fp, "-"); break;
 		case ach::DataType::dtString  : fprintf(fp, "%s"  , json_string_value (json_attr_get_default(obj))); break;
 		case ach::DataType::dtInteger : fprintf(fp, "%lld", json_integer_value(json_attr_get_default(obj))); break;
 		case ach::DataType::dtReal    : fprintf(fp, "%.3f", json_real_value   (json_attr_get_default(obj))); break;
@@ -256,8 +256,8 @@ void dm_docs_put_values(FILE *fp, json_t *obj)
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : fprintf(fp, "-"           ); break;
-		case ach::DataType::dtArray   : fprintf(fp, "-"           ); break;
-		case ach::DataType::dtMulti   : fprintf(fp, "-"           ); break;
+		//case ach::DataType::dtArray   : fprintf(fp, "-"           ); break;
+		//case ach::DataType::dtMulti   : fprintf(fp, "-"           ); break;
 		case ach::DataType::dtBoolean : fprintf(fp, "true/false"  ); break;
 		case ach::DataType::dtColor   : fprintf(fp, "#rrggbb(aa)" ); break;
 		case ach::DataType::dtFilename: fprintf(fp, "(%d)"        , STR_LEN_PATH               ); break;

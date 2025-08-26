@@ -1,6 +1,7 @@
 {
     "@attr": {
-        "type": "multi"
+        "container": "multi",
+        "type": "object"
     },
     "Appearance": "@include projectile/appearance.json",
     "Explosion": "@include projectile/explosion.json",

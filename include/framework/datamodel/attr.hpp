@@ -14,8 +14,6 @@ namespace ach
 		dtBoolean,
 		dtFilename,
 		dtColor,
-		dtArray,
-		dtMulti,
 		dtLink,
 		dtEnum
 	};
