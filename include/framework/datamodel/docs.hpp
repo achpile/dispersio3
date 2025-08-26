@@ -17,6 +17,9 @@ void dm_docs_put_default(FILE *fp, json_t *obj);
 void dm_docs_put_values (FILE *fp, json_t *obj);
 void dm_docs_put_enum   (FILE *fp, json_t *obj);
 
-const char *dm_docs_get_postfix(json_t *obj);
+bool dm_docs_is_object(json_t *obj);
+
+const char *dm_docs_get_postfix_container(json_t *obj);
+const char *dm_docs_get_postfix_item     (json_t *obj);
 
 #endif

@@ -104,18 +104,20 @@ void dm_docs_generate_footer(FILE *fp)
 void dm_docs_generate_recursive(FILE *fp, json_t *obj, bool listing, const char *path, const char *name, bool skip)
 {
 	char current[STR_LEN_PATH] = {0};
+	char naming [STR_LEN_PATH] = {0};
 
 	if (!skip)
 	{
-		snprintf(current, STR_LEN_PATH, "%s%s%s", path, name, dm_docs_get_postfix(obj));
+		snprintf(current, STR_LEN_PATH, "%s%s%s%s", path, name, dm_docs_get_postfix_container(obj), dm_docs_get_postfix_item(obj));
+		snprintf(naming , STR_LEN_PATH, "%s%s"    ,       name, dm_docs_get_postfix_container(obj));
 
-		if (listing) dm_docs_generate_item_link(fp,      current      );
-		else         dm_docs_generate_item_row (fp, obj, current, name);
+		if (listing) dm_docs_generate_item_link(fp,      current        );
+		else         dm_docs_generate_item_row (fp, obj, current, naming);
 	}
-/* TODO
-	if (!json_attr_get_container(obj))
+
+	if (!dm_docs_is_object(obj))
 		return;
-*/
+
 	dm_docs_generate_foreach(fp, obj, listing, current, false);
 	dm_docs_generate_foreach(fp, obj, listing, current, true );
 }
@@ -136,11 +138,9 @@ void dm_docs_generate_foreach(FILE *fp, json_t *obj, bool listing, const char *c
 		if (!strcmp(key, DM_DIRECTIVE_ATTR))
 			continue;
 
-(void)container;
-/* TODO
-		if (json_attr_get_container(i) != container)
+		if (dm_docs_is_object(i) != container)
 			continue;
-*/
+
 		dm_docs_generate_recursive(fp, i, listing, current, key, false);
 	}
 }
@@ -166,16 +166,11 @@ void dm_docs_generate_item_link(FILE *fp, const char *path)
 ***********************************************************************/
 void dm_docs_generate_item_row(FILE *fp, json_t *obj, const char *path, const char *name)
 {
-
-(void)path;
-(void)name;
-/* TODO
-	html_table_row_start(fp, json_attr_get_container(obj) ? "o" : "");
+	html_table_row_start(fp, dm_docs_is_object(obj) ? "o" : "");
 
 	html_table_data_start(fp);
-	html_link_set(fp, path, json_attr_get_container(obj) ? path : name);
+	html_link_set(fp, path, dm_docs_is_object(obj) ? path : name);
 	html_table_data_end(fp);
-*/
 
 	html_table_data_start(fp);
 	fprintf(fp, "%s", json_attr_get_type_raw(obj));
@@ -195,17 +190,33 @@ void dm_docs_generate_item_row(FILE *fp, json_t *obj, const char *path, const ch
 
 
 /***********************************************************************
-     * dm_docs_get_postfix
+     * dm_docs_get_postfix_container
 
 ***********************************************************************/
-const char *dm_docs_get_postfix(json_t *obj)
+const char *dm_docs_get_postfix_container(json_t *obj)
+{
+	switch (json_attr_get_container(obj))
+	{
+		case ach::ContainerType::ctArray   : return ".[i]";
+		case ach::ContainerType::ctMulti   : return ".{i}";
+		case ach::ContainerType::ctSimple  :
+		case ach::ContainerType::ctUnknown : return "";
+	}
+
+	return "";
+}
+
+
+
+/***********************************************************************
+     * dm_docs_get_postfix_item
+
+***********************************************************************/
+const char *dm_docs_get_postfix_item(json_t *obj)
 {
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : return ".";
-		//case ach::DataType::dtArray   : return ".[i].";
-		//case ach::DataType::dtMulti   : return ".{i}.";
-
 		case ach::DataType::dtString  :
 		case ach::DataType::dtInteger :
 		case ach::DataType::dtReal    :
@@ -223,6 +234,17 @@ const char *dm_docs_get_postfix(json_t *obj)
 
 
 /***********************************************************************
+     * dm_docs_is_object
+
+***********************************************************************/
+bool dm_docs_is_object(json_t *obj)
+{
+	return json_attr_get_type(obj) == ach::DataType::dtObject;
+}
+
+
+
+/***********************************************************************
      * dm_docs_put_default
 
 ***********************************************************************/
@@ -231,8 +253,6 @@ void dm_docs_put_default(FILE *fp, json_t *obj)
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : fprintf(fp, "-"); break;
-		//case ach::DataType::dtArray   : fprintf(fp, "-"); break;
-		//case ach::DataType::dtMulti   : fprintf(fp, "-"); break;
 		case ach::DataType::dtString  : fprintf(fp, "%s"  , json_string_value (json_attr_get_default(obj))); break;
 		case ach::DataType::dtInteger : fprintf(fp, "%lld", json_integer_value(json_attr_get_default(obj))); break;
 		case ach::DataType::dtReal    : fprintf(fp, "%.3f", json_real_value   (json_attr_get_default(obj))); break;
@@ -256,8 +276,6 @@ void dm_docs_put_values(FILE *fp, json_t *obj)
 	switch (json_attr_get_type(obj))
 	{
 		case ach::DataType::dtObject  : fprintf(fp, "-"           ); break;
-		//case ach::DataType::dtArray   : fprintf(fp, "-"           ); break;
-		//case ach::DataType::dtMulti   : fprintf(fp, "-"           ); break;
 		case ach::DataType::dtBoolean : fprintf(fp, "true/false"  ); break;
 		case ach::DataType::dtColor   : fprintf(fp, "#rrggbb(aa)" ); break;
 		case ach::DataType::dtFilename: fprintf(fp, "(%d)"        , STR_LEN_PATH               ); break;
