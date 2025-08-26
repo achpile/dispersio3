@@ -6,14 +6,9 @@
     "Author": {
         "@attr": {
             "container": "array",
-            "type": "object"
-        },
-        "Name": {
-            "@attr": {
-                "default": "Unknown writer",
-                "maxlen": 32,
-                "type": "string"
-            }
+            "default": "Unknown writer",
+            "maxlen": 32,
+            "type": "string"
         }
     },
     "Label": {

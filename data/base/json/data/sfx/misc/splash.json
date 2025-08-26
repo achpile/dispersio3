@@ -1,5 +1,3 @@
 {
-    "Splash": {
-        "Filename": "sfx/misc/splash.wav"
-    }
+    "Splash": "sfx/misc/splash.wav"
 }

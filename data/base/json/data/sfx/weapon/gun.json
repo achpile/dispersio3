@@ -1,5 +1,3 @@
 {
-    "GunShot": {
-        "Filename": "sfx/weapon/gun_shot.wav"
-    }
+    "GunShot": "sfx/weapon/gun_shot.wav"
 }

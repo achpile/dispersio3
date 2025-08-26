@@ -1,12 +1,7 @@
 {
     "@attr": {
         "container": "multi",
-        "type": "object"
-    },
-    "Filename": {
-        "@attr": {
-            "default": "sfx/misc/default.wav",
-            "type": "filename"
-        }
+        "default": "sfx/misc/default.wav",
+        "type": "filename"
     }
 }

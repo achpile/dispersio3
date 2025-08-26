@@ -1,8 +1,4 @@
 {
-    "PlayerPlumberDie": {
-        "Filename": "sfx/character/player/plumber/die.wav"
-    },
-    "PlayerPlumberJump": {
-        "Filename": "sfx/character/player/plumber/jump.wav"
-    }
+    "PlayerPlumberDie": "sfx/character/player/plumber/die.wav",
+    "PlayerPlumberJump": "sfx/character/player/plumber/jump.wav"
 }

@@ -1,14 +1,6 @@
 {
-    "PlayerDie": {
-        "Filename": "sfx/character/player/die.wav"
-    },
-    "PlayerJump": {
-        "Filename": "sfx/character/player/jump.wav"
-    },
-    "PlayerLand": {
-        "Filename": "sfx/character/player/land.wav"
-    },
-    "PlayerSwim": {
-        "Filename": "sfx/character/player/swim.wav"
-    }
+    "PlayerDie": "sfx/character/player/die.wav",
+    "PlayerJump": "sfx/character/player/jump.wav",
+    "PlayerLand": "sfx/character/player/land.wav",
+    "PlayerSwim": "sfx/character/player/swim.wav"
 }

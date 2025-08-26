@@ -1,12 +1,7 @@
 {
     "@attr": {
         "container": "multi",
-        "type": "object"
-    },
-    "Filename": {
-        "@attr": {
-            "default": "font/FSEX300.ttf",
-            "type": "filename"
-        }
+        "default": "font/FSEX300.ttf",
+        "type": "filename"
     }
 }

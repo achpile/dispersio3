@@ -1,11 +1,5 @@
 {
-    "MenuBack": {
-        "Filename": "sfx/menu/back.wav"
-    },
-    "MenuBlip": {
-        "Filename": "sfx/menu/blip.wav"
-    },
-    "MenuPick": {
-        "Filename": "sfx/menu/pick.wav"
-    }
+    "MenuBack": "sfx/menu/back.wav",
+    "MenuBlip": "sfx/menu/blip.wav",
+    "MenuPick": "sfx/menu/pick.wav"
 }

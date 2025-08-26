@@ -1,5 +1,3 @@
 {
-    "Break": {
-        "Filename": "sfx/misc/break.wav"
-    }
+    "Break": "sfx/misc/break.wav"
 }

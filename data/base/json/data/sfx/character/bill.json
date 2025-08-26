@@ -1,8 +1,4 @@
 {
-    "PlayerBillDie": {
-        "Filename": "sfx/character/player/bill/die.wav"
-    },
-    "PlayerBillLand": {
-        "Filename": "sfx/character/player/bill/land.wav"
-    }
+    "PlayerBillDie": "sfx/character/player/bill/die.wav",
+    "PlayerBillLand": "sfx/character/player/bill/land.wav"
 }

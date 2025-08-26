@@ -1,5 +1,3 @@
 {
-    "BulletBump": {
-        "Filename": "sfx/projectile/bullet_bump.wav"
-    }
+    "BulletBump": "sfx/projectile/bullet_bump.wav"
 }

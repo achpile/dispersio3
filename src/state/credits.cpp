@@ -183,7 +183,7 @@ void ach::StateCredits::translations()
 			if (i != 0)
 				line += ", ";
 
-			line += str_utf8(json_object_get_string(author, "Name"));
+			line += str_utf8(json_string_value(author));
 		}
 
 		add(line, ach::CreditsWeight::cwEntry);

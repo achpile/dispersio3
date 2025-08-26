@@ -1,5 +1,3 @@
 {
-    "Checkpoint": {
-        "Filename": "sfx/misc/checkpoint.wav"
-    }
+    "Checkpoint": "sfx/misc/checkpoint.wav"
 }

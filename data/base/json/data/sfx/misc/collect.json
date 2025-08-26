@@ -1,5 +1,3 @@
 {
-    "Collect": {
-        "Filename": "sfx/misc/collect.wav"
-    }
+    "Collect": "sfx/misc/collect.wav"
 }

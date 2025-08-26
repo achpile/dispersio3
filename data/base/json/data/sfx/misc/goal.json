@@ -1,5 +1,3 @@
 {
-    "Goal": {
-        "Filename": "sfx/misc/goal.wav"
-    }
+    "Goal": "sfx/misc/goal.wav"
 }

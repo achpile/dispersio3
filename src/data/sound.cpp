@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::DataSound::DataSound(json_t *obj)
 {
-	sfml_load_sound(&snd, json_object_get_string(obj, "Filename"));
+	sfml_load_sound(&snd, json_string_value(obj));
 }
 
 

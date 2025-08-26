@@ -1,5 +1,3 @@
 {
-    "Antigrav": {
-        "Filename": "sfx/misc/antigrav.wav"
-    }
+    "Antigrav": "sfx/misc/antigrav.wav"
 }

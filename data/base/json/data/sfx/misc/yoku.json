@@ -1,5 +1,3 @@
 {
-    "Yoku": {
-        "Filename": "sfx/misc/yoku.wav"
-    }
+    "Yoku": "sfx/misc/yoku.wav"
 }

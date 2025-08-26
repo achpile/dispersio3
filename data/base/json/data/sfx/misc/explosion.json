@@ -1,5 +1,3 @@
 {
-    "Explosion": {
-        "Filename": "sfx/misc/explosion.wav"
-    }
+    "Explosion": "sfx/misc/explosion.wav"
 }

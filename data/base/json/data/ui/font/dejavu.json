@@ -1,5 +1,3 @@
 {
-    "DejaVu": {
-        "Filename": "font/dejavu.ttf"
-    }
+    "DejaVu": "font/dejavu.ttf"
 }
