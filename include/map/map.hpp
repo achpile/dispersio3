@@ -22,9 +22,9 @@ namespace ach
 		ach::Tileset     *tileset;
 		ach::Collision   *collision;
 
+		sf::FloatRect     spawn;
 		sf::Vector2i      sizeMap;
 		sf::Vector2i      sizeTile;
-		sf::Vector2f      spawn;
 
 
 		 Map(ach::ProcessWorld *_world, ach::DataMap *_base);
@@ -43,32 +43,33 @@ namespace ach
 
 		/*  collide.cpp  */
 		void collide();
-		void collideCharacter(ach::Character *character);
-		bool collideLine(ach::Line *line, long filter, sf::Vector2f *n = NULL);
+		void collideCharacter (ach::Character *character);
+		bool collideLine      (ach::Line *line, long filter, sf::Vector2f *n = NULL);
 		void collideProjectile(ach::Projectile *projectile);
-		void collideExplosion(ach::Projectile *projectile);
-		void collideEnemies(ach::Character *character);
+		void collideExplosion (ach::Projectile *projectile);
+		void collideEnemies   (ach::Character *character);
 
 		ach::PhysLine *collidePhys(ach::Phys *phys, long filter);
 
 		/*  load.cpp  */
 		void load();
-		void loadMeta(json_t *mapdata);
 		void loadInit();
 		void loadFinalize();
-		void loadTileset(json_t *mapdata, const char *path);
-		void loadLayers(json_t *mapdata);
-		void loadLayerTiles(json_t *layer);
+		void loadMeta        (json_t *mapdata);
+		void loadTileset     (json_t *mapdata, const char *path);
+		void loadLayers      (json_t *mapdata);
+		void loadLayerTiles  (json_t *layer);
 		void loadLayerObjects(json_t *layer);
-		void loadPhys(json_t *layer);
-		void loadObjects(json_t *layer);
-		void loadCharacters(json_t *layer);
-		void loadCamera(json_t *layer);
+		void loadPhys        (json_t *layer);
+		void loadObjects     (json_t *layer);
+		void loadCharacters  (json_t *layer);
+		void loadCamera      (json_t *layer);
 
 		/*  coord.cpp  */
-		sf::Vector2f  getTilePos(sf::Vector2i v);
-		sf::Vector2i  getTileCoord(sf::Vector2f v);
+		sf::Vector2f  getTilePos   (sf::Vector2i v);
+		sf::Vector2i  getTileCoord (sf::Vector2f v);
 		sf::Vector2f  getTileCenter(sf::Vector2i v);
+		sf::FloatRect getTileRect  (sf::Vector2i v);
 
 		/*  find.cpp  */
 		ach::MapObject* findMapObject(int id);

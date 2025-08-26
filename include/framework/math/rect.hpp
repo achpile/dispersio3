@@ -5,6 +5,7 @@
 sf::Vector2f rect_pos   (sf::FloatRect r);
 sf::Vector2f rect_size  (sf::FloatRect r);
 sf::Vector2f rect_center(sf::FloatRect r);
+sf::Vector2f rect_place (sf::FloatRect r, sf::FloatRect p);
 
 sf::Vector2f rect_lt(sf::FloatRect r);
 sf::Vector2f rect_rt(sf::FloatRect r);

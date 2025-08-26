@@ -34,3 +34,15 @@ sf::Vector2f ach::Map::getTileCenter(sf::Vector2i v)
 {
 	return getTilePos(v) + sf::Vector2f(sizeTile) / 2.0f;
 }
+
+
+
+/***********************************************************************
+     * Map
+     * getTileRect
+
+***********************************************************************/
+sf::FloatRect ach::Map::getTileRect(sf::Vector2i v)
+{
+	return sf::FloatRect(getTilePos(v), sf::Vector2f(sizeTile));
+}

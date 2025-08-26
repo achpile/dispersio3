@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Character::Character(ach::ProcessWorld *_world, json_t *obj)
 {
-	init(_world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_center(obj), obj);
+	init(_world, db->getCharacter(json_object_get_string(obj, "name")), vector_json_rect(obj), obj);
 }
 
 
@@ -18,7 +18,7 @@ ach::Character::Character(ach::ProcessWorld *_world, json_t *obj)
      * constructor
 
 ***********************************************************************/
-ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn)
+ach::Character::Character(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::FloatRect _spawn)
 {
 	init(_world, _base, _spawn, NULL);
 }
@@ -96,11 +96,10 @@ void ach::Character::render()
      * init
 
 ***********************************************************************/
-void ach::Character::init(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::Vector2f _spawn, json_t *obj)
+void ach::Character::init(ach::ProcessWorld *_world, ach::DataCharacter *_base, sf::FloatRect _spawn, json_t *obj)
 {
 	world      = _world;
 	base       = _base;
-	spawn      = _spawn;
 	ai         = ach::AI::create(this, base->ai, obj);
 	body       = ach::Body::create(this, base->model);
 	weapon     = new ach::Weapon(world, this, base->weapon);
@@ -113,6 +112,9 @@ void ach::Character::init(ach::ProcessWorld *_world, ach::DataCharacter *_base, 
 
 	body->setColor(base->color);
 	weapon->barrel = base->barrel;
+
+	if (base->gravity) spawn = rect_place (_spawn, phys.rect) + base->offset;
+	else               spawn = rect_center(_spawn);
 
 	respawn();
 }

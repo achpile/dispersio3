@@ -60,7 +60,7 @@ void ach::Map::loadMeta(json_t *mapdata)
 	sizeTile = sf::Vector2i(json_object_get_integer(mapdata, "tilewidth" ),
 	                        json_object_get_integer(mapdata, "tileheight"));
 
-	spawn    = getTileCenter(base->spawn);
+	spawn    = getTileRect(base->spawn);
 }
 
 

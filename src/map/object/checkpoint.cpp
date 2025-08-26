@@ -53,7 +53,7 @@ void ach::MapObjectCheckpoint::touch()
 	list_foreach(world->map->checkpoints)
 		world->map->checkpoints[i]->deactivate();
 
-	world->player->spawn = phys.pos;
+	world->player->spawn = rect_place(phys.rect, world->player->phys.rect);
 	world->map->gfx.push_back(new ach::EffectSplash(phys.pos, sf::Color::White, MATH_PI / 2.0f, 8));
 
 	active = true;
