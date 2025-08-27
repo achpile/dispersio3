@@ -87,6 +87,7 @@
 
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"
+#include "framework/text/text.hpp"
 
 #include "framework/menu/theme.hpp"
 #include "framework/menu/item.hpp"
