@@ -6,8 +6,34 @@ namespace ach
 {
 	struct Text
 	{
-		 Text();
+		std::vector<sf::String> strings;
+
+		ach::RenderLayer  layer;
+		ach::TextAlign    align;
+		sf::Text         *text;
+		sf::String        string;
+		sf::Vector2f      pos;
+
+		float spacing;
+		float width;
+
+
+		 Text(sf::Font *font, int size);
 		~Text();
+
+		void render();
+
+		void setString(sf::String _string);
+		void setPosition(sf::Vector2f _pos);
+		void setWidth(float _width);
+		void setFont(sf::Font *font);
+		void setSize(int size);
+		void setColor(sf::Color color);
+		void setSpacing(int _spacing);
+		void setAlign(ach::TextAlign _align);
+		void setLayer(ach::RenderLayer _layer);
+
+		void calc();
 	};
 }
 
