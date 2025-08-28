@@ -21,7 +21,7 @@ namespace ach
 		ach::Timer       fader;
 
 
-		 ProcessWorld(ach::StateGame *_owner);
+		 ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map);
 		~ProcessWorld();
 
 		void update();

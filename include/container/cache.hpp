@@ -6,8 +6,16 @@ namespace ach
 {
 	struct Cache
 	{
+		ach::DataMap *current;
+
+		json_t *campaign;
+
+
 		 Cache();
 		~Cache();
+
+		void init();
+		void reset();
 	};
 }
 

@@ -115,7 +115,7 @@ void ach::StateMenu::fill()
 {
 	menu->init("Main.Name");
 
-	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Start"          , handler_menu_state     , json_string("game"   )));
+	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Start"          , handler_menu_start     , json_true()           ));
 	menu->add("Main.Name"       , new ach::MenuItemFolder  (menu, "Options.Name"        ));
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Credits"        , handler_menu_state     , json_string("credits")));
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Misc.Exit"           , handler_menu_state     , json_string("end"    )));

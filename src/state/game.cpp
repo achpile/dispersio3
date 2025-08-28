@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::StateGame::StateGame()
 {
-	proc = new ach::ProcessWorld(this);
+	proc = new ach::ProcessWorld(this, cache->current);
 
 	app->mouse(false);
 }

@@ -6,10 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner) : Process(_owner)
+ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Process(_owner)
 {
 	state  = ach::WorldState::wsFadeIn;
-	map    = new ach::Map(this, db->getMap("Default"));
+	map    = new ach::Map(this, _map);
 	player = new ach::Character(this, map->base->player, map->spawn);
 
 	map->cam->follow(&player->phys);

@@ -71,6 +71,22 @@ void handler_menu_state(void *, json_t *data)
 
 
 /***********************************************************************
+     * handler_menu_start
+
+***********************************************************************/
+void handler_menu_start(void *, json_t *data)
+{
+	if (json_is_true(data))
+		cache->reset();
+
+	cache->init();
+
+	app->stateSet(ach::GameState::gsGame);
+}
+
+
+
+/***********************************************************************
      * handler_menu_reset
 
 ***********************************************************************/
