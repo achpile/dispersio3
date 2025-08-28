@@ -50,6 +50,7 @@
 
 #include "container/theme.hpp"
 #include "container/settings.hpp"
+#include "container/cache.hpp"
 
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"

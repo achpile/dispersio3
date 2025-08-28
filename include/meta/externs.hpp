@@ -7,6 +7,7 @@ extern ach::ParticleSystemStars *stars;
 
 extern ach::Settings            *settings;
 extern ach::Theme               *theme;
+extern ach::Cache               *cache;
 extern ach::Database            *db;
 
 extern ach::Log                 *logger;
