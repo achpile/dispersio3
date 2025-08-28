@@ -9,6 +9,7 @@
 ach::Cache::Cache()
 {
 	campaign = json_object_get_branch(dm->data, "Data.Game.Campaign");
+	cache    = json_object_get_branch(dm->data, "Data.Game.Cache");
 }
 
 
@@ -20,6 +21,7 @@ ach::Cache::Cache()
 ***********************************************************************/
 ach::Cache::~Cache()
 {
+	save();
 }
 
 
@@ -32,6 +34,19 @@ ach::Cache::~Cache()
 void ach::Cache::init()
 {
 	current = db->getMap(json_object_get_string(campaign, "Start"));
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * save
+
+***********************************************************************/
+void ach::Cache::save()
+{
+	if (cache)
+		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
 

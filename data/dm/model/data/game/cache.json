@@ -1,0 +1,74 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Current": {
+        "@attr": {
+            "type": "object"
+        },
+        "Checkpoint": {
+            "@attr": {
+                "default": -1,
+                "max": 2147483647,
+                "min": -1,
+                "type": "integer"
+            }
+        },
+        "Map": {
+            "@attr": {
+                "data": "Data.Game.Map",
+                "default": "Default",
+                "type": "link"
+            }
+        }
+    },
+    "Flags": {
+        "@attr": {
+            "container": "multi",
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Map": {
+        "@attr": {
+            "container": "multi",
+            "type": "object"
+        },
+        "Finished": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        },
+        "Item": {
+            "@attr": {
+                "container": "array",
+                "default": 0,
+                "max": 2147483647,
+                "min": 0,
+                "type": "integer"
+            }
+        }
+    },
+    "Stats": {
+        "@attr": {
+            "type": "object"
+        },
+        "Deaths": {
+            "@attr": {
+                "default": 0,
+                "max": 2147483647,
+                "min": 0,
+                "type": "integer"
+            }
+        },
+        "Time": {
+            "@attr": {
+                "default": 0.0,
+                "max": 2147483647.0,
+                "min": 0.0,
+                "type": "real"
+            }
+        }
+    }
+}

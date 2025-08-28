@@ -20,6 +20,7 @@ CMAKE    = CMakeFiles           \
            install_manifest.txt
 
 SESSION  = settings.json        \
+           save.json            \
            logs/
 
 DATA     = data/

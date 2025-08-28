@@ -16,6 +16,7 @@
 
 ***********************************************************************/
 #define FILE_SETTINGS         "settings.json"
+#define FILE_CACHE            "save.json"
 
 
 

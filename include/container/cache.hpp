@@ -9,12 +9,14 @@ namespace ach
 		ach::DataMap *current;
 
 		json_t *campaign;
+		json_t *cache;
 
 
 		 Cache();
 		~Cache();
 
 		void init();
+		void save();
 		void reset();
 		void finish();
 	};

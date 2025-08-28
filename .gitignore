@@ -5,6 +5,7 @@ dispersio3
 
 # Game saved data
 settings.json
+save.json
 logs/
 
 # CMake files
