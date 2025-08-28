@@ -12,6 +12,7 @@ ach::Map::Map(ach::ProcessWorld *_world, ach::DataMap *_base)
 	world     = _world;
 	collision = new ach::Collision();
 	cam       = new ach::Camera(this);
+	caption   = new ach::MapCaption(lm->getv("Game.Map.%s", base->name));
 
 	load();
 }
@@ -37,6 +38,7 @@ ach::Map::~Map()
 	delete tileset;
 	delete collision;
 	delete cam;
+	delete caption;
 
 	checkpoints.clear();
 
@@ -62,6 +64,7 @@ void ach::Map::update()
 	collide();
 
 	cam->update();
+	caption->update();
 
 	list_update(characters);
 	list_update(objects);
@@ -79,6 +82,8 @@ void ach::Map::update()
 void ach::Map::render()
 {
 	renderTiles();
+
+	caption->render();
 
 	list_render(objects);
 	list_render(characters);

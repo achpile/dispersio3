@@ -21,6 +21,7 @@ namespace ach
 		ach::Camera      *cam;
 		ach::Tileset     *tileset;
 		ach::Collision   *collision;
+		ach::MapCaption  *caption;
 
 		sf::FloatRect     spawn;
 		sf::Vector2i      sizeMap;
