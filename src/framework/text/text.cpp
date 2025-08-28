@@ -170,7 +170,52 @@ void ach::Text::setLayer(ach::RenderLayer _layer)
 ***********************************************************************/
 void ach::Text::calc()
 {
+	std::vector<sf::String> words;
+
 	strings.clear();
 
-	strings.push_back(string);
+	if (!string.getSize())
+		return;
+
+	sf::String str;
+
+	size_t cur = 0;
+	size_t pos = 0;
+
+	while (cur < string.getSize())
+	{
+		pos = string.find(" ", cur);
+
+		words.push_back(string.substring(cur, pos - cur));
+
+		if (pos == sf::String::InvalidPos)
+			break;
+
+		cur = pos + 1;
+	}
+
+
+	if (!words.size())
+		return;
+
+	str = words[0];
+
+	for (size_t i = 1; i < words.size(); i++)
+	{
+		text->setString(str + " " + words[i]);
+
+		if (text->getLocalBounds().width > width)
+		{
+			strings.push_back(str);
+
+			str = words[i];
+		}
+		else
+		{
+			str += " " + words[i];
+		}
+	}
+
+	strings.push_back(str);
+	words.clear();
 }
