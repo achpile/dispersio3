@@ -1,6 +1,7 @@
 {
     "Rocket": {
         "Filename": "map/rocket.tmj",
+        "Replay": false,
         "Spawn": {
             "X": 59,
             "Y": 11

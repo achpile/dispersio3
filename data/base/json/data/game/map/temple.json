@@ -1,6 +1,8 @@
 {
     "Temple": {
         "Filename": "map/temple.tmj",
+        "Next": "Boss",
+        "Replay": false,
         "Spawn": {
             "X": 12,
             "Y": 69

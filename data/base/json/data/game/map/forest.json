@@ -1,6 +1,7 @@
 {
     "Forest": {
         "Filename": "map/forest.tmj",
+        "Next": "Rocket",
         "Spawn": {
             "X": 13,
             "Y": 12

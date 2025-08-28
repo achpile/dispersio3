@@ -9,11 +9,30 @@
             "type": "filename"
         }
     },
+    "Final": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Next": {
+        "@attr": {
+            "data": "Data.Game.Map",
+            "default": "Default",
+            "type": "link"
+        }
+    },
     "Player": {
         "@attr": {
             "data": "Data.Game.Character",
             "default": "Player",
             "type": "link"
+        }
+    },
+    "Replay": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
         }
     },
     "Spawn": {

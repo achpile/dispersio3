@@ -1,6 +1,7 @@
 {
     "LaunchPad": {
         "Filename": "map/launchpad.tmj",
+        "Next": "Rocket",
         "Spawn": {
             "X": 1,
             "Y": 67

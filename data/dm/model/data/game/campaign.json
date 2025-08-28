@@ -1,0 +1,34 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Dream": {
+        "@attr": {
+            "container": "array",
+            "data": "Data.Game.Map",
+            "default": "Default",
+            "type": "link"
+        }
+    },
+    "Navigation": {
+        "@attr": {
+            "container": "multi",
+            "type": "object"
+        },
+        "Levels": {
+            "@attr": {
+                "container": "array",
+                "data": "Data.Game.Map",
+                "default": "Default",
+                "type": "link"
+            }
+        }
+    },
+    "Start": {
+        "@attr": {
+            "data": "Data.Game.Map",
+            "default": "Default",
+            "type": "link"
+        }
+    }
+}

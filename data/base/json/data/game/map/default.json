@@ -1,6 +1,7 @@
 {
     "Default": {
         "Filename": "map/default.tmj",
+        "Replay": false,
         "Spawn": {
             "X": 3,
             "Y": 15

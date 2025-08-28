@@ -1,7 +1,9 @@
 {
     "Robot": {
         "Filename": "map/robot.tmj",
+        "Next": "Rocket",
         "Player": "PlayerRobot",
+        "Replay": false,
         "Spawn": {
             "X": 2,
             "Y": 14

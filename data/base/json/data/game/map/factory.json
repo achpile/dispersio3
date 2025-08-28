@@ -1,6 +1,7 @@
 {
     "Factory": {
         "Filename": "map/factory.tmj",
+        "Next": "Rocket",
         "Spawn": {
             "X": 8,
             "Y": 69

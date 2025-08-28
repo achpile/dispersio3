@@ -1,7 +1,9 @@
 {
     "Island": {
         "Filename": "map/island.tmj",
+        "Next": "Rocket",
         "Player": "PlayerBill",
+        "Replay": false,
         "Spawn": {
             "X": 3,
             "Y": 9

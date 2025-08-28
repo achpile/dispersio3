@@ -1,6 +1,7 @@
 {
     "MilitaryBase": {
         "Filename": "map/military_base.tmj",
+        "Next": "LaunchPad",
         "Spawn": {
             "X": 7,
             "Y": 65

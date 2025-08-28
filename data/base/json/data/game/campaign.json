@@ -1,0 +1,24 @@
+{
+    "Dream": [
+        "Duck",
+        "Island",
+        "Plumber",
+        "Robot"
+    ],
+    "Navigation": {
+        "1": {
+            "Levels": [
+                "Forest",
+                "Factory",
+                "Cave",
+                "Lab"
+            ]
+        },
+        "2": {
+            "Levels": [
+                "Temple"
+            ]
+        }
+    },
+    "Start": "MilitaryBase"
+}

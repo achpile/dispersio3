@@ -1,6 +1,8 @@
 {
     "Boss": {
         "Filename": "map/boss.tmj",
+        "Final": true,
+        "Replay": false,
         "Spawn": {
             "X": 11,
             "Y": 14

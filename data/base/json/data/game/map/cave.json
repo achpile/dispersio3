@@ -1,6 +1,7 @@
 {
     "Cave": {
         "Filename": "map/cave.tmj",
+        "Next": "Rocket",
         "Spawn": {
             "X": 6,
             "Y": 9

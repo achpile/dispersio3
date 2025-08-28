@@ -1,7 +1,9 @@
 {
     "Plumber": {
         "Filename": "map/plumber.tmj",
+        "Next": "Rocket",
         "Player": "PlayerPlumber",
+        "Replay": false,
         "Spawn": {
             "X": 2,
             "Y": 15

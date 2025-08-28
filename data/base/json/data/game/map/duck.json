@@ -1,7 +1,9 @@
 {
     "Duck": {
         "Filename": "map/duck.tmj",
+        "Next": "Rocket",
         "Player": "PlayerDuck",
+        "Replay": false,
         "Spawn": {
             "X": 4,
             "Y": 14

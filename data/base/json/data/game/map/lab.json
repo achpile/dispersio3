@@ -1,6 +1,7 @@
 {
     "Lab": {
         "Filename": "map/lab.tmj",
+        "Next": "Rocket",
         "Spawn": {
             "X": 1,
             "Y": 30
