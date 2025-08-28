@@ -11,6 +11,8 @@ ach::AIPlayer::AIPlayer(ach::Character *_owner, json_t *obj) : AI(_owner, obj)
 	splash  = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Splash"));
 
 	owner->enemy = false;
+
+	bubbler.set(1.3f);
 }
 
 
@@ -34,6 +36,7 @@ ach::AIPlayer::~AIPlayer()
 void ach::AIPlayer::physics()
 {
 	ground();
+	bubble();
 
 	owner->dir.y      = owner->phys.gravity;
 	owner->phys.acc.y = owner->base->gravity * (owner->phys.water ? PHYS_WATER : 1.0f) * owner->phys.gravity;
@@ -51,7 +54,7 @@ void ach::AIPlayer::physics()
 			sm->play(splash->snd);
 	}
 
-	water = owner->phys.water;
+	water = (owner->phys.water != 0.0f);
 }
 
 
@@ -129,4 +132,27 @@ void ach::AIPlayer::jump()
 
 	if (owner->jump())
 		jumped = true;
+}
+
+
+
+/***********************************************************************
+     * AIPlayer
+     * bubble
+
+***********************************************************************/
+void ach::AIPlayer::bubble()
+{
+	if (owner->phys.water == 0.0f)
+	{
+		bubbler.reset();
+		return;
+	}
+
+	if (bubbler.update())
+		return;
+
+	owner->world->map->gfx.push_back(new ach::EffectBubble(owner->phys.pos, owner->phys.water));
+
+	bubbler.reset();
 }

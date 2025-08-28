@@ -14,13 +14,12 @@ namespace ach
 		sf::FloatRect rect;
 
 		float slope;
+		float water;
 		int   gravity;
 
 		bool  grounded;
 		bool  moving;
 		bool  jumpdown;
-
-		bool  water;
 		bool  bounce;
 
 

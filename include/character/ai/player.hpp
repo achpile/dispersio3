@@ -7,6 +7,7 @@ namespace ach
 	struct AIPlayer : AI
 	{
 		ach::DataSound *splash;
+		ach::Timer      bubbler;
 
 		bool jumped;
 		bool water;
@@ -23,6 +24,7 @@ namespace ach
 
 		void move(int d);
 		void jump();
+		void bubble();
 	};
 }
 

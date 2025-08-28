@@ -67,7 +67,7 @@ void ach::Map::collideCharacter(ach::Character *character)
 		left -= chunk;
 	}
 
-	character->phys.water = false;
+	character->phys.water = 0.0f;
 	character->phys.calc();
 }
 

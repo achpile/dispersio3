@@ -88,13 +88,12 @@ void ach::Phys::reset()
 	vel = sf::Vector2f(0.0f, 0.0f);
 
 	slope    = 0.0f;
+	water    = 0.0f;
 	gravity  = 1;
 
 	grounded = true;
 	moving   = false;
 	jumpdown = false;
-
-	water    = false;
 	bounce   = false;
 
 	calc();

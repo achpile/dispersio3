@@ -36,7 +36,7 @@ ach::MapObjectWater::~MapObjectWater()
 ***********************************************************************/
 void ach::MapObjectWater::touch()
 {
-	world->player->phys.water = true;
+	world->player->phys.water = phys.rect.top;
 }
 
 

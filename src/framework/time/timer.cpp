@@ -83,14 +83,14 @@ float ach::Timer::progress(bool invert)
 ***********************************************************************/
 bool ach::Timer::update(bool real)
 {
-	if (value <= 0)
+	if (value <= 0.0f)
 		return false;
 
 	value -= tm->get(real);
 
-	if (value <= 0)
+	if (value <= 0.0f)
 	{
-		value = 0;
+		value = 0.0f;
 	}
 
 	return value > 0.0f;
