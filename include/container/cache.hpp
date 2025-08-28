@@ -16,6 +16,7 @@ namespace ach
 
 		void init();
 		void reset();
+		void finish();
 	};
 }
 

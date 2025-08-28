@@ -14,7 +14,7 @@ namespace ach
 		void update();
 		void event(sf::Event e);
 
-		void next();
+		void finish();
 	};
 }
 

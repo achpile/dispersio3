@@ -114,7 +114,7 @@ void ach::ProcessWorld::finalize()
 
 		case ach::WorldState::wsFadeOut:
 			if (!fader.isActive())
-				owner->next();
+				owner->finish();
 		break;
 
 

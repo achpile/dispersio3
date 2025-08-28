@@ -59,7 +59,17 @@ void ach::StateGame::event(sf::Event e)
      * next
 
 ***********************************************************************/
-void ach::StateGame::next()
+void ach::StateGame::finish()
 {
-	app->stateSet(ach::GameState::gsMenu);
+	if (cache->current->finish)
+	{
+		app->stateSet(ach::GameState::gsMenu);
+		return;
+	}
+
+	cache->finish();
+
+	delete proc;
+
+	proc = new ach::ProcessWorld(this, cache->current);
 }

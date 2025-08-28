@@ -44,3 +44,15 @@ void ach::Cache::init()
 void ach::Cache::reset()
 {
 }
+
+
+
+/***********************************************************************
+     * Cache
+     * finish
+
+***********************************************************************/
+void ach::Cache::finish()
+{
+	current = db->getMap(current->next);
+}
