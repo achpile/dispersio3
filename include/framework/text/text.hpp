@@ -7,6 +7,7 @@ namespace ach
 	struct Text
 	{
 		std::vector<sf::String> strings;
+		std::vector<sf::String> words;
 
 		ach::RenderLayer  layer;
 		ach::TextAlign    align;
@@ -34,6 +35,9 @@ namespace ach
 		void setLayer(ach::RenderLayer _layer);
 
 		void calc();
+
+		void split();
+		void merge();
 	};
 }
 
