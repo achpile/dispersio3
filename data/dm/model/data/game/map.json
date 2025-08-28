@@ -35,6 +35,12 @@
             "type": "boolean"
         }
     },
+    "RestartOnDeath": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
     "Spawn": {
         "@attr": {
             "traits": [

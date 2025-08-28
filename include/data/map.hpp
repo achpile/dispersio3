@@ -15,6 +15,7 @@ namespace ach
 
 		bool finish;
 		bool replay;
+		bool restart;
 
 
 		 DataMap(json_t *obj);

@@ -4,6 +4,7 @@
         "Next": "Rocket",
         "Player": "PlayerBill",
         "Replay": false,
+        "RestartOnDeath": true,
         "Spawn": {
             "X": 3,
             "Y": 9

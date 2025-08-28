@@ -4,6 +4,7 @@
         "Next": "Rocket",
         "Player": "PlayerDuck",
         "Replay": false,
+        "RestartOnDeath": true,
         "Spawn": {
             "X": 4,
             "Y": 14
