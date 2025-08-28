@@ -222,18 +222,26 @@ void ach::Text::merge()
 
 	for (size_t i = 1; i < words.size(); i++)
 	{
+		if (words[i] == STR_NEWLINE)
+		{
+			strings.push_back(str);
+			str = "";
+
+			continue;
+		}
+
 		text->setString(str + " " + words[i]);
 
 		if (text->getLocalBounds().width > width)
 		{
 			strings.push_back(str);
+			str = "";
+		}
 
-			str = words[i];
-		}
-		else
-		{
-			str += " " + words[i];
-		}
+		if (!str.isEmpty())
+			str += " ";
+
+		str += words[i];
 	}
 
 	strings.push_back(str);
