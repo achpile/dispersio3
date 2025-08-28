@@ -57,9 +57,7 @@ bool ach::Character::update()
 			return !enemy;
 
 		respawn();
-
-		world->map->cam->update();
-		body->spawn();
+		ai->respawn();
 	}
 
 

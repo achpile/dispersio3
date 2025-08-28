@@ -19,6 +19,7 @@ namespace ach
 		void physics();
 		void control();
 		void reset();
+		void respawn();
 
 		void collide(ach::PhysLine *line);
 
