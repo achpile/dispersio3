@@ -54,9 +54,12 @@ bool ach::Character::update()
 	if (!alive)
 	{
 		if (spawner.update())
-			return true;
+			return !enemy;
 
 		respawn();
+
+		world->map->cam->update();
+		body->spawn();
 	}
 
 
@@ -163,7 +166,6 @@ void ach::Character::respawn()
 	phys.pos = spawn - base->offset;
 
 	spawner.reset();
-	body->spawn();
 	reset();
 }
 
