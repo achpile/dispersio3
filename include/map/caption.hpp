@@ -6,7 +6,10 @@ namespace ach
 {
 	struct MapCaption
 	{
-		sf::String caption;
+		ach::Timer         fader;
+
+		sf::RenderTexture *tex;
+		sf::Sprite        *spr;
 
 
 		 MapCaption(sf::String _caption);
