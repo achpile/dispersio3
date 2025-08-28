@@ -1,0 +1,7 @@
+{
+    "@attr": {
+        "container": "multi",
+        "default": "Unknown map",
+        "type": "string"
+    }
+}

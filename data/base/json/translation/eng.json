@@ -5,6 +5,6 @@
         ],
         "Label": "English",
         "Steam": "english",
-        "Tokens": {}
+        "Tokens": "@include eng/tokens.json"
     }
 }

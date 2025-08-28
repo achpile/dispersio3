@@ -1,0 +1,6 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Map": "@include game/map.json"
+}

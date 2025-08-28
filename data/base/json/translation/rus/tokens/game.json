@@ -1,0 +1,3 @@
+{
+    "Map": "@include game/map.json"
+}
