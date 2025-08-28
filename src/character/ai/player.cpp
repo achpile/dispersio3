@@ -102,7 +102,20 @@ void ach::AIPlayer::reset()
 void ach::AIPlayer::respawn()
 {
 	owner->world->map->cam->update();
-	owner->body->spawn();
+
+	if (owner->world->map->base->restart)
+	{
+		owner->world->map->viewport();
+		owner->world->fader.reset();
+
+		owner->world->state = ach::WorldState::wsFadeIn;
+
+		rm->setFade(0.0f);
+	}
+	else
+	{
+		owner->body->spawn();
+	}
 }
 
 
