@@ -11,6 +11,10 @@ namespace ach
 
 		char filename[STR_LEN_PATH];
 		char track   [STR_LEN_PATH];
+		char next    [STR_LEN_NAME];
+
+		bool finish;
+		bool replay;
 
 
 		 DataMap(json_t *obj);
