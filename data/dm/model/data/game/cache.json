@@ -22,6 +22,12 @@
             }
         }
     },
+    "Default": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
     "Flags": {
         "@attr": {
             "container": "multi",
