@@ -260,7 +260,7 @@ void ach::App::create()
 	                              settings->getWindowStyle());
 
 	window->setMouseCursorVisible(true);
-	window->setFramerateLimit(60);
+	window->setFramerateLimit(settings->getFrameRate());
 	window->setVerticalSyncEnabled(true);
 	window->setPosition(settings->getWindowPosition());
 	window->setIcon(icon->getSize().x,

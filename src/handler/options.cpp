@@ -53,7 +53,7 @@ void handler_options_smooth(void *, json_t *)
 ***********************************************************************/
 void handler_options_framerate(void *, json_t *)
 {
-	//rm->setSmooth(settings->isSmooth());
+	app->window->setFramerateLimit(settings->getFrameRate());
 }
 
 
