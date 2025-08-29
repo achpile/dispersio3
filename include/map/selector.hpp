@@ -9,6 +9,8 @@ namespace ach
 		ach::MapObject *object;
 		ach::Sprite    *corner;
 
+		float life;
+
 
 		 Selector();
 		~Selector();

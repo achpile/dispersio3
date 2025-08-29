@@ -8,8 +8,9 @@
 ***********************************************************************/
 ach::Selector::Selector()
 {
-	corner = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Selector"), false, true);
+	life   = 0.0f;
 	object = NULL;
+	corner = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Selector"), false, true);
 }
 
 
@@ -33,7 +34,8 @@ ach::Selector::~Selector()
 ***********************************************************************/
 void ach::Selector::update()
 {
-	object = NULL;
+	object  = NULL;
+	life   += tm->get();
 }
 
 
@@ -63,7 +65,9 @@ void ach::Selector::render()
 ***********************************************************************/
 void ach::Selector::draw(sf::Vector2f pos, sf::Vector2f scale)
 {
-	corner->spr->setPosition(pos);
+	float offset = sin(life * 10.0f);
+
+	corner->spr->setPosition(pos + scale * offset);
 	corner->spr->setScale(scale);
 
 	rm->draw(corner->spr, ach::RenderLayer::rlFront);
