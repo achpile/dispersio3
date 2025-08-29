@@ -46,4 +46,24 @@ void ach::Selector::render()
 {
 	if (!object)
 		return;
+
+	draw(rect_lt(object->phys.rect), sf::Vector2f( 1,  1));
+	draw(rect_rt(object->phys.rect), sf::Vector2f(-1,  1));
+	draw(rect_lb(object->phys.rect), sf::Vector2f( 1, -1));
+	draw(rect_rb(object->phys.rect), sf::Vector2f(-1, -1));
+}
+
+
+
+/***********************************************************************
+     * Selector
+     * draw
+
+***********************************************************************/
+void ach::Selector::draw(sf::Vector2f pos, sf::Vector2f scale)
+{
+	corner->spr->setPosition(pos);
+	corner->spr->setScale(scale);
+
+	rm->draw(corner->spr, ach::RenderLayer::rlFront);
 }

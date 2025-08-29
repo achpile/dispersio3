@@ -15,6 +15,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void draw(sf::Vector2f pos, sf::Vector2f scale);
 	};
 }
 
