@@ -26,6 +26,7 @@ namespace ach
 		void finish();
 
 		void select(const char *map);
+		int  spawn();
 
 		void die();
 		void collect(int id);

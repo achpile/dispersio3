@@ -30,3 +30,27 @@ ach::MapArea* ach::Map::findMapArea(sf::Vector2f v)
 
 	return NULL;
 }
+
+
+
+/***********************************************************************
+     * Map
+     * findMapSpawn
+
+***********************************************************************/
+sf::FloatRect ach::Map::findMapSpawn(int id)
+{
+	if (id == -1)
+		return spawn;
+
+	list_foreach(checkpoints)
+		if (checkpoints[i]->id == id)
+		{
+			checkpoints[i]->active = true;
+			checkpoints[i]->animate();
+
+			return checkpoints[i]->phys.rect;
+		}
+
+	return spawn;
+}
