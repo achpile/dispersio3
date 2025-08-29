@@ -15,18 +15,22 @@ namespace ach
 
 		bool isFullscreen();
 		bool isSmooth();
+		bool isCutscenes();
 
 		const char   *getLanguage();
 		const char   *getTheme();
 
 		int           getVolumeSound();
 		int           getVolumeMusic();
+		int           getFrameRate();
 
 		sf::VideoMode getWindowMode();
 		sf::Uint32    getWindowStyle();
 		sf::Vector2i  getWindowPosition();
 
 		void          setWindowSize(sf::Vector2u size);
+
+		json_t*       listRates();
 
 		sf::Keyboard::Key getKeyCode(ach::ControlAction action);
 		ach::JoystickCode getJoyCode(ach::ControlAction action);

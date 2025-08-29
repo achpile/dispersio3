@@ -1,6 +1,8 @@
 {
     "Audio": "Аудио",
     "Controls": "Управление",
+    "Cutscenes": "Заставки",
+    "FrameRate": "Ограничение FPS",
     "Fullscreen": "Полный экран",
     "Game": "Игра",
     "Gamepad": "Геймпад",

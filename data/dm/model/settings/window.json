@@ -2,6 +2,14 @@
     "@attr": {
         "type": "object"
     },
+    "FrameRate": {
+        "@attr": {
+            "default": 60,
+            "max": 520,
+            "min": 0,
+            "type": "integer"
+        }
+    },
     "Fullscreen": {
         "@attr": {
             "default": false,

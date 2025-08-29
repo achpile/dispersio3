@@ -52,6 +52,18 @@ bool ach::Settings::isSmooth()
 
 /***********************************************************************
      * Settings
+     * isCutscenes
+
+***********************************************************************/
+bool ach::Settings::isCutscenes()
+{
+	return json_object_get_branch_boolean(data, "Game.Cutscenes");
+}
+
+
+
+/***********************************************************************
+     * Settings
      * getLanguage
 
 ***********************************************************************/
@@ -94,6 +106,18 @@ int ach::Settings::getVolumeSound()
 int ach::Settings::getVolumeMusic()
 {
 	return json_object_get_branch_integer(data, "Audio.Music") * 10;
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * getFrameRate
+
+***********************************************************************/
+int ach::Settings::getFrameRate()
+{
+	return json_object_get_branch_integer(data, "Window.FrameRate");
 }
 
 
@@ -168,6 +192,26 @@ void ach::Settings::setWindowSize(sf::Vector2u size)
 
 	json_object_set_branch_integer(data, "Window.Width" , size.x);
 	json_object_set_branch_integer(data, "Window.Height", size.y);
+}
+
+
+
+/***********************************************************************
+     * Settings
+     * listRates
+
+***********************************************************************/
+json_t* ach::Settings::listRates()
+{
+	json_t *res = json_array();
+
+	json_array_append_new(res, json_pack("{s:s, s:i, s:b}", "Name", "UI.Menu.Misc.Off", "Value", 0  , "Token", true ));
+	json_array_append_new(res, json_pack("{s:s, s:i, s:b}", "Name", "60"              , "Value", 60 , "Token", false));
+	json_array_append_new(res, json_pack("{s:s, s:i, s:b}", "Name", "120"             , "Value", 120, "Token", false));
+	json_array_append_new(res, json_pack("{s:s, s:i, s:b}", "Name", "144"             , "Value", 144, "Token", false));
+	json_array_append_new(res, json_pack("{s:s, s:i, s:b}", "Name", "240"             , "Value", 240, "Token", false));
+
+	return res;
 }
 
 

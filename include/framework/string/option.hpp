@@ -6,11 +6,14 @@ namespace ach
 {
 	struct Option
 	{
-		sf::String caption;
-		char       value[STR_LEN_MENU];
+		sf::String  caption;
+		json_t     *value;
+
+		char        name[STR_LEN_MENU];
+		bool        token;
 
 
-		 Option(sf::String _caption, const char *_value);
+		 Option(json_t *obj);
 		~Option();
 	};
 }

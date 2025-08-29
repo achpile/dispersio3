@@ -2,6 +2,12 @@
     "@attr": {
         "type": "object"
     },
+    "Cutscenes": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
     "Language": {
         "@attr": {
             "data": "Translation",

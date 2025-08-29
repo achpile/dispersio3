@@ -13,5 +13,11 @@
             "default": "Exit",
             "type": "string"
         }
+    },
+    "Off": {
+        "@attr": {
+            "default": "Off",
+            "type": "string"
+        }
     }
 }

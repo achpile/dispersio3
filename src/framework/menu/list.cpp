@@ -6,18 +6,19 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, json_t *_list, bool _token) : MenuItem(_menu, _name)
+ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_data, const char *_var, json_t *_list) : MenuItem(_menu, _name)
 {
 	data    = _data;
 	list    = _list;
-	token   = _token;
 	handler = _handler;
 
-	const char *value;
-	json_t     *caption;
+	size_t  index;
+	json_t *value;
 
-	json_object_foreach(list, value, caption)
-		options.push_back(ach::Option("", value));
+	json_array_foreach(list, index, value)
+		options.push_back(new ach::Option(value));
+
+	strncpy(var, _var, STR_LEN_MENU);
 }
 
 
@@ -30,7 +31,7 @@ ach::MenuItemList::MenuItemList(ach::Menu *_menu, const char *_name, ach::Handle
 ach::MenuItemList::~MenuItemList()
 {
 	json_decref(list);
-	options.clear();
+	list_delete(options);
 }
 
 
@@ -44,7 +45,8 @@ void ach::MenuItemList::action(int d)
 {
 	index = interval_loop(index + d, 0, options.size() - 1);
 
-	json_string_set(data, options[index].value);
+	json_object_set(data, var, options[index]->value);
+
 	sm->play(menu->sfxPick);
 
 	if (handler)
@@ -60,7 +62,7 @@ void ach::MenuItemList::action(int d)
 ***********************************************************************/
 void ach::MenuItemList::render(int i)
 {
-	menu->print("< " + options[index].caption + " >", 0, i, ach::TextAlign::taRight);
+	menu->print("< " + options[index]->caption + " >", 0, i, ach::TextAlign::taRight);
 }
 
 
@@ -75,7 +77,7 @@ void ach::MenuItemList::finalize()
 	index = 0;
 
 	list_foreach(options)
-		if (!strncmp(json_string_value(data), options[i].value, STR_LEN_MENU))
+		if (json_equal(json_object_get(data, var), options[i]->value))
 			index = i;
 }
 
@@ -91,10 +93,8 @@ void ach::MenuItemList::translate()
 	caption = lm->getv("UI.Menu.%s", name);
 
 	list_foreach(options)
-		if (token)
-			options[i].caption = lm->get (json_object_get_string(list, options[i].value));
-		else
-			options[i].caption = str_utf8(json_object_get_string(list, options[i].value));
+		if (options[i]->token) options[i]->caption = lm->get (options[i]->name);
+		else                   options[i]->caption = str_utf8(options[i]->name);
 }
 
 

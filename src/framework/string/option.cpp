@@ -6,11 +6,13 @@
      * constructor
 
 ***********************************************************************/
-ach::Option::Option(sf::String _caption, const char *_value)
+ach::Option::Option(json_t *obj)
 {
-	caption = _caption;
+	caption = "";
+	token   = json_object_get_boolean(obj, "Token");
+	value   = json_object_get        (obj, "Value");
 
-	strncpy(value, _value, STR_LEN_MENU);
+	strncpy(name, json_object_get_string(obj, "Name"), STR_LEN_MENU);
 }
 
 
