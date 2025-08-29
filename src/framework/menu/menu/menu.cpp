@@ -8,9 +8,9 @@
 ***********************************************************************/
 ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
 {
-	box      = new sf::RectangleShape();
-	text     = new sf::Text();
+	box      = new ach::RectangleShape();
 	binder   = new ach::ControlPad();
+	text     = new sf::Text();
 	binding  = NULL;
 
 	index    = 0;
@@ -163,6 +163,7 @@ void ach::Menu::style(ach::MenuTheme *_theme)
 
 	box->setFillColor(theme->bg);
 	box->setOutlineColor(theme->border);
+	box->setRound(theme->round);
 
 	sfxBlip = theme->blip;
 	sfxBack = theme->back;

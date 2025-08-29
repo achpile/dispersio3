@@ -12,6 +12,7 @@ namespace ach
 		ach::MenuItemFolder  *current;
 		ach::MenuItemBinder  *binding;
 
+		ach::RectangleShape  *box;
 		ach::MenuTheme       *theme;
 		ach::ControlPad      *binder;
 
@@ -19,7 +20,6 @@ namespace ach
 		sf::SoundBuffer      *sfxBack;
 		sf::SoundBuffer      *sfxPick;
 
-		sf::RectangleShape   *box;
 		sf::Text             *text;
 		sf::Vector2f          pos;
 		sf::Vector2f          padding;

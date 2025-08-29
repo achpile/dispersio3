@@ -2,37 +2,36 @@
 
 
 /***********************************************************************
-     * RoundedRectangle
+     * RectangleShape
      * constructor
 
 ***********************************************************************/
-ach::RoundedRectangle::RoundedRectangle(sf::Vector2f _size)
+ach::RectangleShape::RectangleShape(sf::Vector2f _size)
 {
-	radius = 5;
-	count  = 5;
+	size = _size;
 
-	setSize(_size);
+	setRound(false);
 }
 
 
 
 /***********************************************************************
-     * RoundedRectangle
+     * RectangleShape
      * destructor
 
 ***********************************************************************/
-ach::RoundedRectangle::~RoundedRectangle()
+ach::RectangleShape::~RectangleShape()
 {
 }
 
 
 
 /***********************************************************************
-     * RoundedRectangle
+     * RectangleShape
      * setSize
 
 ***********************************************************************/
-void ach::RoundedRectangle::setSize(sf::Vector2f _size)
+void ach::RectangleShape::setSize(sf::Vector2f _size)
 {
 	size = _size;
 
@@ -42,11 +41,39 @@ void ach::RoundedRectangle::setSize(sf::Vector2f _size)
 
 
 /***********************************************************************
-     * RoundedRectangle
+     * RectangleShape
+     * setRound
+
+***********************************************************************/
+void ach::RectangleShape::setRound(bool round)
+{
+	if (round) init(5, 5.0f);
+	else       init(1, 0.0f);
+}
+
+
+
+/***********************************************************************
+     * RectangleShape
+     * init
+
+***********************************************************************/
+void ach::RectangleShape::init(int _count, float _radius)
+{
+	count  = _count;
+	radius = _radius;
+
+	update();
+}
+
+
+
+/***********************************************************************
+     * RectangleShape
      * getPointCount
 
 ***********************************************************************/
-std::size_t ach::RoundedRectangle::getPointCount() const
+std::size_t ach::RectangleShape::getPointCount() const
 {
 	return count * 4;
 }
@@ -54,19 +81,15 @@ std::size_t ach::RoundedRectangle::getPointCount() const
 
 
 /***********************************************************************
-     * RoundedRectangle
+     * RectangleShape
      * getPoint
 
 ***********************************************************************/
-sf::Vector2f ach::RoundedRectangle::getPoint(std::size_t index) const
+sf::Vector2f ach::RectangleShape::getPoint(std::size_t index) const
 {
-	if (index >= getPointCount())
-		return sf::Vector2f(0,0);
-
 	sf::Vector2f c;
 
-	float d = 90.0f / (count - 1);
-	int   i = index /  count;
+	int i = index / count;
 
 	switch(i) {
 		case 0: c.x = size.x - radius; c.y = radius         ; break;
@@ -74,6 +97,12 @@ sf::Vector2f ach::RoundedRectangle::getPoint(std::size_t index) const
 		case 2: c.x = radius         ; c.y = size.y - radius; break;
 		case 3: c.x = size.x - radius; c.y = size.y - radius; break;
 	}
+
+	if (count == 1)
+		return c;
+
+
+	float d = 90.0f / (count - 1);
 
 	return sf::Vector2f( radius * cos(d * (index - i) * MATH_RAD) + c.x,
                         -radius * sin(d * (index - i) * MATH_RAD) + c.y);
