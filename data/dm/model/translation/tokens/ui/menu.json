@@ -4,5 +4,6 @@
     },
     "Main": "@include menu/main.json",
     "Misc": "@include menu/misc.json",
-    "Options": "@include menu/options.json"
+    "Options": "@include menu/options.json",
+    "Play": "@include menu/play.json"
 }

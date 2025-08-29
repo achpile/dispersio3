@@ -76,7 +76,7 @@ void handler_menu_state(void *, json_t *data)
 ***********************************************************************/
 void handler_menu_start(void *, json_t *data)
 {
-	if (json_is_true(data))
+	if (json_object_get_boolean(data, "New"))
 		cache->reset();
 
 	cache->init();

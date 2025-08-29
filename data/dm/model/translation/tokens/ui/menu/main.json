@@ -13,11 +13,5 @@
             "default": "Main menu",
             "type": "string"
         }
-    },
-    "Start": {
-        "@attr": {
-            "default": "Start game",
-            "type": "string"
-        }
     }
 }

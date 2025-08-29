@@ -1,0 +1,35 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Continue": {
+        "@attr": {
+            "default": "Continue",
+            "type": "string"
+        }
+    },
+    "Hard": {
+        "@attr": {
+            "default": "Hard",
+            "type": "string"
+        }
+    },
+    "Name": {
+        "@attr": {
+            "default": "Play",
+            "type": "string"
+        }
+    },
+    "Normal": {
+        "@attr": {
+            "default": "Normal",
+            "type": "string"
+        }
+    },
+    "Start": {
+        "@attr": {
+            "default": "New game",
+            "type": "string"
+        }
+    }
+}

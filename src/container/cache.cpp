@@ -45,8 +45,7 @@ void ach::Cache::init()
 ***********************************************************************/
 void ach::Cache::save()
 {
-	if (cache)
-		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
+	json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
 
@@ -58,6 +57,9 @@ void ach::Cache::save()
 ***********************************************************************/
 void ach::Cache::reset()
 {
+	cache = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
+
+	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 }
 
 

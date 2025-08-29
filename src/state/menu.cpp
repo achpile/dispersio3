@@ -115,7 +115,13 @@ void ach::StateMenu::fill()
 {
 	menu->init("Main.Name");
 
-	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Start"          , handler_menu_start     , json_true()           ));
+	menu->add("Main.Name"       , new ach::MenuItemFolder  (menu, "Play.Name"           ));
+	menu->add("Play.Name"       , new ach::MenuItemAction  (menu, "Play.Continue"       , handler_menu_start     , json_pack("{s:b}", "New", false)));
+
+	menu->add("Play.Name"       , new ach::MenuItemFolder  (menu, "Play.Start"          ));
+	menu->add("Play.Start"      , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "normal")));
+	menu->add("Play.Start"      , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "hard"  )));
+
 	menu->add("Main.Name"       , new ach::MenuItemFolder  (menu, "Options.Name"        ));
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Credits"        , handler_menu_state     , json_string("credits")));
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Misc.Exit"           , handler_menu_state     , json_string("end"    )));
