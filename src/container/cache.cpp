@@ -91,12 +91,14 @@ void ach::Cache::store()
      * reset
 
 ***********************************************************************/
-void ach::Cache::reset()
+void ach::Cache::reset(const char *_mode)
 {
+	mode  = pair_get_enum(_mode, pairGameMode);
 	cache = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
+	json_object_set_string       (cache, "Difficulty" , _mode);
 }
 
 

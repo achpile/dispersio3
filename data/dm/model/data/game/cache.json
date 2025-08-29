@@ -28,6 +28,16 @@
             "type": "boolean"
         }
     },
+    "Difficulty": {
+        "@attr": {
+            "default": "normal",
+            "enum": [
+                "normal",
+                "hard"
+            ],
+            "type": "enum"
+        }
+    },
     "Flags": {
         "@attr": {
             "container": "multi",

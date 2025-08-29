@@ -4,9 +4,17 @@
 
 namespace ach
 {
+	enum GameMode
+	{
+		gmNormal,
+		gmHard
+	};
+
+
 	struct Cache
 	{
-		ach::DataMap *current;
+		ach::DataMap  *current;
+		ach::GameMode  mode;
 
 		json_t *campaign;
 		json_t *cache;
@@ -24,7 +32,7 @@ namespace ach
 		void update();
 		void save();
 		void store();
-		void reset();
+		void reset(const char *_mode);
 		void finish();
 
 		void select(const char *map);

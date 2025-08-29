@@ -118,16 +118,16 @@ void ach::StateMenu::fill()
 	if (cache->def)
 	{
 		menu->add("Main.Name"   , new ach::MenuItemFolder  (menu, "Play.Start"          ));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "normal")));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "hard"  )));
+		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start     , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
+		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start     , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
 	}
 	else
 	{
 		menu->add("Main.Name"   , new ach::MenuItemFolder  (menu, "Play.Name"           ));
-		menu->add("Play.Name"   , new ach::MenuItemAction  (menu, "Play.Continue"       , handler_menu_start     , json_pack("{s:b}", "New", false)));
+		menu->add("Play.Name"   , new ach::MenuItemAction  (menu, "Play.Continue"       , handler_menu_start     , json_pack("{s:b}"    , "New", false)));
 		menu->add("Play.Name"   , new ach::MenuItemFolder  (menu, "Play.Start"          ));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "normal")));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start     , json_pack("{s:b}", "New", true, "Mode", "hard"  )));
+		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start     , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
+		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start     , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
 	}
 
 	menu->add("Main.Name"       , new ach::MenuItemFolder  (menu, "Options.Name"        ));
