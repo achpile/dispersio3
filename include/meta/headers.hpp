@@ -114,7 +114,9 @@
 #include "state/end.hpp"
 #include "state/pair.hpp"
 
+#include "handler/common.hpp"
 #include "handler/menu.hpp"
+#include "handler/options.hpp"
 
 #include "meta/app.hpp"
 #include "meta/externs.hpp"
