@@ -79,6 +79,19 @@ void ach::Map::loadFinalize()
 		objects[i]->reset();
 		objects[i]->init(this);
 	}
+
+	size_t  i;
+	json_t *index;
+
+	ach::MapObject *item;
+
+	json_array_foreach(json_object_get(cache->info, "Item"), i, index)
+	{
+		item = findMapObject(json_integer_value(index));
+
+		if (item)
+			item->alive = false;
+	}
 }
 
 
