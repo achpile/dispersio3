@@ -7,6 +7,7 @@ namespace ach
 	struct Selector
 	{
 		ach::MapObject *object;
+		ach::Sprite    *corner;
 
 
 		 Selector();
