@@ -19,6 +19,7 @@ namespace ach
 
 		int              size;
 		int              spacing;
+		bool             round;
 	};
 }
 

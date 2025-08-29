@@ -8,7 +8,8 @@
         "Menu": {
             "Border": {
                 "Background": "#2F5296",
-                "Color": "#FFFFFF"
+                "Color": "#FFFFFF",
+                "Round": true
             },
             "Font": {
                 "Size": 19

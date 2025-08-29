@@ -22,6 +22,8 @@ ach::DataTheme::DataTheme(json_t *obj)
 	menu.back     = db->getSound(json_object_get_branch_string(obj, "Menu.Sound.Back"));
 	menu.pick     = db->getSound(json_object_get_branch_string(obj, "Menu.Sound.Pick"));
 
+	menu.round    = json_object_get_branch_boolean(obj, "Menu.Border.Round");
+
 	credits.size = json_object_get_branch_integer(obj, "Credits.Font.Size");
 	menu.size    = json_object_get_branch_integer(obj, "Menu.Font.Size"   );
 }

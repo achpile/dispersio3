@@ -29,6 +29,7 @@ namespace ach
 			sf::Color        bg;
 
 			int              size;
+			bool             round;
 		} menu;
 
 

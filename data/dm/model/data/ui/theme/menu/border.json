@@ -13,5 +13,11 @@
             "default": "#00FF00",
             "type": "color"
         }
+    },
+    "Round": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
     }
 }

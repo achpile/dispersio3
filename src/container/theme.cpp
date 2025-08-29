@@ -38,6 +38,7 @@ void ach::Theme::refresh()
 
 	menu.font     = base->menu.font->font;
 	menu.size     = base->menu.size;
+	menu.round    = base->menu.round;
 	menu.color    = base->menu.color;
 	menu.selector = base->menu.selector;
 
