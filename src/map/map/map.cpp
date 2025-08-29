@@ -12,7 +12,7 @@ ach::Map::Map(ach::ProcessWorld *_world, ach::DataMap *_base)
 	world     = _world;
 	collision = new ach::Collision();
 	cam       = new ach::Camera(this);
-	caption   = new ach::MapCaption(lm->getv("Game.Map.%s", base->name));
+	caption   = new ach::MapCaption(lm->getv("Game.Map.%s.Name", base->name));
 
 	load();
 }

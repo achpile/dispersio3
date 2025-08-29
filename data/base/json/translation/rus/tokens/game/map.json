@@ -1,16 +1,57 @@
 {
-    "Boss": "Глубины храма",
-    "Cave": "Пещера",
-    "Default": "Неизвестность",
-    "Duck": "Утиный сон",
-    "Factory": "Завод",
-    "Forest": "Лес",
-    "Island": "Островной сон",
-    "Lab": "Физическая лаборатория",
-    "LaunchPad": "Космодром",
-    "MilitaryBase": "Военная база",
-    "Plumber": "Водопроводный сон",
-    "Robot": "Роботизированный сон",
-    "Rocket": "Космический корабль",
-    "Temple": "Храм в джунглях"
+    "Boss": {
+        "Description": "",
+        "Name": "Глубины храма"
+    },
+    "Cave": {
+        "Description": "",
+        "Name": "Пещера"
+    },
+    "Default": {
+        "Name": "Неизвестность"
+    },
+    "Duck": {
+        "Description": "",
+        "Name": "Утиный сон"
+    },
+    "Factory": {
+        "Description": "",
+        "Name": "Завод"
+    },
+    "Forest": {
+        "Description": "",
+        "Name": "Лес"
+    },
+    "Island": {
+        "Description": "",
+        "Name": "Островной сон"
+    },
+    "Lab": {
+        "Description": "",
+        "Name": "Физическая лаборатория"
+    },
+    "LaunchPad": {
+        "Description": "",
+        "Name": "Космодром"
+    },
+    "MilitaryBase": {
+        "Description": "",
+        "Name": "Военная база"
+    },
+    "Plumber": {
+        "Description": "",
+        "Name": "Водопроводный сон"
+    },
+    "Robot": {
+        "Description": "",
+        "Name": "Роботизированный сон"
+    },
+    "Rocket": {
+        "Description": "",
+        "Name": "Космический корабль"
+    },
+    "Temple": {
+        "Description": "",
+        "Name": "Храм в джунглях"
+    }
 }

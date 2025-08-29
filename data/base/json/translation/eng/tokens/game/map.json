@@ -1,16 +1,55 @@
 {
-    "Boss": "Temple depths",
-    "Cave": "Cave",
-    "Default": "Unknown",
-    "Duck": "Duck dream",
-    "Factory": "Factory",
-    "Forest": "Forest",
-    "Island": "Island dream",
-    "Lab": "Physics laboratory",
-    "LaunchPad": "Cosmodrome",
-    "MilitaryBase": "Military base",
-    "Plumber": "Plumbing dream",
-    "Robot": "Robotic dream",
-    "Rocket": "Spaceship",
-    "Temple": "Temple in the jungle"
+    "Boss": {
+        "Description": "",
+        "Name": "Temple depths"
+    },
+    "Cave": {
+        "Description": "",
+        "Name": "Cave"
+    },
+    "Default": {},
+    "Duck": {
+        "Description": "",
+        "Name": "Duck dream"
+    },
+    "Factory": {
+        "Description": "",
+        "Name": "Factory"
+    },
+    "Forest": {
+        "Description": "",
+        "Name": "Forest"
+    },
+    "Island": {
+        "Description": "",
+        "Name": "Island dream"
+    },
+    "Lab": {
+        "Description": "",
+        "Name": "Physics laboratory"
+    },
+    "LaunchPad": {
+        "Description": "",
+        "Name": "Cosmodrome"
+    },
+    "MilitaryBase": {
+        "Description": "",
+        "Name": "Military base"
+    },
+    "Plumber": {
+        "Description": "",
+        "Name": "Plumbing dream"
+    },
+    "Robot": {
+        "Description": "",
+        "Name": "Robotic dream"
+    },
+    "Rocket": {
+        "Description": "",
+        "Name": "Spaceship"
+    },
+    "Temple": {
+        "Description": "",
+        "Name": "Temple in the jungle"
+    }
 }

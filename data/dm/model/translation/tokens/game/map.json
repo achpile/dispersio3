@@ -1,7 +1,18 @@
 {
     "@attr": {
         "container": "multi",
-        "default": "Unknown map",
-        "type": "string"
+        "type": "object"
+    },
+    "Description": {
+        "@attr": {
+            "default": "",
+            "type": "string"
+        }
+    },
+    "Name": {
+        "@attr": {
+            "default": "Unknown",
+            "type": "string"
+        }
     }
 }
