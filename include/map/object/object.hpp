@@ -26,6 +26,7 @@ namespace ach
 
 		bool visible(bool area);
 		void process();
+		void select();
 		void box();
 
 		void setModel(const char *_model);

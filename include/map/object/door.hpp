@@ -15,6 +15,7 @@ namespace ach
 		~MapObjectDoor();
 
 		void init(ach::Map *map);
+		void touch();
 		void use();
 	};
 }

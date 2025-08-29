@@ -33,6 +33,7 @@ ach::Selector::~Selector()
 ***********************************************************************/
 void ach::Selector::update()
 {
+	object = NULL;
 }
 
 
