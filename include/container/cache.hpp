@@ -12,6 +12,7 @@ namespace ach
 		json_t *cache;
 		json_t *info;
 
+		bool    def;
 		int     deaths;
 		float   playtime;
 
@@ -22,6 +23,7 @@ namespace ach
 		void init();
 		void update();
 		void save();
+		void store();
 		void reset();
 		void finish();
 

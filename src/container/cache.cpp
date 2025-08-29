@@ -10,6 +10,8 @@ ach::Cache::Cache()
 {
 	campaign = json_object_get_branch(dm->data, "Data.Game.Campaign");
 	cache    = json_object_get_branch(dm->data, "Data.Game.Cache");
+
+	def      = json_object_get_branch_boolean(cache, "Default");
 }
 
 
@@ -21,7 +23,8 @@ ach::Cache::Cache()
 ***********************************************************************/
 ach::Cache::~Cache()
 {
-	save();
+	if (!def)
+		save();
 }
 
 
@@ -65,6 +68,20 @@ void ach::Cache::save()
 	json_object_set_boolean(cache, "Default"     , false                 );
 
 	json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * store
+
+***********************************************************************/
+void ach::Cache::store()
+{
+	def = false;
+
+	save();
 }
 
 
@@ -140,7 +157,7 @@ void ach::Cache::die()
 {
 	deaths++;
 
-	save();
+	store();
 }
 
 
@@ -154,7 +171,7 @@ void ach::Cache::collect(int id)
 {
 	json_array_append_new(json_object_get(info, "Item"), json_integer(id));
 
-	save();
+	store();
 }
 
 
@@ -168,5 +185,5 @@ void ach::Cache::checkpoint(int id)
 {
 	json_object_set_branch_integer(cache, "Current.Checkpoint", id);
 
-	save();
+	store();
 }
