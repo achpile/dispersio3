@@ -249,6 +249,9 @@ void ach::Character::die()
 {
 	alive = false;
 
+	if (!enemy)
+		cache->die();
+
 	sm->play(base->sndDie->snd);
 	world->map->gfx.push_back(new ach::EffectSplash(phys.pos, sf::Color::White, MATH_PI, 16));
 }

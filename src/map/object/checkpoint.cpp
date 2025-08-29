@@ -59,6 +59,7 @@ void ach::MapObjectCheckpoint::touch()
 	active = true;
 	animate();
 
+	cache->checkpoint(id);
 	sm->play(sfx->snd);
 }
 

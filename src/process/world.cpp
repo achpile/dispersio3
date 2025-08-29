@@ -86,6 +86,7 @@ void ach::ProcessWorld::prepare()
 
 
 		case ach::WorldState::wsGame:
+			cache->update();
 			map->update();
 			map->touch(player);
 		break;

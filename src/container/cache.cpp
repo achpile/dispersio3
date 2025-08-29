@@ -33,7 +33,22 @@ ach::Cache::~Cache()
 ***********************************************************************/
 void ach::Cache::init()
 {
-	current = db->getMap(json_object_get_string(campaign, "Start"));
+	deaths   = json_object_get_branch_integer(cache, "Stats.Deaths");
+	playtime = json_object_get_branch_real   (cache, "Stats.Time");
+
+	select(json_object_get_branch_string(cache, "Current.Map"));
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * update
+
+***********************************************************************/
+void ach::Cache::update()
+{
+	playtime += tm->get();
 }
 
 
@@ -45,6 +60,10 @@ void ach::Cache::init()
 ***********************************************************************/
 void ach::Cache::save()
 {
+	json_object_set_branch (cache, "Stats.Deaths", json_integer(deaths  ));
+	json_object_set_branch (cache, "Stats.Time"  , json_real   (playtime));
+	json_object_set_boolean(cache, "Default"     , false                 );
+
 	json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
@@ -60,6 +79,7 @@ void ach::Cache::reset()
 	cache = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
+	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
 }
 
 
@@ -71,5 +91,70 @@ void ach::Cache::reset()
 ***********************************************************************/
 void ach::Cache::finish()
 {
-	current = db->getMap(current->next);
+	json_object_set_boolean(info, "Finished", true);
+
+	select(current->next);
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * select
+
+***********************************************************************/
+void ach::Cache::select(const char *map)
+{
+	current = db->getMap(map);
+
+	info = json_object_getv_branch(cache, "Map.%s", map);
+
+	if (!info)
+	{
+		info = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache.Map"));
+
+		json_object_setv_branch(cache, info, "Map.%s", map);
+	}
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * die
+
+***********************************************************************/
+void ach::Cache::die()
+{
+	deaths++;
+
+	save();
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * collect
+
+***********************************************************************/
+void ach::Cache::collect(int id)
+{
+	json_array_append_new(json_object_get(info, "Item"), json_integer(id));
+
+	save();
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * checkpoint
+
+***********************************************************************/
+void ach::Cache::checkpoint(int id)
+{
+	json_object_set_branch_integer(cache, "Current.Checkpoint", id);
+
+	save();
 }
