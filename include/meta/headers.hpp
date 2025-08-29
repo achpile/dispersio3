@@ -101,6 +101,7 @@
 #include "map/area.hpp"
 #include "map/camera.hpp"
 #include "map/caption.hpp"
+#include "map/selector.hpp"
 #include "map/map.hpp"
 
 #include "process/process.hpp"

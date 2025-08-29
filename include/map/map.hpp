@@ -22,6 +22,7 @@ namespace ach
 		ach::Tileset     *tileset;
 		ach::Collision   *collision;
 		ach::MapCaption  *caption;
+		ach::Selector    *selector;
 
 		sf::FloatRect     spawn;
 		sf::Vector2i      sizeMap;
