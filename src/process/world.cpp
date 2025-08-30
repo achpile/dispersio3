@@ -11,7 +11,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	state   = ach::WorldState::wsFadeIn;
 	map     = new ach::Map(this, _map);
 	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
-	message = new ach::Message();
+	message = new ach::Message(400.0f);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);

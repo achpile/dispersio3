@@ -34,8 +34,9 @@ namespace ach
 		void setAlign(ach::TextAlign _align);
 		void setLayer(ach::RenderLayer _layer);
 
-		void calc();
+		float height();
 
+		void calc();
 		void split();
 		void merge();
 	};
