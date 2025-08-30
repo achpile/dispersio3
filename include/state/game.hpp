@@ -14,6 +14,9 @@ namespace ach
 		void update();
 		void event(sf::Event e);
 
+		void translate();
+		void style();
+
 		void finish();
 	};
 }

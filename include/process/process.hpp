@@ -15,6 +15,9 @@ namespace ach
 		virtual void update()         {};
 		virtual void render()         {};
 		virtual void event(sf::Event) {};
+
+		virtual void translate()      {};
+		virtual void style()          {};
 	};
 }
 

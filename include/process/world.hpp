@@ -29,6 +29,9 @@ namespace ach
 		void update();
 		void render();
 
+		void translate();
+		void style();
+
 		void prepare();
 		void finalize();
 
