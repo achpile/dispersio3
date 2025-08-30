@@ -8,9 +8,10 @@
 ***********************************************************************/
 ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Process(_owner)
 {
-	state  = ach::WorldState::wsFadeIn;
-	map    = new ach::Map(this, _map);
-	player = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
+	state   = ach::WorldState::wsFadeIn;
+	map     = new ach::Map(this, _map);
+	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
+	message = new ach::Message();
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
@@ -32,6 +33,7 @@ ach::ProcessWorld::~ProcessWorld()
 	rm->reset();
 
 	delete map;
+	delete message;
 }
 
 
@@ -85,6 +87,12 @@ void ach::ProcessWorld::prepare()
 		break;
 
 
+		case ach::WorldState::wsMessage:
+			tm->pause();
+			message->render();
+		break;
+
+
 		case ach::WorldState::wsGame:
 			cache->update();
 			map->update();
@@ -116,6 +124,12 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsFadeOut:
 			if (!fader.isActive())
 				owner->finish();
+		break;
+
+
+		case ach::WorldState::wsMessage:
+			if (ctrl->keys[ach::ControlAction::caMenu].released)
+				state = ach::WorldState::wsGame;
 		break;
 
 

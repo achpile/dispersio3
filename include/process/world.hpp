@@ -8,6 +8,7 @@ namespace ach
 	{
 		wsFadeIn,
 		wsFadeOut,
+		wsMessage,
 		wsGame
 	};
 
@@ -16,6 +17,7 @@ namespace ach
 	{
 		ach::Map        *map;
 		ach::Character  *player;
+		ach::Message    *message;
 
 		ach::WorldState  state;
 		ach::Timer       fader;

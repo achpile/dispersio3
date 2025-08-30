@@ -8,6 +8,8 @@ namespace ach
 	{
 		 Message();
 		~Message();
+
+		void render();
 	};
 }
 
