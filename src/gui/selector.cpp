@@ -50,10 +50,10 @@ void ach::Selector::render()
 	if (!object)
 		return;
 
-	draw(rect_lt(object->phys.rect), sf::Vector2f( 1,  1));
-	draw(rect_rt(object->phys.rect), sf::Vector2f(-1,  1));
-	draw(rect_lb(object->phys.rect), sf::Vector2f( 1, -1));
-	draw(rect_rb(object->phys.rect), sf::Vector2f(-1, -1));
+	draw(rect_lt(object->rect), sf::Vector2f( 1,  1));
+	draw(rect_rt(object->rect), sf::Vector2f(-1,  1));
+	draw(rect_lb(object->rect), sf::Vector2f( 1, -1));
+	draw(rect_rb(object->rect), sf::Vector2f(-1, -1));
 }
 
 

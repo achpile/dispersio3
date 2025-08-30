@@ -79,6 +79,10 @@
 #include "character/weapon.hpp"
 #include "character/character.hpp"
 
+#include "gui/caption.hpp"
+#include "gui/selector.hpp"
+#include "gui/message.hpp"
+
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
 #include "map/object/door.hpp"
@@ -100,8 +104,6 @@
 
 #include "map/area.hpp"
 #include "map/camera.hpp"
-#include "map/caption.hpp"
-#include "map/selector.hpp"
 #include "map/map.hpp"
 
 #include "process/process.hpp"

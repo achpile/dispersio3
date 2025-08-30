@@ -2,11 +2,11 @@
 
 
 /***********************************************************************
-     * MapCaption
+     * Caption
      * constructor
 
 ***********************************************************************/
-ach::MapCaption::MapCaption(sf::String caption)
+ach::Caption::Caption(sf::String caption)
 {
 	fader.set(2.0f);
 
@@ -36,11 +36,11 @@ ach::MapCaption::MapCaption(sf::String caption)
 
 
 /***********************************************************************
-     * MapCaption
+     * Caption
      * destructor
 
 ***********************************************************************/
-ach::MapCaption::~MapCaption()
+ach::Caption::~Caption()
 {
 	delete spr;
 	delete tex;
@@ -49,11 +49,11 @@ ach::MapCaption::~MapCaption()
 
 
 /***********************************************************************
-     * MapCaption
+     * Caption
      * update
 
 ***********************************************************************/
-void ach::MapCaption::update()
+void ach::Caption::update()
 {
 	if (!fader.update())
 		return;
@@ -64,11 +64,11 @@ void ach::MapCaption::update()
 
 
 /***********************************************************************
-     * MapCaption
+     * Caption
      * render
 
 ***********************************************************************/
-void ach::MapCaption::render()
+void ach::Caption::render()
 {
 	if (!fader.isActive())
 		return;

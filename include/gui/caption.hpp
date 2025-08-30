@@ -1,10 +1,10 @@
-#ifndef __MAP_CAPTION
-#define __MAP_CAPTION
+#ifndef __GUI_CAPTION
+#define __GUI_CAPTION
 
 
 namespace ach
 {
-	struct MapCaption
+	struct Caption
 	{
 		ach::Timer         fader;
 
@@ -12,8 +12,8 @@ namespace ach
 		sf::Sprite        *spr;
 
 
-		 MapCaption(sf::String _caption);
-		~MapCaption();
+		 Caption(sf::String _caption);
+		~Caption();
 
 		void update();
 		void render();

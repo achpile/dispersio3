@@ -118,7 +118,7 @@ void ach::MapObject::process()
 ***********************************************************************/
 void ach::MapObject::select()
 {
-	world->map->selector->object = this;
+	world->map->selector->object = &phys;
 }
 
 

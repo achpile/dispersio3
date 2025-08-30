@@ -1,13 +1,13 @@
-#ifndef __MAP_SELECTOR
-#define __MAP_SELECTOR
+#ifndef __GUI_SELECTOR
+#define __GUI_SELECTOR
 
 
 namespace ach
 {
 	struct Selector
 	{
-		ach::MapObject *object;
-		ach::Sprite    *corner;
+		ach::Phys   *object;
+		ach::Sprite *corner;
 
 		float life;
 
