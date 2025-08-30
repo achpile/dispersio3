@@ -11,6 +11,8 @@ ach::Message::Message(float _width)
 	text = new ach::Text(theme->menu.font, theme->menu.size);
 	box  = new ach::RectangleShape();
 
+	box->setOutlineThickness(MENU_THICKNESS);
+
 	style();
 
 	setWidth(_width);
@@ -38,7 +40,7 @@ ach::Message::~Message()
 ***********************************************************************/
 void ach::Message::update()
 {
-	box->setSize(sf::Vector2f(width, text->height()));
+	box->setSize(sf::Vector2f(width, text->height() + spacing * 2));
 }
 
 
