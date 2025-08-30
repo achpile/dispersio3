@@ -82,6 +82,7 @@ void ach::ProcessWorld::translate()
 ***********************************************************************/
 void ach::ProcessWorld::style()
 {
+	message->style();
 }
 
 
