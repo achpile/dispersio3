@@ -9,6 +9,7 @@ namespace ach
 		wsFadeIn,
 		wsFadeOut,
 		wsMessage,
+		wsMenu,
 		wsGame
 	};
 

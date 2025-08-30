@@ -116,6 +116,11 @@ void ach::ProcessWorld::prepare()
 		break;
 
 
+		case ach::WorldState::wsMenu:
+			tm->pause();
+		break;
+
+
 		case ach::WorldState::wsGame:
 			cache->update();
 			map->update();
@@ -153,6 +158,10 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsMessage:
 			if (ctrl->keys[ach::ControlAction::caMenu].released)
 				state = ach::WorldState::wsGame;
+		break;
+
+
+		case ach::WorldState::wsMenu:
 		break;
 
 
