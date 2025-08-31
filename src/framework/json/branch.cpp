@@ -39,7 +39,10 @@ json_t* json_object_get_branch(json_t *root, const char *path)
 		result = json_object_get(result, k);
 
 		if (!result)
+		{
+			logger->log(ach::LogLevel::llError, "json_object_get_branch: not found %s", path);
 			return NULL;
+		}
 
 		k = strtok(NULL, ".");
 	}

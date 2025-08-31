@@ -38,12 +38,12 @@ void ach::Theme::refresh()
 
 	menu.font     = base->menu.font->font;
 	menu.size     = base->menu.size;
-	menu.round    = base->menu.round;
 	menu.color    = base->menu.color;
 	menu.selector = base->menu.selector;
 
-	menu.border   = base->menu.border;
-	menu.bg       = base->menu.bg;
+	menu.border   = base->box.border;
+	menu.bg       = base->box.bg;
+	menu.round    = base->box.round;
 
 	menu.back     = base->menu.back->snd;
 	menu.blip     = base->menu.blip->snd;

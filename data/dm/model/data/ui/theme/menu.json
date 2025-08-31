@@ -2,7 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "Border": "@include menu/border.json",
     "Font": {
         "@attr": {
             "traits": [
@@ -18,5 +17,30 @@
             "type": "string"
         }
     },
-    "Sound": "@include menu/sound.json"
+    "Sound": {
+        "@attr": {
+            "type": "object"
+        },
+        "Back": {
+            "@attr": {
+                "data": "Data.SFX",
+                "default": "MenuBack",
+                "type": "link"
+            }
+        },
+        "Blip": {
+            "@attr": {
+                "data": "Data.SFX",
+                "default": "MenuBlip",
+                "type": "link"
+            }
+        },
+        "Pick": {
+            "@attr": {
+                "data": "Data.SFX",
+                "default": "MenuPick",
+                "type": "link"
+            }
+        }
+    }
 }

@@ -16,6 +16,14 @@ namespace ach
 
 		struct
 		{
+			sf::Color        border;
+			sf::Color        bg;
+
+			bool             round;
+		} box;
+
+		struct
+		{
 			ach::DataFont   *font;
 
 			ach::DataSound  *back;
@@ -23,13 +31,9 @@ namespace ach
 			ach::DataSound  *pick;
 
 			sf::String       selector;
-
 			sf::Color        color;
-			sf::Color        border;
-			sf::Color        bg;
 
 			int              size;
-			bool             round;
 		} menu;
 
 

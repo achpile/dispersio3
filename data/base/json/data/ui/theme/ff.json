@@ -1,16 +1,16 @@
 {
     "FF": {
+        "Box": {
+            "Background": "#2F5296",
+            "Color": "#FFFFFF",
+            "Round": true
+        },
         "Credits": {
             "Font": {
                 "Size": 24
             }
         },
         "Menu": {
-            "Border": {
-                "Background": "#2F5296",
-                "Color": "#FFFFFF",
-                "Round": true
-            },
             "Font": {
                 "Size": 19
             },
