@@ -19,6 +19,7 @@ namespace ach
 		ach::Map        *map;
 		ach::Character  *player;
 		ach::Message    *message;
+		ach::Menu       *menu;
 
 		ach::WorldState  state;
 		ach::Timer       fader;
@@ -29,6 +30,8 @@ namespace ach
 
 		void update();
 		void render();
+
+		void event(sf::Event e);
 
 		void translate();
 		void style();

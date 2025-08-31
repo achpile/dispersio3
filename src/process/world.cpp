@@ -12,11 +12,16 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	map     = new ach::Map(this, _map);
 	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message = new ach::Message(500.0f);
+	menu    = new ach::Menu(NULL, &theme->menu);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
 
 	message->setPosition(sf::Vector2f(150.0f, 100.0f));
+
+	menu->setPosition(sf::Vector2f(200, 250));
+	menu->setWidth(400);
+	menu->setHeight(10);
 
 	mm->play(map->base->track);
 
@@ -35,6 +40,7 @@ ach::ProcessWorld::~ProcessWorld()
 	rm->reset();
 
 	delete map;
+	delete menu;
 	delete message;
 }
 
@@ -67,12 +73,26 @@ void ach::ProcessWorld::render()
 
 
 /***********************************************************************
+     * StateMenu
+     * event
+
+***********************************************************************/
+void ach::ProcessWorld::event(sf::Event e)
+{
+	if (state == ach::WorldState::wsMenu)
+		menu->event(e);
+}
+
+
+
+/***********************************************************************
      * ProcessWorld
      * translate
 
 ***********************************************************************/
 void ach::ProcessWorld::translate()
 {
+	menu->translate();
 }
 
 
@@ -85,6 +105,7 @@ void ach::ProcessWorld::translate()
 void ach::ProcessWorld::style()
 {
 	message->style();
+	menu->style(&theme->menu);
 }
 
 
@@ -120,6 +141,8 @@ void ach::ProcessWorld::prepare()
 
 		case ach::WorldState::wsMenu:
 			tm->pause();
+			menu->controls();
+			menu->update();
 		break;
 
 
@@ -164,6 +187,7 @@ void ach::ProcessWorld::finalize()
 
 
 		case ach::WorldState::wsMenu:
+			menu->render();
 		break;
 
 
