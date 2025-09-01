@@ -401,7 +401,7 @@
   <object id="42" name="Bag" type="obj_points" x="704" y="656" width="16" height="16"/>
   <object id="51" type="obj_checkpoint" x="392" y="800" width="16" height="16"/>
   <object id="59" name="Bag" type="obj_points" x="320" y="528" width="16" height="16"/>
-  <object id="60" name="Bag" type="obj_points" x="40" y="448" width="16" height="16"/>
+  <object id="60" name="FreshenerMushroom" type="obj_item" x="40" y="448" width="16" height="16"/>
   <object id="68" name="Bag" type="obj_points" x="48" y="816" width="16" height="16"/>
   <object id="69" type="obj_checkpoint" x="128" y="912" width="16" height="16"/>
   <object id="75" name="MovingWood" type="block_moving" x="192" y="912" width="32" height="160">
@@ -438,7 +438,7 @@
   </object>
   <object id="102" type="obj_checkpoint" x="784" y="1088" width="16" height="16"/>
   <object id="111" type="obj_checkpoint" x="1440" y="880" width="16" height="16"/>
-  <object id="130" name="Bag" type="obj_points" x="992" y="672" width="16" height="16"/>
+  <object id="130" name="GameSnake" type="obj_item" x="992" y="672" width="16" height="16"/>
   <object id="135" type="trigger_goal" x="1456" y="416" width="48" height="48"/>
   <object id="136" name="DecorRocketMain" type="obj_decor" x="104" y="48" width="96" height="160"/>
  </objectgroup>

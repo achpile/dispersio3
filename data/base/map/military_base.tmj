@@ -466,9 +466,9 @@
                 {
                  "height":16,
                  "id":56,
-                 "name":"Bag",
+                 "name":"FreshenerMoney",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":1472,
@@ -781,9 +781,9 @@
                 {
                  "height":16,
                  "id":133,
-                 "name":"Bag",
+                 "name":"GameArkanoid",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":48,

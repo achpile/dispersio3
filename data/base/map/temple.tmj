@@ -742,9 +742,9 @@
                 {
                  "height":16,
                  "id":50,
-                 "name":"Bag",
+                 "name":"Key2",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":1824,
@@ -807,9 +807,9 @@
                 {
                  "height":16,
                  "id":63,
-                 "name":"Bag",
+                 "name":"Key1",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":1568,

@@ -350,7 +350,7 @@
     <property name="Secret" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="56" name="Bag" type="obj_points" x="1472" y="1040" width="16" height="16"/>
+  <object id="56" name="FreshenerMoney" type="obj_item" x="1472" y="1040" width="16" height="16"/>
   <object id="57" name="Bag" type="obj_points" x="1440" y="944" width="16" height="16"/>
   <object id="64" type="obj_checkpoint" x="736" y="448" width="16" height="16"/>
   <object id="84" type="obj_checkpoint" x="1296" y="528" width="16" height="16"/>
@@ -390,7 +390,7 @@
   </object>
   <object id="125" name="BlockConcrete" type="block_fragile" x="672" y="704" width="16" height="16"/>
   <object id="126" type="obj_checkpoint" x="784" y="640" width="16" height="16"/>
-  <object id="133" name="Bag" type="obj_points" x="48" y="656" width="16" height="16"/>
+  <object id="133" name="GameArkanoid" type="obj_item" x="48" y="656" width="16" height="16"/>
   <object id="140" name="Bag" type="obj_points" x="1392" y="768" width="16" height="16"/>
   <object id="141" name="Bag" type="obj_points" x="1280" y="720" width="16" height="16"/>
   <object id="142" name="Bag" type="obj_points" x="1392" y="672" width="16" height="16"/>

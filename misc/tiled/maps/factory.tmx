@@ -423,8 +423,7 @@
     <property name="Duration" type="float" value="1"/>
    </properties>
   </object>
-  <object id="46" name="Bag" type="obj_points" x="1024" y="960" width="16" height="16"/>
-  <object id="47" name="Bag" type="obj_points" x="1072" y="960" width="16" height="16"/>
+  <object id="47" name="GameTetris" type="obj_item" x="1056" y="960" width="16" height="16"/>
   <object id="50" name="BlockYokuConcreteHRight" type="block_yoku" x="1008" y="1104" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="1"/>
@@ -442,7 +441,7 @@
   </object>
   <object id="66" name="DecorPropellerH" type="obj_decor" x="1104" y="768" width="16" height="64"/>
   <object id="67" name="DecorPropellerH" type="obj_decor" x="1104" y="704" width="16" height="64"/>
-  <object id="73" name="Bag" type="obj_points" x="688" y="768" width="16" height="16"/>
+  <object id="73" name="MiscFluxCapacitor" type="obj_item" x="688" y="768" width="16" height="16"/>
   <object id="74" type="obj_checkpoint" x="1200" y="768" width="16" height="16"/>
   <object id="75" name="BlockYokuConcrete" type="block_yoku" x="1456" y="768" width="16" height="16">
    <properties>

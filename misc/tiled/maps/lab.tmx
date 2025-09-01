@@ -395,8 +395,8 @@
   <object id="4" name="AntigravDown" type="obj_antigrav" x="592" y="368" width="32" height="16"/>
   <object id="17" type="obj_checkpoint" x="800" y="1360" width="16" height="16"/>
   <object id="18" type="obj_checkpoint" x="528" y="432" width="16" height="16"/>
-  <object id="19" name="Bag" type="obj_points" x="528" y="1040" width="16" height="16"/>
-  <object id="20" name="Bag" type="obj_points" x="48" y="64" width="16" height="16"/>
+  <object id="19" name="MiscMattress" type="obj_item" x="528" y="1040" width="16" height="16"/>
+  <object id="20" name="GameHexagon" type="obj_item" x="48" y="64" width="16" height="16"/>
   <object id="30" type="obj_checkpoint" x="224" y="1360" width="16" height="16"/>
   <object id="32" name="AntigravUp" type="obj_antigrav" x="464" y="800" width="32" height="16"/>
   <object id="39" name="AntigravUp" type="obj_antigrav" x="1088" y="800" width="32" height="16"/>
@@ -413,7 +413,7 @@
   <object id="60" name="Bag" type="obj_points" x="880" y="448" width="16" height="16"/>
   <object id="61" name="Bag" type="obj_points" x="448" y="336" width="16" height="16"/>
   <object id="62" name="Bag" type="obj_points" x="1456" y="80" width="16" height="16"/>
-  <object id="74" name="Bag" type="obj_points" x="720" y="96" width="16" height="16"/>
+  <object id="74" name="FreshenerAlien" type="obj_item" x="720" y="96" width="16" height="16"/>
   <object id="85" name="AntigravDown" type="obj_antigrav" x="896" y="144" width="32" height="16"/>
   <object id="88" name="AntigravUp" type="obj_antigrav" x="1280" y="400" width="32" height="16"/>
   <object id="89" name="AntigravUp" type="obj_antigrav" x="1312" y="400" width="32" height="16"/>

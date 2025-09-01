@@ -609,9 +609,9 @@
                 {
                  "height":16,
                  "id":60,
-                 "name":"Bag",
+                 "name":"FreshenerMushroom",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":40,
@@ -782,9 +782,9 @@
                 {
                  "height":16,
                  "id":130,
-                 "name":"Bag",
+                 "name":"GameSnake",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":992,

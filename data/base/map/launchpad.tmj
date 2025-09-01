@@ -578,9 +578,9 @@
                 {
                  "height":16,
                  "id":70,
-                 "name":"Bag",
+                 "name":"GameF1",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":1440,
@@ -673,9 +673,9 @@
                 {
                  "height":16,
                  "id":143,
-                 "name":"Bag",
+                 "name":"FreshenerMotorOil",
                  "rotation":0,
-                 "type":"obj_points",
+                 "type":"obj_item",
                  "visible":true,
                  "width":16,
                  "x":336,

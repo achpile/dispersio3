@@ -351,7 +351,7 @@
    </properties>
   </object>
   <object id="78" name="Bag" type="obj_points" x="608" y="1088" width="16" height="16"/>
-  <object id="79" name="Bag" type="obj_points" x="1392" y="1024" width="16" height="16"/>
+  <object id="79" name="GameSimon" type="obj_item" x="1392" y="1024" width="16" height="16"/>
   <object id="97" type="obj_checkpoint" x="1008" y="880" width="16" height="16"/>
   <object id="101" type="trigger_water" x="816" y="592" width="656" height="240"/>
   <object id="102" name="Bag" type="obj_points" x="1120" y="800" width="16" height="16"/>
