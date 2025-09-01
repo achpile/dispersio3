@@ -8,6 +8,12 @@
             "type": "string"
         }
     },
+    "InGame": {
+        "@attr": {
+            "default": "Menu",
+            "type": "string"
+        }
+    },
     "Name": {
         "@attr": {
             "default": "Main menu",

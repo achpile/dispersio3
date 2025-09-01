@@ -14,9 +14,27 @@
             "type": "string"
         }
     },
+    "ExitGame": {
+        "@attr": {
+            "default": "Exit to main menu",
+            "type": "string"
+        }
+    },
+    "Leave": {
+        "@attr": {
+            "default": "Leave level",
+            "type": "string"
+        }
+    },
     "Off": {
         "@attr": {
             "default": "Off",
+            "type": "string"
+        }
+    },
+    "Resume": {
+        "@attr": {
+            "default": "Resume",
             "type": "string"
         }
     }

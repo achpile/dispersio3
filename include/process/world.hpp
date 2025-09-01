@@ -9,7 +9,7 @@ namespace ach
 		wsFadeIn,
 		wsFadeOut,
 		wsMessage,
-		wsMenu,
+		wsPause,
 		wsGame
 	};
 
@@ -38,9 +38,11 @@ namespace ach
 
 		void prepare();
 		void finalize();
+		void fill();
 
 		void gateway(sf::FloatRect dest);
 		void goal();
+		void pause();
 	};
 }
 

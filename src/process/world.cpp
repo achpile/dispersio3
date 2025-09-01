@@ -26,6 +26,8 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	mm->play(map->base->track);
 
 	fader.set(1.0f);
+
+	fill();
 }
 
 
@@ -79,7 +81,7 @@ void ach::ProcessWorld::render()
 ***********************************************************************/
 void ach::ProcessWorld::event(sf::Event e)
 {
-	if (state == ach::WorldState::wsMenu)
+	if (state == ach::WorldState::wsPause)
 		menu->event(e);
 }
 
@@ -139,7 +141,7 @@ void ach::ProcessWorld::prepare()
 		break;
 
 
-		case ach::WorldState::wsMenu:
+		case ach::WorldState::wsPause:
 			tm->pause();
 			menu->controls();
 			menu->update();
@@ -186,7 +188,7 @@ void ach::ProcessWorld::finalize()
 		break;
 
 
-		case ach::WorldState::wsMenu:
+		case ach::WorldState::wsPause:
 			menu->render();
 		break;
 
@@ -194,6 +196,27 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsGame:
 		break;
 	}
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * fill
+
+***********************************************************************/
+void ach::ProcessWorld::fill()
+{
+	menu->init("Main.InGame");
+
+	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Resume"  , NULL                , NULL                   ));
+
+	options_fill(menu, "Main.InGame");
+
+	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Leave"   , NULL                , NULL                   ));
+	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.ExitGame", handler_common_state, json_string("menu"    )));
+
+	menu->finalize();
 }
 
 
@@ -221,4 +244,18 @@ void ach::ProcessWorld::goal()
 	state = ach::WorldState::wsFadeOut;
 
 	fader.reset();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * pause
+
+***********************************************************************/
+void ach::ProcessWorld::pause()
+{
+	state = ach::WorldState::wsPause;
+
+	app->mouse(true);
 }

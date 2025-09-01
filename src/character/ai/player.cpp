@@ -77,6 +77,8 @@ void ach::AIPlayer::control()
 
 	if (ctrl->keys[ach::ControlAction::caJump ].state  ) jump();
 	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) owner->use();
+
+	if (ctrl->keys[ach::ControlAction::caMenu ].pressed) owner->world->pause();
 }
 
 
