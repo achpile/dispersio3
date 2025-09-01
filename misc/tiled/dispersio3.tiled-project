@@ -249,26 +249,6 @@
             ]
         },
         {
-            "color": "#ffa0a0a4",
-            "drawFill": true,
-            "id": 25,
-            "members": [
-            ],
-            "name": "Class22",
-            "type": "class",
-            "useAs": [
-                "property",
-                "map",
-                "layer",
-                "object",
-                "tile",
-                "tileset",
-                "wangcolor",
-                "wangset",
-                "project"
-            ]
-        },
-        {
             "color": "#ff613583",
             "drawFill": true,
             "id": 23,
