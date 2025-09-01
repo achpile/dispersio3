@@ -14,7 +14,12 @@ ach::RenderManager::RenderManager()
 	front  = new ach::Layer();
 	gui    = new ach::Layer();
 
-	shader_init();
+	shaders.white.loadFromMemory(GFX_SHADER_WHITE, sf::Shader::Fragment);
+	shaders.grey.loadFromMemory (GFX_SHADER_GREY , sf::Shader::Fragment);
+
+	states.none   = sf::RenderStates::Default;
+	states.white  = sf::RenderStates(&shaders.white);
+	states.grey   = sf::RenderStates(&shaders.grey );
 }
 
 
@@ -168,9 +173,9 @@ void ach::RenderManager::setFade(float value)
      * draw
 
 ***********************************************************************/
-void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf::RenderStates states)
+void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf::RenderStates state)
 {
-	getLayer(layer)->draw(drawable, states);
+	getLayer(layer)->draw(drawable, state);
 }
 
 

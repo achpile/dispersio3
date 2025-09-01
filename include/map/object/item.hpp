@@ -8,11 +8,14 @@ namespace ach
 	{
 		ach::DataItem  *base;
 		ach::DataSound *sfx;
+		ach::Timer      blinking;
 
 
 		 MapObjectItem(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectItem();
 
+		void reset();
+		void handle();
 		void touch();
 	};
 }

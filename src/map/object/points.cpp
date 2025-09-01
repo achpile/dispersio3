@@ -10,6 +10,8 @@ ach::MapObjectPoints::MapObjectPoints(ach::ProcessWorld *_world, json_t *obj) : 
 {
 	sfx = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Collect"));
 
+	blinking.set(0.7f);
+
 	setSheet(json_object_get_string(obj, "name"));
 }
 
@@ -22,6 +24,34 @@ ach::MapObjectPoints::MapObjectPoints(ach::ProcessWorld *_world, json_t *obj) : 
 ***********************************************************************/
 ach::MapObjectPoints::~MapObjectPoints()
 {
+}
+
+
+
+/***********************************************************************
+     * MapObjectPoints
+     * reset
+
+***********************************************************************/
+void ach::MapObjectPoints::reset()
+{
+	blinking.reset();
+}
+
+
+
+/***********************************************************************
+     * MapObjectPoints
+     * handle
+
+***********************************************************************/
+void ach::MapObjectPoints::handle()
+{
+	if (!blinking.update())
+		blinking.reset();
+
+	if (blinking.value < 0.1f) model->state = rm->states.white;
+	else                       model->state = rm->states.none;
 }
 
 

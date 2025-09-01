@@ -9,6 +9,7 @@
 ach::Model::Model(ach::DataModel *_base)
 {
 	base         = _base;
+	state        = sf::RenderStates::Default;
 	animation[0] = 0;
 
 	init(base->sheet);
@@ -67,7 +68,7 @@ void ach::Model::render(sf::Vector2f pos)
 	spr->setPosition(pos);
 	spr->setRotation(angle);
 
-	rm->draw(spr, layer);
+	rm->draw(spr, layer, state);
 }
 
 

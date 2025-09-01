@@ -12,6 +12,7 @@ namespace ach
 
 		ach::RenderLayer  layer;
 
+		sf::RenderStates  state;
 		sf::Vector2f      scale;
 		sf::Color         color;
 

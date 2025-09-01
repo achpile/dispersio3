@@ -22,6 +22,18 @@ namespace ach
 		ach::Layer *front;
 		ach::Layer *gui;
 
+		struct {
+			sf::Shader white;
+			sf::Shader grey;
+		} shaders;
+
+
+		struct {
+			sf::RenderStates none;
+			sf::RenderStates white;
+			sf::RenderStates grey;
+		} states;
+
 
 		 RenderManager();
 		~RenderManager();
@@ -36,7 +48,7 @@ namespace ach
 		void setColor (sf::Color color);
 		void setFade  (float value);
 
-		void draw(sf::Drawable *drawable, ach::RenderLayer layer = ach::RenderLayer::rlGUI, sf::RenderStates states = sf::RenderStates::Default);
+		void draw(sf::Drawable *drawable, ach::RenderLayer layer = ach::RenderLayer::rlGUI, sf::RenderStates state = sf::RenderStates::Default);
 
 		void          initLayer(ach::RenderLayer layer, int width, int height, bool smooth);
 		ach::Layer   *getLayer (ach::RenderLayer layer);

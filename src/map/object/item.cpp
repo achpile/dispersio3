@@ -13,6 +13,7 @@ ach::MapObjectItem::MapObjectItem(ach::ProcessWorld *_world, json_t *obj) : MapO
 
 	model = new ach::Model(base->sheet);
 
+	blinking.set(0.7f);
 	phys.resize(model->sheet->size);
 }
 
@@ -25,6 +26,34 @@ ach::MapObjectItem::MapObjectItem(ach::ProcessWorld *_world, json_t *obj) : MapO
 ***********************************************************************/
 ach::MapObjectItem::~MapObjectItem()
 {
+}
+
+
+
+/***********************************************************************
+     * MapObjectItem
+     * reset
+
+***********************************************************************/
+void ach::MapObjectItem::reset()
+{
+	blinking.reset();
+}
+
+
+
+/***********************************************************************
+     * MapObjectItem
+     * handle
+
+***********************************************************************/
+void ach::MapObjectItem::handle()
+{
+	if (!blinking.update())
+		blinking.reset();
+
+	if (blinking.value < 0.1f) model->state = rm->states.white;
+	else                       model->state = rm->states.none;
 }
 
 
