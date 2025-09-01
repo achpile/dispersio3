@@ -17,6 +17,7 @@ ach::Status::Status()
 	box->setOutlineThickness(MENU_THICKNESS);
 
 	style();
+	fill();
 }
 
 
@@ -108,4 +109,23 @@ void ach::Status::style()
 void ach::Status::translate()
 {
 	update();
+}
+
+
+
+/***********************************************************************
+     * Status
+     * fill
+
+***********************************************************************/
+void ach::Status::fill()
+{
+	int counters[4] = {0, 0, 0, 0};
+
+	list_foreach(db->item)
+	{
+		items.push_back(new ach::ItemIcon(db->item[i], sf::Vector2f(pos.x + width - MENU_PADDING * 2 - spacing * counters[db->item[i]->category], pos.y - MENU_PADDING / 2 + spacing * (6 + db->item[i]->category))));
+
+		counters[db->item[i]->category]++;
+	}
 }

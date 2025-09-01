@@ -26,6 +26,8 @@ namespace ach
 
 		void style();
 		void translate();
+
+		void fill();
 	};
 }
 

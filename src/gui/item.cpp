@@ -12,7 +12,7 @@ ach::ItemIcon::ItemIcon(ach::DataItem *_base, sf::Vector2f _pos)
 	base  = _base;
 	model = new ach::Model(base->sheet);
 
-	model->layer = ach::RenderLayer::rlGame;
+	model->layer = ach::RenderLayer::rlGUI;
 }
 
 

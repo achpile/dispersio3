@@ -8,8 +8,8 @@ namespace ach
 	{
 		icMisc = 0,
 		icKey,
-		icGame,
-		icFreshener
+		icFreshener,
+		icGame
 	};
 
 
