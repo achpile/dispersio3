@@ -279,7 +279,7 @@
             "id": 6,
             "members": [
             ],
-            "name": "obj_collectable",
+            "name": "obj_points",
             "type": "class",
             "useAs": [
                 "object"

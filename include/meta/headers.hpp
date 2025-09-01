@@ -94,7 +94,7 @@
 #include "map/object/water.hpp"
 #include "map/object/wind.hpp"
 #include "map/object/checkpoint.hpp"
-#include "map/object/collectable.hpp"
+#include "map/object/points.hpp"
 #include "map/object/moving.hpp"
 #include "map/object/fragile.hpp"
 #include "map/object/break.hpp"

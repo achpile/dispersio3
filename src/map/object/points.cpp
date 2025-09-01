@@ -2,11 +2,11 @@
 
 
 /***********************************************************************
-     * MapObjectCollectable
+     * MapObjectPoints
      * constructor
 
 ***********************************************************************/
-ach::MapObjectCollectable::MapObjectCollectable(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
+ach::MapObjectPoints::MapObjectPoints(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
 	sfx = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Collect"));
 
@@ -16,22 +16,22 @@ ach::MapObjectCollectable::MapObjectCollectable(ach::ProcessWorld *_world, json_
 
 
 /***********************************************************************
-     * MapObjectCollectable
+     * MapObjectPoints
      * destructor
 
 ***********************************************************************/
-ach::MapObjectCollectable::~MapObjectCollectable()
+ach::MapObjectPoints::~MapObjectPoints()
 {
 }
 
 
 
 /***********************************************************************
-     * MapObjectCollectable
+     * MapObjectPoints
      * touch
 
 ***********************************************************************/
-void ach::MapObjectCollectable::touch()
+void ach::MapObjectPoints::touch()
 {
 	if (!alive)
 		return;

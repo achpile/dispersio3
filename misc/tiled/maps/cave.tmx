@@ -319,16 +319,16 @@
   <object id="6" type="obj_checkpoint" x="408" y="96" width="16" height="16"/>
   <object id="7" type="trigger_water" x="384" y="256" width="352" height="576"/>
   <object id="32" type="obj_checkpoint" x="448" y="640" width="16" height="16"/>
-  <object id="34" name="CollectBag" type="obj_collectable" x="720" y="704" width="16" height="16"/>
-  <object id="36" name="CollectBag" type="obj_collectable" x="568" y="512" width="16" height="16"/>
-  <object id="37" name="CollectBag" type="obj_collectable" x="568" y="368" width="16" height="16"/>
-  <object id="38" name="CollectBag" type="obj_collectable" x="208" y="464" width="16" height="16"/>
-  <object id="39" name="CollectBag" type="obj_collectable" x="160" y="448" width="16" height="16"/>
-  <object id="40" name="CollectBag" type="obj_collectable" x="272" y="432" width="16" height="16"/>
+  <object id="34" name="CollectBag" type="obj_points" x="720" y="704" width="16" height="16"/>
+  <object id="36" name="CollectBag" type="obj_points" x="568" y="512" width="16" height="16"/>
+  <object id="37" name="CollectBag" type="obj_points" x="568" y="368" width="16" height="16"/>
+  <object id="38" name="CollectBag" type="obj_points" x="208" y="464" width="16" height="16"/>
+  <object id="39" name="CollectBag" type="obj_points" x="160" y="448" width="16" height="16"/>
+  <object id="40" name="CollectBag" type="obj_points" x="272" y="432" width="16" height="16"/>
   <object id="41" type="trigger_water" x="32" y="592" width="352" height="512"/>
-  <object id="43" name="CollectBag" type="obj_collectable" x="184" y="832" width="16" height="16"/>
+  <object id="43" name="CollectBag" type="obj_points" x="184" y="832" width="16" height="16"/>
   <object id="53" type="obj_checkpoint" x="320" y="816" width="16" height="16"/>
-  <object id="55" name="CollectBag" type="obj_collectable" x="88" y="1088" width="16" height="16"/>
+  <object id="55" name="CollectBag" type="obj_points" x="88" y="1088" width="16" height="16"/>
   <object id="56" type="obj_checkpoint" x="400" y="944" width="16" height="16"/>
   <object id="57" type="trigger_wind" x="32" y="960" width="352" height="144">
    <properties>
@@ -350,11 +350,11 @@
     <property name="Secret" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="78" name="CollectBag" type="obj_collectable" x="608" y="1088" width="16" height="16"/>
-  <object id="79" name="CollectBag" type="obj_collectable" x="1392" y="1024" width="16" height="16"/>
+  <object id="78" name="CollectBag" type="obj_points" x="608" y="1088" width="16" height="16"/>
+  <object id="79" name="CollectBag" type="obj_points" x="1392" y="1024" width="16" height="16"/>
   <object id="97" type="obj_checkpoint" x="1008" y="880" width="16" height="16"/>
   <object id="101" type="trigger_water" x="816" y="592" width="656" height="240"/>
-  <object id="102" name="CollectBag" type="obj_collectable" x="1120" y="800" width="16" height="16"/>
+  <object id="102" name="CollectBag" type="obj_points" x="1120" y="800" width="16" height="16"/>
   <object id="104" type="obj_checkpoint" x="1184" y="688" width="16" height="16"/>
   <object id="107" type="trigger_water" x="1152" y="304" width="304" height="288"/>
   <object id="108" type="trigger_wind" x="1200" y="752" width="272" height="80">
@@ -363,10 +363,10 @@
     <property name="Speed" type="float" value="25"/>
    </properties>
   </object>
-  <object id="119" name="CollectBag" type="obj_collectable" x="1264" y="544" width="16" height="16"/>
+  <object id="119" name="CollectBag" type="obj_points" x="1264" y="544" width="16" height="16"/>
   <object id="120" type="trigger_water" x="960" y="440" width="192" height="88"/>
   <object id="121" type="trigger_goal" x="848" y="368" width="48" height="48"/>
-  <object id="152" name="CollectBag" type="obj_collectable" x="1200" y="800" width="16" height="16"/>
+  <object id="152" name="CollectBag" type="obj_points" x="1200" y="800" width="16" height="16"/>
   <object id="153" name="DecorWater" type="obj_decor" x="176" y="136" width="32" height="16">
    <properties>
     <property name="Foreground" type="bool" value="true"/>
