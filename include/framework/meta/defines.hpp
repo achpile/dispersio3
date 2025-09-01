@@ -110,9 +110,11 @@
 	"void main() {                                          " \
 	"    vec4 pixel = texture2D(texture, gl_TexCoord[0].xy);" \
 	"                                                       " \
-	"    pixel.r = 0.5;                                     " \
-	"    pixel.g = 0.5;                                     " \
-	"    pixel.b = 0.5;                                     " \
+	"    pixel.r = 0.15;                                    " \
+	"    pixel.g = 0.15;                                    " \
+	"    pixel.b = 0.15;                                    " \
+	"                                                       " \
+	"    gl_FragColor = pixel;                              " \
 	"}                                                      "
 
 #endif

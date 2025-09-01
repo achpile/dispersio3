@@ -49,6 +49,7 @@ namespace ach
 		sf::String getCollected();
 		sf::String getItems();
 
+		bool getFlag(const char *name);
 		void setFlag(const char *name);
 	};
 }
