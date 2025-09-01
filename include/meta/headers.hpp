@@ -83,6 +83,7 @@
 #include "gui/selector.hpp"
 #include "gui/message.hpp"
 #include "gui/options.hpp"
+#include "gui/status.hpp"
 
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"

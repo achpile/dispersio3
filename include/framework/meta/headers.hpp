@@ -9,6 +9,7 @@
 #include "framework/string/pair.hpp"
 #include "framework/string/pair.inl"
 #include "framework/string/option.hpp"
+#include "framework/string/statistic.hpp"
 #include "framework/string/check.hpp"
 #include "framework/string/color.hpp"
 #include "framework/string/utf8.hpp"

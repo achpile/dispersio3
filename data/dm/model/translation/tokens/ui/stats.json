@@ -1,0 +1,29 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Collected": {
+        "@attr": {
+            "default": "Items collected",
+            "type": "string"
+        }
+    },
+    "CollectedMap": {
+        "@attr": {
+            "default": "Items collected on this map",
+            "type": "string"
+        }
+    },
+    "Deaths": {
+        "@attr": {
+            "default": "Deaths",
+            "type": "string"
+        }
+    },
+    "Playtime": {
+        "@attr": {
+            "default": "Play time",
+            "type": "string"
+        }
+    }
+}

@@ -19,6 +19,7 @@ namespace ach
 		ach::Map        *map;
 		ach::Character  *player;
 		ach::Message    *message;
+		ach::Status     *status;
 		ach::Menu       *menu;
 
 		ach::WorldState  state;

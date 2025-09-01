@@ -12,6 +12,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	map     = new ach::Map(this, _map);
 	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message = new ach::Message(500.0f);
+	status  = new ach::Status();
 	menu    = new ach::Menu(this, &theme->menu);
 
 	map->cam->follow(&player->phys);
@@ -19,9 +20,9 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 
 	message->setPosition(sf::Vector2f(150.0f, 100.0f));
 
-	menu->setPosition(sf::Vector2f(200, 250));
-	menu->setWidth(400);
-	menu->setHeight(10);
+	menu->setPosition(sf::Vector2f(150, 280));
+	menu->setWidthE(500);
+	menu->setHeightE(300);
 
 	mm->play(map->base->track);
 
@@ -44,6 +45,7 @@ ach::ProcessWorld::~ProcessWorld()
 	delete map;
 	delete menu;
 	delete message;
+	delete status;
 }
 
 
@@ -75,7 +77,7 @@ void ach::ProcessWorld::render()
 
 
 /***********************************************************************
-     * StateMenu
+     * ProcessWorld
      * event
 
 ***********************************************************************/
@@ -89,25 +91,27 @@ void ach::ProcessWorld::event(sf::Event e)
 
 /***********************************************************************
      * ProcessWorld
-     * translate
-
-***********************************************************************/
-void ach::ProcessWorld::translate()
-{
-	menu->translate();
-}
-
-
-
-/***********************************************************************
-     * ProcessWorld
      * style
 
 ***********************************************************************/
 void ach::ProcessWorld::style()
 {
 	message->style();
+	status->style();
 	menu->style(&theme->menu);
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * translate
+
+***********************************************************************/
+void ach::ProcessWorld::translate()
+{
+	menu->translate();
+	status->translate();
 }
 
 
@@ -190,6 +194,7 @@ void ach::ProcessWorld::finalize()
 
 		case ach::WorldState::wsPause:
 			menu->render();
+			status->render();
 		break;
 
 
@@ -260,4 +265,5 @@ void ach::ProcessWorld::pause()
 	state = ach::WorldState::wsPause;
 
 	app->mouse(true);
+	status->update();
 }
