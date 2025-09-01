@@ -12,7 +12,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	map     = new ach::Map(this, _map);
 	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message = new ach::Message(500.0f);
-	menu    = new ach::Menu(NULL, &theme->menu);
+	menu    = new ach::Menu(this, &theme->menu);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
@@ -209,7 +209,7 @@ void ach::ProcessWorld::fill()
 {
 	menu->init("Main.InGame");
 
-	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Resume"  , NULL                , NULL                   ));
+	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Resume"  , handler_game_resume , NULL                   ));
 
 	options_fill(menu, "Main.InGame");
 

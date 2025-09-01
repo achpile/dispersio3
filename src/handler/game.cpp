@@ -2,10 +2,12 @@
 
 
 /***********************************************************************
-     * handler_common_state
+     * handler_game_resume
 
 ***********************************************************************/
-void handler_common_state(void *, json_t *data)
+void handler_game_resume(void *context, json_t *)
 {
-	app->stateSet(pair_get_enum(json_string_value(data), pairGameState));
+	app->mouse(false);
+
+	((ach::ProcessWorld*)context)->state = ach::WorldState::wsGame;
 }
