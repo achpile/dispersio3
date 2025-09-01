@@ -13,6 +13,8 @@ ach::RenderManager::RenderManager()
 	effect = new ach::Layer();
 	front  = new ach::Layer();
 	gui    = new ach::Layer();
+
+	shader_init();
 }
 
 

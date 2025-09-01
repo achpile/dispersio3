@@ -84,4 +84,35 @@
 #define DM_DOCS_FILE_OUTPUT    "misc/docs/datamodel.html"
 #define DM_DOCS_FILE_STYLE     "misc/docs/style.css"
 
+
+
+/***********************************************************************
+     * Shaders
+
+***********************************************************************/
+#define GFX_SHADER_WHITE                                      \
+	"uniform sampler2D texture;                             " \
+	"                                                       " \
+	"void main() {                                          " \
+	"    vec4 pixel = texture2D(texture, gl_TexCoord[0].xy);" \
+	"                                                       " \
+	"    pixel.r = 1.0;                                     " \
+	"    pixel.g = 1.0;                                     " \
+	"    pixel.b = 1.0;                                     " \
+	"                                                       " \
+	"    gl_FragColor = pixel;                              " \
+	"}                                                      "
+
+
+#define GFX_SHADER_GREY                                       \
+	"uniform sampler2D texture;                             " \
+	"                                                       " \
+	"void main() {                                          " \
+	"    vec4 pixel = texture2D(texture, gl_TexCoord[0].xy);" \
+	"                                                       " \
+	"    pixel.r = 0.5;                                     " \
+	"    pixel.g = 0.5;                                     " \
+	"    pixel.b = 0.5;                                     " \
+	"}                                                      "
+
 #endif

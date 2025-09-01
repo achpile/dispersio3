@@ -74,6 +74,7 @@
 #include "framework/gfx/rectangle.hpp"
 #include "framework/gfx/sprite.hpp"
 #include "framework/gfx/sheet.hpp"
+#include "framework/gfx/shader.hpp"
 #include "framework/gfx/layer.hpp"
 #include "framework/gfx/background.hpp"
 
