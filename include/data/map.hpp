@@ -17,9 +17,13 @@ namespace ach
 		bool replay;
 		bool restart;
 
+		int  items;
+
 
 		 DataMap(json_t *obj);
 		~DataMap();
+
+		void calc();
 	};
 }
 

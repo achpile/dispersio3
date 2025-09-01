@@ -18,6 +18,8 @@ ach::DataMap::DataMap(json_t *obj)
 	strncpy(filename, json_object_get_string(obj, "Filename"), STR_LEN_PATH);
 	strncpy(track   , json_object_get_string(obj, "Track"   ), STR_LEN_PATH);
 	strncpy(next    , json_object_get_string(obj, "Next"    ), STR_LEN_NAME);
+
+	calc();
 }
 
 
@@ -29,4 +31,44 @@ ach::DataMap::DataMap(json_t *obj)
 ***********************************************************************/
 ach::DataMap::~DataMap()
 {
+}
+
+
+
+/***********************************************************************
+     * DataMap
+     * calc
+
+***********************************************************************/
+void ach::DataMap::calc()
+{
+	items = 0;
+
+	json_error_t error;
+	json_t *mapdata = json_load_file(filename, 0, &error);
+
+
+	if (!mapdata)
+	{
+		logger->log(ach::LogLevel::llError, "Error loading map: \"%s\" (%s)", filename, error.text);
+		return;
+	}
+
+
+	size_t i, j;
+
+	json_t *layer;
+	json_t *object;
+
+	json_array_foreach(json_object_get(mapdata, "layers"), i, layer)
+	{
+		if (strcmp(json_object_get_string(layer, "name"), "objects") != 0)
+			continue;
+
+		json_array_foreach(json_object_get(layer, "objects"), j, object)
+		{
+			     if (!strcmp(json_object_get_string(object, "type"), "obj_item"  )) items++;
+			else if (!strcmp(json_object_get_string(object, "type"), "obj_points")) items++;
+		}
+	}
 }
