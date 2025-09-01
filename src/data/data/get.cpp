@@ -104,6 +104,18 @@ ach::DataWeapon* ach::Database::getWeapon(const char *name)
 
 /***********************************************************************
      * Database
+     * getItem
+
+***********************************************************************/
+ach::DataItem* ach::Database::getItem(const char *name)
+{
+	return getContent<ach::DataItem>(name, &item);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getCharacter
 
 ***********************************************************************/

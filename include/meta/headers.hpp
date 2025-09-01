@@ -28,6 +28,7 @@
 #include "data/model.hpp"
 #include "data/projectile.hpp"
 #include "data/weapon.hpp"
+#include "data/item.hpp"
 #include "data/character.hpp"
 #include "data/map.hpp"
 #include "data/data.hpp"
@@ -85,6 +86,7 @@
 #include "gui/options.hpp"
 #include "gui/status.hpp"
 
+#include "map/object/pair.hpp"
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
 #include "map/object/door.hpp"

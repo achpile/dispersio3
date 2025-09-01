@@ -13,6 +13,7 @@ namespace ach
 		std::vector<ach::DataSheet*     > sheet;
 		std::vector<ach::DataProjectile*> projectile;
 		std::vector<ach::DataWeapon*    > weapon;
+		std::vector<ach::DataItem*      > item;
 		std::vector<ach::DataCharacter* > character;
 		std::vector<ach::DataMap*       > map;
 
@@ -30,6 +31,7 @@ namespace ach
 		ach::DataSheet      *getSheet     (const char *name);
 		ach::DataProjectile *getProjectile(const char *name);
 		ach::DataWeapon     *getWeapon    (const char *name);
+		ach::DataItem       *getItem      (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
 		ach::DataMap        *getMap       (const char *name);
 

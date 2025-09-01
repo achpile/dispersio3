@@ -1,0 +1,31 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Category": {
+        "@attr": {
+            "default": "misc",
+            "enum": [
+                "misc",
+                "key",
+                "game",
+                "freshener"
+            ],
+            "type": "enum"
+        }
+    },
+    "Flag": {
+        "@attr": {
+            "default": "Default",
+            "type": "string"
+        }
+    },
+    "Sheet": {
+        "@attr": {
+            "data": "Data.GFX.Sheet",
+            "default": "Default",
+            "type": "link"
+        }
+    }
+}
