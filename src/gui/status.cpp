@@ -9,7 +9,7 @@
 ach::Status::Status()
 {
 	width = 500.0f;
-	pos   = sf::Vector2f(150.0f, 20.0f);
+	pos   = sf::Vector2f(150.0f, 10.0f);
 	box   = new ach::RectangleShape();
 	text  = new sf::Text();
 
@@ -49,6 +49,7 @@ void ach::Status::update()
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"        ), cache->getDeaths()   ));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"     ), cache->getCollected()));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"  ), cache->getItems()    ));
+	lines.push_back(new ach::Statistic(""                                , ""));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Misc"     ), ""));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Key"      ), ""));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Freshener"), ""));
@@ -68,8 +69,8 @@ void ach::Status::render()
 
 	list_foreach(lines)
 	{
-		text_draw(text, lines[i]->caption, pos.x + MENU_PADDING, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 2, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
-		text_draw(text, lines[i]->value  , pos.x + MENU_PADDING, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 2, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+		text_draw(text, lines[i]->caption, pos.x + MENU_PADDING * 2, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 4, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+		text_draw(text, lines[i]->value  , pos.x + MENU_PADDING * 2, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 4, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 	}
 }
 
@@ -85,7 +86,7 @@ void ach::Status::style()
 	spacing = theme->menu.spacing + MENU_SPACING;
 
 	box->style(&theme->menu);
-	box->setSize(sf::Vector2f(width, 240.0f));
+	box->setSize(sf::Vector2f(width, 260.0f));
 
 	text->setCharacterSize(theme->menu.size);
 	text->setFont(*theme->menu.font);

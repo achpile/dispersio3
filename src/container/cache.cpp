@@ -244,7 +244,20 @@ sf::String ach::Cache::getDeaths()
 ***********************************************************************/
 sf::String ach::Cache::getCollected()
 {
-	return sf::String("100%");
+	int total     = 0;
+	int collected = 0;
+
+	list_foreach(db->map)
+	{
+		total     += db->map[i]->items;
+		collected += json_array_size(json_object_getv_branch(cache, "Map.%s.Item", db->map[i]->name));
+	}
+
+	if (!total)
+		return sf::String("100%");
+
+
+	return sf::String(std::to_string((collected * 100) / total)) + "%";
 }
 
 
