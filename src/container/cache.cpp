@@ -211,7 +211,16 @@ bool ach::Cache::canReturn()
 ***********************************************************************/
 sf::String ach::Cache::getPlaytime()
 {
-	return sf::String("1:2:3");
+	char result[STR_LEN_MENU];
+
+	int ptime = playtime * 1000;
+	int msec  = ptime % 1000; ptime /= 1000;
+	int sec   = ptime % 60  ; ptime /= 60;
+	int min   = ptime % 60  ; ptime /= 60;
+
+	snprintf(result, STR_LEN_MENU, "%d:%02d:%02d.%03d", ptime, min, sec, msec);
+
+	return sf::String(result);
 }
 
 
@@ -223,5 +232,5 @@ sf::String ach::Cache::getPlaytime()
 ***********************************************************************/
 sf::String ach::Cache::getDeaths()
 {
-	return sf::String("500");
+	return sf::String(std::to_string(deaths));
 }

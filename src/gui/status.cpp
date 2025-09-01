@@ -47,8 +47,9 @@ void ach::Status::update()
 
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"    ), cache->getPlaytime()));
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"      ), cache->getDeaths()));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"   ), "100%"));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"), "10 / 10"));
+
+	// lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"   ), "100%"));
+	// lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"), "10 / 10"));
 }
 
 
