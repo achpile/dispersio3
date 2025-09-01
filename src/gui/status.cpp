@@ -29,6 +29,7 @@ ach::Status::Status()
 ach::Status::~Status()
 {
 	list_delete(lines);
+	list_delete(items);
 
 	delete text;
 	delete box;
@@ -43,6 +44,7 @@ ach::Status::~Status()
 ***********************************************************************/
 void ach::Status::update()
 {
+	list_update(items);
 	list_delete(lines);
 
 	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"      ), cache->getPlaytime() ));
@@ -72,6 +74,9 @@ void ach::Status::render()
 		text_draw(text, lines[i]->caption, pos.x + MENU_PADDING * 2, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 4, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
 		text_draw(text, lines[i]->value  , pos.x + MENU_PADDING * 2, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 4, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 	}
+
+	list_foreach(items)
+		items[i]->render();
 }
 
 

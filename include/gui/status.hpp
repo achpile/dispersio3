@@ -7,6 +7,7 @@ namespace ach
 	struct Status
 	{
 		std::vector<ach::Statistic*> lines;
+		std::vector<ach::ItemIcon*>  items;
 
 		ach::RectangleShape *box;
 		sf::Text            *text;
