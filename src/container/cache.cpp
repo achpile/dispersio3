@@ -256,7 +256,11 @@ sf::String ach::Cache::getCollected()
 ***********************************************************************/
 sf::String ach::Cache::getItems()
 {
-	return sf::String("0 / 0");
+	if (!current->items)
+		return sf::String("100%");
+
+
+	return sf::String(std::to_string((json_array_size(json_object_get(info, "Item")) * 100) / current->items)) + "%";
 }
 
 
