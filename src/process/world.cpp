@@ -209,12 +209,14 @@ void ach::ProcessWorld::fill()
 {
 	menu->init("Main.InGame");
 
-	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Resume"  , handler_game_resume , NULL                   ));
+	menu->add("Main.InGame", new ach::MenuItemAction(menu, "Misc.Resume"   , handler_game_resume , NULL                   ));
 
 	options_fill(menu, "Main.InGame");
 
-	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.Leave"   , NULL                , NULL                   ));
-	menu->add("Main.InGame", new ach::MenuItemAction  (menu, "Misc.ExitGame", handler_common_state, json_string("menu"    )));
+	if (cache->canReturn())
+		menu->add("Main.InGame", new ach::MenuItemAction(menu, "Misc.Leave", NULL                , NULL                   ));
+
+	menu->add("Main.InGame", new ach::MenuItemAction(menu, "Misc.ExitGame" , handler_common_state, json_string("menu"    )));
 
 	menu->finalize();
 }

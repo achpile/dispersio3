@@ -41,6 +41,8 @@ namespace ach
 		void die();
 		void collect(int id);
 		void checkpoint(int id);
+
+		bool canReturn();
 	};
 }
 
