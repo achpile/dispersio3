@@ -95,10 +95,21 @@ void ach::Menu::reset()
      * finalize
 
 ***********************************************************************/
-void ach::Menu::finalize()
+void ach::Menu::finalize(const char *leave)
 {
 	list_foreach(items)
 		items[i]->finalize();
+
+	if (leave)
+		list_foreach(items)
+			if (!strncmp(leave, items[i]->name, STR_LEN_MENU))
+			{
+				root->leave = items[i];
+				break;
+			}
+
+	if (!root->leave)
+		root->leave = root->items.back();
 
 	translate();
 }

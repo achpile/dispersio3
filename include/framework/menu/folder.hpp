@@ -8,6 +8,8 @@ namespace ach
 	{
 		std::vector<ach::MenuItem*> items;
 
+		ach::MenuItem *leave;
+
 
 		 MenuItemFolder(ach::Menu *_menu, const char *_name);
 		~MenuItemFolder();

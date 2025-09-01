@@ -135,5 +135,5 @@ void ach::StateMenu::fill()
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Credits"        , handler_common_state      , json_string("credits")));
 	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Misc.Exit"           , handler_common_state      , json_string("end"    )));
 
-	menu->finalize();
+	menu->finalize(NULL);
 }

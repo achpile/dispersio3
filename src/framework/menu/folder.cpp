@@ -8,6 +8,7 @@
 ***********************************************************************/
 ach::MenuItemFolder::MenuItemFolder(ach::Menu *_menu, const char *_name) : MenuItem(_menu, _name)
 {
+	leave = NULL;
 }
 
 
@@ -51,6 +52,8 @@ void ach::MenuItemFolder::finalize()
 
 	menu->items.push_back(back);
 	add(back);
+
+	leave = back;
 }
 
 

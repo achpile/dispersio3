@@ -62,7 +62,7 @@ namespace ach
 
 		void clear();
 		void reset();
-		void finalize();
+		void finalize(const char *leave);
 
 		/*  dimensions.cpp  */
 		float left();

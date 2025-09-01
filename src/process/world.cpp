@@ -218,7 +218,7 @@ void ach::ProcessWorld::fill()
 
 	menu->add("Main.InGame", new ach::MenuItemAction(menu, "Misc.ExitGame" , handler_common_state, json_string("menu"    )));
 
-	menu->finalize();
+	menu->finalize("Misc.Resume");
 }
 
 
