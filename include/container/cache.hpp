@@ -43,6 +43,9 @@ namespace ach
 		void checkpoint(int id);
 
 		bool canReturn();
+
+		sf::String getPlaytime();
+		sf::String getDeaths();
 	};
 }
 

@@ -9,10 +9,11 @@
 ach::Status::Status()
 {
 	width = 500.0f;
+	pos   = sf::Vector2f(150.0f, 20.0f);
 	box   = new ach::RectangleShape();
 	text  = new sf::Text();
 
-	box->setPosition(sf::Vector2f(150.0f, 20.0f));
+	box->setPosition(pos);
 	box->setOutlineThickness(MENU_THICKNESS);
 
 	style();
@@ -43,6 +44,11 @@ ach::Status::~Status()
 void ach::Status::update()
 {
 	list_delete(lines);
+
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"    ), cache->getPlaytime()));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"      ), cache->getDeaths()));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"   ), "100%"));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"), "10 / 10"));
 }
 
 
@@ -55,6 +61,12 @@ void ach::Status::update()
 void ach::Status::render()
 {
 	rm->draw(box, ach::RenderLayer::rlGUI);
+
+	list_foreach(lines)
+	{
+		text_draw(text, lines[i]->caption, pos.x + MENU_PADDING, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 2, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+		text_draw(text, lines[i]->value  , pos.x + MENU_PADDING, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 2, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+	}
 }
 
 
