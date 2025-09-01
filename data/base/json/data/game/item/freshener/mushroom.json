@@ -1,0 +1,7 @@
+{
+    "FreshenerMushroom": {
+        "Category": "freshener",
+        "Flag": "HasFreshenerMushroom",
+        "Sheet": "ItemFreshenerMushroom"
+    }
+}

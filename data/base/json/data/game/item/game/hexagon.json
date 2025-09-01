@@ -1,0 +1,7 @@
+{
+    "GameHexagon": {
+        "Category": "game",
+        "Flag": "HasGameHexagon",
+        "Sheet": "ItemGameHexagon"
+    }
+}

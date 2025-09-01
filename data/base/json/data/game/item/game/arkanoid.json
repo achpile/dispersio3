@@ -1,0 +1,7 @@
+{
+    "GameArkanoid": {
+        "Category": "game",
+        "Flag": "HasGameArkanoid",
+        "Sheet": "ItemGameArkanoid"
+    }
+}

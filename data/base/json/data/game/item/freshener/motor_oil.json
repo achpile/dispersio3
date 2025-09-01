@@ -1,0 +1,7 @@
+{
+    "FreshenerMotorOil": {
+        "Category": "freshener",
+        "Flag": "HasFreshenerMotorOil",
+        "Sheet": "ItemFreshenerMotorOil"
+    }
+}

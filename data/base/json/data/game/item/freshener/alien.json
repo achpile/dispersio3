@@ -1,0 +1,7 @@
+{
+    "FreshenerAlien": {
+        "Category": "freshener",
+        "Flag": "HasFreshenerAlien",
+        "Sheet": "ItemFreshenerAlien"
+    }
+}

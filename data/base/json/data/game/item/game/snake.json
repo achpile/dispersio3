@@ -1,0 +1,7 @@
+{
+    "GameSnake": {
+        "Category": "game",
+        "Flag": "HasGameSnake",
+        "Sheet": "ItemGameSnake"
+    }
+}

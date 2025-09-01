@@ -1,0 +1,7 @@
+{
+    "MiscMattress": {
+        "Category": "misc",
+        "Flag": "HasMiscMattress",
+        "Sheet": "ItemMiscMattress"
+    }
+}

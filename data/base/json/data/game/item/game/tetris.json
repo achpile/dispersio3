@@ -1,0 +1,7 @@
+{
+    "GameTetris": {
+        "Category": "game",
+        "Flag": "HasGameTetris",
+        "Sheet": "ItemGameTetris"
+    }
+}

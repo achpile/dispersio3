@@ -1,0 +1,7 @@
+{
+    "MiscFluxCapacitor": {
+        "Category": "misc",
+        "Flag": "HasMiscFluxCapacitor",
+        "Sheet": "ItemMiscFluxCapacitor"
+    }
+}
