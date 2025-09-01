@@ -95,6 +95,7 @@
 #include "map/object/wind.hpp"
 #include "map/object/checkpoint.hpp"
 #include "map/object/points.hpp"
+#include "map/object/item.hpp"
 #include "map/object/moving.hpp"
 #include "map/object/fragile.hpp"
 #include "map/object/break.hpp"

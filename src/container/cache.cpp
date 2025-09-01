@@ -234,3 +234,15 @@ sf::String ach::Cache::getDeaths()
 {
 	return sf::String(std::to_string(deaths));
 }
+
+
+
+/***********************************************************************
+     * Cache
+     * setFlag
+
+***********************************************************************/
+void ach::Cache::setFlag(const char *name)
+{
+	json_object_setv_branch_boolean(cache, true, "Flags.%s", name);
+}

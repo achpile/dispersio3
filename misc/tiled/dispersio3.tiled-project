@@ -249,6 +249,26 @@
             ]
         },
         {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 25,
+            "members": [
+            ],
+            "name": "Class22",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
             "color": "#ff613583",
             "drawFill": true,
             "id": 23,
@@ -268,18 +288,6 @@
             "members": [
             ],
             "name": "obj_checkpoint",
-            "type": "class",
-            "useAs": [
-                "object"
-            ]
-        },
-        {
-            "color": "#ff99c1f1",
-            "drawFill": true,
-            "id": 6,
-            "members": [
-            ],
-            "name": "obj_points",
             "type": "class",
             "useAs": [
                 "object"
@@ -324,6 +332,38 @@
                 }
             ],
             "name": "obj_door",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "color": "#ff99c1f1",
+            "drawFill": true,
+            "id": 26,
+            "members": [
+            ],
+            "name": "obj_item",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ff99c1f1",
+            "drawFill": true,
+            "id": 6,
+            "members": [
+            ],
+            "name": "obj_points",
             "type": "class",
             "useAs": [
                 "object"

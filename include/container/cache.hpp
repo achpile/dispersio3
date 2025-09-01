@@ -46,6 +46,8 @@ namespace ach
 
 		sf::String getPlaytime();
 		sf::String getDeaths();
+
+		void setFlag(const char *name);
 	};
 }
 
