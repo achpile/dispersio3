@@ -82,6 +82,7 @@
 #include "gui/caption.hpp"
 #include "gui/selector.hpp"
 #include "gui/message.hpp"
+#include "gui/options.hpp"
 
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
