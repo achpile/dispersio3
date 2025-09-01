@@ -45,11 +45,14 @@ void ach::Status::update()
 {
 	list_delete(lines);
 
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"    ), cache->getPlaytime()));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"      ), cache->getDeaths()));
-
-	// lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"   ), "100%"));
-	// lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"), "10 / 10"));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"      ), cache->getPlaytime() ));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"        ), cache->getDeaths()   ));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"     ), cache->getCollected()));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"  ), cache->getItems()    ));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Misc"     ), ""));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Key"      ), ""));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Freshener"), ""));
+	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Game"     ), ""));
 }
 
 

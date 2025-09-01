@@ -2,28 +2,27 @@
     "@attr": {
         "type": "object"
     },
-    "Collected": {
+    "Freshener": {
         "@attr": {
-            "default": "Items collected",
+            "default": "Air fresheners",
             "type": "string"
         }
     },
-    "CollectedMap": {
+    "Game": {
         "@attr": {
-            "default": "Items collected on this map",
+            "default": "Games",
             "type": "string"
         }
     },
-    "Deaths": {
+    "Key": {
         "@attr": {
-            "default": "Deaths",
+            "default": "Keys",
             "type": "string"
         }
     },
-    "Item": "@include stats/item.json",
-    "Playtime": {
+    "Misc": {
         "@attr": {
-            "default": "Play time",
+            "default": "Miscellaneous",
             "type": "string"
         }
     }
