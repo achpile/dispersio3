@@ -425,7 +425,7 @@
                 {
                  "height":16,
                  "id":15,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -436,7 +436,7 @@
                 {
                  "height":16,
                  "id":16,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -469,7 +469,7 @@
                 {
                  "height":16,
                  "id":30,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -480,7 +480,7 @@
                 {
                  "height":16,
                  "id":31,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -576,7 +576,7 @@
                 {
                  "height":16,
                  "id":42,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -598,7 +598,7 @@
                 {
                  "height":16,
                  "id":59,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -609,7 +609,7 @@
                 {
                  "height":16,
                  "id":60,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -620,7 +620,7 @@
                 {
                  "height":16,
                  "id":68,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -674,7 +674,7 @@
                 {
                  "height":16,
                  "id":81,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -782,7 +782,7 @@
                 {
                  "height":16,
                  "id":130,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,

@@ -496,7 +496,7 @@
                 {
                  "height":16,
                  "id":19,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -507,7 +507,7 @@
                 {
                  "height":16,
                  "id":20,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -685,7 +685,7 @@
                 {
                  "height":16,
                  "id":60,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -696,7 +696,7 @@
                 {
                  "height":16,
                  "id":61,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -707,7 +707,7 @@
                 {
                  "height":16,
                  "id":62,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -718,7 +718,7 @@
                 {
                  "height":16,
                  "id":74,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,

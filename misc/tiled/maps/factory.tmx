@@ -423,8 +423,8 @@
     <property name="Duration" type="float" value="1"/>
    </properties>
   </object>
-  <object id="46" name="CollectBag" type="obj_points" x="1024" y="960" width="16" height="16"/>
-  <object id="47" name="CollectBag" type="obj_points" x="1072" y="960" width="16" height="16"/>
+  <object id="46" name="Bag" type="obj_points" x="1024" y="960" width="16" height="16"/>
+  <object id="47" name="Bag" type="obj_points" x="1072" y="960" width="16" height="16"/>
   <object id="50" name="BlockYokuConcreteHRight" type="block_yoku" x="1008" y="1104" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="1"/>
@@ -432,7 +432,7 @@
     <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="53" name="CollectBag" type="obj_points" x="800" y="912" width="16" height="16"/>
+  <object id="53" name="Bag" type="obj_points" x="800" y="912" width="16" height="16"/>
   <object id="55" type="obj_checkpoint" x="816" y="832" width="16" height="16"/>
   <object id="63" type="trigger_wind" x="800" y="704" width="304" height="128">
    <properties>
@@ -442,7 +442,7 @@
   </object>
   <object id="66" name="DecorPropellerH" type="obj_decor" x="1104" y="768" width="16" height="64"/>
   <object id="67" name="DecorPropellerH" type="obj_decor" x="1104" y="704" width="16" height="64"/>
-  <object id="73" name="CollectBag" type="obj_points" x="688" y="768" width="16" height="16"/>
+  <object id="73" name="Bag" type="obj_points" x="688" y="768" width="16" height="16"/>
   <object id="74" type="obj_checkpoint" x="1200" y="768" width="16" height="16"/>
   <object id="75" name="BlockYokuConcrete" type="block_yoku" x="1456" y="768" width="16" height="16">
    <properties>
@@ -466,8 +466,8 @@
     <property name="Push" propertytype="@orientation" value="horizontal"/>
    </properties>
   </object>
-  <object id="83" name="CollectBag" type="obj_points" x="1248" y="672" width="16" height="16"/>
-  <object id="84" name="CollectBag" type="obj_points" x="1312" y="672" width="16" height="16"/>
+  <object id="83" name="Bag" type="obj_points" x="1248" y="672" width="16" height="16"/>
+  <object id="84" name="Bag" type="obj_points" x="1312" y="672" width="16" height="16"/>
   <object id="102" type="obj_checkpoint" x="1472" y="624" width="16" height="16"/>
   <object id="106" name="BlockYokuConcrete" type="block_yoku" x="1488" y="496" width="16" height="16">
    <properties>
@@ -618,7 +618,7 @@
     <property name="Offset" type="float" value="0.6"/>
    </properties>
   </object>
-  <object id="162" name="CollectBag" type="obj_points" x="560" y="384" width="16" height="16"/>
+  <object id="162" name="Bag" type="obj_points" x="560" y="384" width="16" height="16"/>
   <object id="168" type="obj_checkpoint" x="736" y="400" width="16" height="16"/>
   <object id="169" name="BlockYokuConcreteHMid" type="block_yoku" x="432" y="496" width="16" height="16">
    <properties>
@@ -710,16 +710,16 @@
     <property name="Direction" propertytype="@direction" value="left"/>
    </properties>
   </object>
-  <object id="197" name="CollectBag" type="obj_points" x="488" y="208" width="16" height="16"/>
-  <object id="198" name="CollectBag" type="obj_points" x="568" y="208" width="16" height="16"/>
-  <object id="199" name="CollectBag" type="obj_points" x="648" y="208" width="16" height="16"/>
-  <object id="200" name="CollectBag" type="obj_points" x="928" y="480" width="16" height="16"/>
-  <object id="201" name="CollectBag" type="obj_points" x="1024" y="480" width="16" height="16"/>
-  <object id="202" name="CollectBag" type="obj_points" x="920" y="192" width="16" height="16"/>
-  <object id="203" name="CollectBag" type="obj_points" x="1000" y="192" width="16" height="16"/>
+  <object id="197" name="Bag" type="obj_points" x="488" y="208" width="16" height="16"/>
+  <object id="198" name="Bag" type="obj_points" x="568" y="208" width="16" height="16"/>
+  <object id="199" name="Bag" type="obj_points" x="648" y="208" width="16" height="16"/>
+  <object id="200" name="Bag" type="obj_points" x="928" y="480" width="16" height="16"/>
+  <object id="201" name="Bag" type="obj_points" x="1024" y="480" width="16" height="16"/>
+  <object id="202" name="Bag" type="obj_points" x="920" y="192" width="16" height="16"/>
+  <object id="203" name="Bag" type="obj_points" x="1000" y="192" width="16" height="16"/>
   <object id="209" type="obj_checkpoint" x="1168" y="144" width="16" height="16"/>
-  <object id="210" name="CollectBag" type="obj_points" x="1296" y="144" width="16" height="16"/>
-  <object id="211" name="CollectBag" type="obj_points" x="1376" y="144" width="16" height="16"/>
+  <object id="210" name="Bag" type="obj_points" x="1296" y="144" width="16" height="16"/>
+  <object id="211" name="Bag" type="obj_points" x="1376" y="144" width="16" height="16"/>
   <object id="212" name="BlockYokuConcrete" type="block_yoku" x="1216" y="160" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="8.5"/>

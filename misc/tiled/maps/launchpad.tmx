@@ -317,10 +317,10 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="10" type="obj_checkpoint" x="416" y="1072" width="16" height="16"/>
-  <object id="19" name="CollectBag" type="obj_points" x="256" y="976" width="16" height="16"/>
-  <object id="20" name="CollectBag" type="obj_points" x="336" y="976" width="16" height="16"/>
+  <object id="19" name="Bag" type="obj_points" x="256" y="976" width="16" height="16"/>
+  <object id="20" name="Bag" type="obj_points" x="336" y="976" width="16" height="16"/>
   <object id="25" type="obj_checkpoint" x="816" y="1040" width="16" height="16"/>
-  <object id="32" name="CollectBag" type="obj_points" x="912" y="976" width="16" height="16"/>
+  <object id="32" name="Bag" type="obj_points" x="912" y="976" width="16" height="16"/>
   <object id="34" type="obj_checkpoint" x="960" y="832" width="16" height="16"/>
   <object id="41" name="BlockConcreteBarRight" type="block_break" x="1136" y="784" width="16" height="16">
    <properties>
@@ -340,14 +340,14 @@
   <object id="63" name="BlockConcrete" type="block_fragile" x="1328" y="720" width="16" height="16"/>
   <object id="64" name="BlockConcrete" type="block_fragile" x="1280" y="720" width="16" height="16"/>
   <object id="65" name="BlockConcrete" type="block_fragile" x="1232" y="720" width="16" height="16"/>
-  <object id="70" name="CollectBag" type="obj_points" x="1440" y="736" width="16" height="16"/>
+  <object id="70" name="Bag" type="obj_points" x="1440" y="736" width="16" height="16"/>
   <object id="72" type="obj_checkpoint" x="736" y="816" width="16" height="16"/>
   <object id="91" type="obj_checkpoint" x="704" y="592" width="16" height="16"/>
   <object id="103" name="BlockConcreteBarLeft" type="block_fragile" x="560" y="512" width="16" height="16"/>
   <object id="104" name="BlockConcreteBarRight" type="block_fragile" x="576" y="512" width="16" height="16"/>
   <object id="106" name="BlockConcrete" type="block_fragile" x="568" y="448" width="16" height="16"/>
-  <object id="139" name="CollectBag" type="obj_points" x="480" y="720" width="16" height="16"/>
-  <object id="143" name="CollectBag" type="obj_points" x="336" y="496" width="16" height="16"/>
+  <object id="139" name="Bag" type="obj_points" x="480" y="720" width="16" height="16"/>
+  <object id="143" name="Bag" type="obj_points" x="336" y="496" width="16" height="16"/>
   <object id="144" name="MovingMetal" type="block_moving" x="440" y="384" width="32" height="104">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -372,9 +372,9 @@
     <property name="Speed" type="float" value="40"/>
    </properties>
   </object>
-  <object id="186" name="CollectBag" type="obj_points" x="528" y="448" width="16" height="16"/>
-  <object id="187" name="CollectBag" type="obj_points" x="608" y="448" width="16" height="16"/>
-  <object id="188" name="CollectBag" type="obj_points" x="1008" y="240" width="16" height="16"/>
+  <object id="186" name="Bag" type="obj_points" x="528" y="448" width="16" height="16"/>
+  <object id="187" name="Bag" type="obj_points" x="608" y="448" width="16" height="16"/>
+  <object id="188" name="Bag" type="obj_points" x="1008" y="240" width="16" height="16"/>
   <object id="194" name="MovingMetal" type="block_moving" x="848" y="176" width="112" height="16">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">

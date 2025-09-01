@@ -404,10 +404,10 @@
   <object id="47" name="DecorTorch" type="obj_decor" x="1400" y="712" width="16" height="16"/>
   <object id="48" name="DecorTorch" type="obj_decor" x="1448" y="712" width="16" height="16"/>
   <object id="49" name="DecorTorch" type="obj_decor" x="1496" y="712" width="16" height="16"/>
-  <object id="50" name="CollectBag" type="obj_points" x="1824" y="960" width="16" height="16"/>
+  <object id="50" name="Bag" type="obj_points" x="1824" y="960" width="16" height="16"/>
   <object id="61" name="DecorTorch" type="obj_decor" x="1568" y="432" width="16" height="16"/>
   <object id="62" name="DecorTorch" type="obj_decor" x="1824" y="480" width="16" height="16"/>
-  <object id="63" name="CollectBag" type="obj_points" x="1568" y="464" width="16" height="16"/>
+  <object id="63" name="Bag" type="obj_points" x="1568" y="464" width="16" height="16"/>
   <object id="66" type="obj_checkpoint" x="1264" y="1008" width="16" height="16"/>
   <object id="67" name="DecorWater" type="obj_decor" x="1184" y="1016" width="32" height="16">
    <properties>

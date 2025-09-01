@@ -742,7 +742,7 @@
                 {
                  "height":16,
                  "id":50,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,
@@ -807,7 +807,7 @@
                 {
                  "height":16,
                  "id":63,
-                 "name":"CollectBag",
+                 "name":"Bag",
                  "rotation":0,
                  "type":"obj_points",
                  "visible":true,

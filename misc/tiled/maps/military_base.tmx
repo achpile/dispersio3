@@ -350,8 +350,8 @@
     <property name="Secret" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="56" name="CollectBag" type="obj_points" x="1472" y="1040" width="16" height="16"/>
-  <object id="57" name="CollectBag" type="obj_points" x="1440" y="944" width="16" height="16"/>
+  <object id="56" name="Bag" type="obj_points" x="1472" y="1040" width="16" height="16"/>
+  <object id="57" name="Bag" type="obj_points" x="1440" y="944" width="16" height="16"/>
   <object id="64" type="obj_checkpoint" x="736" y="448" width="16" height="16"/>
   <object id="84" type="obj_checkpoint" x="1296" y="528" width="16" height="16"/>
   <object id="85" name="MovingMetal" type="block_moving" x="1456" y="384" width="32" height="144">
@@ -364,13 +364,13 @@
     <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
-  <object id="87" name="CollectBag" type="obj_points" x="80" y="464" width="16" height="16"/>
-  <object id="88" name="CollectBag" type="obj_points" x="160" y="464" width="16" height="16"/>
-  <object id="89" name="CollectBag" type="obj_points" x="224" y="464" width="16" height="16"/>
+  <object id="87" name="Bag" type="obj_points" x="80" y="464" width="16" height="16"/>
+  <object id="88" name="Bag" type="obj_points" x="160" y="464" width="16" height="16"/>
+  <object id="89" name="Bag" type="obj_points" x="224" y="464" width="16" height="16"/>
   <object id="92" type="obj_checkpoint" x="352" y="368" width="16" height="16"/>
   <object id="103" type="obj_checkpoint" x="816" y="832" width="16" height="16"/>
   <object id="104" type="obj_checkpoint" x="792" y="1024" width="16" height="16"/>
-  <object id="105" name="CollectBag" type="obj_points" x="1056" y="928" width="16" height="16"/>
+  <object id="105" name="Bag" type="obj_points" x="1056" y="928" width="16" height="16"/>
   <object id="118" name="BlockConcrete" type="block_fragile" x="608" y="792" width="16" height="16"/>
   <object id="119" name="BlockConcrete" type="block_fragile" x="544" y="792" width="16" height="16"/>
   <object id="120" name="BlockConcrete" type="block_fragile" x="480" y="792" width="16" height="16"/>
@@ -390,11 +390,11 @@
   </object>
   <object id="125" name="BlockConcrete" type="block_fragile" x="672" y="704" width="16" height="16"/>
   <object id="126" type="obj_checkpoint" x="784" y="640" width="16" height="16"/>
-  <object id="133" name="CollectBag" type="obj_points" x="48" y="656" width="16" height="16"/>
-  <object id="140" name="CollectBag" type="obj_points" x="1392" y="768" width="16" height="16"/>
-  <object id="141" name="CollectBag" type="obj_points" x="1280" y="720" width="16" height="16"/>
-  <object id="142" name="CollectBag" type="obj_points" x="1392" y="672" width="16" height="16"/>
-  <object id="145" name="CollectBag" type="obj_points" x="880" y="816" width="16" height="16"/>
+  <object id="133" name="Bag" type="obj_points" x="48" y="656" width="16" height="16"/>
+  <object id="140" name="Bag" type="obj_points" x="1392" y="768" width="16" height="16"/>
+  <object id="141" name="Bag" type="obj_points" x="1280" y="720" width="16" height="16"/>
+  <object id="142" name="Bag" type="obj_points" x="1392" y="672" width="16" height="16"/>
+  <object id="145" name="Bag" type="obj_points" x="880" y="816" width="16" height="16"/>
   <object id="153" name="MovingMetal" type="block_moving" x="952" y="688" width="32" height="48">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -407,7 +407,7 @@
    </properties>
   </object>
   <object id="154" type="obj_checkpoint" x="272" y="240" width="16" height="16"/>
-  <object id="155" name="CollectBag" type="obj_points" x="48" y="160" width="16" height="16"/>
+  <object id="155" name="Bag" type="obj_points" x="48" y="160" width="16" height="16"/>
   <object id="176" name="BlockConcrete" type="block_fragile" x="552" y="224" width="16" height="16"/>
   <object id="177" name="BlockConcrete" type="block_fragile" x="664" y="224" width="16" height="16"/>
   <object id="178" name="BlockConcrete" type="block_fragile" x="608" y="224" width="16" height="16"/>
