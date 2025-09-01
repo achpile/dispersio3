@@ -161,9 +161,7 @@ void ach::Menu::style(ach::MenuTheme *_theme)
 	text->setFont(*theme->font);
 	text->setFillColor(theme->color);
 
-	box->setFillColor(theme->bg);
-	box->setOutlineColor(theme->border);
-	box->setRound(theme->round);
+	box->style(theme);
 
 	sfxBlip = theme->blip;
 	sfxBack = theme->back;

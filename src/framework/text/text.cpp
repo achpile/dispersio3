@@ -6,16 +6,16 @@
      * constructor
 
 ***********************************************************************/
-ach::Text::Text(sf::Font *font, int size)
+ach::Text::Text(ach::MenuTheme *theme)
 {
 	align   = ach::TextAlign::taLeft;
 	layer   = ach::RenderLayer::rlGUI;
+	text    = new sf::Text();
 	pos     = sf::Vector2f(0.0f, 0.0f);
-	spacing = MENU_SPACING;
 	width   = 0.0f;
 	string  = "";
 
-	text   = new sf::Text(string, *font, size);
+	style(theme);
 }
 
 
@@ -43,6 +43,21 @@ void ach::Text::render()
 {
 	list_foreach(strings)
 		text_draw(text, strings[i], pos.x, pos.y + spacing * i, width, align, layer);
+}
+
+
+
+/***********************************************************************
+     * Text
+     * style
+
+***********************************************************************/
+void ach::Text::style(ach::MenuTheme *theme)
+{
+	setFont(theme->font);
+	setColor(theme->color);
+	setSize(theme->size);
+	setSpacing(theme->spacing);
 }
 
 

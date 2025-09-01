@@ -15,6 +15,8 @@ namespace ach
 		 RectangleShape(sf::Vector2f _size = sf::Vector2f(0.0f, 0.0f));
 		~RectangleShape();
 
+		void style(ach::MenuTheme *theme);
+
 		void setSize (sf::Vector2f _size);
 		void setRound(bool round);
 

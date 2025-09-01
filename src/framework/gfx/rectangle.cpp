@@ -28,6 +28,20 @@ ach::RectangleShape::~RectangleShape()
 
 /***********************************************************************
      * RectangleShape
+     * style
+
+***********************************************************************/
+void ach::RectangleShape::style(ach::MenuTheme *theme)
+{
+	setFillColor(theme->bg);
+	setOutlineColor(theme->border);
+	setRound(theme->round);
+}
+
+
+
+/***********************************************************************
+     * RectangleShape
      * setSize
 
 ***********************************************************************/

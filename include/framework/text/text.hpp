@@ -19,10 +19,12 @@ namespace ach
 		float width;
 
 
-		 Text(sf::Font *font, int size);
+		 Text(ach::MenuTheme *theme);
 		~Text();
 
 		void render();
+
+		void style(ach::MenuTheme *theme);
 
 		void setString(sf::String _string);
 		void setPosition(sf::Vector2f _pos);
