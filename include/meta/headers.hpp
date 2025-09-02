@@ -86,6 +86,7 @@
 #include "gui/options.hpp"
 #include "gui/item.hpp"
 #include "gui/status.hpp"
+#include "gui/level.hpp"
 
 #include "map/object/pair.hpp"
 #include "map/object/object.hpp"

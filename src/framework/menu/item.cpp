@@ -35,5 +35,5 @@ ach::MenuItem::~MenuItem()
 ***********************************************************************/
 void ach::MenuItem::translate()
 {
-	caption = lm->getv("UI.Menu.%s", name);
+	caption = lm->get(name);
 }

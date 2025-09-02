@@ -90,7 +90,7 @@ void ach::MenuItemList::finalize()
 ***********************************************************************/
 void ach::MenuItemList::translate()
 {
-	caption = lm->getv("UI.Menu.%s", name);
+	caption = lm->get(name);
 
 	list_foreach(options)
 		if (options[i]->token) options[i]->caption = lm->get (options[i]->name);

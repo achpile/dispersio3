@@ -113,27 +113,27 @@ void ach::StateMenu::style()
 ***********************************************************************/
 void ach::StateMenu::fill()
 {
-	menu->init("Main.Name");
+	menu->init("UI.Menu.Main.Name");
 
 	if (cache->def)
 	{
-		menu->add("Main.Name"   , new ach::MenuItemFolder  (menu, "Play.Start"          ));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
+		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Start"          ));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
 	}
 	else
 	{
-		menu->add("Main.Name"   , new ach::MenuItemFolder  (menu, "Play.Name"           ));
-		menu->add("Play.Name"   , new ach::MenuItemAction  (menu, "Play.Continue"       , handler_menu_start        , json_pack("{s:b}"    , "New", false)));
-		menu->add("Play.Name"   , new ach::MenuItemFolder  (menu, "Play.Start"          ));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
-		menu->add("Play.Start"  , new ach::MenuItemAction  (menu, "Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
+		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Name"           ));
+		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemAction  (menu, "UI.Menu.Play.Continue"       , handler_menu_start        , json_pack("{s:b}"    , "New", false)));
+		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Start"          ));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
 	}
 
-	options_fill(menu, "Main.Name");
+	options_fill(menu, "UI.Menu.Main.Name");
 
-	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Main.Credits"        , handler_common_state      , json_string("credits")));
-	menu->add("Main.Name"       , new ach::MenuItemAction  (menu, "Misc.Exit"           , handler_common_state      , json_string("end"    )));
+	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction  (menu, "UI.Menu.Main.Credits"        , handler_common_state      , json_string("credits")));
+	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction  (menu, "UI.Menu.Misc.Exit"           , handler_common_state      , json_string("end"    )));
 
 	menu->finalize(NULL);
 }

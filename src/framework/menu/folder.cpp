@@ -48,7 +48,7 @@ void ach::MenuItemFolder::finalize()
 	if (!parent)
 		return;
 
-	ach::MenuItemBack *back = new ach::MenuItemBack(menu, "Misc.Back");
+	ach::MenuItemBack *back = new ach::MenuItemBack(menu, "UI.Menu.Misc.Back");
 
 	menu->items.push_back(back);
 	add(back);
