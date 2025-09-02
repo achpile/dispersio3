@@ -20,3 +20,14 @@ void callback_level(void *context, const char *name)
 	((ach::LevelSelect*)context)->selected = db->getMap(map);
 	((ach::LevelSelect*)context)->update();
 }
+
+
+
+/***********************************************************************
+     * handler_level_resume
+
+***********************************************************************/
+void handler_level_resume(void *context, json_t *)
+{
+	((ach::LevelSelect*)context)->active = false;
+}

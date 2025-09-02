@@ -21,7 +21,7 @@ namespace ach
 		ach::Character   *player;
 		ach::Message     *message;
 		ach::Status      *status;
-		ach::LevelSelect *select;
+		ach::LevelSelect *selection;
 		ach::Menu        *menu;
 
 		ach::WorldState   state;
@@ -46,6 +46,7 @@ namespace ach
 		void gateway(sf::FloatRect dest);
 		void goal();
 		void pause();
+		void select();
 	};
 }
 

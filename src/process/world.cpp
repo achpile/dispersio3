@@ -8,13 +8,13 @@
 ***********************************************************************/
 ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Process(_owner)
 {
-	state   = ach::WorldState::wsFadeIn;
-	map     = new ach::Map(this, _map);
-	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
-	message = new ach::Message(500.0f);
-	status  = new ach::Status();
-	select  = new ach::LevelSelect();
-	menu    = new ach::Menu(this, NULL, &theme->menu);
+	state     = ach::WorldState::wsFadeIn;
+	map       = new ach::Map(this, _map);
+	player    = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
+	message   = new ach::Message(500.0f);
+	status    = new ach::Status();
+	selection = new ach::LevelSelect();
+	menu      = new ach::Menu(this, NULL, &theme->menu);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
@@ -47,7 +47,7 @@ ach::ProcessWorld::~ProcessWorld()
 	delete menu;
 	delete message;
 	delete status;
-	delete select;
+	delete selection;
 }
 
 
@@ -93,7 +93,7 @@ void ach::ProcessWorld::event(sf::Event e)
 
 
 		case ach::WorldState::wsSelect:
-			select->event(e);
+			selection->event(e);
 		break;
 
 
@@ -116,6 +116,7 @@ void ach::ProcessWorld::style()
 {
 	message->style();
 	status->style();
+	selection->style();
 	menu->style(&theme->menu);
 }
 
@@ -130,6 +131,7 @@ void ach::ProcessWorld::translate()
 {
 	menu->translate();
 	status->translate();
+	selection->translate();
 }
 
 
@@ -159,7 +161,6 @@ void ach::ProcessWorld::prepare()
 
 		case ach::WorldState::wsMessage:
 			tm->pause();
-			message->render();
 		break;
 
 
@@ -172,7 +173,7 @@ void ach::ProcessWorld::prepare()
 
 		case ach::WorldState::wsSelect:
 			tm->pause();
-			select->controls();
+			selection->controls();
 		break;
 
 
@@ -211,6 +212,8 @@ void ach::ProcessWorld::finalize()
 
 
 		case ach::WorldState::wsMessage:
+			message->render();
+
 			if (ctrl->keys[ach::ControlAction::caMenu].released)
 				state = ach::WorldState::wsGame;
 		break;
@@ -223,7 +226,13 @@ void ach::ProcessWorld::finalize()
 
 
 		case ach::WorldState::wsSelect:
-			select->render();
+			selection->render();
+
+			if (!selection->active)
+			{
+				app->mouse(false);
+				state = ach::WorldState::wsGame;
+			}
 		break;
 
 
@@ -295,4 +304,19 @@ void ach::ProcessWorld::pause()
 
 	app->mouse(true);
 	status->update();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * select
+
+***********************************************************************/
+void ach::ProcessWorld::select()
+{
+	state = ach::WorldState::wsSelect;
+
+	app->mouse(true);
+	selection->init("UI.Menu.Misc.Resume", NULL, ach::LevelList::llTraining);
 }

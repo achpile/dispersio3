@@ -13,6 +13,8 @@ namespace ach
 		ach::Text           *text;
 		ach::Menu           *menu;
 
+		bool active;
+
 
 		 LevelSelect();
 		~LevelSelect();

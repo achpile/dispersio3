@@ -12,7 +12,9 @@ ach::LevelSelect::LevelSelect()
 	text     = new ach::Text(&theme->menu);
 	box      = new ach::RectangleShape();
 	preview  = new ach::RectangleShape();
+
 	selected = NULL;
+	active   = false;
 
 	menu->setPosition(sf::Vector2f(10.0f, RENDER_LAYER_GUI_Y - MENU_LEVEL_HEIGHT - 10.0f));
 	menu->setWidthE(MENU_LEVEL_WIDTH);
@@ -72,7 +74,6 @@ void ach::LevelSelect::update()
 ***********************************************************************/
 void ach::LevelSelect::render()
 {
-	menu->update();
 	menu->render();
 
 	rm->draw(box    , ach::RenderLayer::rlGUI);
@@ -135,6 +136,7 @@ void ach::LevelSelect::translate()
 void ach::LevelSelect::controls()
 {
 	menu->controls();
+	menu->update();
 }
 
 
@@ -146,12 +148,14 @@ void ach::LevelSelect::controls()
 ***********************************************************************/
 void ach::LevelSelect::init(const char *name, ach::Handler handler, ach::LevelList type)
 {
+	active = true;
+
 	menu->clear();
 	menu->init(name);
 
 	fill(name, handler, cache->listLevels(type));
 
-	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL, NULL));
+	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", handler_level_resume, NULL));
 	menu->finalize("UI.Menu.Misc.Resume");
 }
 
