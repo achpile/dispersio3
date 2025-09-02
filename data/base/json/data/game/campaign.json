@@ -17,6 +17,20 @@
             "Level": "Robot"
         }
     ],
+    "MapList": [
+        "MilitaryBase",
+        "LaunchPad",
+        "Forest",
+        "Factory",
+        "Cave",
+        "Lab",
+        "Temple",
+        "Boss",
+        "Duck",
+        "Island",
+        "Plumber",
+        "Robot"
+    ],
     "Navigation": {
         "1": {
             "Levels": [

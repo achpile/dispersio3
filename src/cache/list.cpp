@@ -54,15 +54,22 @@ void ach::Cache::listLevelsDream(json_t *list)
 ***********************************************************************/
 void ach::Cache::listLevelsReplay(json_t *list)
 {
-	list_foreach(db->map)
+	ach::DataMap *map;
+
+	json_t *item;
+	size_t  index;
+
+	json_array_foreach(json_object_get(campaign, "MapList"), index, item)
 	{
-		if (!db->map[i]->replay)
+		map = db->getMap(json_string_value(item));
+
+		if (!map->replay)
 			continue;
 
-		if (!isBeaten(db->map[i]->name))
+		if (!isBeaten(json_string_value(item)))
 			continue;
 
-		json_array_append_new(list, json_string(db->map[i]->name));
+		json_array_append(list, item);
 	}
 }
 
@@ -101,6 +108,9 @@ void ach::Cache::listLevelsNavigation(json_t *list)
 ***********************************************************************/
 void ach::Cache::listLevelsTraining(json_t *list)
 {
-	list_foreach(db->map)
-		json_array_append_new(list, json_string(db->map[i]->name));
+	json_t *item;
+	size_t  index;
+
+	json_array_foreach(json_object_get(campaign, "MapList"), index, item)
+		json_array_append(list, item);
 }

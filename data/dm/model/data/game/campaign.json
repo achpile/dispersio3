@@ -21,6 +21,14 @@
             }
         }
     },
+    "MapList": {
+        "@attr": {
+            "container": "array",
+            "data": "Data.Game.Map",
+            "default": "Default",
+            "type": "link"
+        }
+    },
     "Navigation": {
         "@attr": {
             "container": "multi",
