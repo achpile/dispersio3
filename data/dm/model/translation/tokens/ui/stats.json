@@ -10,7 +10,7 @@
     },
     "CollectedMap": {
         "@attr": {
-            "default": "Items collected on this map",
+            "default": "On current map",
             "type": "string"
         }
     },

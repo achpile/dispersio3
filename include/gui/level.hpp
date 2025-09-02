@@ -10,6 +10,7 @@ namespace ach
 		ach::RectangleShape *preview;
 
 		ach::DataMap        *selected;
+		ach::Text           *text;
 		ach::Menu           *menu;
 
 

@@ -9,6 +9,7 @@
 ach::LevelSelect::LevelSelect()
 {
 	menu     = new ach::Menu(this, callback_level, &theme->menu);
+	text     = new ach::Text(&theme->menu);
 	box      = new ach::RectangleShape();
 	preview  = new ach::RectangleShape();
 	selected = NULL;
@@ -25,6 +26,9 @@ ach::LevelSelect::LevelSelect()
 	preview->setSize(sf::Vector2f(138.0f, 138.0f));
 	preview->setPosition(box->getPosition() + sf::Vector2f(20.0f, 20.0f));
 
+	text->setPosition(preview->getPosition() + sf::Vector2f(0.0f, 158.0f));
+	text->setWidth(RENDER_LAYER_GUI_X - MENU_LEVEL_WIDTH - 70.0f);
+
 	style();
 }
 
@@ -40,6 +44,7 @@ ach::LevelSelect::~LevelSelect()
 	delete menu;
 	delete box;
 	delete preview;
+	delete text;
 }
 
 
@@ -51,6 +56,11 @@ ach::LevelSelect::~LevelSelect()
 ***********************************************************************/
 void ach::LevelSelect::update()
 {
+	if (selected)
+	{
+		selected->preview->spr->setPosition(preview->getPosition() + sf::Vector2f(5.0f, 5.0f));
+		text->setString(lm->getv("Game.Map.%s.Description", selected->name));
+	}
 }
 
 
@@ -66,7 +76,14 @@ void ach::LevelSelect::render()
 	menu->render();
 
 	rm->draw(box    , ach::RenderLayer::rlGUI);
-	rm->draw(preview, ach::RenderLayer::rlGUI);
+
+	if (selected)
+	{
+		rm->draw(preview               , ach::RenderLayer::rlGUI);
+		rm->draw(selected->preview->spr, ach::RenderLayer::rlGUI);
+
+		text->render();
+	}
 }
 
 
@@ -93,6 +110,7 @@ void ach::LevelSelect::style()
 	menu->style(&theme->menu);
 	box->style(&theme->menu);
 	preview->style(&theme->menu);
+	text->style(&theme->menu);
 }
 
 

@@ -6,6 +6,7 @@
     "Description": {
         "@attr": {
             "default": "",
+            "maxlen": 320,
             "type": "string"
         }
     },

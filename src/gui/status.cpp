@@ -92,7 +92,7 @@ void ach::Status::style()
 	spacing = theme->menu.spacing + MENU_SPACING;
 
 	box->style(&theme->menu);
-	box->setSize(sf::Vector2f(width, 260.0f));
+	box->setSize(sf::Vector2f(width, 270.0f));
 
 	text->setCharacterSize(theme->menu.size);
 	text->setFont(*theme->menu.font);
