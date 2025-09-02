@@ -2,20 +2,6 @@
 
 
 /***********************************************************************
-     * pairGameMode
-
-***********************************************************************/
-ach::Pair<ach::GameMode> pairGameMode[] =
-{
-	{.num = ach::GameMode::gmNormal, .str = "normal"},
-	{.num = ach::GameMode::gmHard  , .str = "hard"  },
-
-	{.num = ach::GameMode::gmNormal, .str = NULL    },
-};
-
-
-
-/***********************************************************************
      * pairLevelMode
 
 ***********************************************************************/
@@ -48,10 +34,10 @@ ach::Pair<ach::LevelMode> pairLevelModeMenu[] =
 
 
 /***********************************************************************
-     * pairLevelModeReturn
+     * pairLevelModeRevert
 
 ***********************************************************************/
-ach::Pair<ach::LevelMode> pairLevelModeReturn[] =
+ach::Pair<ach::LevelMode> pairLevelModeRevert[] =
 {
 	{.num = ach::LevelMode::lmTraining  , .str = "UI.Menu.Level.Finish"},
 	{.num = ach::LevelMode::lmDream     , .str = "UI.Menu.Level.WakeUp"},

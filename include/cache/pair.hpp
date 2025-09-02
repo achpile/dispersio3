@@ -2,9 +2,8 @@
 #define __CACHE_PAIR
 
 
-extern ach::Pair<ach::GameMode > pairGameMode[];
 extern ach::Pair<ach::LevelMode> pairLevelMode[];
 extern ach::Pair<ach::LevelMode> pairLevelModeMenu[];
-extern ach::Pair<ach::LevelMode> pairLevelModeReturn[];
+extern ach::Pair<ach::LevelMode> pairLevelModeRevert[];
 
 #endif

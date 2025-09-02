@@ -3,11 +3,19 @@
 
 /***********************************************************************
      * Cache
-     * isReturn
+     * isRevert
 
 ***********************************************************************/
-bool ach::Cache::isReturn()
+bool ach::Cache::isRevert()
 {
+	switch (mode)
+	{
+		case ach::LevelMode::lmDream     : return true;
+		case ach::LevelMode::lmReplay    : return true;
+		case ach::LevelMode::lmTraining  : return true;
+		case ach::LevelMode::lmNavigation: return false;
+	}
+
 	return false;
 }
 

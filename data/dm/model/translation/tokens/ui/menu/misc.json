@@ -34,7 +34,7 @@
     },
     "Resume": {
         "@attr": {
-            "default": "Resume",
+            "default": "Resume playing",
             "type": "string"
         }
     }

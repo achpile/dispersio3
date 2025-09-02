@@ -252,12 +252,12 @@ void ach::ProcessWorld::fill()
 {
 	menu->init("UI.Menu.Main.InGame");
 
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume"   , handler_game_resume , NULL                   ));
+	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume"   , handler_game_resume , NULL));
 
 	options_fill(menu, "UI.Menu.Main.InGame");
 
-	if (cache->isReturn())
-		menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Leave", NULL                , NULL                   ));
+	if (cache->isRevert())
+		menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, pair_get_string(cache->mode, pairLevelModeRevert), handler_game_revert, NULL));
 
 	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.ExitGame" , handler_common_state, json_string("menu"    )));
 
@@ -296,15 +296,30 @@ void ach::ProcessWorld::goal()
 
 /***********************************************************************
      * ProcessWorld
-     * next
+     * revert
 
 ***********************************************************************/
-void ach::ProcessWorld::next(const char *map)
+void ach::ProcessWorld::revert()
 {
 	state = ach::WorldState::wsFadeOut;
 
 	fader.reset();
-	cache->select(map);
+	cache->revert();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * next
+
+***********************************************************************/
+void ach::ProcessWorld::next(const char *map, const char *mode)
+{
+	state = ach::WorldState::wsFadeOut;
+
+	fader.reset();
+	cache->select(map, pair_get_enum(mode, pairLevelMode));
 }
 
 
@@ -329,10 +344,10 @@ void ach::ProcessWorld::pause()
      * select
 
 ***********************************************************************/
-void ach::ProcessWorld::select(ach::LevelMode type)
+void ach::ProcessWorld::select(ach::LevelMode mode)
 {
 	state = ach::WorldState::wsSelect;
 
 	app->mouse(true);
-	selection->init(type);
+	selection->init(mode);
 }

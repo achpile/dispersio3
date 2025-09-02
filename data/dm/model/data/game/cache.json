@@ -20,6 +20,25 @@
                 "default": "Default",
                 "type": "link"
             }
+        },
+        "Mode": {
+            "@attr": {
+                "default": "navigation",
+                "enum": [
+                    "training",
+                    "dream",
+                    "navigation",
+                    "replay"
+                ],
+                "type": "enum"
+            }
+        },
+        "Origin": {
+            "@attr": {
+                "data": "Data.Game.Map",
+                "default": "Default",
+                "type": "link"
+            }
         }
     },
     "Default": {
@@ -28,19 +47,15 @@
             "type": "boolean"
         }
     },
-    "Difficulty": {
-        "@attr": {
-            "default": "normal",
-            "enum": [
-                "normal",
-                "hard"
-            ],
-            "type": "enum"
-        }
-    },
     "Flags": {
         "@attr": {
             "container": "multi",
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "Hard": {
+        "@attr": {
             "default": false,
             "type": "boolean"
         }

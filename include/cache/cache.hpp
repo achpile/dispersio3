@@ -4,13 +4,6 @@
 
 namespace ach
 {
-	enum GameMode
-	{
-		gmNormal,
-		gmHard
-	};
-
-
 	enum LevelMode
 	{
 		lmDream,
@@ -23,13 +16,14 @@ namespace ach
 	struct Cache
 	{
 		ach::DataMap   *current;
-		ach::GameMode   mode;
+		ach::LevelMode  mode;
 
 		json_t *campaign;
 		json_t *cache;
 		json_t *info;
 
 		bool    def;
+		bool    hard;
 		int     deaths;
 		float   playtime;
 
@@ -41,13 +35,14 @@ namespace ach
 		void update();
 		void save();
 		void store();
-		void reset(const char *_mode);
+		void reset(bool _hard);
 
-		void select(const char *map);
+		void select(const char *map, ach::LevelMode _mode);
+		void revert();
 		int  spawn();
 
 		/*  check.cpp  */
-		bool isReturn();
+		bool isRevert();
 		bool isBeaten(const char *level);
 
 		/*  store.cpp  */

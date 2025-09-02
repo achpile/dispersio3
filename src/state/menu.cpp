@@ -118,16 +118,16 @@ void ach::StateMenu::fill()
 	if (cache->def)
 	{
 		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Start"          ));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:b}", "New", true, "Hard", false)));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:b}", "New", true, "Hard", true )));
 	}
 	else
 	{
 		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Name"           ));
 		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemAction  (menu, "UI.Menu.Play.Continue"       , handler_menu_start        , json_pack("{s:b}"    , "New", false)));
 		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Start"          ));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "normal")));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Mode", "hard"  )));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:b}", "New", true, "Hard", false)));
+		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:b}", "New", true, "Hard", true )));
 	}
 
 	options_fill(menu, "UI.Menu.Main.Name");

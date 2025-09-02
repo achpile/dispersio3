@@ -16,10 +16,21 @@ void handler_game_resume(void *context, json_t *)
 
 
 /***********************************************************************
+     * handler_game_revert
+
+***********************************************************************/
+void handler_game_revert(void *context, json_t *)
+{
+	((ach::ProcessWorld*)context)->revert();
+}
+
+
+
+/***********************************************************************
      * handler_game_pick
 
 ***********************************************************************/
 void handler_game_pick(void *context, json_t *data)
 {
-	((ach::ProcessWorld*)context)->next(json_object_get_string(data, "Map"));
+	((ach::ProcessWorld*)context)->next(json_object_get_string(data, "Map"), json_object_get_string(data, "Mode"));
 }

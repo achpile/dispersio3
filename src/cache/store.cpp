@@ -3,14 +3,16 @@
 
 /***********************************************************************
      * Cache
-     * finish
+     * goal
 
 ***********************************************************************/
 void ach::Cache::goal()
 {
 	json_object_set_boolean(info, "Finished", true);
 
-	select(current->next);
+	select(current->next, ach::LevelMode::lmNavigation);
+
+	store();
 }
 
 

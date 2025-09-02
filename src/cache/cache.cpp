@@ -12,6 +12,7 @@ ach::Cache::Cache()
 	cache    = json_object_get_branch(dm->data, "Data.Game.Cache");
 
 	def      = json_object_get_branch_boolean(cache, "Default");
+	current  = NULL;
 }
 
 
@@ -36,10 +37,13 @@ ach::Cache::~Cache()
 ***********************************************************************/
 void ach::Cache::init()
 {
+	current  = NULL;
+	mode     = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode);
 	deaths   = json_object_get_branch_integer(cache, "Stats.Deaths");
 	playtime = json_object_get_branch_real   (cache, "Stats.Time");
+	hard     = json_object_get_boolean       (cache, "Hard");
 
-	select(json_object_get_branch_string(cache, "Current.Map"));
+	select(json_object_get_branch_string(cache, "Current.Map"), mode);
 }
 
 
@@ -91,14 +95,15 @@ void ach::Cache::store()
      * reset
 
 ***********************************************************************/
-void ach::Cache::reset(const char *_mode)
+void ach::Cache::reset(bool _hard)
 {
-	mode  = pair_get_enum(_mode, pairGameMode);
-	cache = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
+	hard    = _hard;
+	current = NULL;
+	cache   = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
-	json_object_set_string       (cache, "Difficulty" , _mode);
+	json_object_set_boolean      (cache, "Hard"       , hard);
 }
 
 
@@ -108,8 +113,12 @@ void ach::Cache::reset(const char *_mode)
      * select
 
 ***********************************************************************/
-void ach::Cache::select(const char *map)
+void ach::Cache::select(const char *map, ach::LevelMode _mode)
 {
+	if (current)
+		json_object_set_branch_string(cache, "Current.Origin", current->name);
+
+	mode    = _mode;
 	current = db->getMap(map);
 
 	info = json_object_getv_branch(cache, "Map.%s", map);
@@ -122,10 +131,25 @@ void ach::Cache::select(const char *map)
 	}
 
 	json_object_set_branch_string (cache, "Current.Map"       , map);
+	json_object_set_branch_string (cache, "Current.Mode"      , pair_get_string(mode, pairLevelMode));
 	json_object_set_branch_integer(cache, "Current.Checkpoint", -1 );
 
 	if (!def)
 		store();
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * revert
+
+***********************************************************************/
+void ach::Cache::revert()
+{
+	current = NULL;
+
+	select(json_object_get_branch_string(cache, "Current.Origin"), ach::LevelMode::lmNavigation);
 }
 
 

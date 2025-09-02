@@ -172,7 +172,7 @@ void ach::LevelSelect::init(ach::LevelMode type)
 
 	fill(type, name, cache->listLevels(type));
 
-	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", handler_level_resume, NULL));
+	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Back", handler_level_resume, NULL));
 	menu->finalize(NULL);
 }
 
@@ -194,7 +194,7 @@ void ach::LevelSelect::fill(ach::LevelMode type, const char *name, json_t *list)
 	{
 		snprintf(level, STR_LEN_MENU, "Game.Map.%s.Name", json_string_value(item));
 
-		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Origin", pair_get_string(type, pairLevelMode))));
+		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Mode", pair_get_string(type, pairLevelMode))));
 	}
 
 	json_decref(list);
