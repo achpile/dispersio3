@@ -2,6 +2,7 @@
     "Forest": {
         "Filename": "map/forest.tmj",
         "Next": "Rocket",
+        "Preview": "gfx/ui/preview/forest.png",
         "Spawn": {
             "X": 13,
             "Y": 12

@@ -2,6 +2,7 @@
     "Lab": {
         "Filename": "map/lab.tmj",
         "Next": "Rocket",
+        "Preview": "gfx/ui/preview/lab.png",
         "Spawn": {
             "X": 1,
             "Y": 30

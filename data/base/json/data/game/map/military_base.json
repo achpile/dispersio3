@@ -2,6 +2,7 @@
     "MilitaryBase": {
         "Filename": "map/military_base.tmj",
         "Next": "LaunchPad",
+        "Preview": "gfx/ui/preview/military_base.png",
         "Spawn": {
             "X": 7,
             "Y": 65

@@ -1,9 +1,21 @@
 {
     "Dream": [
-        "Duck",
-        "Island",
-        "Plumber",
-        "Robot"
+        {
+            "Flag": "HasFreshenerMoney",
+            "Level": "Duck"
+        },
+        {
+            "Flag": "HasFreshenerAlien",
+            "Level": "Island"
+        },
+        {
+            "Flag": "HasFreshenerMushroom",
+            "Level": "Plumber"
+        },
+        {
+            "Flag": "HasFreshenerMotorOil",
+            "Level": "Robot"
+        }
     ],
     "Navigation": {
         "1": {

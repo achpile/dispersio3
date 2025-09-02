@@ -3,6 +3,7 @@
         "Filename": "map/duck.tmj",
         "Next": "Rocket",
         "Player": "PlayerDuck",
+        "Preview": "gfx/ui/preview/duck.png",
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {

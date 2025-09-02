@@ -3,6 +3,7 @@
         "Filename": "map/robot.tmj",
         "Next": "Rocket",
         "Player": "PlayerRobot",
+        "Preview": "gfx/ui/preview/robot.png",
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {

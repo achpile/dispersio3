@@ -2,6 +2,7 @@
     "Temple": {
         "Filename": "map/temple.tmj",
         "Next": "Boss",
+        "Preview": "gfx/ui/preview/temple.png",
         "Replay": false,
         "Spawn": {
             "X": 12,

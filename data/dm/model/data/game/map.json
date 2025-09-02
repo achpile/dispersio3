@@ -29,6 +29,12 @@
             "type": "link"
         }
     },
+    "Preview": {
+        "@attr": {
+            "default": "gfx/ui/preview/default.png",
+            "type": "filename"
+        }
+    },
     "Replay": {
         "@attr": {
             "default": true,

@@ -3,6 +3,7 @@
         "Filename": "map/island.tmj",
         "Next": "Rocket",
         "Player": "PlayerBill",
+        "Preview": "gfx/ui/preview/island.png",
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {

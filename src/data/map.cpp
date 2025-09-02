@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::DataMap::DataMap(json_t *obj)
 {
+	preview = new ach::Sprite(json_object_get_string(obj, "Preview"), false, false);
+
 	spawn   = vector_json_tile(json_object_get(obj, "Spawn"));
 	player  = db->getCharacter(json_object_get_branch_string(obj, "Player"));
 
@@ -31,6 +33,7 @@ ach::DataMap::DataMap(json_t *obj)
 ***********************************************************************/
 ach::DataMap::~DataMap()
 {
+	delete preview;
 }
 
 

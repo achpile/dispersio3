@@ -7,6 +7,7 @@ namespace ach
 	struct DataMap : DataContent
 	{
 		ach::DataCharacter *player;
+		ach::Sprite        *preview;
 		sf::Vector2i        spawn;
 
 		char filename[STR_LEN_PATH];

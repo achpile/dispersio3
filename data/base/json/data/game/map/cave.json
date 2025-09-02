@@ -2,6 +2,7 @@
     "Cave": {
         "Filename": "map/cave.tmj",
         "Next": "Rocket",
+        "Preview": "gfx/ui/preview/cave.png",
         "Spawn": {
             "X": 6,
             "Y": 9

@@ -3,6 +3,7 @@
         "Filename": "map/plumber.tmj",
         "Next": "Rocket",
         "Player": "PlayerPlumber",
+        "Preview": "gfx/ui/preview/plumber.png",
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {
