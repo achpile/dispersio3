@@ -401,46 +401,14 @@
   <object id="120" type="trigger_water" x="1568" y="240" width="32" height="48"/>
   <object id="121" type="trigger_water" x="1600" y="256" width="128" height="32"/>
   <object id="122" type="trigger_water" x="1728" y="272" width="64" height="16"/>
-  <object id="123" name="MovingMetal" type="block_fragile" x="768" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="124" name="MovingMetal" type="block_fragile" x="800" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="125" name="MovingMetal" type="block_fragile" x="832" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="126" name="MovingMetal" type="block_fragile" x="864" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="127" name="MovingMetal" type="block_fragile" x="1056" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="128" name="MovingMetal" type="block_fragile" x="1088" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="129" name="MovingMetal" type="block_fragile" x="1120" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="130" name="MovingMetal" type="block_fragile" x="1152" y="160" width="32" height="8">
-   <properties>
-    <property name="Secret" type="bool" value="true"/>
-   </properties>
-  </object>
+  <object id="123" name="MovingMetal" type="block_fragile" x="768" y="160" width="32" height="8"/>
+  <object id="124" name="MovingMetal" type="block_fragile" x="800" y="160" width="32" height="8"/>
+  <object id="125" name="MovingMetal" type="block_fragile" x="832" y="160" width="32" height="8"/>
+  <object id="126" name="MovingMetal" type="block_fragile" x="864" y="160" width="32" height="8"/>
+  <object id="127" name="MovingMetal" type="block_fragile" x="1056" y="160" width="32" height="8"/>
+  <object id="128" name="MovingMetal" type="block_fragile" x="1088" y="160" width="32" height="8"/>
+  <object id="129" name="MovingMetal" type="block_fragile" x="1120" y="160" width="32" height="8"/>
+  <object id="130" name="MovingMetal" type="block_fragile" x="1152" y="160" width="32" height="8"/>
   <object id="183" type="trigger_goal" x="3264" y="208" width="64" height="32"/>
  </objectgroup>
  <objectgroup id="5" name="characters">
