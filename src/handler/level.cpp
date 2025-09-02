@@ -31,3 +31,14 @@ void handler_level_resume(void *context, json_t *)
 {
 	((ach::LevelSelect*)context)->active = false;
 }
+
+
+
+/***********************************************************************
+     * handler_level_pick
+
+***********************************************************************/
+void handler_level_pick(void *context, json_t *data)
+{
+	((ach::LevelSelect*)context)->pick(data);
+}

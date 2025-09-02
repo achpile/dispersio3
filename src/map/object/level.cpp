@@ -45,4 +45,5 @@ void ach::MapObjectLevel::touch()
 ***********************************************************************/
 void ach::MapObjectLevel::use()
 {
+	world->select(type);
 }

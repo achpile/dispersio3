@@ -12,11 +12,13 @@ namespace ach
 		ach::DataMap        *selected;
 		ach::Text           *text;
 		ach::Menu           *menu;
+		ach::Handler         handler;
 
-		bool active;
+		bool  active;
+		void *context;
 
 
-		 LevelSelect();
+		 LevelSelect(void *_context, ach::Handler _handler);
 		~LevelSelect();
 
 		void update();
@@ -28,9 +30,10 @@ namespace ach
 		void style();
 
 		void controls();
+		void pick(json_t *data);
 
-		void init(const char *name, ach::Handler handler, ach::LevelList type);
-		void fill(const char *name, ach::Handler handler, json_t *list);
+		void init(const char *name, ach::LevelList type);
+		void fill(const char *name, ach::LevelList type, json_t *list);
 	};
 }
 

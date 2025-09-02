@@ -3,5 +3,6 @@
 
 
 void handler_game_resume(void *context, json_t *data);
+void handler_game_pick  (void *context, json_t *data);
 
 #endif

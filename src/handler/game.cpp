@@ -12,3 +12,14 @@ void handler_game_resume(void *context, json_t *)
 	((ach::ProcessWorld*)context)->state = ach::WorldState::wsGame;
 	((ach::ProcessWorld*)context)->menu->reset();
 }
+
+
+
+/***********************************************************************
+     * handler_game_pick
+
+***********************************************************************/
+void handler_game_pick(void *context, json_t *data)
+{
+	((ach::ProcessWorld*)context)->next(json_object_get_string(data, "Map"));
+}

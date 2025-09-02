@@ -121,10 +121,11 @@ void ach::Cache::select(const char *map)
 		json_object_setv_branch(cache, info, "Map.%s", map);
 	}
 
-	json_object_set_branch_string (cache, "Current.Map"       , "map");
-	json_object_set_branch_integer(cache, "Current.Checkpoint",    -1);
+	json_object_set_branch_string (cache, "Current.Map"       , map);
+	json_object_set_branch_integer(cache, "Current.Checkpoint", -1 );
 
-	store();
+	if (!def)
+		store();
 }
 
 

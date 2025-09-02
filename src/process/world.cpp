@@ -13,7 +13,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	player    = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message   = new ach::Message(500.0f);
 	status    = new ach::Status();
-	selection = new ach::LevelSelect();
+	selection = new ach::LevelSelect(this, handler_game_pick);
 	menu      = new ach::Menu(this, NULL, &theme->menu);
 
 	map->cam->follow(&player->phys);
@@ -329,10 +329,10 @@ void ach::ProcessWorld::pause()
      * select
 
 ***********************************************************************/
-void ach::ProcessWorld::select()
+void ach::ProcessWorld::select(ach::LevelList type)
 {
 	state = ach::WorldState::wsSelect;
 
 	app->mouse(true);
-	selection->init("UI.Menu.Misc.Resume", NULL, ach::LevelList::llTraining);
+	selection->init("UI.Menu.Misc.Resume", type);
 }

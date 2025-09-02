@@ -47,7 +47,7 @@ namespace ach
 		void goal();
 		void next(const char *map);
 		void pause();
-		void select();
+		void select(ach::LevelList type);
 	};
 }
 
