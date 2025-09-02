@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::LevelSelect::LevelSelect()
 {
-	menu    = new ach::Menu(this, &theme->menu);
+	menu    = new ach::Menu(this, NULL, &theme->menu);
 	box     = new ach::RectangleShape();
 	preview = new ach::RectangleShape();
 

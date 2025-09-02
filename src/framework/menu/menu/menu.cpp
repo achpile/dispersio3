@@ -6,13 +6,12 @@
      * constructor
 
 ***********************************************************************/
-ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
+ach::Menu::Menu(void *_context, ach::Callback _callback, ach::MenuTheme *_theme)
 {
 	box      = new ach::RectangleShape();
 	binder   = new ach::ControlPad();
 	text     = new sf::Text();
 	binding  = NULL;
-	callback = NULL;
 
 	index    = 0;
 	lines    = 0;
@@ -20,6 +19,7 @@ ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
 	height   = 0;
 	enabled  = false;
 	context  = _context;
+	callback = _callback;
 	padding  = sf::Vector2f(MENU_PADDING, MENU_PADDING);
 
 	box->setOutlineThickness(MENU_THICKNESS);

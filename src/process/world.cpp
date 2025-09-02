@@ -14,7 +14,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	message = new ach::Message(500.0f);
 	status  = new ach::Status();
 	select  = new ach::LevelSelect();
-	menu    = new ach::Menu(this, &theme->menu);
+	menu    = new ach::Menu(this, NULL, &theme->menu);
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);

@@ -38,7 +38,7 @@ namespace ach
 		int    index;
 
 
-		 Menu(void *_context, ach::MenuTheme *_theme);
+		 Menu(void *_context, ach::Callback _callback, ach::MenuTheme *_theme);
 		~Menu();
 
 		void update();
