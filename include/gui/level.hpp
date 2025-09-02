@@ -6,16 +6,23 @@ namespace ach
 {
 	struct LevelSelect
 	{
-		ach::RectangleShape *box;
-		ach::RectangleShape *preview;
+		std::vector<ach::Statistic*> lines;
 
-		ach::DataMap        *selected;
-		ach::Text           *text;
-		ach::Menu           *menu;
-		ach::Handler         handler;
+		ach::RectangleShape         *box;
+		ach::RectangleShape         *preview;
 
-		bool  active;
-		void *context;
+		ach::DataMap                *selected;
+		ach::Text                   *text;
+		ach::Menu                   *menu;
+		ach::Handler                 handler;
+		ach::LevelMode               mode;
+
+		sf::Vector2f                 pos;
+
+		bool   active;
+		void  *context;
+		float  width;
+		float  spacing;
 
 
 		 LevelSelect(void *_context, ach::Handler _handler);
@@ -30,10 +37,11 @@ namespace ach
 		void style();
 
 		void controls();
+		void stats();
 		void pick(json_t *data);
 
-		void init(ach::LevelMode type);
-		void fill(ach::LevelMode type, const char *name, json_t *list);
+		void init(ach::LevelMode _mode);
+		void fill(const char *name, json_t *list);
 	};
 }
 

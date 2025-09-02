@@ -35,10 +35,16 @@ sf::String ach::Cache::getCollected()
 	int total     = 0;
 	int collected = 0;
 
-	list_foreach(db->map)
+	ach::DataMap *map;
+
+	json_t *item;
+	size_t  index;
+
+	json_array_foreach(json_object_get(campaign, "MapList"), index, item)
 	{
-		total     += db->map[i]->items;
-		collected += json_array_size(json_object_getv_branch(cache, "Map.%s.Item", db->map[i]->name));
+		map        = db->getMap(json_string_value(item));
+		total     += map->items;
+		collected += json_array_size(json_object_getv_branch(cache, "Map.%s.Item", map->name));
 	}
 
 	return str_percent(collected, total);
@@ -54,4 +60,18 @@ sf::String ach::Cache::getCollected()
 sf::String ach::Cache::getItems()
 {
 	return str_percent(json_array_size(json_object_get(info, "Item")), current->items);
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * getItems
+
+***********************************************************************/
+sf::String ach::Cache::getItems(const char *name)
+{
+	ach::DataMap *map = db->getMap(name);
+
+	return str_percent(json_array_size(json_object_getv_branch(cache, "Map.%s.Item", name)), map->items);
 }

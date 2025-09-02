@@ -56,6 +56,7 @@ namespace ach
 		sf::String getDeaths();
 		sf::String getCollected();
 		sf::String getItems();
+		sf::String getItems(const char *name);
 
 		/*  list.cpp  */
 		json_t* listLevels(ach::LevelMode list);

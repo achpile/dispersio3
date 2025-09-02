@@ -33,6 +33,9 @@ ach::LevelSelect::LevelSelect(void *_context, ach::Handler _handler)
 	text->setPosition(preview->getPosition() + sf::Vector2f(0.0f, 158.0f));
 	text->setWidth(RENDER_LAYER_GUI_X - MENU_LEVEL_WIDTH - 70.0f);
 
+	pos   = preview->getPosition() + sf::Vector2f(158.0f, 0.0f);
+	width = RENDER_LAYER_GUI_X - MENU_LEVEL_WIDTH - 228.0f;
+
 	style();
 }
 
@@ -45,6 +48,8 @@ ach::LevelSelect::LevelSelect(void *_context, ach::Handler _handler)
 ***********************************************************************/
 ach::LevelSelect::~LevelSelect()
 {
+	list_delete(lines);
+
 	delete menu;
 	delete box;
 	delete preview;
@@ -60,10 +65,14 @@ ach::LevelSelect::~LevelSelect()
 ***********************************************************************/
 void ach::LevelSelect::update()
 {
+	list_delete(lines);
+
 	if (selected)
 	{
 		selected->preview->spr->setPosition(preview->getPosition() + sf::Vector2f(5.0f, 5.0f));
 		text->setString(lm->getv("Game.Map.%s.Description", selected->name));
+
+		stats();
 	}
 }
 
@@ -86,6 +95,12 @@ void ach::LevelSelect::render()
 		rm->draw(selected->preview->spr, ach::RenderLayer::rlGUI);
 
 		text->render();
+
+		list_foreach(lines)
+		{
+			text_draw(text->text, lines[i]->caption, pos.x, pos.y + spacing * i, width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+			text_draw(text->text, lines[i]->value  , pos.x, pos.y + spacing * i, width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+		}
 	}
 }
 
@@ -110,6 +125,8 @@ void ach::LevelSelect::event(sf::Event e)
 ***********************************************************************/
 void ach::LevelSelect::style()
 {
+	spacing = theme->menu.spacing + MENU_SPACING;
+
 	menu->style(&theme->menu);
 	box->style(&theme->menu);
 	preview->style(&theme->menu);
@@ -145,6 +162,32 @@ void ach::LevelSelect::controls()
 
 /***********************************************************************
      * LevelSelect
+     * stats
+
+***********************************************************************/
+void ach::LevelSelect::stats()
+{
+	switch (mode)
+	{
+		case ach::LevelMode::lmReplay:
+			lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"), cache->getItems(selected->name)));
+		break;
+
+
+		case ach::LevelMode::lmTraining:
+		break;
+
+
+		case ach::LevelMode::lmDream:
+		case ach::LevelMode::lmNavigation:
+		break;
+	}
+}
+
+
+
+/***********************************************************************
+     * LevelSelect
      * pick
 
 ***********************************************************************/
@@ -161,16 +204,17 @@ void ach::LevelSelect::pick(json_t *data)
      * init
 
 ***********************************************************************/
-void ach::LevelSelect::init(ach::LevelMode type)
+void ach::LevelSelect::init(ach::LevelMode _mode)
 {
+	mode   = _mode;
 	active = true;
 
-	const char *name = pair_get_string(type, pairLevelModeMenu);
+	const char *name = pair_get_string(mode, pairLevelModeMenu);
 
 	menu->clear();
 	menu->init(name);
 
-	fill(type, name, cache->listLevels(type));
+	fill(name, cache->listLevels(mode));
 
 	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Back", handler_level_resume, NULL));
 	menu->finalize(NULL);
@@ -183,7 +227,7 @@ void ach::LevelSelect::init(ach::LevelMode type)
      * fill
 
 ***********************************************************************/
-void ach::LevelSelect::fill(ach::LevelMode type, const char *name, json_t *list)
+void ach::LevelSelect::fill(const char *name, json_t *list)
 {
 	json_t *item;
 	size_t  index;
@@ -194,7 +238,7 @@ void ach::LevelSelect::fill(ach::LevelMode type, const char *name, json_t *list)
 	{
 		snprintf(level, STR_LEN_MENU, "Game.Map.%s.Name", json_string_value(item));
 
-		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Mode", pair_get_string(type, pairLevelMode))));
+		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Mode", pair_get_string(mode, pairLevelMode))));
 	}
 
 	json_decref(list);
