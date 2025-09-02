@@ -54,10 +54,12 @@
 
 
 /***********************************************************************
-     * Menu screen
+     * Menu
 
 ***********************************************************************/
-#define MENU_LOGO_OFFSET      100
+#define MENU_LOGO_OFFSET      100.0f
+#define MENU_LEVEL_WIDTH      250.0f
+#define MENU_LEVEL_HEIGHT     390.0f
 
 
 
@@ -65,7 +67,7 @@
      * GUI
 
 ***********************************************************************/
-#define GUI_MAP_CAPTION_Y     50
+#define GUI_MAP_CAPTION_Y     50.0f
 
 
 

@@ -12,17 +12,17 @@ ach::LevelSelect::LevelSelect()
 	box     = new ach::RectangleShape();
 	preview = new ach::RectangleShape();
 
-	menu->setPosition(sf::Vector2f(10.0f, 160.0f));
-	menu->setWidthE(250.0f);
-	menu->setHeightE(430.0f);
+	menu->setPosition(sf::Vector2f(10.0f, RENDER_LAYER_GUI_Y - MENU_LEVEL_HEIGHT - 10.0f));
+	menu->setWidthE(MENU_LEVEL_WIDTH);
+	menu->setHeightE(MENU_LEVEL_HEIGHT);
 
 	box->setOutlineThickness(MENU_THICKNESS);
-	box->setSize(sf::Vector2f(520.0f, 430.0f));
-	box->setPosition(sf::Vector2f(270.0f, 160.0f));
+	box->setSize(sf::Vector2f(RENDER_LAYER_GUI_X - MENU_LEVEL_WIDTH - 30.0f, MENU_LEVEL_HEIGHT));
+	box->setPosition(menu->pos + sf::Vector2f(MENU_LEVEL_WIDTH + 10.0f, 0.0f));
 
 	preview->setOutlineThickness(MENU_THICKNESS);
 	preview->setSize(sf::Vector2f(138.0f, 138.0f));
-	preview->setPosition(sf::Vector2f(290.0f, 180.0f));
+	preview->setPosition(box->getPosition() + sf::Vector2f(20.0f, 20.0f));
 
 	fill();
 	style();
@@ -130,8 +130,6 @@ void ach::LevelSelect::fill()
 {
 	menu->init("UI.Menu.Main.InGame");
 
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
 	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
 	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
 	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
