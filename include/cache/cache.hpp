@@ -44,6 +44,8 @@ namespace ach
 		/*  check.cpp  */
 		bool isRevert();
 		bool isBeaten(const char *level);
+		bool isPossible(ach::LevelMode _mode);
+		bool isPossibleDream();
 
 		/*  store.cpp  */
 		void goal();
@@ -57,6 +59,9 @@ namespace ach
 		sf::String getCollected();
 		sf::String getItems();
 		sf::String getItems(const char *name);
+
+		sf::String getError(ach::LevelMode _mode);
+		sf::String getErrorDream();
 
 		/*  list.cpp  */
 		json_t* listLevels(ach::LevelMode list);

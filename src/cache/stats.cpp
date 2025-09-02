@@ -75,3 +75,65 @@ sf::String ach::Cache::getItems(const char *name)
 
 	return str_percent(json_array_size(json_object_getv_branch(cache, "Map.%s.Item", name)), map->items);
 }
+
+
+
+/***********************************************************************
+     * Cache
+     * getError
+
+***********************************************************************/
+sf::String ach::Cache::getError(ach::LevelMode _mode)
+{
+	switch (_mode)
+	{
+		case ach::LevelMode::lmReplay    : return "";
+		case ach::LevelMode::lmTraining  : return "";
+		case ach::LevelMode::lmNavigation: return "";
+		case ach::LevelMode::lmDream     : return getErrorDream();
+	}
+
+	return "";
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * getErrorDream
+
+***********************************************************************/
+sf::String ach::Cache::getErrorDream()
+{
+	json_t *item;
+	size_t  index;
+
+	size_t count   = 0;
+	size_t beaten  = 0;
+	size_t missing = 0;
+
+	json_array_foreach(json_object_get(campaign, "Dream"), index, item)
+	{
+		if (!getFlag(json_object_get_string(item, "Flag")))
+		{
+			missing++;
+			continue;
+		}
+
+		if (isBeaten(json_object_get_string(item, "Level")))
+		{
+			beaten++;
+			continue;
+		}
+
+		count++;
+	}
+
+	if (count)
+		return "";
+
+	if (count == json_array_size(json_object_get(campaign, "Dream")))
+		return "Already slept enough";
+
+	return "Need fresheners";
+}
