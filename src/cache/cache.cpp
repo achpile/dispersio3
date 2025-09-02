@@ -105,20 +105,6 @@ void ach::Cache::reset(const char *_mode)
 
 /***********************************************************************
      * Cache
-     * finish
-
-***********************************************************************/
-void ach::Cache::finish()
-{
-	json_object_set_boolean(info, "Finished", true);
-
-	select(current->next);
-}
-
-
-
-/***********************************************************************
-     * Cache
      * select
 
 ***********************************************************************/
@@ -134,4 +120,21 @@ void ach::Cache::select(const char *map)
 
 		json_object_setv_branch(cache, info, "Map.%s", map);
 	}
+
+	json_object_set_branch_string (cache, "Current.Map"       , "map");
+	json_object_set_branch_integer(cache, "Current.Checkpoint",    -1);
+
+	store();
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * spawn
+
+***********************************************************************/
+int ach::Cache::spawn()
+{
+	return json_object_get_branch_integer(cache, "Current.Checkpoint");
 }

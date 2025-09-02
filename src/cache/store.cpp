@@ -3,12 +3,14 @@
 
 /***********************************************************************
      * Cache
-     * spawn
+     * finish
 
 ***********************************************************************/
-int ach::Cache::spawn()
+void ach::Cache::goal()
 {
-	return json_object_get_branch_integer(cache, "Current.Checkpoint");
+	json_object_set_boolean(info, "Finished", true);
+
+	select(current->next);
 }
 
 

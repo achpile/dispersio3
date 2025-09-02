@@ -91,8 +91,6 @@ void ach::StateGame::finish()
 		return;
 	}
 
-	cache->finish();
-
 	delete proc;
 
 	proc = new ach::ProcessWorld(this, cache->current);

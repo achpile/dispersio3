@@ -289,6 +289,22 @@ void ach::ProcessWorld::goal()
 	state = ach::WorldState::wsFadeOut;
 
 	fader.reset();
+	cache->goal();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * next
+
+***********************************************************************/
+void ach::ProcessWorld::next(const char *map)
+{
+	state = ach::WorldState::wsFadeOut;
+
+	fader.reset();
+	cache->select(map);
 }
 
 

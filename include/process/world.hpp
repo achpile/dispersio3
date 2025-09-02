@@ -45,6 +45,7 @@ namespace ach
 
 		void gateway(sf::FloatRect dest);
 		void goal();
+		void next(const char *map);
 		void pause();
 		void select();
 	};

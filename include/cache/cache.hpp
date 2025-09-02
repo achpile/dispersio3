@@ -42,7 +42,6 @@ namespace ach
 		void save();
 		void store();
 		void reset(const char *_mode);
-		void finish();
 
 		void select(const char *map);
 		int  spawn();
@@ -52,6 +51,7 @@ namespace ach
 		bool isBeaten(const char *level);
 
 		/*  store.cpp  */
+		void goal();
 		void die();
 		void collect(int id);
 		void checkpoint(int id);
