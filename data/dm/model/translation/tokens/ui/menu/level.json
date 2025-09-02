@@ -1,0 +1,47 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Dream": {
+        "@attr": {
+            "default": "Choose a dream",
+            "type": "string"
+        }
+    },
+    "Finish": {
+        "@attr": {
+            "default": "Finish training",
+            "type": "string"
+        }
+    },
+    "Future": {
+        "@attr": {
+            "default": "Back to the future",
+            "type": "string"
+        }
+    },
+    "Navigation": {
+        "@attr": {
+            "default": "Destination",
+            "type": "string"
+        }
+    },
+    "Replay": {
+        "@attr": {
+            "default": "Level replay",
+            "type": "string"
+        }
+    },
+    "Training": {
+        "@attr": {
+            "default": "Training",
+            "type": "string"
+        }
+    },
+    "WakeUp": {
+        "@attr": {
+            "default": "Wake up",
+            "type": "string"
+        }
+    }
+}

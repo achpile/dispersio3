@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Level": "@include menu/level.json",
     "Main": "@include menu/main.json",
     "Misc": "@include menu/misc.json",
     "Options": "@include menu/options.json",

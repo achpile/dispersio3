@@ -334,5 +334,5 @@ void ach::ProcessWorld::select(ach::LevelMode type)
 	state = ach::WorldState::wsSelect;
 
 	app->mouse(true);
-	selection->init("UI.Menu.Misc.Resume", type);
+	selection->init(type);
 }

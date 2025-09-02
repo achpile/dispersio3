@@ -161,14 +161,16 @@ void ach::LevelSelect::pick(json_t *data)
      * init
 
 ***********************************************************************/
-void ach::LevelSelect::init(const char *name, ach::LevelMode type)
+void ach::LevelSelect::init(ach::LevelMode type)
 {
 	active = true;
+
+	const char *name = pair_get_string(type, pairLevelModeMenu);
 
 	menu->clear();
 	menu->init(name);
 
-	fill(name, type, cache->listLevels(type));
+	fill(type, name, cache->listLevels(type));
 
 	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", handler_level_resume, NULL));
 	menu->finalize(NULL);
@@ -181,7 +183,7 @@ void ach::LevelSelect::init(const char *name, ach::LevelMode type)
      * fill
 
 ***********************************************************************/
-void ach::LevelSelect::fill(const char *name, ach::LevelMode type, json_t *list)
+void ach::LevelSelect::fill(ach::LevelMode type, const char *name, json_t *list)
 {
 	json_t *item;
 	size_t  index;

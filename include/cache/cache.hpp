@@ -22,8 +22,8 @@ namespace ach
 
 	struct Cache
 	{
-		ach::DataMap  *current;
-		ach::GameMode  mode;
+		ach::DataMap   *current;
+		ach::GameMode   mode;
 
 		json_t *campaign;
 		json_t *cache;

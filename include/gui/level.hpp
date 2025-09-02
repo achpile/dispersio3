@@ -32,8 +32,8 @@ namespace ach
 		void controls();
 		void pick(json_t *data);
 
-		void init(const char *name, ach::LevelMode type);
-		void fill(const char *name, ach::LevelMode type, json_t *list);
+		void init(ach::LevelMode type);
+		void fill(ach::LevelMode type, const char *name, json_t *list);
 	};
 }
 
