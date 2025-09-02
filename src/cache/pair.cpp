@@ -16,15 +16,47 @@ ach::Pair<ach::GameMode> pairGameMode[] =
 
 
 /***********************************************************************
-     * pairLevelList
+     * pairLevelMode
 
 ***********************************************************************/
-ach::Pair<ach::LevelList> pairLevelList[] =
+ach::Pair<ach::LevelMode> pairLevelMode[] =
 {
-	{.num = ach::LevelList::llTraining  , .str = "training"  },
-	{.num = ach::LevelList::llDream     , .str = "dream"     },
-	{.num = ach::LevelList::llNavigation, .str = "navigation"},
-	{.num = ach::LevelList::llReplay    , .str = "replay"    },
+	{.num = ach::LevelMode::lmTraining  , .str = "training"  },
+	{.num = ach::LevelMode::lmDream     , .str = "dream"     },
+	{.num = ach::LevelMode::lmNavigation, .str = "navigation"},
+	{.num = ach::LevelMode::lmReplay    , .str = "replay"    },
 
-	{.num = ach::LevelList::llTraining  , .str = NULL        },
+	{.num = ach::LevelMode::lmTraining  , .str = NULL        },
+};
+
+
+
+/***********************************************************************
+     * pairLevelModeMenu
+
+***********************************************************************/
+ach::Pair<ach::LevelMode> pairLevelModeMenu[] =
+{
+	{.num = ach::LevelMode::lmTraining  , .str = "training"  },
+	{.num = ach::LevelMode::lmDream     , .str = "dream"     },
+	{.num = ach::LevelMode::lmNavigation, .str = "navigation"},
+	{.num = ach::LevelMode::lmReplay    , .str = "replay"    },
+
+	{.num = ach::LevelMode::lmTraining  , .str = NULL        },
+};
+
+
+
+/***********************************************************************
+     * pairLevelModeReturn
+
+***********************************************************************/
+ach::Pair<ach::LevelMode> pairLevelModeReturn[] =
+{
+	{.num = ach::LevelMode::lmTraining  , .str = "training"  },
+	{.num = ach::LevelMode::lmDream     , .str = "dream"     },
+	{.num = ach::LevelMode::lmNavigation, .str = "navigation"},
+	{.num = ach::LevelMode::lmReplay    , .str = "replay"    },
+
+	{.num = ach::LevelMode::lmTraining  , .str = NULL        },
 };

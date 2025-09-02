@@ -6,7 +6,7 @@ namespace ach
 {
 	struct MapObjectLevel : MapObject
 	{
-		ach::LevelList type;
+		ach::LevelMode type;
 
 
 		 MapObjectLevel(ach::ProcessWorld *_world, json_t *obj);

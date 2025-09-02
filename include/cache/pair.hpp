@@ -3,6 +3,8 @@
 
 
 extern ach::Pair<ach::GameMode > pairGameMode[];
-extern ach::Pair<ach::LevelList> pairLevelList[];
+extern ach::Pair<ach::LevelMode> pairLevelMode[];
+extern ach::Pair<ach::LevelMode> pairLevelModeMenu[];
+extern ach::Pair<ach::LevelMode> pairLevelModeReturn[];
 
 #endif

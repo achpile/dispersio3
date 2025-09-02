@@ -11,12 +11,12 @@ namespace ach
 	};
 
 
-	enum LevelList
+	enum LevelMode
 	{
-		llDream,
-		llReplay,
-		llNavigation,
-		llTraining
+		lmDream,
+		lmReplay,
+		lmNavigation,
+		lmTraining
 	};
 
 
@@ -63,7 +63,7 @@ namespace ach
 		sf::String getItems();
 
 		/*  list.cpp  */
-		json_t* listLevels(ach::LevelList list);
+		json_t* listLevels(ach::LevelMode list);
 		void    listLevelsDream     (json_t *list);
 		void    listLevelsReplay    (json_t *list);
 		void    listLevelsNavigation(json_t *list);

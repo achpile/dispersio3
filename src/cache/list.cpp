@@ -6,16 +6,16 @@
      * listLevels
 
 ***********************************************************************/
-json_t* ach::Cache::listLevels(ach::LevelList list)
+json_t* ach::Cache::listLevels(ach::LevelMode list)
 {
 	json_t *result = json_array();
 
 	switch (list)
 	{
-		case ach::LevelList::llDream     : listLevelsDream     (result); break;
-		case ach::LevelList::llReplay    : listLevelsReplay    (result); break;
-		case ach::LevelList::llNavigation: listLevelsNavigation(result); break;
-		case ach::LevelList::llTraining  : listLevelsTraining  (result); break;
+		case ach::LevelMode::lmDream     : listLevelsDream     (result); break;
+		case ach::LevelMode::lmReplay    : listLevelsReplay    (result); break;
+		case ach::LevelMode::lmNavigation: listLevelsNavigation(result); break;
+		case ach::LevelMode::lmTraining  : listLevelsTraining  (result); break;
 	}
 
 	return result;

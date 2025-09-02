@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::MapObjectLevel::MapObjectLevel(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	type = pair_get_enum(json_property_get_string(obj, "Type"), pairLevelList);
+	type = pair_get_enum(json_property_get_string(obj, "Type"), pairLevelMode);
 
 	setSheet(json_object_get_string(obj, "name"));
 }

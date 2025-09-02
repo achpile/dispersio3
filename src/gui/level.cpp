@@ -161,7 +161,7 @@ void ach::LevelSelect::pick(json_t *data)
      * init
 
 ***********************************************************************/
-void ach::LevelSelect::init(const char *name, ach::LevelList type)
+void ach::LevelSelect::init(const char *name, ach::LevelMode type)
 {
 	active = true;
 
@@ -181,7 +181,7 @@ void ach::LevelSelect::init(const char *name, ach::LevelList type)
      * fill
 
 ***********************************************************************/
-void ach::LevelSelect::fill(const char *name, ach::LevelList type, json_t *list)
+void ach::LevelSelect::fill(const char *name, ach::LevelMode type, json_t *list)
 {
 	json_t *item;
 	size_t  index;
@@ -192,7 +192,7 @@ void ach::LevelSelect::fill(const char *name, ach::LevelList type, json_t *list)
 	{
 		snprintf(level, STR_LEN_MENU, "Game.Map.%s.Name", json_string_value(item));
 
-		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Origin", pair_get_string(type, pairLevelList))));
+		menu->add(name, new ach::MenuItemAction(menu, level, handler_level_pick, json_pack("{s:s,s:s}", "Map", json_string_value(item), "Origin", pair_get_string(type, pairLevelMode))));
 	}
 
 	json_decref(list);

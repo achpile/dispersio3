@@ -329,7 +329,7 @@ void ach::ProcessWorld::pause()
      * select
 
 ***********************************************************************/
-void ach::ProcessWorld::select(ach::LevelList type)
+void ach::ProcessWorld::select(ach::LevelMode type)
 {
 	state = ach::WorldState::wsSelect;
 
