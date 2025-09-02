@@ -93,6 +93,7 @@
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
 #include "map/object/door.hpp"
+#include "map/object/level.hpp"
 #include "map/object/goal.hpp"
 #include "map/object/water.hpp"
 #include "map/object/wind.hpp"

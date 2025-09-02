@@ -25,6 +25,19 @@
             "valuesAsFlags": false
         },
         {
+            "id": 27,
+            "name": "@levels",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "training",
+                "dream",
+                "navigation",
+                "replay"
+            ],
+            "valuesAsFlags": false
+        },
+        {
             "id": 15,
             "name": "@orientation",
             "storageType": "string",
@@ -334,6 +347,25 @@
                 "tileset",
                 "wangcolor",
                 "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 28,
+            "members": [
+                {
+                    "name": "Type",
+                    "propertyType": "@levels",
+                    "type": "string",
+                    "value": "navigation"
+                }
+            ],
+            "name": "obj_level",
+            "type": "class",
+            "useAs": [
+                "object",
                 "project"
             ]
         },
