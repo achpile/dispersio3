@@ -86,6 +86,23 @@ void ach::Menu::reset()
 {
 	current = root;
 	index   = 0;
+
+	notify();
+}
+
+
+
+/***********************************************************************
+     * Menu
+     * notify
+
+***********************************************************************/
+void ach::Menu::notify()
+{
+	if (!callback)
+		return;
+
+	callback(context, current->items[index]->name);
 }
 
 
@@ -112,4 +129,5 @@ void ach::Menu::finalize(const char *leave)
 		root->leave = root->items.back();
 
 	translate();
+	reset();
 }

@@ -16,6 +16,8 @@ namespace ach
 		ach::MenuTheme       *theme;
 		ach::ControlPad      *binder;
 
+		ach::Callback         callback;
+
 		sf::SoundBuffer      *sfxBlip;
 		sf::SoundBuffer      *sfxBack;
 		sf::SoundBuffer      *sfxPick;
@@ -62,6 +64,7 @@ namespace ach
 
 		void clear();
 		void reset();
+		void notify();
 		void finalize(const char *leave);
 
 		/*  dimensions.cpp  */

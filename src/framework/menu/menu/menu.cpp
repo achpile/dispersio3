@@ -12,6 +12,7 @@ ach::Menu::Menu(void *_context, ach::MenuTheme *_theme)
 	binder   = new ach::ControlPad();
 	text     = new sf::Text();
 	binding  = NULL;
+	callback = NULL;
 
 	index    = 0;
 	lines    = 0;

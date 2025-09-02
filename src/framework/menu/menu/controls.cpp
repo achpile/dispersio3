@@ -92,7 +92,9 @@ void ach::Menu::select(int i)
 	if (index != i)
 	{
 		index = i;
+
 		sm->play(sfxBlip);
+		notify();
 	}
 }
 
