@@ -1,5 +1,5 @@
-#ifndef __CONTAINER_PAIR
-#define __CONTAINER_PAIR
+#ifndef __CACHE_PAIR
+#define __CACHE_PAIR
 
 
 extern ach::Pair<ach::GameMode> pairGameMode[];

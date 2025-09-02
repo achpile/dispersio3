@@ -1,5 +1,5 @@
-#ifndef __CONTAINER_CACHE
-#define __CONTAINER_CACHE
+#ifndef __CACHE_CACHE
+#define __CACHE_CACHE
 
 
 namespace ach
@@ -47,24 +47,29 @@ namespace ach
 		void select(const char *map);
 		int  spawn();
 
+		/*  check.cpp  */
+		bool isReturn();
+		bool isBeaten(const char *level);
+
+		/*  store.cpp  */
 		void die();
 		void collect(int id);
 		void checkpoint(int id);
 
-		bool isReturn();
-		bool isBeaten(const char *level);
-
+		/*  stats.cpp  */
 		sf::String getPlaytime();
 		sf::String getDeaths();
 		sf::String getCollected();
 		sf::String getItems();
 
+		/*  list.cpp  */
 		json_t* listLevels(ach::LevelList list);
 		void    listLevelsDream     (json_t *list);
 		void    listLevelsReplay    (json_t *list);
 		void    listLevelsNavigation(json_t *list);
 		void    listLevelsTraining  (json_t *list);
 
+		/*  flag.cpp  */
 		bool getFlag(const char *name);
 		void setFlag(const char *name);
 	};
