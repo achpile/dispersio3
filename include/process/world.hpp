@@ -10,20 +10,22 @@ namespace ach
 		wsFadeOut,
 		wsMessage,
 		wsPause,
+		wsSelect,
 		wsGame
 	};
 
 
 	struct ProcessWorld : Process
 	{
-		ach::Map        *map;
-		ach::Character  *player;
-		ach::Message    *message;
-		ach::Status     *status;
-		ach::Menu       *menu;
+		ach::Map         *map;
+		ach::Character   *player;
+		ach::Message     *message;
+		ach::Status      *status;
+		ach::LevelSelect *select;
+		ach::Menu        *menu;
 
-		ach::WorldState  state;
-		ach::Timer       fader;
+		ach::WorldState   state;
+		ach::Timer        fader;
 
 
 		 ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map);

@@ -13,6 +13,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	player  = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message = new ach::Message(500.0f);
 	status  = new ach::Status();
+	select  = new ach::LevelSelect();
 	menu    = new ach::Menu(this, &theme->menu);
 
 	map->cam->follow(&player->phys);
@@ -46,6 +47,7 @@ ach::ProcessWorld::~ProcessWorld()
 	delete menu;
 	delete message;
 	delete status;
+	delete select;
 }
 
 
@@ -83,8 +85,24 @@ void ach::ProcessWorld::render()
 ***********************************************************************/
 void ach::ProcessWorld::event(sf::Event e)
 {
-	if (state == ach::WorldState::wsPause)
-		menu->event(e);
+	switch (state)
+	{
+		case ach::WorldState::wsPause:
+			menu->event(e);
+		break;
+
+
+		case ach::WorldState::wsSelect:
+			select->event(e);
+		break;
+
+
+		case ach::WorldState::wsFadeIn:
+		case ach::WorldState::wsFadeOut:
+		case ach::WorldState::wsMessage:
+		case ach::WorldState::wsGame:
+		break;
+	}
 }
 
 
@@ -152,6 +170,12 @@ void ach::ProcessWorld::prepare()
 		break;
 
 
+		case ach::WorldState::wsSelect:
+			tm->pause();
+			select->controls();
+		break;
+
+
 		case ach::WorldState::wsGame:
 			cache->update();
 			map->update();
@@ -195,6 +219,11 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsPause:
 			menu->render();
 			status->render();
+		break;
+
+
+		case ach::WorldState::wsSelect:
+			select->render();
 		break;
 
 
