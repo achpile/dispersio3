@@ -211,16 +211,7 @@ bool ach::Cache::canReturn()
 ***********************************************************************/
 sf::String ach::Cache::getPlaytime()
 {
-	char result[STR_LEN_MENU];
-
-	int ptime = playtime * 1000;
-	int msec  = ptime % 1000; ptime /= 1000;
-	int sec   = ptime % 60  ; ptime /= 60;
-	int min   = ptime % 60  ; ptime /= 60;
-
-	snprintf(result, STR_LEN_MENU, "%d:%02d:%02d.%03d", ptime, min, sec, msec);
-
-	return sf::String(result);
+	return str_time(playtime);
 }
 
 
@@ -253,11 +244,7 @@ sf::String ach::Cache::getCollected()
 		collected += json_array_size(json_object_getv_branch(cache, "Map.%s.Item", db->map[i]->name));
 	}
 
-	if (!total)
-		return sf::String("100%");
-
-
-	return sf::String(std::to_string((collected * 100) / total)) + "%";
+	return str_percent(collected, total);
 }
 
 
@@ -269,11 +256,7 @@ sf::String ach::Cache::getCollected()
 ***********************************************************************/
 sf::String ach::Cache::getItems()
 {
-	if (!current->items)
-		return sf::String("100%");
-
-
-	return sf::String(std::to_string((json_array_size(json_object_get(info, "Item")) * 100) / current->items)) + "%";
+	return str_percent(json_array_size(json_object_get(info, "Item")), current->items);
 }
 
 

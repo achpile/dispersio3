@@ -10,9 +10,9 @@ ach::StateMenu::StateMenu()
 {
 	menu = new ach::Menu(NULL, &theme->menu);
 
-	menu->setPosition(sf::Vector2f(200, 250));
-	menu->setWidth(400);
-	menu->setHeight(10);
+	menu->setPosition(sf::Vector2f(150, 290));
+	menu->setWidthE(500);
+	menu->setHeightE(300);
 
 	logo = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Logo"), false, true);
 

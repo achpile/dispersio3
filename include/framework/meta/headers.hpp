@@ -8,6 +8,7 @@
 
 #include "framework/string/pair.hpp"
 #include "framework/string/pair.inl"
+#include "framework/string/string.hpp"
 #include "framework/string/option.hpp"
 #include "framework/string/statistic.hpp"
 #include "framework/string/check.hpp"
