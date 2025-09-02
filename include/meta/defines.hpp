@@ -58,7 +58,7 @@
 
 ***********************************************************************/
 #define MENU_LOGO_OFFSET      100.0f
-#define MENU_LEVEL_WIDTH      250.0f
+#define MENU_LEVEL_WIDTH      300.0f
 #define MENU_LEVEL_HEIGHT     390.0f
 
 

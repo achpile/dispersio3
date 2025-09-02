@@ -26,7 +26,8 @@ namespace ach
 
 		void controls();
 
-		void fill();
+		void init(const char *name, ach::Handler handler, ach::LevelList type);
+		void fill(const char *name, ach::Handler handler, json_t *list);
 	};
 }
 

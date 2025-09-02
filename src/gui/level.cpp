@@ -25,7 +25,6 @@ ach::LevelSelect::LevelSelect()
 	preview->setSize(sf::Vector2f(138.0f, 138.0f));
 	preview->setPosition(box->getPosition() + sf::Vector2f(20.0f, 20.0f));
 
-	fill();
 	style();
 }
 
@@ -124,26 +123,40 @@ void ach::LevelSelect::controls()
 
 /***********************************************************************
      * LevelSelect
+     * init
+
+***********************************************************************/
+void ach::LevelSelect::init(const char *name, ach::Handler handler, ach::LevelList type)
+{
+	menu->clear();
+	menu->init(name);
+
+	fill(name, handler, cache->listLevels(type));
+
+	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL, NULL));
+	menu->finalize("UI.Menu.Misc.Resume");
+}
+
+
+
+/***********************************************************************
+     * LevelSelect
      * fill
 
 ***********************************************************************/
-void ach::LevelSelect::fill()
+void ach::LevelSelect::fill(const char *name, ach::Handler handler, json_t *list)
 {
-	menu->init("UI.Menu.Main.InGame");
+	json_t *item;
+	size_t  index;
 
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
-	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", NULL , NULL));
+	char level[STR_LEN_MENU];
 
-	menu->finalize("UI.Menu.Misc.Resume");
+	json_array_foreach(list, index, item)
+	{
+		snprintf(level, STR_LEN_MENU, "Game.Map.%s.Name", json_string_value(item));
+
+		menu->add(name, new ach::MenuItemAction(menu, level, handler, json_deep_copy(item)));
+	}
+
+	json_decref(list);
 }

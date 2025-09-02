@@ -247,7 +247,7 @@ void ach::ProcessWorld::fill()
 
 	options_fill(menu, "UI.Menu.Main.InGame");
 
-	if (cache->canReturn())
+	if (cache->isReturn())
 		menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.Leave", NULL                , NULL                   ));
 
 	menu->add("UI.Menu.Main.InGame", new ach::MenuItemAction(menu, "UI.Menu.Misc.ExitGame" , handler_common_state, json_string("menu"    )));

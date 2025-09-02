@@ -11,6 +11,15 @@ namespace ach
 	};
 
 
+	enum LevelList
+	{
+		llDream,
+		llReplay,
+		llNavigation,
+		llTraining
+	};
+
+
 	struct Cache
 	{
 		ach::DataMap  *current;
@@ -42,12 +51,19 @@ namespace ach
 		void collect(int id);
 		void checkpoint(int id);
 
-		bool canReturn();
+		bool isReturn();
+		bool isBeaten(const char *level);
 
 		sf::String getPlaytime();
 		sf::String getDeaths();
 		sf::String getCollected();
 		sf::String getItems();
+
+		json_t* listLevels(ach::LevelList list);
+		void    listLevelsDream     (json_t *list);
+		void    listLevelsReplay    (json_t *list);
+		void    listLevelsNavigation(json_t *list);
+		void    listLevelsTraining  (json_t *list);
 
 		bool getFlag(const char *name);
 		void setFlag(const char *name);
