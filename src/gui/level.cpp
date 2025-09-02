@@ -156,7 +156,7 @@ void ach::LevelSelect::init(const char *name, ach::Handler handler, ach::LevelLi
 	fill(name, handler, cache->listLevels(type));
 
 	menu->add(name, new ach::MenuItemAction(menu, "UI.Menu.Misc.Resume", handler_level_resume, NULL));
-	menu->finalize("UI.Menu.Misc.Resume");
+	menu->finalize(NULL);
 }
 
 
