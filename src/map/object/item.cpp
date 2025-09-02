@@ -52,8 +52,8 @@ void ach::MapObjectItem::handle()
 	if (!blinking.update())
 		blinking.reset();
 
-	if (blinking.value < 0.1f) model->state = rm->states.white;
-	else                       model->state = rm->states.none;
+	if (blinking.value < 0.1f) model->shader = ach::RenderShader::rsWhite;
+	else                       model->shader = ach::RenderShader::rsNone;
 }
 
 

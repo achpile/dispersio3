@@ -36,8 +36,8 @@ ach::ItemIcon::~ItemIcon()
 ***********************************************************************/
 bool ach::ItemIcon::update()
 {
-	if (cache->getFlag(base->flag)) model->state = rm->states.none;
-	else                            model->state = rm->states.grey;
+	if (cache->getFlag(base->flag)) model->shader = ach::RenderShader::rsNone;
+	else                            model->shader = ach::RenderShader::rsGrey;
 
 	return true;
 }

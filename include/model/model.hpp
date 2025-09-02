@@ -11,8 +11,8 @@ namespace ach
 		ach::Animation    anim;
 
 		ach::RenderLayer  layer;
+		ach::RenderShader shader;
 
-		sf::RenderStates  state;
 		sf::Vector2f      scale;
 		sf::Color         color;
 

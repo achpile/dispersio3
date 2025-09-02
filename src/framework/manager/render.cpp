@@ -14,12 +14,9 @@ ach::RenderManager::RenderManager()
 	front  = new ach::Layer();
 	gui    = new ach::Layer();
 
-	shaders.white.loadFromMemory(GFX_SHADER_WHITE, sf::Shader::Fragment);
-	shaders.grey.loadFromMemory (GFX_SHADER_GREY , sf::Shader::Fragment);
-
-	states.none   = sf::RenderStates::Default;
-	states.white  = sf::RenderStates(&shaders.white);
-	states.grey   = sf::RenderStates(&shaders.grey );
+	none   = new ach::Shader(NULL);
+	white  = new ach::Shader(GFX_SHADER_WHITE);
+	grey   = new ach::Shader(GFX_SHADER_GREY);
 }
 
 
@@ -36,6 +33,10 @@ ach::RenderManager::~RenderManager()
 	delete effect;
 	delete front;
 	delete gui;
+
+	delete none;
+	delete white;
+	delete grey;
 }
 
 
@@ -173,9 +174,9 @@ void ach::RenderManager::setFade(float value)
      * draw
 
 ***********************************************************************/
-void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, sf::RenderStates state)
+void ach::RenderManager::draw(sf::Drawable *drawable, ach::RenderLayer layer, ach::RenderShader shader)
 {
-	getLayer(layer)->draw(drawable, state);
+	getLayer(layer)->draw(drawable, getShader(shader)->states);
 }
 
 
@@ -206,6 +207,25 @@ ach::Layer* ach::RenderManager::getLayer(ach::RenderLayer layer)
 		case ach::RenderLayer::rlEffect: return effect;
 		case ach::RenderLayer::rlFront : return front;
 		case ach::RenderLayer::rlGUI   : return gui;
+	}
+
+	return NULL;
+}
+
+
+
+/***********************************************************************
+     * RenderManager
+     * getShader
+
+***********************************************************************/
+ach::Shader* ach::RenderManager::getShader(ach::RenderShader shader)
+{
+	switch (shader)
+	{
+		case ach::RenderShader::rsNone : return none;
+		case ach::RenderShader::rsWhite: return white;
+		case ach::RenderShader::rsGrey : return grey;
 	}
 
 	return NULL;

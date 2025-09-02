@@ -71,6 +71,7 @@
 #include "framework/control/pad.hpp"
 #include "framework/control/pair.hpp"
 
+#include "framework/gfx/shader.hpp"
 #include "framework/gfx/rectangle.hpp"
 #include "framework/gfx/sprite.hpp"
 #include "framework/gfx/sheet.hpp"
