@@ -8,6 +8,8 @@ namespace ach
 	{
 		ach::RectangleShape *box;
 		ach::RectangleShape *preview;
+
+		ach::DataMap        *selected;
 		ach::Menu           *menu;
 
 

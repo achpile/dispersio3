@@ -8,9 +8,10 @@
 ***********************************************************************/
 ach::LevelSelect::LevelSelect()
 {
-	menu    = new ach::Menu(this, NULL, &theme->menu);
-	box     = new ach::RectangleShape();
-	preview = new ach::RectangleShape();
+	menu     = new ach::Menu(this, callback_level, &theme->menu);
+	box      = new ach::RectangleShape();
+	preview  = new ach::RectangleShape();
+	selected = NULL;
 
 	menu->setPosition(sf::Vector2f(10.0f, RENDER_LAYER_GUI_Y - MENU_LEVEL_HEIGHT - 10.0f));
 	menu->setWidthE(MENU_LEVEL_WIDTH);

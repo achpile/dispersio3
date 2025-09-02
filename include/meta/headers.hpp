@@ -128,6 +128,7 @@
 #include "handler/menu.hpp"
 #include "handler/options.hpp"
 #include "handler/game.hpp"
+#include "handler/level.hpp"
 
 #include "meta/app.hpp"
 #include "meta/externs.hpp"
