@@ -5,6 +5,7 @@
     "Cache": "@include game/cache.json",
     "Campaign": "@include game/campaign.json",
     "Character": "@include game/character.json",
+    "Cutscene": "@include game/cutscene.json",
     "Item": "@include game/item.json",
     "Map": "@include game/map.json",
     "Meta": "@include game/meta.json",

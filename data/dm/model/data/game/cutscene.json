@@ -1,0 +1,25 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Slideshow": {
+        "@attr": {
+            "container": "array",
+            "default": "gfx/game/cutscene/misc/default.png",
+            "type": "filename"
+        }
+    },
+    "Text": {
+        "@attr": {
+            "default": "",
+            "type": "string"
+        }
+    },
+    "Track": {
+        "@attr": {
+            "default": "track/default.ogg",
+            "type": "filename"
+        }
+    }
+}

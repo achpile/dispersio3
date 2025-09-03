@@ -2,6 +2,7 @@
     "Cache": "@silent ~save.json",
     "Campaign": "@include game/campaign.json",
     "Character": "@recursive game/character",
+    "Cutscene": "@recursive game/cutscene",
     "Item": "@recursive game/item",
     "Map": "@recursive game/map",
     "Projectile": "@recursive game/projectile",

@@ -3,6 +3,25 @@
         "container": "multi",
         "type": "object"
     },
+    "Cutscene": {
+        "@attr": {
+            "type": "object"
+        },
+        "Intro": {
+            "@attr": {
+                "data": "Data.Game.Cutscene",
+                "default": "Default",
+                "type": "link"
+            }
+        },
+        "Outro": {
+            "@attr": {
+                "data": "Data.Game.Cutscene",
+                "default": "Default",
+                "type": "link"
+            }
+        }
+    },
     "Filename": {
         "@attr": {
             "default": "map/default.tmj",
