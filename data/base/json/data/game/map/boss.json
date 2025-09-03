@@ -1,5 +1,9 @@
 {
     "Boss": {
+        "Cutscene": {
+            "Intro": "BossIntro",
+            "Outro": "BossOutro"
+        },
         "Filename": "map/boss.tmj",
         "Final": true,
         "Preview": "gfx/ui/preview/boss.png",

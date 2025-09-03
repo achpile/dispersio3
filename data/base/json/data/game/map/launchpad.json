@@ -1,5 +1,9 @@
 {
     "LaunchPad": {
+        "Cutscene": {
+            "Intro": "LaunchPadIntro",
+            "Outro": "LaunchPadOutro"
+        },
         "Filename": "map/launchpad.tmj",
         "Next": "Rocket",
         "Preview": "gfx/ui/preview/launchpad.png",

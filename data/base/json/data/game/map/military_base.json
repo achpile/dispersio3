@@ -1,5 +1,8 @@
 {
     "MilitaryBase": {
+        "Cutscene": {
+            "Intro": "MilitaryBaseIntro"
+        },
         "Filename": "map/military_base.tmj",
         "Next": "LaunchPad",
         "Preview": "gfx/ui/preview/military_base.png",

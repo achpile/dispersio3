@@ -1,5 +1,8 @@
 {
     "Plumber": {
+        "Cutscene": {
+            "Intro": "Dream"
+        },
         "Filename": "map/plumber.tmj",
         "Next": "Rocket",
         "Player": "PlayerPlumber",

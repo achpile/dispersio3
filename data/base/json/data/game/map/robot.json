@@ -1,5 +1,8 @@
 {
     "Robot": {
+        "Cutscene": {
+            "Intro": "Dream"
+        },
         "Filename": "map/robot.tmj",
         "Next": "Rocket",
         "Player": "PlayerRobot",

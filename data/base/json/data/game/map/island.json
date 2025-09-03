@@ -1,5 +1,8 @@
 {
     "Island": {
+        "Cutscene": {
+            "Intro": "Dream"
+        },
         "Filename": "map/island.tmj",
         "Next": "Rocket",
         "Player": "PlayerBill",

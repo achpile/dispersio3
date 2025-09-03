@@ -1,5 +1,8 @@
 {
     "Duck": {
+        "Cutscene": {
+            "Intro": "Dream"
+        },
         "Filename": "map/duck.tmj",
         "Next": "Rocket",
         "Player": "PlayerDuck",
