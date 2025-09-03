@@ -117,6 +117,7 @@
 #include "map/map.hpp"
 
 #include "process/process.hpp"
+#include "process/cutscene.hpp"
 #include "process/world.hpp"
 
 #include "state/state.hpp"
