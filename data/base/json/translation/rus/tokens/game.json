@@ -1,3 +1,4 @@
 {
-    "Map": "@include game/map.json"
+    "Map": "@include game/map.json",
+    "Message": "@recursive game/message"
 }

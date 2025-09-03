@@ -132,8 +132,11 @@ sf::String ach::Cache::getErrorDream()
 	if (count)
 		return "";
 
-	if (count == json_array_size(json_object_get(campaign, "Dream")))
-		return "Already slept enough";
+	if (beaten == json_array_size(json_object_get(campaign, "Dream")))
+		return "Game.Message.BedOverslept";
 
-	return "Need fresheners";
+	if (missing)
+		return "Game.Message.BedOverslept";
+
+	return "";
 }
