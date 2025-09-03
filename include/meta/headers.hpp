@@ -30,6 +30,7 @@
 #include "data/weapon.hpp"
 #include "data/item.hpp"
 #include "data/character.hpp"
+#include "data/cutscene.hpp"
 #include "data/map.hpp"
 #include "data/data.hpp"
 

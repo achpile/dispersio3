@@ -15,6 +15,7 @@ namespace ach
 		std::vector<ach::DataWeapon*    > weapon;
 		std::vector<ach::DataItem*      > item;
 		std::vector<ach::DataCharacter* > character;
+		std::vector<ach::DataCutscene*  > cutscene;
 		std::vector<ach::DataMap*       > map;
 
 
@@ -33,6 +34,7 @@ namespace ach
 		ach::DataWeapon     *getWeapon    (const char *name);
 		ach::DataItem       *getItem      (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
+		ach::DataCutscene   *getCutscene  (const char *name);
 		ach::DataMap        *getMap       (const char *name);
 
 		/*  list.cpp  */

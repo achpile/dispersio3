@@ -128,6 +128,18 @@ ach::DataCharacter* ach::Database::getCharacter(const char *name)
 
 /***********************************************************************
      * Database
+     * getCutscene
+
+***********************************************************************/
+ach::DataCutscene* ach::Database::getCutscene(const char *name)
+{
+	return getContent<ach::DataCutscene>(name, &cutscene);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getMap
 
 ***********************************************************************/

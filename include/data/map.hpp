@@ -7,6 +7,8 @@ namespace ach
 	struct DataMap : DataContent
 	{
 		ach::DataCharacter *player;
+		ach::DataCutscene  *intro;
+		ach::DataCutscene  *outro;
 		ach::Sprite        *preview;
 		sf::Vector2i        spawn;
 

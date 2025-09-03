@@ -11,7 +11,9 @@ ach::DataMap::DataMap(json_t *obj)
 	preview = new ach::Sprite(json_object_get_string(obj, "Preview"), false, false);
 
 	spawn   = vector_json_tile(json_object_get(obj, "Spawn"));
-	player  = db->getCharacter(json_object_get_branch_string(obj, "Player"));
+	player  = db->getCharacter(json_object_get_string(obj, "Player"));
+	intro   = db->getCutscene(json_object_get_branch_string(obj, "Cutscene.Intro"));
+	outro   = db->getCutscene(json_object_get_branch_string(obj, "Cutscene.Outro"));
 
 	finish  = json_object_get_boolean(obj, "Final");
 	replay  = json_object_get_boolean(obj, "Replay");
