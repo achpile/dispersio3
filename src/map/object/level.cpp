@@ -45,5 +45,6 @@ void ach::MapObjectLevel::touch()
 ***********************************************************************/
 void ach::MapObjectLevel::use()
 {
-	world->select(type);
+	if (cache->isPossible(type)) world->select(type);
+	else                         world->notify(cache->getError(type));
 }

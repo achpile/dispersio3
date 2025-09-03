@@ -34,10 +34,10 @@
     "Navigation": {
         "1": {
             "Levels": [
-                "Forest",
-                "Factory",
                 "Cave",
-                "Lab"
+                "Lab",
+                "Forest",
+                "Factory"
             ]
         },
         "2": {

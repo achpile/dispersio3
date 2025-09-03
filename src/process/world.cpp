@@ -214,7 +214,7 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsMessage:
 			message->render();
 
-			if (ctrl->keys[ach::ControlAction::caMenu].released)
+			if (ctrl->keys[ach::ControlAction::caMenu].pressed)
 				state = ach::WorldState::wsGame;
 		break;
 
@@ -350,4 +350,18 @@ void ach::ProcessWorld::select(ach::LevelMode mode)
 
 	app->mouse(true);
 	selection->init(mode);
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * notify
+
+***********************************************************************/
+void ach::ProcessWorld::notify(const char *msg)
+{
+	state = ach::WorldState::wsMessage;
+
+	message->setString(lm->get(msg));
 }

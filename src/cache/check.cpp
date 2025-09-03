@@ -78,3 +78,68 @@ bool ach::Cache::isPossibleDream()
 
 	return count != 0;
 }
+
+
+
+/***********************************************************************
+     * Cache
+     * getError
+
+***********************************************************************/
+const char* ach::Cache::getError(ach::LevelMode _mode)
+{
+	switch (_mode)
+	{
+		case ach::LevelMode::lmReplay    : return "";
+		case ach::LevelMode::lmTraining  : return "";
+		case ach::LevelMode::lmNavigation: return "";
+		case ach::LevelMode::lmDream     : return getErrorDream();
+	}
+
+	return "";
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * getErrorDream
+
+***********************************************************************/
+const char* ach::Cache::getErrorDream()
+{
+	json_t *item;
+	size_t  index;
+
+	size_t count   = 0;
+	size_t beaten  = 0;
+	size_t missing = 0;
+
+	json_array_foreach(json_object_get(campaign, "Dream"), index, item)
+	{
+		if (!getFlag(json_object_get_string(item, "Flag")))
+		{
+			missing++;
+			continue;
+		}
+
+		if (isBeaten(json_object_get_string(item, "Level")))
+		{
+			beaten++;
+			continue;
+		}
+
+		count++;
+	}
+
+	if (count)
+		return "";
+
+	if (beaten == json_array_size(json_object_get(campaign, "Dream")))
+		return "Game.Message.BedOverslept";
+
+	if (missing)
+		return "Game.Message.BedFreshener";
+
+	return "";
+}

@@ -53,15 +53,15 @@ namespace ach
 		void collect(int id);
 		void checkpoint(int id);
 
+		const char* getError(ach::LevelMode _mode);
+		const char* getErrorDream();
+
 		/*  stats.cpp  */
 		sf::String getPlaytime();
 		sf::String getDeaths();
 		sf::String getCollected();
 		sf::String getItems();
 		sf::String getItems(const char *name);
-
-		sf::String getError(ach::LevelMode _mode);
-		sf::String getErrorDream();
 
 		/*  list.cpp  */
 		json_t* listLevels(ach::LevelMode list);
