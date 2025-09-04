@@ -12,7 +12,7 @@
     },
     "Text": {
         "@attr": {
-            "default": "",
+            "default": "Game.Cutscene.Default",
             "type": "string"
         }
     },

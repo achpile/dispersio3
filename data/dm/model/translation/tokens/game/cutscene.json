@@ -1,0 +1,8 @@
+{
+    "@attr": {
+        "container": "multi",
+        "default": "",
+        "maxlen": 2048,
+        "type": "string"
+    }
+}

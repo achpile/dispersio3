@@ -1,3 +1,9 @@
 {
-    "LaunchPadIntro": {}
+    "LaunchPadIntro": {
+        "Slideshow": [
+            "gfx/game/cutscene/misc/default.png"
+        ],
+        "Text": "Game.Cutscene.LaunchPadIntro",
+        "Track": "track/default.ogg"
+    }
 }

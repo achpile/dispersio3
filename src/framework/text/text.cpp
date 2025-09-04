@@ -42,7 +42,7 @@ ach::Text::~Text()
 void ach::Text::render()
 {
 	list_foreach(strings)
-		text_draw(text, strings[i], pos.x, pos.y + spacing * i, width, align, layer);
+		text_draw(text, strings[i], pos.x, top(i), width, align, layer);
 }
 
 
@@ -186,6 +186,18 @@ void ach::Text::setLayer(ach::RenderLayer _layer)
 float ach::Text::height()
 {
 	return spacing * strings.size();
+}
+
+
+
+/***********************************************************************
+     * Text
+     * top
+
+***********************************************************************/
+float ach::Text::top(int index)
+{
+	return pos.y + spacing * index;
 }
 
 

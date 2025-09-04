@@ -37,6 +37,7 @@ namespace ach
 		void setLayer(ach::RenderLayer _layer);
 
 		float height();
+		float top(int index);
 
 		void calc();
 		void split();

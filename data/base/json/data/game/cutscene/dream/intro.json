@@ -1,3 +1,9 @@
 {
-    "Dream": {}
+    "Dream": {
+        "Slideshow": [
+            "gfx/game/cutscene/misc/default.png"
+        ],
+        "Text": "Game.Cutscene.Dream",
+        "Track": "track/default.ogg"
+    }
 }

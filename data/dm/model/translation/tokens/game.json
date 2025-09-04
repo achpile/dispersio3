@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Cutscene": "@include game/cutscene.json",
     "Map": "@include game/map.json",
     "Message": "@include game/message.json"
 }
