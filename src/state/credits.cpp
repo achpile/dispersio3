@@ -37,7 +37,7 @@ ach::StateCredits::~StateCredits()
 ***********************************************************************/
 void ach::StateCredits::update()
 {
-	float offset = tm->get(true) * CREDITS_SPEED;
+	float offset = tm->get(true) * TEXT_FLOW_SPEED;
 
 	list_foreach(lines)
 		lines[i]->move(0, -offset);
@@ -204,7 +204,7 @@ void ach::StateCredits::add(sf::String string, ach::CreditsWeight weight)
 	line->setFont(*theme->credits.font);
 	line->setString(string);
 	line->setCharacterSize(getSize(weight));
-	line->setPosition(text_align(line, CREDITS_LEFT, RENDER_LAYER_GUI_X - CREDITS_LEFT * 2, getAlign(weight)), pos);
+	line->setPosition(text_align(line, TEXT_FLOW_LEFT, RENDER_LAYER_GUI_X - TEXT_FLOW_LEFT * 2, getAlign(weight)), pos);
 	line->setStyle(getStyle(weight));
 	line->setFillColor(theme->credits.color);
 

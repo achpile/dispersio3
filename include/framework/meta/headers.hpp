@@ -72,16 +72,17 @@
 #include "framework/control/pad.hpp"
 #include "framework/control/pair.hpp"
 
-#include "framework/gfx/shader.hpp"
-#include "framework/gfx/rectangle.hpp"
-#include "framework/gfx/sprite.hpp"
-#include "framework/gfx/sheet.hpp"
-#include "framework/gfx/layer.hpp"
-#include "framework/gfx/background.hpp"
-
 #include "framework/time/timer.hpp"
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
+
+#include "framework/gfx/shader.hpp"
+#include "framework/gfx/rectangle.hpp"
+#include "framework/gfx/sprite.hpp"
+#include "framework/gfx/slideshow.hpp"
+#include "framework/gfx/sheet.hpp"
+#include "framework/gfx/layer.hpp"
+#include "framework/gfx/background.hpp"
 
 #include "framework/manager/language.hpp"
 #include "framework/manager/render.hpp"

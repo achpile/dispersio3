@@ -9,6 +9,13 @@
 ach::ProcessCutscene::ProcessCutscene(ach::StateGame *_owner, ach::DataCutscene *cutscene) : Process(_owner)
 {
 	base = cutscene;
+	text = new ach::Text(&theme->menu);
+	slideshow = new ach::SlideShow(&base->slideshow, true);
+
+	text->setString(lm->get(base->text));
+	text->setPosition(sf::Vector2f(TEXT_FLOW_LEFT, RENDER_LAYER_GUI_Y));
+
+	mm->play(base->track);
 }
 
 
@@ -20,6 +27,8 @@ ach::ProcessCutscene::ProcessCutscene(ach::StateGame *_owner, ach::DataCutscene 
 ***********************************************************************/
 ach::ProcessCutscene::~ProcessCutscene()
 {
+	delete text;
+	delete slideshow;
 }
 
 
@@ -31,6 +40,10 @@ ach::ProcessCutscene::~ProcessCutscene()
 ***********************************************************************/
 void ach::ProcessCutscene::update()
 {
+	slideshow->update();
+
+	if (!slideshow->active)
+		owner->finish();
 }
 
 
@@ -42,6 +55,7 @@ void ach::ProcessCutscene::update()
 ***********************************************************************/
 void ach::ProcessCutscene::render()
 {
+	slideshow->render();
 }
 
 

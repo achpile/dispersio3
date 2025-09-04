@@ -6,10 +6,9 @@ namespace ach
 {
 	struct StateStart : StateBase
 	{
-		std::vector<ach::Sprite*> sprites;
+		std::vector<ach::Sprite*>  sprites;
 
-		unsigned int index;
-		float        offset;
+		ach::SlideShow            *slideshow;
 
 
 		 StateStart();
@@ -18,8 +17,6 @@ namespace ach
 		void update();
 		void render();
 		void event(sf::Event);
-
-		void next();
 	};
 }
 
