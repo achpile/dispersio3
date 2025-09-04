@@ -96,8 +96,8 @@ void ach::App::update()
 	isFocused = window->hasFocus();
 	isRunning = window->isOpen();
 
-	stateSwitch();
 	events();
+	stateSwitch();
 
 	if (!isFocused)
 		return;
@@ -166,7 +166,8 @@ void ach::App::event(sf::Event e)
 			break;
 	}
 
-	state->event(e);
+	if (state)
+		state->event(e);
 }
 
 

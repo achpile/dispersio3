@@ -6,8 +6,16 @@ namespace ach
 {
 	struct ProcessCutscene : Process
 	{
-		 ProcessCutscene(ach::StateGame *_owner);
+		ach::DataCutscene *base;
+
+
+		 ProcessCutscene(ach::StateGame *_owner, ach::DataCutscene *cutscene);
 		~ProcessCutscene();
+
+		void update();
+		void render();
+
+		void event(sf::Event e);
 	};
 }
 
