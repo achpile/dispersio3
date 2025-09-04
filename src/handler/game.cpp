@@ -32,5 +32,5 @@ void handler_game_revert(void *context, json_t *)
 ***********************************************************************/
 void handler_game_pick(void *context, json_t *data)
 {
-	((ach::ProcessWorld*)context)->next(json_object_get_string(data, "Map"), json_object_get_string(data, "Mode"));
+	((ach::ProcessWorld*)context)->warp(json_object_get_string(data, "Map"), json_object_get_string(data, "Mode"));
 }

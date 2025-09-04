@@ -207,7 +207,7 @@ void ach::ProcessWorld::finalize()
 
 		case ach::WorldState::wsFadeOut:
 			if (!fader.isActive())
-				owner->finish();
+				active = false;
 		break;
 
 
@@ -311,15 +311,15 @@ void ach::ProcessWorld::revert()
 
 /***********************************************************************
      * ProcessWorld
-     * next
+     * warp
 
 ***********************************************************************/
-void ach::ProcessWorld::next(const char *map, const char *mode)
+void ach::ProcessWorld::warp(const char *map, const char *mode)
 {
 	state = ach::WorldState::wsFadeOut;
 
 	fader.reset();
-	cache->select(map, pair_get_enum(mode, pairLevelMode));
+	cache->warp(map, pair_get_enum(mode, pairLevelMode), true);
 }
 
 

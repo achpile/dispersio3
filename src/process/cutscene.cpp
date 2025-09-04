@@ -51,7 +51,7 @@ void ach::ProcessCutscene::update()
 	slideshow->update();
 
 	if (!slideshow->active)
-		owner->finish();
+		finish();
 
 	render();
 }
@@ -92,9 +92,23 @@ void ach::ProcessCutscene::event(sf::Event e)
 		case sf::Event::MouseButtonReleased:
 		case sf::Event::KeyPressed:
 		case sf::Event::JoystickButtonPressed:
-			owner->finish();
+			finish();
 
 		default:
 			break;
 	}
+}
+
+
+
+/***********************************************************************
+     * ProcessCutscene
+     * finish
+
+***********************************************************************/
+void ach::ProcessCutscene::finish()
+{
+	active = false;
+
+	cache->cutscene();
 }

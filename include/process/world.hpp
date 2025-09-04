@@ -46,7 +46,7 @@ namespace ach
 		void gateway(sf::FloatRect dest);
 		void goal();
 		void revert();
-		void next(const char *map, const char *mode);
+		void warp(const char *map, const char *mode);
 		void pause();
 		void select(ach::LevelMode mode);
 		void notify(const char *msg);

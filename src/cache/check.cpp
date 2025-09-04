@@ -47,6 +47,26 @@ bool ach::Cache::isBeaten(const char *level)
 
 /***********************************************************************
      * Cache
+     * isCutscenes
+
+***********************************************************************/
+bool ach::Cache::isCutscenes(ach::LevelMode _mode)
+{
+	switch (_mode)
+	{
+		case ach::LevelMode::lmReplay    : return false;
+		case ach::LevelMode::lmTraining  : return false;
+		case ach::LevelMode::lmNavigation: return settings->isCutscenes();
+		case ach::LevelMode::lmDream     : return settings->isCutscenes();
+	}
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * Cache
      * isPossible
 
 ***********************************************************************/

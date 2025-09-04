@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Process::Process(ach::StateGame *_owner)
 {
-	owner = _owner;
+	owner  = _owner;
+	active = true;
 }
 
 

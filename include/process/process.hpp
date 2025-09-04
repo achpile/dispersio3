@@ -8,6 +8,8 @@ namespace ach
 	{
 		ach::StateGame *owner;
 
+		bool active;
+
 
 		         Process(ach::StateGame *_owner);
 		virtual ~Process();

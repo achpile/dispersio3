@@ -32,6 +32,7 @@ namespace ach
 		json_t *info;
 
 		bool    hard;
+		bool    finished;
 		int     deaths;
 		float   playtime;
 
@@ -39,26 +40,29 @@ namespace ach
 		 Cache();
 		~Cache();
 
-		void init();
 		void update();
+		void init();
 		void save();
-		void store();
 		void reset(bool _hard);
-
-		void next();
-		void select(const char *map, ach::LevelMode _mode);
-		void revert();
 		int  spawn();
 
 		/*  check.cpp  */
 		bool isDefault();
 		bool isRevert();
 		bool isBeaten(const char *level);
+		bool isCutscenes(ach::LevelMode _mode);
 		bool isPossible(ach::LevelMode _mode);
 		bool isPossibleDream();
 
-		/*  store.cpp  */
+		/*  state.cpp  */
 		void goal();
+		void cutscene();
+		void revert();
+		void finish();
+		void warp(const char *map, ach::LevelMode _mode, bool intro);
+		void pick(const char *map, ach::LevelMode _mode, bool intro);
+
+		/*  store.cpp  */
 		void die();
 		void collect(int id);
 		void checkpoint(int id);

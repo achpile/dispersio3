@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::StateGame::StateGame()
 {
+	proc = NULL;
+
 	create();
 
 	app->mouse(false);
@@ -38,6 +40,9 @@ void ach::StateGame::update()
 	stars->render();
 
 	proc->update();
+
+	if (!proc->active)
+		finish();
 }
 
 
@@ -85,6 +90,9 @@ void ach::StateGame::style()
 ***********************************************************************/
 void ach::StateGame::create()
 {
+	if (proc)
+		delete proc;
+
 	switch (cache->state)
 	{
 		case ach::LevelState::lsIntro: proc = new ach::ProcessCutscene(this, cache->current->intro); break;
@@ -102,15 +110,11 @@ void ach::StateGame::create()
 ***********************************************************************/
 void ach::StateGame::finish()
 {
-	cache->next();
-
-	if (cache->current->finish)
+	if (cache->finished)
 	{
 		app->stateSet(ach::GameState::gsMenu);
 		return;
 	}
-
-	delete proc;
 
 	create();
 }
