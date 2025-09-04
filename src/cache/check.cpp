@@ -15,6 +15,18 @@ bool ach::Cache::isDefault()
 
 /***********************************************************************
      * Cache
+     * isBeaten
+
+***********************************************************************/
+bool ach::Cache::isBeaten(const char *level)
+{
+	return json_object_getv_branch_boolean(cache, "Map.%s.Finished", level);
+}
+
+
+
+/***********************************************************************
+     * Cache
      * isRevert
 
 ***********************************************************************/
@@ -29,18 +41,6 @@ bool ach::Cache::isRevert()
 	}
 
 	return false;
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * isBeaten
-
-***********************************************************************/
-bool ach::Cache::isBeaten(const char *level)
-{
-	return json_object_getv_branch_boolean(cache, "Map.%s.Finished", level);
 }
 
 

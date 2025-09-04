@@ -43,7 +43,13 @@ void ach::Cache::finish()
 	if (current->finish)
 		finished = true;
 
-	warp(current->next, ach::LevelMode::lmNavigation, true);
+	switch (mode)
+	{
+		case ach::LevelMode::lmNavigation: warp(current->next, ach::LevelMode::lmNavigation, true); break;
+		case ach::LevelMode::lmDream     : warp(current->next, ach::LevelMode::lmNavigation, true); break;
+		case ach::LevelMode::lmReplay    : revert(); break;
+		case ach::LevelMode::lmTraining  : warp(current->next, ach::LevelMode::lmNavigation, true); break;
+	}
 }
 
 
@@ -71,7 +77,7 @@ void ach::Cache::warp(const char *map, ach::LevelMode _mode, bool intro)
 	json_object_set_branch_string (cache, "Current.Mode"      , pair_get_string(mode, pairLevelMode));
 	json_object_set_branch_integer(cache, "Current.Checkpoint", -1 );
 
-	pick(map, _mode, intro);
+	pick(json_object_get_branch_string(cache, "Current.Map"), _mode, intro);
 }
 
 

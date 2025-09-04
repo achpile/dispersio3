@@ -48,8 +48,8 @@ namespace ach
 
 		/*  check.cpp  */
 		bool isDefault();
-		bool isRevert();
 		bool isBeaten(const char *level);
+		bool isRevert();
 		bool isCutscenes(ach::LevelMode _mode);
 		bool isPossible(ach::LevelMode _mode);
 		bool isPossibleDream();
