@@ -61,7 +61,7 @@
 #define CUTSCENE_SPEED        25.0f
 #define CUTSCENE_LEFT         100.0f
 #define CUTSCENE_SPACING      10.0f
-#define CUTSCENE_HEIGHT       400.0f
+#define CUTSCENE_HEIGHT       250.0f
 
 
 

@@ -19,7 +19,7 @@ ach::ProcessCutscene::ProcessCutscene(ach::StateGame *_owner, ach::DataCutscene 
 	text->setSpacing(theme->cutscene->spacing() + CUTSCENE_SPACING);
 
 	slideshow->setPosition(sf::Vector2f(RENDER_LAYER_GUI_X / 2, 200.0f));
-	slideshow->setDuration((text->height() + 350.0f) / (CUTSCENE_SPEED * base->slideshow.size()));
+	slideshow->setDuration((text->height() + CUTSCENE_HEIGHT - text->spacing) / (CUTSCENE_SPEED * base->slideshow.size()));
 
 	mm->play(base->track);
 }
@@ -65,8 +65,17 @@ void ach::ProcessCutscene::update()
 ***********************************************************************/
 void ach::ProcessCutscene::render()
 {
+	sf::Color color;
+
 	slideshow->render();
-	text->render();
+
+	list_foreach(text->strings)
+	{
+		color    = theme->cutscene->color;
+		color.a *= math_fade((text->top(i) - (RENDER_LAYER_GUI_Y - CUTSCENE_HEIGHT)) / (CUTSCENE_HEIGHT), 0.25f);
+
+		text->print(i, color);
+	}
 }
 
 
