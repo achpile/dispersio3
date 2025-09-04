@@ -12,6 +12,7 @@ namespace ach
 		ach::RenderLayer  layer;
 		ach::TextAlign    align;
 		sf::Text         *text;
+		sf::Color         color;
 		sf::String        string;
 		sf::Vector2f      pos;
 
@@ -31,11 +32,12 @@ namespace ach
 		void setWidth(float _width);
 		void setFont(sf::Font *font);
 		void setSize(int size);
-		void setColor(sf::Color color);
+		void setColor(sf::Color _color);
 		void setSpacing(int _spacing);
 		void setAlign(ach::TextAlign _align);
 		void setLayer(ach::RenderLayer _layer);
 
+		void  print(int index, sf::Color _color);
 		float height();
 		float top(int index);
 

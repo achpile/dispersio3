@@ -42,7 +42,7 @@ ach::Text::~Text()
 void ach::Text::render()
 {
 	list_foreach(strings)
-		text_draw(text, strings[i], pos.x, top(i), width, align, layer);
+		print(i, color);
 }
 
 
@@ -135,9 +135,9 @@ void ach::Text::setSize(int size)
      * setColor
 
 ***********************************************************************/
-void ach::Text::setColor(sf::Color color)
+void ach::Text::setColor(sf::Color _color)
 {
-	text->setFillColor(color);
+	color = _color;
 }
 
 
@@ -174,6 +174,20 @@ void ach::Text::setAlign(ach::TextAlign _align)
 void ach::Text::setLayer(ach::RenderLayer _layer)
 {
 	layer = _layer;
+}
+
+
+
+/***********************************************************************
+     * Text
+     * print
+
+***********************************************************************/
+void ach::Text::print(int index, sf::Color _color)
+{
+	text->setFillColor(_color);
+
+	text_draw(text, strings[index], pos.x, top(index), width, align, layer);
 }
 
 
