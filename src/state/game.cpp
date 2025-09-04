@@ -8,8 +8,7 @@
 ***********************************************************************/
 ach::StateGame::StateGame()
 {
-	//proc = new ach::ProcessWorld(this, cache->current);
-	proc = new ach::ProcessCutscene(this, db->getCutscene("Default"));
+	proc = new ach::ProcessWorld(this, cache->current);
 
 	app->mouse(false);
 }
@@ -86,13 +85,13 @@ void ach::StateGame::style()
 ***********************************************************************/
 void ach::StateGame::finish()
 {
-	//if (cache->current->finish)
-	//{
+	if (cache->current->finish)
+	{
 		app->stateSet(ach::GameState::gsMenu);
 		return;
-	//}
+	}
 
-	//delete proc;
+	delete proc;
 
-	//proc = new ach::ProcessWorld(this, cache->current);
+	proc = new ach::ProcessWorld(this, cache->current);
 }

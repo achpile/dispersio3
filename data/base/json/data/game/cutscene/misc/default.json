@@ -1,15 +1,3 @@
 {
-    "Default": {
-        "Slideshow": [
-            "gfx/ui/preview/boss.png",
-            "gfx/ui/preview/cave.png",
-            "gfx/ui/preview/duck.png",
-            "gfx/ui/preview/factory.png",
-            "gfx/ui/preview/forest.png",
-            "gfx/ui/preview/island.png",
-            "gfx/ui/preview/lab.png",
-            "gfx/ui/preview/launchpad.png",
-            "gfx/ui/preview/military_base.png"
-        ]
-    }
+    "Default": {}
 }
