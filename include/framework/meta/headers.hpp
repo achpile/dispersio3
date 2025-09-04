@@ -92,6 +92,7 @@
 
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"
+#include "framework/text/style.hpp"
 #include "framework/text/text.hpp"
 
 #include "framework/menu/theme.hpp"
