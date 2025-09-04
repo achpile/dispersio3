@@ -6,34 +6,18 @@ namespace ach
 {
 	struct DataTheme : DataContent
 	{
-		struct
-		{
-			ach::DataFont   *font;
-			sf::Color        color;
-
-			int              size;
-		} credits;
+		ach::TextStyle credits;
+		ach::TextStyle cutscene;
+		ach::BoxStyle  box;
 
 		struct
 		{
-			sf::Color        border;
-			sf::Color        bg;
-
-			bool             round;
-		} box;
-
-		struct
-		{
-			ach::DataFont   *font;
+			ach::TextStyle   text;
+			sf::String       selector;
 
 			ach::DataSound  *back;
 			ach::DataSound  *blip;
 			ach::DataSound  *pick;
-
-			sf::String       selector;
-			sf::Color        color;
-
-			int              size;
 		} menu;
 
 

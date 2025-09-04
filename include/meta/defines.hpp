@@ -49,7 +49,8 @@
      * Text flow
 
 ***********************************************************************/
-#define TEXT_FLOW_SPEED       50.0f
+#define TEXT_FLOW_CREDITS     50.0f
+#define TEXT_FLOW_CUTSCENE    25.0f
 #define TEXT_FLOW_LEFT        100.0f
 
 

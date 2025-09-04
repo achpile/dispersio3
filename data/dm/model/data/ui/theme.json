@@ -4,6 +4,7 @@
         "type": "object"
     },
     "Box": "@include theme/box.json",
-    "Credits": "@include theme/credits.json",
+    "Credits": "@include theme/text.json",
+    "Cutscene": "@include theme/text.json",
     "Menu": "@include theme/menu.json"
 }

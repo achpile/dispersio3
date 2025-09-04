@@ -76,6 +76,7 @@
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
 
+#include "framework/gfx/style.hpp"
 #include "framework/gfx/shader.hpp"
 #include "framework/gfx/rectangle.hpp"
 #include "framework/gfx/sprite.hpp"

@@ -159,10 +159,10 @@ void ach::Menu::style(ach::MenuTheme *_theme)
 {
 	theme = _theme;
 
-	text->setFont(*theme->font);
-	text->setFillColor(theme->color);
+	text->setFont(*theme->text->font);
+	text->setFillColor(theme->text->color);
 
-	box->style(theme);
+	box->style(theme->box);
 
 	sfxBlip = theme->blip;
 	sfxBack = theme->back;

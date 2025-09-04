@@ -6,15 +6,9 @@ namespace ach
 {
 	struct Theme
 	{
-		ach::MenuTheme menu;
-
-		struct
-		{
-			sf::Font  *font;
-			sf::Color  color;
-
-			int        size;
-		} credits;
+		ach::TextStyle *credits;
+		ach::TextStyle *cutscene;
+		ach::MenuTheme  menu;
 
 
 		 Theme();

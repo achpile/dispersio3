@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Message::Message(float _width)
 {
-	text = new ach::Text(&theme->menu);
+	text = new ach::Text(theme->menu.text);
 	box  = new ach::RectangleShape();
 
 	box->setOutlineThickness(MENU_THICKNESS);
@@ -66,10 +66,10 @@ void ach::Message::render()
 ***********************************************************************/
 void ach::Message::style()
 {
-	spacing = theme->menu.spacing + MENU_SPACING;
+	spacing = theme->menu.text->spacing() + MENU_SPACING;
 
-	text->style(&theme->menu);
-	box->style(&theme->menu);
+	text->style(theme->menu.text);
+	box->style(theme->menu.box);
 }
 
 

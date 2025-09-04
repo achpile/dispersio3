@@ -44,13 +44,13 @@ ach::MenuItemCheckbox::~MenuItemCheckbox()
 ***********************************************************************/
 void ach::MenuItemCheckbox::style()
 {
-	box->setSize(sf::Vector2f(menu->theme->spacing, menu->theme->spacing));
-	box->setOrigin(menu->theme->spacing, 0);
-	box->setOutlineColor(menu->theme->color);
+	box->setSize(sf::Vector2f(menu->theme->text->spacing(), menu->theme->text->spacing()));
+	box->setOrigin(menu->theme->text->spacing(), 0);
+	box->setOutlineColor(menu->theme->text->color);
 
-	fill->setSize(sf::Vector2f(menu->theme->spacing - MENU_BOX_SHRINK, menu->theme->spacing - MENU_BOX_SHRINK));
-	fill->setOrigin(menu->theme->spacing - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
-	fill->setFillColor(menu->theme->border);
+	fill->setSize(sf::Vector2f(menu->theme->text->spacing() - MENU_BOX_SHRINK, menu->theme->text->spacing() - MENU_BOX_SHRINK));
+	fill->setOrigin(menu->theme->text->spacing() - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
+	fill->setFillColor(menu->theme->box->border);
 }
 
 

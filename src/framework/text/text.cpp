@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::Text::Text(ach::MenuTheme *theme)
+ach::Text::Text(ach::TextStyle *theme)
 {
 	align   = ach::TextAlign::taLeft;
 	layer   = ach::RenderLayer::rlGUI;
@@ -52,12 +52,12 @@ void ach::Text::render()
      * style
 
 ***********************************************************************/
-void ach::Text::style(ach::MenuTheme *theme)
+void ach::Text::style(ach::TextStyle *theme)
 {
 	setFont(theme->font);
 	setColor(theme->color);
 	setSize(theme->size);
-	setSpacing(theme->spacing);
+	setSpacing(theme->spacing());
 }
 
 

@@ -1,13 +1,15 @@
 {
     "Default": {
         "Credits": {
-            "Font": {
-                "Size": 24
-            }
+            "Size": 24
+        },
+        "Cutscene": {
+            "Font": "DejaVu",
+            "Size": 24
         },
         "Menu": {
-            "Font": {
-                "Name": "DejaVu"
+            "Text": {
+                "Font": "DejaVu"
             }
         }
     }

@@ -1,12 +1,12 @@
 {
-    "font": {
+    "text": {
         "Color": {
             "@attr": {
                 "default": "#FFFFFFFF",
                 "type": "color"
             }
         },
-        "Name": {
+        "Font": {
             "@attr": {
                 "data": "Data.UI.Font",
                 "default": "Fixedsys",

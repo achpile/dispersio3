@@ -56,10 +56,10 @@ float ach::Menu::line(int l)
 ***********************************************************************/
 void ach::Menu::calculate()
 {
-	spacing = theme->spacing + MENU_SPACING;
+	spacing = theme->text->spacing() + MENU_SPACING;
 	offset  = spacing;
 
-	text->setCharacterSize(theme->size);
+	text->setCharacterSize(theme->text->size);
 
 	box->setPosition(pos);
 	box->setSize(sf::Vector2f(padding.x * 2 + offset + width, height));

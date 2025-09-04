@@ -89,14 +89,14 @@ void ach::Status::render()
 ***********************************************************************/
 void ach::Status::style()
 {
-	spacing = theme->menu.spacing + MENU_SPACING;
+	spacing = theme->menu.text->spacing() + MENU_SPACING;
 
-	box->style(&theme->menu);
+	box->style(theme->menu.box);
 	box->setSize(sf::Vector2f(width, 270.0f));
 
-	text->setCharacterSize(theme->menu.size);
-	text->setFont(*theme->menu.font);
-	text->setFillColor(theme->menu.color);
+	text->setCharacterSize(theme->menu.text->size);
+	text->setFont(*theme->menu.text->font);
+	text->setFillColor(theme->menu.text->color);
 }
 
 

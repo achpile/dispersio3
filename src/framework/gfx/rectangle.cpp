@@ -31,9 +31,9 @@ ach::RectangleShape::~RectangleShape()
      * style
 
 ***********************************************************************/
-void ach::RectangleShape::style(ach::MenuTheme *theme)
+void ach::RectangleShape::style(ach::BoxStyle *theme)
 {
-	setFillColor(theme->bg);
+	setFillColor(theme->color);
 	setOutlineColor(theme->border);
 	setRound(theme->round);
 }

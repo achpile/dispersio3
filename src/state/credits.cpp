@@ -37,7 +37,7 @@ ach::StateCredits::~StateCredits()
 ***********************************************************************/
 void ach::StateCredits::update()
 {
-	float offset = tm->get(true) * TEXT_FLOW_SPEED;
+	float offset = tm->get(true) * TEXT_FLOW_CREDITS;
 
 	list_foreach(lines)
 		lines[i]->move(0, -offset);
@@ -201,12 +201,12 @@ void ach::StateCredits::add(sf::String string, ach::CreditsWeight weight)
 {
 	sf::Text *line = new sf::Text();
 
-	line->setFont(*theme->credits.font);
+	line->setFont(*theme->credits->font);
 	line->setString(string);
 	line->setCharacterSize(getSize(weight));
 	line->setPosition(text_align(line, TEXT_FLOW_LEFT, RENDER_LAYER_GUI_X - TEXT_FLOW_LEFT * 2, getAlign(weight)), pos);
 	line->setStyle(getStyle(weight));
-	line->setFillColor(theme->credits.color);
+	line->setFillColor(theme->credits->color);
 
 	pos += getOffset(weight);
 
@@ -236,9 +236,9 @@ int ach::StateCredits::getSize(ach::CreditsWeight weight)
 {
 	switch (weight)
 	{
-		case ach::CreditsWeight::cwTitle : return theme->credits.size * 2;
-		case ach::CreditsWeight::cwHeader: return theme->credits.size * 1.5;
-		case ach::CreditsWeight::cwEntry : return theme->credits.size;
+		case ach::CreditsWeight::cwTitle : return theme->credits->size * 2;
+		case ach::CreditsWeight::cwHeader: return theme->credits->size * 1.5;
+		case ach::CreditsWeight::cwEntry : return theme->credits->size;
 	}
 
 	return 0;

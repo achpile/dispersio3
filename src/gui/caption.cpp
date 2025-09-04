@@ -13,7 +13,7 @@ ach::Caption::Caption(sf::String caption)
 	spr = new sf::Sprite();
 	tex = new sf::RenderTexture();
 
-	sf::Text *text = new sf::Text(caption, *theme->credits.font, theme->credits.size * 2);
+	sf::Text *text = new sf::Text(caption, *theme->credits->font, theme->credits->size * 2);
 
 	text->setFillColor(sf::Color::White);
 	text->setOutlineColor(sf::Color::Black);

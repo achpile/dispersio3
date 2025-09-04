@@ -2,15 +2,15 @@
     "@attr": {
         "type": "object"
     },
-    "Background": {
+    "Border": {
         "@attr": {
-            "default": "#000000",
+            "default": "#00FF00",
             "type": "color"
         }
     },
     "Color": {
         "@attr": {
-            "default": "#00FF00",
+            "default": "#000000",
             "type": "color"
         }
     },

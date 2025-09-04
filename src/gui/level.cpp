@@ -9,7 +9,7 @@
 ach::LevelSelect::LevelSelect(void *_context, ach::Handler _handler)
 {
 	menu     = new ach::Menu(this, callback_level, &theme->menu);
-	text     = new ach::Text(&theme->menu);
+	text     = new ach::Text(theme->menu.text);
 	box      = new ach::RectangleShape();
 	preview  = new ach::RectangleShape();
 
@@ -125,12 +125,12 @@ void ach::LevelSelect::event(sf::Event e)
 ***********************************************************************/
 void ach::LevelSelect::style()
 {
-	spacing = theme->menu.spacing + MENU_SPACING;
+	spacing = theme->menu.text->spacing() + MENU_SPACING;
 
 	menu->style(&theme->menu);
-	box->style(&theme->menu);
-	preview->style(&theme->menu);
-	text->style(&theme->menu);
+	box->style(theme->menu.box);
+	preview->style(theme->menu.box);
+	text->style(theme->menu.text);
 }
 
 

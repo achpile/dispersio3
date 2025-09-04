@@ -1,8 +1,9 @@
 {
-    "Dispersio": {
+    "Dispersio2": {
         "Box": {
-            "Border": "#FF000096",
-            "Color": "#000000"
+            "Border": "#FFFFFF",
+            "Color": "#2F5296",
+            "Round": true
         },
         "Credits": {
             "Size": 24
@@ -11,6 +12,7 @@
             "Size": 24
         },
         "Menu": {
+            "Selector": "☞",
             "Text": {
                 "Size": 19
             }

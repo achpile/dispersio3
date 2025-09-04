@@ -44,12 +44,12 @@ ach::MenuItemSlider::~MenuItemSlider()
 ***********************************************************************/
 void ach::MenuItemSlider::style()
 {
-	box->setSize(sf::Vector2f(menu->theme->spacing * MENU_SLIDER_SIZE, menu->theme->spacing));
-	box->setOrigin(menu->theme->spacing * MENU_SLIDER_SIZE, 0);
-	box->setOutlineColor(menu->theme->color);
+	box->setSize(sf::Vector2f(menu->theme->text->spacing() * MENU_SLIDER_SIZE, menu->theme->text->spacing()));
+	box->setOrigin(menu->theme->text->spacing() * MENU_SLIDER_SIZE, 0);
+	box->setOutlineColor(menu->theme->text->color);
 
-	fill->setOrigin(menu->theme->spacing * MENU_SLIDER_SIZE - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
-	fill->setFillColor(menu->theme->border);
+	fill->setOrigin(menu->theme->text->spacing() * MENU_SLIDER_SIZE - MENU_BOX_SHRINK / 2, - MENU_BOX_SHRINK / 2);
+	fill->setFillColor(menu->theme->box->border);
 }
 
 
@@ -82,7 +82,7 @@ void ach::MenuItemSlider::render(int i)
 	box->setPosition (menu->right(), menu->line(i));
 	fill->setPosition(menu->right(), menu->line(i));
 
-	fill->setSize(sf::Vector2f((menu->theme->spacing * MENU_SLIDER_SIZE - MENU_BOX_SHRINK) * (value - min) / (max - min), menu->theme->spacing - MENU_BOX_SHRINK));
+	fill->setSize(sf::Vector2f((menu->theme->text->spacing() * MENU_SLIDER_SIZE - MENU_BOX_SHRINK) * (value - min) / (max - min), menu->theme->text->spacing() - MENU_BOX_SHRINK));
 
 	rm->draw(box , ach::RenderLayer::rlGUI);
 	rm->draw(fill, ach::RenderLayer::rlGUI);
