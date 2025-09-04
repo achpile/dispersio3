@@ -46,12 +46,22 @@
 
 
 /***********************************************************************
-     * Text flow
+     * Credits
 
 ***********************************************************************/
-#define TEXT_FLOW_CREDITS     50.0f
-#define TEXT_FLOW_CUTSCENE    25.0f
-#define TEXT_FLOW_LEFT        100.0f
+#define CREDITS_SPEED         50.0f
+#define CREDITS_LEFT          100.0f
+
+
+
+/***********************************************************************
+     * Cutscene
+
+***********************************************************************/
+#define CUTSCENE_SPEED        25.0f
+#define CUTSCENE_LEFT         100.0f
+#define CUTSCENE_SPACING      10.0f
+#define CUTSCENE_HEIGHT       400.0f
 
 
 
