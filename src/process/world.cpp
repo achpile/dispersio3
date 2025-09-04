@@ -41,8 +41,6 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 ***********************************************************************/
 ach::ProcessWorld::~ProcessWorld()
 {
-	rm->reset();
-
 	delete map;
 	delete menu;
 	delete message;
@@ -198,10 +196,7 @@ void ach::ProcessWorld::finalize()
 	{
 		case ach::WorldState::wsFadeIn:
 			if (!fader.isActive())
-			{
 				state = ach::WorldState::wsGame;
-				rm->reset();
-			}
 		break;
 
 

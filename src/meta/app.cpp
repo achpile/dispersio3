@@ -104,6 +104,7 @@ void ach::App::update()
 
 	window->clear();
 	rm->clear();
+	rm->reset();
 
 	joystick->update();
 	ctrl->update();
