@@ -115,7 +115,7 @@ void ach::StateMenu::fill()
 {
 	menu->init("UI.Menu.Main.Name");
 
-	if (cache->def)
+	if (cache->isDefault())
 	{
 		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder  (menu, "UI.Menu.Play.Start"          ));
 		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction  (menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:b}", "New", true, "Hard", false)));

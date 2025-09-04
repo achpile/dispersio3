@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::StateGame::StateGame()
 {
-	proc = new ach::ProcessWorld(this, cache->current);
+	create();
 
 	app->mouse(false);
 }
@@ -80,11 +80,30 @@ void ach::StateGame::style()
 
 /***********************************************************************
      * StateGame
+     * create
+
+***********************************************************************/
+void ach::StateGame::create()
+{
+	switch (cache->state)
+	{
+		case ach::LevelState::lsIntro: proc = new ach::ProcessCutscene(this, cache->current->intro); break;
+		case ach::LevelState::lsOutro: proc = new ach::ProcessCutscene(this, cache->current->outro); break;
+		case ach::LevelState::lsLevel: proc = new ach::ProcessWorld   (this, cache->current       ); break;
+	}
+}
+
+
+
+/***********************************************************************
+     * StateGame
      * finish
 
 ***********************************************************************/
 void ach::StateGame::finish()
 {
+	cache->next();
+
 	if (cache->current->finish)
 	{
 		app->stateSet(ach::GameState::gsMenu);
@@ -93,5 +112,5 @@ void ach::StateGame::finish()
 
 	delete proc;
 
-	proc = new ach::ProcessWorld(this, cache->current);
+	create();
 }

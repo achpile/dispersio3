@@ -13,16 +13,24 @@ namespace ach
 	};
 
 
+	enum LevelState
+	{
+		lsIntro,
+		lsLevel,
+		lsOutro
+	};
+
+
 	struct Cache
 	{
-		ach::DataMap   *current;
-		ach::LevelMode  mode;
+		ach::DataMap    *current;
+		ach::LevelMode   mode;
+		ach::LevelState  state;
 
 		json_t *campaign;
 		json_t *cache;
 		json_t *info;
 
-		bool    def;
 		bool    hard;
 		int     deaths;
 		float   playtime;
@@ -37,11 +45,13 @@ namespace ach
 		void store();
 		void reset(bool _hard);
 
+		void next();
 		void select(const char *map, ach::LevelMode _mode);
 		void revert();
 		int  spawn();
 
 		/*  check.cpp  */
+		bool isDefault();
 		bool isRevert();
 		bool isBeaten(const char *level);
 		bool isPossible(ach::LevelMode _mode);

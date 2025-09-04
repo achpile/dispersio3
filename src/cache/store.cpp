@@ -12,7 +12,7 @@ void ach::Cache::goal()
 
 	select(current->next, ach::LevelMode::lmNavigation);
 
-	store();
+	save();
 }
 
 
@@ -26,7 +26,7 @@ void ach::Cache::die()
 {
 	deaths++;
 
-	store();
+	save();
 }
 
 
@@ -40,7 +40,7 @@ void ach::Cache::collect(int id)
 {
 	json_array_append_new(json_object_get(info, "Item"), json_integer(id));
 
-	store();
+	save();
 }
 
 
@@ -54,5 +54,5 @@ void ach::Cache::checkpoint(int id)
 {
 	json_object_set_branch_integer(cache, "Current.Checkpoint", id);
 
-	store();
+	save();
 }
