@@ -24,7 +24,7 @@
         },
         "Flag": {
             "@attr": {
-                "default": "Default",
+                "default": "",
                 "type": "string"
             }
         },

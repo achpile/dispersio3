@@ -107,6 +107,7 @@ void ach::MapObjectNPC::use()
 			world->notify (json_object_get_string(speech, "Text"));
 
 			sm->play(theme->menu.pick);
+			break;
 		}
 }
 

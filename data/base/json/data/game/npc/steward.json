@@ -8,14 +8,14 @@
                     "StewardIntroduced": false
                 },
                 "Flag": "StewardIntroduced",
-                "Text": "StewardIntro"
+                "Text": "Game.Message.StewardIntro"
             },
             {
                 "Check": {
                     "HasMiscMattress": false,
                     "StewardIntroduced": true
                 },
-                "Text": "StewardMattress"
+                "Text": "Game.Message.StewardMattress"
             },
             {
                 "Check": {
@@ -23,13 +23,13 @@
                     "PlacedMattress": false
                 },
                 "Flag": "PlacedMattress",
-                "Text": "StewardPlaces"
+                "Text": "Game.Message.StewardPlace"
             },
             {
                 "Check": {
                     "PlacedMattress": true
                 },
-                "Text": "StewardTip"
+                "Text": "Game.Message.StewardTip"
             }
         ],
         "Wander": true

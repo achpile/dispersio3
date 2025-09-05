@@ -3,7 +3,7 @@
         "Model": "NPCKid2",
         "Speech": [
             {
-                "Text": "KidIntro"
+                "Text": "Game.Message.KidIntro"
             }
         ],
         "Wander": true

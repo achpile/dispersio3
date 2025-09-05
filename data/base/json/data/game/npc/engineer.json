@@ -8,14 +8,14 @@
                     "HasMiscFluxCapacitor": false
                 },
                 "Flag": "EngineerIntroduced",
-                "Text": "EngineerIntro"
+                "Text": "Game.Message.EngineerIntro"
             },
             {
                 "Check": {
                     "EngineerIntroduced": true,
                     "HasMiscFluxCapacitor": false
                 },
-                "Text": "EngineerFlux"
+                "Text": "Game.Message.EngineerFlux"
             },
             {
                 "Check": {
@@ -23,13 +23,13 @@
                     "PlacedFluxCapacitor": false
                 },
                 "Flag": "PlacedFluxCapacitor",
-                "Text": "EngineerPlace"
+                "Text": "Game.Message.EngineerPlace"
             },
             {
                 "Check": {
                     "PlacedFluxCapacitor": true
                 },
-                "Text": "EngineerTip"
+                "Text": "Game.Message.EngineerTip"
             }
         ],
         "Wander": false

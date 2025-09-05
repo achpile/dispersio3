@@ -9,20 +9,20 @@
                     "BeatenForest": true,
                     "BeatenLab": true
                 },
-                "Text": "CaptainPack2"
+                "Text": "Game.Message.CaptainPack2"
             },
             {
                 "Check": {
                     "CaptainIntroduced": false
                 },
                 "Flag": "CaptainIntroduced",
-                "Text": "CaptainIntro"
+                "Text": "Game.Message.CaptainIntro"
             },
             {
                 "Check": {
                     "CaptainIntroduced": true
                 },
-                "Text": "CaptainPack1"
+                "Text": "Game.Message.CaptainPack1"
             }
         ],
         "Wander": true
