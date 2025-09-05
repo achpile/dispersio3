@@ -1,0 +1,7 @@
+{
+    "Engineer": {
+        "Model": "NPCEngineer",
+        "Speech": [],
+        "Wander": false
+    }
+}

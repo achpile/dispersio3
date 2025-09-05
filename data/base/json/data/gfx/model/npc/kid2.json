@@ -1,0 +1,16 @@
+{
+    "NPCKid2": {
+        "Animation": {
+            "Idle": {
+                "End": 3,
+                "Start": 0
+            },
+            "Moving": {
+                "End": -1,
+                "Start": 4
+            }
+        },
+        "Sheet": "NPCKid2",
+        "Type": "moving"
+    }
+}

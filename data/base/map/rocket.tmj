@@ -964,6 +964,50 @@
                  "width":32,
                  "x":320,
                  "y":400
+                }, 
+                {
+                 "height":16,
+                 "id":52,
+                 "name":"Captain",
+                 "rotation":0,
+                 "type":"obj_npc",
+                 "visible":true,
+                 "width":112,
+                 "x":944,
+                 "y":176
+                }, 
+                {
+                 "height":16,
+                 "id":53,
+                 "name":"Kid",
+                 "rotation":0,
+                 "type":"obj_npc",
+                 "visible":true,
+                 "width":128,
+                 "x":608,
+                 "y":176
+                }, 
+                {
+                 "height":16,
+                 "id":54,
+                 "name":"Steward",
+                 "rotation":0,
+                 "type":"obj_npc",
+                 "visible":true,
+                 "width":64,
+                 "x":480,
+                 "y":464
+                }, 
+                {
+                 "height":16,
+                 "id":56,
+                 "name":"Engineer",
+                 "rotation":0,
+                 "type":"obj_npc",
+                 "visible":true,
+                 "width":16,
+                 "x":304,
+                 "y":464
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1234,7 +1278,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":52,
+ "nextobjectid":57,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

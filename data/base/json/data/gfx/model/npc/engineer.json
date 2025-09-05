@@ -1,0 +1,12 @@
+{
+    "NPCEngineer": {
+        "Animation": {
+            "Idle": {
+                "End": 3,
+                "Start": 0
+            }
+        },
+        "Sheet": "NPCEngineer",
+        "Type": "simple"
+    }
+}

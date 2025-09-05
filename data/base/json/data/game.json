@@ -5,6 +5,7 @@
     "Cutscene": "@recursive game/cutscene",
     "Item": "@recursive game/item",
     "Map": "@recursive game/map",
+    "NPC": "@recursive game/npc",
     "Projectile": "@recursive game/projectile",
     "Weapon": "@recursive game/weapon"
 }

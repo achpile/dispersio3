@@ -1,0 +1,7 @@
+{
+    "Steward": {
+        "Model": "NPCKid",
+        "Speech": [],
+        "Wander": true
+    }
+}

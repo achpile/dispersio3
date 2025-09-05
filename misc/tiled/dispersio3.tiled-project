@@ -370,6 +370,19 @@
             ]
         },
         {
+            "color": "#ff9141ac",
+            "drawFill": true,
+            "id": 29,
+            "members": [
+            ],
+            "name": "obj_npc",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ff99c1f1",
             "drawFill": true,
             "id": 6,
