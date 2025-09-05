@@ -29,8 +29,9 @@ namespace ach
 		void select();
 		void box();
 
-		void setModel(const char *_model);
-		void setSheet(const char *_sheet);
+		void setModel(ach::DataModel *_model);
+		void setModel(const char     *_model);
+		void setSheet(const char     *_sheet);
 
 		virtual void reset()           {};
 		virtual void handle()          {};

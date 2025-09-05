@@ -152,14 +152,26 @@ void ach::MapObject::box()
      * setModel
 
 ***********************************************************************/
-void ach::MapObject::setModel(const char *_model)
+void ach::MapObject::setModel(ach::DataModel *_model)
 {
 	if (model)
 		delete model;
 
-	model = new ach::Model(db->getModel(_model));
+	model = new ach::Model(_model);
 
 	phys.resize(model->sheet->size);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * setModel
+
+***********************************************************************/
+void ach::MapObject::setModel(const char *_model)
+{
+	setModel(db->getModel(_model));
 }
 
 

@@ -21,4 +21,6 @@ bool ach::Cache::getFlag(const char *name)
 void ach::Cache::setFlag(const char *name)
 {
 	json_object_setv_branch_boolean(cache, true, "Flags.%s", name);
+
+	save();
 }

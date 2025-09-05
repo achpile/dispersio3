@@ -3,10 +3,12 @@
         "Animation": {
             "Idle": {
                 "End": 3,
+                "Rate": 0.2,
                 "Start": 0
             },
             "Moving": {
                 "End": -1,
+                "Rate": 0.15,
                 "Start": 4
             }
         },
