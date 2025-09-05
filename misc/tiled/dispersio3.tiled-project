@@ -374,6 +374,12 @@
             "drawFill": true,
             "id": 29,
             "members": [
+                {
+                    "name": "Face",
+                    "propertyType": "@direction",
+                    "type": "string",
+                    "value": "left"
+                }
             ],
             "name": "obj_npc",
             "type": "class",

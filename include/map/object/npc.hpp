@@ -6,12 +6,16 @@ namespace ach
 {
 	struct MapObjectNPC : MapObject
 	{
-		ach::DataNPC *base;
+		ach::DataNPC   *base;
+		ach::Direction  face;
+
+		sf::Vector2f    spawn;
 
 
 		 MapObjectNPC(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectNPC();
 
+		void reset();
 		void touch();
 	};
 }

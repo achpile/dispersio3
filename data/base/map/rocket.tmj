@@ -969,6 +969,13 @@
                  "height":16,
                  "id":52,
                  "name":"Captain",
+                 "properties":[
+                        {
+                         "name":"Face",
+                         "propertytype":"@direction",
+                         "type":"string",
+                         "value":"left"
+                        }],
                  "rotation":0,
                  "type":"obj_npc",
                  "visible":true,
@@ -980,6 +987,13 @@
                  "height":16,
                  "id":53,
                  "name":"Kid",
+                 "properties":[
+                        {
+                         "name":"Face",
+                         "propertytype":"@direction",
+                         "type":"string",
+                         "value":"right"
+                        }],
                  "rotation":0,
                  "type":"obj_npc",
                  "visible":true,
@@ -991,6 +1005,13 @@
                  "height":16,
                  "id":54,
                  "name":"Steward",
+                 "properties":[
+                        {
+                         "name":"Face",
+                         "propertytype":"@direction",
+                         "type":"string",
+                         "value":"right"
+                        }],
                  "rotation":0,
                  "type":"obj_npc",
                  "visible":true,
@@ -1002,6 +1023,13 @@
                  "height":16,
                  "id":56,
                  "name":"Engineer",
+                 "properties":[
+                        {
+                         "name":"Face",
+                         "propertytype":"@direction",
+                         "type":"string",
+                         "value":"left"
+                        }],
                  "rotation":0,
                  "type":"obj_npc",
                  "visible":true,

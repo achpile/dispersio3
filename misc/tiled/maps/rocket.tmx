@@ -251,8 +251,16 @@
   <object id="50" name="DecorBed" type="obj_decor" x="640" y="432" width="32" height="16"/>
   <object id="51" name="DecorTimeMachine" type="obj_decor" x="320" y="400" width="32" height="32"/>
   <object id="52" name="Captain" type="obj_npc" x="944" y="176" width="112" height="16"/>
-  <object id="53" name="Kid" type="obj_npc" x="608" y="176" width="128" height="16"/>
-  <object id="54" name="Steward" type="obj_npc" x="480" y="464" width="64" height="16"/>
+  <object id="53" name="Kid" type="obj_npc" x="608" y="176" width="128" height="16">
+   <properties>
+    <property name="Face" propertytype="@direction" value="right"/>
+   </properties>
+  </object>
+  <object id="54" name="Steward" type="obj_npc" x="480" y="464" width="64" height="16">
+   <properties>
+    <property name="Face" propertytype="@direction" value="right"/>
+   </properties>
+  </object>
   <object id="56" name="Engineer" type="obj_npc" x="304" y="464" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="characters"/>
