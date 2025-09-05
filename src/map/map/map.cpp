@@ -167,7 +167,7 @@ void ach::Map::touch(ach::Character* character)
 		return;
 
 	list_foreach(objects)
-		if (objects[i]->phys.rect.intersects(character->phys.rect))
+		if (objects[i]->intersects(character->phys.rect))
 			objects[i]->touch();
 }
 
@@ -184,7 +184,7 @@ void ach::Map::use(ach::Character* character)
 		return;
 
 	list_foreach(objects)
-		if (objects[i]->phys.rect.intersects(character->phys.rect))
+		if (objects[i]->intersects(character->phys.rect))
 		{
 			objects[i]->use();
 			return;

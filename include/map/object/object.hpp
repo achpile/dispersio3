@@ -16,6 +16,10 @@ namespace ach
 		int         id;
 		bool        alive;
 		bool        solid;
+		bool        hidden;
+
+		bool        value;
+		char        flag[STR_LEN_NAME];
 
 
 		         MapObject(ach::ProcessWorld *_world, json_t *obj);
@@ -25,9 +29,12 @@ namespace ach
 		void render();
 
 		bool visible(bool area);
+		bool intersects(sf::FloatRect rect);
 		void process();
 		void select();
 		void box();
+		void check();
+		void load(json_t *obj);
 
 		void setModel(ach::DataModel *_model);
 		void setModel(const char     *_model);

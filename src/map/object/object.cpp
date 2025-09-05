@@ -21,6 +21,8 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 	lines.push_back(new ach::PhysLine(this));
 	lines.push_back(new ach::PhysLine(this));
 
+	load(obj);
+	check();
 	reset();
 }
 
@@ -51,6 +53,9 @@ bool ach::MapObject::update()
 	if (!alive)
 		return true;
 
+	if (hidden)
+		return true;
+
 	if (!visible(true))
 		return true;
 
@@ -70,6 +75,9 @@ bool ach::MapObject::update()
 void ach::MapObject::render()
 {
 	if (!alive)
+		return;
+
+	if (hidden)
 		return;
 
 	if (!visible(false))
@@ -97,12 +105,33 @@ bool ach::MapObject::visible(bool area)
 
 /***********************************************************************
      * MapObject
+     * intersects
+
+***********************************************************************/
+bool ach::MapObject::intersects(sf::FloatRect rect)
+{
+	if (!alive)
+		return false;
+
+	if (hidden)
+		return false;
+
+	return phys.rect.intersects(rect);
+}
+
+
+
+/***********************************************************************
+     * MapObject
      * process
 
 ***********************************************************************/
 void ach::MapObject::process()
 {
 	if (!visible(true))
+		return;
+
+	if (hidden)
 		return;
 
 	handle();
@@ -136,6 +165,9 @@ void ach::MapObject::box()
 	if (!alive)
 		return;
 
+	if (hidden)
+		return;
+
 	lines[0]->set(rect_lt(phys.rect), rect_rt(phys.rect));
 	lines[1]->set(rect_rt(phys.rect), rect_rb(phys.rect));
 	lines[2]->set(rect_rb(phys.rect), rect_lb(phys.rect));
@@ -143,6 +175,38 @@ void ach::MapObject::box()
 
 	list_foreach(lines)
 		world->map->solids.push_back(lines[i]);
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * check
+
+***********************************************************************/
+void ach::MapObject::check()
+{
+	hidden = cache->getFlag(flag) != value;
+}
+
+
+
+/***********************************************************************
+     * MapObject
+     * load
+
+***********************************************************************/
+void ach::MapObject::load(json_t *obj)
+{
+	value   = false;
+	flag[0] = 0;
+
+	if (!json_class(obj, "Check"))
+		return;
+
+	value = json_class_get_boolean(obj, "Check", "Value");
+
+	strncpy(flag, json_class_get_string(obj, "Check", "Flag"), STR_LEN_NAME);
 }
 
 

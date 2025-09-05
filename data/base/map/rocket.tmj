@@ -1116,8 +1116,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
-                             "Value":false
+                             "Flag":"PlacedFluxCapacitor",
+                             "Value":true
                             }
                         }, 
                         {
@@ -1144,8 +1144,8 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
-                             "Value":false
+                             "Flag":"PlacedMattress",
+                             "Value":true
                             }
                         }, 
                         {
@@ -1172,7 +1172,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"PlacedMattress",
                              "Value":false
                             }
                         }, 
@@ -1209,7 +1209,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"PlacedFluxCapacitor",
                              "Value":false
                             }
                         }, 

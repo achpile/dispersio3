@@ -240,16 +240,44 @@
   <object id="47" name="LevelNavigator" type="obj_level" x="912" y="160" width="16" height="32"/>
   <object id="48" name="LevelTimeMachine" type="obj_level" x="320" y="400" width="32" height="32">
    <properties>
+    <property name="Check" type="class" propertytype="#check">
+     <properties>
+      <property name="Flag" value="PlacedFluxCapacitor"/>
+      <property name="Value" type="bool" value="true"/>
+     </properties>
+    </property>
     <property name="Type" propertytype="@levels" value="replay"/>
    </properties>
   </object>
   <object id="49" name="LevelBed" type="obj_level" x="640" y="432" width="32" height="16">
    <properties>
+    <property name="Check" type="class" propertytype="#check">
+     <properties>
+      <property name="Flag" value="PlacedMattress"/>
+      <property name="Value" type="bool" value="true"/>
+     </properties>
+    </property>
     <property name="Type" propertytype="@levels" value="dream"/>
    </properties>
   </object>
-  <object id="50" name="DecorBed" type="obj_decor" x="640" y="432" width="32" height="16"/>
-  <object id="51" name="DecorTimeMachine" type="obj_decor" x="320" y="400" width="32" height="32"/>
+  <object id="50" name="DecorBed" type="obj_decor" x="640" y="432" width="32" height="16">
+   <properties>
+    <property name="Check" type="class" propertytype="#check">
+     <properties>
+      <property name="Flag" value="PlacedMattress"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="51" name="DecorTimeMachine" type="obj_decor" x="320" y="400" width="32" height="32">
+   <properties>
+    <property name="Check" type="class" propertytype="#check">
+     <properties>
+      <property name="Flag" value="PlacedFluxCapacitor"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
   <object id="52" name="Captain" type="obj_npc" x="944" y="176" width="112" height="16"/>
   <object id="53" name="Kid" type="obj_npc" x="608" y="176" width="128" height="16">
    <properties>
