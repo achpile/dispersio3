@@ -8,8 +8,15 @@ namespace ach
 	{
 		ach::DataNPC   *base;
 		ach::Direction  face;
+		ach::Timer      wait;
 
 		sf::Vector2f    spawn;
+
+		bool  walking;
+
+		float dest;
+		float min;
+		float max;
 
 
 		 MapObjectNPC(ach::ProcessWorld *_world, json_t *obj);
