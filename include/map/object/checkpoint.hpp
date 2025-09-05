@@ -6,8 +6,9 @@ namespace ach
 {
 	struct MapObjectCheckpoint : MapObject
 	{
-		ach::Map       *map;
-		ach::DataSound *sfx;
+		ach::Map        *map;
+		ach::DataSound  *sfx;
+		ach::Difficulty  difficulty;
 
 		bool active;
 

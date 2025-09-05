@@ -8,9 +8,13 @@
 ***********************************************************************/
 ach::MapObjectCheckpoint::MapObjectCheckpoint(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	sfx = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Checkpoint"));
+	sfx        = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Checkpoint"));
+	difficulty = pair_get_enum(json_property_get_string(obj, "Difficulty"), pairDifficulty);
 
 	setModel(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Checkpoint"));
+
+	if (difficulty < cache->difficulty)
+		alive = false;
 
 	deactivate();
 }
