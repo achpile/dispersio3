@@ -35,6 +35,14 @@
             }
         }
     },
+    "Speed": {
+        "@attr": {
+            "default": 30.0,
+            "max": 1000.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    },
     "Wander": {
         "@attr": {
             "default": false,

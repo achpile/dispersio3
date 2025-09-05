@@ -41,11 +41,39 @@ ach::MapObjectNPC::~MapObjectNPC()
 ***********************************************************************/
 void ach::MapObjectNPC::reset()
 {
-	walking        = false;
 	phys.pos       = spawn;
 	model->scale.x = dir_sign(face);
 
-	model->setAnimation("Idle");
+	stop();
+}
+
+
+
+/***********************************************************************
+     * MapObjectNPC
+     * handle
+
+***********************************************************************/
+void ach::MapObjectNPC::handle()
+{
+	if (!base->wander)
+		return;
+
+	if (walking)
+	{
+		phys.update();
+
+		if ((phys.vel.x < 0.0f && phys.pos.x <= dest) || (phys.vel.x > 0.0f && phys.pos.x >= dest))
+		{
+			phys.pos.x = dest;
+			stop();
+		}
+	}
+	else
+	{
+		if (!wait.update())
+			move();
+	}
 }
 
 
@@ -58,4 +86,41 @@ void ach::MapObjectNPC::reset()
 void ach::MapObjectNPC::touch()
 {
 	select();
+}
+
+
+
+/***********************************************************************
+     * MapObjectNPC
+     * move
+
+***********************************************************************/
+void ach::MapObjectNPC::move()
+{
+	dest = random_float(min, max);
+
+	if (fabs(dest - phys.pos.x) < 16.0f)
+		move();
+
+	walking    = true;
+	phys.vel.x = math_sign(dest - phys.pos.x) * base->speed;
+
+	model->setAnimation("Moving");
+	model->scale.x = math_sign(phys.vel.x);
+}
+
+
+
+/***********************************************************************
+     * MapObjectNPC
+     * stop
+
+***********************************************************************/
+void ach::MapObjectNPC::stop()
+{
+	walking    = false;
+	phys.vel.x = 0.0f;
+
+	model->setAnimation("Idle");
+	wait.set(random_float(3.0f, 5.0f));
 }

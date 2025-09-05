@@ -10,6 +10,7 @@ namespace ach
 
 		json_t         *speech;
 		bool            wander;
+		float           speed;
 
 
 		 DataNPC(json_t *obj);

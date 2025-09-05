@@ -23,7 +23,11 @@ namespace ach
 		~MapObjectNPC();
 
 		void reset();
+		void handle();
 		void touch();
+
+		void move();
+		void stop();
 	};
 }
 

@@ -10,7 +10,8 @@ ach::DataNPC::DataNPC(json_t *obj)
 {
 	model  = db->getModel(json_object_get_string(obj, "Model"));
 	wander = json_object_get_boolean(obj, "Wander");
-	speech = json_object_get(obj, "Speech");
+	speed  = json_object_get_real   (obj, "Speed" );
+	speech = json_object_get        (obj, "Speech");
 }
 
 
