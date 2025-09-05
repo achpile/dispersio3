@@ -27,6 +27,7 @@ ach::Database::~Database()
 	list_delete(projectile);
 	list_delete(weapon);
 	list_delete(item);
+	list_delete(npc);
 	list_delete(character);
 	list_delete(cutscene);
 	list_delete(map);
@@ -70,6 +71,7 @@ void ach::Database::load()
 	loadContent<ach::DataProjectile>("Game.Projectile", &projectile);
 	loadContent<ach::DataWeapon    >("Game.Weapon"    , &weapon    );
 	loadContent<ach::DataItem      >("Game.Item"      , &item      );
+	loadContent<ach::DataNPC       >("Game.NPC"       , &npc       );
 	loadContent<ach::DataCharacter >("Game.Character" , &character );
 	loadContent<ach::DataCutscene  >("Game.Cutscene"  , &cutscene  );
 	loadContent<ach::DataMap       >("Game.Map"       , &map       );

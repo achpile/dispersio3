@@ -1,0 +1,38 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Model": {
+        "@attr": {
+            "data": "Data.GFX.Model",
+            "default": "default",
+            "type": "link"
+        }
+    },
+    "Speech": {
+        "@attr": {
+            "container": "array",
+            "type": "object"
+        },
+        "Check": {
+            "@attr": {
+                "container": "multi",
+                "default": false,
+                "type": "boolean"
+            }
+        },
+        "Flag": {
+            "@attr": {
+                "default": "Default",
+                "type": "string"
+            }
+        },
+        "Text": {
+            "@attr": {
+                "default": "",
+                "type": "string"
+            }
+        }
+    }
+}

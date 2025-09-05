@@ -9,6 +9,7 @@
     "Item": "@include game/item.json",
     "Map": "@include game/map.json",
     "Meta": "@include game/meta.json",
+    "NPC": "@include game/npc.json",
     "Projectile": "@include game/projectile.json",
     "Weapon": "@include game/weapon.json"
 }
