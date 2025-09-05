@@ -9,6 +9,7 @@ namespace ach
 		ach::DataModel *model;
 
 		json_t         *speech;
+		bool            wander;
 
 
 		 DataNPC(json_t *obj);
