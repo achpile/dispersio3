@@ -99,6 +99,8 @@ void ach::StateGame::create()
 		case ach::LevelState::lsOutro: proc = new ach::ProcessCutscene(this, cache->current->outro); break;
 		case ach::LevelState::lsLevel: proc = new ach::ProcessWorld   (this, cache->current       ); break;
 	}
+
+	cache->process = proc;
 }
 
 

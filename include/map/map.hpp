@@ -38,6 +38,7 @@ namespace ach
 		void renderTiles();
 
 		void process();
+		void refresh();
 		void viewport();
 
 		void touch(ach::Character* character);

@@ -22,7 +22,7 @@ ach::MapObject::MapObject(ach::ProcessWorld *_world, json_t *obj)
 	lines.push_back(new ach::PhysLine(this));
 
 	load(obj);
-	check();
+	refresh();
 	reset();
 }
 
@@ -181,10 +181,10 @@ void ach::MapObject::box()
 
 /***********************************************************************
      * MapObject
-     * check
+     * refresh
 
 ***********************************************************************/
-void ach::MapObject::check()
+void ach::MapObject::refresh()
 {
 	hidden = cache->getFlag(flag) != value;
 }

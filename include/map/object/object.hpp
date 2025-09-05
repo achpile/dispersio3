@@ -33,7 +33,7 @@ namespace ach
 		void process();
 		void select();
 		void box();
-		void check();
+		void refresh();
 		void load(json_t *obj);
 
 		void setModel(ach::DataModel *_model);

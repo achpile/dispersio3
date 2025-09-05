@@ -107,6 +107,20 @@ void ach::ProcessWorld::event(sf::Event e)
 
 /***********************************************************************
      * ProcessWorld
+     * translate
+
+***********************************************************************/
+void ach::ProcessWorld::translate()
+{
+	menu->translate();
+	status->translate();
+	selection->translate();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
      * style
 
 ***********************************************************************/
@@ -122,14 +136,12 @@ void ach::ProcessWorld::style()
 
 /***********************************************************************
      * ProcessWorld
-     * translate
+     * refresh
 
 ***********************************************************************/
-void ach::ProcessWorld::translate()
+void ach::ProcessWorld::refresh()
 {
-	menu->translate();
-	status->translate();
-	selection->translate();
+	map->refresh();
 }
 
 

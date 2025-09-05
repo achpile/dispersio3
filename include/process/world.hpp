@@ -39,6 +39,8 @@ namespace ach
 		void translate();
 		void style();
 
+		void refresh();
+
 		void prepare();
 		void finalize();
 		void fill();

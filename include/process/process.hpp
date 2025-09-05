@@ -20,6 +20,8 @@ namespace ach
 
 		virtual void translate()      {};
 		virtual void style()          {};
+
+		virtual void refresh()        {};
 	};
 }
 

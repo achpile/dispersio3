@@ -9,6 +9,7 @@
 ach::Cache::Cache()
 {
 	current  = NULL;
+	process  = NULL;
 	finished = false;
 
 	campaign = json_object_get_branch(dm->data, "Data.Game.Campaign");
@@ -49,6 +50,7 @@ void ach::Cache::update()
 void ach::Cache::init()
 {
 	current  = NULL;
+	process  = NULL;
 	finished = false;
 	mode     = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode);
 
@@ -84,6 +86,8 @@ void ach::Cache::save()
 ***********************************************************************/
 void ach::Cache::reset(bool _hard)
 {
+	current = NULL;
+	process = NULL;
 	cache   = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);

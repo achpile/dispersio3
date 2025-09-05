@@ -6,6 +6,7 @@ namespace ach
 	struct Map;
 	struct MapObject;
 	struct Character;
+	struct Process;
 	struct ProcessWorld;
 	struct StateGame;
 }

@@ -24,6 +24,7 @@ namespace ach
 	struct Cache
 	{
 		ach::DataMap    *current;
+		ach::Process    *process;
 		ach::LevelMode   mode;
 		ach::LevelState  state;
 
