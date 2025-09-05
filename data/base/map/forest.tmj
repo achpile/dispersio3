@@ -415,6 +415,13 @@
                  "height":16,
                  "id":11,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -448,6 +455,13 @@
                  "height":16,
                  "id":18,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -459,6 +473,13 @@
                  "height":16,
                  "id":25,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -588,6 +609,13 @@
                  "height":16,
                  "id":51,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -632,6 +660,13 @@
                  "height":16,
                  "id":69,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -686,6 +721,13 @@
                  "height":16,
                  "id":84,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -761,6 +803,13 @@
                  "height":16,
                  "id":102,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,
@@ -772,6 +821,13 @@
                  "height":16,
                  "id":111,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Difficulty",
+                         "propertytype":"@difficulty",
+                         "type":"string",
+                         "value":"normal"
+                        }],
                  "rotation":0,
                  "type":"obj_checkpoint",
                  "visible":true,

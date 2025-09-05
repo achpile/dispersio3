@@ -11,6 +11,18 @@
     ],
     "propertyTypes": [
         {
+            "id": 31,
+            "name": "@difficulty",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "easy",
+                "normal",
+                "hard"
+            ],
+            "valuesAsFlags": false
+        },
+        {
             "id": 1,
             "name": "@direction",
             "storageType": "string",
@@ -301,6 +313,12 @@
             "drawFill": true,
             "id": 5,
             "members": [
+                {
+                    "name": "Difficulty",
+                    "propertyType": "@difficulty",
+                    "type": "string",
+                    "value": "normal"
+                }
             ],
             "name": "obj_checkpoint",
             "type": "class",
