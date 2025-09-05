@@ -38,6 +38,7 @@ void ach::Cache::cutscene()
 ***********************************************************************/
 void ach::Cache::finish()
 {
+	beat(current->name);
 	json_object_set_boolean(info, "Finished", true);
 
 	if (current->finish)

@@ -66,6 +66,7 @@ namespace ach
 		void die();
 		void collect(int id);
 		void checkpoint(int id);
+		void beat(const char *map);
 
 		const char* getError(ach::LevelMode _mode);
 		const char* getErrorDream();

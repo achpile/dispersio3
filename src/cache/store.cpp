@@ -40,3 +40,19 @@ void ach::Cache::checkpoint(int id)
 
 	save();
 }
+
+
+
+/***********************************************************************
+     * Cache
+     * beat
+
+***********************************************************************/
+void ach::Cache::beat(const char *map)
+{
+	char flag[STR_LEN_NAME];
+
+	snprintf(flag, STR_LEN_NAME, "Beaten%s", map);
+
+	setFlag(flag);
+}
