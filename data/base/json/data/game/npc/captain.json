@@ -1,7 +1,30 @@
 {
     "Captain": {
         "Model": "NPCGirl",
-        "Speech": [],
+        "Speech": [
+            {
+                "Check": {
+                    "BeatenCave": true,
+                    "BeatenFactory": true,
+                    "BeatenForest": true,
+                    "BeatenLab": true
+                },
+                "Text": "CaptainPack2"
+            },
+            {
+                "Check": {
+                    "CaptainIntroduced": false
+                },
+                "Flag": "CaptainIntroduced",
+                "Text": "CaptainIntro"
+            },
+            {
+                "Check": {
+                    "CaptainIntroduced": true
+                },
+                "Text": "CaptainPack1"
+            }
+        ],
         "Wander": true
     }
 }

@@ -20,10 +20,10 @@
     "MapList": [
         "MilitaryBase",
         "LaunchPad",
-        "Forest",
-        "Factory",
         "Cave",
         "Lab",
+        "Forest",
+        "Factory",
         "Temple",
         "Boss",
         "Duck",

@@ -1,7 +1,11 @@
 {
     "Kid": {
         "Model": "NPCKid2",
-        "Speech": [],
+        "Speech": [
+            {
+                "Text": "KidIntro"
+            }
+        ],
         "Wander": true
     }
 }

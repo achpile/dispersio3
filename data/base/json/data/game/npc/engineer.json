@@ -1,7 +1,37 @@
 {
     "Engineer": {
         "Model": "NPCEngineer",
-        "Speech": [],
+        "Speech": [
+            {
+                "Check": {
+                    "EngineerIntroduced": false,
+                    "HasMiscFluxCapacitor": false
+                },
+                "Flag": "EngineerIntroduced",
+                "Text": "EngineerIntro"
+            },
+            {
+                "Check": {
+                    "EngineerIntroduced": true,
+                    "HasMiscFluxCapacitor": false
+                },
+                "Text": "EngineerFlux"
+            },
+            {
+                "Check": {
+                    "HasMiscFluxCapacitor": true,
+                    "PlacedFluxCapacitor": false
+                },
+                "Flag": "PlacedFluxCapacitor",
+                "Text": "EngineerPlace"
+            },
+            {
+                "Check": {
+                    "PlacedFluxCapacitor": true
+                },
+                "Text": "EngineerTip"
+            }
+        ],
         "Wander": false
     }
 }

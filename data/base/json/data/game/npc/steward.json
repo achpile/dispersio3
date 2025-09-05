@@ -1,7 +1,37 @@
 {
     "Steward": {
         "Model": "NPCKid",
-        "Speech": [],
+        "Speech": [
+            {
+                "Check": {
+                    "HasMiscMattress": false,
+                    "StewardIntroduced": false
+                },
+                "Flag": "StewardIntroduced",
+                "Text": "StewardIntro"
+            },
+            {
+                "Check": {
+                    "HasMiscMattress": false,
+                    "StewardIntroduced": true
+                },
+                "Text": "StewardMattress"
+            },
+            {
+                "Check": {
+                    "HasMiscMattress": true,
+                    "PlacedMattress": false
+                },
+                "Flag": "PlacedMattress",
+                "Text": "StewardPlaces"
+            },
+            {
+                "Check": {
+                    "PlacedMattress": true
+                },
+                "Text": "StewardTip"
+            }
+        ],
         "Wander": true
     }
 }
