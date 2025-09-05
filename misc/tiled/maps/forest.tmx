@@ -386,11 +386,19 @@
 </data>
  </layer>
  <objectgroup id="4" name="objects">
-  <object id="11" type="obj_checkpoint" x="784" y="160" width="16" height="16"/>
+  <object id="11" type="obj_checkpoint" x="784" y="160" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="15" name="Bag" type="obj_points" x="1344" y="160" width="16" height="16"/>
   <object id="16" name="Bag" type="obj_points" x="1216" y="64" width="16" height="16"/>
   <object id="18" type="obj_checkpoint" x="1104" y="304" width="16" height="16"/>
-  <object id="25" type="obj_checkpoint" x="736" y="384" width="16" height="16"/>
+  <object id="25" type="obj_checkpoint" x="736" y="384" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="30" name="Bag" type="obj_points" x="440" y="400" width="16" height="16"/>
   <object id="31" name="Bag" type="obj_points" x="416" y="496" width="16" height="16"/>
   <object id="33" name="BlockDirt" type="block_fragile" x="544" y="736" width="16" height="16"/>
@@ -403,7 +411,11 @@
   <object id="59" name="Bag" type="obj_points" x="320" y="528" width="16" height="16"/>
   <object id="60" name="FreshenerMushroom" type="obj_item" x="40" y="448" width="16" height="16"/>
   <object id="68" name="Bag" type="obj_points" x="48" y="816" width="16" height="16"/>
-  <object id="69" type="obj_checkpoint" x="128" y="912" width="16" height="16"/>
+  <object id="69" type="obj_checkpoint" x="128" y="912" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="75" name="MovingWood" type="block_moving" x="192" y="912" width="32" height="160">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -415,7 +427,11 @@
    </properties>
   </object>
   <object id="81" name="Bag" type="obj_points" x="688" y="976" width="16" height="16"/>
-  <object id="84" type="obj_checkpoint" x="1168" y="1040" width="16" height="16"/>
+  <object id="84" type="obj_checkpoint" x="1168" y="1040" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="85" name="MovingWood" type="block_moving" x="832" y="976" width="32" height="112">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">

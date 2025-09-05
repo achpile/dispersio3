@@ -393,8 +393,16 @@
   <object id="14" name="BlockGrass" type="block_fragile" x="528" y="1072" width="16" height="16"/>
   <object id="15" name="BlockGrass" type="block_fragile" x="592" y="1072" width="16" height="16"/>
   <object id="16" name="BlockGrass" type="block_fragile" x="640" y="1040" width="16" height="16"/>
-  <object id="21" type="obj_checkpoint" x="720" y="1024" width="16" height="16"/>
-  <object id="25" type="obj_checkpoint" x="864" y="784" width="16" height="16"/>
+  <object id="21" type="obj_checkpoint" x="720" y="1024" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
+  <object id="25" type="obj_checkpoint" x="864" y="784" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="32" type="obj_checkpoint" x="1720" y="736" width="16" height="16"/>
   <object id="33" type="trigger_goal" x="2080" y="688" width="64" height="96"/>
   <object id="43" name="DecorTorch" type="obj_decor" x="1616" y="624" width="16" height="16"/>
@@ -408,7 +416,11 @@
   <object id="61" name="DecorTorch" type="obj_decor" x="1568" y="432" width="16" height="16"/>
   <object id="62" name="DecorTorch" type="obj_decor" x="1824" y="480" width="16" height="16"/>
   <object id="63" name="Key1" type="obj_item" x="1568" y="464" width="16" height="16"/>
-  <object id="66" type="obj_checkpoint" x="1264" y="1008" width="16" height="16"/>
+  <object id="66" type="obj_checkpoint" x="1264" y="1008" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="67" name="DecorWater" type="obj_decor" x="1184" y="1016" width="32" height="16">
    <properties>
     <property name="Foreground" type="bool" value="true"/>
@@ -455,7 +467,11 @@
   <object id="150" name="BlockSlabBrown" type="block_fragile" x="2064" y="240" width="16" height="16"/>
   <object id="151" name="BlockSlabBrown" type="block_fragile" x="2016" y="240" width="16" height="16"/>
   <object id="152" name="BlockSlabBrown" type="block_fragile" x="1968" y="240" width="16" height="16"/>
-  <object id="165" type="obj_checkpoint" x="1864" y="192" width="16" height="16"/>
+  <object id="165" type="obj_checkpoint" x="1864" y="192" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="173" type="obj_checkpoint" x="1456" y="144" width="16" height="16"/>
   <object id="196" name="DecorTorch" type="obj_decor" x="1744" y="208" width="16" height="16"/>
   <object id="197" name="DecorTorch" type="obj_decor" x="1648" y="208" width="16" height="16"/>
@@ -471,7 +487,11 @@
     <property name="Speed" type="float" value="75"/>
    </properties>
   </object>
-  <object id="212" type="obj_checkpoint" x="1184" y="352" width="16" height="16"/>
+  <object id="212" type="obj_checkpoint" x="1184" y="352" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="213" name="DecorTorch" type="obj_decor" x="1232" y="336" width="16" height="16"/>
   <object id="214" name="DecorTorch" type="obj_decor" x="1328" y="336" width="16" height="16"/>
   <object id="215" name="DecorTorch" type="obj_decor" x="1472" y="432" width="16" height="16"/>

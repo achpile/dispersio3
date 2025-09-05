@@ -353,7 +353,11 @@
     <property name="Offset" type="float" value="2"/>
    </properties>
   </object>
-  <object id="17" type="obj_checkpoint" x="400" y="1072" width="16" height="16"/>
+  <object id="17" type="obj_checkpoint" x="400" y="1072" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="19" name="BlockYokuConcrete" type="block_yoku" x="896" y="1040" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="1"/>
@@ -367,7 +371,11 @@
     <property name="Offset" type="float" value="0"/>
    </properties>
   </object>
-  <object id="28" type="obj_checkpoint" x="808" y="1072" width="16" height="16"/>
+  <object id="28" type="obj_checkpoint" x="808" y="1072" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="30" name="MovingMetal" type="block_moving" x="1040" y="1008" width="32" height="112">
    <properties>
     <property name="Moving" type="class" propertytype="#moving">
@@ -467,7 +475,11 @@
   </object>
   <object id="83" name="Bag" type="obj_points" x="1248" y="672" width="16" height="16"/>
   <object id="84" name="Bag" type="obj_points" x="1312" y="672" width="16" height="16"/>
-  <object id="102" type="obj_checkpoint" x="1472" y="624" width="16" height="16"/>
+  <object id="102" type="obj_checkpoint" x="1472" y="624" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="106" name="BlockYokuConcrete" type="block_yoku" x="1488" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="12"/>
@@ -618,7 +630,11 @@
    </properties>
   </object>
   <object id="162" name="Bag" type="obj_points" x="560" y="384" width="16" height="16"/>
-  <object id="168" type="obj_checkpoint" x="736" y="400" width="16" height="16"/>
+  <object id="168" type="obj_checkpoint" x="736" y="400" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="169" name="BlockYokuConcreteHMid" type="block_yoku" x="432" y="496" width="16" height="16">
    <properties>
     <property name="Cooldown" type="float" value="0.4"/>
@@ -702,7 +718,11 @@
     <property name="Speed" type="float" value="75"/>
    </properties>
   </object>
-  <object id="189" type="obj_checkpoint" x="784" y="144" width="16" height="16"/>
+  <object id="189" type="obj_checkpoint" x="784" y="144" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="195" name="DecorPropellerH" type="obj_decor" x="1104" y="192" width="16" height="64"/>
   <object id="196" type="trigger_wind" x="816" y="192" width="288" height="64">
    <properties>

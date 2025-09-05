@@ -316,7 +316,11 @@
 </data>
  </layer>
  <objectgroup id="4" name="objects">
-  <object id="10" type="obj_checkpoint" x="416" y="1072" width="16" height="16"/>
+  <object id="10" type="obj_checkpoint" x="416" y="1072" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="19" name="Bag" type="obj_points" x="256" y="976" width="16" height="16"/>
   <object id="20" name="Bag" type="obj_points" x="336" y="976" width="16" height="16"/>
   <object id="25" type="obj_checkpoint" x="816" y="1040" width="16" height="16"/>
@@ -341,7 +345,11 @@
   <object id="64" name="BlockConcrete" type="block_fragile" x="1280" y="720" width="16" height="16"/>
   <object id="65" name="BlockConcrete" type="block_fragile" x="1232" y="720" width="16" height="16"/>
   <object id="70" name="GameF1" type="obj_item" x="1440" y="736" width="16" height="16"/>
-  <object id="72" type="obj_checkpoint" x="736" y="816" width="16" height="16"/>
+  <object id="72" type="obj_checkpoint" x="736" y="816" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="91" type="obj_checkpoint" x="704" y="592" width="16" height="16"/>
   <object id="103" name="BlockConcreteBarLeft" type="block_fragile" x="560" y="512" width="16" height="16"/>
   <object id="104" name="BlockConcreteBarRight" type="block_fragile" x="576" y="512" width="16" height="16"/>
@@ -358,7 +366,11 @@
     <property name="Spawn" type="float" value="0"/>
    </properties>
   </object>
-  <object id="155" type="obj_checkpoint" x="736" y="352" width="16" height="16"/>
+  <object id="155" type="obj_checkpoint" x="736" y="352" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="easy"/>
+   </properties>
+  </object>
   <object id="178" type="obj_checkpoint" x="1088" y="256" width="16" height="16"/>
   <object id="179" name="MovingMetal" type="block_moving" x="976" y="176" width="112" height="16">
    <properties>

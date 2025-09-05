@@ -420,7 +420,7 @@
                          "name":"Difficulty",
                          "propertytype":"@difficulty",
                          "type":"string",
-                         "value":"normal"
+                         "value":"easy"
                         }],
                  "rotation":0,
                  "type":"obj_checkpoint",
@@ -478,7 +478,7 @@
                          "name":"Difficulty",
                          "propertytype":"@difficulty",
                          "type":"string",
-                         "value":"normal"
+                         "value":"easy"
                         }],
                  "rotation":0,
                  "type":"obj_checkpoint",
@@ -665,7 +665,7 @@
                          "name":"Difficulty",
                          "propertytype":"@difficulty",
                          "type":"string",
-                         "value":"normal"
+                         "value":"easy"
                         }],
                  "rotation":0,
                  "type":"obj_checkpoint",
@@ -726,7 +726,7 @@
                          "name":"Difficulty",
                          "propertytype":"@difficulty",
                          "type":"string",
-                         "value":"normal"
+                         "value":"easy"
                         }],
                  "rotation":0,
                  "type":"obj_checkpoint",
