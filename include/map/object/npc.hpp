@@ -25,6 +25,7 @@ namespace ach
 		void reset();
 		void handle();
 		void touch();
+		void use();
 
 		void move();
 		void stop();
