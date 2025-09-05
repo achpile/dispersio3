@@ -29,6 +29,8 @@ namespace ach
 
 		void move();
 		void stop();
+
+		bool check(json_t *flags);
 	};
 }
 

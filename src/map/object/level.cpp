@@ -47,4 +47,6 @@ void ach::MapObjectLevel::use()
 {
 	if (cache->isPossible(type)) world->select(type);
 	else                         world->notify(cache->getError(type));
+
+	sm->play(theme->menu.pick);
 }

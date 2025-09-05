@@ -356,6 +356,12 @@ void ach::ProcessWorld::select(ach::LevelMode mode)
 ***********************************************************************/
 void ach::ProcessWorld::notify(const char *msg)
 {
+	if (!msg)
+		return;
+
+	if (!strlen(msg))
+		return;
+
 	state = ach::WorldState::wsMessage;
 
 	message->setString(lm->get(msg));

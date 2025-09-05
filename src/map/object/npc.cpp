@@ -97,6 +97,17 @@ void ach::MapObjectNPC::touch()
 ***********************************************************************/
 void ach::MapObjectNPC::use()
 {
+	json_t *speech;
+	size_t  index;
+
+	json_array_foreach(base->speech, index, speech)
+		if (check(json_object_get(speech, "Check")))
+		{
+			cache->setFlag(json_object_get_string(speech, "Flag"));
+			world->notify (json_object_get_string(speech, "Text"));
+
+			sm->play(theme->menu.pick);
+		}
 }
 
 
@@ -134,4 +145,23 @@ void ach::MapObjectNPC::stop()
 
 	model->setAnimation("Idle");
 	wait.set(random_float(3.0f, 5.0f));
+}
+
+
+
+/***********************************************************************
+     * MapObjectNPC
+     * check
+
+***********************************************************************/
+bool ach::MapObjectNPC::check(json_t *flags)
+{
+	json_t     *value;
+	const char *flag;
+
+	json_object_foreach(flags, flag, value)
+		if (cache->getFlag(flag) != json_is_true(value))
+			return false;
+
+	return true;
 }

@@ -8,6 +8,12 @@
 ***********************************************************************/
 bool ach::Cache::getFlag(const char *name)
 {
+	if (!name)
+		return false;
+
+	if (!strlen(name))
+		return false;
+
 	return json_object_getv_branch_boolean(cache, "Flags.%s", name);
 }
 
@@ -20,6 +26,12 @@ bool ach::Cache::getFlag(const char *name)
 ***********************************************************************/
 void ach::Cache::setFlag(const char *name)
 {
+	if (!name)
+		return;
+
+	if (!strlen(name))
+		return;
+
 	json_object_setv_branch_boolean(cache, true, "Flags.%s", name);
 
 	save();
