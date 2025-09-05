@@ -47,15 +47,20 @@
             "type": "boolean"
         }
     },
+    "Difficulty": {
+        "@attr": {
+            "default": "easy",
+            "enum": [
+                "easy",
+                "normal",
+                "hard"
+            ],
+            "type": "enum"
+        }
+    },
     "Flags": {
         "@attr": {
             "container": "multi",
-            "default": false,
-            "type": "boolean"
-        }
-    },
-    "Hard": {
-        "@attr": {
             "default": false,
             "type": "boolean"
         }

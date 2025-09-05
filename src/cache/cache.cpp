@@ -49,14 +49,15 @@ void ach::Cache::update()
 ***********************************************************************/
 void ach::Cache::init()
 {
-	current  = NULL;
-	process  = NULL;
-	finished = false;
-	mode     = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode);
+	current    = NULL;
+	process    = NULL;
+	finished   = false;
 
-	deaths   = json_object_get_branch_integer(cache, "Stats.Deaths");
-	playtime = json_object_get_branch_real   (cache, "Stats.Time");
-	hard     = json_object_get_boolean       (cache, "Hard");
+	mode       = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode );
+	difficulty = pair_get_enum(json_object_get_string       (cache, "Difficulty"  ), pairDifficulty);
+
+	deaths     = json_object_get_branch_integer(cache, "Stats.Deaths");
+	playtime   = json_object_get_branch_real   (cache, "Stats.Time");
 
 	pick(json_object_get_branch_string(cache, "Current.Map"), mode, isDefault());
 }
@@ -84,7 +85,7 @@ void ach::Cache::save()
      * reset
 
 ***********************************************************************/
-void ach::Cache::reset(bool _hard)
+void ach::Cache::reset(ach::Difficulty _difficulty)
 {
 	current = NULL;
 	process = NULL;
@@ -92,7 +93,7 @@ void ach::Cache::reset(bool _hard)
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
-	json_object_set_boolean      (cache, "Hard"       , _hard);
+	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
 }
 
 

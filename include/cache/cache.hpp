@@ -4,6 +4,14 @@
 
 namespace ach
 {
+	enum Difficulty
+	{
+		Easy   = 0,
+		Normal = 1,
+		Hard   = 2
+	};
+
+
 	enum LevelMode
 	{
 		lmDream,
@@ -25,6 +33,7 @@ namespace ach
 	{
 		ach::DataMap    *current;
 		ach::Process    *process;
+		ach::Difficulty  difficulty;
 		ach::LevelMode   mode;
 		ach::LevelState  state;
 
@@ -32,7 +41,6 @@ namespace ach
 		json_t *cache;
 		json_t *info;
 
-		bool    hard;
 		bool    finished;
 		int     deaths;
 		float   playtime;
@@ -44,7 +52,7 @@ namespace ach
 		void update();
 		void init();
 		void save();
-		void reset(bool _hard);
+		void reset(ach::Difficulty _difficulty);
 		int  spawn();
 
 		/*  check.cpp  */

@@ -8,6 +8,12 @@
             "type": "string"
         }
     },
+    "Easy": {
+        "@attr": {
+            "default": "Easy",
+            "type": "string"
+        }
+    },
     "Hard": {
         "@attr": {
             "default": "Hard",

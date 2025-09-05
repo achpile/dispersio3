@@ -2,6 +2,21 @@
 
 
 /***********************************************************************
+     * pairDifficulty
+
+***********************************************************************/
+ach::Pair<ach::Difficulty> pairDifficulty[] =
+{
+	{.num = ach::Difficulty::Easy  , .str = "easy"  },
+	{.num = ach::Difficulty::Normal, .str = "normal"},
+	{.num = ach::Difficulty::Hard  , .str = "hard"  },
+
+	{.num = ach::Difficulty::Easy  , .str = NULL    },
+};
+
+
+
+/***********************************************************************
      * pairLevelMode
 
 ***********************************************************************/
