@@ -51,6 +51,28 @@
         },
         {
             "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 30,
+            "members": [
+                {
+                    "name": "Flag",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "Value",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "#check",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
             "drawFill": false,
             "id": 20,
             "members": [
@@ -292,6 +314,13 @@
             "id": 8,
             "members": [
                 {
+                    "name": "Check",
+                    "propertyType": "#check",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
                     "name": "FlipX",
                     "type": "bool",
                     "value": false
@@ -339,14 +368,7 @@
             "name": "obj_item",
             "type": "class",
             "useAs": [
-                "property",
-                "map",
-                "layer",
                 "object",
-                "tile",
-                "tileset",
-                "wangcolor",
-                "wangset",
                 "project"
             ]
         },
@@ -355,6 +377,13 @@
             "drawFill": true,
             "id": 28,
             "members": [
+                {
+                    "name": "Check",
+                    "propertyType": "#check",
+                    "type": "class",
+                    "value": {
+                    }
+                },
                 {
                     "name": "Type",
                     "propertyType": "@levels",
@@ -470,13 +499,7 @@
             "name": "trigger_goal",
             "type": "class",
             "useAs": [
-                "map",
-                "layer",
                 "object",
-                "tile",
-                "tileset",
-                "wangcolor",
-                "wangset",
                 "project"
             ]
         },

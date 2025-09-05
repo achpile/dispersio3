@@ -417,6 +417,16 @@
                  "name":"DecorRocketMain",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1076,6 +1086,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1102,6 +1122,16 @@
                  "id":135,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1130,6 +1160,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1156,6 +1196,16 @@
                  "id":137,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1184,6 +1234,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1210,6 +1270,16 @@
                  "id":139,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1238,6 +1308,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1264,6 +1344,16 @@
                  "id":141,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1292,6 +1382,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1318,6 +1418,16 @@
                  "id":143,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1346,6 +1456,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1372,6 +1492,16 @@
                  "id":145,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1400,6 +1530,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1426,6 +1566,16 @@
                  "id":147,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1454,6 +1604,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1480,6 +1640,16 @@
                  "id":149,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1508,6 +1678,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1534,6 +1714,16 @@
                  "id":151,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1913,6 +2103,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1939,6 +2139,16 @@
                  "id":203,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1967,6 +2177,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1993,6 +2213,16 @@
                  "id":205,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2021,6 +2251,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -2047,6 +2287,16 @@
                  "id":207,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2075,6 +2325,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -2101,6 +2361,16 @@
                  "id":209,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2129,6 +2399,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -2155,6 +2435,16 @@
                  "id":211,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2183,6 +2473,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -2209,6 +2509,16 @@
                  "id":213,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2237,6 +2547,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -2263,6 +2583,16 @@
                  "id":215,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",

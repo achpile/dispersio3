@@ -417,6 +417,16 @@
                  "name":"DecorRocketMain",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -556,6 +566,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -582,6 +602,16 @@
                  "id":44,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -610,6 +640,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -636,6 +676,16 @@
                  "id":46,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -664,6 +714,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -691,6 +751,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -717,6 +787,16 @@
                  "id":49,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -756,6 +836,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -782,6 +872,16 @@
                  "id":62,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -832,6 +932,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -858,6 +968,16 @@
                  "id":68,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -964,6 +1084,16 @@
                  "name":"DecorWater",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -990,6 +1120,16 @@
                  "id":116,
                  "name":"DecorWater",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1040,6 +1180,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1066,6 +1216,16 @@
                  "id":143,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1116,6 +1276,16 @@
                  "id":148,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1234,6 +1404,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1261,6 +1441,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1287,6 +1477,16 @@
                  "id":198,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1358,6 +1558,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1385,6 +1595,16 @@
                  "name":"DecorTorch",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1411,6 +1631,16 @@
                  "id":215,
                  "name":"DecorTorch",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",

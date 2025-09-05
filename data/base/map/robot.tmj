@@ -524,6 +524,16 @@
                  "name":"DecorOrb",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false

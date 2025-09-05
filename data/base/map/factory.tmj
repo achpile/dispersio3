@@ -345,6 +345,16 @@
                  "name":"DecorRocketMain",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -977,6 +987,16 @@
                  "name":"DecorPropellerH",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1003,6 +1023,16 @@
                  "id":67,
                  "name":"DecorPropellerH",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1625,6 +1655,16 @@
                  "name":"DecorPropellerH",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":true
@@ -1651,6 +1691,16 @@
                  "id":125,
                  "name":"DecorPropellerH",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -2356,6 +2406,16 @@
                  "id":195,
                  "name":"DecorPropellerH",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3220,6 +3280,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3246,6 +3316,16 @@
                  "id":235,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3274,6 +3354,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3300,6 +3390,16 @@
                  "id":237,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3328,6 +3428,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3354,6 +3464,16 @@
                  "id":239,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3382,6 +3502,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3408,6 +3538,16 @@
                  "id":241,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3436,6 +3576,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3462,6 +3612,16 @@
                  "id":243,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3490,6 +3650,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -3516,6 +3686,16 @@
                  "id":245,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -3544,6 +3724,16 @@
                  "id":246,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",

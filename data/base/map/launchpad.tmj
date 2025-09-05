@@ -1327,6 +1327,16 @@
                  "name":"DecorRocketEngine",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1353,6 +1363,16 @@
                  "id":226,
                  "name":"DecorRocketMain",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -1381,6 +1401,16 @@
                  "name":"DecorRocketEngine",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -1407,6 +1437,16 @@
                  "id":228,
                  "name":"DecorRocketEngine",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",

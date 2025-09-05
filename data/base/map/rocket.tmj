@@ -269,6 +269,16 @@
                  "name":"DecorSignExit",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -295,6 +305,16 @@
                  "id":11,
                  "name":"DecorSignExit",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -323,6 +343,16 @@
                  "name":"DecorWallFan",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -349,6 +379,16 @@
                  "id":13,
                  "name":"DecorWallFan",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -377,6 +417,16 @@
                  "name":"DecorRocketEngineSide",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -403,6 +453,16 @@
                  "id":25,
                  "name":"DecorRocketEngineSide",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -431,6 +491,16 @@
                  "name":"DecorRocketEngineSide",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -457,6 +527,16 @@
                  "id":27,
                  "name":"DecorRocketEngineSide",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -485,6 +565,16 @@
                  "name":"DecorRocketEngineSide",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -511,6 +601,16 @@
                  "id":29,
                  "name":"DecorRocketEngineSide",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -539,6 +639,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -565,6 +675,16 @@
                  "id":31,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -593,6 +713,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -619,6 +749,16 @@
                  "id":33,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -647,6 +787,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -673,6 +823,16 @@
                  "id":35,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -701,6 +861,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -727,6 +897,16 @@
                  "id":37,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -755,6 +935,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -781,6 +971,16 @@
                  "id":39,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -809,6 +1009,16 @@
                  "name":"DecorRocketWing",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"FlipX",
                          "type":"bool",
                          "value":false
@@ -835,6 +1045,16 @@
                  "id":41,
                  "name":"DecorRocketWing",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -863,6 +1083,16 @@
                  "name":"LevelNavigator",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"Type",
                          "propertytype":"@levels",
                          "type":"string",
@@ -880,6 +1110,16 @@
                  "id":48,
                  "name":"LevelTimeMachine",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"Type",
                          "propertytype":"@levels",
@@ -899,6 +1139,16 @@
                  "name":"LevelBed",
                  "properties":[
                         {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
                          "name":"Type",
                          "propertytype":"@levels",
                          "type":"string",
@@ -916,6 +1166,16 @@
                  "id":50,
                  "name":"DecorBed",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
@@ -943,6 +1203,16 @@
                  "id":51,
                  "name":"DecorTimeMachine",
                  "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
                         {
                          "name":"FlipX",
                          "type":"bool",
