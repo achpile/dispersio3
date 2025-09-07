@@ -1306,6 +1306,17 @@
                  "width":16,
                  "x":304,
                  "y":464
+                }, 
+                {
+                 "height":32,
+                 "id":57,
+                 "name":"Cabinet",
+                 "rotation":0,
+                 "type":"obj_arcade",
+                 "visible":true,
+                 "width":16,
+                 "x":432,
+                 "y":112
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1576,7 +1587,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":57,
+ "nextobjectid":58,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

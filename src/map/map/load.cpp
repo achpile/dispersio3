@@ -239,6 +239,7 @@ void ach::Map::loadObjects(json_t *layer)
 		     if (!strcmp(json_object_get_string(obj, "type"), "obj_decor"      )) objects.push_back(new ach::MapObjectDecor      (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_door"       )) objects.push_back(new ach::MapObjectDoor       (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_level"      )) objects.push_back(new ach::MapObjectLevel      (world, obj));
+		else if (!strcmp(json_object_get_string(obj, "type"), "obj_arcade"     )) objects.push_back(new ach::MapObjectArcade     (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_checkpoint" )) objects.push_back(new ach::MapObjectCheckpoint (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_points"     )) objects.push_back(new ach::MapObjectPoints     (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "obj_item"       )) objects.push_back(new ach::MapObjectItem       (world, obj));

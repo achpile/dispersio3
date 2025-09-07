@@ -13,6 +13,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 	player    = new ach::Character(this, map->base->player, map->findMapSpawn(cache->spawn()));
 	message   = new ach::Message(500.0f);
 	status    = new ach::Status();
+	arcade    = new ach::Cabinet();
 	selection = new ach::LevelSelect(this, handler_game_pick);
 	menu      = new ach::Menu(this, NULL, &theme->menu);
 
@@ -45,6 +46,7 @@ ach::ProcessWorld::~ProcessWorld()
 	delete menu;
 	delete message;
 	delete status;
+	delete arcade;
 	delete selection;
 }
 
@@ -98,6 +100,7 @@ void ach::ProcessWorld::event(sf::Event e)
 		case ach::WorldState::wsFadeIn:
 		case ach::WorldState::wsFadeOut:
 		case ach::WorldState::wsMessage:
+		case ach::WorldState::wsArcade:
 		case ach::WorldState::wsGame:
 		break;
 	}
@@ -187,6 +190,12 @@ void ach::ProcessWorld::prepare()
 		break;
 
 
+		case ach::WorldState::wsArcade:
+			tm->pause();
+			arcade->update();
+		break;
+
+
 		case ach::WorldState::wsGame:
 			cache->update();
 			map->update();
@@ -240,6 +249,14 @@ void ach::ProcessWorld::finalize()
 				app->mouse(false);
 				state = ach::WorldState::wsGame;
 			}
+		break;
+
+
+		case ach::WorldState::wsArcade:
+			arcade->render();
+
+			if (arcade->active())
+				state = ach::WorldState::wsGame;
 		break;
 
 
@@ -342,6 +359,20 @@ void ach::ProcessWorld::pause()
 
 	app->mouse(true);
 	status->update();
+}
+
+
+
+/***********************************************************************
+     * ProcessWorld
+     * play
+
+***********************************************************************/
+void ach::ProcessWorld::play()
+{
+	state = ach::WorldState::wsArcade;
+
+	arcade->init();
 }
 
 

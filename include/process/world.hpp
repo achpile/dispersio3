@@ -11,6 +11,7 @@ namespace ach
 		wsMessage,
 		wsPause,
 		wsSelect,
+		wsArcade,
 		wsGame
 	};
 
@@ -22,6 +23,7 @@ namespace ach
 		ach::Message     *message;
 		ach::Status      *status;
 		ach::LevelSelect *selection;
+		ach::Cabinet     *arcade;
 		ach::Menu        *menu;
 
 		ach::WorldState   state;
@@ -50,6 +52,7 @@ namespace ach
 		void revert();
 		void warp(const char *map, const char *mode);
 		void pause();
+		void play();
 		void select(ach::LevelMode mode);
 		void notify(const char *msg);
 	};

@@ -83,6 +83,8 @@
 #include "character/weapon.hpp"
 #include "character/character.hpp"
 
+#include "arcade/arcade.hpp"
+
 #include "gui/caption.hpp"
 #include "gui/selector.hpp"
 #include "gui/message.hpp"
@@ -90,12 +92,14 @@
 #include "gui/item.hpp"
 #include "gui/status.hpp"
 #include "gui/level.hpp"
+#include "gui/cabinet.hpp"
 
 #include "map/object/pair.hpp"
 #include "map/object/object.hpp"
 #include "map/object/decor.hpp"
 #include "map/object/door.hpp"
 #include "map/object/level.hpp"
+#include "map/object/arcade.hpp"
 #include "map/object/goal.hpp"
 #include "map/object/water.hpp"
 #include "map/object/wind.hpp"

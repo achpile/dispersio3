@@ -309,6 +309,19 @@
             ]
         },
         {
+            "color": "#ff63452c",
+            "drawFill": true,
+            "id": 32,
+            "members": [
+            ],
+            "name": "obj_arcade",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffdc8add",
             "drawFill": true,
             "id": 5,
