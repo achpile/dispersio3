@@ -255,7 +255,7 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsArcade:
 			arcade->render();
 
-			if (arcade->active())
+			if (!arcade->active())
 				state = ach::WorldState::wsGame;
 		break;
 
