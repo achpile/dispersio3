@@ -106,4 +106,19 @@
 #define PARTICLE_SPLASH_SIZE  2.0f
 #define PARTICLE_WIND_DENSITY 0.00163f
 
+
+
+/***********************************************************************
+     * Arcade
+
+***********************************************************************/
+#define ARCADE_SIZE           256
+#define ARCADE_SQUARE         10
+
+#define ARCADE_BORDER_WIDTH   250
+#define ARCADE_BORDER_HEIGHT  200
+
+#define ARCADE_OFFSET_X       3
+#define ARCADE_OFFSET_Y       53
+
 #endif

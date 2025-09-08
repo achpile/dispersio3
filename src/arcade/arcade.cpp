@@ -9,6 +9,23 @@
 ach::Arcade::Arcade()
 {
 	active = true;
+	state  = ach::ArcadeState::Title;
+
+	tex    = new sf::RenderTexture();
+	spr    = new sf::Sprite();
+	border = new ach::RectangleShape(sf::Vector2f(ARCADE_BORDER_WIDTH, ARCADE_BORDER_HEIGHT));
+
+	border->style(theme->menu.box);
+	border->setPosition(sf::Vector2f(ARCADE_OFFSET_X - 1, ARCADE_OFFSET_Y - 1));
+	border->setFillColor(sf::Color::Transparent);
+	border->setOutlineThickness(1);
+
+	tex->create(ARCADE_SIZE, ARCADE_SIZE);
+	tex->setRepeated(false);
+	tex->setActive(true);
+	tex->setSmooth(false);
+
+	spr->setTexture(tex->getTexture());
 }
 
 
@@ -20,6 +37,9 @@ ach::Arcade::Arcade()
 ***********************************************************************/
 ach::Arcade::~Arcade()
 {
+	delete tex;
+	delete spr;
+	delete border;
 }
 
 

@@ -4,8 +4,36 @@
 
 namespace ach
 {
+	enum ArcadeState
+	{
+		Title,
+		Play,
+		GameOver
+	};
+
+
+	enum ArcadeGame
+	{
+		BrickOut,
+		F1,
+		Hexagon,
+		Snake,
+		Simon,
+		Tetris
+	};
+
+
 	struct Arcade
 	{
+		ach::ArcadeState     state;
+		ach::RectangleShape *border;
+
+		sf::RectangleShape  *square;
+
+		sf::RenderTexture   *tex;
+		sf::Sprite          *spr;
+
+		int  score;
 		bool active;
 
 
