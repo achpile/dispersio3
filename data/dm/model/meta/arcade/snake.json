@@ -2,6 +2,13 @@
     "@attr": {
         "type": "object"
     },
+    "Clear": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeBrickOutClear",
+            "type": "link"
+        }
+    },
     "Eat": {
         "@attr": {
             "data": "Data.SFX",

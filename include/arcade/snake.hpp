@@ -13,6 +13,7 @@ namespace ach
 		ach::Direction      next;
 
 		sf::SoundBuffer    *eat;
+		sf::SoundBuffer    *clear;
 		sf::Vector2i        fruit;
 
 

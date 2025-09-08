@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::Snake, select)
 {
-	eat = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"))->snd;
+	eat   = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"  ))->snd;
+	clear = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Clear"))->snd;
 
 	ticker.set(0.1f);
 }
@@ -126,7 +127,8 @@ void ach::ArcadeSnake::gen()
 
 	if (!available.size())
 	{
-		gameover();
+		sm->play(clear);
+		prepare();
 		return;
 	}
 
