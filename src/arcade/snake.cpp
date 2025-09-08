@@ -91,10 +91,10 @@ void ach::ArcadeSnake::draw()
 ***********************************************************************/
 void ach::ArcadeSnake::handle()
 {
-	if (ctrl->keys[ach::caLeft ].pressed) turn(ach::Direction::dLeft );
-	if (ctrl->keys[ach::caRight].pressed) turn(ach::Direction::dRight);
-	if (ctrl->keys[ach::caUp   ].pressed) turn(ach::Direction::dUp   );
-	if (ctrl->keys[ach::caDown ].pressed) turn(ach::Direction::dDown );
+	if (ctrl->keys[ach::ControlAction::caLeft ].pressed) turn(ach::Direction::dLeft );
+	if (ctrl->keys[ach::ControlAction::caRight].pressed) turn(ach::Direction::dRight);
+	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) turn(ach::Direction::dUp   );
+	if (ctrl->keys[ach::ControlAction::caDown ].pressed) turn(ach::Direction::dDown );
 }
 
 
@@ -150,7 +150,7 @@ void ach::ArcadeSnake::tick()
 
 /***********************************************************************
      * ArcadeSnake
-     * check
+     * move
 
 ***********************************************************************/
 bool ach::ArcadeSnake::move()

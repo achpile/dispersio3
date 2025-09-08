@@ -43,6 +43,11 @@ namespace ach
 		void process();
 		void draw();
 		void handle();
+
+		void tick();
+		void clear(bool value);
+		void press(ach::Direction dir);
+		void shape(sf::ConvexShape *shape, sf::Color c, int value);
 	};
 }
 
