@@ -25,10 +25,10 @@ ach::ArcadeNone::~ArcadeNone()
 
 /***********************************************************************
      * ArcadeNone
-     * process
+     * prepare
 
 ***********************************************************************/
-void ach::ArcadeNone::process()
+void ach::ArcadeNone::prepare()
 {
 	reset();
 }

@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeSimon(sf::String _caption);
 		~ArcadeSimon();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

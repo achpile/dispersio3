@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeRace(sf::String _caption);
 		~ArcadeRace();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeHexagon(sf::String _caption);
 		~ArcadeHexagon();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

@@ -61,6 +61,7 @@ namespace ach
 		void reset();
 		void gameover();
 
+		virtual void prepare() {};
 		virtual void process() {};
 		virtual void draw()    {};
 		virtual void handle()  {};

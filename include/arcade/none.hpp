@@ -9,7 +9,7 @@ namespace ach
 		 ArcadeNone(sf::String _caption);
 		~ArcadeNone();
 
-		void process();
+		void prepare();
 	};
 }
 

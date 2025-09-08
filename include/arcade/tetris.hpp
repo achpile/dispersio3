@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeTetris(sf::String _caption);
 		~ArcadeTetris();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeBrickOut(sf::String _caption);
 		~ArcadeBrickOut();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

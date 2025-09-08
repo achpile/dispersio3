@@ -9,6 +9,7 @@ namespace ach
 		 ArcadeSnake(sf::String _caption);
 		~ArcadeSnake();
 
+		void prepare();
 		void process();
 		void draw();
 		void handle();

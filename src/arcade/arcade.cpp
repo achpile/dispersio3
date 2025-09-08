@@ -201,6 +201,8 @@ void ach::Arcade::controls()
 void ach::Arcade::init()
 {
 	state = ach::ArcadeState::Play;
+
+	prepare();
 }
 
 
@@ -224,10 +226,10 @@ void ach::Arcade::quit()
 ***********************************************************************/
 void ach::Arcade::reset()
 {
-	timer.set(1.0f);
-
 	state   = ach::ArcadeState::Title;
 	visible = true;
+
+	timer.set(1.0f);
 }
 
 
@@ -239,10 +241,10 @@ void ach::Arcade::reset()
 ***********************************************************************/
 void ach::Arcade::gameover()
 {
-	timer.set(1.0f);
-
 	state   = ach::ArcadeState::GameOver;
 	visible = true;
+
+	timer.set(1.0f);
 }
 
 
