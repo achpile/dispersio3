@@ -2,6 +2,12 @@
     "@attr": {
         "type": "object"
     },
+    "Cabinet": {
+        "@attr": {
+            "default": "gfx/ui/misc/cabinet.png",
+            "type": "filename"
+        }
+    },
     "Icon": {
         "@attr": {
             "default": "gfx/ui/misc/icon.png",
@@ -11,12 +17,6 @@
     "Logo": {
         "@attr": {
             "default": "gfx/ui/misc/logo.png",
-            "type": "filename"
-        }
-    },
-    "Cabinet": {
-        "@attr": {
-            "default": "gfx/ui/misc/cabinet.png",
             "type": "filename"
         }
     },

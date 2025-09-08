@@ -3,6 +3,7 @@
         "container": "multi",
         "type": "object"
     },
+    "Arcade": "@include theme/text.json",
     "Box": "@include theme/box.json",
     "Credits": "@include theme/text.json",
     "Cutscene": "@include theme/text.json",

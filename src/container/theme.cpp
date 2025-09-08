@@ -32,6 +32,7 @@ void ach::Theme::refresh()
 {
 	ach::DataTheme *base = db->getTheme(settings->getTheme());
 
+	arcade         = &base->arcade;
 	credits        = &base->credits;
 	cutscene       = &base->cutscene;
 	menu.text      = &base->menu.text;

@@ -12,6 +12,10 @@ ach::DataTheme::DataTheme(json_t *obj)
 	box.color       = str_to_color(json_object_get_branch_string(obj, "Box.Color" ));
 	box.round       = json_object_get_branch_boolean(obj, "Box.Round");
 
+	arcade.font     = db->getFont (json_object_get_branch_string(obj, "Arcade.Font" ))->font;
+	arcade.color    = str_to_color(json_object_get_branch_string(obj, "Arcade.Color"));
+	arcade.size     = json_object_get_branch_integer(obj, "Arcade.Size");
+
 	credits.font    = db->getFont (json_object_get_branch_string(obj, "Credits.Font" ))->font;
 	credits.color   = str_to_color(json_object_get_branch_string(obj, "Credits.Color"));
 	credits.size    = json_object_get_branch_integer(obj, "Credits.Size");

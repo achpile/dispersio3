@@ -4,12 +4,6 @@
             "Border": "#FF000096",
             "Color": "#000000"
         },
-        "Credits": {
-            "Size": 24
-        },
-        "Cutscene": {
-            "Size": 24
-        },
         "Menu": {
             "Text": {
                 "Size": 19

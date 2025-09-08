@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::TextStyle *credits;
 		ach::TextStyle *cutscene;
+		ach::TextStyle *arcade;
 		ach::MenuTheme  menu;
 
 

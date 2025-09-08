@@ -6,6 +6,7 @@ namespace ach
 {
 	struct DataTheme : DataContent
 	{
+		ach::TextStyle arcade;
 		ach::TextStyle credits;
 		ach::TextStyle cutscene;
 		ach::BoxStyle  box;

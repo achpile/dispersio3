@@ -15,7 +15,12 @@ ach::Arcade::Arcade()
 
 	tex    = new sf::RenderTexture();
 	spr    = new sf::Sprite();
+	text   = new sf::Text();
 	border = new ach::RectangleShape(sf::Vector2f(ARCADE_BORDER_WIDTH, ARCADE_BORDER_HEIGHT));
+
+	text->setFont(*theme->arcade->font);
+	text->setCharacterSize(theme->arcade->size);
+	text->setFillColor(theme->arcade->color);
 
 	border->style(theme->menu.box);
 	border->setPosition(sf::Vector2f(ARCADE_OFFSET_X - 1, ARCADE_OFFSET_Y - 1));
@@ -41,6 +46,7 @@ ach::Arcade::~Arcade()
 {
 	delete tex;
 	delete spr;
+	delete text;
 	delete border;
 }
 

@@ -15,7 +15,7 @@
         },
         "Size": {
             "@attr": {
-                "default": 16,
+                "default": 24,
                 "max": 32,
                 "min": 12,
                 "type": "integer"

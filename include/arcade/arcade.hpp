@@ -33,6 +33,7 @@ namespace ach
 
 		sf::RenderTexture   *tex;
 		sf::Sprite          *spr;
+		sf::Text            *text;
 
 		int  score;
 		int  high;

@@ -5,12 +5,6 @@
             "Color": "#2F5296",
             "Round": true
         },
-        "Credits": {
-            "Size": 24
-        },
-        "Cutscene": {
-            "Size": 24
-        },
         "Menu": {
             "Selector": "☞",
             "Text": {
