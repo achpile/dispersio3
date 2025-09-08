@@ -1,0 +1,26 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Clear": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeBrickOutClear",
+            "type": "link"
+        }
+    },
+    "Tile": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeBrickOutTile",
+            "type": "link"
+        }
+    },
+    "Wall": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeBrickOutWall",
+            "type": "link"
+        }
+    }
+}

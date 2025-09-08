@@ -1,0 +1,19 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Land": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeTetrisLand",
+            "type": "link"
+        }
+    },
+    "Line": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeTetrisLine",
+            "type": "link"
+        }
+    }
+}

@@ -2,5 +2,9 @@
     "@attr": {
         "type": "object"
     },
-    "Misc": "@include arcade/misc.json"
+    "BrickOut": "@include arcade/brickout.json",
+    "Misc": "@include arcade/misc.json",
+    "Simon": "@include arcade/simon.json",
+    "Snake": "@include arcade/snake.json",
+    "Tetris": "@include arcade/tetris.json"
 }

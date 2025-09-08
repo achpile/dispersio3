@@ -1,0 +1,12 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Eat": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSnakeEat",
+            "type": "link"
+        }
+    }
+}

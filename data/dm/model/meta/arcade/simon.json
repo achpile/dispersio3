@@ -1,0 +1,40 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Correct": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSimonCorrect",
+            "type": "link"
+        }
+    },
+    "Down": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSimonDown",
+            "type": "link"
+        }
+    },
+    "Left": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSimonLeft",
+            "type": "link"
+        }
+    },
+    "Right": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSimonRight",
+            "type": "link"
+        }
+    },
+    "Up": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "ArcadeSimonUp",
+            "type": "link"
+        }
+    }
+}
