@@ -49,11 +49,10 @@ void ach::Cabinet::update()
 ***********************************************************************/
 void ach::Cabinet::render()
 {
-	
-
 	game->render();
 
 	rm->draw(cabinet->spr, ach::RenderLayer::rlGUI);
+	rm->draw(game->spr   , ach::RenderLayer::rlGUI);
 }
 
 

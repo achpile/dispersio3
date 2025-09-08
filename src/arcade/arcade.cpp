@@ -65,7 +65,11 @@ void ach::Arcade::update()
 ***********************************************************************/
 void ach::Arcade::render()
 {
+	tex->clear(sf::Color::Transparent);
+
 	draw();
+
+	tex->display();
 }
 
 
