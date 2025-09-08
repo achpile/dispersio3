@@ -38,7 +38,8 @@ ach::Cabinet::~Cabinet()
 ***********************************************************************/
 void ach::Cabinet::update()
 {
-	game->controls();
+	controls();
+
 	game->update();
 }
 
@@ -66,12 +67,75 @@ void ach::Cabinet::render()
 ***********************************************************************/
 void ach::Cabinet::init()
 {
+	load();
+	select(0);
+}
+
+
+
+/***********************************************************************
+     * Cabinet
+     * load
+
+***********************************************************************/
+void ach::Cabinet::load()
+{
+	index = 0;
+
+	games.clear();
+
+	for (int i = ach::ArcadeGame::None; i < ach::ArcadeGame::Count; i++)
+		//if (cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcade)))
+			games.push_back((ach::ArcadeGame)i);
+
+	if (!games.size())
+		games.push_back(ach::ArcadeGame::None);
+}
+
+
+
+/***********************************************************************
+     * Cabinet
+     * select
+
+***********************************************************************/
+void ach::Cabinet::select(int offset)
+{
+	index += offset;
+
+	if (index >= (int)games.size())
+		index = 0;
+
+	if (index < 0)
+		index = games.size();
+
 	if (game)
 		delete game;
 
-	game = ach::Arcade::create(ach::ArcadeGame::None, false);
+	game = ach::Arcade::create(games[index], games.size() > 1);
 
 	game->spr->setPosition(cabinet->spr->getPosition() + sf::Vector2f(116, 122));
+}
+
+
+
+/***********************************************************************
+     * Cabinet
+     * controls
+
+***********************************************************************/
+void ach::Cabinet::controls()
+{
+	game->controls();
+
+	if (game->state != ach::ArcadeState::Title)
+		return;
+
+	if (games.size() < 2)
+		return;
+
+	if (ctrl->keys[ach::ControlAction::caLeft ].pressed) select(-1);
+	if (ctrl->keys[ach::ControlAction::caRight].pressed) select( 1);
 }
 
 

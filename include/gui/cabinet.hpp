@@ -6,8 +6,12 @@ namespace ach
 {
 	struct Cabinet
 	{
+		std::vector<ach::ArcadeGame> games;
+
 		ach::Arcade *game;
 		ach::Sprite *cabinet;
+
+		int index;
 
 
 		 Cabinet();
@@ -17,6 +21,10 @@ namespace ach
 		void render();
 
 		void init();
+		void load();
+		void select(int offset);
+
+		void controls();
 		bool active();
 	};
 }

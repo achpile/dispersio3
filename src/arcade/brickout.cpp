@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeBrickOut::ArcadeBrickOut(sf::String _caption) : Arcade(_caption)
+ach::ArcadeBrickOut::ArcadeBrickOut(bool select) : Arcade(ach::ArcadeGame::BrickOut, select)
 {
 }
 

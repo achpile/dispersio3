@@ -6,7 +6,7 @@ namespace ach
 {
 	struct ArcadeSimon : Arcade
 	{
-		 ArcadeSimon(sf::String _caption);
+		 ArcadeSimon(bool select);
 		~ArcadeSimon();
 
 		void prepare();

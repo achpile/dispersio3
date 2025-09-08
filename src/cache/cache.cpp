@@ -25,7 +25,8 @@ ach::Cache::Cache()
 ***********************************************************************/
 ach::Cache::~Cache()
 {
-	save();
+	if (!json_object_get_boolean(cache, "Default"))
+		save();
 }
 
 

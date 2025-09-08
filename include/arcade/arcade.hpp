@@ -27,6 +27,7 @@ namespace ach
 
 	struct Arcade
 	{
+		ach::ArcadeGame      game;
 		ach::ArcadeState     state;
 		ach::RectangleShape *border;
 		ach::Timer           timer;
@@ -47,13 +48,14 @@ namespace ach
 		bool visible;
 
 
-		         Arcade(sf::String _caption);
+		         Arcade(ach::ArcadeGame _game, bool select);
 		virtual ~Arcade();
 
 		void update();
 		void render();
 
 		void renderBorder();
+		void renderPress();
 		void renderTitle(sf::String name);
 		void renderScore(sf::String name, int value);
 

@@ -6,7 +6,7 @@ namespace ach
 {
 	struct ArcadeHexagon : Arcade
 	{
-		 ArcadeHexagon(sf::String _caption);
+		 ArcadeHexagon(bool select);
 		~ArcadeHexagon();
 
 		void prepare();

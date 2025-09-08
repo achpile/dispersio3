@@ -6,7 +6,7 @@ namespace ach
 {
 	struct ArcadeNone : Arcade
 	{
-		 ArcadeNone(sf::String _caption);
+		 ArcadeNone(bool select);
 		~ArcadeNone();
 
 		void prepare();

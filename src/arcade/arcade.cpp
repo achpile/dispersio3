@@ -6,14 +6,13 @@
      * constructor
 
 ***********************************************************************/
-ach::Arcade::Arcade(sf::String _caption)
+ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 {
 	score   = 0;
 	high    = 0;
 	active  = true;
-	visible = true;
-	caption = _caption;
-	state   = ach::ArcadeState::Title;
+	game    = _game;
+	caption = str_utf8(pair_get_string(game, pairArcadeName));
 
 	tex     = new sf::RenderTexture();
 	spr     = new sf::Sprite();
@@ -22,8 +21,6 @@ ach::Arcade::Arcade(sf::String _caption)
 
 	pick    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Pick"))->snd;
 	over    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Over"))->snd;
-
-	timer.set(1.0f);
 
 	text->setFont(*theme->arcade->font);
 	text->setCharacterSize(theme->arcade->size);
@@ -41,6 +38,11 @@ ach::Arcade::Arcade(sf::String _caption)
 	tex->setSmooth(false);
 
 	spr->setTexture(tex->getTexture());
+
+	if (select)
+		caption = "< " + caption + " >";
+
+	reset();
 }
 
 
@@ -100,10 +102,9 @@ void ach::Arcade::render()
 	switch (state)
 	{
 		case ach::ArcadeState::Title:
-			if (high)
-				renderScore("HIGH SCORE", high);
-
+			renderScore("HIGH SCORE", high);
 			renderTitle(caption);
+			renderPress();
 		break;
 
 
@@ -140,6 +141,21 @@ void ach::Arcade::renderBorder()
 
 /***********************************************************************
      * Arcade
+     * renderPress
+
+***********************************************************************/
+void ach::Arcade::renderPress()
+{
+	if (game == ach::ArcadeGame::None)
+		return;
+
+	text_draw(text, "press start button", 0, 190, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
+}
+
+
+
+/***********************************************************************
+     * Arcade
      * renderTitle
 
 ***********************************************************************/
@@ -162,6 +178,9 @@ void ach::Arcade::renderTitle(sf::String name)
 ***********************************************************************/
 void ach::Arcade::renderScore(sf::String name, int value)
 {
+	if (game == ach::ArcadeGame::None)
+		return;
+
 	text_draw(text, name + " : " + std::to_string(value), 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
 }
 
@@ -264,22 +283,17 @@ void ach::Arcade::gameover()
 ***********************************************************************/
 ach::Arcade* ach::Arcade::create(ach::ArcadeGame game, bool select)
 {
-	sf::String _caption = pair_get_string(game, pairArcadeName);
-
-	if (select)
-		_caption = "< " + _caption + " >";
-
 	switch (game)
 	{
-		case ach::ArcadeGame::None    : return new ach::ArcadeNone    (_caption);
-		case ach::ArcadeGame::BrickOut: return new ach::ArcadeBrickOut(_caption);
-		case ach::ArcadeGame::Hexagon : return new ach::ArcadeHexagon (_caption);
-		case ach::ArcadeGame::Race    : return new ach::ArcadeRace    (_caption);
-		case ach::ArcadeGame::Snake   : return new ach::ArcadeSnake   (_caption);
-		case ach::ArcadeGame::Simon   : return new ach::ArcadeSimon   (_caption);
-		case ach::ArcadeGame::Tetris  : return new ach::ArcadeTetris  (_caption);
-		case ach::ArcadeGame::Count   : return new ach::ArcadeNone    (_caption);
+		case ach::ArcadeGame::None    : return new ach::ArcadeNone    (select);
+		case ach::ArcadeGame::BrickOut: return new ach::ArcadeBrickOut(select);
+		case ach::ArcadeGame::Hexagon : return new ach::ArcadeHexagon (select);
+		case ach::ArcadeGame::Race    : return new ach::ArcadeRace    (select);
+		case ach::ArcadeGame::Snake   : return new ach::ArcadeSnake   (select);
+		case ach::ArcadeGame::Simon   : return new ach::ArcadeSimon   (select);
+		case ach::ArcadeGame::Tetris  : return new ach::ArcadeTetris  (select);
+		case ach::ArcadeGame::Count   : return new ach::ArcadeNone    (select);
 	}
 
-	return new ach::ArcadeNone(_caption);
+	return new ach::ArcadeNone(select);
 }

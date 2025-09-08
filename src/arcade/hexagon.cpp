@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeHexagon::ArcadeHexagon(sf::String _caption) : Arcade(_caption)
+ach::ArcadeHexagon::ArcadeHexagon(bool select) : Arcade(ach::ArcadeGame::Hexagon, select)
 {
 }
 

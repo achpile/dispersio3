@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeRace::ArcadeRace(sf::String _caption) : Arcade(_caption)
+ach::ArcadeRace::ArcadeRace(bool select) : Arcade(ach::ArcadeGame::Race, select)
 {
 }
 

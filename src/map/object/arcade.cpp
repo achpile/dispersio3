@@ -44,5 +44,4 @@ void ach::MapObjectArcade::touch()
 void ach::MapObjectArcade::use()
 {
 	world->play();
-	sm->play(theme->menu.pick);
 }

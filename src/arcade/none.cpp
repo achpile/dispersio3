@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeNone::ArcadeNone(sf::String _caption) : Arcade(_caption)
+ach::ArcadeNone::ArcadeNone(bool select) : Arcade(ach::ArcadeGame::None, select)
 {
 }
 

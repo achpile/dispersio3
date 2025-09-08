@@ -6,7 +6,7 @@ namespace ach
 {
 	struct ArcadeBrickOut : Arcade
 	{
-		 ArcadeBrickOut(sf::String _caption);
+		 ArcadeBrickOut(bool select);
 		~ArcadeBrickOut();
 
 		void prepare();
