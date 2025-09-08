@@ -186,6 +186,20 @@ void ach::Arcade::renderScore(sf::String name, int value)
 
 /***********************************************************************
      * Arcade
+     * renderShape
+
+***********************************************************************/
+void ach::Arcade::renderShape(sf::Vector2f pos, sf::ConvexShape *shape)
+{
+	shape->setPosition(pos + sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y));
+
+	tex->draw(*shape);
+}
+
+
+
+/***********************************************************************
+     * Arcade
      * renderSquare
 
 ***********************************************************************/

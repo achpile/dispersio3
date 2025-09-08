@@ -4,8 +4,38 @@
 
 namespace ach
 {
+	enum ArcadeSimonStage
+	{
+		Demo,
+		Pause,
+		Input,
+		Correct,
+		Create
+	};
+
+
 	struct ArcadeSimon : Arcade
 	{
+		ach::ArcadeSimonStage  stage;
+		ach::Timer             ticker;
+		ach::Direction         seq[ARCADE_SIMON_SIZE];
+
+		sf::ConvexShape       *shapeUp;
+		sf::ConvexShape       *shapeDown;
+		sf::ConvexShape       *shapeLeft;
+		sf::ConvexShape       *shapeRight;
+
+		sf::SoundBuffer       *sndUp;
+		sf::SoundBuffer       *sndDown;
+		sf::SoundBuffer       *sndLeft;
+		sf::SoundBuffer       *sndRight;
+		sf::SoundBuffer       *sndCorr;
+
+		bool buttons[ach::Direction::dCount];
+		int  len;
+		int  pos;
+
+
 		 ArcadeSimon(bool select);
 		~ArcadeSimon();
 

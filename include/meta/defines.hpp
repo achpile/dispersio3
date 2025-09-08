@@ -124,4 +124,6 @@
 #define ARCADE_SNAKE_X        25
 #define ARCADE_SNAKE_Y        20
 
+#define ARCADE_SIMON_SIZE     12
+
 #endif
