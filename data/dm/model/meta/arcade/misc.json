@@ -2,18 +2,18 @@
     "@attr": {
         "type": "object"
     },
-        "Over": {
-            "@attr": {
-                "data": "Data.SFX",
-                "default": "MenuBack",
-                "type": "link"
-            }
-        },
-        "Pick": {
-            "@attr": {
-                "data": "Data.SFX",
-                "default": "MenuPick",
-                "type": "link"
-            }
+    "Over": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "MenuBack",
+            "type": "link"
         }
+    },
+    "Pick": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "MenuPick",
+            "type": "link"
+        }
+    }
 }
