@@ -48,6 +48,10 @@ namespace ach
 
 		void controls();
 
+		void init();
+		void quit();
+		void reset();
+
 		virtual void process() {};
 		virtual void draw()    {};
 		virtual void handle()  {};

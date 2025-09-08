@@ -25,6 +25,7 @@ ach::Arcade::Arcade()
 	border->style(theme->menu.box);
 	border->setPosition(sf::Vector2f(ARCADE_OFFSET_X - 1, ARCADE_OFFSET_Y - 1));
 	border->setFillColor(sf::Color::Transparent);
+	border->setOutlineColor(sf::Color::White);
 	border->setOutlineThickness(1);
 
 	tex->create(ARCADE_SIZE, ARCADE_SIZE);
@@ -87,7 +88,61 @@ void ach::Arcade::render()
 ***********************************************************************/
 void ach::Arcade::controls()
 {
-	handle();
+	switch (state)
+	{
+		case ach::ArcadeState::Title:
+			if      (ctrl->keys[ach::ControlAction::caJump].pressed) init();
+			else if (ctrl->keys[ach::ControlAction::caMenu].pressed) quit();
+		break;
+
+
+		case ach::ArcadeState::GameOver:
+			if      (ctrl->keys[ach::ControlAction::caJump].pressed) reset();
+			else if (ctrl->keys[ach::ControlAction::caMenu].pressed) quit();
+		break;
+
+
+		case ach::ArcadeState::Play:
+			if      (ctrl->keys[ach::ControlAction::caMenu].pressed) reset();
+			else handle();
+		break;
+	}
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * init
+
+***********************************************************************/
+void ach::Arcade::init()
+{
+	state = ach::ArcadeState::Play;
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * quit
+
+***********************************************************************/
+void ach::Arcade::quit()
+{
+	active = false;
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * reset
+
+***********************************************************************/
+void ach::Arcade::reset()
+{
+	state = ach::ArcadeState::Title;
 }
 
 
