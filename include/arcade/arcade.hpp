@@ -14,13 +14,14 @@ namespace ach
 
 	enum ArcadeGame
 	{
-		None,
+		None = 0,
 		BrickOut,
-		F1,
 		Hexagon,
+		Race,
 		Snake,
 		Simon,
-		Tetris
+		Tetris,
+		Count
 	};
 
 
@@ -28,35 +29,43 @@ namespace ach
 	{
 		ach::ArcadeState     state;
 		ach::RectangleShape *border;
+		ach::Timer           timer;
 
 		sf::RectangleShape  *square;
 
 		sf::RenderTexture   *tex;
 		sf::Sprite          *spr;
 		sf::Text            *text;
+		sf::String           caption;
 
 		int  score;
 		int  high;
 		bool active;
+		bool visible;
 
 
-		         Arcade();
+		         Arcade(sf::String _caption);
 		virtual ~Arcade();
 
 		void update();
 		void render();
+
+		void renderBorder();
+		void renderTitle(sf::String name);
+		void renderScore(sf::String name, int value);
 
 		void controls();
 
 		void init();
 		void quit();
 		void reset();
+		void gameover();
 
 		virtual void process() {};
 		virtual void draw()    {};
 		virtual void handle()  {};
 
-		static ach::Arcade* create();
+		static ach::Arcade* create(ach::ArcadeGame game, bool select);
 	};
 }
 

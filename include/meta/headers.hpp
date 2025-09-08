@@ -85,6 +85,13 @@
 
 #include "arcade/arcade.hpp"
 #include "arcade/pair.hpp"
+#include "arcade/none.hpp"
+#include "arcade/brickout.hpp"
+#include "arcade/hexagon.hpp"
+#include "arcade/race.hpp"
+#include "arcade/snake.hpp"
+#include "arcade/simon.hpp"
+#include "arcade/tetris.hpp"
 
 #include "gui/caption.hpp"
 #include "gui/selector.hpp"
