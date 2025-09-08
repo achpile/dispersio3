@@ -73,12 +73,7 @@ void ach::Arcade::update()
 	{
 		case ach::ArcadeState::Title:
 		case ach::ArcadeState::GameOver:
-			if (!timer.update(true))
-			{
-				timer.reset();
-
-				visible = !visible;
-			}
+			pulse.update(true);
 		break;
 
 
@@ -163,7 +158,7 @@ void ach::Arcade::renderTitle(sf::String name)
 {
 	text->setCharacterSize(theme->arcade->size * 1.5f);
 
-	if (visible)
+	if (pulse.active)
 		text_draw(text, name, 0, 100, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
 
 	text->setCharacterSize(theme->arcade->size);
@@ -181,7 +176,8 @@ void ach::Arcade::renderScore(sf::String name, int value)
 	if (game == ach::ArcadeGame::None)
 		return;
 
-	text_draw(text, name + " : " + std::to_string(value), 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
+	text_draw(text, name                 , 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taLeft , tex);
+	text_draw(text, std::to_string(value), 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
 }
 
 
@@ -252,9 +248,8 @@ void ach::Arcade::quit()
 void ach::Arcade::reset()
 {
 	state   = ach::ArcadeState::Title;
-	visible = true;
 
-	timer.set(1.0f);
+	pulse.set(1.0f);
 	sm->play(pick);
 }
 
@@ -268,9 +263,8 @@ void ach::Arcade::reset()
 void ach::Arcade::gameover()
 {
 	state   = ach::ArcadeState::GameOver;
-	visible = true;
 
-	timer.set(1.0f);
+	pulse.set(1.0f);
 	sm->play(over);
 }
 

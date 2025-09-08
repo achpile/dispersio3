@@ -73,6 +73,7 @@
 #include "framework/control/pair.hpp"
 
 #include "framework/time/timer.hpp"
+#include "framework/time/pulse.hpp"
 #include "framework/time/framer.hpp"
 #include "framework/time/animation.hpp"
 

@@ -30,7 +30,7 @@ namespace ach
 		ach::ArcadeGame      game;
 		ach::ArcadeState     state;
 		ach::RectangleShape *border;
-		ach::Timer           timer;
+		ach::Pulse           pulse;
 
 		sf::SoundBuffer     *pick;
 		sf::SoundBuffer     *over;
@@ -45,7 +45,6 @@ namespace ach
 		int  score;
 		int  high;
 		bool active;
-		bool visible;
 
 
 		         Arcade(ach::ArcadeGame _game, bool select);
