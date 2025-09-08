@@ -7,6 +7,7 @@ namespace ach
 	struct Cabinet
 	{
 		ach::Arcade *game;
+		ach::Sprite *cabinet;
 
 
 		 Cabinet();

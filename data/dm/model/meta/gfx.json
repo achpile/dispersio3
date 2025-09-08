@@ -14,6 +14,12 @@
             "type": "filename"
         }
     },
+    "Cabinet": {
+        "@attr": {
+            "default": "gfx/ui/misc/cabinet.png",
+            "type": "filename"
+        }
+    },
     "Selector": {
         "@attr": {
             "default": "gfx/ui/misc/selector.png",
