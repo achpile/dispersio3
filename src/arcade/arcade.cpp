@@ -8,6 +8,8 @@
 ***********************************************************************/
 ach::Arcade::Arcade()
 {
+	score  = 0;
+	high   = 0;
 	active = true;
 	state  = ach::ArcadeState::Title;
 

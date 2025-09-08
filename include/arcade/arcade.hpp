@@ -14,6 +14,7 @@ namespace ach
 
 	enum ArcadeGame
 	{
+		None,
 		BrickOut,
 		F1,
 		Hexagon,
@@ -34,6 +35,7 @@ namespace ach
 		sf::Sprite          *spr;
 
 		int  score;
+		int  high;
 		bool active;
 
 

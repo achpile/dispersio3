@@ -84,6 +84,7 @@
 #include "character/character.hpp"
 
 #include "arcade/arcade.hpp"
+#include "arcade/pair.hpp"
 
 #include "gui/caption.hpp"
 #include "gui/selector.hpp"

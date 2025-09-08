@@ -49,6 +49,8 @@ void ach::Cabinet::update()
 ***********************************************************************/
 void ach::Cabinet::render()
 {
+	
+
 	game->render();
 
 	rm->draw(cabinet->spr, ach::RenderLayer::rlGUI);
