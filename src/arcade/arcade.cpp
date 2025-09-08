@@ -13,11 +13,17 @@ ach::Arcade::Arcade(sf::String _caption)
 	active  = true;
 	visible = true;
 	caption = _caption;
+	state   = ach::ArcadeState::Title;
 
 	tex     = new sf::RenderTexture();
 	spr     = new sf::Sprite();
 	text    = new sf::Text();
 	border  = new ach::RectangleShape(sf::Vector2f(ARCADE_BORDER_WIDTH, ARCADE_BORDER_HEIGHT));
+
+	pick    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Pick"))->snd;
+	over    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Over"))->snd;
+
+	timer.set(1.0f);
 
 	text->setFont(*theme->arcade->font);
 	text->setCharacterSize(theme->arcade->size);
@@ -35,8 +41,6 @@ ach::Arcade::Arcade(sf::String _caption)
 	tex->setSmooth(false);
 
 	spr->setTexture(tex->getTexture());
-
-	reset();
 }
 
 
@@ -203,6 +207,7 @@ void ach::Arcade::init()
 	state = ach::ArcadeState::Play;
 
 	prepare();
+	sm->play(pick);
 }
 
 
@@ -215,6 +220,7 @@ void ach::Arcade::init()
 void ach::Arcade::quit()
 {
 	active = false;
+	sm->play(over);
 }
 
 
@@ -230,6 +236,7 @@ void ach::Arcade::reset()
 	visible = true;
 
 	timer.set(1.0f);
+	sm->play(pick);
 }
 
 
@@ -245,6 +252,7 @@ void ach::Arcade::gameover()
 	visible = true;
 
 	timer.set(1.0f);
+	sm->play(over);
 }
 
 

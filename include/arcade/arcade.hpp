@@ -31,6 +31,9 @@ namespace ach
 		ach::RectangleShape *border;
 		ach::Timer           timer;
 
+		sf::SoundBuffer     *pick;
+		sf::SoundBuffer     *over;
+
 		sf::RectangleShape  *square;
 
 		sf::RenderTexture   *tex;

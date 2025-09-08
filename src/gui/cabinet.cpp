@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Cabinet::Cabinet()
 {
-	game    = ach::Arcade::create(ach::ArcadeGame::None, false);
+	game    = NULL;
 	cabinet = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Cabinet"), false, false);
 
 	cabinet->spr->setPosition((RENDER_LAYER_GUI_X - cabinet->size.x) / 2.0f, RENDER_LAYER_GUI_Y - cabinet->size.y);
@@ -23,8 +23,10 @@ ach::Cabinet::Cabinet()
 ***********************************************************************/
 ach::Cabinet::~Cabinet()
 {
-	delete game;
 	delete cabinet;
+
+	if (game)
+		delete game;
 }
 
 
@@ -64,7 +66,8 @@ void ach::Cabinet::render()
 ***********************************************************************/
 void ach::Cabinet::init()
 {
-	delete game;
+	if (game)
+		delete game;
 
 	game = ach::Arcade::create(ach::ArcadeGame::None, false);
 

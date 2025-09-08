@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Arcade": "@include meta/arcade.json",
     "GFX": "@include meta/gfx.json",
     "Track": "@include meta/track.json"
 }
