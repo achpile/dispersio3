@@ -57,6 +57,8 @@ namespace ach
 		void renderPress();
 		void renderTitle(sf::String name);
 		void renderScore(sf::String name, int value);
+		void renderSquare(sf::Vector2f pos, sf::Color color);
+		void renderSquare(sf::Vector2i pos, sf::Color color);
 
 		void controls();
 

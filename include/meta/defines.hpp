@@ -121,4 +121,7 @@
 #define ARCADE_OFFSET_X       3
 #define ARCADE_OFFSET_Y       53
 
+#define ARCADE_SNAKE_X        25
+#define ARCADE_SNAKE_Y        20
+
 #endif

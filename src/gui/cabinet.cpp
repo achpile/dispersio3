@@ -107,7 +107,7 @@ void ach::Cabinet::select(int offset)
 		index = 0;
 
 	if (index < 0)
-		index = games.size();
+		index = games.size() - 1;
 
 	if (game)
 		delete game;

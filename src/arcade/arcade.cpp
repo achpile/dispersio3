@@ -18,6 +18,7 @@ ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 	spr     = new sf::Sprite();
 	text    = new sf::Text();
 	border  = new ach::RectangleShape(sf::Vector2f(ARCADE_BORDER_WIDTH, ARCADE_BORDER_HEIGHT));
+	square  = new sf::RectangleShape (sf::Vector2f(ARCADE_SQUARE - 1  , ARCADE_SQUARE - 1   ));
 
 	pick    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Pick"))->snd;
 	over    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Over"))->snd;
@@ -58,6 +59,7 @@ ach::Arcade::~Arcade()
 	delete spr;
 	delete text;
 	delete border;
+	delete square;
 }
 
 
@@ -184,6 +186,33 @@ void ach::Arcade::renderScore(sf::String name, int value)
 
 /***********************************************************************
      * Arcade
+     * renderSquare
+
+***********************************************************************/
+void ach::Arcade::renderSquare(sf::Vector2f pos, sf::Color color)
+{
+	square->setPosition(pos + sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y));
+	square->setFillColor(color);
+
+	tex->draw(*square);
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * renderSquare
+
+***********************************************************************/
+void ach::Arcade::renderSquare(sf::Vector2i pos, sf::Color color)
+{
+	renderSquare(sf::Vector2f(pos.x * ARCADE_SQUARE, pos.y * ARCADE_SQUARE), color);
+}
+
+
+
+/***********************************************************************
+     * Arcade
      * controls
 
 ***********************************************************************/
@@ -247,7 +276,8 @@ void ach::Arcade::quit()
 ***********************************************************************/
 void ach::Arcade::reset()
 {
-	state   = ach::ArcadeState::Title;
+	state = ach::ArcadeState::Title;
+	score = 0;
 
 	pulse.set(1.0f);
 	sm->play(pick);
@@ -262,10 +292,13 @@ void ach::Arcade::reset()
 ***********************************************************************/
 void ach::Arcade::gameover()
 {
-	state   = ach::ArcadeState::GameOver;
+	state = ach::ArcadeState::GameOver;
 
 	pulse.set(1.0f);
 	sm->play(over);
+
+	if (high < score)
+		high = score;
 }
 
 
