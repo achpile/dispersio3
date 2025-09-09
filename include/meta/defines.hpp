@@ -141,4 +141,13 @@
 #define ARCADE_HEXAGON_MIN    185.0f
 #define ARCADE_HEXAGON_STEP   75.0f
 
+#define ARCADE_TETRIS_WIDTH   100
+#define ARCADE_TETRIS_OFFSET  78
+#define ARCADE_TETRIS_X       10
+#define ARCADE_TETRIS_Y       20
+
+#define ARCADE_RACE_LENGTH    25
+#define ARCADE_RACE_OFFSET    1
+#define ARCADE_RACE_STEP      3
+
 #endif
