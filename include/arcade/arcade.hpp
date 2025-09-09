@@ -6,22 +6,22 @@ namespace ach
 {
 	enum ArcadeState
 	{
-		Title,
-		Play,
-		GameOver
+		asTitle,
+		asPlay,
+		asGameOver
 	};
 
 
 	enum ArcadeGame
 	{
-		None = 0,
-		BrickOut,
-		Hexagon,
-		Race,
-		Snake,
-		Simon,
-		Tetris,
-		Count
+		agNone = 0,
+		agBrickOut,
+		agHexagon,
+		agRace,
+		agSnake,
+		agSimon,
+		agTetris,
+		agCount
 	};
 
 

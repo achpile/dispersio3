@@ -7,11 +7,11 @@
 ***********************************************************************/
 ach::Pair<ach::Difficulty> pairDifficulty[] =
 {
-	{.num = ach::Difficulty::Easy  , .str = "easy"  },
-	{.num = ach::Difficulty::Normal, .str = "normal"},
-	{.num = ach::Difficulty::Hard  , .str = "hard"  },
+	{.num = ach::Difficulty::gdEasy  , .str = "easy"  },
+	{.num = ach::Difficulty::gdNormal, .str = "normal"},
+	{.num = ach::Difficulty::gdHard  , .str = "hard"  },
 
-	{.num = ach::Difficulty::Easy  , .str = NULL    },
+	{.num = ach::Difficulty::gdEasy  , .str = NULL    },
 };
 
 

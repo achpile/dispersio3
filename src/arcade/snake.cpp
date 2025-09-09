@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::Snake, select)
+ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::agSnake, select)
 {
 	eat    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"  ))->snd;
 	clear  = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Clear"))->snd;

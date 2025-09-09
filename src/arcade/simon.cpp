@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeSimon::ArcadeSimon(bool select) : Arcade(ach::ArcadeGame::Simon, select)
+ach::ArcadeSimon::ArcadeSimon(bool select) : Arcade(ach::ArcadeGame::agSimon, select)
 {
 	shapeUp    = new sf::ConvexShape(4);
 	shapeDown  = new sf::ConvexShape(4);
@@ -81,7 +81,7 @@ void ach::ArcadeSimon::prepare()
 
 	pos   = 0;
 	len   = 1;
-	stage = ach::ArcadeSimonStage::Demo;
+	stage = ach::ArcadeSimonStage::assDemo;
 
 	clear(false);
 }
@@ -123,7 +123,7 @@ void ach::ArcadeSimon::draw()
 ***********************************************************************/
 void ach::ArcadeSimon::handle()
 {
-	if (stage != ach::ArcadeSimonStage::Input)
+	if (stage != ach::ArcadeSimonStage::assInput)
 		return;
 
 	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) press(ach::Direction::dUp   );
@@ -143,27 +143,27 @@ void ach::ArcadeSimon::tick()
 {
 	switch (stage)
 	{
-		case ach::ArcadeSimonStage::Demo:
-			stage = ach::ArcadeSimonStage::Pause;
+		case ach::ArcadeSimonStage::assDemo:
+			stage = ach::ArcadeSimonStage::assPause;
 
 			ticker.set(0.1f);
 			clear(false);
 		break;
 
 
-		case ach::ArcadeSimonStage::Pause:
-			stage = ach::ArcadeSimonStage::Demo;
+		case ach::ArcadeSimonStage::assPause:
+			stage = ach::ArcadeSimonStage::assDemo;
 			press(seq[pos]);
 		break;
 
 
-		case ach::ArcadeSimonStage::Input:
+		case ach::ArcadeSimonStage::assInput:
 			clear(false);
 		break;
 
 
-		case ach::ArcadeSimonStage::Correct:
-			stage = ach::ArcadeSimonStage::Pause;
+		case ach::ArcadeSimonStage::assCorrect:
+			stage = ach::ArcadeSimonStage::assPause;
 			pos   = 0;
 
 			len++;
@@ -173,14 +173,14 @@ void ach::ArcadeSimon::tick()
 
 			if (len > ARCADE_SIMON_SIZE)
 			{
-				stage = ach::ArcadeSimonStage::Create;
+				stage = ach::ArcadeSimonStage::assCreate;
 
 				sm->play(sndCorr);
 			}
 		break;
 
 
-		case ach::ArcadeSimonStage::Create:
+		case ach::ArcadeSimonStage::assCreate:
 			prepare();
 		break;
 	}
@@ -235,29 +235,29 @@ void ach::ArcadeSimon::press(ach::Direction dir)
 
 	switch (stage)
 	{
-		case ach::ArcadeSimonStage::Demo:
+		case ach::ArcadeSimonStage::assDemo:
 			if (pos == len)
 			{
 				pos   = 0;
-				stage = ach::ArcadeSimonStage::Input;
+				stage = ach::ArcadeSimonStage::assInput;
 			}
 		break;
 
 
-		case ach::ArcadeSimonStage::Input:
+		case ach::ArcadeSimonStage::assInput:
 			score++;
 
 			if (pos == len)
 			{
 				pos   = 0;
-				stage = ach::ArcadeSimonStage::Correct;
+				stage = ach::ArcadeSimonStage::assCorrect;
 			}
 		break;
 
 
-		case ach::ArcadeSimonStage::Create :
-		case ach::ArcadeSimonStage::Pause  :
-		case ach::ArcadeSimonStage::Correct:
+		case ach::ArcadeSimonStage::assCreate :
+		case ach::ArcadeSimonStage::assPause  :
+		case ach::ArcadeSimonStage::assCorrect:
 		break;
 	}
 }

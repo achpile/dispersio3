@@ -84,12 +84,12 @@ void ach::Cabinet::load()
 
 	games.clear();
 
-	for (int i = ach::ArcadeGame::None; i < ach::ArcadeGame::Count; i++)
+	for (int i = ach::ArcadeGame::agNone; i < ach::ArcadeGame::agCount; i++)
 		if (cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcadeFlag)))
 			games.push_back((ach::ArcadeGame)i);
 
 	if (!games.size())
-		games.push_back(ach::ArcadeGame::None);
+		games.push_back(ach::ArcadeGame::agNone);
 }
 
 
@@ -128,7 +128,7 @@ void ach::Cabinet::controls()
 {
 	game->controls();
 
-	if (game->state != ach::ArcadeState::Title)
+	if (game->state != ach::ArcadeState::asTitle)
 		return;
 
 	if (games.size() < 2)

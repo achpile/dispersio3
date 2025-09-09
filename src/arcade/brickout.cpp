@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeBrickOut::ArcadeBrickOut(bool select) : Arcade(ach::ArcadeGame::BrickOut, select)
+ach::ArcadeBrickOut::ArcadeBrickOut(bool select) : Arcade(ach::ArcadeGame::agBrickOut, select)
 {
 	pad    = new sf::RectangleShape(sf::Vector2f(ARCADE_BRICKOUT_P - 1, ARCADE_BRICKOUT_H - 1));
 	tile   = new sf::RectangleShape(sf::Vector2f(ARCADE_BRICKOUT_W - 1, ARCADE_BRICKOUT_H - 1));

@@ -72,13 +72,13 @@ void ach::Arcade::update()
 {
 	switch (state)
 	{
-		case ach::ArcadeState::Title:
-		case ach::ArcadeState::GameOver:
+		case ach::ArcadeState::asTitle:
+		case ach::ArcadeState::asGameOver:
 			pulse.update(true);
 		break;
 
 
-		case ach::ArcadeState::Play:
+		case ach::ArcadeState::asPlay:
 			process();
 		break;
 	}
@@ -97,20 +97,20 @@ void ach::Arcade::render()
 
 	switch (state)
 	{
-		case ach::ArcadeState::Title:
+		case ach::ArcadeState::asTitle:
 			renderScore("HIGH SCORE", high);
 			renderTitle(caption);
 			renderPress();
 		break;
 
 
-		case ach::ArcadeState::GameOver:
+		case ach::ArcadeState::asGameOver:
 			renderScore("HIGH SCORE", high);
 			renderTitle("GAME OVER");
 		break;
 
 
-		case ach::ArcadeState::Play:
+		case ach::ArcadeState::asPlay:
 			renderScore("SCORE", score);
 			renderBorder();
 
@@ -142,7 +142,7 @@ void ach::Arcade::renderBorder()
 ***********************************************************************/
 void ach::Arcade::renderPress()
 {
-	if (game == ach::ArcadeGame::None)
+	if (game == ach::ArcadeGame::agNone)
 		return;
 
 	text_draw(text, "press start button", 0, 190, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
@@ -174,7 +174,7 @@ void ach::Arcade::renderTitle(sf::String name)
 ***********************************************************************/
 void ach::Arcade::renderScore(sf::String name, int value)
 {
-	if (game == ach::ArcadeGame::None)
+	if (game == ach::ArcadeGame::agNone)
 		return;
 
 	text_draw(text, name                 , 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taLeft , tex);
@@ -192,19 +192,19 @@ void ach::Arcade::controls()
 {
 	switch (state)
 	{
-		case ach::ArcadeState::Title:
+		case ach::ArcadeState::asTitle:
 			if      (ctrl->keys[ach::ControlAction::caJump].pressed) init();
 			else if (ctrl->keys[ach::ControlAction::caMenu].pressed) quit();
 		break;
 
 
-		case ach::ArcadeState::GameOver:
+		case ach::ArcadeState::asGameOver:
 			if      (ctrl->keys[ach::ControlAction::caJump].pressed) reset();
 			else if (ctrl->keys[ach::ControlAction::caMenu].pressed) quit();
 		break;
 
 
-		case ach::ArcadeState::Play:
+		case ach::ArcadeState::asPlay:
 			if      (ctrl->keys[ach::ControlAction::caMenu].pressed) reset();
 			else handle();
 		break;
@@ -220,7 +220,7 @@ void ach::Arcade::controls()
 ***********************************************************************/
 void ach::Arcade::init()
 {
-	state = ach::ArcadeState::Play;
+	state = ach::ArcadeState::asPlay;
 
 	prepare();
 	sm->play(pick);
@@ -248,7 +248,7 @@ void ach::Arcade::quit()
 ***********************************************************************/
 void ach::Arcade::reset()
 {
-	state = ach::ArcadeState::Title;
+	state = ach::ArcadeState::asTitle;
 	score = 0;
 
 	pulse.set(1.0f);
@@ -264,7 +264,7 @@ void ach::Arcade::reset()
 ***********************************************************************/
 void ach::Arcade::gameover()
 {
-	state = ach::ArcadeState::GameOver;
+	state = ach::ArcadeState::asGameOver;
 
 	pulse.set(1.0f);
 	sm->play(over);
@@ -284,14 +284,14 @@ ach::Arcade* ach::Arcade::create(ach::ArcadeGame game, bool select)
 {
 	switch (game)
 	{
-		case ach::ArcadeGame::None    : return new ach::ArcadeNone    (select);
-		case ach::ArcadeGame::BrickOut: return new ach::ArcadeBrickOut(select);
-		case ach::ArcadeGame::Hexagon : return new ach::ArcadeHexagon (select);
-		case ach::ArcadeGame::Race    : return new ach::ArcadeRace    (select);
-		case ach::ArcadeGame::Snake   : return new ach::ArcadeSnake   (select);
-		case ach::ArcadeGame::Simon   : return new ach::ArcadeSimon   (select);
-		case ach::ArcadeGame::Tetris  : return new ach::ArcadeTetris  (select);
-		case ach::ArcadeGame::Count   : return new ach::ArcadeNone    (select);
+		case ach::ArcadeGame::agNone    : return new ach::ArcadeNone    (select);
+		case ach::ArcadeGame::agBrickOut: return new ach::ArcadeBrickOut(select);
+		case ach::ArcadeGame::agHexagon : return new ach::ArcadeHexagon (select);
+		case ach::ArcadeGame::agRace    : return new ach::ArcadeRace    (select);
+		case ach::ArcadeGame::agSnake   : return new ach::ArcadeSnake   (select);
+		case ach::ArcadeGame::agSimon   : return new ach::ArcadeSimon   (select);
+		case ach::ArcadeGame::agTetris  : return new ach::ArcadeTetris  (select);
+		case ach::ArcadeGame::agCount   : return new ach::ArcadeNone    (select);
 	}
 
 	return new ach::ArcadeNone(select);

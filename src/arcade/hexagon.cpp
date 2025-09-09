@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeHexagon::ArcadeHexagon(bool select) : Arcade(ach::ArcadeGame::Hexagon, select)
+ach::ArcadeHexagon::ArcadeHexagon(bool select) : Arcade(ach::ArcadeGame::agHexagon, select)
 {
 	center = new sf::CircleShape(ARCADE_HEXAGON_RADIUS, 6);
 	player = new sf::CircleShape(2);

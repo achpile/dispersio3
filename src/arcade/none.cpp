@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeNone::ArcadeNone(bool select) : Arcade(ach::ArcadeGame::None, select)
+ach::ArcadeNone::ArcadeNone(bool select) : Arcade(ach::ArcadeGame::agNone, select)
 {
 }
 

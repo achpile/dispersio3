@@ -6,11 +6,11 @@ namespace ach
 {
 	enum ArcadeSimonStage
 	{
-		Demo,
-		Pause,
-		Input,
-		Correct,
-		Create
+		assDemo,
+		assPause,
+		assInput,
+		assCorrect,
+		assCreate
 	};
 
 

@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::ArcadeRace::ArcadeRace(bool select) : Arcade(ach::ArcadeGame::Race, select)
+ach::ArcadeRace::ArcadeRace(bool select) : Arcade(ach::ArcadeGame::agRace, select)
 {
 	square = new sf::RectangleShape(sf::Vector2f(ARCADE_SQUARE - 1, ARCADE_SQUARE - 1));
 
