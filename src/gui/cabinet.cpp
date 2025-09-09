@@ -85,7 +85,7 @@ void ach::Cabinet::load()
 	games.clear();
 
 	for (int i = ach::ArcadeGame::None; i < ach::ArcadeGame::Count; i++)
-		//if (cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcade)))
+		if (cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcadeFlag)))
 			games.push_back((ach::ArcadeGame)i);
 
 	if (!games.size())
