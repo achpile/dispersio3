@@ -12,6 +12,7 @@ namespace ach
 		ach::Direction      dir;
 		ach::Direction      next;
 
+		sf::RectangleShape *square;
 		sf::SoundBuffer    *eat;
 		sf::SoundBuffer    *clear;
 		sf::Vector2i        fruit;
@@ -29,6 +30,7 @@ namespace ach
 		void tick();
 		bool move();
 		void turn(ach::Direction _dir);
+		void tile(sf::Vector2i pos, sf::Color color);
 	};
 }
 

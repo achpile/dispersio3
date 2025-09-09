@@ -8,8 +8,10 @@
 ***********************************************************************/
 ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::Snake, select)
 {
-	eat   = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"  ))->snd;
-	clear = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Clear"))->snd;
+	eat    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"  ))->snd;
+	clear  = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Clear"))->snd;
+
+	square = new sf::RectangleShape (sf::Vector2f(ARCADE_SQUARE - 1  , ARCADE_SQUARE - 1   ));
 
 	ticker.set(0.1f);
 }
@@ -23,6 +25,7 @@ ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::Snake, sele
 ***********************************************************************/
 ach::ArcadeSnake::~ArcadeSnake()
 {
+	delete square;
 }
 
 
@@ -74,13 +77,13 @@ void ach::ArcadeSnake::process()
 ***********************************************************************/
 void ach::ArcadeSnake::draw()
 {
-	renderSquare(snake[0], sf::Color::Green);
+	tile(snake[0], sf::Color::Green);
 
 	for (unsigned int i = 1; i < snake.size(); i++)
-		renderSquare(snake[i], sf::Color::White);
+		tile(snake[i], sf::Color::White);
 
 	if (pulse.active)
-		renderSquare(fruit, sf::Color::Red);
+		tile(fruit, sf::Color::Red);
 }
 
 
@@ -205,4 +208,19 @@ void ach::ArcadeSnake::turn(ach::Direction _dir)
 		return;
 
 	next = _dir;
+}
+
+
+
+/***********************************************************************
+     * ArcadeSnake
+     * tile
+
+***********************************************************************/
+void ach::ArcadeSnake::tile(sf::Vector2i pos, sf::Color color)
+{
+	square->setPosition(sf::Vector2f(pos.x * ARCADE_SQUARE, pos.y * ARCADE_SQUARE) + offset);
+	square->setFillColor(color);
+
+	tex->draw(*square);
 }

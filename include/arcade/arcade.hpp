@@ -35,12 +35,11 @@ namespace ach
 		sf::SoundBuffer     *pick;
 		sf::SoundBuffer     *over;
 
-		sf::RectangleShape  *square;
-
 		sf::RenderTexture   *tex;
 		sf::Sprite          *spr;
 		sf::Text            *text;
 		sf::String           caption;
+		sf::Vector2f         offset;
 
 		int  score;
 		int  high;
@@ -57,10 +56,6 @@ namespace ach
 		void renderPress();
 		void renderTitle(sf::String name);
 		void renderScore(sf::String name, int value);
-
-		void renderShape (sf::Vector2f pos, sf::ConvexShape *shape);
-		void renderSquare(sf::Vector2f pos, sf::Color color);
-		void renderSquare(sf::Vector2i pos, sf::Color color);
 
 		void controls();
 

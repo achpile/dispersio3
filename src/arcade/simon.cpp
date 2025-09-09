@@ -38,6 +38,11 @@ ach::ArcadeSimon::ArcadeSimon(bool select) : Arcade(ach::ArcadeGame::Simon, sele
 	shapeLeft->setOutlineColor(sf::Color::White);
 	shapeRight->setOutlineColor(sf::Color::White);
 
+	shapeUp->setPosition(offset);
+	shapeDown->setPosition(offset);
+	shapeLeft->setPosition(offset);
+	shapeRight->setPosition(offset);
+
 	sndUp    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Simon.Up"     ))->snd;
 	sndDown  = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Simon.Down"   ))->snd;
 	sndLeft  = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Simon.Left"   ))->snd;
@@ -269,5 +274,5 @@ void ach::ArcadeSimon::shape(sf::ConvexShape *shape, sf::Color c, int value)
 	shape->setFillColor(sf::Color(c.r * value, c.g * value, c.b * value));
 	shape->setOutlineThickness((value == 255) ? 1.0f : 0.0f);
 
-	renderShape(sf::Vector2f(0.0f, 0.0f), shape);
+	tex->draw(*shape);
 }

@@ -12,13 +12,13 @@ ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 	high    = 0;
 	active  = true;
 	game    = _game;
+	offset  = sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y);
 	caption = str_utf8(pair_get_string(game, pairArcadeName));
 
 	tex     = new sf::RenderTexture();
 	spr     = new sf::Sprite();
 	text    = new sf::Text();
 	border  = new ach::RectangleShape(sf::Vector2f(ARCADE_BORDER_WIDTH, ARCADE_BORDER_HEIGHT));
-	square  = new sf::RectangleShape (sf::Vector2f(ARCADE_SQUARE - 1  , ARCADE_SQUARE - 1   ));
 
 	pick    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Pick"))->snd;
 	over    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Misc.Over"))->snd;
@@ -59,7 +59,6 @@ ach::Arcade::~Arcade()
 	delete spr;
 	delete text;
 	delete border;
-	delete square;
 }
 
 
@@ -180,47 +179,6 @@ void ach::Arcade::renderScore(sf::String name, int value)
 
 	text_draw(text, name                 , 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taLeft , tex);
 	text_draw(text, std::to_string(value), 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
-}
-
-
-
-/***********************************************************************
-     * Arcade
-     * renderShape
-
-***********************************************************************/
-void ach::Arcade::renderShape(sf::Vector2f pos, sf::ConvexShape *shape)
-{
-	shape->setPosition(pos + sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y));
-
-	tex->draw(*shape);
-}
-
-
-
-/***********************************************************************
-     * Arcade
-     * renderSquare
-
-***********************************************************************/
-void ach::Arcade::renderSquare(sf::Vector2f pos, sf::Color color)
-{
-	square->setPosition(pos + sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y));
-	square->setFillColor(color);
-
-	tex->draw(*square);
-}
-
-
-
-/***********************************************************************
-     * Arcade
-     * renderSquare
-
-***********************************************************************/
-void ach::Arcade::renderSquare(sf::Vector2i pos, sf::Color color)
-{
-	renderSquare(sf::Vector2f(pos.x * ARCADE_SQUARE, pos.y * ARCADE_SQUARE), color);
 }
 
 
