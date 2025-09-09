@@ -114,7 +114,7 @@ void ach::StateGame::finish()
 {
 	if (cache->finished)
 	{
-		app->stateSet(ach::GameState::gsMenu);
+		app->stateSet(ach::GameState::gsFinish);
 		return;
 	}
 

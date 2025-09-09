@@ -9,8 +9,9 @@ namespace ach
 		gsNone = -1,
 		gsStart = 0,
 		gsMenu,
-		gsCredits,
 		gsGame,
+		gsCredits,
+		gsFinish,
 		gsEnd
 	};
 

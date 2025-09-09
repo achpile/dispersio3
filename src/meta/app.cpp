@@ -220,8 +220,9 @@ void ach::App::stateSwitch()
 		case ach::GameState::gsNone   : state = NULL                   ; return;
 		case ach::GameState::gsStart  : state = new ach::StateStart  (); return;
 		case ach::GameState::gsMenu   : state = new ach::StateMenu   (); return;
-		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
 		case ach::GameState::gsGame   : state = new ach::StateGame   (); return;
+		case ach::GameState::gsCredits: state = new ach::StateCredits(); return;
+		case ach::GameState::gsFinish : state = new ach::StateFinish (); return;
 		case ach::GameState::gsEnd    : state = new ach::StateEnd    (); return;
 	}
 

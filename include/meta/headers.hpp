@@ -138,6 +138,7 @@
 #include "state/start.hpp"
 #include "state/menu.hpp"
 #include "state/game.hpp"
+#include "state/finish.hpp"
 #include "state/credits.hpp"
 #include "state/end.hpp"
 #include "state/pair.hpp"
