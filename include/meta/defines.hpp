@@ -126,4 +126,11 @@
 
 #define ARCADE_SIMON_SIZE     12
 
+#define ARCADE_BRICKOUT_W     25
+#define ARCADE_BRICKOUT_H     10
+#define ARCADE_BRICKOUT_X     10
+#define ARCADE_BRICKOUT_Y     10
+#define ARCADE_BRICKOUT_P     75
+#define ARCADE_BRICKOUT_S     250.0f
+
 #endif

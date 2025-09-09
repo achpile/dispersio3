@@ -11,7 +11,7 @@ ach::ArcadeSnake::ArcadeSnake(bool select) : Arcade(ach::ArcadeGame::Snake, sele
 	eat    = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Eat"  ))->snd;
 	clear  = db->getSound(json_object_get_branch_string(dm->data, "Meta.Arcade.Snake.Clear"))->snd;
 
-	square = new sf::RectangleShape (sf::Vector2f(ARCADE_SQUARE - 1  , ARCADE_SQUARE - 1   ));
+	square = new sf::RectangleShape(sf::Vector2f(ARCADE_SQUARE - 1, ARCADE_SQUARE - 1));
 
 	ticker.set(0.1f);
 }
