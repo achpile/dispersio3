@@ -149,5 +149,7 @@
 #define ARCADE_RACE_LENGTH    25
 #define ARCADE_RACE_OFFSET    1
 #define ARCADE_RACE_STEP      3
+#define ARCADE_RACE_WIDTH     4
+#define ARCADE_RACE_CARS      3
 
 #endif

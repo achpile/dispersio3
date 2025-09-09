@@ -7,12 +7,13 @@ namespace ach
 	struct ArcadeRace : Arcade
 	{
 		ach::Timer          ticker;
+		ach::Framer         stepper;
 
 		sf::RectangleShape *square;
+		sf::Vector2i        cars[ARCADE_RACE_CARS];
 
 		int pos;
 		int step;
-		int lines[3];
 
 
 		 ArcadeRace(bool select);
@@ -24,6 +25,8 @@ namespace ach
 		void handle();
 
 		void tick();
+		void gen();
+		bool collide();
 
 		void car (int line, int x , sf::Color color);
 		void line(int line        , sf::Color color);

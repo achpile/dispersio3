@@ -10,7 +10,8 @@ ach::ArcadeRace::ArcadeRace(bool select) : Arcade(ach::ArcadeGame::Race, select)
 {
 	square = new sf::RectangleShape(sf::Vector2f(ARCADE_SQUARE - 1, ARCADE_SQUARE - 1));
 
-	ticker.set(0.03f);
+	ticker.set(0.02f);
+	stepper.set(0.02f);
 }
 
 
@@ -36,6 +37,15 @@ void ach::ArcadeRace::prepare()
 {
 	pos  = 1;
 	step = 0;
+
+	for (int i = 0; i < ARCADE_RACE_CARS; i++)
+		cars[i] = sf::Vector2i(0, 0);
+
+	for (int i = 0; i < ARCADE_RACE_CARS; i++)
+		gen();
+
+	for (int i = 0; i < ARCADE_RACE_CARS; i++)
+		cars[i].x += ARCADE_RACE_LENGTH;
 }
 
 
@@ -52,6 +62,14 @@ void ach::ArcadeRace::process()
 		tick();
 		ticker.reset();
 	}
+
+	step -= stepper.update(true);
+
+	if (step < 0)
+		step = ARCADE_RACE_STEP - 1;
+
+	if (collide())
+		gameover();
 }
 
 
@@ -69,6 +87,9 @@ void ach::ArcadeRace::draw()
 	line(3, sf::Color::Red);
 
 	car(pos, 1, sf::Color::Green);
+
+	for (int i = 0; i < ARCADE_RACE_CARS; i++)
+		car(cars[i].y, cars[i].x, sf::Color::White);
 }
 
 
@@ -95,10 +116,52 @@ void ach::ArcadeRace::handle()
 ***********************************************************************/
 void ach::ArcadeRace::tick()
 {
-	step--;
+	for (int i = 0; i < ARCADE_RACE_CARS; i++)
+		cars[i].x--;
 
-	if (step < 0)
-		step = ARCADE_RACE_STEP - 1;
+	if (cars[0].x < -ARCADE_RACE_WIDTH)
+	{
+		score++;
+
+		gen();
+	}
+}
+
+
+
+/***********************************************************************
+     * ArcadeRace
+     * gen
+
+***********************************************************************/
+void ach::ArcadeRace::gen()
+{
+	for (int i = 0; i < ARCADE_RACE_CARS - 1; i++)
+		cars[i] = cars[i + 1];
+
+	cars[ARCADE_RACE_CARS - 1].y = rand() % 3;
+	cars[ARCADE_RACE_CARS - 1].x = cars[ARCADE_RACE_CARS - 2].x + rand() % 8 + 10;
+}
+
+
+
+/***********************************************************************
+     * ArcadeRace
+     * collide
+
+***********************************************************************/
+bool ach::ArcadeRace::collide()
+{
+	if (cars[0].y != pos)
+		return false;
+
+	if (cars[0].x >  ARCADE_RACE_WIDTH + 1)
+		return false;
+
+	if (cars[0].x < -ARCADE_RACE_WIDTH + 1)
+		return false;
+
+	return true;
 }
 
 
@@ -148,7 +211,10 @@ void ach::ArcadeRace::line(int line, sf::Color color)
 ***********************************************************************/
 void ach::ArcadeRace::tile(sf::Vector2i pos, sf::Color color)
 {
-	square->setPosition(sf::Vector2f(pos.x * ARCADE_SQUARE - ARCADE_SQUARE / 2.0f, pos.y * ARCADE_SQUARE) + offset);
+	if (pos.x >= ARCADE_RACE_LENGTH)
+		return;
+
+	square->setPosition(sf::Vector2f(pos.x * ARCADE_SQUARE, pos.y * ARCADE_SQUARE - ARCADE_SQUARE / 2.0f) + offset);
 	square->setFillColor(color);
 
 	tex->draw(*square);
