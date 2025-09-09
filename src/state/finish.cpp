@@ -33,6 +33,8 @@ ach::StateFinish::StateFinish()
 ach::StateFinish::~StateFinish()
 {
 	list_delete(lines);
+
+	cache->clear();
 }
 
 

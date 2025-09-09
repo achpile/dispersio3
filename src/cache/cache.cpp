@@ -81,6 +81,25 @@ void ach::Cache::save()
 
 /***********************************************************************
      * Cache
+     * clear
+
+***********************************************************************/
+void ach::Cache::clear()
+{
+	current  = NULL;
+	process  = NULL;
+	finished = false;
+	cache    = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
+
+	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
+
+	unlink(FILE_CACHE);
+}
+
+
+
+/***********************************************************************
+     * Cache
      * reset
 
 ***********************************************************************/

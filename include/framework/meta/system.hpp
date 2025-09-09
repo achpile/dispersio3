@@ -4,6 +4,7 @@
 
 #include <sys/stat.h>
 
+#include <unistd.h>
 #include <jansson.h>
 #include <string.h>
 #include <libgen.h>

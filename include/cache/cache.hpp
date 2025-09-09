@@ -52,6 +52,7 @@ namespace ach
 		void update();
 		void init();
 		void save();
+		void clear();
 		void reset(ach::Difficulty _difficulty);
 		int  spawn();
 
