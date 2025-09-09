@@ -2,6 +2,12 @@
     "@attr": {
         "type": "object"
     },
+    "AnyKey": {
+        "@attr": {
+            "default": "Press any key to continue",
+            "type": "string"
+        }
+    },
     "Collected": {
         "@attr": {
             "default": "Items collected",
@@ -11,6 +17,12 @@
     "CollectedMap": {
         "@attr": {
             "default": "On current map",
+            "type": "string"
+        }
+    },
+    "Congratulations": {
+        "@attr": {
+            "default": "CONGRATULATIONS",
             "type": "string"
         }
     },
