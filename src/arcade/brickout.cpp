@@ -131,11 +131,7 @@ void ach::ArcadeBrickOut::move(int d)
 {
 	x += d * ARCADE_BRICKOUT_S * tm->get(true);
 
-	if (x < 0.0f)
-		x = 0.0f;
-
-	if (x > ARCADE_BORDER_WIDTH - ARCADE_BRICKOUT_P)
-		x = ARCADE_BORDER_WIDTH - ARCADE_BRICKOUT_P;
+	x = interval_set(x, 0.0f, (float)(ARCADE_BORDER_WIDTH - ARCADE_BRICKOUT_P));
 }
 
 
