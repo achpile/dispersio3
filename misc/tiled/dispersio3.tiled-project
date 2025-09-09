@@ -200,6 +200,19 @@
             ]
         },
         {
+            "color": "#ffffa348",
+            "drawFill": true,
+            "id": 33,
+            "members": [
+            ],
+            "name": "block_gate",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffe5a50a",
             "drawFill": true,
             "id": 11,
@@ -256,6 +269,19 @@
                 }
             ],
             "name": "block_yoku",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffe01b24",
+            "drawFill": true,
+            "id": 34,
+            "members": [
+            ],
+            "name": "boss",
             "type": "class",
             "useAs": [
                 "object",

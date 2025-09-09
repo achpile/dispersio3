@@ -249,6 +249,7 @@ void ach::Map::loadObjects(json_t *layer)
 		else if (!strcmp(json_object_get_string(obj, "type"), "block_fragile"  )) objects.push_back(new ach::MapObjectFragile    (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "block_break"    )) objects.push_back(new ach::MapObjectBreak      (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "block_yoku"     )) objects.push_back(new ach::MapObjectYoku       (world, obj));
+		else if (!strcmp(json_object_get_string(obj, "type"), "block_gate"     )) objects.push_back(new ach::MapObjectGate       (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "trigger_goal"   )) objects.push_back(new ach::MapObjectGoal       (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "trigger_water"  )) objects.push_back(new ach::MapObjectWater      (world, obj));
 		else if (!strcmp(json_object_get_string(obj, "type"), "trigger_wind"   )) objects.push_back(new ach::MapObjectWind       (world, obj));

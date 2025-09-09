@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="24" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="8">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="24" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="25">
  <editorsettings>
   <export target="../../../data/base/map/boss.tmj" format="json"/>
  </editorsettings>
@@ -170,8 +170,26 @@
  <objectgroup id="4" name="objects">
   <object id="1" name="DecorTorch" type="obj_decor" x="96" y="176" width="16" height="16"/>
   <object id="2" name="DecorTorch" type="obj_decor" x="272" y="176" width="16" height="16"/>
+  <object id="8" name="BlockSlabBrownBot" type="block_gate" x="64" y="304" width="16" height="16"/>
+  <object id="9" name="BlockSlabBrownMid" type="block_gate" x="64" y="288" width="16" height="16"/>
+  <object id="10" name="BlockSlabBrownBot" type="block_gate" x="80" y="304" width="16" height="16"/>
+  <object id="11" name="BlockSlabBrownMid" type="block_gate" x="80" y="288" width="16" height="16"/>
+  <object id="12" name="BlockSlabBrownBot" type="block_gate" x="96" y="304" width="16" height="16"/>
+  <object id="13" name="BlockSlabBrownMid" type="block_gate" x="96" y="288" width="16" height="16"/>
+  <object id="14" name="BlockSlabBrownBot" type="block_gate" x="112" y="304" width="16" height="16"/>
+  <object id="15" name="BlockSlabBrownMid" type="block_gate" x="112" y="288" width="16" height="16"/>
+  <object id="16" name="BlockSlabBrownBot" type="block_gate" x="256" y="304" width="16" height="16"/>
+  <object id="17" name="BlockSlabBrownMid" type="block_gate" x="256" y="288" width="16" height="16"/>
+  <object id="18" name="BlockSlabBrownBot" type="block_gate" x="272" y="304" width="16" height="16"/>
+  <object id="19" name="BlockSlabBrownMid" type="block_gate" x="272" y="288" width="16" height="16"/>
+  <object id="20" name="BlockSlabBrownBot" type="block_gate" x="288" y="304" width="16" height="16"/>
+  <object id="21" name="BlockSlabBrownMid" type="block_gate" x="288" y="288" width="16" height="16"/>
+  <object id="22" name="BlockSlabBrownBot" type="block_gate" x="304" y="304" width="16" height="16"/>
+  <object id="23" name="BlockSlabBrownMid" type="block_gate" x="304" y="288" width="16" height="16"/>
  </objectgroup>
- <objectgroup id="5" name="characters"/>
+ <objectgroup id="5" name="characters">
+  <object id="24" name="Main" type="boss" x="32" y="320" width="320" height="224"/>
+ </objectgroup>
  <objectgroup id="6" name="phys">
   <object id="3" type="phys_solid" x="112" y="64">
    <polyline points="0,0 160,0 160,16 176,16 176,32 192,32 192,48 208,48 208,192 192,192 192,256 240,256 240,480 -80,480 -80,256 -32,256 -32,192 -48,192 -48,48 -32,48 -32,32 -16,32 -16,16 0,16 0,0"/>
