@@ -853,7 +853,7 @@
                  "rotation":0,
                  "type":"trigger_goal",
                  "visible":true,
-                 "width":16,
+                 "width":32,
                  "x":1472,
                  "y":432
                 }, 
