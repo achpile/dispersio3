@@ -7,6 +7,7 @@ namespace ach
 	struct Map
 	{
 		std::vector<ach::Character*>           characters;
+		std::vector<ach::Boss*>                bosses;
 		std::vector<ach::PhysLine*>            solids;
 		std::vector<ach::MapObject*>           objects;
 		std::vector<ach::MapArea*>             areas;

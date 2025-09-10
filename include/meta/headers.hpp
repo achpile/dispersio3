@@ -83,6 +83,10 @@
 #include "character/weapon.hpp"
 #include "character/character.hpp"
 
+#include "boss/boss.hpp"
+#include "boss/none.hpp"
+#include "boss/main.hpp"
+
 #include "arcade/arcade.hpp"
 #include "arcade/pair.hpp"
 #include "arcade/none.hpp"

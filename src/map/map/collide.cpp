@@ -184,6 +184,15 @@ void ach::Map::collideEnemies(ach::Character *character)
 	if (!character->alive)
 		return;
 
+
+	list_foreach(bosses)
+		if (bosses[i]->collide(character->phys.rect))
+		{
+			character->die();
+			return;
+		}
+
+
 	list_foreach(characters)
 	{
 		if (!characters[i]->alive)
@@ -198,7 +207,6 @@ void ach::Map::collideEnemies(ach::Character *character)
 		if (collision_box_vs_box(character->phys.rect, characters[i]->phys.rect, NULL, NULL))
 		{
 			character->die();
-
 			return;
 		}
 	}

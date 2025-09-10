@@ -45,6 +45,7 @@ ach::Map::~Map()
 	checkpoints.clear();
 
 	list_delete(characters);
+	list_delete(bosses);
 	list_delete(objects);
 	list_delete(areas);
 	list_delete(gfx);
@@ -70,6 +71,7 @@ void ach::Map::update()
 	selector->update();
 
 	list_update(characters);
+	list_update(bosses);
 	list_update(objects);
 	list_update(gfx);
 	list_update(projectiles);
@@ -91,6 +93,7 @@ void ach::Map::render()
 
 	list_render(objects);
 	list_render(characters);
+	list_render(bosses);
 	list_render(gfx);
 	list_render(projectiles);
 }
@@ -130,6 +133,9 @@ void ach::Map::process()
 	list_foreach(characters)
 		characters[i]->process();
 
+	list_foreach(bosses)
+		bosses[i]->process();
+
 	list_foreach(objects)
 		objects[i]->process();
 }
@@ -148,6 +154,9 @@ void ach::Map::viewport()
 
 	list_foreach(objects)
 		objects[i]->reset();
+
+	list_foreach(bosses)
+		bosses[i]->reset();
 
 	list_foreach(characters)
 		if (characters[i]->enemy)
@@ -191,6 +200,9 @@ void ach::Map::touch(ach::Character* character)
 {
 	if (!character->alive)
 		return;
+
+	list_foreach(bosses)
+		bosses[i]->check(character->phys.rect);
 
 	list_foreach(objects)
 		if (objects[i]->intersects(character->phys.rect))

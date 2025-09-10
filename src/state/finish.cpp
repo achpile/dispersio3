@@ -20,6 +20,7 @@ ach::StateFinish::StateFinish()
 	text->setFont(*theme->credits->font);
 	text->setFillColor(theme->credits->color);
 
+	cache->clear();
 	app->mouse(false);
 }
 
@@ -33,8 +34,6 @@ ach::StateFinish::StateFinish()
 ach::StateFinish::~StateFinish()
 {
 	list_delete(lines);
-
-	cache->clear();
 }
 
 
