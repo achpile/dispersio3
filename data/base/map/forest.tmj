@@ -131,8 +131,8 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 65, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 68, 0, 156, 0, 0, 0, 0, 0, 0, 156, 0, 0, 71, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 70, 0, 0, 156, 0, 0, 0, 0, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 0, 156, 0, 0, 0, 0, 0, 0, 0, 155, 155, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 69, 0, 156, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 156, 0, 0, 71, 0, 0, 156, 0, 0, 0, 0, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 136, 137, 0, 0, 0, 71, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0,
-            0, 0, 155, 154, 155, 155, 155, 155, 155, 154, 0, 0, 0, 0, 68, 0, 0, 154, 155, 0, 0, 0, 0, 0, 0, 0, 71, 0, 0, 156, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 64, 0, 0, 0, 0, 0, 0, 0, 69, 0, 0, 65, 0, 0, 0, 0, 0, 67, 0, 0, 156, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 68, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 155, 154, 155, 155, 155, 155, 155, 154, 155, 155, 155, 155, 155, 154, 155, 0, 0, 0, 0, 0, 0, 0, 155, 155, 155, 155, 0, 0, 0, 0, 0, 0, 66, 0, 0, 156, 0, 0, 0, 0, 0, 0,
+            0, 0, 155, 154, 155, 155, 155, 155, 155, 154, 0, 0, 0, 0, 68, 0, 0, 154, 155, 0, 0, 0, 0, 0, 0, 0, 71, 0, 0, 156, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 64, 0, 0, 0, 0, 0, 0, 0, 69, 0, 0, 65, 0, 0, 0, 0, 0, 67, 0, 0, 156, 0, 0, 183, 184, 0, 0,
+            0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 68, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 155, 154, 155, 155, 155, 155, 155, 154, 155, 155, 155, 155, 155, 154, 155, 0, 0, 0, 0, 0, 0, 0, 155, 155, 155, 155, 0, 0, 0, 0, 0, 0, 66, 0, 0, 156, 0, 0, 185, 186, 0, 0,
             0, 0, 136, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 68, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 67, 0, 69, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 66, 0, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 156, 0, 0, 0, 67, 0, 156, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -847,15 +847,15 @@
                  "y":672
                 }, 
                 {
-                 "height":48,
+                 "height":32,
                  "id":135,
                  "name":"",
                  "rotation":0,
                  "type":"trigger_goal",
                  "visible":true,
-                 "width":48,
-                 "x":1456,
-                 "y":416
+                 "width":16,
+                 "x":1472,
+                 "y":432
                 }, 
                 {
                  "height":160,
@@ -893,6 +893,80 @@
                  "width":96,
                  "x":104,
                  "y":48
+                }, 
+                {
+                 "height":32,
+                 "id":167,
+                 "name":"DecorTent",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":48,
+                 "x":1392,
+                 "y":448
+                }, 
+                {
+                 "height":16,
+                 "id":168,
+                 "name":"DecorCampfire",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"",
+                             "Value":false
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":16,
+                 "x":1440,
+                 "y":464
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -5578,7 +5652,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":167,
+ "nextobjectid":169,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
@@ -6539,6 +6613,155 @@
                 {
                  "id":21,
                  "image":"..\/gfx\/game\/tile\/beam\/fence_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }],
+         "tilewidth":16
+        }, 
+        {
+         "columns":0,
+         "firstgid":165,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Furniture",
+         "spacing":0,
+         "tilecount":22,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/gfx\/game\/tile\/furniture\/desktop.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/gfx\/game\/tile\/furniture\/terminal.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/gfx\/game\/tile\/furniture\/radio.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_lb.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_b.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_rb.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/gfx\/game\/tile\/furniture\/locker_1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/gfx\/game\/tile\/furniture\/locker_2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/gfx\/game\/tile\/furniture\/barrel.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small3.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cheese.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/gfx\/game\/tile\/furniture\/books.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/gfx\/game\/tile\/furniture\/books2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":21,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table_r.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],
