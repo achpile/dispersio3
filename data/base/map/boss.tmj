@@ -457,7 +457,7 @@
          "name":"characters",
          "objects":[
                 {
-                 "height":224,
+                 "height":208,
                  "id":24,
                  "name":"Main",
                  "rotation":0,
@@ -465,7 +465,7 @@
                  "visible":true,
                  "width":320,
                  "x":32,
-                 "y":320
+                 "y":336
                 }],
          "opacity":1,
          "type":"objectgroup",

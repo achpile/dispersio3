@@ -242,6 +242,26 @@
             ]
         },
         {
+            "color": "#ffffa348",
+            "drawFill": true,
+            "id": 35,
+            "members": [
+                {
+                    "name": "Check",
+                    "propertyType": "#check",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "block_solid",
+            "type": "class",
+            "useAs": [
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffffbe6f",
             "drawFill": true,
             "id": 22,

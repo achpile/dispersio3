@@ -1739,6 +1739,50 @@
                  "width":16,
                  "x":1472,
                  "y":432
+                }, 
+                {
+                 "height":80,
+                 "id":236,
+                 "name":"BlockDoor",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"HasKey1",
+                             "Value":false
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"block_solid",
+                 "visible":true,
+                 "width":16,
+                 "x":1872,
+                 "y":704
+                }, 
+                {
+                 "height":80,
+                 "id":237,
+                 "name":"BlockDoor",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"HasKey2",
+                             "Value":false
+                            }
+                        }],
+                 "rotation":0,
+                 "type":"block_solid",
+                 "visible":true,
+                 "width":16,
+                 "x":1888,
+                 "y":704
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -8008,7 +8052,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":236,
+ "nextobjectid":238,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

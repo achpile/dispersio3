@@ -124,6 +124,7 @@
 #include "map/object/break.hpp"
 #include "map/object/yoku.hpp"
 #include "map/object/gate.hpp"
+#include "map/object/solid.hpp"
 #include "map/object/antigrav.hpp"
 
 #include "map/tile/tile.hpp"
