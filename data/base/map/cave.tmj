@@ -110,8 +110,8 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 131, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 101, 101, 0, 0, 0, 131, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 101, 101, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 131, 0, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 192, 166, 165, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 131, 0, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 191, 191, 167, 167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 131, 0, 0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 131, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 131, 0, 130, 0, 0, 0, 0, 0, 0, 131, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0,
@@ -809,15 +809,15 @@
                  "y":440
                 }, 
                 {
-                 "height":48,
+                 "height":32,
                  "id":121,
                  "name":"",
                  "rotation":0,
                  "type":"trigger_goal",
                  "visible":true,
-                 "width":48,
+                 "width":32,
                  "x":848,
-                 "y":368
+                 "y":384
                 }, 
                 {
                  "height":16,
@@ -6914,6 +6914,191 @@
                 {
                  "id":54,
                  "image":"..\/gfx\/game\/tile\/plant\/trees.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }],
+         "tilewidth":16
+        }, 
+        {
+         "columns":0,
+         "firstgid":165,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Furniture",
+         "spacing":0,
+         "tilecount":28,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/gfx\/game\/tile\/furniture\/desktop.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/gfx\/game\/tile\/furniture\/terminal.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/gfx\/game\/tile\/furniture\/radio.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_lb.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_b.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_rb.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cam_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/gfx\/game\/tile\/furniture\/locker_1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/gfx\/game\/tile\/furniture\/locker_2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/gfx\/game\/tile\/furniture\/barrel.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small1.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":16,
+                 "image":"..\/gfx\/game\/tile\/furniture\/box_small3.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/gfx\/game\/tile\/furniture\/cheese.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":18,
+                 "image":"..\/gfx\/game\/tile\/furniture\/books.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":19,
+                 "image":"..\/gfx\/game\/tile\/furniture\/books2.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":20,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":21,
+                 "image":"..\/gfx\/game\/tile\/furniture\/table_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":22,
+                 "image":"..\/gfx\/game\/tile\/furniture\/drum.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":23,
+                 "image":"..\/gfx\/game\/tile\/furniture\/drum_l.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":24,
+                 "image":"..\/gfx\/game\/tile\/furniture\/drum_m.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":25,
+                 "image":"..\/gfx\/game\/tile\/furniture\/drum_r.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":27,
+                 "image":"..\/gfx\/game\/tile\/furniture\/oxygen_t.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":26,
+                 "image":"..\/gfx\/game\/tile\/furniture\/oxygen_b.png",
                  "imageheight":16,
                  "imagewidth":16
                 }],

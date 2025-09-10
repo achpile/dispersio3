@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.11" tiledversion="1.11.0" name="Furniture" tilewidth="16" tileheight="16" tilecount="26" columns="0">
+<tileset version="1.11" tiledversion="1.11.0" name="Furniture" tilewidth="16" tileheight="16" tilecount="28" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image source="../../../data/base/gfx/game/tile/furniture/desktop.png" width="16" height="16"/>
@@ -78,5 +78,11 @@
  </tile>
  <tile id="25">
   <image source="../../../data/base/gfx/game/tile/furniture/drum_r.png" width="16" height="16"/>
+ </tile>
+ <tile id="27">
+  <image source="../../../data/base/gfx/game/tile/furniture/oxygen_t.png" width="16" height="16"/>
+ </tile>
+ <tile id="26">
+  <image source="../../../data/base/gfx/game/tile/furniture/oxygen_b.png" width="16" height="16"/>
  </tile>
 </tileset>
