@@ -9,7 +9,7 @@
     },
     "Default": {},
     "Duck": {
-        "Description": "",
+        "Description": "A dream inspired by a duck scented air freshener.",
         "Name": "Duck dream"
     },
     "Factory": {
@@ -21,7 +21,7 @@
         "Name": "Forest"
     },
     "Island": {
-        "Description": "",
+        "Description": "A dream inspired by an alien scented air freshener.",
         "Name": "Island dream"
     },
     "Lab": {
@@ -37,15 +37,14 @@
         "Name": "Military base"
     },
     "Plumber": {
-        "Description": "",
+        "Description": "A dream inspired by a mushroom scented air freshener.",
         "Name": "Plumbing dream"
     },
     "Robot": {
-        "Description": "",
+        "Description": "A dream inspired by a motor oil scented air freshener.",
         "Name": "Robotic dream"
     },
     "Rocket": {
-        "Description": "",
         "Name": "Spaceship"
     },
     "Temple": {
