@@ -2,7 +2,7 @@
     "@attr": {
         "container": "multi",
         "default": "",
-        "maxlen": 320,
+        "maxlen": 1024,
         "type": "string"
     }
 }
