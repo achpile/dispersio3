@@ -278,6 +278,7 @@ void ach::Text::merge()
 		if (words[i] == STR_NEWLINE)
 		{
 			strings.push_back(str);
+			strings.push_back("");
 			str = "";
 
 			continue;

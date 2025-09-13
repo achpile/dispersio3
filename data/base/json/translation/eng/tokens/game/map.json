@@ -13,11 +13,11 @@
         "Name": "Duck dream"
     },
     "Factory": {
-        "Description": "There definitely must be fuel at this aircraft factory. And a lot of security. ^ ^ Grab the first, run away from the second, and you're done.",
+        "Description": "There definitely must be fuel at this aircraft factory. And a lot of security. ^ Grab the first, run away from the second, and you're done.",
         "Name": "Factory"
     },
     "Forest": {
-        "Description": "A strange forest with more mushrooms than trees. ^ ^ It is rumored that a hermit who studied the ancient Maya lived here.",
+        "Description": "A strange forest with more mushrooms than trees. ^ It is rumored that a hermit who studied the ancient Maya lived here.",
         "Name": "Forest"
     },
     "Island": {
@@ -25,7 +25,7 @@
         "Name": "Island dream"
     },
     "Lab": {
-        "Description": "A secret laboratory developing breakthrough technologies. Everything from the latest rocket engines to antigravity. ^ ^ The first one is exactly what we need.",
+        "Description": "A secret laboratory developing breakthrough technologies. Everything from the latest rocket engines to antigravity. ^ The first one is exactly what we need.",
         "Name": "Physics laboratory"
     },
     "LaunchPad": {
@@ -33,7 +33,7 @@
         "Name": "Cosmodrome"
     },
     "MilitaryBase": {
-        "Description": "The place where it all began. ^ ^ The place where the sound of a siren marked the end of the familiar world.",
+        "Description": "The place where it all began. ^ The place where the sound of a siren marked the end of the familiar world.",
         "Name": "Military base"
     },
     "Plumber": {
