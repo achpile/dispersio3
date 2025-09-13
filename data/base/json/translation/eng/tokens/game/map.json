@@ -1,10 +1,10 @@
 {
     "Boss": {
-        "Description": "",
+        "Description": "The depths of the temple contain the ancient Mayan knowledge of cosmos, and it is very well guarded.",
         "Name": "Temple depths"
     },
     "Cave": {
-        "Description": "",
+        "Description": "A network of flooded caves, beloved by many divers. Surely one of them has made a nest there, which must definitely contain an oxygen supply.",
         "Name": "Cave"
     },
     "Default": {},
@@ -13,11 +13,11 @@
         "Name": "Duck dream"
     },
     "Factory": {
-        "Description": "",
+        "Description": "There definitely must be fuel at this aircraft factory. And a lot of security. ^ ^ Grab the first, run away from the second, and you're done.",
         "Name": "Factory"
     },
     "Forest": {
-        "Description": "",
+        "Description": "A strange forest with more mushrooms than trees. ^ ^ It is rumored that a hermit who studied the ancient Maya lived here.",
         "Name": "Forest"
     },
     "Island": {
@@ -25,15 +25,15 @@
         "Name": "Island dream"
     },
     "Lab": {
-        "Description": "",
+        "Description": "A secret laboratory developing breakthrough technologies. Everything from the latest rocket engines to antigravity. ^ ^ The first one is exactly what we need.",
         "Name": "Physics laboratory"
     },
     "LaunchPad": {
-        "Description": "",
+        "Description": "The launch pad with the life-saving rocket that marked the beginning of an exciting adventure.",
         "Name": "Cosmodrome"
     },
     "MilitaryBase": {
-        "Description": "",
+        "Description": "The place where it all began. ^ ^ The place where the sound of a siren marked the end of the familiar world.",
         "Name": "Military base"
     },
     "Plumber": {
@@ -48,7 +48,7 @@
         "Name": "Spaceship"
     },
     "Temple": {
-        "Description": "",
+        "Description": "An ancient Mayan temple that served as an observatory.",
         "Name": "Temple in the jungle"
     }
 }
