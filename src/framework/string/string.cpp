@@ -14,7 +14,9 @@ sf::String str_time(float t)
 	int sec  = l % 60  ; l /= 60;
 	int min  = l % 60  ; l /= 60;
 
-	snprintf(result, STR_LEN_MENU, "%d:%02d:%02d.%03d", l, min, sec, msec);
+
+	if (l) snprintf(result, STR_LEN_MENU, "%d:%02d:%02d.%03d", l, min, sec, msec);
+	else   snprintf(result, STR_LEN_MENU,    "%02d:%02d.%03d",    min, sec, msec);
 
 	return sf::String(result);
 }

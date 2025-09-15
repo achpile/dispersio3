@@ -84,12 +84,28 @@
         "@attr": {
             "type": "object"
         },
+        "Cash": {
+            "@attr": {
+                "default": 0,
+                "max": 2147483647,
+                "min": 0,
+                "type": "integer"
+            }
+        },
         "Deaths": {
             "@attr": {
                 "default": 0,
                 "max": 2147483647,
                 "min": 0,
                 "type": "integer"
+            }
+        },
+        "Level": {
+            "@attr": {
+                "default": 0.0,
+                "max": 2147483647.0,
+                "min": 0.0,
+                "type": "real"
             }
         },
         "Time": {

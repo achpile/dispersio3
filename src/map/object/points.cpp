@@ -70,5 +70,7 @@ void ach::MapObjectPoints::touch()
 
 	world->map->gfx.push_back(new ach::EffectSplash(phys.pos, sf::Color::White, MATH_PI / 2.0f, 8));
 	cache->collect(id);
+	cache->cash++;
+
 	sm->play(sfx->snd);
 }

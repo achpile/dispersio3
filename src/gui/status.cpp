@@ -48,15 +48,26 @@ void ach::Status::update()
 	list_update(items);
 	list_delete(lines);
 
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"      ), cache->getPlaytime() ));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"        ), cache->getDeaths()   ));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"     ), cache->getCollected()));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.CollectedMap"  ), cache->getItems()    ));
-	lines.push_back(new ach::Statistic(""                                , ""));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Misc"     ), ""));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Key"      ), ""));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Freshener"), ""));
-	lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Game"     ), ""));
+	if (cache->mode == ach::LevelMode::lmTraining)
+	{
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"      ), cache->getPlaytime() ));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"     ), cache->getItems()    ));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"        ), cache->getDeaths()   ));
+	}
+	else
+	{
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Playtime"      ), cache->getPlaytime() ));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.CurrentMap"    ), cache->getLeveltime()));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Collected"     ), cache->getCollected()));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.CurrentMap"    ), cache->getItems()    ));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Deaths"        ), cache->getDeaths()   ));
+		lines.push_back(new ach::Statistic(""                                , ""));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Cash"          ), cache->getCash()     ));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Misc"     ), ""));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Key"      ), ""));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Freshener"), ""));
+		lines.push_back(new ach::Statistic(lm->get("UI.Stats.Item.Game"     ), ""));
+	}
 }
 
 
@@ -76,8 +87,9 @@ void ach::Status::render()
 		text_draw(text, lines[i]->value  , pos.x + MENU_PADDING * 2, pos.y + MENU_PADDING + spacing * i, width - MENU_PADDING * 4, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 	}
 
-	list_foreach(items)
-		items[i]->render();
+	if (cache->mode != ach::LevelMode::lmTraining)
+		list_foreach(items)
+			items[i]->render();
 }
 
 
@@ -92,7 +104,7 @@ void ach::Status::style()
 	spacing = theme->menu.text->spacing() + MENU_SPACING;
 
 	box->style(theme->menu.box);
-	box->setSize(sf::Vector2f(width, 270.0f));
+	box->setSize(sf::Vector2f(width, 280.0f));
 
 	text->setCharacterSize(theme->menu.text->size);
 	text->setFont(*theme->menu.text->font);
@@ -124,7 +136,7 @@ void ach::Status::fill()
 
 	list_foreach(db->item)
 	{
-		items.push_back(new ach::ItemIcon(db->item[i], sf::Vector2f(pos.x + width - MENU_PADDING * 2 - spacing * counters[db->item[i]->category], pos.y - MENU_PADDING / 2 + spacing * (6 + db->item[i]->category))));
+		items.push_back(new ach::ItemIcon(db->item[i], sf::Vector2f(pos.x + width - MENU_PADDING * 2 - spacing * counters[db->item[i]->category], pos.y - MENU_PADDING / 2 + spacing * (8 + db->item[i]->category))));
 
 		counters[db->item[i]->category]++;
 	}

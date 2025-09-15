@@ -36,7 +36,8 @@ ach::Cache::~Cache()
 ***********************************************************************/
 void ach::Cache::update()
 {
-	playtime += tm->get();
+	playtime  += tm->get();
+	leveltime += tm->get();
 }
 
 
@@ -57,8 +58,10 @@ void ach::Cache::init()
 	mode       = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode );
 	difficulty = pair_get_enum(json_object_get_string       (cache, "Difficulty"  ), pairDifficulty);
 
+	cash       = json_object_get_branch_integer(cache, "Stats.Cash");
 	deaths     = json_object_get_branch_integer(cache, "Stats.Deaths");
 	playtime   = json_object_get_branch_real   (cache, "Stats.Time");
+	leveltime  = json_object_get_branch_real   (cache, "Stats.Level");
 
 	pick(json_object_get_branch_string(cache, "Current.Map"), mode, isDefault());
 }
@@ -72,8 +75,10 @@ void ach::Cache::init()
 ***********************************************************************/
 void ach::Cache::save()
 {
-	json_object_set_branch (cache, "Stats.Deaths", json_integer(deaths  ));
-	json_object_set_branch (cache, "Stats.Time"  , json_real   (playtime));
+	json_object_set_branch (cache, "Stats.Cash"  , json_integer(cash     ));
+	json_object_set_branch (cache, "Stats.Deaths", json_integer(deaths   ));
+	json_object_set_branch (cache, "Stats.Time"  , json_real   (playtime ));
+	json_object_set_branch (cache, "Stats.Level" , json_real   (leveltime));
 
 	if (mode != ach::LevelMode::lmTraining)
 		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
@@ -134,6 +139,7 @@ void ach::Cache::train(const char *map)
 
 	deaths     = 0;
 	playtime   = 0.0f;
+	leveltime  = 0.0f;
 
 	pick(map, mode, false);
 }

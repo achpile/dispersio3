@@ -12,6 +12,8 @@ void ach::Cache::goal()
 		state = ach::LevelState::lsOutro;
 	else
 		finish();
+
+	leveltime = 0.0f;
 }
 
 
@@ -27,6 +29,18 @@ void ach::Cache::cutscene()
 		state =  ach::LevelState::lsLevel;
 	else
 		finish();
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * revert
+
+***********************************************************************/
+void ach::Cache::revert()
+{
+	warp(json_object_get_branch_string(cache, "Current.Origin"), ach::LevelMode::lmNavigation, false);
 }
 
 
@@ -57,18 +71,6 @@ void ach::Cache::finish()
 			finished = true;
 		break;
 	}
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * revert
-
-***********************************************************************/
-void ach::Cache::revert()
-{
-	warp(json_object_get_branch_string(cache, "Current.Origin"), ach::LevelMode::lmNavigation, false);
 }
 
 

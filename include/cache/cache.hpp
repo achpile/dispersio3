@@ -42,8 +42,10 @@ namespace ach
 		json_t *info;
 
 		bool    finished;
+		int     cash;
 		int     deaths;
 		float   playtime;
+		float   leveltime;
 
 
 		 Cache();
@@ -84,6 +86,8 @@ namespace ach
 
 		/*  stats.cpp  */
 		sf::String getPlaytime();
+		sf::String getLeveltime();
+		sf::String getCash();
 		sf::String getDeaths();
 		sf::String getCollected();
 		sf::String getItems();

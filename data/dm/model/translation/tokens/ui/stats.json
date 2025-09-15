@@ -8,21 +8,27 @@
             "type": "string"
         }
     },
+    "Cash": {
+        "@attr": {
+            "default": "Cash",
+            "type": "string"
+        }
+    },
     "Collected": {
         "@attr": {
             "default": "Items collected",
             "type": "string"
         }
     },
-    "CollectedMap": {
-        "@attr": {
-            "default": "On current map",
-            "type": "string"
-        }
-    },
     "Congratulations": {
         "@attr": {
             "default": "CONGRATULATIONS",
+            "type": "string"
+        }
+    },
+    "CurrentMap": {
+        "@attr": {
+            "default": "On current map",
             "type": "string"
         }
     },
