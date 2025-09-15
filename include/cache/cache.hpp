@@ -37,6 +37,8 @@ namespace ach
 		ach::LevelMode   mode;
 		ach::LevelState  state;
 
+		sf::Text        *text;
+
 		json_t *campaign;
 		json_t *cache;
 		json_t *info;
@@ -52,6 +54,11 @@ namespace ach
 		~Cache();
 
 		void update();
+		void render();
+
+		void style();
+
+		/*  data.cpp  */
 		void init();
 		void save();
 		void clear();

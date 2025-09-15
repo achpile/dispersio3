@@ -74,6 +74,7 @@ void ach::ProcessWorld::update()
 void ach::ProcessWorld::render()
 {
 	map->render();
+	cache->render();
 }
 
 

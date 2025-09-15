@@ -21,6 +21,7 @@ void handler_options_theme(void *, json_t *)
 {
 	theme->refresh();
 	app->state->style();
+	cache->style();
 }
 
 

@@ -11,9 +11,13 @@ ach::Cache::Cache()
 	current  = NULL;
 	process  = NULL;
 	finished = false;
+	text     = new sf::Text();
 
 	campaign = json_object_get_branch(dm->data, "Data.Game.Campaign");
 	cache    = json_object_get_branch(dm->data, "Data.Game.Cache");
+
+	text->setPosition(5.0f, 5.0f);
+	text->setOutlineThickness(3.0f);
 }
 
 
@@ -25,6 +29,7 @@ ach::Cache::Cache()
 ***********************************************************************/
 ach::Cache::~Cache()
 {
+	delete text;
 }
 
 
@@ -44,114 +49,32 @@ void ach::Cache::update()
 
 /***********************************************************************
      * Cache
-     * init
+     * render
 
 ***********************************************************************/
-void ach::Cache::init()
+void ach::Cache::render()
 {
-	current    = NULL;
-	process    = NULL;
-	finished   = false;
-
-	cache      = json_object_get_branch(dm->data, "Data.Game.Cache");
-
-	mode       = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode );
-	difficulty = pair_get_enum(json_object_get_string       (cache, "Difficulty"  ), pairDifficulty);
-
-	cash       = json_object_get_branch_integer(cache, "Stats.Cash");
-	deaths     = json_object_get_branch_integer(cache, "Stats.Deaths");
-	playtime   = json_object_get_branch_real   (cache, "Stats.Time");
-	leveltime  = json_object_get_branch_real   (cache, "Stats.Level");
-
-	pick(json_object_get_branch_string(cache, "Current.Map"), mode, isDefault());
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * save
-
-***********************************************************************/
-void ach::Cache::save()
-{
-	json_object_set_branch (cache, "Stats.Cash"  , json_integer(cash     ));
-	json_object_set_branch (cache, "Stats.Deaths", json_integer(deaths   ));
-	json_object_set_branch (cache, "Stats.Time"  , json_real   (playtime ));
-	json_object_set_branch (cache, "Stats.Level" , json_real   (leveltime));
-
 	if (mode != ach::LevelMode::lmTraining)
-		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
+		return;
+
+	text->setString(getPlaytime());
+
+	rm->draw(text, ach::RenderLayer::rlGUI);
 }
 
 
 
 /***********************************************************************
      * Cache
-     * clear
+     * style
 
 ***********************************************************************/
-void ach::Cache::clear()
+void ach::Cache::style()
 {
-	current  = NULL;
-	process  = NULL;
-	finished = false;
-	cache    = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
+	sf::Color c = theme->menu.text->color;
 
-	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
-
-	unlink(FILE_CACHE);
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * reset
-
-***********************************************************************/
-void ach::Cache::reset(ach::Difficulty _difficulty)
-{
-	current = NULL;
-	process = NULL;
-	cache   = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
-
-	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
-	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
-	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * reset
-
-***********************************************************************/
-void ach::Cache::train(const char *map)
-{
-	current = NULL;
-	process = NULL;
-	cache   = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
-
-	mode       = ach::LevelMode::lmTraining;
-	difficulty = ach::Difficulty::gdEasy;
-
-	deaths     = 0;
-	playtime   = 0.0f;
-	leveltime  = 0.0f;
-
-	pick(map, mode, false);
-}
-
-
-
-/***********************************************************************
-     * Cache
-     * spawn
-
-***********************************************************************/
-int ach::Cache::spawn()
-{
-	return json_object_get_branch_integer(cache, "Current.Checkpoint");
+	text->setCharacterSize(theme->menu.text->size);
+	text->setFont(*theme->menu.text->font);
+	text->setFillColor(c);
+	text->setOutlineColor(sf::Color(255 - c.r, 255 - c.g, 255 - c.b));
 }

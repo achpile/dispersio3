@@ -50,6 +50,7 @@ ach::App::App()
 
 	lm->refresh();
 	theme->refresh();
+	cache->style();
 
 	stateSet(ach::GameState::gsStart);
 }
