@@ -16,9 +16,7 @@
         },
         "Sound": {
             "Die": "PlayerDie",
-            "Jump": "PlayerJump",
-            "Land": "PlayerLand",
-            "Swim": "PlayerSwim"
+            "Land": "PlayerRobotLand"
         },
         "Stats": {
             "Jump": 380
