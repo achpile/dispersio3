@@ -4,10 +4,19 @@
 
 namespace ach
 {
+	enum MenuState
+	{
+		msMain,
+		msTraining
+	};
+
+
 	struct StateMenu : StateBase
 	{
-		ach::Menu   *menu;
-		ach::Sprite *logo;
+		ach::Menu        *menu;
+		ach::Sprite      *logo;
+		ach::LevelSelect *training;
+		ach::MenuState    state;
 
 
 		 StateMenu();
@@ -20,8 +29,9 @@ namespace ach
 		void translate();
 		void style();
 
-		void hover(sf::Vector2f pos);
-		void click(sf::Vector2f pos, bool left);
+		void prepare();
+		void finalize();
+		void draw();
 
 		void fill();
 	};

@@ -14,3 +14,25 @@ void handler_menu_start(void *, json_t *data)
 
 	app->stateSet(ach::GameState::gsGame);
 }
+
+
+
+/***********************************************************************
+     * handler_menu_training
+
+***********************************************************************/
+void handler_menu_training(void *context, json_t *)
+{
+	((ach::StateMenu*)context)->training->init(ach::LevelMode::lmTraining);
+	((ach::StateMenu*)context)->state = ach::MenuState::msTraining;
+}
+
+
+
+/***********************************************************************
+     * handler_menu_pick
+
+***********************************************************************/
+void handler_menu_pick(void *, json_t *)
+{
+}

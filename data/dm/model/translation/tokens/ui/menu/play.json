@@ -37,5 +37,11 @@
             "default": "New game",
             "type": "string"
         }
+    },
+    "Training": {
+        "@attr": {
+            "default": "Training",
+            "type": "string"
+        }
     }
 }
