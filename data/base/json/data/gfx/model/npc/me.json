@@ -1,0 +1,13 @@
+{
+    "NPCMe": {
+        "Animation": {
+            "Idle": {
+                "End": 3,
+                "Rate": 0.2,
+                "Start": 0
+            }
+        },
+        "Sheet": "NPCMe",
+        "Type": "simple"
+    }
+}

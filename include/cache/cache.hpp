@@ -111,6 +111,7 @@ namespace ach
 		/*  flag.cpp  */
 		bool getFlag(const char *name);
 		void setFlag(const char *name);
+		void checkFlag(const char *name);
 	};
 }
 

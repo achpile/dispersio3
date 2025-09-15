@@ -1,0 +1,30 @@
+{
+    "Me": {
+        "Model": "NPCMe",
+        "Speech": [
+            {
+                "Check": {
+                    "HasMoney": false,
+                    "MeIntroduced": false
+                },
+                "Flag": "MeIntroduced",
+                "Text": "Game.Message.MeIntro"
+            },
+            {
+                "Check": {
+                    "HasMoney": false,
+                    "MeIntroduced": true
+                },
+                "Text": "Game.Message.MeDonate"
+            },
+            {
+                "Check": {
+                    "HasMoney": true
+                },
+                "Flag": "MoneyDonated",
+                "Text": "Game.Message.MeThanks"
+            }
+        ],
+        "Wander": false
+    }
+}
