@@ -442,17 +442,6 @@
                 }, 
                 {
                  "height":16,
-                 "id":16,
-                 "name":"Bag",
-                 "rotation":0,
-                 "type":"obj_points",
-                 "visible":true,
-                 "width":16,
-                 "x":1216,
-                 "y":64
-                }, 
-                {
-                 "height":16,
                  "id":18,
                  "name":"",
                  "properties":[

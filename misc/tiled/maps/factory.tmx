@@ -439,7 +439,6 @@
     <property name="Push" propertytype="@orientation" value="vertical"/>
    </properties>
   </object>
-  <object id="53" name="Bag" type="obj_points" x="800" y="912" width="16" height="16"/>
   <object id="55" type="obj_checkpoint" x="816" y="832" width="16" height="16"/>
   <object id="63" type="trigger_wind" x="800" y="704" width="304" height="128">
    <properties>

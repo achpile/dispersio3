@@ -20,9 +20,17 @@ void ach::Cache::die()
      * collect
 
 ***********************************************************************/
-void ach::Cache::collect(int id)
+void ach::Cache::collect(int id, bool money)
 {
 	json_array_append_new(json_object_get(info, "Item"), json_integer(id));
+
+	if (money)
+	{
+		cash++;
+
+		if (isMoneyCollected())
+			setFlag("HasMoney");
+	}
 
 	save();
 }

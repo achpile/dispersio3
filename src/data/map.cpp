@@ -47,6 +47,7 @@ ach::DataMap::~DataMap()
 ***********************************************************************/
 void ach::DataMap::calc()
 {
+	cash  = 0;
 	items = 0;
 
 	json_error_t error;
@@ -72,8 +73,14 @@ void ach::DataMap::calc()
 
 		json_array_foreach(json_object_get(layer, "objects"), j, object)
 		{
-			     if (!strcmp(json_object_get_string(object, "type"), "obj_item"  )) items++;
-			else if (!strcmp(json_object_get_string(object, "type"), "obj_points")) items++;
+			if (!strcmp(json_object_get_string(object, "type"), "obj_item"))
+				items++;
+
+			if (!strcmp(json_object_get_string(object, "type"), "obj_points"))
+			{
+				items++;
+				cash++;
+			}
 		}
 	}
 }

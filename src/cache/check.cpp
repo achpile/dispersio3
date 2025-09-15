@@ -15,6 +15,31 @@ bool ach::Cache::isDefault()
 
 /***********************************************************************
      * Cache
+     * isMoneyCollected
+
+***********************************************************************/
+bool ach::Cache::isMoneyCollected()
+{
+	int money = 0;
+
+	ach::DataMap *map;
+
+	json_t *item;
+	size_t  index;
+
+	json_array_foreach(json_object_get(campaign, "MapList"), index, item)
+	{
+		map        = db->getMap(json_string_value(item));
+		money     += map->cash;
+	}
+
+	return money == cash;
+}
+
+
+
+/***********************************************************************
+     * Cache
      * isBeaten
 
 ***********************************************************************/

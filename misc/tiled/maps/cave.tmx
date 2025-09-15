@@ -327,7 +327,6 @@
   <object id="34" name="Bag" type="obj_points" x="720" y="704" width="16" height="16"/>
   <object id="36" name="Bag" type="obj_points" x="568" y="512" width="16" height="16"/>
   <object id="37" name="Bag" type="obj_points" x="568" y="368" width="16" height="16"/>
-  <object id="38" name="Bag" type="obj_points" x="208" y="464" width="16" height="16"/>
   <object id="39" name="Bag" type="obj_points" x="160" y="448" width="16" height="16"/>
   <object id="40" name="Bag" type="obj_points" x="272" y="432" width="16" height="16"/>
   <object id="41" type="trigger_water" x="32" y="592" width="352" height="512"/>

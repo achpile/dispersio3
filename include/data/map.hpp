@@ -21,6 +21,7 @@ namespace ach
 		bool restart;
 
 		int  items;
+		int  cash;
 
 
 		 DataMap(json_t *obj);

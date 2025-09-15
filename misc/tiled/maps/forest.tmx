@@ -393,7 +393,6 @@
    </properties>
   </object>
   <object id="15" name="Bag" type="obj_points" x="1344" y="160" width="16" height="16"/>
-  <object id="16" name="Bag" type="obj_points" x="1216" y="64" width="16" height="16"/>
   <object id="18" type="obj_checkpoint" x="1104" y="304" width="16" height="16"/>
   <object id="25" type="obj_checkpoint" x="736" y="384" width="16" height="16">
    <properties>

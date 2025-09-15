@@ -68,6 +68,7 @@ namespace ach
 
 		/*  check.cpp  */
 		bool isDefault();
+		bool isMoneyCollected();
 		bool isBeaten(const char *level);
 		bool isRevert();
 		bool isCutscenes(ach::LevelMode _mode);
@@ -84,7 +85,7 @@ namespace ach
 
 		/*  store.cpp  */
 		void die();
-		void collect(int id);
+		void collect(int id, bool money);
 		void checkpoint(int id);
 		void beat(const char *map);
 
