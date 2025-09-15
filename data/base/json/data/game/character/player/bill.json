@@ -12,7 +12,7 @@
         },
         "Sound": {
             "Die": "PlayerBillDie",
-            "Land": "PlayerBillLand"
+            "Land": "PlayerLand"
         }
     }
 }
