@@ -33,6 +33,9 @@ void handler_menu_training(void *context, json_t *)
      * handler_menu_pick
 
 ***********************************************************************/
-void handler_menu_pick(void *, json_t *)
+void handler_menu_pick(void *, json_t *data)
 {
+	cache->train(json_object_get_string(data, "Map"));
+
+	app->stateSet(ach::GameState::gsGame);
 }

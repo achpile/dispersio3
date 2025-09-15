@@ -114,7 +114,11 @@ void ach::StateGame::finish()
 {
 	if (cache->finished)
 	{
-		app->stateSet(ach::GameState::gsFinish);
+		if (cache->mode == ach::LevelMode::lmTraining)
+			app->stateSet(ach::GameState::gsMenu);
+		else
+			app->stateSet(ach::GameState::gsFinish);
+
 		return;
 	}
 

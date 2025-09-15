@@ -52,6 +52,8 @@ void ach::Cache::init()
 	process    = NULL;
 	finished   = false;
 
+	cache      = json_object_get_branch(dm->data, "Data.Game.Cache");
+
 	mode       = pair_get_enum(json_object_get_branch_string(cache, "Current.Mode"), pairLevelMode );
 	difficulty = pair_get_enum(json_object_get_string       (cache, "Difficulty"  ), pairDifficulty);
 
@@ -72,9 +74,9 @@ void ach::Cache::save()
 {
 	json_object_set_branch (cache, "Stats.Deaths", json_integer(deaths  ));
 	json_object_set_branch (cache, "Stats.Time"  , json_real   (playtime));
-	json_object_set_boolean(cache, "Default"     , false                 );
 
-	json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
+	if (mode != ach::LevelMode::lmTraining)
+		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
 }
 
 
@@ -112,6 +114,28 @@ void ach::Cache::reset(ach::Difficulty _difficulty)
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
 	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
+}
+
+
+
+/***********************************************************************
+     * Cache
+     * reset
+
+***********************************************************************/
+void ach::Cache::train(const char *map)
+{
+	current = NULL;
+	process = NULL;
+	cache   = json_dm_generate_default(NULL, json_object_get_branch(dm->dm, "Data.Game.Cache"));
+
+	mode       = ach::LevelMode::lmTraining;
+	difficulty = ach::Difficulty::gdEasy;
+
+	deaths     = 0;
+	playtime   = 0.0f;
+
+	pick(map, mode, false);
 }
 
 

@@ -54,6 +54,7 @@ namespace ach
 		void save();
 		void clear();
 		void reset(ach::Difficulty _difficulty);
+		void train(const char *map);
 		int  spawn();
 
 		/*  check.cpp  */

@@ -49,7 +49,13 @@ void ach::Cache::finish()
 		case ach::LevelMode::lmNavigation: warp(current->next, ach::LevelMode::lmNavigation, true); break;
 		case ach::LevelMode::lmDream     : warp(current->next, ach::LevelMode::lmNavigation, true); break;
 		case ach::LevelMode::lmReplay    : revert(); break;
-		case ach::LevelMode::lmTraining  : warp(current->next, ach::LevelMode::lmNavigation, true); break;
+
+		case ach::LevelMode::lmTraining  :
+			json_decref(cache);
+
+			cache    = NULL;
+			finished = true;
+		break;
 	}
 }
 

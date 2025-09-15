@@ -8,7 +8,7 @@
 ***********************************************************************/
 bool ach::Cache::isDefault()
 {
-	return json_object_get_boolean(cache, "Default");
+	return !file_exists(FILE_CACHE);
 }
 
 
@@ -36,7 +36,7 @@ bool ach::Cache::isRevert()
 	{
 		case ach::LevelMode::lmDream     : return true;
 		case ach::LevelMode::lmReplay    : return true;
-		case ach::LevelMode::lmTraining  : return true;
+		case ach::LevelMode::lmTraining  : return false;
 		case ach::LevelMode::lmNavigation: return false;
 	}
 
