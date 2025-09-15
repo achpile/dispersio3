@@ -422,7 +422,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -459,7 +459,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -496,7 +496,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -533,7 +533,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -570,7 +570,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -607,7 +607,7 @@
                          "type":"class",
                          "value":
                             {
-                             "Flag":"",
+                             "Flag":"BeatenLab",
                              "Value":false
                             }
                         }, 
@@ -1317,6 +1317,228 @@
                  "width":16,
                  "x":432,
                  "y":112
+                }, 
+                {
+                 "height":32,
+                 "id":58,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":80
+                }, 
+                {
+                 "height":32,
+                 "id":59,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":128
+                }, 
+                {
+                 "height":32,
+                 "id":60,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":176
+                }, 
+                {
+                 "height":32,
+                 "id":61,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":368
+                }, 
+                {
+                 "height":32,
+                 "id":62,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":416
+                }, 
+                {
+                 "height":32,
+                 "id":63,
+                 "name":"DecorRocketEngineSideBig",
+                 "properties":[
+                        {
+                         "name":"Check",
+                         "propertytype":"#check",
+                         "type":"class",
+                         "value":
+                            {
+                             "Flag":"BeatenLab",
+                             "Value":true
+                            }
+                        }, 
+                        {
+                         "name":"FlipX",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"FlipY",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"Foreground",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"obj_decor",
+                 "visible":true,
+                 "width":112,
+                 "x":32,
+                 "y":464
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1582,12 +1804,12 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":58,
+ "nextobjectid":64,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
