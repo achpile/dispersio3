@@ -16,7 +16,7 @@
         },
         "Sound": {
             "Jump": "SlimeJump",
-            "Land": "PlayerLand"
+            "Land": "EnemyRobotLand"
         },
         "Stats": {
             "Gravity": 750,
