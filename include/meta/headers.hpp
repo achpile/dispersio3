@@ -23,6 +23,7 @@
 #include "data/content.hpp"
 #include "data/font.hpp"
 #include "data/sound.hpp"
+#include "data/track.hpp"
 #include "data/theme.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"

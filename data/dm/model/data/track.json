@@ -1,0 +1,18 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Filename": {
+        "@attr": {
+            "default": "track/default.ogg",
+            "type": "filename"
+        }
+    },
+    "Loop": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
+        }
+    }
+}

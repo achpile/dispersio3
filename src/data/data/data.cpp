@@ -20,6 +20,7 @@ ach::Database::Database()
 ach::Database::~Database()
 {
 	list_delete(sound);
+	list_delete(track);
 	list_delete(font);
 	list_delete(theme);
 	list_delete(sheet);
@@ -61,6 +62,7 @@ template <typename T> void loadContent(const char *section, std::vector<T*> *lis
 void ach::Database::load()
 {
 	loadContent<ach::DataSound     >("SFX"            , &sound     );
+	loadContent<ach::DataTrack     >("Track"          , &track     );
 
 	loadContent<ach::DataFont      >("UI.Font"        , &font      );
 	loadContent<ach::DataTheme     >("UI.Theme"       , &theme     );

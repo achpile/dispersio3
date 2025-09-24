@@ -32,6 +32,18 @@ ach::DataSound* ach::Database::getSound(const char *name)
 
 /***********************************************************************
      * Database
+     * getTrack
+
+***********************************************************************/
+ach::DataTrack* ach::Database::getTrack(const char *name)
+{
+	return getContent<ach::DataTrack>(name, &track);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getFont
 
 ***********************************************************************/
