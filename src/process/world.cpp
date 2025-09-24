@@ -237,8 +237,8 @@ void ach::ProcessWorld::finalize()
 
 
 		case ach::WorldState::wsPause:
-			menu->render();
 			status->render();
+			menu->render();
 		break;
 
 

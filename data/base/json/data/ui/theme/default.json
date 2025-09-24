@@ -1,5 +1,8 @@
 {
     "Default": {
+        "Box": {
+            "Round": true
+        },
         "Cutscene": {
             "Font": "DejaVu"
         },
