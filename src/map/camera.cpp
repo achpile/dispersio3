@@ -102,5 +102,5 @@ void ach::Camera::set(ach::MapArea *_area)
 {
 	area = _area->rect;
 
-	map->viewport();
+	map->viewport(_area);
 }

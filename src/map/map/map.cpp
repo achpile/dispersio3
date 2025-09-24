@@ -147,7 +147,7 @@ void ach::Map::process()
      * viewport
 
 ***********************************************************************/
-void ach::Map::viewport()
+void ach::Map::viewport(ach::MapArea *area)
 {
 	list_delete(projectiles);
 	list_delete(gfx);
@@ -161,6 +161,9 @@ void ach::Map::viewport()
 	list_foreach(characters)
 		if (characters[i]->enemy)
 			characters[i]->respawn();
+
+	if (!area->play())
+		base->track->play();
 }
 
 

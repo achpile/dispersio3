@@ -19,7 +19,6 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
-	map->base->track->play();
 
 	message->setPosition(sf::Vector2f(150.0f, 100.0f));
 

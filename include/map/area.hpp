@@ -9,10 +9,14 @@ namespace ach
 		ach::DataTrack *track;
 		sf::FloatRect   rect;
 
+		bool played;
+
 
 		 MapArea(json_t *obj);
 		 MapArea(sf::FloatRect _rect);
 		~MapArea();
+
+		bool play();
 	};
 }
 
