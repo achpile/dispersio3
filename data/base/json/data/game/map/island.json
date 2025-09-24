@@ -12,6 +12,7 @@
         "Spawn": {
             "X": 3,
             "Y": 9
-        }
+        },
+        "Track": "Island"
     }
 }

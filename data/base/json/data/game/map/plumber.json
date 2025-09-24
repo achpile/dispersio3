@@ -12,6 +12,7 @@
         "Spawn": {
             "X": 2,
             "Y": 15
-        }
+        },
+        "Track": "Plumber"
     }
 }

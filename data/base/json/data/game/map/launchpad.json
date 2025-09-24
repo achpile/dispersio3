@@ -10,6 +10,7 @@
         "Spawn": {
             "X": 1,
             "Y": 67
-        }
+        },
+        "Track": "LaunchPad"
     }
 }

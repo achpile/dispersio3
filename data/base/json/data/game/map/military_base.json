@@ -9,6 +9,7 @@
         "Spawn": {
             "X": 7,
             "Y": 65
-        }
+        },
+        "Track": "MilitaryBase"
     }
 }

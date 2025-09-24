@@ -6,6 +6,7 @@
         "Spawn": {
             "X": 13,
             "Y": 12
-        }
+        },
+        "Track": "Forest"
     }
 }

@@ -5,6 +5,7 @@
         "Spawn": {
             "X": 59,
             "Y": 11
-        }
+        },
+        "Track": "Rocket"
     }
 }
