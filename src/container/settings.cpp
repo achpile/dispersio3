@@ -105,7 +105,7 @@ int ach::Settings::getVolumeSound()
 ***********************************************************************/
 int ach::Settings::getVolumeMusic()
 {
-	return json_object_get_branch_integer(data, "Audio.Music") * 10;
+	return json_object_get_branch_integer(data, "Audio.Music") * 4;
 }
 
 

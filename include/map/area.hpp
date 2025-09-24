@@ -6,7 +6,9 @@ namespace ach
 {
 	struct MapArea
 	{
-		sf::FloatRect rect;
+		ach::DataTrack *track;
+		sf::FloatRect   rect;
+
 
 		 MapArea(json_t *obj);
 		 MapArea(sf::FloatRect _rect);

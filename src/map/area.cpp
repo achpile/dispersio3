@@ -8,7 +8,11 @@
 ***********************************************************************/
 ach::MapArea::MapArea(json_t *obj)
 {
-	rect = vector_json_rect(obj);
+	track = NULL;
+	rect  = vector_json_rect(obj);
+
+	if (strlen(json_property_get_string(obj, "Track")))
+		track = db->getTrack(json_property_get_string(obj, "Track"));
 }
 
 
@@ -20,7 +24,8 @@ ach::MapArea::MapArea(json_t *obj)
 ***********************************************************************/
 ach::MapArea::MapArea(sf::FloatRect _rect)
 {
-	rect = _rect;
+	track = NULL;
+	rect  = _rect;
 }
 
 
