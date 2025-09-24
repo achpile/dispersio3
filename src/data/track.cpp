@@ -31,7 +31,7 @@ ach::DataTrack::~DataTrack()
      * play
 
 ***********************************************************************/
-void ach::DataTrack::play()
+void ach::DataTrack::play(bool reset)
 {
-	mm->play(filename, loop);
+	mm->play(filename, loop, reset);
 }

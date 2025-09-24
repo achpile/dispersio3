@@ -6,7 +6,7 @@ namespace ach
 {
 	struct MusicManager
 	{
-		ach::Timer  fade;
+		ach::Timer  fader;
 		sf::Music  *track;
 
 		int  vol;
@@ -17,7 +17,9 @@ namespace ach
 		~MusicManager();
 
 		void update();
-		void play(const char *name, bool loop);
+
+		void play(const char *name, bool loop, bool reset = true);
+		void fade();
 
 		void volume();
 	};

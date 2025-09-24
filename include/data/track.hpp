@@ -13,7 +13,7 @@ namespace ach
 		 DataTrack(json_t *obj);
 		~DataTrack();
 
-		void play();
+		void play(bool reset);
 	};
 }
 

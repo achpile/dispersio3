@@ -11,7 +11,7 @@ ach::MusicManager::MusicManager()
 	track      = new sf::Music();
 	current[0] = 0;
 
-	fade.set(TIME_MUSIC_FADE);
+	fader.set(TIME_MUSIC_FADE);
 
 	volume();
 }
@@ -37,10 +37,8 @@ ach::MusicManager::~MusicManager()
 ***********************************************************************/
 void ach::MusicManager::update()
 {
-	fade.update(true);
-
-	if (fade.isActive()) track->setVolume(vol * math_sqr(fade.progress()));
-	else                 track->setVolume(vol);
+	fader.update(true);
+	fade();
 }
 
 
@@ -50,20 +48,39 @@ void ach::MusicManager::update()
      * play
 
 ***********************************************************************/
-void ach::MusicManager::play(const char *name, bool loop)
+void ach::MusicManager::play(const char *name, bool loop, bool reset)
 {
 	if (strcmp(current, name) == 0)
 		return;
 
 	strncpy(current, name, STR_LEN_PATH);
 
-	fade.reset();
+	sf::Time offset = track->getPlayingOffset();
 
 	track->stop();
-	track->setVolume(0);
 	track->setLoop(loop);
 	track->openFromFile(current);
 	track->play();
+
+	if (reset)
+		fader.reset();
+	else
+		track->setPlayingOffset(offset);
+
+	fade();
+}
+
+
+
+/***********************************************************************
+     * MusicManager
+     * fade
+
+***********************************************************************/
+void ach::MusicManager::fade()
+{
+	if (fader.isActive()) track->setVolume(vol * fader.progress());
+	else                  track->setVolume(vol);
 }
 
 

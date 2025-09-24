@@ -16,6 +16,8 @@ ach::Map::Map(ach::ProcessWorld *_world, ach::DataMap *_base)
 	caption   = new ach::Caption(lm->getv("Game.Map.%s.Name", base->name));
 
 	load();
+
+	base->track->play(true);
 }
 
 
@@ -163,7 +165,7 @@ void ach::Map::viewport(ach::MapArea *area)
 			characters[i]->respawn();
 
 	if (!area->play())
-		base->track->play();
+		base->track->play(false);
 }
 
 

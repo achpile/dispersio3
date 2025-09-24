@@ -58,7 +58,7 @@ bool ach::MapArea::play()
 
 	played = true;
 
-	track->play();
+	track->play(false);
 
 	return true;
 }

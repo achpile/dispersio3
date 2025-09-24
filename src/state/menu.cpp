@@ -22,7 +22,7 @@ ach::StateMenu::StateMenu()
 	fill();
 
 	app->mouse(true);
-	db->getTrack(json_object_get_branch_string(dm->data, "Meta.Track.Menu"))->play();
+	db->getTrack(json_object_get_branch_string(dm->data, "Meta.Track.Menu"))->play(true);
 }
 
 
