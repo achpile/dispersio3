@@ -17,7 +17,7 @@ namespace ach
 		~MusicManager();
 
 		void update();
-		void play(const char *name);
+		void play(const char *name, bool loop);
 
 		void volume();
 	};

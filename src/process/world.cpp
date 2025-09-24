@@ -19,14 +19,13 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 
 	map->cam->follow(&player->phys);
 	map->characters.push_back(player);
+	map->base->track->play();
 
 	message->setPosition(sf::Vector2f(150.0f, 100.0f));
 
 	menu->setPosition(sf::Vector2f(150, 290));
 	menu->setWidthE(500);
 	menu->setHeightE(300);
-
-	mm->play(map->base->track);
 
 	fader.set(1.0f);
 

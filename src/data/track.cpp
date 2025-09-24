@@ -23,3 +23,15 @@ ach::DataTrack::DataTrack(json_t *obj)
 ach::DataTrack::~DataTrack()
 {
 }
+
+
+
+/***********************************************************************
+     * DataTrack
+     * play
+
+***********************************************************************/
+void ach::DataTrack::play()
+{
+	mm->play(filename, loop);
+}

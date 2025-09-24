@@ -4,6 +4,6 @@
             "gfx/game/cutscene/misc/default.png"
         ],
         "Text": "Game.Cutscene.BossIntro",
-        "Track": "track/default.ogg"
+        "Track": "Default"
     }
 }

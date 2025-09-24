@@ -9,11 +9,11 @@ namespace ach
 		ach::DataCharacter *player;
 		ach::DataCutscene  *intro;
 		ach::DataCutscene  *outro;
+		ach::DataTrack     *track;
 		ach::Sprite        *preview;
 		sf::Vector2i        spawn;
 
 		char filename[STR_LEN_PATH];
-		char track   [STR_LEN_PATH];
 		char next    [STR_LEN_NAME];
 
 		bool finish;

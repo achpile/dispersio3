@@ -16,7 +16,7 @@ ach::StateStart::StateStart()
 	slideshow = new ach::SlideShow(&sprites, true);
 
 	app->mouse(false);
-	mm->play(json_object_get_branch_string(dm->data, "Meta.Track.Menu"));
+	db->getTrack(json_object_get_branch_string(dm->data, "Meta.Track.Menu"))->play();
 
 	slideshow->setDuration(4.0f);
 	slideshow->setPosition(sf::Vector2f(RENDER_LAYER_GUI_X / 2, RENDER_LAYER_GUI_Y / 2));

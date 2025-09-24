@@ -13,7 +13,7 @@ ach::StateCredits::StateCredits()
 	fill();
 
 	app->mouse(false);
-	mm->play(json_object_get_branch_string(dm->data, "Meta.Track.Credits"));
+	db->getTrack(json_object_get_branch_string(dm->data, "Meta.Track.Credits"))->play();
 }
 
 

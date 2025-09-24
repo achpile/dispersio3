@@ -18,8 +18,9 @@
     },
     "Track": {
         "@attr": {
-            "default": "track/default.ogg",
-            "type": "filename"
+            "data": "Data.Track",
+            "default": "Default",
+            "type": "link"
         }
     }
 }

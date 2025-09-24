@@ -14,7 +14,8 @@ ach::DataCutscene::DataCutscene(json_t *obj)
 	json_array_foreach(json_object_get(obj, "Slideshow"), index, slide)
 		slideshow.push_back(new ach::Sprite(json_string_value(slide), false, true));
 
-	strncpy(track, json_object_get_string(obj, "Track"), STR_LEN_PATH);
+	track = db->getTrack(json_object_get_string(obj, "Track"));
+
 	strncpy(text , json_object_get_string(obj, "Text" ), STR_LEN_NAME);
 }
 

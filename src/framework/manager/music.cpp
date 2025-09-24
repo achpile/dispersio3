@@ -8,12 +8,10 @@
 ***********************************************************************/
 ach::MusicManager::MusicManager()
 {
-	track = new sf::Music();
-	track->setLoop(true);
+	track      = new sf::Music();
+	current[0] = 0;
 
 	fade.set(TIME_MUSIC_FADE);
-
-	current[0] = 0;
 
 	volume();
 }
@@ -52,7 +50,7 @@ void ach::MusicManager::update()
      * play
 
 ***********************************************************************/
-void ach::MusicManager::play(const char *name)
+void ach::MusicManager::play(const char *name, bool loop)
 {
 	if (strcmp(current, name) == 0)
 		return;
@@ -63,6 +61,7 @@ void ach::MusicManager::play(const char *name)
 
 	track->stop();
 	track->setVolume(0);
+	track->setLoop(loop);
 	track->openFromFile(current);
 	track->play();
 }

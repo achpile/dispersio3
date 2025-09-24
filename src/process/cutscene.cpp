@@ -21,7 +21,7 @@ ach::ProcessCutscene::ProcessCutscene(ach::StateGame *_owner, ach::DataCutscene 
 	slideshow->setPosition(sf::Vector2f(RENDER_LAYER_GUI_X / 2, 200.0f));
 	slideshow->setDuration((text->height() + CUTSCENE_HEIGHT - text->spacing) / (CUTSCENE_SPEED * base->slideshow.size()));
 
-	mm->play(base->track);
+	base->track->play();
 }
 
 

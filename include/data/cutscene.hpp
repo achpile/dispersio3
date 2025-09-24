@@ -6,9 +6,9 @@ namespace ach
 {
 	struct DataCutscene : DataContent
 	{
-		std::vector<ach::Sprite*> slideshow;
+		std::vector<ach::Sprite*>  slideshow;
+		ach::DataTrack            *track;
 
-		char track[STR_LEN_PATH];
 		char text [STR_LEN_NAME];
 
 
