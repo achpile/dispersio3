@@ -1095,7 +1095,11 @@
   <object id="203" type="area" x="0" y="0" width="384" height="288"/>
   <object id="204" type="area" x="0" y="288" width="384" height="288"/>
   <object id="205" type="area" x="0" y="576" width="384" height="288"/>
-  <object id="206" type="area" x="0" y="864" width="384" height="288"/>
+  <object id="206" type="area" x="0" y="864" width="384" height="288">
+   <properties>
+    <property name="Track" value="Siren"/>
+   </properties>
+  </object>
   <object id="207" type="area" x="384" y="0" width="384" height="288"/>
   <object id="208" type="area" x="768" y="0" width="384" height="288"/>
   <object id="209" type="area" x="384" y="288" width="384" height="288"/>

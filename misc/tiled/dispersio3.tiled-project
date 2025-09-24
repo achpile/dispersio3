@@ -156,6 +156,11 @@
             "drawFill": true,
             "id": 24,
             "members": [
+                {
+                    "name": "Track",
+                    "type": "string",
+                    "value": ""
+                }
             ],
             "name": "area",
             "type": "class",

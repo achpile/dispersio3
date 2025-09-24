@@ -202,7 +202,11 @@
   </object>
  </objectgroup>
  <objectgroup id="8" name="camera">
-  <object id="6" type="area" x="0" y="0" width="384" height="288"/>
+  <object id="6" type="area" x="0" y="0" width="384" height="288">
+   <properties>
+    <property name="Track" value="Default"/>
+   </properties>
+  </object>
   <object id="7" type="area" x="0" y="288" width="384" height="288"/>
  </objectgroup>
 </map>

@@ -5760,6 +5760,12 @@
                  "height":288,
                  "id":203,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5771,6 +5777,12 @@
                  "height":288,
                  "id":204,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5782,6 +5794,12 @@
                  "height":288,
                  "id":205,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5793,6 +5811,12 @@
                  "height":288,
                  "id":206,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":"Siren"
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5804,6 +5828,12 @@
                  "height":288,
                  "id":207,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5815,6 +5845,12 @@
                  "height":288,
                  "id":208,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5826,6 +5862,12 @@
                  "height":288,
                  "id":209,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5837,6 +5879,12 @@
                  "height":288,
                  "id":210,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5848,6 +5896,12 @@
                  "height":288,
                  "id":211,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5859,6 +5913,12 @@
                  "height":288,
                  "id":212,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5870,6 +5930,12 @@
                  "height":288,
                  "id":213,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5881,6 +5947,12 @@
                  "height":288,
                  "id":214,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5892,6 +5964,12 @@
                  "height":288,
                  "id":215,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5903,6 +5981,12 @@
                  "height":288,
                  "id":216,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5914,6 +5998,12 @@
                  "height":288,
                  "id":217,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -5925,6 +6015,12 @@
                  "height":288,
                  "id":218,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,

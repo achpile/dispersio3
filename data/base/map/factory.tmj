@@ -6213,6 +6213,12 @@
                  "height":288,
                  "id":247,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6224,6 +6230,12 @@
                  "height":288,
                  "id":248,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6235,6 +6247,12 @@
                  "height":288,
                  "id":249,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6246,6 +6264,12 @@
                  "height":288,
                  "id":250,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6257,6 +6281,12 @@
                  "height":288,
                  "id":251,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6268,6 +6298,12 @@
                  "height":288,
                  "id":252,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6279,6 +6315,12 @@
                  "height":288,
                  "id":253,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6290,6 +6332,12 @@
                  "height":288,
                  "id":254,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6301,6 +6349,12 @@
                  "height":288,
                  "id":255,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6312,6 +6366,12 @@
                  "height":288,
                  "id":256,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6323,6 +6383,12 @@
                  "height":288,
                  "id":257,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6334,6 +6400,12 @@
                  "height":288,
                  "id":258,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -6345,6 +6417,12 @@
                  "height":288,
                  "id":259,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,

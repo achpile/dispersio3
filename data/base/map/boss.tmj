@@ -686,6 +686,12 @@
                  "height":288,
                  "id":6,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":"Default"
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -697,6 +703,12 @@
                  "height":288,
                  "id":7,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"Track",
+                         "type":"string",
+                         "value":""
+                        }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
