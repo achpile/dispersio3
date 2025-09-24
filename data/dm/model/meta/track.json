@@ -5,14 +5,14 @@
     "Credits": {
         "@attr": {
             "data": "Data.Track",
-            "default": "Default",
+            "default": "Credits",
             "type": "link"
         }
     },
     "Menu": {
         "@attr": {
             "data": "Data.Track",
-            "default": "Default",
+            "default": "Menu",
             "type": "link"
         }
     }

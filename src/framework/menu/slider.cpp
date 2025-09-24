@@ -67,6 +67,10 @@ void ach::MenuItemSlider::action(int d)
 	value += d;
 
 	json_integer_set(data, value);
+
+	if (handler)
+		handler(menu->context, NULL);
+
 	sm->play(menu->sfxPick);
 }
 
