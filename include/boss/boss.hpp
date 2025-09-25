@@ -7,6 +7,7 @@ namespace ach
 	struct Boss
 	{
 		ach::ProcessWorld  *world;
+		ach::DataBoss      *base;
 		ach::Character     *target;
 
 		sf::FloatRect       rect;
