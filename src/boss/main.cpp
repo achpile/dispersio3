@@ -30,5 +30,4 @@ ach::BossMain::~BossMain()
 ***********************************************************************/
 void ach::BossMain::init()
 {
-	defeated = true;
 }
