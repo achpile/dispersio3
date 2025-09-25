@@ -2,6 +2,7 @@
     "@attr": {
         "type": "object"
     },
+    "Boss": "@include game/boss.json",
     "Cache": "@include game/cache.json",
     "Campaign": "@include game/campaign.json",
     "Character": "@include game/character.json",

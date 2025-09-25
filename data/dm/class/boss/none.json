@@ -1,0 +1,21 @@
+{
+    "BossNone": {
+        "Check": [
+            {
+                "List": "Model",
+                "Objects": []
+            },
+            {
+                "List": "Projectile",
+                "Objects": []
+            },
+            {
+                "List": "Summon",
+                "Objects": []
+            }
+        ],
+        "Param": "Type",
+        "Path": "Data.Game.Boss",
+        "Value": "none"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "Main": {
+        "Model": {
+            "Fist": "BossMainFist",
+            "Head": "BossMainHead"
+        },
+        "Type": "main"
+    }
+}

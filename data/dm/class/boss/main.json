@@ -1,0 +1,24 @@
+{
+    "BossMain": {
+        "Check": [
+            {
+                "List": "Model",
+                "Objects": [
+                    "Head",
+                    "Fist"
+                ]
+            },
+            {
+                "List": "Projectile",
+                "Objects": []
+            },
+            {
+                "List": "Summon",
+                "Objects": []
+            }
+        ],
+        "Param": "Type",
+        "Path": "Data.Game.Boss",
+        "Value": "main"
+    }
+}

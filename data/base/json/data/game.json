@@ -1,4 +1,5 @@
 {
+    "Boss": "@recursive game/boss",
     "Cache": "@silent ~save.json",
     "Campaign": "@include game/campaign.json",
     "Character": "@recursive game/character",

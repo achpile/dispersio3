@@ -1,0 +1,40 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Model": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.GFX.Model",
+            "default": "Default",
+            "type": "link"
+        }
+    },
+    "Projectile": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.Game.Projectile",
+            "default": "Simple",
+            "type": "link"
+        }
+    },
+    "Summon": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.Game.Character",
+            "default": "Bat",
+            "type": "link"
+        }
+    },
+    "Type": {
+        "@attr": {
+            "default": "none",
+            "enum": [
+                "none",
+                "main"
+            ],
+            "type": "enum"
+        }
+    }
+}
