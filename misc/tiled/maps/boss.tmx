@@ -234,7 +234,7 @@
   </object>
  </objectgroup>
  <objectgroup id="5" name="characters">
-  <object id="24" name="Main" type="boss" x="32" y="336" width="320" height="208"/>
+  <object id="24" name="Main" type="boss" x="32" y="320" width="320" height="224"/>
  </objectgroup>
  <objectgroup id="8" name="camera">
   <object id="6" type="area" x="0" y="0" width="384" height="288">

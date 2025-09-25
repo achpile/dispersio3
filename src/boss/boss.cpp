@@ -80,7 +80,9 @@ void ach::Boss::check(sf::FloatRect _rect)
 	if (active)
 		return;
 
-	if (rect.intersects(_rect))
+	sf::FloatRect intersection;
+
+	if (rect.intersects(_rect, intersection) && intersection == _rect)
 	{
 		active = true;
 
