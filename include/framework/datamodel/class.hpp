@@ -3,6 +3,7 @@
 
 
 void json_dm_class_check(json_t *data, json_t *cls);
-void json_dm_class_check_object(json_t *obj, json_t *cls);
+void json_dm_class_check_instance(json_t *obj, json_t *cls);
+void json_dm_class_check_object(json_t *obj, json_t *check);
 
 #endif

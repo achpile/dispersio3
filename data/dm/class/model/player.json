@@ -1,12 +1,16 @@
 {
     "BodyPlayer": {
-        "List": "Animation",
-        "Objects": [
-            "Fall",
-            "Idle",
-            "Jump",
-            "Walk",
-            "Death"
+        "Check": [
+            {
+                "List": "Animation",
+                "Objects": [
+                    "Fall",
+                    "Idle",
+                    "Jump",
+                    "Walk",
+                    "Death"
+                ]
+            }
         ],
         "Param": "Type",
         "Path": "Data.GFX.Model",

@@ -1,8 +1,12 @@
 {
     "ModelSimple": {
-        "List": "Animation",
-        "Objects": [
-            "Idle"
+        "Check": [
+            {
+                "List": "Animation",
+                "Objects": [
+                    "Idle"
+                ]
+            }
         ],
         "Param": "Type",
         "Path": "Data.GFX.Model",

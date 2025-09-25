@@ -22,22 +22,37 @@ void json_dm_class_check(json_t *data, json_t *cls)
 
 
 /***********************************************************************
-     * json_dm_class_check_object
+     * json_dm_class_check_instance
 
 ***********************************************************************/
-void json_dm_class_check_object(json_t *obj, json_t *cls)
+void json_dm_class_check_instance(json_t *obj, json_t *cls)
 {
 	if (!json_equal(json_object_get(cls, "Value"), json_object_get(obj, json_object_get_string(cls, "Param"))))
 		return;
 
+	size_t  i;
+	json_t *check;
+
+	json_array_foreach(json_object_get(cls, "Check"), i, check)
+		json_dm_class_check_object(obj, check);
+}
+
+
+
+/***********************************************************************
+     * json_dm_class_check_object
+
+***********************************************************************/
+void json_dm_class_check_object(json_t *obj, json_t *check)
+{
 	size_t      i;
 	const char *key;
-	const char *list = json_object_get_string(cls, "List");
+	const char *list = json_object_get_string(check, "List");
 	json_t     *j;
 	json_t     *multi = json_object_get(obj, list);
 
 
-	json_array_foreach(json_object_get(cls, "Objects"), i, j)
+	json_array_foreach(json_object_get(check, "Objects"), i, j)
 	{
 		key = json_string_value(j);
 		if (!json_object_get(multi, key))
@@ -50,7 +65,7 @@ void json_dm_class_check_object(json_t *obj, json_t *cls)
 
 	json_object_foreach(multi, key, j)
 	{
-		if (!json_array_contains(json_object_get(cls, "Objects"), key))
+		if (!json_array_contains(json_object_get(check, "Objects"), key))
 		{
 			logger->log(ach::LogLevel::llError, "Object should not have '%s' in '%s'", key, list);
 			json_object_del(multi, key);

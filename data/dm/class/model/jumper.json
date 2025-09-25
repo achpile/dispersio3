@@ -1,10 +1,14 @@
 {
     "BodyJumper": {
-        "List": "Animation",
-        "Objects": [
-            "Fall",
-            "Idle",
-            "Jump"
+        "Check": [
+            {
+                "List": "Animation",
+                "Objects": [
+                    "Fall",
+                    "Idle",
+                    "Jump"
+                ]
+            }
         ],
         "Param": "Type",
         "Path": "Data.GFX.Model",

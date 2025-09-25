@@ -1,9 +1,13 @@
 {
     "ModelMoving": {
-        "List": "Animation",
-        "Objects": [
-            "Idle",
-            "Moving"
+        "Check": [
+            {
+                "List": "Animation",
+                "Objects": [
+                    "Idle",
+                    "Moving"
+                ]
+            }
         ],
         "Param": "Type",
         "Path": "Data.GFX.Model",

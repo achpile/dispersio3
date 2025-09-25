@@ -1,7 +1,11 @@
 {
     "ModelNone": {
-        "List": "Animation",
-        "Objects": [],
+        "Check": [
+            {
+                "List": "Animation",
+                "Objects": []
+            }
+        ],
         "Param": "Type",
         "Path": "Data.GFX.Model",
         "Value": "none"
