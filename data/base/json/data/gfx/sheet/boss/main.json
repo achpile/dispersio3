@@ -1,0 +1,10 @@
+{
+    "BossMainFist": {
+        "Filename": "gfx/game/sheet/boss/main/fist.png",
+        "Frames": 4
+    },
+    "BossMainHead": {
+        "Filename": "gfx/game/sheet/boss/main/head.png",
+        "Frames": 2
+    }
+}

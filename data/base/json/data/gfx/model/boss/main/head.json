@@ -1,0 +1,15 @@
+{
+    "BossMainHead": {
+        "Animation": {
+            "Dead": {
+                "End": 1,
+                "Start": 1
+            },
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            }
+        },
+        "Sheet": "BossMainHead"
+    }
+}

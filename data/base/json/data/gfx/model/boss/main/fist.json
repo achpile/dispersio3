@@ -1,0 +1,24 @@
+{
+    "BossMainFist": {
+        "Animation": {
+            "Dead": {
+                "End": 3,
+                "Start": 3
+            },
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            },
+            "Throw": {
+                "End": 2,
+                "Loop": false,
+                "Start": 1
+            },
+            "Up": {
+                "End": 2,
+                "Start": 2
+            }
+        },
+        "Sheet": "BossMainFist"
+    }
+}
