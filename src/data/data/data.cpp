@@ -30,6 +30,7 @@ ach::Database::~Database()
 	list_delete(item);
 	list_delete(npc);
 	list_delete(character);
+	list_delete(boss);
 	list_delete(cutscene);
 	list_delete(map);
 }
@@ -75,6 +76,7 @@ void ach::Database::load()
 	loadContent<ach::DataItem      >("Game.Item"      , &item      );
 	loadContent<ach::DataNPC       >("Game.NPC"       , &npc       );
 	loadContent<ach::DataCharacter >("Game.Character" , &character );
+	loadContent<ach::DataBoss      >("Game.Boss"      , &boss      );
 	loadContent<ach::DataCutscene  >("Game.Cutscene"  , &cutscene  );
 	loadContent<ach::DataMap       >("Game.Map"       , &map       );
 }

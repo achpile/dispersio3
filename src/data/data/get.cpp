@@ -152,6 +152,18 @@ ach::DataCharacter* ach::Database::getCharacter(const char *name)
 
 /***********************************************************************
      * Database
+     * getBoss
+
+***********************************************************************/
+ach::DataBoss* ach::Database::getBoss(const char *name)
+{
+	return getContent<ach::DataBoss>(name, &boss);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getCutscene
 
 ***********************************************************************/

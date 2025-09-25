@@ -32,6 +32,7 @@
 #include "data/item.hpp"
 #include "data/npc.hpp"
 #include "data/character.hpp"
+#include "data/boss.hpp"
 #include "data/cutscene.hpp"
 #include "data/map.hpp"
 #include "data/data.hpp"
@@ -85,6 +86,7 @@
 #include "character/character.hpp"
 
 #include "boss/boss.hpp"
+#include "boss/pair.hpp"
 #include "boss/none.hpp"
 #include "boss/main.hpp"
 

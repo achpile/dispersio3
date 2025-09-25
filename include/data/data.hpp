@@ -17,6 +17,7 @@ namespace ach
 		std::vector<ach::DataItem*      > item;
 		std::vector<ach::DataNPC*       > npc;
 		std::vector<ach::DataCharacter* > character;
+		std::vector<ach::DataBoss*      > boss;
 		std::vector<ach::DataCutscene*  > cutscene;
 		std::vector<ach::DataMap*       > map;
 
@@ -38,6 +39,7 @@ namespace ach
 		ach::DataItem       *getItem      (const char *name);
 		ach::DataNPC        *getNPC       (const char *name);
 		ach::DataCharacter  *getCharacter (const char *name);
+		ach::DataBoss       *getBoss      (const char *name);
 		ach::DataCutscene   *getCutscene  (const char *name);
 		ach::DataMap        *getMap       (const char *name);
 
