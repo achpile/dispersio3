@@ -137,6 +137,22 @@ void ach::BossMain::handle()
 
 /***********************************************************************
      * BossMain
+     * collide
+
+***********************************************************************/
+bool ach::BossMain::collide(sf::FloatRect r)
+{
+	if (r.intersects(sf::FloatRect(pos.x - 16.0f, pos.y - 16.0f, 32.0f, 32.0f))) return true;
+	if (r.intersects(sf::FloatRect(pos.x - 48.0f, pos.y        , 32.0f, 32.0f))) return true;
+	if (r.intersects(sf::FloatRect(pos.x + 16.0f, pos.y        , 32.0f, 32.0f))) return true;
+
+	return false;
+}
+
+
+
+/***********************************************************************
+     * BossMain
      * count
 
 ***********************************************************************/

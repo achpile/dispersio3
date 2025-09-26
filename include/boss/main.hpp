@@ -35,6 +35,7 @@ namespace ach
 		void render();
 		void respawn();
 		void handle();
+		bool collide(sf::FloatRect r);
 
 		int  count();
 		void patterns();
