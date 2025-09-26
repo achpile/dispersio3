@@ -15,6 +15,10 @@ ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, o
 	pos   = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
 
 	fistR->scale.x = -1;
+
+	head->setAnimation("Idle");
+	fistL->setAnimation("Idle");
+	fistR->setAnimation("Idle");
 }
 
 
