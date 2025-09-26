@@ -4,13 +4,26 @@
 
 namespace ach
 {
+	enum BossMainState
+	{
+		bmsWait,
+		bmsPattern,
+		bmsDamage,
+		bmsDefeated
+	};
+
+
 	struct BossMain : Boss
 	{
-		ach::Model   *head;
-		ach::Model   *fistL;
-		ach::Model   *fistR;
+		ach::Model         *head;
+		ach::Model         *fistL;
+		ach::Model         *fistR;
 
-		sf::Vector2f  pos;
+		ach::BossMainState  state;
+		ach::Timer          timer;
+		sf::Vector2f        pos;
+
+		int pattern;
 
 
 		 BossMain(ach::ProcessWorld *_world, json_t *obj);
@@ -18,6 +31,11 @@ namespace ach
 
 		void init();
 		void render();
+		void respawn();
+		void handle();
+
+		void prepare();
+		void attack();
 	};
 }
 
