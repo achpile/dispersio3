@@ -153,20 +153,12 @@ void ach::ArcadeHexagon::handle()
 void ach::ArcadeHexagon::fill()
 {
 	std::vector<int> list;
-	int a, b, k;
+	int k;
 
 	for (int i = 0; i < 6; i++)
 		list.push_back(i);
 
-	for (int i = 0; i < 20; i++)
-	{
-		a = rand() % list.size();
-		b = rand() % list.size();
-
-		k       = list[a];
-		list[a] = list[b];
-		list[b] = k;
-	}
+	random_shuffle(&list);
 
 	k = (rand() % 5) + 1;
 

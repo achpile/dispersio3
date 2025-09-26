@@ -80,6 +80,8 @@ void ach::BossMain::respawn()
 	fistR->setAnimation("Idle");
 
 	timer.set(1.0f);
+
+	patterns();
 }
 
 
@@ -96,8 +98,10 @@ void ach::BossMain::handle()
 		case ach::BossMainState::bmsWait:
 			if (!timer.update())
 			{
-				state = ach::BossMainState::bmsPattern;
+				state   = ach::BossMainState::bmsPattern;
+				pattern = list.back();
 
+				list.pop_back();
 				prepare();
 			}
 		break;
@@ -109,9 +113,15 @@ void ach::BossMain::handle()
 
 
 		case ach::BossMainState::bmsDamage:
+			if (list.size())
 			{
 				timer.set(1.0f);
 				state = ach::BossMainState::bmsWait;
+			}
+			else
+			{
+				timer.set(3.0f);
+				state = ach::BossMainState::bmsDefeated;
 			}
 		break;
 
@@ -120,6 +130,69 @@ void ach::BossMain::handle()
 			if (!timer.update())
 				defeated = true;
 		break;
+	}
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * count
+
+***********************************************************************/
+int ach::BossMain::count()
+{
+	if (cache->mode == ach::LevelMode::lmTraining)
+		return 3;
+
+	switch (cache->difficulty)
+	{
+		case ach::Difficulty::gdEasy  : return 1;
+		case ach::Difficulty::gdNormal: return 2;
+		case ach::Difficulty::gdHard  : return 3;
+	}
+
+	return 0;
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * patterns
+
+***********************************************************************/
+void ach::BossMain::patterns()
+{
+	list.clear();
+
+	std::vector<int> eyes;
+	std::vector<int> mouth;
+	std::vector<int> fist;
+
+	eyes.push_back(1);
+	eyes.push_back(2);
+	eyes.push_back(3);
+
+	mouth.push_back(4);
+	mouth.push_back(5);
+	mouth.push_back(6);
+
+	fist.push_back(7);
+	fist.push_back(8);
+	fist.push_back(9);
+
+	random_shuffle(&eyes);
+	random_shuffle(&mouth);
+	random_shuffle(&fist);
+
+	for (int i = 0; i < count(); i++)
+	{
+		list.push_back(eyes[i]);
+		list.push_back(mouth[i]);
+		list.push_back(fist[i]);
+
+		random_shuffle(&list, 3 * i, 3);
 	}
 }
 

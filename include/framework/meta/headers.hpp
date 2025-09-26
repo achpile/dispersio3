@@ -30,6 +30,7 @@
 #include "framework/random/item.inl"
 #include "framework/random/list.hpp"
 #include "framework/random/list.inl"
+#include "framework/random/shuffle.inl"
 
 #include "framework/math/math.hpp"
 #include "framework/math/interval.hpp"

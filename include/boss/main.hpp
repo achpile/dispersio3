@@ -23,6 +23,8 @@ namespace ach
 		ach::Timer          timer;
 		sf::Vector2f        pos;
 
+		std::vector<int>    list;
+
 		int pattern;
 
 
@@ -34,6 +36,8 @@ namespace ach
 		void respawn();
 		void handle();
 
+		int  count();
+		void patterns();
 		void prepare();
 		void attack();
 	};

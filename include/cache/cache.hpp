@@ -6,9 +6,9 @@ namespace ach
 {
 	enum Difficulty
 	{
-		gdEasy   = 0,
-		gdNormal = 1,
-		gdHard   = 2
+		gdEasy,
+		gdNormal,
+		gdHard
 	};
 
 
