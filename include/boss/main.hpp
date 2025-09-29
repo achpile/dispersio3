@@ -44,6 +44,9 @@ namespace ach
 		int  count();
 		void idle();
 		void patterns();
+
+		void shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel);
+
 		void prepare();
 		void evaluate();
 		void attack();

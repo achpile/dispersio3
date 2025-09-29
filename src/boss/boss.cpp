@@ -73,6 +73,38 @@ void ach::Boss::reset()
 
 /***********************************************************************
      * Boss
+     * search
+
+***********************************************************************/
+void ach::Boss::search()
+{
+	ach::Character *candidate = NULL;
+	float dist = 0.0f;
+
+	target = NULL;
+
+	list_foreach(world->map->characters)
+	{
+		candidate = world->map->characters[i];
+
+		if (candidate->enemy)
+			continue;
+
+		if (!candidate->visible())
+			continue;
+
+		if (!target || vector_len(rect_center(rect) - candidate->phys.pos) < dist)
+		{
+			target = candidate;
+			dist   = vector_len(rect_center(rect) - candidate->phys.pos);
+		}
+	}
+}
+
+
+
+/***********************************************************************
+     * Boss
      * check
 
 ***********************************************************************/
@@ -88,6 +120,7 @@ void ach::Boss::check(sf::FloatRect _rect)
 		active = true;
 
 		init();
+		search();
 		world->map->close();
 	}
 }

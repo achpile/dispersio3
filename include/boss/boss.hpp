@@ -23,6 +23,7 @@ namespace ach
 		void process();
 
 		void reset();
+		void search();
 		void check(sf::FloatRect _rect);
 
 		virtual void init()                 {};

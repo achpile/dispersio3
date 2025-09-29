@@ -105,6 +105,7 @@ void ach::BossMain::handle()
 				pattern = list.back();
 
 				list.pop_back();
+				pattern = 4;
 				prepare();
 			}
 		break;
@@ -247,6 +248,29 @@ void ach::BossMain::patterns()
 
 /***********************************************************************
      * BossMain
+     * shot
+
+***********************************************************************/
+void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel)
+{
+	ach::Projectile *proj = new ach::Projectile(world, projectile);
+
+	proj->phys.pos = _pos;
+	proj->phys.vel = vector_set_len(_dir, _vel);
+	proj->enemy    = true;
+
+	if (proj->phys.vel.x < 0.0f)
+		proj->flip = true;
+
+	proj->init();
+
+	world->map->projectiles.push_back(proj);
+}
+
+
+
+/***********************************************************************
+     * BossMain
      * prepare
 
 ***********************************************************************/
@@ -274,7 +298,7 @@ void ach::BossMain::prepare()
 		case 4:
 			mouth->setAnimation("Fire");
 
-			timer.set(1.0f);
+			timer.set(2.0f);
 
 			projectile = db->getProjectile(json_object_get_string(base->projectile, "Fireball"));
 		break;
@@ -389,6 +413,7 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 4:
+			shot(pos, target->phys.pos - pos, 200.0f);
 		break;
 
 		// -------------------------------------------------------------
