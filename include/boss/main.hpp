@@ -15,17 +15,19 @@ namespace ach
 
 	struct BossMain : Boss
 	{
-		ach::Model         *head;
-		ach::Model         *eyes;
-		ach::Model         *mouth;
-		ach::Model         *fistL;
-		ach::Model         *fistR;
+		ach::Model          *head;
+		ach::Model          *eyes;
+		ach::Model          *mouth;
+		ach::Model          *fistL;
+		ach::Model          *fistR;
 
-		ach::BossMainState  state;
-		ach::Timer          timer;
-		sf::Vector2f        pos;
+		ach::DataProjectile *projectile;
 
-		std::vector<int>    list;
+		ach::BossMainState   state;
+		ach::Timer           timer;
+		sf::Vector2f         pos;
+
+		std::vector<int>     list;
 
 		int pattern;
 
@@ -43,6 +45,7 @@ namespace ach
 		void idle();
 		void patterns();
 		void prepare();
+		void evaluate();
 		void attack();
 	};
 }
