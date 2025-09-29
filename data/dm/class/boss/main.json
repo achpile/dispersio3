@@ -12,7 +12,9 @@
             },
             {
                 "List": "Projectile",
-                "Objects": []
+                "Objects": [
+                    "Fireball"
+                ]
             },
             {
                 "List": "Summon",

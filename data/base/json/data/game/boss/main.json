@@ -6,6 +6,9 @@
             "Head": "BossMainHead",
             "Mouth": "BossMainMouth"
         },
+        "Projectile": {
+            "Fireball": "Fireball"
+        },
         "Type": "main"
     }
 }

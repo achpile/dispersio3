@@ -1,0 +1,14 @@
+{
+    "Fireball": {
+        "Appearance": {
+            "Orientation": "direction",
+            "Sheet": "ProjectileFireball"
+        },
+        "Physics": {
+            "Radius": 6
+        },
+        "Tracer": {
+            "Type": "smoke"
+        }
+    }
+}
