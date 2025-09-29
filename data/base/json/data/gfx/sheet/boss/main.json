@@ -1,4 +1,8 @@
 {
+    "BossMainEyes": {
+        "Filename": "gfx/game/sheet/boss/main/eyes.png",
+        "Frames": 2
+    },
     "BossMainFist": {
         "Filename": "gfx/game/sheet/boss/main/fist.png",
         "Frames": 4
@@ -6,5 +10,9 @@
     "BossMainHead": {
         "Filename": "gfx/game/sheet/boss/main/head.png",
         "Frames": 2
+    },
+    "BossMainMouth": {
+        "Filename": "gfx/game/sheet/boss/main/mouth.png",
+        "Frames": 6
     }
 }

@@ -16,6 +16,8 @@ namespace ach
 	struct BossMain : Boss
 	{
 		ach::Model         *head;
+		ach::Model         *eyes;
+		ach::Model         *mouth;
 		ach::Model         *fistL;
 		ach::Model         *fistR;
 
@@ -38,6 +40,7 @@ namespace ach
 		bool collide(sf::FloatRect r);
 
 		int  count();
+		void idle();
 		void patterns();
 		void prepare();
 		void attack();

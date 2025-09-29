@@ -1,0 +1,19 @@
+{
+    "BossMainMouth": {
+        "Animation": {
+            "Dead": {
+                "End": 0,
+                "Start": 0
+            },
+            "Fire": {
+                "End": 5,
+                "Start": 1
+            },
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            }
+        },
+        "Sheet": "BossMainMouth"
+    }
+}

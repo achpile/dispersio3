@@ -1,8 +1,10 @@
 {
     "Main": {
         "Model": {
+            "Eyes": "BossMainEyes",
             "Fist": "BossMainFist",
-            "Head": "BossMainHead"
+            "Head": "BossMainHead",
+            "Mouth": "BossMainMouth"
         },
         "Type": "main"
     }

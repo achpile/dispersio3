@@ -4,8 +4,10 @@
             {
                 "List": "Model",
                 "Objects": [
+                    "Eyes",
+                    "Fist",
                     "Head",
-                    "Fist"
+                    "Mouth"
                 ]
             },
             {

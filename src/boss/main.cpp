@@ -8,17 +8,17 @@
 ***********************************************************************/
 ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, obj)
 {
-	head  = new ach::Model(db->getModel(json_object_get_string(base->model, "Head")));
-	fistL = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist")));
-	fistR = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist")));
+	head  = new ach::Model(db->getModel(json_object_get_string(base->model, "Head" )));
+	eyes  = new ach::Model(db->getModel(json_object_get_string(base->model, "Eyes" )));
+	mouth = new ach::Model(db->getModel(json_object_get_string(base->model, "Mouth")));
+	fistL = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
+	fistR = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 
 	pos   = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
 
 	fistR->scale.x = -1;
 
-	head->setAnimation("Idle");
-	fistL->setAnimation("Idle");
-	fistR->setAnimation("Idle");
+	idle();
 }
 
 
@@ -31,6 +31,8 @@ ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, o
 ach::BossMain::~BossMain()
 {
 	delete head;
+	delete eyes;
+	delete mouth;
 	delete fistL;
 	delete fistR;
 }
@@ -56,10 +58,14 @@ void ach::BossMain::init()
 void ach::BossMain::render()
 {
 	head->update();
+	eyes->update();
+	mouth->update();
 	fistL->update();
 	fistR->update();
 
 	head->render(pos);
+	eyes->render(pos);
+	mouth->render(pos);
 	fistL->render(pos + sf::Vector2f(-32.0f, 16.0f));
 	fistR->render(pos + sf::Vector2f( 32.0f, 16.0f));
 }
@@ -75,12 +81,9 @@ void ach::BossMain::respawn()
 {
 	state = ach::BossMainState::bmsWait;
 
-	head->setAnimation("Idle");
-	fistL->setAnimation("Idle");
-	fistR->setAnimation("Idle");
-
 	timer.set(1.0f);
 
+	idle();
 	patterns();
 }
 
@@ -122,6 +125,12 @@ void ach::BossMain::handle()
 			{
 				timer.set(3.0f);
 				state = ach::BossMainState::bmsDefeated;
+
+				head->setAnimation("Dead");
+				eyes->setAnimation("Dead");
+				mouth->setAnimation("Dead");
+				fistL->setAnimation("Dead");
+				fistR->setAnimation("Dead");
 			}
 		break;
 
@@ -175,6 +184,22 @@ int ach::BossMain::count()
 
 /***********************************************************************
      * BossMain
+     * idle
+
+***********************************************************************/
+void ach::BossMain::idle()
+{
+	head->setAnimation("Idle");
+	eyes->setAnimation("Idle");
+	mouth->setAnimation("Idle");
+	fistL->setAnimation("Idle");
+	fistR->setAnimation("Idle");
+}
+
+
+
+/***********************************************************************
+     * BossMain
      * patterns
 
 ***********************************************************************/
@@ -182,31 +207,31 @@ void ach::BossMain::patterns()
 {
 	list.clear();
 
-	std::vector<int> eyes;
-	std::vector<int> mouth;
-	std::vector<int> fist;
+	std::vector<int> p_eyes;
+	std::vector<int> p_mouth;
+	std::vector<int> p_fist;
 
-	eyes.push_back(1);
-	eyes.push_back(2);
-	eyes.push_back(3);
+	p_eyes.push_back(1);
+	p_eyes.push_back(2);
+	p_eyes.push_back(3);
 
-	mouth.push_back(4);
-	mouth.push_back(5);
-	mouth.push_back(6);
+	p_mouth.push_back(4);
+	p_mouth.push_back(5);
+	p_mouth.push_back(6);
 
-	fist.push_back(7);
-	fist.push_back(8);
-	fist.push_back(9);
+	p_fist.push_back(7);
+	p_fist.push_back(8);
+	p_fist.push_back(9);
 
-	random_shuffle(&eyes);
-	random_shuffle(&mouth);
-	random_shuffle(&fist);
+	random_shuffle(&p_eyes);
+	random_shuffle(&p_mouth);
+	random_shuffle(&p_fist);
 
 	for (int i = 0; i < count(); i++)
 	{
-		list.push_back(eyes[i]);
-		list.push_back(mouth[i]);
-		list.push_back(fist[i]);
+		list.push_back(p_eyes[i]);
+		list.push_back(p_mouth[i]);
+		list.push_back(p_fist[i]);
 
 		random_shuffle(&list, 3 * i, 3);
 	}
@@ -221,6 +246,8 @@ void ach::BossMain::patterns()
 ***********************************************************************/
 void ach::BossMain::prepare()
 {
+	idle();
+
 	switch (pattern)
 	{
 		case 1:
