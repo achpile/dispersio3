@@ -11,14 +11,6 @@
             "type": "link"
         }
     },
-    "Projectile": {
-        "@attr": {
-            "container": "multi",
-            "data": "Data.Game.Projectile",
-            "default": "Simple",
-            "type": "link"
-        }
-    },
     "Summon": {
         "@attr": {
             "container": "multi",
@@ -35,6 +27,14 @@
                 "main"
             ],
             "type": "enum"
+        }
+    },
+    "Weapon": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.Game.Weapon",
+            "default": "Gun",
+            "type": "link"
         }
     }
 }

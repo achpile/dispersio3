@@ -253,7 +253,7 @@ void ach::BossMain::patterns()
 ***********************************************************************/
 void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel)
 {
-	ach::Projectile *proj = new ach::Projectile(world, projectile);
+	ach::Projectile *proj = new ach::Projectile(world, weapon->projectile);
 
 	proj->phys.pos = _pos;
 	proj->phys.vel = vector_set_len(_dir, _vel);
@@ -265,6 +265,7 @@ void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel)
 	proj->init();
 
 	world->map->projectiles.push_back(proj);
+	sm->play(weapon->shot->snd);
 }
 
 
@@ -300,7 +301,7 @@ void ach::BossMain::prepare()
 
 			timer.set(2.0f);
 
-			projectile = db->getProjectile(json_object_get_string(base->projectile, "Fireball"));
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Fireball"));
 		break;
 
 		// -------------------------------------------------------------

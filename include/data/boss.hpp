@@ -16,7 +16,7 @@ namespace ach
 		ach::BossType type;
 
 		json_t *model;
-		json_t *projectile;
+		json_t *weapon;
 		json_t *summon;
 
 
