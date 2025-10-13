@@ -12,7 +12,7 @@ PCH      = $(HEADER).gch
 SCRIPT   = misc/script/sort
 
 TOTAL    = $(words $(OBJ))
-CORES    = $(shell grep -c ^processor /proc/cpuinfo)
+CORES    = $(shell nproc)
 
 CMAKE    = CMakeFiles           \
            CMakeCache.txt       \
