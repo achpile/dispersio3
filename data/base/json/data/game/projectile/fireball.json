@@ -4,6 +4,10 @@
             "Orientation": "direction",
             "Sheet": "ProjectileFireball"
         },
+        "Explosion": {
+            "Count": 2,
+            "Enable": true
+        },
         "Physics": {
             "Radius": 6
         },

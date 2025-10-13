@@ -16,6 +16,14 @@
             "type": "boolean"
         }
     },
+    "Force": {
+        "@attr": {
+            "default": 250,
+            "max": 1000,
+            "min": 100,
+            "type": "real"
+        }
+    },
     "Projectile": {
         "@attr": {
             "data": "Data.Game.Projectile",

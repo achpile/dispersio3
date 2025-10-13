@@ -205,6 +205,21 @@ void ach::Projectile::explode()
 {
 	if (!base->explosive)
 		return;
+
+	int   c = base->count * 4;
+	float a = (MATH_PI * 2.0f) / c;
+
+	for (int i = 0; i < c; i++)
+	{
+		ach::Projectile *proj = new ach::Projectile(world, base->explosion);
+
+		proj->enemy    = enemy;
+		proj->phys.vel = vector_set_len(vector_create(a * i), base->force);
+		proj->phys.pos = phys.pos;
+		proj->init();
+
+		world->map->projectiles.push_back(proj);
+	}
 }
 
 

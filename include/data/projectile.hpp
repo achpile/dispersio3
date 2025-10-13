@@ -43,10 +43,11 @@ namespace ach
 		float     gravity;
 		float     radius;
 		float     scale;
+		float     force;
 
 		bool      explosive;
 		char      explosionN[STR_LEN_NAME];
-		int       explosionC;
+		int       count;
 		int       bounces;
 
 
