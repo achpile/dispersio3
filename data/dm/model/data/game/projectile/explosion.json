@@ -2,31 +2,24 @@
     "@attr": {
         "type": "object"
     },
+    "Count": {
+        "@attr": {
+            "default": 1,
+            "max": 8,
+            "min": 1,
+            "type": "integer"
+        }
+    },
     "Enable": {
         "@attr": {
             "default": false,
             "type": "boolean"
         }
     },
-    "Radius": {
+    "Projectile": {
         "@attr": {
-            "default": 32,
-            "max": 100,
-            "min": 0,
-            "type": "real"
-        }
-    },
-    "Sheet": {
-        "@attr": {
-            "data": "Data.GFX.Sheet",
-            "default": "Explosion",
-            "type": "link"
-        }
-    },
-    "Sound": {
-        "@attr": {
-            "data": "Data.SFX",
-            "default": "Explosion",
+            "data": "Data.Game.Projectile",
+            "default": "Bullet",
             "type": "link"
         }
     }

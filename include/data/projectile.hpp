@@ -29,31 +29,31 @@ namespace ach
 
 	struct DataProjectile : DataContent
 	{
-		ach::DataSheet  *sheet;
-		ach::DataSheet  *explosion;
-		ach::ImpactType  impact;
-		ach::TracerType  tracer;
-		ach::OrientType  orient;
+		ach::DataProjectile *explosion;
+		ach::DataSheet      *sheet;
+		ach::DataSound      *bump;
+		ach::ImpactType      impact;
+		ach::TracerType      tracer;
+		ach::OrientType      orient;
 
-		ach::DataSound  *sfxBump;
-		ach::DataSound  *sfxExplosion;
+		sf::Color color;
+		sf::Color colorImpact;
+		sf::Color colorTracer;
 
-		sf::Color        color;
-		sf::Color        colorImpact;
-		sf::Color        colorTracer;
+		float     gravity;
+		float     radius;
+		float     scale;
 
-
-		float explosionR;
-		float gravity;
-		float radius;
-		float scale;
-
-		bool  explosive;
-		int   bounces;
+		bool      explosive;
+		char      explosionN[STR_LEN_NAME];
+		int       explosionC;
+		int       bounces;
 
 
 		 DataProjectile(json_t *obj);
 		~DataProjectile();
+
+		void finalize();
 	};
 }
 

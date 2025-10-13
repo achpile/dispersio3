@@ -27,7 +27,7 @@ namespace ach
 		 DataMap(json_t *obj);
 		~DataMap();
 
-		void calc();
+		void finalize();
 	};
 }
 

@@ -154,25 +154,6 @@ void ach::Map::collideProjectile(ach::Projectile *projectile)
 
 /***********************************************************************
      * Map
-     * collideExplosion
-
-***********************************************************************/
-void ach::Map::collideExplosion(ach::Projectile *projectile)
-{
-	list_foreach(characters)
-	{
-		if (characters[i]->enemy == projectile->enemy)
-			continue;
-
-		if (collision_box_vs_circle(characters[i]->phys.rect, projectile->phys.pos, projectile->base->explosionR, NULL, NULL))
-			characters[i]->die();
-	}
-}
-
-
-
-/***********************************************************************
-     * Map
      * collideEnemies
 
 ***********************************************************************/

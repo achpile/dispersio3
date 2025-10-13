@@ -51,6 +51,9 @@ template <typename T> void loadContent(const char *section, std::vector<T*> *lis
 		list->push_back(new T(obj));
 		list->back()->setName(key);
 	}
+
+	list_foreach(*list)
+		(*list)[i]->finalize();
 }
 
 

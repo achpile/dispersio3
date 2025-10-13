@@ -8,6 +8,10 @@ namespace ach
 	{
 		char name[STR_LEN_NAME];
 
+
+		virtual      ~DataContent() {};
+		virtual void  finalize()    {};
+
 		void setName(const char *_name);
 	};
 }

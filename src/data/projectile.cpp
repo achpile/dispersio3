@@ -13,13 +13,10 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	gravity      = json_object_get_branch_real   (obj, "Physics.Gravity" );
 	bounces      = json_object_get_branch_integer(obj, "Physics.Bounces" );
 	explosive    = json_object_get_branch_boolean(obj, "Explosion.Enable");
-	explosionR   = json_object_get_branch_real   (obj, "Explosion.Radius");
+	explosionC   = json_object_get_branch_real   (obj, "Explosion.Count" );
 
 	sheet        = db->getSheet(json_object_get_branch_string(obj, "Appearance.Sheet"));
-	explosion    = db->getSheet(json_object_get_branch_string(obj, "Explosion.Sheet" ));
-
-	sfxBump      = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"   ));
-	sfxExplosion = db->getSound(json_object_get_branch_string(obj, "Explosion.Sound"));
+	bump         = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"   ));
 
 	impact       = pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"           ), pairImpact);
 	tracer       = pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"           ), pairTracer);
@@ -28,6 +25,8 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	color        = str_to_color(json_object_get_branch_string(obj, "Appearance.Color"));
 	colorImpact  = str_to_color(json_object_get_branch_string(obj, "Impact.Color"    ));
 	colorTracer  = str_to_color(json_object_get_branch_string(obj, "Tracer.Color"    ));
+
+	strncpy(explosionN, json_object_get_branch_string(obj, "Explosion.Projectile"), STR_LEN_NAME);
 }
 
 
@@ -39,4 +38,16 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 ***********************************************************************/
 ach::DataProjectile::~DataProjectile()
 {
+}
+
+
+
+/***********************************************************************
+     * DataProjectile
+     * finalize
+
+***********************************************************************/
+void ach::DataProjectile::finalize()
+{
+	explosion = db->getProjectile(explosionN);
 }

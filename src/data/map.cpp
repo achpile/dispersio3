@@ -22,8 +22,6 @@ ach::DataMap::DataMap(json_t *obj)
 
 	strncpy(filename, json_object_get_string(obj, "Filename"), STR_LEN_PATH);
 	strncpy(next    , json_object_get_string(obj, "Next"    ), STR_LEN_NAME);
-
-	calc();
 }
 
 
@@ -42,10 +40,10 @@ ach::DataMap::~DataMap()
 
 /***********************************************************************
      * DataMap
-     * calc
+     * finalize
 
 ***********************************************************************/
-void ach::DataMap::calc()
+void ach::DataMap::finalize()
 {
 	cash  = 0;
 	items = 0;
