@@ -109,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 8;
+				pattern = 9;
 
 				prepare();
 			}
@@ -363,7 +363,7 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 9:
-			timer.set(1.5f);
+			timer.set(2.5f);
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Slam"));
 		break;
@@ -514,6 +514,11 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 9:
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
 		break;
 	}
 }
