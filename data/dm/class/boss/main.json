@@ -14,7 +14,10 @@
                 "List": "Weapon",
                 "Objects": [
                     "Fireball",
-                    "Cross"
+                    "Cross",
+                    "Throw",
+                    "Slam",
+                    "Spike"
                 ]
             },
             {

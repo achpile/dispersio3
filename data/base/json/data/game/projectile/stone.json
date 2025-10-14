@@ -10,7 +10,7 @@
             "Projectile": "Boulder"
         },
         "Impact": {
-            "Sound": "BulletBump",
+            "Sound": "Break",
             "Type": "spark"
         },
         "Physics": {

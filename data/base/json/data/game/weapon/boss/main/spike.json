@@ -1,0 +1,7 @@
+{
+    "Spike": {
+        "Projectile": "Spike",
+        "Shot": "Slam",
+        "Speed": 100
+    }
+}

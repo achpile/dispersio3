@@ -9,7 +9,10 @@
         "Type": "main",
         "Weapon": {
             "Cross": "Gun",
-            "Fireball": "Fireball"
+            "Fireball": "Fireball",
+            "Slam": "Slam",
+            "Spike": "Spike",
+            "Throw": "Throw"
         }
     }
 }

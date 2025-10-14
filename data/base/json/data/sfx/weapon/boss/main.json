@@ -1,3 +1,5 @@
 {
-    "FireShot": "sfx/weapon/boss/main/fireshot.wav"
+    "FireShot": "sfx/weapon/boss/main/fireshot.wav",
+    "Slam": "sfx/weapon/boss/main/boulder.wav",
+    "Throw": "sfx/weapon/boss/main/throw.wav"
 }
