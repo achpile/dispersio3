@@ -506,6 +506,8 @@ void ach::BossMain::attack()
 				fistR->anim.reset();
 			}
 
+			shot(sf::Vector2f(pos.x + 32.0f * (counter ? -1 : 1), pos.y - 16.0f), sf::Vector2f(random_float(-50.0f, 50.0f), -100.0f));
+
 			counter = !counter;
 		break;
 

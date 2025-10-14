@@ -2,6 +2,6 @@
     "Throw": {
         "Projectile": "Stone",
         "Shot": "Throw",
-        "Speed": 500
+        "Speed": 350
     }
 }

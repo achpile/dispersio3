@@ -7,6 +7,7 @@
         "Explosion": {
             "Count": 1,
             "Enable": true,
+            "Force": 200,
             "Projectile": "Boulder"
         },
         "Impact": {
@@ -14,7 +15,7 @@
             "Type": "spark"
         },
         "Physics": {
-            "Gravity": 1000.0,
+            "Gravity": 200.0,
             "Radius": 10
         }
     }
