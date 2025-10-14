@@ -29,6 +29,7 @@ namespace ach
 
 		std::vector<int>    list;
 
+		int counter;
 		int pattern;
 
 
@@ -45,7 +46,7 @@ namespace ach
 		void idle();
 		void patterns();
 
-		void shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel);
+		void shot(sf::Vector2f _pos, sf::Vector2f _dest);
 
 		void prepare();
 		void evaluate();

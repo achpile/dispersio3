@@ -8,6 +8,7 @@
         },
         "Type": "main",
         "Weapon": {
+            "Cross": "Gun",
             "Fireball": "Fireball"
         }
     }

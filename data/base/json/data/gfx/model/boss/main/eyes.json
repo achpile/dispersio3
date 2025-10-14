@@ -1,6 +1,10 @@
 {
     "BossMainEyes": {
         "Animation": {
+            "Cross": {
+                "End": 5,
+                "Start": 1
+            },
             "Dead": {
                 "End": 0,
                 "Start": 0

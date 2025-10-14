@@ -1,7 +1,7 @@
 {
     "BossMainEyes": {
         "Filename": "gfx/game/sheet/boss/main/eyes.png",
-        "Frames": 2
+        "Frames": 6
     },
     "BossMainFist": {
         "Filename": "gfx/game/sheet/boss/main/fist.png",

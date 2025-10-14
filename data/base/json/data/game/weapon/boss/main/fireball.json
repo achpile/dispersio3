@@ -1,6 +1,7 @@
 {
     "Fireball": {
         "Projectile": "Fireball",
-        "Shot": "FireShot"
+        "Shot": "FireShot",
+        "Speed": 200
     }
 }

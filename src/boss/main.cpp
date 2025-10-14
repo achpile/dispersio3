@@ -105,7 +105,10 @@ void ach::BossMain::handle()
 				pattern = list.back();
 
 				list.pop_back();
-				pattern = 4;
+
+				// TODO : remove debug
+				pattern = 2;
+
 				prepare();
 			}
 		break;
@@ -251,12 +254,12 @@ void ach::BossMain::patterns()
      * shot
 
 ***********************************************************************/
-void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir, float _vel)
+void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dest)
 {
 	ach::Projectile *proj = new ach::Projectile(world, weapon->projectile);
 
 	proj->phys.pos = _pos;
-	proj->phys.vel = vector_set_len(_dir, _vel);
+	proj->phys.vel = vector_set_len(_dest - _pos, weapon->speed);
 	proj->enemy    = true;
 
 	if (proj->phys.vel.x < 0.0f)
@@ -279,6 +282,8 @@ void ach::BossMain::prepare()
 {
 	idle();
 
+	counter = 0;
+
 	switch (pattern)
 	{
 		case 1:
@@ -287,6 +292,11 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 2:
+			eyes->setAnimation("Cross");
+
+			timer.set(1.0f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
 		// -------------------------------------------------------------
@@ -404,6 +414,16 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 2:
+			shot(pos + sf::Vector2f(-6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
+			shot(pos + sf::Vector2f( 6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
+
+			counter++;
+
+			if (counter == 3)
+				counter =  0;
+
+			if (counter) timer.set(0.4f);
+			else         timer.set(1.0f);
 		break;
 
 		// -------------------------------------------------------------
@@ -414,7 +434,7 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 4:
-			shot(pos, target->phys.pos - pos, 200.0f);
+			shot(pos, target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
