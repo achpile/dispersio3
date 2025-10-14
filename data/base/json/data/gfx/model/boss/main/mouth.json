@@ -1,6 +1,10 @@
 {
     "BossMainMouth": {
         "Animation": {
+            "Blade": {
+                "End": 6,
+                "Start": 6
+            },
             "Dead": {
                 "End": 0,
                 "Start": 0
@@ -8,10 +12,6 @@
             "Fire": {
                 "End": 5,
                 "Start": 1
-            },
-            "Blade": {
-                "End": 6,
-                "Start": 6
             },
             "Idle": {
                 "End": 0,

@@ -5,10 +5,6 @@
                 "End": 5,
                 "Start": 1
             },
-            "Rotate": {
-                "End": 9,
-                "Start": 6
-            },
             "Dead": {
                 "End": 0,
                 "Start": 0
@@ -16,6 +12,10 @@
             "Idle": {
                 "End": 0,
                 "Start": 0
+            },
+            "Rotate": {
+                "End": 9,
+                "Start": 6
             }
         },
         "Sheet": "BossMainEyes"

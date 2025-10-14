@@ -32,6 +32,7 @@ namespace ach
 		ach::DataProjectile *explosion;
 		ach::DataSheet      *sheet;
 		ach::DataSound      *bump;
+		ach::DataSound      *activation;
 		ach::ImpactType      impact;
 		ach::TracerType      tracer;
 		ach::OrientType      orient;

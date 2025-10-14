@@ -63,10 +63,18 @@ bool ach::Projectile::update()
 	line.a = last;
 	last   = line.b;
 
-	if (delay.update())
-		return alive;
-	else
-		active = true;
+	if (!active)
+	{
+		if (delay.update())
+		{
+			return alive;
+		}
+		else
+		{
+			active = true;
+			sm->play(base->activation->snd);
+		}
+	}
 
 	phys.update();
 	model->update();

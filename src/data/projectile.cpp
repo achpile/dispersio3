@@ -17,8 +17,9 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	count        = json_object_get_branch_integer(obj, "Explosion.Count" );
 	force        = json_object_get_branch_real   (obj, "Explosion.Force" );
 
-	sheet        = db->getSheet(json_object_get_branch_string(obj, "Appearance.Sheet"));
-	bump         = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"   ));
+	sheet        = db->getSheet(json_object_get_branch_string(obj, "Appearance.Sheet"     ));
+	activation   = db->getSound(json_object_get_branch_string(obj, "Appearance.Activation"));
+	bump         = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"         ));
 
 	impact       = pair_get_enum(json_object_get_branch_string(obj, "Impact.Type"           ), pairImpact);
 	tracer       = pair_get_enum(json_object_get_branch_string(obj, "Tracer.Type"           ), pairTracer);

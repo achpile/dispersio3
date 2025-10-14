@@ -2,6 +2,13 @@
     "@attr": {
         "type": "object"
     },
+    "Activation": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
+        }
+    },
     "Color": {
         "@attr": {
             "default": "#FFFFFFFF",
