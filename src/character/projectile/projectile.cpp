@@ -120,11 +120,13 @@ bool ach::Projectile::visible()
 ***********************************************************************/
 void ach::Projectile::init()
 {
+	active = false;
 	line.a = phys.pos;
 	line.b = phys.pos;
 	last   = phys.pos;
 
 	tracer->init();
+	delay.reset();
 	phys.calc();
 }
 

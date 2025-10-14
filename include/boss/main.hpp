@@ -49,7 +49,8 @@ namespace ach
 		void idle();
 		void patterns();
 
-		void shot(sf::Vector2f _pos, sf::Vector2f _dest);
+		void aim (sf::Vector2f _pos, sf::Vector2f _dest);
+		void shot(sf::Vector2f _pos, sf::Vector2f _dir);
 
 		void prepare();
 		void evaluate();

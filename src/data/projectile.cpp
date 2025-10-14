@@ -12,10 +12,10 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	scale        = json_object_get_branch_real   (obj, "Appearance.Scale");
 	gravity      = json_object_get_branch_real   (obj, "Physics.Gravity" );
 	bounces      = json_object_get_branch_integer(obj, "Physics.Bounces" );
+	delay        = json_object_get_branch_real   (obj, "Physics.Delay"   );
 	explosive    = json_object_get_branch_boolean(obj, "Explosion.Enable");
 	count        = json_object_get_branch_integer(obj, "Explosion.Count" );
 	force        = json_object_get_branch_real   (obj, "Explosion.Force" );
-	delay        = json_object_get_branch_real   (obj, "Explosion.Delay" );
 
 	sheet        = db->getSheet(json_object_get_branch_string(obj, "Appearance.Sheet"));
 	bump         = db->getSound(json_object_get_branch_string(obj, "Impact.Sound"   ));

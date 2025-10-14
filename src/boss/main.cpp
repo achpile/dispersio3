@@ -254,15 +254,27 @@ void ach::BossMain::patterns()
 
 /***********************************************************************
      * BossMain
+     * aim
+
+***********************************************************************/
+void ach::BossMain::aim(sf::Vector2f _pos, sf::Vector2f _dest)
+{
+	shot(_pos, _dest - _pos);
+}
+
+
+
+/***********************************************************************
+     * BossMain
      * shot
 
 ***********************************************************************/
-void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dest)
+void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir)
 {
 	ach::Projectile *proj = new ach::Projectile(world, weapon->projectile);
 
 	proj->phys.pos = _pos;
-	proj->phys.vel = vector_set_len(_dest - _pos, weapon->speed);
+	proj->phys.vel = vector_set_len(_dir, weapon->speed);
 	proj->enemy    = true;
 
 	if (proj->phys.vel.x < 0.0f)
@@ -332,7 +344,9 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 7:
-			timer.set(0.7f);
+			timer.set(0.75f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Spike"));
 		break;
 
 		// -------------------------------------------------------------
@@ -342,12 +356,16 @@ void ach::BossMain::prepare()
 			fistR->setAnimation("Up");
 
 			timer.set(2.0f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Throw"));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
 			timer.set(1.5f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Slam"));
 		break;
 	}
 }
@@ -394,14 +412,14 @@ void ach::BossMain::evaluate()
 		// -------------------------------------------------------------
 
 		case 7:
+			if (!timer.active())
+				counter = !counter;
+
 			offsetL = 0.0f;
 			offsetR = 0.0f;
 
 			if (counter) offsetL = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
 			else         offsetR = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
-
-			if (!timer.active())
-				counter = !counter;
 		break;
 
 		// -------------------------------------------------------------
@@ -434,8 +452,8 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 2:
-			shot(pos + sf::Vector2f(-6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
-			shot(pos + sf::Vector2f( 6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
+			aim(pos + sf::Vector2f(-6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
+			aim(pos + sf::Vector2f( 6.0f, 1.0f), pos + (target->phys.pos - pos) / 3.0f);
 
 			counter++;
 
@@ -454,7 +472,7 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 4:
-			shot(pos, target->phys.pos);
+			aim(pos, target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
@@ -470,6 +488,8 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 7:
+			for (int i = 0; i < 5; i++)
+				shot(sf::Vector2f(random_float(rect_value(rect, ach::Direction::dLeft) + 8.0f, rect_value(rect, ach::Direction::dRight) - 8.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, 1.0f));
 		break;
 
 		// -------------------------------------------------------------
