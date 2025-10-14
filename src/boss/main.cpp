@@ -109,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 5;
+				pattern = 3;
 
 				prepare();
 			}
@@ -319,6 +319,11 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 3:
+			eyes->setAnimation("Rotate");
+
+			timer.set(0.3f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
 		// -------------------------------------------------------------
@@ -472,6 +477,13 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 3:
+			shot(pos + sf::Vector2f(-6.0f, 1.0f), vector_create(2.0f * MATH_PI * (counter + 16) / 32.0f));
+			shot(pos + sf::Vector2f( 6.0f, 1.0f), vector_create(2.0f * MATH_PI *  counter       / 32.0f));
+
+			counter++;
+
+			if (counter == 32)
+				counter =  0;
 		break;
 
 		// -------------------------------------------------------------
