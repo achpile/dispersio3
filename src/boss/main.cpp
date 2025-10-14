@@ -334,6 +334,8 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 5:
+			mouth->setAnimation("Blade");
+
 			timer.set(2.0f);
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Blade"));
