@@ -37,7 +37,7 @@
         "@attr": {
             "default": 250,
             "max": 2000,
-            "min": 100,
+            "min": 0,
             "type": "real"
         }
     }

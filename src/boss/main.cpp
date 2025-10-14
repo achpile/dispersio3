@@ -109,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 9;
+				pattern = 7;
 
 				prepare();
 			}
