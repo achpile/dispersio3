@@ -1,0 +1,21 @@
+{
+    "Stone": {
+        "Appearance": {
+            "Orientation": "rotation",
+            "Sheet": "ProjectileStone"
+        },
+        "Explosion": {
+            "Count": 1,
+            "Enable": true,
+            "Projectile": "Boulder"
+        },
+        "Impact": {
+            "Sound": "BulletBump",
+            "Type": "spark"
+        },
+        "Physics": {
+            "Gravity": 1000.0,
+            "Radius": 10
+        }
+    }
+}
