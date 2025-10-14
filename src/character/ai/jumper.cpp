@@ -67,7 +67,7 @@ void ach::AIJumper::control()
 	if (!owner->phys.grounded)
 		move();
 
-	if (!cooldown.isActive())
+	if (!cooldown.active())
 		jump();
 }
 

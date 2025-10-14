@@ -29,8 +29,11 @@ namespace ach
 
 		std::vector<int>    list;
 
-		int counter;
-		int pattern;
+		float offsetL;
+		float offsetR;
+
+		int   counter;
+		int   pattern;
 
 
 		 BossMain(ach::ProcessWorld *_world, json_t *obj);

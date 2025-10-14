@@ -18,7 +18,7 @@ namespace ach
 		void  zero();
 		float progress(bool invert = false);
 		bool  update(bool real = false);
-		bool  isActive();
+		bool  active();
 	};
 }
 

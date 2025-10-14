@@ -79,8 +79,8 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 ***********************************************************************/
 void ach::MusicManager::fade()
 {
-	if (fader.isActive()) track->setVolume(vol * fader.progress());
-	else                  track->setVolume(vol);
+	if (fader.active()) track->setVolume(vol * fader.progress());
+	else                track->setVolume(vol);
 }
 
 

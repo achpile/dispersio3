@@ -70,7 +70,7 @@ void ach::Caption::update()
 ***********************************************************************/
 void ach::Caption::render()
 {
-	if (!fader.isActive())
+	if (!fader.active())
 		return;
 
 	rm->draw(spr, ach::RenderLayer::rlGUI);

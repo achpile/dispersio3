@@ -100,10 +100,10 @@ bool ach::Timer::update(bool real)
 
 /***********************************************************************
      * Timer
-     * isActive
+     * active
 
 ***********************************************************************/
-bool ach::Timer::isActive()
+bool ach::Timer::active()
 {
 	return value > 0.0f;
 }

@@ -215,13 +215,13 @@ void ach::ProcessWorld::finalize()
 	switch (state)
 	{
 		case ach::WorldState::wsFadeIn:
-			if (!fader.isActive())
+			if (!fader.active())
 				state = ach::WorldState::wsGame;
 		break;
 
 
 		case ach::WorldState::wsFadeOut:
-			if (!fader.isActive())
+			if (!fader.active())
 				active = false;
 		break;
 

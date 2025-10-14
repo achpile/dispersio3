@@ -66,8 +66,8 @@ void ach::BossMain::render()
 	head->render(pos);
 	eyes->render(pos);
 	mouth->render(pos);
-	fistL->render(pos + sf::Vector2f(-32.0f, 16.0f));
-	fistR->render(pos + sf::Vector2f( 32.0f, 16.0f));
+	fistL->render(pos + sf::Vector2f(-32.0f, 16.0f - offsetL));
+	fistR->render(pos + sf::Vector2f( 32.0f, 16.0f - offsetR));
 }
 
 
@@ -79,7 +79,9 @@ void ach::BossMain::render()
 ***********************************************************************/
 void ach::BossMain::respawn()
 {
-	state = ach::BossMainState::bmsWait;
+	state   = ach::BossMainState::bmsWait;
+	offsetL = 0.0f;
+	offsetR = 0.0f;
 
 	timer.set(1.0f);
 
@@ -107,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 2;
+				pattern = 9;
 
 				prepare();
 			}
@@ -115,13 +117,14 @@ void ach::BossMain::handle()
 
 
 		case ach::BossMainState::bmsPattern:
-			if (!timer.update())
+			timer.update();
+			evaluate();
+
+			if (!timer.active())
 			{
 				timer.reset();
 				attack();
 			}
-
-			evaluate();
 		break;
 
 
@@ -283,6 +286,8 @@ void ach::BossMain::prepare()
 	idle();
 
 	counter = 0;
+	offsetL = 0.0f;
+	offsetR = 0.0f;
 
 	switch (pattern)
 	{
@@ -327,6 +332,7 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 7:
+			timer.set(0.7f);
 		break;
 
 		// -------------------------------------------------------------
@@ -337,6 +343,7 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 9:
+			timer.set(1.5f);
 		break;
 	}
 }
@@ -383,6 +390,14 @@ void ach::BossMain::evaluate()
 		// -------------------------------------------------------------
 
 		case 7:
+			offsetL = 0.0f;
+			offsetR = 0.0f;
+
+			if (counter) offsetL = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
+			else         offsetR = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
+
+			if (!timer.active())
+				counter = !counter;
 		break;
 
 		// -------------------------------------------------------------
@@ -393,6 +408,7 @@ void ach::BossMain::evaluate()
 		// -------------------------------------------------------------
 
 		case 9:
+			offsetR = offsetL = 16.0f * sin(MATH_PI * math_sqr(math_sqr(timer.progress())));
 		break;
 	}
 }
