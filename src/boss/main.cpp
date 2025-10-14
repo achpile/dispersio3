@@ -109,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 7;
+				pattern = 5;
 
 				prepare();
 			}
@@ -334,6 +334,9 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 5:
+			timer.set(2.0f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Blade"));
 		break;
 
 		// -------------------------------------------------------------
@@ -478,6 +481,7 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 5:
+			aim(pos, target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------

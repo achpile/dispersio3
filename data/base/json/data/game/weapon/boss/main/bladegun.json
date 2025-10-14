@@ -1,0 +1,7 @@
+{
+    "BladeGun": {
+        "Projectile": "Blade",
+        "Shot": "Throw",
+        "Speed": 300
+    }
+}

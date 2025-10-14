@@ -1,0 +1,20 @@
+{
+    "Blade": {
+        "Appearance": {
+            "Orientation": "rotation",
+            "Sheet": "ProjectileBlade"
+        },
+        "Impact": {
+            "Color": "#FFEF13",
+            "Sound": "BladeBump",
+            "Type": "spark"
+        },
+        "Physics": {
+            "Bounces": 4,
+            "Radius": 3
+        },
+        "Tracer": {
+            "Type": "line"
+        }
+    }
+}

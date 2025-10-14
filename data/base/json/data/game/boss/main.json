@@ -8,6 +8,7 @@
         },
         "Type": "main",
         "Weapon": {
+            "Blade": "BladeGun",
             "Cross": "Gun",
             "Fireball": "Fireball",
             "Slam": "Slam",
