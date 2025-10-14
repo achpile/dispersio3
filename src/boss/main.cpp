@@ -109,7 +109,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 9;
+				pattern = 8;
 
 				prepare();
 			}
@@ -338,6 +338,10 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 8:
+			fistL->setAnimation("Up");
+			fistR->setAnimation("Up");
+
+			timer.set(2.0f);
 		break;
 
 		// -------------------------------------------------------------
@@ -471,6 +475,18 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 8:
+			if (counter)
+			{
+				fistL->setAnimation("Throw");
+				fistL->anim.reset();
+			}
+			else
+			{
+				fistR->setAnimation("Throw");
+				fistR->anim.reset();
+			}
+
+			counter = !counter;
 		break;
 
 		// -------------------------------------------------------------

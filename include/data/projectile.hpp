@@ -44,6 +44,7 @@ namespace ach
 		float     radius;
 		float     scale;
 		float     force;
+		float     delay;
 
 		bool      explosive;
 		char      explosionN[STR_LEN_NAME];

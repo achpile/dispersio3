@@ -13,11 +13,13 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 	flip    = false;
 	alive   = true;
 	angle   = 0.0f;
+	active  = false;
 	bounces = base->bounces;
 	model   = new ach::Model(base->sheet);
 	tracer  = createTracer();
 
 	phys.init(sf::Vector2f(base->radius * 2.0f, base->radius * 2.0f));
+	delay.set(base->delay);
 
 	world->map->gfx.push_back(tracer);
 
@@ -60,6 +62,11 @@ bool ach::Projectile::update()
 
 	line.a = last;
 	last   = line.b;
+
+	if (delay.update())
+		return alive;
+	else
+		active = true;
 
 	phys.update();
 	model->update();

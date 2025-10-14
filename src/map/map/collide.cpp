@@ -137,6 +137,12 @@ bool ach::Map::collideLine(ach::Line *line, long filter, sf::Vector2f *n)
 ***********************************************************************/
 void ach::Map::collideProjectile(ach::Projectile *projectile)
 {
+	if (!projectile->alive)
+		return;
+
+	if (!projectile->active)
+		return;
+
 	list_foreach(characters)
 		if (characters[i]->hit(projectile))
 			return;

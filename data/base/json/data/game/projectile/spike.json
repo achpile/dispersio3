@@ -1,0 +1,16 @@
+{
+    "Spike": {
+        "Appearance": {
+            "Sheet": "ProjectileSpike"
+        },
+        "Impact": {
+            "Sound": "BulletBump",
+            "Type": "spark"
+        },
+        "Physics": {
+            "Delay": 0.5,
+            "Gravity": 1000.0,
+            "Radius": 4
+        }
+    }
+}

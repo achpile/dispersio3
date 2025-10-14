@@ -12,6 +12,7 @@
             "Throw": {
                 "End": 2,
                 "Loop": false,
+                "Rate": 0.25,
                 "Start": 1
             },
             "Up": {

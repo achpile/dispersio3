@@ -10,6 +10,7 @@ namespace ach
 		ach::DataProjectile *base;
 		ach::Model          *model;
 		ach::Tracer         *tracer;
+		ach::Timer           delay;
 		ach::Line            line;
 		ach::Phys            phys;
 
@@ -18,6 +19,7 @@ namespace ach
 		bool  alive;
 		bool  flip;
 		bool  enemy;
+		bool  active;
 		int   bounces;
 		float angle;
 

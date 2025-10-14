@@ -10,6 +10,14 @@
             "type": "integer"
         }
     },
+    "Delay": {
+        "@attr": {
+            "default": 0.0,
+            "max": 10.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    },
     "Gravity": {
         "@attr": {
             "default": 0.0,
