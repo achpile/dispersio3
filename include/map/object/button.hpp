@@ -6,8 +6,10 @@ namespace ach
 {
 	struct MapObjectButton : MapObject
 	{
+		ach::Boss      *boss;
 		ach::DataSound *sfx;
 
+		int  link;
 		bool active;
 		bool pressed;
 
@@ -15,6 +17,7 @@ namespace ach
 		 MapObjectButton(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectButton();
 
+		void init(ach::Map *map);
 		void touch();
 
 		void animate();

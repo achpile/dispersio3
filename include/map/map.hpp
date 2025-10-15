@@ -78,6 +78,7 @@ namespace ach
 		/*  find.cpp  */
 		ach::MapObject* findMapObject(int id);
 		ach::MapArea*   findMapArea(sf::Vector2f v);
+		ach::Boss*      findMapBoss(int id);
 		sf::FloatRect   findMapSpawn(int id);
 	};
 }

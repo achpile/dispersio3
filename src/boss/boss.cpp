@@ -9,6 +9,7 @@
 ach::Boss::Boss(ach::ProcessWorld *_world, json_t *obj)
 {
 	world = _world;
+	id    = json_object_get_integer(obj, "id");
 	base  = db->getBoss(json_object_get_string(obj, "name"));
 	rect  = vector_json_rect(obj);
 

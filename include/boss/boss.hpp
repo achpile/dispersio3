@@ -12,6 +12,7 @@ namespace ach
 
 		sf::FloatRect       rect;
 
+		int  id;
 		bool active;
 		bool defeated;
 

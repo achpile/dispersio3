@@ -10,7 +10,12 @@ ach::MapObjectButton::MapObjectButton(ach::ProcessWorld *_world, json_t *obj) : 
 {
 	active  = true;
 	pressed = false;
+	boss    = NULL;
 	sfx     = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Button"));
+	link    = json_property_get_integer(obj, "Boss");
+
+	if (!link)
+		logger->log(ach::LogLevel::llError, "Orphaned button ID#%d", id);
 
 	setModel(json_object_get_string(obj, "name"));
 
@@ -26,6 +31,19 @@ ach::MapObjectButton::MapObjectButton(ach::ProcessWorld *_world, json_t *obj) : 
 ***********************************************************************/
 ach::MapObjectButton::~MapObjectButton()
 {
+}
+
+
+
+/***********************************************************************
+     * MapObjectButton
+     * init
+
+***********************************************************************/
+void ach::MapObjectButton::init(ach::Map *map)
+{
+	if (link)
+		boss = map->findMapBoss(link);
 }
 
 
