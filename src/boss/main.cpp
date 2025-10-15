@@ -110,7 +110,7 @@ void ach::BossMain::handle()
 				list.pop_back();
 
 				// TODO : remove debug
-				pattern = 1;
+				pattern = 6;
 
 				prepare();
 			}
@@ -368,6 +368,11 @@ void ach::BossMain::prepare()
 		// -------------------------------------------------------------
 
 		case 6:
+			mouth->setAnimation("Rainbow");
+
+			timer.set(1.0f);
+
+			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
 		// -------------------------------------------------------------

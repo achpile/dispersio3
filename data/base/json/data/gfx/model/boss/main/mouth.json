@@ -16,6 +16,10 @@
             "Idle": {
                 "End": 0,
                 "Start": 0
+            },
+            "Rainbow": {
+                "End": 11,
+                "Start": 7
             }
         },
         "Sheet": "BossMainMouth"
