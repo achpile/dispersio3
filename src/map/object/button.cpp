@@ -10,6 +10,7 @@ ach::MapObjectButton::MapObjectButton(ach::ProcessWorld *_world, json_t *obj) : 
 {
 	active  = true;
 	pressed = false;
+	sfx     = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Button"));
 
 	setModel(json_object_get_string(obj, "name"));
 
@@ -44,6 +45,7 @@ void ach::MapObjectButton::touch()
 
 	pressed = true;
 
+	sm->play(sfx->snd);
 	animate();
 }
 

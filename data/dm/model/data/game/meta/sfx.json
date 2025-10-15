@@ -16,6 +16,13 @@
             "type": "link"
         }
     },
+    "Button": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Break",
+            "type": "link"
+        }
+    },
     "Checkpoint": {
         "@attr": {
             "data": "Data.SFX",
