@@ -527,6 +527,26 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 6:
+
+			if (counter)
+			{
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 6.0f,  1.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f(-6.0f,  1.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 4.0f, -3.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f(-4.0f, -3.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f(-1.0f, -3.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 1.0f, -3.0f));
+			}
+			else
+			{
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 0.0f, -1.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 4.0f, -1.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f(-4.0f, -1.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f(-2.0f, -3.0f));
+				shot(pos + sf::Vector2f(0.0f, 10.0f), sf::Vector2f( 2.0f, -3.0f));
+			}
+
+			counter = !counter;
 		break;
 
 		// -------------------------------------------------------------
