@@ -7,6 +7,7 @@ namespace ach
 	enum BossMainState
 	{
 		bmsWait,
+		bmsPrepare,
 		bmsPattern,
 		bmsDamage,
 		bmsDefeated
@@ -55,6 +56,8 @@ namespace ach
 		void shot(sf::Vector2f _pos, sf::Vector2f _dir);
 
 		void prepare();
+		void warnings();
+		void initialize();
 		void evaluate();
 		void attack();
 	};

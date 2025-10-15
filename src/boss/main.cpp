@@ -104,15 +104,23 @@ void ach::BossMain::handle()
 		case ach::BossMainState::bmsWait:
 			if (!timer.update())
 			{
-				state   = ach::BossMainState::bmsPattern;
+				state   = ach::BossMainState::bmsPrepare;
 				pattern = list.back();
 
 				list.pop_back();
 
-				// TODO : remove debug
-				pattern = 6;
-
 				prepare();
+				warnings();
+			}
+		break;
+
+
+		case ach::BossMainState::bmsPrepare:
+			if (!timer.update())
+			{
+				state = ach::BossMainState::bmsPattern;
+
+				initialize();
 			}
 		break;
 
@@ -314,12 +322,12 @@ void ach::BossMain::prepare()
 	offsetL = 0.0f;
 	offsetR = 0.0f;
 
+	timer.set(1.0f);
+
 	switch (pattern)
 	{
 		case 1:
 			eyes->setAnimation("Fire");
-
-			timer.set(1.0f);
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Explosion"));
 		break;
@@ -329,8 +337,6 @@ void ach::BossMain::prepare()
 		case 2:
 			eyes->setAnimation("Cross");
 
-			timer.set(1.0f);
-
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
@@ -338,8 +344,6 @@ void ach::BossMain::prepare()
 
 		case 3:
 			eyes->setAnimation("Rotate");
-
-			timer.set(0.3f);
 
 			counter = -14;
 			weapon  = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
@@ -350,8 +354,6 @@ void ach::BossMain::prepare()
 		case 4:
 			mouth->setAnimation("Fire");
 
-			timer.set(2.0f);
-
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Fireball"));
 		break;
 
@@ -359,8 +361,6 @@ void ach::BossMain::prepare()
 
 		case 5:
 			mouth->setAnimation("Blade");
-
-			timer.set(2.0f);
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Blade"));
 		break;
@@ -370,15 +370,13 @@ void ach::BossMain::prepare()
 		case 6:
 			mouth->setAnimation("Rainbow");
 
-			timer.set(1.0f);
-
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 7:
-			timer.set(0.75f);
+			timer.zero();
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Spike"));
 		break;
@@ -389,15 +387,13 @@ void ach::BossMain::prepare()
 			fistL->setAnimation("Up");
 			fistR->setAnimation("Up");
 
-			timer.set(2.0f);
-
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Throw"));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
-			timer.set(2.5f);
+			timer.zero();
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Slam"));
 		break;
@@ -408,10 +404,10 @@ void ach::BossMain::prepare()
 
 /***********************************************************************
      * BossMain
-     * evaluate
+     * warnings
 
 ***********************************************************************/
-void ach::BossMain::evaluate()
+void ach::BossMain::warnings()
 {
 	switch (pattern)
 	{
@@ -446,6 +442,67 @@ void ach::BossMain::evaluate()
 		// -------------------------------------------------------------
 
 		case 7:
+		break;
+
+		// -------------------------------------------------------------
+
+		case 8:
+		break;
+
+		// -------------------------------------------------------------
+
+		case 9:
+		break;
+	}
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * initialize
+
+***********************************************************************/
+void ach::BossMain::initialize()
+{
+	switch (pattern)
+	{
+		case 1: timer.set(1.0f ); break;
+		case 2: timer.set(1.0f ); break;
+		case 3: timer.set(0.3f ); break;
+		case 4: timer.set(2.0f ); break;
+		case 5: timer.set(2.0f ); break;
+		case 6: timer.set(1.0f ); break;
+		case 7: timer.set(0.75f); break;
+		case 8: timer.set(2.0f ); break;
+		case 9: timer.set(2.5f ); break;
+	}
+
+	switch (pattern)
+	{
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 8:
+			timer.zero();
+	}
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * evaluate
+
+***********************************************************************/
+void ach::BossMain::evaluate()
+{
+	switch (pattern)
+	{
+		case 7:
 			if (!timer.active())
 				counter = !counter;
 
@@ -454,11 +511,6 @@ void ach::BossMain::evaluate()
 
 			if (counter) offsetL = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
 			else         offsetR = 16.0f * sin(MATH_PI * math_sqr(timer.progress()));
-		break;
-
-		// -------------------------------------------------------------
-
-		case 8:
 		break;
 
 		// -------------------------------------------------------------
