@@ -20,6 +20,7 @@ ach::Projectile::Projectile(ach::ProcessWorld *_world, ach::DataProjectile *_bas
 
 	phys.init(sf::Vector2f(base->radius * 2.0f, base->radius * 2.0f));
 	delay.set(base->delay);
+	life.set(base->life);
 
 	world->map->gfx.push_back(tracer);
 
@@ -75,6 +76,9 @@ bool ach::Projectile::update()
 			sm->play(base->activation->snd);
 		}
 	}
+
+	if (base->life && !life.update())
+		return false;
 
 	phys.update();
 	model->update();

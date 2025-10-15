@@ -13,6 +13,7 @@ ach::DataProjectile::DataProjectile(json_t *obj)
 	gravity      = json_object_get_branch_real   (obj, "Physics.Gravity" );
 	bounces      = json_object_get_branch_integer(obj, "Physics.Bounces" );
 	delay        = json_object_get_branch_real   (obj, "Physics.Delay"   );
+	life         = json_object_get_branch_real   (obj, "Physics.Lifetime");
 	explosive    = json_object_get_branch_boolean(obj, "Explosion.Enable");
 	count        = json_object_get_branch_integer(obj, "Explosion.Count" );
 	force        = json_object_get_branch_real   (obj, "Explosion.Force" );

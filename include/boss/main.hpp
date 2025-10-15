@@ -21,6 +21,7 @@ namespace ach
 		ach::Model         *fistL;
 		ach::Model         *fistR;
 
+		ach::DataSheet     *crosshair;
 		ach::DataWeapon    *weapon;
 
 		ach::BossMainState  state;

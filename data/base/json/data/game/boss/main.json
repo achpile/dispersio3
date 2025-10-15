@@ -1,5 +1,8 @@
 {
     "Main": {
+        "GFX": {
+            "Crosshair": "Default"
+        },
         "Model": {
             "Eyes": "BossMainEyes",
             "Fist": "BossMainFist",

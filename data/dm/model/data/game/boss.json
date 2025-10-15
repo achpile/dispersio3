@@ -3,19 +3,19 @@
         "container": "multi",
         "type": "object"
     },
+    "GFX": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.GFX.Sheet",
+            "default": "Default",
+            "type": "link"
+        }
+    },
     "Model": {
         "@attr": {
             "container": "multi",
             "data": "Data.GFX.Model",
             "default": "Default",
-            "type": "link"
-        }
-    },
-    "Summon": {
-        "@attr": {
-            "container": "multi",
-            "data": "Data.Game.Character",
-            "default": "Bat",
             "type": "link"
         }
     },

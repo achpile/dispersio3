@@ -15,9 +15,9 @@ namespace ach
 	{
 		ach::BossType type;
 
+		json_t *gfx;
 		json_t *model;
 		json_t *weapon;
-		json_t *summon;
 
 
 		 DataBoss(json_t *obj);

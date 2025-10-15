@@ -26,6 +26,14 @@
             "type": "real"
         }
     },
+    "Lifetime": {
+        "@attr": {
+            "default": 0.0,
+            "max": 30.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    },
     "Radius": {
         "@attr": {
             "default": 1,

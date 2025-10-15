@@ -22,8 +22,10 @@
                 ]
             },
             {
-                "List": "Summon",
-                "Objects": []
+                "List": "GFX",
+                "Objects": [
+                    "Crosshair"
+                ]
             }
         ],
         "Param": "Type",

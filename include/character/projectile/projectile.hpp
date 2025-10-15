@@ -11,6 +11,7 @@ namespace ach
 		ach::Model          *model;
 		ach::Tracer         *tracer;
 		ach::Timer           delay;
+		ach::Timer           life;
 		ach::Line            line;
 		ach::Phys            phys;
 

@@ -46,6 +46,7 @@ namespace ach
 		float     scale;
 		float     force;
 		float     delay;
+		float     life;
 
 		bool      explosive;
 		char      explosionN[STR_LEN_NAME];

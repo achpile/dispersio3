@@ -14,7 +14,8 @@ ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, o
 	fistL = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 	fistR = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 
-	pos   = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
+	pos       = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
+	crosshair = db->getSheet(json_object_get_string(base->gfx, "Crosshair"));
 
 	fistR->scale.x = -1;
 
