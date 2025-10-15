@@ -9,6 +9,10 @@
                 "End": 0,
                 "Start": 0
             },
+            "Fire": {
+                "End": 14,
+                "Start": 10
+            },
             "Idle": {
                 "End": 0,
                 "Start": 0

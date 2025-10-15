@@ -317,6 +317,8 @@ void ach::BossMain::prepare()
 	switch (pattern)
 	{
 		case 1:
+			eyes->setAnimation("Fire");
+
 			timer.set(1.0f);
 
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Explosion"));
