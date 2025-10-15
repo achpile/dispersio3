@@ -8,8 +8,6 @@
 ***********************************************************************/
 ach::MapObjectButton::MapObjectButton(ach::ProcessWorld *_world, json_t *obj) : MapObject(_world, obj)
 {
-	active  = true;
-	pressed = false;
 	boss    = NULL;
 	sfx     = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Button"));
 	link    = json_property_get_integer(obj, "Boss");
@@ -37,6 +35,21 @@ ach::MapObjectButton::~MapObjectButton()
 
 /***********************************************************************
      * MapObjectButton
+     * reset
+
+***********************************************************************/
+void ach::MapObjectButton::reset()
+{
+	active  = false;
+	pressed = false;
+
+	animate();
+}
+
+
+
+/***********************************************************************
+     * MapObjectButton
      * init
 
 ***********************************************************************/
@@ -44,6 +57,9 @@ void ach::MapObjectButton::init(ach::Map *map)
 {
 	if (link)
 		boss = map->findMapBoss(link);
+
+	if (boss)
+		boss->buttons.push_back(this);
 }
 
 

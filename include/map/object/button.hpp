@@ -17,6 +17,7 @@ namespace ach
 		 MapObjectButton(ach::ProcessWorld *_world, json_t *obj);
 		~MapObjectButton();
 
+		void reset();
 		void init(ach::Map *map);
 		void touch();
 

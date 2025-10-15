@@ -6,6 +6,8 @@ namespace ach
 {
 	struct Boss
 	{
+		std::vector<ach::MapObjectButton*> buttons;
+
 		ach::ProcessWorld  *world;
 		ach::DataBoss      *base;
 		ach::Character     *target;
@@ -26,6 +28,8 @@ namespace ach
 		void reset();
 		void search();
 		void check(sf::FloatRect _rect);
+
+		void unpress();
 
 		virtual void init()                 {};
 		virtual void handle()               {};

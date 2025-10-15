@@ -67,6 +67,7 @@ void ach::Boss::reset()
 	active   = false;
 	defeated = false;
 
+	unpress();
 	respawn();
 }
 
@@ -124,6 +125,19 @@ void ach::Boss::check(sf::FloatRect _rect)
 		search();
 		world->map->close();
 	}
+}
+
+
+
+/***********************************************************************
+     * Boss
+     * unpress
+
+***********************************************************************/
+void ach::Boss::unpress()
+{
+	list_foreach(buttons)
+		buttons[i]->reset();
 }
 
 
