@@ -30,9 +30,12 @@ namespace ach
 		void check(sf::FloatRect _rect);
 
 		void unpress();
+		void press();
+		void activate();
 
 		virtual void init()                 {};
 		virtual void handle()               {};
+		virtual void damage()               {};
 		virtual void respawn()              {};
 		virtual void render()               {};
 		virtual bool collide(sf::FloatRect) {return false;};

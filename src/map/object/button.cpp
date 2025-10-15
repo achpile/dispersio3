@@ -79,7 +79,24 @@ void ach::MapObjectButton::touch()
 
 	pressed = true;
 
+	if (boss)
+		boss->press();
+
 	sm->play(sfx->snd);
+	animate();
+}
+
+
+
+/***********************************************************************
+     * MapObjectButton
+     * activate
+
+***********************************************************************/
+void ach::MapObjectButton::activate()
+{
+	active = true;
+
 	animate();
 }
 

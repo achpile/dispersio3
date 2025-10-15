@@ -138,6 +138,51 @@ void ach::Boss::unpress()
 {
 	list_foreach(buttons)
 		buttons[i]->reset();
+
+	random_shuffle(&buttons);
+}
+
+
+
+/***********************************************************************
+     * Boss
+     * press
+
+***********************************************************************/
+void ach::Boss::press()
+{
+	list_foreach(buttons)
+	{
+		if (!buttons[i]->pressed)
+		{
+			if (!buttons[i]->active)
+				buttons[i]->activate();
+
+			return;
+		}
+	}
+
+	damage();
+}
+
+
+
+/***********************************************************************
+     * Boss
+     * activate
+
+***********************************************************************/
+void ach::Boss::activate()
+{
+	if (cache->difficulty == ach::Difficulty::gdEasy && cache->mode != ach::LevelMode::lmTraining)
+	{
+		list_foreach(buttons)
+			buttons[i]->activate();
+	}
+	else if (buttons.size())
+	{
+		buttons[0]->activate();
+	}
 }
 
 

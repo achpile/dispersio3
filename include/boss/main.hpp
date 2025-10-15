@@ -45,6 +45,7 @@ namespace ach
 		void render();
 		void respawn();
 		void handle();
+		void damage();
 		bool collide(sf::FloatRect r);
 
 		int  count();

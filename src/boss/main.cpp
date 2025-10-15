@@ -110,6 +110,7 @@ void ach::BossMain::handle()
 
 				prepare();
 				warnings();
+				activate();
 			}
 		break;
 
@@ -139,6 +140,8 @@ void ach::BossMain::handle()
 		case ach::BossMainState::bmsDamage:
 			if (list.size())
 			{
+				unpress();
+
 				timer.set(1.0f);
 				state = ach::BossMainState::bmsWait;
 			}
@@ -161,6 +164,20 @@ void ach::BossMain::handle()
 				defeated = true;
 		break;
 	}
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * damage
+
+***********************************************************************/
+void ach::BossMain::damage()
+{
+	list_delete(world->map->projectiles);
+
+	state = ach::BossMainState::bmsDamage;
 }
 
 

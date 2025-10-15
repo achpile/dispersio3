@@ -21,6 +21,7 @@ namespace ach
 		void init(ach::Map *map);
 		void touch();
 
+		void activate();
 		void animate();
 	};
 }
