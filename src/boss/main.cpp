@@ -109,9 +109,12 @@ void ach::BossMain::handle()
 		case ach::BossMainState::bmsWait:
 			if (!timer.update())
 			{
+				counter = 0;
 				state   = ach::BossMainState::bmsPrepare;
 				pattern = list.back();
 				list.pop_back();
+
+				timer.set(1.0f);
 
 				prepare();
 				warnings();
@@ -162,6 +165,7 @@ void ach::BossMain::handle()
 ***********************************************************************/
 void ach::BossMain::damage()
 {
+	idle();
 	unpress();
 	list_delete(world->map->projectiles);
 	world->map->gfx.push_back(new ach::EffectFall(this, boulder, sf::Vector2f(pos.x, rect.top - boulder->sheet->size.y / 2.0f), pos.y));
@@ -248,6 +252,9 @@ int ach::BossMain::count()
 ***********************************************************************/
 void ach::BossMain::idle()
 {
+	offsetL = 0.0f;
+	offsetR = 0.0f;
+
 	head->setAnimation("Idle");
 	eyes->setAnimation("Idle");
 	mouth->setAnimation("Idle");
@@ -353,14 +360,6 @@ void ach::BossMain::shot(sf::Vector2f _pos, sf::Vector2f _dir)
 ***********************************************************************/
 void ach::BossMain::prepare()
 {
-	idle();
-
-	counter = 0;
-	offsetL = 0.0f;
-	offsetR = 0.0f;
-
-	timer.set(1.0f);
-
 	switch (pattern)
 	{
 		case 1:
