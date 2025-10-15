@@ -1,6 +1,8 @@
 {
     "Main": {
         "GFX": {
+            "Boulder": "ProjectileStone",
+            "Explosion": "Explosion",
             "Warning": "Crosshair"
         },
         "Model": {
@@ -8,6 +10,9 @@
             "Fist": "BossMainFist",
             "Head": "BossMainHead",
             "Mouth": "BossMainMouth"
+        },
+        "SFX": {
+            "Explosion": "Explosion"
         },
         "Type": "main",
         "Weapon": {

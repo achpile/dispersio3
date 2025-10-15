@@ -14,8 +14,13 @@ ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, o
 	fistL = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 	fistR = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 
-	pos     = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
-	warning = db->getSheet(json_object_get_string(base->gfx, "Warning"));
+	pos   = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
+
+	warning   = db->getSheet(json_object_get_string(base->gfx, "Warning"  ));
+	explosion = db->getSheet(json_object_get_string(base->gfx, "Explosion"));
+	boulder   = db->getSheet(json_object_get_string(base->gfx, "Boulder"  ));
+
+	expl      = db->getSound(json_object_get_string(base->sfx, "Explosion"));
 
 	fistR->scale.x = -1;
 

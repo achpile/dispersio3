@@ -16,6 +16,7 @@ namespace ach
 		ach::BossType type;
 
 		json_t *gfx;
+		json_t *sfx;
 		json_t *model;
 		json_t *weapon;
 

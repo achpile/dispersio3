@@ -25,7 +25,15 @@
             {
                 "List": "GFX",
                 "Objects": [
-                    "Warning"
+                    "Warning",
+                    "Explosion",
+                    "Boulder"
+                ]
+            },
+            {
+                "List": "SFX",
+                "Objects": [
+                    "Explosion"
                 ]
             }
         ],

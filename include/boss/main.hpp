@@ -23,6 +23,9 @@ namespace ach
 		ach::Model         *fistR;
 
 		ach::DataSheet     *warning;
+		ach::DataSheet     *explosion;
+		ach::DataSheet     *boulder;
+		ach::DataSound     *expl;
 		ach::DataWeapon    *weapon;
 
 		ach::BossMainState  state;

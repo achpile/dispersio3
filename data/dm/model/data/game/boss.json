@@ -19,6 +19,14 @@
             "type": "link"
         }
     },
+    "SFX": {
+        "@attr": {
+            "container": "multi",
+            "data": "Data.SFX",
+            "default": "Default",
+            "type": "link"
+        }
+    },
     "Type": {
         "@attr": {
             "default": "none",
