@@ -1,0 +1,30 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Achievement": {
+        "@attr": {
+            "container": "multi",
+            "default": false,
+            "type": "bool"
+        }
+    },
+    "Highscore": {
+        "@attr": {
+            "container": "multi",
+            "default": 0,
+            "max": 2147483647,
+            "min": 0,
+            "type": "integer"
+        }
+    },
+    "Time": {
+        "@attr": {
+            "container": "multi",
+            "default": 2147483647.0,
+            "max": 2147483647.0,
+            "min": 0.0,
+            "type": "real"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 {
     "Data": "@include data.json",
+    "Records": "@silent ~records.json",
     "Settings": "@silent ~settings.json",
     "Translation": "@dir translation"
 }

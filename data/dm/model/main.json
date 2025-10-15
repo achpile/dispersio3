@@ -4,6 +4,7 @@
     },
     "Data": "@include data.json",
     "Meta": "@include meta.json",
+    "Records": "@include records.json",
     "Settings": "@include settings.json",
     "Translation": "@include translation.json"
 }
