@@ -22,6 +22,7 @@ ach::App::App()
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
 	checksum  = new ach::Checksum();
+	records   = new ach::Records();
 	cache     = new ach::Cache();
 	joystick  = new ach::Joystick();
 	ctrl      = new ach::ControlPad();
@@ -69,6 +70,7 @@ ach::App::~App()
 	delete settings;
 	delete theme;
 	delete cache;
+	delete records;
 	delete stars;
 	delete db;
 	delete state;

@@ -7,6 +7,7 @@ ach::ParticleSystemStars *stars;
 
 ach::Checksum            *checksum;
 ach::Settings            *settings;
+ach::Records             *records;
 ach::Theme               *theme;
 ach::Cache               *cache;
 ach::Database            *db;

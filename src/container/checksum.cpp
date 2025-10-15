@@ -11,6 +11,7 @@ ach::Checksum::Checksum()
 	load();
 
 	check(FILE_CACHE);
+	check(FILE_RECORDS);
 }
 
 

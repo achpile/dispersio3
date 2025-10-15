@@ -7,6 +7,7 @@ extern ach::ParticleSystemStars *stars;
 
 extern ach::Checksum            *checksum;
 extern ach::Settings            *settings;
+extern ach::Records             *records;
 extern ach::Theme               *theme;
 extern ach::Cache               *cache;
 extern ach::Database            *db;

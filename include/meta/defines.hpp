@@ -17,6 +17,7 @@
 ***********************************************************************/
 #define FILE_SETTINGS         "settings.json"
 #define FILE_CACHE            "save.json"
+#define FILE_RECORDS          "records.json"
 #define FILE_CHECKSUM         "checksum.json"
 
 
