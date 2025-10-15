@@ -373,6 +373,25 @@
             ]
         },
         {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 36,
+            "members": [
+                {
+                    "name": "Boss",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "obj_button",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
             "color": "#ffdc8add",
             "drawFill": true,
             "id": 5,

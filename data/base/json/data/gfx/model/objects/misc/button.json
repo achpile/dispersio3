@@ -1,0 +1,19 @@
+{
+    "Button": {
+        "Animation": {
+            "Idle": {
+                "End": 0,
+                "Start": 0
+            },
+            "Inactive": {
+                "End": 1,
+                "Start": 1
+            },
+            "Pressed": {
+                "End": 1,
+                "Start": 1
+            }
+        },
+        "Sheet": "Button"
+    }
+}

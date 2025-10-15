@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="24" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="36">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="24" height="36" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="41">
  <editorsettings>
   <export target="../../../data/base/map/boss.tmj" format="json"/>
  </editorsettings>
@@ -188,8 +188,33 @@
   <object id="21" name="BlockSlabBrownMid" type="block_gate" x="288" y="288" width="16" height="16"/>
   <object id="22" name="BlockSlabBrownBot" type="block_gate" x="304" y="304" width="16" height="16"/>
   <object id="23" name="BlockSlabBrownMid" type="block_gate" x="304" y="288" width="16" height="16"/>
+  <object id="36" name="Button" type="obj_button" x="88" y="384" width="16" height="16">
+   <properties>
+    <property name="Boss" type="object" value="24"/>
+   </properties>
+  </object>
+  <object id="37" name="Button" type="obj_button" x="88" y="480" width="16" height="16">
+   <properties>
+    <property name="Boss" type="object" value="24"/>
+   </properties>
+  </object>
+  <object id="38" name="Button" type="obj_button" x="280" y="384" width="16" height="16">
+   <properties>
+    <property name="Boss" type="object" value="24"/>
+   </properties>
+  </object>
+  <object id="39" name="Button" type="obj_button" x="280" y="480" width="16" height="16">
+   <properties>
+    <property name="Boss" type="object" value="24"/>
+   </properties>
+  </object>
+  <object id="40" name="Button" type="obj_button" x="184" y="352" width="16" height="16">
+   <properties>
+    <property name="Boss" type="object" value="24"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="6" name="phys">
+ <objectgroup id="6" name="phys" visible="0">
   <object id="3" type="phys_solid" x="112" y="64">
    <polyline points="0,0 160,0 160,16 176,16 176,32 192,32 192,48 208,48 208,192 192,192 192,256 240,256 240,480 128,480 128,432 96,432 96,416 64,416 64,432 32,432 32,480 -80,480 -80,256 -32,256 -32,192 -48,192 -48,48 -32,48 -32,32 -16,32 -16,16 0,16 0,0"/>
   </object>
@@ -236,7 +261,7 @@
  <objectgroup id="5" name="characters">
   <object id="24" name="Main" type="boss" x="32" y="320" width="320" height="224"/>
  </objectgroup>
- <objectgroup id="8" name="camera">
+ <objectgroup id="8" name="camera" visible="0">
   <object id="6" type="area" x="0" y="0" width="384" height="288">
    <properties>
     <property name="Track" value="Default"/>

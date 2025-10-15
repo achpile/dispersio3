@@ -129,6 +129,7 @@
 #include "map/object/gate.hpp"
 #include "map/object/solid.hpp"
 #include "map/object/antigrav.hpp"
+#include "map/object/button.hpp"
 
 #include "map/tile/tile.hpp"
 #include "map/tile/tileset.hpp"
