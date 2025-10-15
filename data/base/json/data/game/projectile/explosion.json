@@ -1,0 +1,13 @@
+{
+    "Explosion": {
+        "Appearance": {
+            "Activation": "Explosion",
+            "Sheet": "Explosion"
+        },
+        "Physics": {
+            "Delay": 0.5,
+            "Lifetime": 0.4,
+            "Radius": 20
+        }
+    }
+}

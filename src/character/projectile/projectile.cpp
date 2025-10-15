@@ -170,6 +170,9 @@ void ach::Projectile::hit(sf::Vector2f n)
 ***********************************************************************/
 void ach::Projectile::destroy()
 {
+	if (base->life)
+		return;
+
 	explode();
 
 	alive = false;

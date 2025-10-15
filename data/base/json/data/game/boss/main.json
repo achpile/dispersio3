@@ -1,7 +1,7 @@
 {
     "Main": {
         "GFX": {
-            "Crosshair": "Default"
+            "Crosshair": "Crosshair"
         },
         "Model": {
             "Eyes": "BossMainEyes",
@@ -13,6 +13,7 @@
         "Weapon": {
             "Blade": "BladeGun",
             "Cross": "Gun",
+            "Explosion": "Explosion",
             "Fireball": "Fireball",
             "Slam": "Slam",
             "Spike": "Spike",
