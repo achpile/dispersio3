@@ -323,7 +323,8 @@ void ach::BossMain::prepare()
 
 			timer.set(0.3f);
 
-			weapon = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
+			counter = -14;
+			weapon  = db->getWeapon(json_object_get_string(base->weapon, "Cross"));
 		break;
 
 		// -------------------------------------------------------------
@@ -477,13 +478,13 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 3:
-			shot(pos + sf::Vector2f(-6.0f, 1.0f), vector_create(2.0f * MATH_PI * (counter + 16) / 32.0f));
-			shot(pos + sf::Vector2f( 6.0f, 1.0f), vector_create(2.0f * MATH_PI *  counter       / 32.0f));
+			shot(pos + sf::Vector2f(-6.0f, 1.0f), vector_create(-MATH_PI * (12 + abs(counter)) / 24.0f));
+			shot(pos + sf::Vector2f( 6.0f, 1.0f), vector_create(-MATH_PI * (12 - abs(counter)) / 24.0f));
 
 			counter++;
 
-			if (counter == 32)
-				counter =  0;
+			if (counter == 12)
+				counter = -14;
 		break;
 
 		// -------------------------------------------------------------
