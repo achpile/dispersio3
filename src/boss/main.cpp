@@ -14,8 +14,8 @@ ach::BossMain::BossMain(ach::ProcessWorld *_world, json_t *obj) : Boss(_world, o
 	fistL = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 	fistR = new ach::Model(db->getModel(json_object_get_string(base->model, "Fist" )));
 
-	pos       = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
-	crosshair = db->getSheet(json_object_get_string(base->gfx, "Crosshair"));
+	pos     = sf::Vector2f(rect_center(rect).x, rect.top + rect.height - 80);
+	warning = db->getSheet(json_object_get_string(base->gfx, "Warning"));
 
 	fistR->scale.x = -1;
 
@@ -255,6 +255,18 @@ void ach::BossMain::patterns()
 
 /***********************************************************************
      * BossMain
+     * warn
+
+***********************************************************************/
+void ach::BossMain::warn(sf::Vector2f _pos)
+{
+	world->map->gfx.push_back(new ach::EffectSheet(warning, _pos, warning->sheet->size.y));
+}
+
+
+
+/***********************************************************************
+     * BossMain
      * aim
 
 ***********************************************************************/
@@ -462,6 +474,7 @@ void ach::BossMain::attack()
 	switch (pattern)
 	{
 		case 1:
+			warn(target->phys.pos);
 			shot(target->phys.pos, sf::Vector2f(0.0f, 1.0f));
 		break;
 
