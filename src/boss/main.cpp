@@ -151,6 +151,14 @@ void ach::BossMain::handle()
 
 		case ach::BossMainState::bmsDefeated:
 			if (!timer.update())
+			{
+				timer.reset();
+
+				explode();
+				counter++;
+			}
+
+			if (counter == 15)
 				defeated = true;
 		break;
 	}
@@ -194,8 +202,9 @@ void ach::BossMain::hit()
 	}
 	else
 	{
-		timer.set(3.0f);
-		state = ach::BossMainState::bmsDefeated;
+		timer.set(0.2f);
+		counter = 0;
+		state   = ach::BossMainState::bmsDefeated;
 
 		head->setAnimation("Dead");
 		eyes->setAnimation("Dead");
@@ -301,6 +310,19 @@ void ach::BossMain::patterns()
 
 		random_shuffle(&list, 3 * i, 3);
 	}
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * explode
+
+***********************************************************************/
+void ach::BossMain::explode()
+{
+	world->map->gfx.push_back(new ach::EffectSheet(explosion, pos + sf::Vector2f(random_float(-32.0f, 32.0f), random_float(-8.0f, 16.0f)), explosion->sheet->size.y));
+	sm->play(expl->snd);
 }
 
 
