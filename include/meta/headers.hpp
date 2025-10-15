@@ -45,6 +45,7 @@
 #include "gfx/sheet.hpp"
 #include "gfx/splash.hpp"
 #include "gfx/bubble.hpp"
+#include "gfx/fall.hpp"
 
 #include "gfx/impact/impact.hpp"
 #include "gfx/impact/spark.hpp"
