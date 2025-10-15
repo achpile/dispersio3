@@ -40,7 +40,10 @@ void ach::Cache::save()
 	json_object_set_branch (cache, "Stats.Level" , json_real   (leveltime));
 
 	if (mode != ach::LevelMode::lmTraining)
+	{
 		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
+		checksum->store(FILE_CACHE);
+	}
 }
 
 

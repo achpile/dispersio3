@@ -5,6 +5,7 @@
 extern ach::App                 *app;
 extern ach::ParticleSystemStars *stars;
 
+extern ach::Checksum            *checksum;
 extern ach::Settings            *settings;
 extern ach::Theme               *theme;
 extern ach::Cache               *cache;

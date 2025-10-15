@@ -54,6 +54,7 @@
 #include "gfx/tracer/line.hpp"
 #include "gfx/tracer/smoke.hpp"
 
+#include "container/checksum.hpp"
 #include "container/theme.hpp"
 #include "container/settings.hpp"
 

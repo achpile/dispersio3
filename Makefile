@@ -21,6 +21,7 @@ CMAKE    = CMakeFiles           \
 
 SESSION  = settings.json        \
            save.json            \
+           checksum.json        \
            logs/
 
 DATA     = data/

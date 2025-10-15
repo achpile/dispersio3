@@ -5,6 +5,7 @@
 ach::App                 *app;
 ach::ParticleSystemStars *stars;
 
+ach::Checksum            *checksum;
 ach::Settings            *settings;
 ach::Theme               *theme;
 ach::Cache               *cache;
