@@ -106,7 +106,6 @@ void ach::BossMain::handle()
 			{
 				state   = ach::BossMainState::bmsPrepare;
 				pattern = list.back();
-
 				list.pop_back();
 
 				prepare();
@@ -412,46 +411,67 @@ void ach::BossMain::warnings()
 	switch (pattern)
 	{
 		case 1:
+			warn(target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 2:
+			warn(target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 3:
+			warn(pos + sf::Vector2f( 96.0f, 16.0f));
+			warn(pos + sf::Vector2f(-96.0f, 16.0f));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 4:
+			warn(target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 5:
+			warn(target->phys.pos);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 6:
+			warn(pos + sf::Vector2f(   0.0f, -112.0f));
+			warn(pos + sf::Vector2f(  80.0f,  -96.0f));
+			warn(pos + sf::Vector2f( -80.0f,  -96.0f));
+			warn(pos + sf::Vector2f( 120.0f,  -24.0f));
+			warn(pos + sf::Vector2f(-120.0f,  -24.0f));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 7:
+			warn(pos + sf::Vector2f(   0.0f, -128.0f));
+			warn(pos + sf::Vector2f(  72.0f, -128.0f));
+			warn(pos + sf::Vector2f( -72.0f, -128.0f));
+			warn(pos + sf::Vector2f( 144.0f, -128.0f));
+			warn(pos + sf::Vector2f(-144.0f, -128.0f));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 8:
+			warn(pos + sf::Vector2f(32.0f, -16.0f));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
+			warn(pos + sf::Vector2f(  72.0f, 48.0f));
+			warn(pos + sf::Vector2f( -72.0f, 48.0f));
+			warn(pos + sf::Vector2f( 144.0f, 48.0f));
+			warn(pos + sf::Vector2f(-144.0f, 48.0f));
 		break;
 	}
 }
