@@ -77,7 +77,7 @@ void ach::MapObjectFragile::handle()
 		alive = false;
 		sm->play(sfx->snd);
 
-		world->map->gfx.push_back(new ach::EffectBreak(phys.pos, model->sheet->getFrame(model->anim.frame)));
+		world->map->gfx.push_back(new ach::EffectBreak(phys.pos, model->sheet->getFrame(model->anim.frame), 0.25f, 100.0f));
 	}
 }
 

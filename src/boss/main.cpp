@@ -143,24 +143,6 @@ void ach::BossMain::handle()
 
 
 		case ach::BossMainState::bmsDamage:
-			if (list.size())
-			{
-				unpress();
-
-				timer.set(1.0f);
-				state = ach::BossMainState::bmsWait;
-			}
-			else
-			{
-				timer.set(3.0f);
-				state = ach::BossMainState::bmsDefeated;
-
-				head->setAnimation("Dead");
-				eyes->setAnimation("Dead");
-				mouth->setAnimation("Dead");
-				fistL->setAnimation("Dead");
-				fistR->setAnimation("Dead");
-			}
 		break;
 
 
@@ -180,9 +162,43 @@ void ach::BossMain::handle()
 ***********************************************************************/
 void ach::BossMain::damage()
 {
+	unpress();
 	list_delete(world->map->projectiles);
+	world->map->gfx.push_back(new ach::EffectFall(this, boulder, sf::Vector2f(pos.x, rect.top - boulder->sheet->size.y / 2.0f), pos.y));
 
 	state = ach::BossMainState::bmsDamage;
+}
+
+
+
+/***********************************************************************
+     * BossMain
+     * hit
+
+***********************************************************************/
+void ach::BossMain::hit()
+{
+	world->map->gfx.push_back(new ach::EffectSheet(explosion, pos, explosion->sheet->size.y));
+	world->map->gfx.push_back(new ach::EffectBreak(pos, boulder->sheet->getFrame(0), 0.25f, 200.0f));
+
+	sm->play(expl->snd);
+
+	if (list.size())
+	{
+		timer.set(1.0f);
+		state = ach::BossMainState::bmsWait;
+	}
+	else
+	{
+		timer.set(3.0f);
+		state = ach::BossMainState::bmsDefeated;
+
+		head->setAnimation("Dead");
+		eyes->setAnimation("Dead");
+		mouth->setAnimation("Dead");
+		fistL->setAnimation("Dead");
+		fistR->setAnimation("Dead");
+	}
 }
 
 

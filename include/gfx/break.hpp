@@ -9,7 +9,7 @@ namespace ach
 		ach::ParticleSystemSplash *particle;
 
 
-		 EffectBreak(sf::Vector2f pos, sf::Sprite *spr);
+		 EffectBreak(sf::Vector2f pos, sf::Sprite *spr, float life, float speed);
 		~EffectBreak();
 
 		bool update();

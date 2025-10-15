@@ -36,6 +36,7 @@ namespace ach
 		virtual void init()                 {};
 		virtual void handle()               {};
 		virtual void damage()               {};
+		virtual void hit()                  {};
 		virtual void respawn()              {};
 		virtual void render()               {};
 		virtual bool collide(sf::FloatRect) {return false;};

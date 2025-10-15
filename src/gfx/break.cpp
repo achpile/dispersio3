@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::EffectBreak::EffectBreak(sf::Vector2f pos, sf::Sprite *spr)
+ach::EffectBreak::EffectBreak(sf::Vector2f pos, sf::Sprite *spr, float life, float speed)
 {
 	particle = new ach::ParticleSystemSplash(8.0f);
 
@@ -15,8 +15,8 @@ ach::EffectBreak::EffectBreak(sf::Vector2f pos, sf::Sprite *spr)
 
 	particle->pos      = pos;
 	particle->dir      = sf::Vector2f(0.0f, -1.0f);
-	particle->life     = 0.25f;
-	particle->speed    = 100.0f;
+	particle->life     = life;
+	particle->speed    = speed;
 	particle->gravity  = true;
 	particle->rotate   = true;
 

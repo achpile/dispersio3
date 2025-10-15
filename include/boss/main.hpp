@@ -49,6 +49,7 @@ namespace ach
 		void respawn();
 		void handle();
 		void damage();
+		void hit();
 		bool collide(sf::FloatRect r);
 
 		int  count();

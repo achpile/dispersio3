@@ -3,6 +3,7 @@
 
 namespace ach
 {
+	struct Boss;
 	struct Map;
 	struct MapObject;
 	struct MapObjectButton;

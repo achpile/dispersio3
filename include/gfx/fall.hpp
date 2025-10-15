@@ -6,12 +6,14 @@ namespace ach
 {
 	struct EffectFall : Effect
 	{
-		ach::Phys phys;
+		ach::Boss  *boss;
+		ach::Model *model;
+		ach::Phys   phys;
 
 		float limit;
 
 
-		 EffectFall(sf::Vector2f pos, float _limit);
+		 EffectFall(ach::Boss *_boss, ach::DataSheet *sheet, sf::Vector2f pos, float _limit);
 		~EffectFall();
 
 		bool update();

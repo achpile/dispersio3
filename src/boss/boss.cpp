@@ -151,6 +151,8 @@ void ach::Boss::unpress()
 ***********************************************************************/
 void ach::Boss::press()
 {
+	damage();
+	return;
 	list_foreach(buttons)
 	{
 		if (!buttons[i]->pressed)
