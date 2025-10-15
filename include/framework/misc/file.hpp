@@ -7,4 +7,6 @@
 #define file_is_regular(entry)   std::filesystem::is_regular_file(entry)
 #define file_is_directory(entry) std::filesystem::is_directory(entry)
 
+uint32_t file_checksum(const char *path);
+
 #endif
