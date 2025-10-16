@@ -8,6 +8,12 @@
             "type": "string"
         }
     },
+    "Best": {
+        "@attr": {
+            "default": "Personal best",
+            "type": "string"
+        }
+    },
     "Cash": {
         "@attr": {
             "default": "Cash",

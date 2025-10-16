@@ -17,11 +17,11 @@ ach::App::App()
 	stateCurr = ach::GameState::gsNone;
 
 	logger    = new ach::Log();
+	checksum  = new ach::Checksum();
 	dm        = new ach::Datamodel();
 	db        = new ach::Database();
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
-	checksum  = new ach::Checksum();
 	records   = new ach::Records();
 	cache     = new ach::Cache();
 	joystick  = new ach::Joystick();

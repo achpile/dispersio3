@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::Records::Records()
 {
-	data = json_object_get(dm->data, "Settings");
+	data = json_object_get(dm->data, "Records");
 
 	achievements = json_object_get(data, "Achievement");
 	highscores   = json_object_get(data, "Highscore"  );
