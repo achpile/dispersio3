@@ -80,6 +80,18 @@ ach::DataSheet* ach::Database::getSheet(const char *name)
 
 /***********************************************************************
      * Database
+     * getSprite
+
+***********************************************************************/
+ach::DataSprite* ach::Database::getSprite(const char *name)
+{
+	return getContent<ach::DataSprite>(name, &sprite);
+}
+
+
+
+/***********************************************************************
+     * Database
      * getModel
 
 ***********************************************************************/

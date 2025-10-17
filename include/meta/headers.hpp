@@ -25,6 +25,7 @@
 #include "data/sound.hpp"
 #include "data/track.hpp"
 #include "data/theme.hpp"
+#include "data/sprite.hpp"
 #include "data/sheet.hpp"
 #include "data/model.hpp"
 #include "data/projectile.hpp"

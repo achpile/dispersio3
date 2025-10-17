@@ -3,5 +3,6 @@
         "type": "object"
     },
     "Model": "@include gfx/model.json",
-    "Sheet": "@include gfx/sheet.json"
+    "Sheet": "@include gfx/sheet.json",
+    "Sprite": "@include gfx/sprite.json"
 }

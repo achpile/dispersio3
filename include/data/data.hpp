@@ -12,6 +12,7 @@ namespace ach
 		std::vector<ach::DataTheme*     > theme;
 		std::vector<ach::DataModel*     > model;
 		std::vector<ach::DataSheet*     > sheet;
+		std::vector<ach::DataSprite*    > sprite;
 		std::vector<ach::DataProjectile*> projectile;
 		std::vector<ach::DataWeapon*    > weapon;
 		std::vector<ach::DataItem*      > item;
@@ -34,6 +35,7 @@ namespace ach
 		ach::DataTheme      *getTheme     (const char *name);
 		ach::DataModel      *getModel     (const char *name);
 		ach::DataSheet      *getSheet     (const char *name);
+		ach::DataSprite     *getSprite    (const char *name);
 		ach::DataProjectile *getProjectile(const char *name);
 		ach::DataWeapon     *getWeapon    (const char *name);
 		ach::DataItem       *getItem      (const char *name);

@@ -24,6 +24,7 @@ ach::Database::~Database()
 	list_delete(font);
 	list_delete(theme);
 	list_delete(sheet);
+	list_delete(sprite);
 	list_delete(model);
 	list_delete(projectile);
 	list_delete(weapon);
@@ -71,6 +72,7 @@ void ach::Database::load()
 	loadContent<ach::DataFont      >("UI.Font"        , &font      );
 	loadContent<ach::DataTheme     >("UI.Theme"       , &theme     );
 
+	loadContent<ach::DataSprite    >("GFX.Sprite"     , &sprite    );
 	loadContent<ach::DataSheet     >("GFX.Sheet"      , &sheet     );
 	loadContent<ach::DataModel     >("GFX.Model"      , &model     );
 
