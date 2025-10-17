@@ -3,6 +3,10 @@
         "Filename": "map/cave.tmj",
         "Next": "Rocket",
         "Preview": "gfx/ui/preview/cave.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Spawn": {
             "X": 6,
             "Y": 9

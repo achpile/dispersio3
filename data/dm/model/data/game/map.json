@@ -54,6 +54,23 @@
             "type": "filename"
         }
     },
+    "Records": {
+        "@attr": {
+            "type": "object"
+        },
+        "Achievement": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        },
+        "Leaderboard": {
+            "@attr": {
+                "default": false,
+                "type": "boolean"
+            }
+        }
+    },
     "Replay": {
         "@attr": {
             "default": true,

@@ -20,6 +20,9 @@ ach::DataMap::DataMap(json_t *obj)
 	replay  = json_object_get_boolean(obj, "Replay");
 	restart = json_object_get_boolean(obj, "RestartOnDeath");
 
+	achievement = json_object_get_branch_boolean(obj, "Records.Achievement");
+	leaderboard = json_object_get_branch_boolean(obj, "Records.Leaderboard");
+
 	strncpy(filename, json_object_get_string(obj, "Filename"), STR_LEN_PATH);
 	strncpy(next    , json_object_get_string(obj, "Next"    ), STR_LEN_NAME);
 }

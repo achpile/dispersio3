@@ -6,6 +6,10 @@
         "Filename": "map/military_base.tmj",
         "Next": "LaunchPad",
         "Preview": "gfx/ui/preview/military_base.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Spawn": {
             "X": 7,
             "Y": 65

@@ -7,6 +7,10 @@
         "Next": "Rocket",
         "Player": "PlayerRobot",
         "Preview": "gfx/ui/preview/robot.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {

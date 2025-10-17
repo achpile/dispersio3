@@ -175,7 +175,8 @@ void ach::LevelSelect::stats()
 
 
 		case ach::LevelMode::lmTraining:
-			lines.push_back(new ach::Statistic(lm->get("UI.Stats.Best"), str_time(records->getLeaderboard(selected->name))));
+			if (records->getLeaderboard(selected->name))
+				lines.push_back(new ach::Statistic(lm->get("UI.Stats.Best"), str_time(records->getLeaderboard(selected->name))));
 		break;
 
 

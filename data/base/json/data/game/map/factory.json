@@ -3,6 +3,10 @@
         "Filename": "map/factory.tmj",
         "Next": "Rocket",
         "Preview": "gfx/ui/preview/factory.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Spawn": {
             "X": 8,
             "Y": 69

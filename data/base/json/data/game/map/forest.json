@@ -3,6 +3,10 @@
         "Filename": "map/forest.tmj",
         "Next": "Rocket",
         "Preview": "gfx/ui/preview/forest.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Spawn": {
             "X": 13,
             "Y": 12

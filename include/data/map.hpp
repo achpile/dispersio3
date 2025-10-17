@@ -19,6 +19,8 @@ namespace ach
 		bool finish;
 		bool replay;
 		bool restart;
+		bool achievement;
+		bool leaderboard;
 
 		int  items;
 		int  cash;

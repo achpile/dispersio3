@@ -6,6 +6,10 @@
         "Filename": "map/temple.tmj",
         "Next": "Boss",
         "Preview": "gfx/ui/preview/temple.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Replay": false,
         "Spawn": {
             "X": 12,

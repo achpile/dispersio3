@@ -3,6 +3,10 @@
         "Filename": "map/lab.tmj",
         "Next": "Rocket",
         "Preview": "gfx/ui/preview/lab.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Spawn": {
             "X": 1,
             "Y": 30

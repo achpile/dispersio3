@@ -8,7 +8,8 @@
 ***********************************************************************/
 void ach::Cache::goal()
 {
-	records->setLeaderboard(current->name, leveltime);
+	if (current->leaderboard)
+		records->setLeaderboard(current->name, leveltime);
 
 	if (isCutscenes(mode))
 		state = ach::LevelState::lsOutro;

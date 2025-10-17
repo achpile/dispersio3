@@ -7,6 +7,10 @@
         "Next": "Rocket",
         "Player": "PlayerPlumber",
         "Preview": "gfx/ui/preview/plumber.png",
+        "Records": {
+            "Achievement": true,
+            "Leaderboard": true
+        },
         "Replay": false,
         "RestartOnDeath": true,
         "Spawn": {
