@@ -56,6 +56,8 @@
 
 #include "container/checksum.hpp"
 #include "container/records.hpp"
+#include "container/achievements.hpp"
+#include "container/pair.hpp"
 #include "container/theme.hpp"
 #include "container/settings.hpp"
 
