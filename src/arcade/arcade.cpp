@@ -236,7 +236,9 @@ void ach::Arcade::init()
 void ach::Arcade::quit()
 {
 	active = false;
+
 	sm->play(over);
+	highscore();
 }
 
 
@@ -268,7 +270,18 @@ void ach::Arcade::gameover()
 
 	pulse.set(1.0f);
 	sm->play(over);
+	highscore();
+}
 
+
+
+/***********************************************************************
+     * Arcade
+     * highscore
+
+***********************************************************************/
+void ach::Arcade::highscore()
+{
 	records->setHighscore(pair_get_string(game, pairArcade), score);
 
 	high = records->getHighscore(pair_get_string(game, pairArcade));
