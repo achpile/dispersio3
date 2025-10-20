@@ -75,6 +75,9 @@ namespace ach
 		bool isPossible(ach::LevelMode _mode);
 		bool isPossibleDream();
 
+		const char* getError(ach::LevelMode _mode);
+		const char* getErrorDream();
+
 		/*  state.cpp  */
 		void goal();
 		void cutscene();
@@ -88,9 +91,8 @@ namespace ach
 		void collect(int id, bool money);
 		void checkpoint(int id);
 		void beat(const char *map);
-
-		const char* getError(ach::LevelMode _mode);
-		const char* getErrorDream();
+		void achieve();
+		void items(ach::ItemCategory category, ach::Achievement achievement);
 
 		/*  stats.cpp  */
 		sf::String getPlaytime();
