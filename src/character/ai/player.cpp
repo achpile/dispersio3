@@ -111,6 +111,7 @@ void ach::AIPlayer::respawn()
 		owner->world->fader.reset();
 
 		owner->world->state = ach::WorldState::wsFadeIn;
+		cache->leveltime    = 0.0f;
 
 		rm->setFade(0.0f);
 	}
