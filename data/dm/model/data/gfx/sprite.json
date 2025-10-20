@@ -1,12 +1,7 @@
 {
     "@attr": {
         "container": "multi",
-        "type": "object"
-    },
-    "Filename": {
-        "@attr": {
-            "default": "gfx/game/sheet/misc/default.png",
-            "type": "filename"
-        }
+        "default": "gfx/game/sheet/misc/default.png",
+        "type": "filename"
     }
 }

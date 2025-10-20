@@ -1,4 +1,5 @@
 {
     "Model": "@recursive gfx/model",
-    "Sheet": "@recursive gfx/sheet"
+    "Sheet": "@recursive gfx/sheet",
+    "Sprite": "@recursive gfx/sprite"
 }

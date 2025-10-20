@@ -8,7 +8,7 @@
 ***********************************************************************/
 ach::DataSprite::DataSprite(json_t *obj)
 {
-	spr = new ach::Sprite(json_object_get_string (obj, "Filename"), false, true);
+	spr = new ach::Sprite(json_string_value(obj), false, true);
 }
 
 
