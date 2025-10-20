@@ -1,106 +1,106 @@
 {
     "BrickOut": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 100 score in Brick Out",
+        "Name": "Block destroyer"
     },
     "Cave": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the cave",
+        "Name": "Cave explorer"
     },
     "CollectAll": {
-        "Description": "",
-        "Name": ""
+        "Description": "Collector",
+        "Name": "Collect all items"
     },
     "CollectFresh": {
-        "Description": "",
-        "Name": ""
+        "Description": "Collect all air fresheners",
+        "Name": "Fresh"
     },
     "CollectGames": {
-        "Description": "",
-        "Name": ""
+        "Description": "Collect all games",
+        "Name": "Gamer"
     },
     "Donation": {
-        "Description": "",
-        "Name": ""
+        "Description": "Make a donation",
+        "Name": "Patron"
     },
     "Duck": {
-        "Description": "",
-        "Name": ""
+        "Description": "Watch the duck dream",
+        "Name": "Duck dream"
     },
     "Easy": {
-        "Description": "",
-        "Name": ""
+        "Description": "Complete the game on easy difficulty",
+        "Name": "Piece of cake"
     },
     "Factory": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the factory",
+        "Name": "Factory"
     },
     "Forest": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the forest",
+        "Name": "Forest"
     },
     "Hard": {
-        "Description": "",
-        "Name": ""
+        "Description": "Complete the game on hard difficulty",
+        "Name": "True gamer"
     },
     "Hexagon": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 60 score in Hexagon",
+        "Name": "My eyes!"
     },
     "Island": {
-        "Description": "",
-        "Name": ""
+        "Description": "Watch the island dream",
+        "Name": "Island dream"
     },
     "Lab": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the physics laboratory",
+        "Name": "Physics laboratory"
     },
     "LaunchPad": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the cosmodrome",
+        "Name": "Escaped!"
     },
     "Matress": {
-        "Description": "",
-        "Name": ""
+        "Description": "Place the matress",
+        "Name": "Comfy"
     },
     "MilitaryBase": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the military base",
+        "Name": "Escaped?"
     },
     "Normal": {
-        "Description": "",
-        "Name": ""
+        "Description": "Complete the game on normal difficulty",
+        "Name": "Gamer"
     },
     "Plumber": {
-        "Description": "",
-        "Name": ""
+        "Description": "Watch the plumbing dream",
+        "Name": "Plumbing dream"
     },
     "Race": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 50 score in Race",
+        "Name": "Racer"
     },
     "Robot": {
-        "Description": "",
-        "Name": ""
+        "Description": "Watch the robotic dream",
+        "Name": "Robotic dream"
     },
     "Simon": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 78 score in Simon",
+        "Name": "Good memory"
     },
     "Snake": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 25 score in Snake",
+        "Name": "Maneuver"
     },
     "Temple": {
-        "Description": "",
-        "Name": ""
+        "Description": "Finish the temple",
+        "Name": "What's inside?"
     },
     "Tetris": {
-        "Description": "",
-        "Name": ""
+        "Description": "Get 100 score in Tetris",
+        "Name": "Stacker"
     },
     "TimeMachine": {
-        "Description": "",
-        "Name": ""
+        "Description": "Fix the time machine",
+        "Name": "When are we, Marty?"
     }
 }
