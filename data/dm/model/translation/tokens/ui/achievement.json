@@ -1,0 +1,19 @@
+{
+    "@attr": {
+        "container": "multi",
+        "type": "object"
+    },
+    "Description": {
+        "@attr": {
+            "default": "",
+            "maxlen": 64,
+            "type": "string"
+        }
+    },
+    "Name": {
+        "@attr": {
+            "default": "",
+            "type": "string"
+        }
+    }
+}
