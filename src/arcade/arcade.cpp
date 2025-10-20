@@ -13,7 +13,7 @@ ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 	game    = _game;
 	offset  = sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y);
 	caption = str_utf8(pair_get_string(game, pairArcadeName));
-	high    = records->getHighscore(pair_get_string(game, pairArcade));
+	high    = records->getHighscore(game);
 
 	tex     = new sf::RenderTexture();
 	spr     = new sf::Sprite();
@@ -282,9 +282,9 @@ void ach::Arcade::gameover()
 ***********************************************************************/
 void ach::Arcade::highscore()
 {
-	records->setHighscore(pair_get_string(game, pairArcade), score);
+	records->setHighscore(game, score);
 
-	high = records->getHighscore(pair_get_string(game, pairArcade));
+	high = records->getHighscore(game);
 }
 
 

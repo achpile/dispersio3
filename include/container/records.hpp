@@ -50,12 +50,12 @@ namespace ach
 
 		void save();
 
-		void setAchievement(const char *name);
-		void setHighscore  (const char *name, int score);
+		void setAchievement(ach::Achievement achievement);
+		void setHighscore  (ach::ArcadeGame game, int score);
 		void setLeaderboard(const char *name, float time);
 
-		bool  getAchievement(const char *name);
-		int   getHighscore  (const char *name);
+		bool  getAchievement(ach::Achievement achievement);
+		int   getHighscore  (ach::ArcadeGame game);
 		float getLeaderboard(const char *name);
 	};
 }

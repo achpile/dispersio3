@@ -46,14 +46,12 @@ void ach::Records::save()
      * setAchievement
 
 ***********************************************************************/
-void ach::Records::setAchievement(const char *name)
+void ach::Records::setAchievement(ach::Achievement achievement)
 {
-	bool current = getAchievement(name);
-
-	if (current)
+	if (getAchievement(achievement))
 		return;
 
-	json_object_set_boolean(achievements, name, true);
+	json_object_set_boolean(achievements, pair_get_string(achievement, pairAchievement), true);
 	save();
 }
 
@@ -64,14 +62,14 @@ void ach::Records::setAchievement(const char *name)
      * setHighscore
 
 ***********************************************************************/
-void ach::Records::setHighscore(const char *name, int score)
+void ach::Records::setHighscore(ach::ArcadeGame game, int score)
 {
-	int current = getHighscore(name);
+	int current = getHighscore(game);
 
 	if (current >= score)
 		return;
 
-	json_object_set_integer(highscores, name, score);
+	json_object_set_integer(highscores, pair_get_string(game, pairArcade), score);
 	save();
 }
 
@@ -100,9 +98,9 @@ void ach::Records::setLeaderboard(const char *name, float time)
      * getAchievement
 
 ***********************************************************************/
-bool ach::Records::getAchievement(const char *name)
+bool ach::Records::getAchievement(ach::Achievement achievement)
 {
-	return json_object_get_boolean(achievements, name);
+	return json_object_get_boolean(achievements, pair_get_string(achievement, pairAchievement));
 }
 
 
@@ -112,9 +110,9 @@ bool ach::Records::getAchievement(const char *name)
      * getHighscore
 
 ***********************************************************************/
-int ach::Records::getHighscore(const char *name)
+int ach::Records::getHighscore(ach::ArcadeGame game)
 {
-	return json_object_get_integer(highscores, name);
+	return json_object_get_integer(highscores, pair_get_string(game, pairArcade));
 }
 
 
