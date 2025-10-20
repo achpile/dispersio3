@@ -48,6 +48,9 @@ void ach::Records::save()
 ***********************************************************************/
 void ach::Records::setAchievement(ach::Achievement achievement)
 {
+	if (achievement == ach::Achievement::acCount)
+		return;
+
 	if (getAchievement(achievement))
 		return;
 
@@ -64,6 +67,19 @@ void ach::Records::setAchievement(ach::Achievement achievement)
 ***********************************************************************/
 void ach::Records::setHighscore(ach::ArcadeGame game, int score)
 {
+	switch (game)
+	{
+		case ach::ArcadeGame::agBrickOut: if (score >= 100) setAchievement(ach::Achievement::acBrickOut); break;
+		case ach::ArcadeGame::agHexagon : if (score >=  60) setAchievement(ach::Achievement::acHexagon ); break;
+		case ach::ArcadeGame::agRace    : if (score >=  50) setAchievement(ach::Achievement::acRace    ); break;
+		case ach::ArcadeGame::agSnake   : if (score >=  25) setAchievement(ach::Achievement::acSnake   ); break;
+		case ach::ArcadeGame::agSimon   : if (score >=  78) setAchievement(ach::Achievement::acSimon   ); break;
+		case ach::ArcadeGame::agTetris  : if (score >= 100) setAchievement(ach::Achievement::acTetris  ); break;
+
+		default: break;
+	}
+
+
 	int current = getHighscore(game);
 
 	if (current >= score)
@@ -82,6 +98,8 @@ void ach::Records::setHighscore(ach::ArcadeGame game, int score)
 ***********************************************************************/
 void ach::Records::setLeaderboard(const char *name, float time)
 {
+	setAchievement(pair_get_enum(name, pairAchievement));
+
 	float current = getLeaderboard(name);
 
 	if (current && current <= time)
