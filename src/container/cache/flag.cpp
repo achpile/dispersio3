@@ -32,6 +32,8 @@ void ach::Cache::setFlag(const char *name)
 	if (!strlen(name))
 		return;
 
+	records->setAchievement(pair_get_enum(name, pairAchievementFlag));
+
 	json_object_setv_branch_boolean(cache, true, "Flags.%s", name);
 
 	save();

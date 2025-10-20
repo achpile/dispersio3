@@ -40,6 +40,21 @@ ach::Pair<ach::Achievement> pairAchievement[] =
 
 
 /***********************************************************************
+     * pairAchievementFlag
+
+***********************************************************************/
+ach::Pair<ach::Achievement> pairAchievementFlag[] =
+{
+	{.num = ach::Achievement::acMattress    , .str = "PlacedMattress"     },
+	{.num = ach::Achievement::acTimeMachine , .str = "PlacedFluxCapacitor"},
+	{.num = ach::Achievement::acDonation    , .str = "MoneyDonated"       },
+
+	{.num = ach::Achievement::acCount       , .str = NULL                 },
+};
+
+
+
+/***********************************************************************
      * pairDifficulty
 
 ***********************************************************************/

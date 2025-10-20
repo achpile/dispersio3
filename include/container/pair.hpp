@@ -3,6 +3,7 @@
 
 
 extern ach::Pair<ach::Achievement> pairAchievement[];
+extern ach::Pair<ach::Achievement> pairAchievementFlag[];
 extern ach::Pair<ach::Difficulty>  pairDifficulty[];
 extern ach::Pair<ach::LevelMode>   pairLevelMode[];
 extern ach::Pair<ach::LevelMode>   pairLevelModeMenu[];
