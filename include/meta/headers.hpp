@@ -66,7 +66,6 @@
 #include "arcade/tetris.hpp"
 
 #include "container/checksum.hpp"
-#include "container/achievements.hpp"
 #include "container/records.hpp"
 #include "container/cache.hpp"
 #include "container/pair.hpp"
