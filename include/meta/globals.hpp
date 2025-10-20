@@ -15,6 +15,7 @@ ach::Database            *db;
 ach::Log                 *logger;
 ach::ControlPad          *ctrl;
 ach::Joystick            *joystick;
+ach::Notification        *notify;
 
 ach::LanguageManager     *lm;
 ach::RenderManager       *rm;

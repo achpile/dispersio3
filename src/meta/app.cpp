@@ -26,6 +26,7 @@ ach::App::App()
 	cache     = new ach::Cache();
 	joystick  = new ach::Joystick();
 	ctrl      = new ach::ControlPad();
+	notify    = new ach::Notification();
 
 	lm        = new ach::LanguageManager();
 	rm        = new ach::RenderManager();
@@ -78,6 +79,7 @@ ach::App::~App()
 	delete logger;
 	delete joystick;
 	delete ctrl;
+	delete notify;
 
 	delete lm;
 	delete rm;
@@ -114,6 +116,7 @@ void ach::App::update()
 	joystick->update();
 	ctrl->update();
 	state->update();
+	notify->update();
 
 	mm->update();
 	sm->update();

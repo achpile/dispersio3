@@ -54,6 +54,8 @@ void ach::Records::setAchievement(ach::Achievement achievement)
 	if (getAchievement(achievement))
 		return;
 
+	notify->trigger(achievement);
+
 	json_object_set_boolean(achievements, pair_get_string(achievement, pairAchievement), true);
 	save();
 }

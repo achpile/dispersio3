@@ -15,6 +15,7 @@ extern ach::Database            *db;
 extern ach::Log                 *logger;
 extern ach::ControlPad          *ctrl;
 extern ach::Joystick            *joystick;
+extern ach::Notification        *notify;
 
 extern ach::LanguageManager     *lm;
 extern ach::RenderManager       *rm;
