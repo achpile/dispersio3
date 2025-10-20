@@ -8,6 +8,16 @@ namespace ach
 	{
 		std::vector<ach::Achievement> list;
 
+		ach::RectangleShape *box;
+		ach::DataSound      *sfx;
+		ach::Sprite         *spr;
+		ach::Timer           timer;
+
+		sf::Text            *text;
+		sf::String           caption;
+		sf::String           name;
+		sf::Vector2f         pos;
+
 
 		 Notification();
 		~Notification();
@@ -16,7 +26,10 @@ namespace ach
 		void render();
 
 		void style();
+		void translate();
 
+		void init();
+		void next();
 		void trigger(ach::Achievement achievement);
 	};
 }

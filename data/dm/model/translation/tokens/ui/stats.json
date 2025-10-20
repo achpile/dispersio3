@@ -50,5 +50,11 @@
             "default": "Play time",
             "type": "string"
         }
+    },
+    "Unlock": {
+        "@attr": {
+            "default": "Achievement unlocked",
+            "type": "string"
+        }
     }
 }

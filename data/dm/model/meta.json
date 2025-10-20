@@ -4,5 +4,6 @@
     },
     "Arcade": "@include meta/arcade.json",
     "GFX": "@include meta/gfx.json",
+    "SFX": "@include meta/sfx.json",
     "Track": "@include meta/track.json"
 }

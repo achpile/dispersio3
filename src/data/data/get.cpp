@@ -7,6 +7,13 @@
 ***********************************************************************/
 template <typename T> T* getContent(const char *name, std::vector<T*> *list)
 {
+	if (!name)
+	{
+		logger->log(ach::LogLevel::llError, "Attempt to get NULL object", name);
+		return NULL;
+	}
+
+
 	list_foreach(*list)
 		if (!strcmp(name, (*list)[i]->name))
 			return (*list)[i];

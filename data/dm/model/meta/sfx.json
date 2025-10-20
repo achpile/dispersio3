@@ -1,0 +1,12 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Achievement": {
+        "@attr": {
+            "data": "Data.SFX",
+            "default": "Achievement",
+            "type": "link"
+        }
+    }
+}

@@ -54,6 +54,7 @@ ach::App::App()
 	lm->refresh();
 	theme->refresh();
 	cache->style();
+	notify->init();
 
 	stateSet(ach::GameState::gsStart);
 }

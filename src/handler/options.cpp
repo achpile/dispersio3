@@ -9,6 +9,7 @@ void handler_options_language(void *, json_t *)
 {
 	lm->refresh();
 	app->state->translate();
+	notify->translate();
 }
 
 
