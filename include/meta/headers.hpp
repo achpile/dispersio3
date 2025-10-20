@@ -58,12 +58,10 @@
 #include "container/checksum.hpp"
 #include "container/records.hpp"
 #include "container/achievements.hpp"
+#include "container/cache.hpp"
 #include "container/pair.hpp"
 #include "container/theme.hpp"
 #include "container/settings.hpp"
-
-#include "cache/cache.hpp"
-#include "cache/pair.hpp"
 
 #include "character/ai/ai.hpp"
 #include "character/ai/player.hpp"

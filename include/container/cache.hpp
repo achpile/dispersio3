@@ -1,5 +1,5 @@
-#ifndef __CACHE_CACHE
-#define __CACHE_CACHE
+#ifndef __CONTAINER_CACHE
+#define __CONTAINER_CACHE
 
 
 namespace ach
