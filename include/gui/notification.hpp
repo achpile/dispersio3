@@ -17,6 +17,7 @@ namespace ach
 		sf::String           caption;
 		sf::String           name;
 		sf::Vector2f         pos;
+		sf::Vector2f         offset;
 
 
 		 Notification();
