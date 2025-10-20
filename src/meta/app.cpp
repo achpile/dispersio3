@@ -41,11 +41,11 @@ ach::App::App()
 	rm->initLayer(ach::RenderLayer::rlFront , RENDER_LAYER_GAME_X, RENDER_LAYER_GAME_Y, settings->isSmooth());
 	rm->initLayer(ach::RenderLayer::rlGUI   , RENDER_LAYER_GUI_X , RENDER_LAYER_GUI_Y , settings->isSmooth());
 
-	create();
-	resize();
-
 	db->load();
 	tm->init();
+
+	create();
+	resize();
 
 	stars->realtime = true;
 	stars->layer    = ach::RenderLayer::rlBG;
@@ -259,9 +259,7 @@ void ach::App::create()
 	if (window)
 		delete window;
 
-	sf::Image *icon;
-
-	sfml_load_image(&icon, json_object_get_branch_string(dm->data, "Meta.GFX.Icon"));
+	sf::Image icon = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Icon"))->spr->tex->copyToImage();
 
 	window = new sf::RenderWindow(settings->getWindowMode(),
 	                              PROJECT_NAME " v" PROJECT_VERS,
@@ -271,9 +269,7 @@ void ach::App::create()
 	window->setFramerateLimit(settings->getFrameRate());
 	window->setVerticalSyncEnabled(true);
 	window->setPosition(settings->getWindowPosition());
-	window->setIcon(icon->getSize().x,
-	                icon->getSize().y,
-	                icon->getPixelsPtr());
-
-	delete icon;
+	window->setIcon(icon.getSize().x,
+	                icon.getSize().y,
+	                icon.getPixelsPtr());
 }

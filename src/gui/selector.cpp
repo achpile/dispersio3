@@ -10,7 +10,7 @@ ach::Selector::Selector()
 {
 	life   = 0.0f;
 	object = NULL;
-	corner = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Selector"), false, true);
+	corner = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Selector"))->spr;
 }
 
 
@@ -22,7 +22,6 @@ ach::Selector::Selector()
 ***********************************************************************/
 ach::Selector::~Selector()
 {
-	delete corner;
 }
 
 

@@ -2,28 +2,6 @@
     "@attr": {
         "type": "object"
     },
-    "Cabinet": {
-        "@attr": {
-            "default": "gfx/ui/misc/cabinet.png",
-            "type": "filename"
-        }
-    },
-    "Icon": {
-        "@attr": {
-            "default": "gfx/ui/misc/icon.png",
-            "type": "filename"
-        }
-    },
-    "Logo": {
-        "@attr": {
-            "default": "gfx/ui/misc/logo.png",
-            "type": "filename"
-        }
-    },
-    "Selector": {
-        "@attr": {
-            "default": "gfx/ui/misc/selector.png",
-            "type": "filename"
-        }
-    }
+    "Achievement": "@include gfx/achievement.json",
+    "UI": "@include gfx/ui.json"
 }

@@ -1,0 +1,194 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "BrickOut": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementBrickOut",
+            "type": "link"
+        }
+    },
+    "Cave": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementCave",
+            "type": "link"
+        }
+    },
+    "CollectAll": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementCollectAll",
+            "type": "link"
+        }
+    },
+    "CollectFresh": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementCollectFresh",
+            "type": "link"
+        }
+    },
+    "CollectGames": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementCollectGames",
+            "type": "link"
+        }
+    },
+    "Donation": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementDonation",
+            "type": "link"
+        }
+    },
+    "Duck": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementDuck",
+            "type": "link"
+        }
+    },
+    "Easy": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementEasy",
+            "type": "link"
+        }
+    },
+    "Factory": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementFactory",
+            "type": "link"
+        }
+    },
+    "Forest": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementForest",
+            "type": "link"
+        }
+    },
+    "Hard": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementHard",
+            "type": "link"
+        }
+    },
+    "Hexagon": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementHexagon",
+            "type": "link"
+        }
+    },
+    "Island": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementIsland",
+            "type": "link"
+        }
+    },
+    "Lab": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementLab",
+            "type": "link"
+        }
+    },
+    "LaunchPad": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementLaunchPad",
+            "type": "link"
+        }
+    },
+    "Locked": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementLocked",
+            "type": "link"
+        }
+    },
+    "Matress": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementMatress",
+            "type": "link"
+        }
+    },
+    "MilitaryBase": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementMilitaryBase",
+            "type": "link"
+        }
+    },
+    "Normal": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementNormal",
+            "type": "link"
+        }
+    },
+    "Plumber": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementPlumber",
+            "type": "link"
+        }
+    },
+    "Race": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementRace",
+            "type": "link"
+        }
+    },
+    "Robot": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementRobot",
+            "type": "link"
+        }
+    },
+    "Simon": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementSimon",
+            "type": "link"
+        }
+    },
+    "Snake": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementSnake",
+            "type": "link"
+        }
+    },
+    "Temple": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementTemple",
+            "type": "link"
+        }
+    },
+    "Tetris": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementTetris",
+            "type": "link"
+        }
+    },
+    "TimeMachine": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "AchievementTimeMachine",
+            "type": "link"
+        }
+    }
+}

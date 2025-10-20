@@ -9,9 +9,9 @@
 ach::StateMenu::StateMenu()
 {
 	menu     = new ach::Menu(this, NULL, &theme->menu);
-	logo     = new ach::Sprite(json_object_get_branch_string(dm->data, "Meta.GFX.Logo"), false, true);
 	training = new ach::LevelSelect(this, handler_menu_pick);
 	state    = ach::MenuState::msMain;
+	logo     = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Logo"))->spr;
 
 	menu->setPosition(sf::Vector2f(150, 290));
 	menu->setWidthE(500);
@@ -35,7 +35,6 @@ ach::StateMenu::StateMenu()
 ach::StateMenu::~StateMenu()
 {
 	delete menu;
-	delete logo;
 }
 
 

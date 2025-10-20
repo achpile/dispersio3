@@ -1,0 +1,33 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Cabinet": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "Cabinet",
+            "type": "link"
+        }
+    },
+    "Icon": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "Icon",
+            "type": "link"
+        }
+    },
+    "Logo": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "Logo",
+            "type": "link"
+        }
+    },
+    "Selector": {
+        "@attr": {
+            "data": "Data.GFX.Sprite",
+            "default": "Selector",
+            "type": "link"
+        }
+    }
+}
