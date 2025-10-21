@@ -51,6 +51,12 @@
             "type": "string"
         }
     },
+    "Progress": {
+        "@attr": {
+            "default": "Progress",
+            "type": "string"
+        }
+    },
     "Unlock": {
         "@attr": {
             "default": "Achievement unlocked",

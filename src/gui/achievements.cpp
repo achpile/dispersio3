@@ -57,6 +57,17 @@ void ach::Achievements::render()
 {
 	rm->draw(box, ach::RenderLayer::rlGUI);
 
+	text->setCharacterSize(theme->menu.text->size * 2);
+	text_draw(text, progress, pos.x, pos.y, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+
+	if (index > 0)
+		text_draw(text, "...", pos.x, pos.y + GUI_ACHIEVEMENT_O / 2.0f                    , GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+
+	if (index + GUI_ACHIEVEMENT_C < ach::Achievement::acCount)
+		text_draw(text, "...", pos.x, pos.y - GUI_ACHIEVEMENT_O + GUI_ACHIEVEMENT_H, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+
+	text->setCharacterSize(theme->menu.text->size);
+
 	for (int i = 0; i < GUI_ACHIEVEMENT_C; i++)
 		draw(index + i, i);
 }
@@ -94,7 +105,6 @@ void ach::Achievements::style()
 {
 	box->style(theme->menu.box);
 
-	text->setCharacterSize(theme->menu.text->size);
 	text->setFont(*theme->menu.text->font);
 	text->setFillColor(theme->menu.text->color);
 }
@@ -108,6 +118,43 @@ void ach::Achievements::style()
 ***********************************************************************/
 void ach::Achievements::controls()
 {
+	if (ctrl->keys[ach::ControlAction::caUp  ].pressed) move(-1);
+	if (ctrl->keys[ach::ControlAction::caDown].pressed) move( 1);
+	if (ctrl->keys[ach::ControlAction::caMenu].pressed) back();
+}
+
+
+
+/***********************************************************************
+     * Achievements
+     * move
+
+***********************************************************************/
+void ach::Achievements::move(int d)
+{
+	if (index + d < 0)
+		return;
+
+	if (index + d + GUI_ACHIEVEMENT_C > ach::Achievement::acCount)
+		return;
+
+	index += d;
+
+	sm->play(theme->menu.blip);
+}
+
+
+
+/***********************************************************************
+     * Achievements
+     * back
+
+***********************************************************************/
+void ach::Achievements::back()
+{
+	active = false;
+
+	sm->play(theme->menu.back);
 }
 
 
@@ -119,6 +166,10 @@ void ach::Achievements::controls()
 ***********************************************************************/
 void ach::Achievements::init()
 {
+	index  = 0;
+	count  = 0;
+	active = true;
+
 	const char *name;
 
 	for (int i = 0; i < ach::Achievement::acCount; i++)
@@ -131,10 +182,11 @@ void ach::Achievements::init()
 
 		if (!records->getAchievement((ach::Achievement)i))
 			data[i].spr = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.Achievement.Locked"))->spr->spr;
+		else
+			count++;
 	}
 
-	index  = 0;
-	active = true;
+	progress = lm->get("UI.Stats.Progress") + " : " + std::to_string(count) + "/" + std::to_string(ach::Achievement::acCount);
 }
 
 

@@ -18,8 +18,10 @@ namespace ach
 		ach::RectangleShape  *box;
 
 		sf::Text             *text;
+		sf::String            progress;
 		sf::Vector2f          pos;
 
+		int  count;
 		int  index;
 		bool active;
 
@@ -36,6 +38,9 @@ namespace ach
 		void style();
 
 		void controls();
+		void move(int d);
+		void back();
+
 		void init();
 		void draw(int i, int y);
 	};
