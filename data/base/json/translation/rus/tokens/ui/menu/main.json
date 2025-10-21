@@ -1,5 +1,9 @@
 {
+    "Achievements": "Достижения",
     "Credits": "Авторы",
+    "Highscores": "Очки",
     "InGame": "Меню",
-    "Name": "Главное меню"
+    "Leaderboards": "Таблицы лидеров",
+    "Name": "Главное меню",
+    "Records": "Рекорды"
 }

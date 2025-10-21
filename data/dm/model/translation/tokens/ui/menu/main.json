@@ -2,9 +2,21 @@
     "@attr": {
         "type": "object"
     },
+    "Achievements": {
+        "@attr": {
+            "default": "Achievements",
+            "type": "string"
+        }
+    },
     "Credits": {
         "@attr": {
             "default": "Credits",
+            "type": "string"
+        }
+    },
+    "Highscores": {
+        "@attr": {
+            "default": "Highscores",
             "type": "string"
         }
     },
@@ -14,9 +26,21 @@
             "type": "string"
         }
     },
+    "Leaderboards": {
+        "@attr": {
+            "default": "Leaderboards",
+            "type": "string"
+        }
+    },
     "Name": {
         "@attr": {
             "default": "Main menu",
+            "type": "string"
+        }
+    },
+    "Records": {
+        "@attr": {
+            "default": "Records",
             "type": "string"
         }
     }
