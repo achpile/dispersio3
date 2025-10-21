@@ -205,7 +205,7 @@ void ach::Arcade::controls()
 
 
 		case ach::ArcadeState::asPlay:
-			if      (ctrl->keys[ach::ControlAction::caMenu].pressed) reset();
+			if      (ctrl->keys[ach::ControlAction::caMenu].pressed) stop();
 			else handle();
 		break;
 	}
@@ -238,7 +238,6 @@ void ach::Arcade::quit()
 	active = false;
 
 	sm->play(over);
-	highscore();
 }
 
 
@@ -255,6 +254,19 @@ void ach::Arcade::reset()
 
 	pulse.set(1.0f);
 	sm->play(pick);
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * stop
+
+***********************************************************************/
+void ach::Arcade::stop()
+{
+	highscore();
+	reset();
 }
 
 

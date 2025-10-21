@@ -62,6 +62,7 @@ namespace ach
 		void init();
 		void quit();
 		void reset();
+		void stop();
 		void gameover();
 		void highscore();
 

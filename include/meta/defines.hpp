@@ -100,7 +100,7 @@
      * Phys
 
 ***********************************************************************/
-#define PHYS_MAX_VEL          500.0f
+#define PHYS_MAX_VEL          2000.0f
 #define PHYS_VEL_EPSILON      10.0f
 #define PHYS_MIN_BOUNCE       200.0f
 
