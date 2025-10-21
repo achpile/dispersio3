@@ -14,8 +14,13 @@ namespace ach
 
 	struct Achievements
 	{
-		ach::AchievementData data[ach::Achievement::acCount];
+		ach::AchievementData  data[ach::Achievement::acCount];
+		ach::RectangleShape  *box;
 
+		sf::Text             *text;
+		sf::Vector2f          pos;
+
+		int  index;
 		bool active;
 
 
@@ -32,6 +37,7 @@ namespace ach
 
 		void controls();
 		void init();
+		void draw(int i, int y);
 	};
 }
 

@@ -8,7 +8,18 @@
 ***********************************************************************/
 ach::Achievements::Achievements()
 {
+	box    = new ach::RectangleShape();
+	text   = new sf::Text();
+
 	active = false;
+	pos    = sf::Vector2f((RENDER_LAYER_GUI_X - GUI_ACHIEVEMENT_W) / 2.0f, GUI_ACHIEVEMENT_Y);
+
+	box->setOutlineThickness(MENU_THICKNESS);
+	box->setSize(sf::Vector2f(GUI_ACHIEVEMENT_W, GUI_ACHIEVEMENT_H));
+	box->setPosition(pos);
+
+	style();
+	translate();
 }
 
 
@@ -20,6 +31,8 @@ ach::Achievements::Achievements()
 ***********************************************************************/
 ach::Achievements::~Achievements()
 {
+	delete box;
+	delete text;
 }
 
 
@@ -42,6 +55,10 @@ void ach::Achievements::update()
 ***********************************************************************/
 void ach::Achievements::render()
 {
+	rm->draw(box, ach::RenderLayer::rlGUI);
+
+	for (int i = 0; i < GUI_ACHIEVEMENT_C; i++)
+		draw(index + i, i);
 }
 
 
@@ -75,6 +92,11 @@ void ach::Achievements::translate()
 ***********************************************************************/
 void ach::Achievements::style()
 {
+	box->style(theme->menu.box);
+
+	text->setCharacterSize(theme->menu.text->size);
+	text->setFont(*theme->menu.text->font);
+	text->setFillColor(theme->menu.text->color);
 }
 
 
@@ -111,5 +133,25 @@ void ach::Achievements::init()
 			data[i].spr = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.Achievement.Locked"))->spr->spr;
 	}
 
+	index  = 0;
 	active = true;
+}
+
+
+
+/***********************************************************************
+     * Achievements
+     * draw
+
+***********************************************************************/
+void ach::Achievements::draw(int i, int y)
+{
+	sf::Vector2f p = sf::Vector2f(GUI_ACHIEVEMENT_S, GUI_ACHIEVEMENT_O + y * GUI_ACHIEVEMENT_S + GUI_ACHIEVEMENT_S / 2.0f);
+
+	data[i].spr->setPosition(pos + p);
+
+	rm->draw(data[i].spr, ach::RenderLayer::rlGUI);
+
+	text_draw(text, data[i].name, pos.x + p.x + GUI_ACHIEVEMENT_S / 2.0f, pos.y + p.y + 10.0f - GUI_ACHIEVEMENT_S / 2.0f, 0, ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
+	text_draw(text, data[i].desc, pos.x + p.x + GUI_ACHIEVEMENT_S / 2.0f, pos.y + p.y                                   , 0, ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
 }
