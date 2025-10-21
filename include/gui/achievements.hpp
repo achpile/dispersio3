@@ -19,6 +19,7 @@ namespace ach
 
 		sf::Text             *text;
 		sf::String            progress;
+		sf::String            back;
 		sf::Vector2f          pos;
 
 		int  count;
@@ -38,8 +39,9 @@ namespace ach
 		void style();
 
 		void controls();
+		void click(sf::Vector2f c);
 		void move(int d);
-		void back();
+		void quit();
 
 		void init();
 		void draw(int i, int y);

@@ -92,7 +92,7 @@
 #define GUI_ACHIEVEMENT_Y     20.0f
 #define GUI_ACHIEVEMENT_C     6
 #define GUI_ACHIEVEMENT_S     75.0f
-#define GUI_ACHIEVEMENT_O     70.0f
+#define GUI_ACHIEVEMENT_O     50.0f
 
 
 

@@ -57,16 +57,16 @@ void ach::Achievements::render()
 {
 	rm->draw(box, ach::RenderLayer::rlGUI);
 
-	text->setCharacterSize(theme->menu.text->size * 2);
-	text_draw(text, progress, pos.x, pos.y, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	text_draw(text, progress, pos.x, pos.y + 10.0f, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 
 	if (index > 0)
 		text_draw(text, "...", pos.x, pos.y + GUI_ACHIEVEMENT_O / 2.0f                    , GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 
 	if (index + GUI_ACHIEVEMENT_C < ach::Achievement::acCount)
-		text_draw(text, "...", pos.x, pos.y - GUI_ACHIEVEMENT_O + GUI_ACHIEVEMENT_H, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+		text_draw(text, "...", pos.x, pos.y - GUI_ACHIEVEMENT_O - 20.0f + GUI_ACHIEVEMENT_H, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 
 	text->setCharacterSize(theme->menu.text->size);
+	text_draw(text, back, pos.x, pos.y - GUI_ACHIEVEMENT_O / 2.0f - 10.0f + GUI_ACHIEVEMENT_H, GUI_ACHIEVEMENT_W, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 
 	for (int i = 0; i < GUI_ACHIEVEMENT_C; i++)
 		draw(index + i, i);
@@ -79,8 +79,15 @@ void ach::Achievements::render()
      * event
 
 ***********************************************************************/
-void ach::Achievements::event(sf::Event)
+void ach::Achievements::event(sf::Event e)
 {
+	if (e.type != sf::Event::MouseButtonReleased)
+		return;
+
+	if (e.mouseButton.button != sf::Mouse::Button::Left)
+		return;
+
+	click(rm->transform(ach::RenderLayer::rlGUI, sf::Vector2f(e.mouseButton.x, e.mouseButton.y)));
 }
 
 
@@ -92,6 +99,7 @@ void ach::Achievements::event(sf::Event)
 ***********************************************************************/
 void ach::Achievements::translate()
 {
+	back = lm->get("UI.Menu.Misc.Back");
 }
 
 
@@ -120,7 +128,21 @@ void ach::Achievements::controls()
 {
 	if (ctrl->keys[ach::ControlAction::caUp  ].pressed) move(-1);
 	if (ctrl->keys[ach::ControlAction::caDown].pressed) move( 1);
-	if (ctrl->keys[ach::ControlAction::caMenu].pressed) back();
+	if (ctrl->keys[ach::ControlAction::caMenu].pressed) quit();
+}
+
+
+
+/***********************************************************************
+     * Achievements
+     * click
+
+***********************************************************************/
+void ach::Achievements::click(sf::Vector2f c)
+{
+	if (sf::FloatRect(pos.x + (GUI_ACHIEVEMENT_W - 100.0f) / 2.0f, pos.y + GUI_ACHIEVEMENT_O / 2.0f                            , 100.0f, 30.0f).contains(c)) move(-1);
+	if (sf::FloatRect(pos.x + (GUI_ACHIEVEMENT_W - 100.0f) / 2.0f, pos.y - GUI_ACHIEVEMENT_O        - 20.0f + GUI_ACHIEVEMENT_H, 100.0f, 30.0f).contains(c)) move( 1);
+	if (sf::FloatRect(pos.x + (GUI_ACHIEVEMENT_W - 100.0f) / 2.0f, pos.y - GUI_ACHIEVEMENT_O / 2.0f - 10.0f + GUI_ACHIEVEMENT_H, 100.0f, 30.0f).contains(c)) quit();
 }
 
 
@@ -147,10 +169,10 @@ void ach::Achievements::move(int d)
 
 /***********************************************************************
      * Achievements
-     * back
+     * quit
 
 ***********************************************************************/
-void ach::Achievements::back()
+void ach::Achievements::quit()
 {
 	active = false;
 
