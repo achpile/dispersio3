@@ -264,6 +264,9 @@ void ach::BossMain::idle()
 	offsetL = 0.0f;
 	offsetR = 0.0f;
 
+	fistL->angle = 0.0f;
+	fistR->angle = 0.0f;
+
 	head->setAnimation("Idle");
 	eyes->setAnimation("Idle");
 	mouth->setAnimation("Idle");
@@ -445,6 +448,7 @@ void ach::BossMain::prepare()
 			fistL->setAnimation("Up");
 			fistR->setAnimation("Up");
 
+			angle  = random_float(30.0f);
 			weapon = db->getWeapon(json_object_get_string(base->weapon, "Throw"));
 		break;
 
@@ -594,6 +598,13 @@ void ach::BossMain::evaluate()
 
 		// -------------------------------------------------------------
 
+		case 8:
+			fistL->angle = ( counter) ? angle : 0.0f;
+			fistR->angle = (!counter) ? angle : 0.0f;
+		break;
+
+		// -------------------------------------------------------------
+
 		case 9:
 			offsetR = offsetL = 16.0f * sin(MATH_PI * math_sqr(math_sqr(timer.progress())));
 		break;
@@ -701,19 +712,20 @@ void ach::BossMain::attack()
 				fistR->anim.reset();
 			}
 
-			shot(sf::Vector2f(pos.x + 32.0f * (counter ? -1 : 1), pos.y - 16.0f), sf::Vector2f(random_float(-50.0f, 50.0f), -100.0f));
+			shot(sf::Vector2f(pos.x + 32.0f * (counter ? -1 : 1), pos.y - 16.0f), vector_set_len(vector_create((angle + 90.0f) * MATH_RAD), -110.0f));
 
 			counter = !counter;
+			angle   = random_float(30.0f);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float( 8.0f,  52.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(60.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
 
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(8.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float( 8.0f,  52.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(60.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
 		break;
 	}
 }
