@@ -6,7 +6,7 @@
         "@attr": {
             "container": "multi",
             "default": false,
-            "type": "bool"
+            "type": "boolean"
         }
     },
     "Highscore": {

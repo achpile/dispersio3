@@ -112,5 +112,6 @@ void ach::Cache::listLevelsTraining(json_t *list)
 	size_t  index;
 
 	json_array_foreach(json_object_get(campaign, "MapList"), index, item)
-		json_array_append(list, item);
+		if (!db->getMap(json_string_value(item))->achievement || records->getAchievement(pair_get_enum(json_string_value(item), pairAchievement)))
+			json_array_append(list, item);
 }

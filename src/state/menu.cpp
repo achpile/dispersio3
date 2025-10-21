@@ -249,33 +249,36 @@ void ach::StateMenu::fill()
 {
 	menu->init("UI.Menu.Main.Name");
 
-	if (cache->isDefault())
+	if (cache->isDefault() && !records->getAchievement(ach::Achievement::acEasy))
 	{
-		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder(menu, "UI.Menu.Play.Start"          ));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Easy"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "easy"  )));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "normal")));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "hard"  )));
+		menu->add("UI.Menu.Main.Name"    , new ach::MenuItemFolder(menu, "UI.Menu.Play.Start"          ));
 	}
 	else
 	{
-		menu->add("UI.Menu.Main.Name"   , new ach::MenuItemFolder(menu, "UI.Menu.Play.Name"           ));
-		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemAction(menu, "UI.Menu.Play.Continue"       , handler_menu_start        , json_pack("{s:b}"    , "New", false)));
-		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemFolder(menu, "UI.Menu.Play.Start"          ));
-		menu->add("UI.Menu.Play.Name"   , new ach::MenuItemAction(menu, "UI.Menu.Play.Training"       , handler_menu_training     , NULL                                ));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Easy"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "easy"  )));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "normal")));
-		menu->add("UI.Menu.Play.Start"  , new ach::MenuItemAction(menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "hard"  )));
+		menu->add("UI.Menu.Main.Name"    , new ach::MenuItemFolder(menu, "UI.Menu.Play.Name"           ));
+
+		if (!cache->isDefault())
+			menu->add("UI.Menu.Play.Name", new ach::MenuItemAction(menu, "UI.Menu.Play.Continue"       , handler_menu_start        , json_pack("{s:b}"    , "New", false)));
+
+		menu->add("UI.Menu.Play.Name"    , new ach::MenuItemFolder(menu, "UI.Menu.Play.Start"          ));
+
+		if (records->getAchievement(ach::Achievement::acEasy))
+			menu->add("UI.Menu.Play.Name", new ach::MenuItemAction(menu, "UI.Menu.Play.Training"       , handler_menu_training     , NULL                                ));
 	}
+
+	menu->add("UI.Menu.Play.Start"       , new ach::MenuItemAction(menu, "UI.Menu.Play.Easy"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "easy"  )));
+	menu->add("UI.Menu.Play.Start"       , new ach::MenuItemAction(menu, "UI.Menu.Play.Normal"         , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "normal")));
+	menu->add("UI.Menu.Play.Start"       , new ach::MenuItemAction(menu, "UI.Menu.Play.Hard"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "hard"  )));
 
 	options_fill(menu, "UI.Menu.Main.Name");
 
-	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemFolder(menu, "UI.Menu.Main.Records"        ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , handler_menu_achievements , NULL                  ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , handler_menu_leaderboards , NULL                  ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , handler_menu_leaderboards , NULL                  ));
+	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemFolder(menu, "UI.Menu.Main.Records"        ));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , handler_menu_achievements , NULL                  ));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , handler_menu_leaderboards , NULL                  ));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , handler_menu_leaderboards , NULL                  ));
 
-	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction(menu, "UI.Menu.Main.Credits"        , handler_common_state      , json_string("credits")));
-	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction(menu, "UI.Menu.Misc.Exit"           , handler_common_state      , json_string("end"    )));
+	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemAction(menu, "UI.Menu.Main.Credits"        , handler_common_state      , json_string("credits")));
+	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemAction(menu, "UI.Menu.Misc.Exit"           , handler_common_state      , json_string("end"    )));
 
 	menu->finalize(NULL);
 }
