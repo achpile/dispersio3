@@ -114,10 +114,10 @@
             "type": "link"
         }
     },
-    "Matress": {
+    "Mattress": {
         "@attr": {
             "data": "Data.GFX.Sprite",
-            "default": "AchievementMatress",
+            "default": "AchievementMattress",
             "type": "link"
         }
     },

@@ -4,8 +4,18 @@
 
 namespace ach
 {
+	struct AchievementData
+	{
+		sf::Sprite *spr;
+		sf::String  name;
+		sf::String  desc;
+	};
+
+
 	struct Achievements
 	{
+		ach::AchievementData data[ach::Achievement::acCount];
+
 		bool active;
 
 
