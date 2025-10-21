@@ -111,6 +111,8 @@
 #include "gui/item.hpp"
 #include "gui/status.hpp"
 #include "gui/level.hpp"
+#include "gui/achievements.hpp"
+#include "gui/leaderboards.hpp"
 #include "gui/cabinet.hpp"
 
 #include "map/object/pair.hpp"

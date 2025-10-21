@@ -7,16 +7,20 @@ namespace ach
 	enum MenuState
 	{
 		msMain,
-		msTraining
+		msTraining,
+		msAchievements,
+		msLeaderboards
 	};
 
 
 	struct StateMenu : StateBase
 	{
-		ach::Menu        *menu;
-		ach::Sprite      *logo;
-		ach::LevelSelect *training;
-		ach::MenuState    state;
+		ach::Menu         *menu;
+		ach::Sprite       *logo;
+		ach::LevelSelect  *training;
+		ach::Achievements *achievements;
+		ach::Leaderboards *leaderboards;
+		ach::MenuState     state;
 
 
 		 StateMenu();

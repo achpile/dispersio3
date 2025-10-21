@@ -8,10 +8,12 @@
 ***********************************************************************/
 ach::StateMenu::StateMenu()
 {
-	menu     = new ach::Menu(this, NULL, &theme->menu);
-	training = new ach::LevelSelect(this, handler_menu_pick);
-	state    = ach::MenuState::msMain;
-	logo     = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Logo"))->spr;
+	menu         = new ach::Menu(this, NULL, &theme->menu);
+	training     = new ach::LevelSelect(this, handler_menu_pick);
+	achievements = new ach::Achievements();
+	leaderboards = new ach::Leaderboards();
+	state        = ach::MenuState::msMain;
+	logo         = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Logo"))->spr;
 
 	menu->setPosition(sf::Vector2f(150, 290));
 	menu->setWidthE(500);
@@ -35,6 +37,9 @@ ach::StateMenu::StateMenu()
 ach::StateMenu::~StateMenu()
 {
 	delete menu;
+	delete training;
+	delete achievements;
+	delete leaderboards;
 }
 
 
@@ -88,6 +93,16 @@ void ach::StateMenu::event(sf::Event e)
 		case ach::MenuState::msTraining:
 			training->event(e);
 		break;
+
+
+		case ach::MenuState::msAchievements:
+			achievements->event(e);
+		break;
+
+
+		case ach::MenuState::msLeaderboards:
+			leaderboards->event(e);
+		break;
 	}
 }
 
@@ -102,6 +117,8 @@ void ach::StateMenu::translate()
 {
 	menu->translate();
 	training->translate();
+	achievements->translate();
+	leaderboards->translate();
 }
 
 
@@ -115,6 +132,8 @@ void ach::StateMenu::style()
 {
 	menu->style(&theme->menu);
 	training->style();
+	achievements->style();
+	leaderboards->style();
 }
 
 
@@ -138,6 +157,18 @@ void ach::StateMenu::prepare()
 			training->controls();
 			training->update();
 		break;
+
+
+		case ach::MenuState::msAchievements:
+			achievements->controls();
+			achievements->update();
+		break;
+
+
+		case ach::MenuState::msLeaderboards:
+			leaderboards->controls();
+			leaderboards->update();
+		break;
 	}
 }
 
@@ -158,6 +189,18 @@ void ach::StateMenu::finalize()
 
 		case ach::MenuState::msTraining:
 			if (!training->active)
+				state = ach::MenuState::msMain;
+		break;
+
+
+		case ach::MenuState::msAchievements:
+			if (!achievements->active)
+				state = ach::MenuState::msMain;
+		break;
+
+
+		case ach::MenuState::msLeaderboards:
+			if (!leaderboards->active)
 				state = ach::MenuState::msMain;
 		break;
 	}
@@ -181,6 +224,16 @@ void ach::StateMenu::draw()
 
 		case ach::MenuState::msTraining:
 			training->render();
+		break;
+
+
+		case ach::MenuState::msAchievements:
+			achievements->render();
+		break;
+
+
+		case ach::MenuState::msLeaderboards:
+			leaderboards->render();
 		break;
 	}
 }
@@ -217,9 +270,9 @@ void ach::StateMenu::fill()
 	options_fill(menu, "UI.Menu.Main.Name");
 
 	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemFolder(menu, "UI.Menu.Main.Records"        ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , NULL                      , NULL                  ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , NULL                      , NULL                  ));
-	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , NULL                      , NULL                  ));
+	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , handler_menu_achievements , NULL                  ));
+	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , handler_menu_leaderboards , NULL                  ));
+	menu->add("UI.Menu.Main.Records"    , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , handler_menu_leaderboards , NULL                  ));
 
 	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction(menu, "UI.Menu.Main.Credits"        , handler_common_state      , json_string("credits")));
 	menu->add("UI.Menu.Main.Name"       , new ach::MenuItemAction(menu, "UI.Menu.Misc.Exit"           , handler_common_state      , json_string("end"    )));

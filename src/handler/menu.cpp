@@ -30,6 +30,30 @@ void handler_menu_training(void *context, json_t *)
 
 
 /***********************************************************************
+     * handler_menu_achievements
+
+***********************************************************************/
+void handler_menu_achievements(void *context, json_t *)
+{
+	((ach::StateMenu*)context)->achievements->init();
+	((ach::StateMenu*)context)->state = ach::MenuState::msAchievements;
+}
+
+
+
+/***********************************************************************
+     * handler_menu_leaderboards
+
+***********************************************************************/
+void handler_menu_leaderboards(void *context, json_t *)
+{
+	((ach::StateMenu*)context)->leaderboards->init();
+	((ach::StateMenu*)context)->state = ach::MenuState::msLeaderboards;
+}
+
+
+
+/***********************************************************************
      * handler_menu_pick
 
 ***********************************************************************/
