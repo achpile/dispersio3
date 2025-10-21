@@ -8,22 +8,7 @@
 ***********************************************************************/
 ach::Log::Log(ach::LogLevel _level)
 {
-	char filename[256];
-
-	arch_mkdir("logs");
-	update();
-
-	snprintf(filename, sizeof(filename),
-	         "logs/%04d.%02d.%02d_%02d.%02d.%02d.txt",
-	         tm->tm_year + 1900,
-	         tm->tm_mon + 1,
-	         tm->tm_mday,
-	         tm->tm_hour,
-	         tm->tm_min,
-	         tm->tm_sec);
-
-	level   = _level;
-	logfile = fopen(filename, "w");
+	level = _level;
 
 	log(ach::LogLevel::llInfo, PROJECT_NAME " v" PROJECT_VERS " started");
 }
@@ -37,8 +22,6 @@ ach::Log::Log(ach::LogLevel _level)
 ***********************************************************************/
 ach::Log::~Log()
 {
-	if (logfile)
-		fclose(logfile);
 }
 
 
@@ -77,7 +60,6 @@ void ach::Log::log(ach::LogLevel _level, const char *format, ...)
 	update();
 
 	put(stdout , buf, _level);
-	put(logfile, buf, _level);
 }
 
 

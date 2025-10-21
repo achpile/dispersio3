@@ -88,7 +88,7 @@ json_t *json_preprocess_include(const char *name, const char *dir, bool silent)
 
 	snprintf(path, STR_LEN_PATH, "%s/%s", dir, name);
 
-	logger->log(ach::LogLevel::llInfo, "Loading file: '%s'", path);
+	logger->log(ach::LogLevel::llDebug, "Loading file: '%s'", path);
 
 	if (!file_exists(path))
 	{

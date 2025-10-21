@@ -8,7 +8,6 @@ settings.json
 save.json
 records.json
 checksum.json
-logs/
 
 # CMake files
 CMakeCache.txt

@@ -19,11 +19,10 @@ namespace ach
 		ach::LogLevel level;
 
 		struct tm *tm;
-		FILE      *logfile;
 		time_t     now;
 
 
-		 Log(ach::LogLevel _level = ach::LogLevel::llDebug);
+		 Log(ach::LogLevel _level = ach::LogLevel::llInfo);
 		~Log();
 
 		void update();

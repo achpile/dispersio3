@@ -12,7 +12,7 @@ void ach::Map::load()
 	json_t *mapdata = json_load_file(base->filename, 0, &error);
 
 
-	logger->log(ach::LogLevel::llInfo, "Loading map: \"%s\"", base->filename);
+	logger->log(ach::LogLevel::llDebug, "Loading map: \"%s\"", base->filename);
 
 	if (!mapdata)
 	{
