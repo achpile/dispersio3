@@ -138,6 +138,8 @@ void ach::Boss::unpress()
 {
 	list_foreach(buttons)
 		buttons[i]->reset();
+
+	random_shuffle(&buttons);
 }
 
 
@@ -150,8 +152,15 @@ void ach::Boss::unpress()
 void ach::Boss::press()
 {
 	list_foreach(buttons)
+	{
 		if (!buttons[i]->pressed)
+		{
+			if (!buttons[i]->active)
+				buttons[i]->activate();
+
 			return;
+		}
+	}
 
 	damage();
 }
@@ -165,8 +174,7 @@ void ach::Boss::press()
 ***********************************************************************/
 void ach::Boss::activate()
 {
-	list_foreach(buttons)
-		buttons[i]->activate();
+	buttons[0]->activate();
 }
 
 
