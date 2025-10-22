@@ -284,7 +284,9 @@ bool ach::Character::jump()
 	if (phys.jumpdown)
 		return false;
 
-	phys.vel.y = -jumping;
+	phys.sloped = 0.0f;
+	phys.slope  = 0.0f;
+	phys.vel.y  = -jumping;
 
 	sm->play(phys.water ? base->sndSwim->snd : base->sndJump->snd);
 

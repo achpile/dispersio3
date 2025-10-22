@@ -30,6 +30,7 @@ void ach::Map::collideCharacter(ach::Character *character)
 {
 	character->phys.bounce   = false;
 	character->phys.grounded = false;
+	character->phys.sloped   = character->phys.slope;
 	character->phys.slope    = 0.0f;
 
 	ach::PhysLine *line;

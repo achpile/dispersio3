@@ -14,6 +14,7 @@ namespace ach
 		sf::FloatRect rect;
 
 		float slope;
+		float sloped;
 		float water;
 		int   gravity;
 
