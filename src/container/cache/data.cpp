@@ -81,6 +81,8 @@ void ach::Cache::reset(ach::Difficulty _difficulty)
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
 	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
+
+	unlink(FILE_CACHE);
 }
 
 

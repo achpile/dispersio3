@@ -89,6 +89,8 @@ void ach::Cache::warp(const char *map, ach::LevelMode _mode, bool intro)
 	json_object_set_branch_string (cache, "Current.Mode"      , pair_get_string(mode, pairLevelMode));
 	json_object_set_branch_integer(cache, "Current.Checkpoint", -1 );
 
+	leveltime = 0.0f;
+
 	pick(json_object_get_branch_string(cache, "Current.Map"), _mode, intro);
 }
 
