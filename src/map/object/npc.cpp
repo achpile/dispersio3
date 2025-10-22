@@ -44,6 +44,7 @@ void ach::MapObjectNPC::reset()
 	phys.pos       = spawn;
 	model->scale.x = dir_sign(face);
 
+	phys.calc();
 	stop();
 }
 
