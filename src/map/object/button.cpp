@@ -12,6 +12,8 @@ ach::MapObjectButton::MapObjectButton(ach::ProcessWorld *_world, json_t *obj) : 
 	sfx     = db->getSound(json_object_get_branch_string(dm->data, "Data.Game.Meta.SFX.Button"));
 	link    = json_property_get_integer(obj, "Boss");
 
+	blinking.set(0.7f);
+
 	if (!link)
 		logger->log(ach::LogLevel::llError, "Orphaned button ID#%d", id);
 
@@ -43,7 +45,31 @@ void ach::MapObjectButton::reset()
 	active  = false;
 	pressed = false;
 
+	blinking.reset();
 	animate();
+}
+
+
+
+/***********************************************************************
+     * MapObjectButton
+     * handle
+
+***********************************************************************/
+void ach::MapObjectButton::handle()
+{
+	if (active && !pressed)
+	{
+		if (!blinking.update())
+			blinking.reset();
+
+		if (blinking.value < 0.1f) model->shader = ach::RenderShader::rsWhite;
+		else                       model->shader = ach::RenderShader::rsNone;
+	}
+	else
+	{
+		model->shader = ach::RenderShader::rsNone;
+	}
 }
 
 

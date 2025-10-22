@@ -8,6 +8,7 @@ namespace ach
 	{
 		ach::Boss      *boss;
 		ach::DataSound *sfx;
+		ach::Timer      blinking;
 
 		int  link;
 		bool active;
@@ -18,6 +19,7 @@ namespace ach
 		~MapObjectButton();
 
 		void reset();
+		void handle();
 		void init(ach::Map *map);
 		void touch();
 
