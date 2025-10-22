@@ -150,7 +150,6 @@ void ach::RenderManager::setColor(sf::Color color)
 	game->setColor(color);
 	effect->setColor(color);
 	front->setColor(color);
-	gui->setColor(color);
 }
 
 

@@ -15,6 +15,9 @@
             "Jump": "PlayerJump",
             "Land": "PlayerLand",
             "Swim": "PlayerSwim"
+        },
+        "Stats": {
+            "Jump": 330
         }
     }
 }
