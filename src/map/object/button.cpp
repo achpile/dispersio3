@@ -65,10 +65,14 @@ void ach::MapObjectButton::handle()
 
 		if (blinking.value < 0.1f) model->shader = ach::RenderShader::rsWhite;
 		else                       model->shader = ach::RenderShader::rsNone;
+
+		if (blinking.value < 0.1f) model->setScale(1.3f);
+		else                       model->setScale(1.0f);
 	}
 	else
 	{
 		model->shader = ach::RenderShader::rsNone;
+		model->setScale(1.0f);
 	}
 }
 
