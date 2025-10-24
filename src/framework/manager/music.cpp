@@ -58,7 +58,6 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 	sf::Time offset = track->getPlayingOffset();
 
 	track->stop();
-	track->setLoop(loop);
 	track->openFromFile(current);
 	track->play();
 
@@ -66,6 +65,8 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 		fader.reset();
 	else
 		track->setPlayingOffset(offset);
+
+	track->setLoop(loop);
 
 	fade();
 }

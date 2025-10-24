@@ -276,4 +276,6 @@ void ach::App::create()
 	window->setIcon(icon.getSize().x,
 	                icon.getSize().y,
 	                icon.getPixelsPtr());
+
+	rm->resize(window);
 }
