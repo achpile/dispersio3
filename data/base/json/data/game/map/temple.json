@@ -1,8 +1,5 @@
 {
     "Temple": {
-        "Cutscene": {
-            "Intro": "TempleIntro"
-        },
         "Filename": "map/temple.tmj",
         "Next": "Boss",
         "Preview": "gfx/ui/preview/temple.png",

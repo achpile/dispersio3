@@ -1,9 +1,0 @@
-{
-    "TempleIntro": {
-        "Slideshow": [
-            "gfx/game/cutscene/misc/default.png"
-        ],
-        "Text": "Game.Cutscene.TempleIntro",
-        "Track": "Temple"
-    }
-}
