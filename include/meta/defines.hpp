@@ -7,7 +7,7 @@
 
 ***********************************************************************/
 #define PROJECT_NAME          "Dispersio 3"
-#define PROJECT_VERS          "0.9.5"
+#define PROJECT_VERS          "0.9.6"
 
 
 
