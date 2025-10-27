@@ -143,6 +143,7 @@ void ach::StateCredits::fill()
 	add("T1tan"         , ach::CreditsWeight::cwEntry);
 	add("Smokey"        , ach::CreditsWeight::cwEntry);
 	add("Mishgan-Zhigan", ach::CreditsWeight::cwEntry);
+	add("Boshyst_Dexter", ach::CreditsWeight::cwEntry);
 	space();
 
 

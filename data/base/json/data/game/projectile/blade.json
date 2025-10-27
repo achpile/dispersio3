@@ -11,6 +11,7 @@
         },
         "Physics": {
             "Bounces": 4,
+            "Lifetime": 2.5,
             "Radius": 3
         },
         "Tracer": {

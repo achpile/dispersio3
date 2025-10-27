@@ -1,16 +1,12 @@
 {
-    "Fireball": {
+    "FireballSmall": {
         "Appearance": {
             "Orientation": "direction",
+            "Scale": 0.5,
             "Sheet": "ProjectileFireball"
         },
-        "Explosion": {
-            "Count": 2,
-            "Enable": true,
-            "Projectile": "FireballSmall"
-        },
         "Physics": {
-            "Radius": 6
+            "Radius": 3
         },
         "Tracer": {
             "Type": "smoke"
