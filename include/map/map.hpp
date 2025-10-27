@@ -39,6 +39,7 @@ namespace ach
 		void renderTiles();
 
 		void process();
+		void reset();
 		void viewport(ach::MapArea *area);
 
 		void refresh();
