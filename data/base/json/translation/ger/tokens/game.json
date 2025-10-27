@@ -1,0 +1,5 @@
+{
+    "Cutscene": "@include game/cutscene.json",
+    "Map": "@include game/map.json",
+    "Message": "@recursive game/message"
+}

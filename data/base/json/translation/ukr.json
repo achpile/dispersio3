@@ -1,0 +1,10 @@
+{
+    "ukr": {
+        "Author": [
+            "T1tan"
+        ],
+        "Label": "Українська",
+        "Steam": "ukrainian",
+        "Tokens": "@include ukr/tokens.json"
+    }
+}

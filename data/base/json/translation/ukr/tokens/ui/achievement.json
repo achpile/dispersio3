@@ -1,0 +1,106 @@
+{
+    "BrickOut": {
+        "Description": "Наберите 100 очков в Brick Out",
+        "Name": "Разрушитель блоков"
+    },
+    "Cave": {
+        "Description": "Пройдите пещеру",
+        "Name": "Исследователь пещер"
+    },
+    "CollectAll": {
+        "Description": "Соберите все предметы",
+        "Name": "Собиратель"
+    },
+    "CollectFresh": {
+        "Description": "Соберите все освежители воздуха",
+        "Name": "Свежий"
+    },
+    "CollectGames": {
+        "Description": "Соберите все игры",
+        "Name": "Игроман"
+    },
+    "Donation": {
+        "Description": "Внесите пожертвование",
+        "Name": "Донор"
+    },
+    "Duck": {
+        "Description": "Посмотреть утиный сон",
+        "Name": "Утиный сон"
+    },
+    "Easy": {
+        "Description": "Пройдите игру на легкой сложности",
+        "Name": "Проще простого"
+    },
+    "Factory": {
+        "Description": "Пройдите завод",
+        "Name": "Завод"
+    },
+    "Forest": {
+        "Description": "Пройдите лес",
+        "Name": "Лес"
+    },
+    "Hard": {
+        "Description": "Пройдите игру на высокой сложности",
+        "Name": "Настоящий геймер"
+    },
+    "Hexagon": {
+        "Description": "Наберите 60 очков в Hexagon",
+        "Name": "Мои глаза!"
+    },
+    "Island": {
+        "Description": "Посмотреть островной сон",
+        "Name": "Островной сон"
+    },
+    "Lab": {
+        "Description": "Пройдите физическую лабораторию",
+        "Name": "Физическая лаборатория"
+    },
+    "LaunchPad": {
+        "Description": "Пройдите космодром",
+        "Name": "Выбрался!"
+    },
+    "Mattress": {
+        "Description": "Застелите матрас",
+        "Name": "Удобненько"
+    },
+    "MilitaryBase": {
+        "Description": "Пройдите военную базу",
+        "Name": "Выбрался?"
+    },
+    "Normal": {
+        "Description": "Пройдите игру на нормальной сложности",
+        "Name": "Геймер"
+    },
+    "Plumber": {
+        "Description": "Посмотреть водопроводный сон",
+        "Name": "Водопроводный сон"
+    },
+    "Race": {
+        "Description": "Наберите 50 очков в Race",
+        "Name": "Гонщик"
+    },
+    "Robot": {
+        "Description": "Посмотреть роботизированный сон",
+        "Name": "Роботизированный сон"
+    },
+    "Simon": {
+        "Description": "Наберите 78 очков в Simon",
+        "Name": "Хорошая память"
+    },
+    "Snake": {
+        "Description": "Наберите 25 очков в Snake",
+        "Name": "Маневр"
+    },
+    "Temple": {
+        "Description": "Пройдите храм",
+        "Name": "А что внутри?"
+    },
+    "Tetris": {
+        "Description": "Наберите 100 очков в Tetris",
+        "Name": "Укладчик"
+    },
+    "TimeMachine": {
+        "Description": "Почините машину времени",
+        "Name": "Когда мы, Марти?"
+    }
+}

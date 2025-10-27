@@ -1,0 +1,10 @@
+{
+    "ger": {
+        "Author": [
+            "Creepue"
+        ],
+        "Label": "Deutsch",
+        "Steam": "german",
+        "Tokens": "@include ger/tokens.json"
+    }
+}
