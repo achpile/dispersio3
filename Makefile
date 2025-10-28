@@ -57,7 +57,8 @@ LDFLAGS  = -static-libstdc++ \
            -lsfml-system     \
            -lsfml-audio      \
            -lm               \
-           -ljansson
+           -ljansson         \
+           -lsteam_api
 
 CFLAGS   = -Wall            \
            -Wextra          \

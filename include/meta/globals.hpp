@@ -8,6 +8,7 @@ ach::ParticleSystemStars *stars;
 ach::Checksum            *checksum;
 ach::Settings            *settings;
 ach::Records             *records;
+ach::Steam               *steam;
 ach::Theme               *theme;
 ach::Cache               *cache;
 ach::Database            *db;

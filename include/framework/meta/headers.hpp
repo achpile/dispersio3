@@ -6,6 +6,9 @@
 #include "framework/meta/defines.hpp"
 #include "framework/meta/forward.hpp"
 
+#include "framework/steamapi/steam_api.h"
+#include "framework/steamapi/steam_api_flat.h"
+
 #include "framework/string/pair.hpp"
 #include "framework/string/pair.inl"
 #include "framework/string/string.hpp"
@@ -92,6 +95,8 @@
 #include "framework/manager/music.hpp"
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
+
+#include "framework/steam/steam.hpp"
 
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"

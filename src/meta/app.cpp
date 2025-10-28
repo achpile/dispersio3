@@ -20,6 +20,7 @@ ach::App::App()
 	checksum  = new ach::Checksum();
 	dm        = new ach::Datamodel();
 	db        = new ach::Database();
+	steam     = new ach::Steam();
 	settings  = new ach::Settings();
 	theme     = new ach::Theme();
 	records   = new ach::Records();
@@ -72,6 +73,7 @@ ach::App::~App()
 	delete settings;
 	delete theme;
 	delete cache;
+	delete steam;
 	delete records;
 	delete stars;
 	delete db;

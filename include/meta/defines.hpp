@@ -8,6 +8,7 @@
 ***********************************************************************/
 #define PROJECT_NAME          "Dispersio 3"
 #define PROJECT_VERS          "0.9.7"
+#define PROJECT_ID            "4125160"
 
 
 
@@ -19,6 +20,7 @@
 #define FILE_CACHE            "save.json"
 #define FILE_RECORDS          "records.json"
 #define FILE_CHECKSUM         "checksum.json"
+#define FILE_APPID            "steam_appid.txt"
 
 
 

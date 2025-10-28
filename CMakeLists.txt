@@ -4,7 +4,7 @@ PROJECT ( dispersio3 )
 
 SET ( PROJECT_CFLAGS "-std=c++17" )
 SET ( PROJECT_LFLAGS "-L./lib -Wl,-rpath,./lib/" )
-SET ( PROJECT_LIBS    sfml-audio sfml-graphics sfml-window sfml-system m jansson )
+SET ( PROJECT_LIBS    sfml-audio sfml-graphics sfml-window sfml-system m jansson steam_api )
 
 SET ( PROJECT_INCLUDE "include" )
 SET ( PROJECT_HEADER  "${PROJECT_INCLUDE}/meta/headers.hpp" )
