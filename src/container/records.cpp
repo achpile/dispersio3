@@ -55,6 +55,7 @@ void ach::Records::setAchievement(ach::Achievement achievement)
 		return;
 
 	notify->trigger(achievement);
+	steam->setAchievement(pair_get_string(achievement, pairAchievement));
 
 	json_object_set_boolean(achievements, pair_get_string(achievement, pairAchievement), true);
 	save();

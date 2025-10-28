@@ -50,3 +50,39 @@ ach::Steam::~Steam()
 	if (initialized)
 		SteamAPI_Shutdown();
 }
+
+
+
+/***********************************************************************
+     * Steam
+     * setAchievement
+
+***********************************************************************/
+void ach::Steam::setAchievement(const char *name)
+{
+	if (!initialized)
+		return;
+
+	SteamUserStats()->SetAchievement(name);
+	SteamUserStats()->StoreStats();
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * getAchievement
+
+***********************************************************************/
+bool ach::Steam::getAchievement(const char *name)
+{
+	if (!initialized)
+		return false;
+
+	bool res;
+
+	if (SteamUserStats()->GetAchievement(name, &res))
+		return res;
+
+	return false;
+}
