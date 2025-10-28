@@ -18,6 +18,8 @@ namespace ach
 		 Steam();
 		~Steam();
 
+		const char* language();
+
 		void setAchievement(const char *name);
 		bool getAchievement(const char *name);
 	};
