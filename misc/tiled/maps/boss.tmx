@@ -214,7 +214,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="6" name="phys" visible="0">
+ <objectgroup id="6" name="phys">
   <object id="3" type="phys_solid" x="112" y="64">
    <polyline points="0,0 160,0 160,16 176,16 176,32 192,32 192,48 208,48 208,192 192,192 192,256 240,256 240,480 128,480 128,432 96,432 96,416 64,416 64,432 32,432 32,480 -80,480 -80,256 -32,256 -32,192 -48,192 -48,48 -32,48 -32,32 -16,32 -16,16 0,16 0,0"/>
   </object>
@@ -261,7 +261,7 @@
  <objectgroup id="5" name="characters">
   <object id="24" name="Main" type="boss" x="32" y="320" width="320" height="224"/>
  </objectgroup>
- <objectgroup id="8" name="camera" visible="0">
+ <objectgroup id="8" name="camera">
   <object id="6" type="area" x="0" y="0" width="384" height="288">
    <properties>
     <property name="Track" value="Default"/>
