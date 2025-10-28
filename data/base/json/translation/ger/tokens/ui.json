@@ -1,5 +1,6 @@
 {
     "Achievement": "@include ui/achievement.json",
+    "Control": "@include ui/control.json",
     "Credits": "@include ui/credits.json",
     "Menu": "@include ui/menu.json",
     "Stats": "@include ui/stats.json"
