@@ -96,6 +96,8 @@
 #include "framework/manager/sound.hpp"
 #include "framework/manager/time.hpp"
 
+#include "framework/steam/entry.hpp"
+#include "framework/steam/leaderboard.hpp"
 #include "framework/steam/steam.hpp"
 
 #include "framework/text/align.hpp"
