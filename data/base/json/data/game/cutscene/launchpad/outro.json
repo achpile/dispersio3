@@ -1,7 +1,9 @@
 {
     "LaunchPadOutro": {
         "Slideshow": [
-            "gfx/game/cutscene/misc/default.png"
+            "gfx/game/cutscene/launchpad/outro/1.png",
+            "gfx/game/cutscene/launchpad/outro/2.png",
+            "gfx/game/cutscene/launchpad/outro/3.png"
         ],
         "Text": "Game.Cutscene.LaunchPadOutro",
         "Track": "Rocket"
