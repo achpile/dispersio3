@@ -1,6 +1,6 @@
 {
     "Boss": {
-        "Description": "The depths of the temple contain the ancient Mayan knowledge of cosmos, and it is very well guarded.",
+        "Description": "The depths of the temple contain the ancient Mayan's knowledge of the cosmos and it is very well guarded.",
         "Name": "Temple depths"
     },
     "Cave": {
@@ -33,7 +33,7 @@
         "Name": "Cosmodrome"
     },
     "MilitaryBase": {
-        "Description": "The place where it all began. ^ The place where the sound of a siren marked the end of the familiar world.",
+        "Description": "The place where it all began. ^ The place where the sound of a siren marked the end of the world as we know it.",
         "Name": "Military base"
     },
     "Plumber": {
