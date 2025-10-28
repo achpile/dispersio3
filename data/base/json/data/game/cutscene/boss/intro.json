@@ -1,7 +1,7 @@
 {
     "BossIntro": {
         "Slideshow": [
-            "gfx/game/cutscene/misc/default.png"
+            "gfx/game/cutscene/boss/intro/1.png"
         ],
         "Text": "Game.Cutscene.BossIntro",
         "Track": "Default"
