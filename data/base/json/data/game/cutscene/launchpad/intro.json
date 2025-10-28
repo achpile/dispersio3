@@ -1,7 +1,8 @@
 {
     "LaunchPadIntro": {
         "Slideshow": [
-            "gfx/game/cutscene/misc/default.png"
+            "gfx/game/cutscene/launchpad/intro/1.png",
+            "gfx/game/cutscene/launchpad/intro/2.png"
         ],
         "Text": "Game.Cutscene.LaunchPadIntro",
         "Track": "LaunchPad"
