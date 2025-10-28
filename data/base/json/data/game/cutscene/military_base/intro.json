@@ -1,7 +1,9 @@
 {
     "MilitaryBaseIntro": {
         "Slideshow": [
-            "gfx/game/cutscene/misc/default.png"
+            "gfx/game/cutscene/military_base/intro/1.png",
+            "gfx/game/cutscene/military_base/intro/2.png",
+            "gfx/game/cutscene/military_base/intro/3.png"
         ],
         "Text": "Game.Cutscene.MilitaryBaseIntro",
         "Track": "Intro"
