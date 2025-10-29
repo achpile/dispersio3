@@ -161,13 +161,11 @@ void ach::StateMenu::prepare()
 
 		case ach::MenuState::msAchievements:
 			achievements->controls();
-			achievements->update();
 		break;
 
 
 		case ach::MenuState::msLeaderboards:
 			leaderboards->controls();
-			leaderboards->update();
 		break;
 	}
 }

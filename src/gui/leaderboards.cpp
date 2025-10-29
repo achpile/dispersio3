@@ -51,6 +51,7 @@ ach::Leaderboards::~Leaderboards()
 ***********************************************************************/
 void ach::Leaderboards::update()
 {
+	category = "<  " + lm->getv("UI.Leaderboard.Class.%s", pair_get_string(type, pairLeaderboardClass)) + "  >";
 }
 
 
@@ -72,6 +73,21 @@ void ach::Leaderboards::render()
 
 	text_draw(text, category, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding               , width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 	text_draw(text, back    , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * 14, width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+
+	if (data[index].lb->status != ach::LeaderboardStatus::lsSuccess)
+	{
+		text_draw(text, lm->getv("UI.Leaderboard.Status.%s", pair_get_string(data[index].lb->status, pairLeaderboardStatus)), pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * 7, width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	}
+	else
+	{
+		list_foreach(data[index].lb->entries)
+		{
+			text_draw(text, data[index].lb->entries[i].id, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+
+			if (highscores) text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+			else            text_draw(text, data[index].lb->entries[i].time , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+		}
+	}
 }
 
 
@@ -149,12 +165,14 @@ void ach::Leaderboards::controls()
      * init
 
 ***********************************************************************/
-void ach::Leaderboards::init(bool highscores)
+void ach::Leaderboards::init(bool _highscores)
 {
 	data.clear();
 
-	active = true;
-	type   = ach::LeaderboardClass::lcNearest;
+	index      = 0;
+	active     = true;
+	highscores = _highscores;
+	type       = ach::LeaderboardClass::lcNearest;
 
 	if (highscores)
 	{
@@ -180,7 +198,7 @@ void ach::Leaderboards::init(bool highscores)
 				add(json_string_value(item), lm->getv("Game.Map.%s.Name", json_string_value(item)));
 	}
 
-	categorize();
+	update();
 }
 
 
@@ -199,16 +217,4 @@ void ach::Leaderboards::add(const char *name, sf::String caption)
 
 	if (entry.lb)
 		data.push_back(entry);
-}
-
-
-
-/***********************************************************************
-     * Leaderboards
-     * categorize
-
-***********************************************************************/
-void ach::Leaderboards::categorize()
-{
-	category = "<  " + lm->getv("UI.Leaderboard.Class.%s", pair_get_string(type, pairLeaderboardClass)) + "  >";
 }

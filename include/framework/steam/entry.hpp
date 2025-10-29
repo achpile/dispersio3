@@ -6,6 +6,10 @@ namespace ach
 {
 	struct LeaderboardEntry
 	{
+		sf::String    id;
+		sf::String    value;
+		sf::String    time;
+
 		std::string   name;
 
 		unsigned long rank;

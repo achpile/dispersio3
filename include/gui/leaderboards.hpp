@@ -26,7 +26,9 @@ namespace ach
 		sf::String            back;
 		sf::Vector2f          pos;
 
+		bool  highscores;
 		bool  active;
+		int   index;
 
 		float padding;
 		float spacing;
@@ -45,10 +47,9 @@ namespace ach
 		void style();
 
 		void controls();
-		void init(bool highscores);
+		void init(bool _highscores);
 
 		void add(const char *name, sf::String caption);
-		void categorize();
 	};
 }
 

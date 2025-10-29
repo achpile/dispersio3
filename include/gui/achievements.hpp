@@ -30,7 +30,6 @@ namespace ach
 		 Achievements();
 		~Achievements();
 
-		void update();
 		void render();
 
 		void event(sf::Event e);

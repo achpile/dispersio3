@@ -12,6 +12,10 @@ ach::LeaderboardEntry::LeaderboardEntry(unsigned long _rank, unsigned int _score
 	score = _score;
 	name  = std::string(SteamFriends()->GetFriendPersonaName(ID));
 	own   = ID == steam->ID;
+
+	id    = std::to_string(rank) + ". " + name;
+	value = std::to_string(score);
+	time  = str_time(((float)score) / 1000.0f);
 }
 
 
