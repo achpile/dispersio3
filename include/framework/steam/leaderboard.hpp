@@ -8,7 +8,8 @@ namespace ach
 	{
 		lsLoading,
 		lsSuccess,
-		lsFailed
+		lsFailed,
+		lsNoData
 	};
 
 
@@ -16,7 +17,7 @@ namespace ach
 	{
 		lcNearest,
 		lcFriends,
-		lcBest
+		lcBest,
 	};
 
 

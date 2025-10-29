@@ -99,6 +99,7 @@
 #include "framework/steam/entry.hpp"
 #include "framework/steam/leaderboard.hpp"
 #include "framework/steam/steam.hpp"
+#include "framework/steam/pair.hpp"
 
 #include "framework/text/align.hpp"
 #include "framework/text/draw.hpp"
