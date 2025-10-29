@@ -18,12 +18,5 @@
             "type": "string"
         }
     },
-    "Steam": {
-        "@attr": {
-            "default": "english",
-            "maxlen": 32,
-            "type": "string"
-        }
-    },
     "Tokens": "@include translation/tokens.json"
 }

@@ -1,10 +1,9 @@
 {
-    "rus": {
+    "russian": {
         "Author": [
             "Achpile"
         ],
         "Label": "Русский",
-        "Steam": "russian",
         "Tokens": "@include rus/tokens.json"
     }
 }

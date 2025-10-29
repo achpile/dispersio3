@@ -11,7 +11,7 @@
     "Language": {
         "@attr": {
             "data": "Translation",
-            "default": "eng",
+            "default": "english",
             "type": "link"
         }
     },

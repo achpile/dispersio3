@@ -82,18 +82,8 @@ void ach::LanguageManager::check()
 	if (!settings->isDefault())
 		return;
 
-	json_t     *lang;
-	const char *name;
-	const char *i;
-
-	name = steam->language();
-
-	json_object_foreach(json_object_get(dm->data, "Translation"), i, lang)
-		if (!strcmp(name, json_object_get_string(lang, "Steam")))
-		{
-			json_object_set_branch_string(settings->data, "Game.Language", i);
-			return;
-		}
+	if (json_object_getv_branch(dm->data, "Translation.%s", steam->language()))
+		json_object_set_branch_string(settings->data, "Game.Language", steam->language());
 }
 
 
