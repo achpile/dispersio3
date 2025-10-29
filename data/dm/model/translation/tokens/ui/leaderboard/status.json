@@ -1,0 +1,23 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Failed": {
+        "@attr": {
+            "default": "Failed to get data",
+            "type": "string"
+        }
+    },
+    "Loading": {
+        "@attr": {
+            "default": "Loading",
+            "type": "string"
+        }
+    },
+    "NoData": {
+        "@attr": {
+            "default": "No data",
+            "type": "string"
+        }
+    }
+}

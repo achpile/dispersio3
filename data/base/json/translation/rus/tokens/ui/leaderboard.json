@@ -1,0 +1,4 @@
+{
+    "Class": "@include leaderboard/class.json",
+    "Status": "@include leaderboard/status.json"
+}

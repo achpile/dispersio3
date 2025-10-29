@@ -1,0 +1,23 @@
+{
+    "@attr": {
+        "type": "object"
+    },
+    "Best": {
+        "@attr": {
+            "default": "Best",
+            "type": "string"
+        }
+    },
+    "Friends": {
+        "@attr": {
+            "default": "Friends",
+            "type": "string"
+        }
+    },
+    "Nearest": {
+        "@attr": {
+            "default": "Neighbours",
+            "type": "string"
+        }
+    }
+}
