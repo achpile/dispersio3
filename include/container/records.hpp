@@ -45,10 +45,15 @@ namespace ach
 		json_t *highscores;
 		json_t *leaderboards;
 
+		bool    synced;
+
+
 		 Records();
 		~Records();
 
 		void save();
+		void init();
+		void sync();
 
 		void setAchievement(ach::Achievement achievement);
 		void setHighscore  (ach::ArcadeGame game, int score);

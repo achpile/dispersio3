@@ -45,6 +45,7 @@ ach::App::App()
 
 	db->load();
 	tm->init();
+	records->init();
 
 	create();
 	resize();
@@ -117,6 +118,7 @@ void ach::App::update()
 	rm->reset();
 
 	steam->update();
+	records->sync();
 	joystick->update();
 	ctrl->update();
 	state->update();

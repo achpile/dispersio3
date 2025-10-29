@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Records::Records()
 {
-	data = json_object_get(dm->data, "Records");
+	synced = false;
+	data   = json_object_get(dm->data, "Records");
 
 	achievements = json_object_get(data, "Achievement");
 	highscores   = json_object_get(data, "Highscore"  );
@@ -37,6 +38,55 @@ void ach::Records::save()
 {
 	json_dump_file(data, FILE_RECORDS, JSON_INDENT(4) | JSON_SORT_KEYS);
 	checksum->store(FILE_RECORDS);
+}
+
+
+
+/***********************************************************************
+     * Records
+     * init
+
+***********************************************************************/
+void ach::Records::init()
+{
+	if (!steam->initialized)
+		return;
+
+	json_t *item;
+	size_t  index;
+
+	json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
+		if (db->getMap(json_string_value(item))->leaderboard)
+			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item)));
+
+	steam->leaderboards.push_back(new ach::Leaderboard("GameEasy"  ));
+	steam->leaderboards.push_back(new ach::Leaderboard("GameNormal"));
+	steam->leaderboards.push_back(new ach::Leaderboard("GameHard"  ));
+
+
+	for (int i = 0; i < ach::ArcadeGame::agCount; i++)
+	{
+		if (i == ach::ArcadeGame::agNone)
+			continue;
+
+		steam->highscores.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade)));
+	}
+}
+
+
+
+/***********************************************************************
+     * Records
+     * sync
+
+***********************************************************************/
+void ach::Records::sync()
+{
+	if (synced)
+		return;
+
+	if (!steam->initialized)
+		return;
 }
 
 

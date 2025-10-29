@@ -24,6 +24,10 @@ ach::StateFinish::StateFinish()
 	if (cache->difficulty >= ach::Difficulty::gdNormal) records->setAchievement(ach::Achievement::acNormal);
 	if (cache->difficulty >= ach::Difficulty::gdHard  ) records->setAchievement(ach::Achievement::acHard  );
 
+	if (cache->difficulty >= ach::Difficulty::gdEasy  ) records->setLeaderboard("GameEasy"  , cache->playtime);
+	if (cache->difficulty >= ach::Difficulty::gdNormal) records->setLeaderboard("GameNormal", cache->playtime);
+	if (cache->difficulty >= ach::Difficulty::gdHard  ) records->setLeaderboard("GameHard"  , cache->playtime);
+
 	cache->clear();
 	app->mouse(false);
 }
