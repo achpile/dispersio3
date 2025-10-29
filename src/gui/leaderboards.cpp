@@ -71,8 +71,9 @@ void ach::Leaderboards::render()
 	list_foreach(data)
 		text_draw(text, data[i].caption, pos.x + padding + spacing, pos.y + padding + spacing * i, 0, ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
 
-	text_draw(text, category, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding               , width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
-	text_draw(text, back    , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * 14, width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	text_draw(text, category            , pos.x + padding + MENU_LEADER_WIDTH, pos.y + padding                  , width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	text_draw(text, back                , pos.x + padding + MENU_LEADER_WIDTH, pos.y + padding + spacing * 14   , width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	text_draw(text, theme->menu.selector, pos.x + padding                    , pos.y + padding + spacing * index, 0.0f , ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
 
 	if (data[index].lb->status != ach::LeaderboardStatus::lsSuccess)
 	{
@@ -82,12 +83,17 @@ void ach::Leaderboards::render()
 	{
 		list_foreach(data[index].lb->entries)
 		{
+			if (data[index].lb->entries[i].own) text->setFillColor(sf::Color(84, 252, 84));
+			else                                text->setFillColor(sf::Color::White);
+
 			text_draw(text, data[index].lb->entries[i].id, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
 
 			if (highscores) text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 			else            text_draw(text, data[index].lb->entries[i].time , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 		}
 	}
+
+	text->setFillColor(sf::Color::White);
 }
 
 
