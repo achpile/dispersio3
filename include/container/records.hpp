@@ -55,6 +55,10 @@ namespace ach
 		void init();
 		void sync();
 
+		void syncAchievement(ach::Achievement achievement);
+		bool syncLeaderboard(const char *name);
+		bool syncHighscore  (ach::ArcadeGame game);
+
 		void setAchievement(ach::Achievement achievement);
 		void setHighscore  (ach::ArcadeGame game, int score);
 		void setLeaderboard(const char *name, float time);

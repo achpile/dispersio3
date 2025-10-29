@@ -6,9 +6,13 @@
      * constructor
 
 ***********************************************************************/
-ach::Leaderboard::Leaderboard(const char *name)
+ach::Leaderboard::Leaderboard(const char *_name)
 {
+	strncpy(name, _name, STR_LEN_NAME);
+
 	status            = lsFailed;
+	initialized       = false;
+	synced            = false;
 	handle            = 0;
 	highscore         = 0;
 	rank              = 0;
@@ -120,7 +124,7 @@ void ach::Leaderboard::update(intptr_t utils)
      * setHighscore
 
 ***********************************************************************/
-void ach::Leaderboard::setHighscore(unsigned int score, bool init)
+void ach::Leaderboard::setHighscore(unsigned int score)
 {
 	if (!handle)
 		return;
@@ -128,9 +132,6 @@ void ach::Leaderboard::setHighscore(unsigned int score, bool init)
 	rank = 0;
 
 	hSteamAPICallLoad = SteamAPI_ISteamUserStats_UploadLeaderboardScore((intptr_t)SteamUserStats(), handle, k_ELeaderboardUploadScoreMethodKeepBest, score, NULL, 0);
-
-	if (init)
-		hSteamAPICallLoad = 0;
 }
 
 
@@ -193,6 +194,8 @@ void ach::Leaderboard::onFindLeaderboard(LeaderboardFindResult_t *pCallback, boo
 		return;
 
 	handle = pCallback->m_hSteamLeaderboard;
+
+	getHighscore();
 }
 
 
@@ -247,8 +250,9 @@ void ach::Leaderboard::onDownloadHigh(LeaderboardScoresDownloaded_t *pCallback, 
 	LeaderboardEntry_t data;
 	SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, 0, &data, NULL, 0);
 
-	status    = lsSuccess;
-	highscore = data.m_nScore;
+	initialized = true;
+	status      = lsSuccess;
+	highscore   = data.m_nScore;
 }
 
 

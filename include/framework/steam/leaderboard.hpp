@@ -42,13 +42,17 @@ namespace ach
 		unsigned int   highscore;
 		unsigned int   rank;
 
+		char           name[STR_LEN_NAME];
+		bool           initialized;
+		bool           synced;
 
-		 Leaderboard(const char *name);
+
+		 Leaderboard(const char *_name);
 		~Leaderboard();
 
 		void update(intptr_t utils);
 
-		void setHighscore(unsigned int score, bool init);
+		void setHighscore(unsigned int score);
 		void getHighscore();
 		void getLeaderboard(ach::LeaderboardClass lbClass);
 

@@ -59,9 +59,9 @@ void ach::Records::init()
 		if (db->getMap(json_string_value(item))->leaderboard)
 			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item)));
 
-	steam->leaderboards.push_back(new ach::Leaderboard("GameEasy"  ));
-	steam->leaderboards.push_back(new ach::Leaderboard("GameNormal"));
-	steam->leaderboards.push_back(new ach::Leaderboard("GameHard"  ));
+	steam->leaderboards.push_back(new ach::Leaderboard("Easy"  ));
+	steam->leaderboards.push_back(new ach::Leaderboard("Normal"));
+	steam->leaderboards.push_back(new ach::Leaderboard("Hard"  ));
 
 
 	for (int i = 0; i < ach::ArcadeGame::agCount; i++)
@@ -69,7 +69,7 @@ void ach::Records::init()
 		if (i == ach::ArcadeGame::agNone)
 			continue;
 
-		steam->highscores.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade)));
+		steam->leaderboards.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade)));
 	}
 }
 
@@ -87,6 +87,113 @@ void ach::Records::sync()
 
 	if (!steam->initialized)
 		return;
+
+	json_t *item;
+	size_t  index;
+
+	bool result = true;
+
+	result &= syncLeaderboard("Easy"  );
+	result &= syncLeaderboard("Normal");
+	result &= syncLeaderboard("Hard"  );
+
+	json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
+		if (db->getMap(json_string_value(item))->leaderboard)
+			result &= syncLeaderboard(json_string_value(item));
+
+	for (int i = 0; i < ach::ArcadeGame::agCount; i++)
+	{
+		if (i == ach::ArcadeGame::agNone)
+			continue;
+
+		result &= syncHighscore((ach::ArcadeGame)i);
+	}
+
+	for (int i = 0; i < ach::Achievement::acCount; i++)
+		syncAchievement((ach::Achievement)i);
+
+	if (result)
+	{
+		synced = true;
+		save();
+	}
+}
+
+
+
+/***********************************************************************
+     * Records
+     * syncAchievement
+
+***********************************************************************/
+void ach::Records::syncAchievement(ach::Achievement achievement)
+{
+	if (getAchievement(achievement))
+		steam->setAchievement(pair_get_string(achievement, pairAchievement));
+	else if (steam->getAchievement(pair_get_string(achievement, pairAchievement)))
+		json_object_set_boolean(achievements, pair_get_string(achievement, pairAchievement), true);
+}
+
+
+
+/***********************************************************************
+     * Records
+     * syncLeaderboard
+
+***********************************************************************/
+bool ach::Records::syncLeaderboard(const char *name)
+{
+	ach::Leaderboard *lb = steam->getLeaderboard(name);
+
+	if (!lb)
+		return true;
+
+	if (!lb->initialized)
+		return false;
+
+	if (lb->synced)
+		return true;
+
+	unsigned int score = getLeaderboard(name) * 1000;
+
+	if (score && score < lb->highscore)
+		lb->setHighscore(score);
+	else if (lb->highscore && score > lb->highscore)
+		json_object_set_real(leaderboards, name, ((float)lb->highscore) / 1000.0f);
+
+	lb->synced = true;
+	return true;
+}
+
+
+
+/***********************************************************************
+     * Records
+     * syncHighscore
+
+***********************************************************************/
+bool ach::Records::syncHighscore(ach::ArcadeGame game)
+{
+	ach::Leaderboard *lb = steam->getLeaderboard(pair_get_string(game, pairArcade));
+
+	if (!lb)
+		return true;
+
+	if (!lb->initialized)
+		return false;
+
+	if (lb->synced)
+		return true;
+
+	unsigned int score = getHighscore(game);
+
+	if (score > lb->highscore)
+		lb->setHighscore(score);
+	else if (score < lb->highscore)
+		json_object_set_integer(highscores, pair_get_string(game, pairArcade), lb->highscore);
+
+	lb->synced = true;
+	return true;
 }
 
 

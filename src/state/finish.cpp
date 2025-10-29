@@ -20,13 +20,9 @@ ach::StateFinish::StateFinish()
 	text->setFont(*theme->credits->font);
 	text->setFillColor(theme->credits->color);
 
-	if (cache->difficulty >= ach::Difficulty::gdEasy  ) records->setAchievement(ach::Achievement::acEasy  );
-	if (cache->difficulty >= ach::Difficulty::gdNormal) records->setAchievement(ach::Achievement::acNormal);
-	if (cache->difficulty >= ach::Difficulty::gdHard  ) records->setAchievement(ach::Achievement::acHard  );
-
-	if (cache->difficulty >= ach::Difficulty::gdEasy  ) records->setLeaderboard("GameEasy"  , cache->playtime);
-	if (cache->difficulty >= ach::Difficulty::gdNormal) records->setLeaderboard("GameNormal", cache->playtime);
-	if (cache->difficulty >= ach::Difficulty::gdHard  ) records->setLeaderboard("GameHard"  , cache->playtime);
+	if (cache->difficulty >= ach::Difficulty::gdEasy  ) records->setLeaderboard("Easy"  , cache->playtime);
+	if (cache->difficulty >= ach::Difficulty::gdNormal) records->setLeaderboard("Normal", cache->playtime);
+	if (cache->difficulty >= ach::Difficulty::gdHard  ) records->setLeaderboard("Hard"  , cache->playtime);
 
 	cache->clear();
 	app->mouse(false);

@@ -11,7 +11,10 @@ ach::Steam::Steam()
 	initialized = false;
 
 	if (!SteamAPI_IsSteamRunning())
+	{
+		logger->log(ach::LogLevel::llWarning, "Steam is not running");
 		return;
+	}
 
 	FILE *fp = fopen(FILE_APPID, "w");
 
@@ -48,7 +51,6 @@ ach::Steam::~Steam()
 	unlink(FILE_APPID);
 
 	list_delete(leaderboards);
-	list_delete(highscores);
 
 	if (initialized)
 		SteamAPI_Shutdown();
@@ -68,9 +70,6 @@ void ach::Steam::update()
 
 	list_foreach(leaderboards)
 		leaderboards[i]->update((intptr_t)sutils);
-
-	list_foreach(highscores)
-		highscores[i]->update((intptr_t)sutils);
 }
 
 
@@ -87,10 +86,6 @@ bool ach::Steam::check()
 
 	list_foreach(leaderboards)
 		if (!leaderboards[i]->handle)
-			return false;
-
-	list_foreach(highscores)
-		if (!highscores[i]->handle)
 			return false;
 
 	return true;
@@ -130,6 +125,68 @@ bool ach::Steam::getAchievement(const char *name)
 		return res;
 
 	return false;
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * setHighscore
+
+***********************************************************************/
+void ach::Steam::setHighscore(const char *name, unsigned int score)
+{
+	if (!initialized)
+		return;
+
+	ach::Leaderboard *lb = getLeaderboard(name);
+
+	if (!lb)
+		return;
+
+	if (!lb->initialized)
+		return;
+
+	lb->setHighscore(score);
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * getHighscore
+
+***********************************************************************/
+unsigned int ach::Steam::getHighscore(const char *name)
+{
+	if (!initialized)
+		return 0;
+
+	ach::Leaderboard *lb = getLeaderboard(name);
+
+	if (!lb)
+		return 0;
+
+	if (!lb->initialized)
+		return 0;
+
+	return lb->highscore;
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * getLeaderboard
+
+***********************************************************************/
+ach::Leaderboard* ach::Steam::getLeaderboard(const char *name)
+{
+	list_foreach(leaderboards)
+		if (strcmp(name, leaderboards[i]->name) == 0)
+			return leaderboards[i];
+
+	return NULL;
 }
 
 
