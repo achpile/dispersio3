@@ -6,16 +6,17 @@
      * constructor
 
 ***********************************************************************/
-ach::Leaderboard::Leaderboard()
+ach::Leaderboard::Leaderboard(const char *name)
 {
 	status            = lsFailed;
 	handle            = 0;
 	highscore         = 0;
 	rank              = 0;
-	hSteamAPICallFind = 0;
 	hSteamAPICallDown = 0;
 	hSteamAPICallHigh = 0;
 	hSteamAPICallLoad = 0;
+
+	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard((intptr_t)SteamUserStats(), name);
 }
 
 
@@ -110,20 +111,6 @@ void ach::Leaderboard::update(intptr_t utils)
 			hSteamAPICallLoad = 0;
 		}
 	}
-}
-
-
-
-/***********************************************************************
-     * Leaderboard
-     * init
-
-***********************************************************************/
-void ach::Leaderboard::init(const char *name)
-{
-	handle = 0;
-
-	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard((intptr_t)SteamUserStats(), name);
 }
 
 

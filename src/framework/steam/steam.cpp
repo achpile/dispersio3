@@ -47,6 +47,9 @@ ach::Steam::~Steam()
 {
 	unlink(FILE_APPID);
 
+	list_delete(leaderboards);
+	list_delete(highscores);
+
 	if (initialized)
 		SteamAPI_Shutdown();
 }
@@ -55,15 +58,42 @@ ach::Steam::~Steam()
 
 /***********************************************************************
      * Steam
-     * language
+     * update
 
 ***********************************************************************/
-const char* ach::Steam::language()
+void ach::Steam::update()
 {
 	if (!initialized)
-		return "english";
+		return;
 
-	return SteamApps()->GetCurrentGameLanguage();
+	list_foreach(leaderboards)
+		leaderboards[i]->update((intptr_t)sutils);
+
+	list_foreach(highscores)
+		highscores[i]->update((intptr_t)sutils);
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * check
+
+***********************************************************************/
+bool ach::Steam::check()
+{
+	if (!initialized)
+		return false;
+
+	list_foreach(leaderboards)
+		if (!leaderboards[i]->handle)
+			return false;
+
+	list_foreach(highscores)
+		if (!highscores[i]->handle)
+			return false;
+
+	return true;
 }
 
 
@@ -100,4 +130,19 @@ bool ach::Steam::getAchievement(const char *name)
 		return res;
 
 	return false;
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * language
+
+***********************************************************************/
+const char* ach::Steam::language()
+{
+	if (!initialized)
+		return "english";
+
+	return SteamApps()->GetCurrentGameLanguage();
 }

@@ -116,6 +116,7 @@ void ach::App::update()
 	rm->clear();
 	rm->reset();
 
+	steam->update();
 	joystick->update();
 	ctrl->update();
 	state->update();

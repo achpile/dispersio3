@@ -6,6 +6,9 @@ namespace ach
 {
 	struct Steam
 	{
+		std::vector<ach::Leaderboard*> leaderboards;
+		std::vector<ach::Leaderboard*> highscores;
+
 		CSteamID      ID;
 
 		ISteamClient *sclient;
@@ -18,10 +21,13 @@ namespace ach
 		 Steam();
 		~Steam();
 
-		const char* language();
+		void update();
+		bool check();
 
 		void setAchievement(const char *name);
 		bool getAchievement(const char *name);
+
+		const char* language();
 	};
 }
 
