@@ -14,6 +14,7 @@ namespace ach
 	struct Leaderboards
 	{
 		std::vector<ach::LeaderboardsData> data;
+		ach::LeaderboardClass              type;
 
 		ach::RectangleShape  *boxSelect;
 		ach::RectangleShape  *boxClass;
@@ -21,6 +22,8 @@ namespace ach
 		ach::RectangleShape  *boxBack;
 
 		sf::Text             *text;
+		sf::String            category;
+		sf::String            back;
 		sf::Vector2f          pos;
 
 		bool  active;
@@ -45,6 +48,7 @@ namespace ach
 		void init(bool highscores);
 
 		void add(const char *name, sf::String caption);
+		void categorize();
 	};
 }
 

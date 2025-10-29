@@ -69,6 +69,9 @@ void ach::Leaderboards::render()
 
 	list_foreach(data)
 		text_draw(text, data[i].caption, pos.x + padding + spacing, pos.y + padding + spacing * i, 0, ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
+
+	text_draw(text, category, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding               , width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
+	text_draw(text, back    , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * 14, width, ach::TextAlign::taCenter, ach::RenderLayer::rlGUI);
 }
 
 
@@ -91,6 +94,7 @@ void ach::Leaderboards::event(sf::Event)
 ***********************************************************************/
 void ach::Leaderboards::translate()
 {
+	back = lm->get("UI.Menu.Misc.Back");
 }
 
 
@@ -150,6 +154,7 @@ void ach::Leaderboards::init(bool highscores)
 	data.clear();
 
 	active = true;
+	type   = ach::LeaderboardClass::lcNearest;
 
 	if (highscores)
 	{
@@ -174,6 +179,8 @@ void ach::Leaderboards::init(bool highscores)
 			if (db->getMap(json_string_value(item))->leaderboard)
 				add(json_string_value(item), lm->getv("Game.Map.%s.Name", json_string_value(item)));
 	}
+
+	categorize();
 }
 
 
@@ -192,4 +199,16 @@ void ach::Leaderboards::add(const char *name, sf::String caption)
 
 	if (entry.lb)
 		data.push_back(entry);
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * categorize
+
+***********************************************************************/
+void ach::Leaderboards::categorize()
+{
+	category = "<  " + lm->getv("UI.Leaderboard.Class.%s", pair_get_string(type, pairLeaderboardClass)) + "  >";
 }
