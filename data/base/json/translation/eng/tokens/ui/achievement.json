@@ -9,7 +9,7 @@
     },
     "CollectAll": {
         "Description": "Collect all items",
-        "Name": "Picker"
+        "Name": "Picker-Upper"
     },
     "CollectFresh": {
         "Description": "Collect all air fresheners",

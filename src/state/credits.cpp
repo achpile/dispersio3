@@ -155,8 +155,10 @@ void ach::StateCredits::fill()
 
 	add(lm->get("UI.Credits.Special"), ach::CreditsWeight::cwHeader);
 
-	add("Gektorne", ach::CreditsWeight::cwEntry);
-	add("garett90", ach::CreditsWeight::cwEntry);
+	add("Gektorne"         , ach::CreditsWeight::cwEntry);
+	add("Arseny Dubcarnage", ach::CreditsWeight::cwEntry);
+	add("garett90"         , ach::CreditsWeight::cwEntry);
+	add("Dendy Forever"    , ach::CreditsWeight::cwEntry);
 }
 
 
