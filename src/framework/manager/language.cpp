@@ -71,6 +71,35 @@ sf::String ach::LanguageManager::getv(const char *format, ...)
 
 /***********************************************************************
      * LanguageManager
+     * check
+
+***********************************************************************/
+void ach::LanguageManager::check()
+{
+	if (!steam->initialized)
+		return;
+
+	if (!settings->isDefault())
+		return;
+
+	json_t     *lang;
+	const char *name;
+	const char *i;
+
+	name = steam->language();
+
+	json_object_foreach(json_object_get(dm->data, "Translation"), i, lang)
+		if (!strcmp(name, json_object_get_string(lang, "Steam")))
+		{
+			json_object_set_branch_string(settings->data, "Game.Language", i);
+			return;
+		}
+}
+
+
+
+/***********************************************************************
+     * LanguageManager
      * refresh
 
 ***********************************************************************/

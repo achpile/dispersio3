@@ -53,6 +53,7 @@ ach::App::App()
 	stars->realtime = true;
 	stars->layer    = ach::RenderLayer::rlBG;
 
+	lm->check();
 	lm->refresh();
 	theme->refresh();
 	cache->style();

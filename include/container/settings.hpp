@@ -13,6 +13,7 @@ namespace ach
 		~Settings();
 
 
+		bool isDefault();
 		bool isFullscreen();
 		bool isSmooth();
 		bool isCutscenes();
