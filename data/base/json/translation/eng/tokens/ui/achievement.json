@@ -9,7 +9,7 @@
     },
     "CollectAll": {
         "Description": "Collect all items",
-        "Name": "Collector"
+        "Name": "Picker"
     },
     "CollectFresh": {
         "Description": "Collect all air fresheners",
@@ -17,7 +17,7 @@
     },
     "CollectGames": {
         "Description": "Collect all games",
-        "Name": "Gamer"
+        "Name": "Collector"
     },
     "Donation": {
         "Description": "Make a donation",
