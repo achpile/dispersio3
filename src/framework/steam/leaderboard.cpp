@@ -203,7 +203,10 @@ void ach::Leaderboard::getHighscore()
 void ach::Leaderboard::onFindLeaderboard(LeaderboardFindResult_t *pCallback, bool bIOFailure)
 {
 	if (!pCallback->m_bLeaderboardFound || bIOFailure)
+	{
+		logger->log(ach::LogLevel::llWarning, "Failed finding leaderboard \"%s\"", name);
 		return;
+	}
 
 	handle = pCallback->m_hSteamLeaderboard;
 
@@ -222,6 +225,7 @@ void ach::Leaderboard::onDownloadScore(LeaderboardScoresDownloaded_t *pCallback,
 	if (bIOFailure)
 	{
 		status = ach::LeaderboardStatus::lsFailed;
+		logger->log(ach::LogLevel::llWarning, "Failed getting leaderboard for \"%s\"", name);
 		return;
 	}
 
@@ -251,6 +255,7 @@ void ach::Leaderboard::onDownloadHigh(LeaderboardScoresDownloaded_t *pCallback, 
 	if (bIOFailure)
 	{
 		status = ach::LeaderboardStatus::lsFailed;
+		logger->log(ach::LogLevel::llWarning, "Failed getting highscore for \"%s\"", name);
 		return;
 	}
 
@@ -278,7 +283,10 @@ void ach::Leaderboard::onDownloadHigh(LeaderboardScoresDownloaded_t *pCallback, 
 void ach::Leaderboard::onUploadHiscore(LeaderboardScoreUploaded_t *pCallback, bool bIOFailure)
 {
 	if (!pCallback->m_bSuccess || bIOFailure)
+	{
+		logger->log(ach::LogLevel::llWarning, "Failed uploading highscore for \"%s\"", name);
 		return;
+	}
 
 	rank = pCallback->m_nGlobalRankNew;
 
