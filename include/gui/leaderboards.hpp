@@ -4,9 +4,28 @@
 
 namespace ach
 {
+	struct LeaderboardsData
+	{
+		ach::Leaderboard *lb;
+		sf::String        caption;
+	};
+
+
 	struct Leaderboards
 	{
-		bool active;
+		std::vector<ach::LeaderboardsData> data;
+
+		ach::RectangleShape  *boxSelect;
+		ach::RectangleShape  *boxClass;
+		ach::RectangleShape  *boxList;
+		ach::RectangleShape  *boxBack;
+
+		sf::Vector2f          pos;
+
+		bool  active;
+
+		float padding;
+		float spacing;
 
 
 		 Leaderboards();
