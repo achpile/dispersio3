@@ -52,6 +52,8 @@ ach::Leaderboards::~Leaderboards()
 void ach::Leaderboards::update()
 {
 	category = "<  " + lm->getv("UI.Leaderboard.Class.%s", pair_get_string(type, pairLeaderboardClass)) + "  >";
+
+	data[index].lb->getLeaderboard(type);
 }
 
 
@@ -86,10 +88,8 @@ void ach::Leaderboards::render()
 			if (data[index].lb->entries[i].own) text->setFillColor(sf::Color(84, 252, 84));
 			else                                text->setFillColor(sf::Color::White);
 
-			text_draw(text, data[index].lb->entries[i].id, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
-
-			if (highscores) text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
-			else            text_draw(text, data[index].lb->entries[i].time , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+			text_draw(text, data[index].lb->entries[i].id   , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+			text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 		}
 	}
 

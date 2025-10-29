@@ -8,7 +8,6 @@ namespace ach
 	{
 		sf::String    id;
 		sf::String    value;
-		sf::String    time;
 
 		std::string   name;
 
@@ -17,7 +16,7 @@ namespace ach
 		bool          own;
 
 
-		 LeaderboardEntry(unsigned long _rank, unsigned int _score, CSteamID ID);
+		 LeaderboardEntry(unsigned long _rank, unsigned int _score, bool time, CSteamID ID);
 		~LeaderboardEntry();
 	};
 }

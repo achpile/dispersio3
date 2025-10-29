@@ -6,13 +6,14 @@
      * constructor
 
 ***********************************************************************/
-ach::Leaderboard::Leaderboard(const char *_name)
+ach::Leaderboard::Leaderboard(const char *_name, bool _time)
 {
 	strncpy(name, _name, STR_LEN_NAME);
 
 	status            = ach::LeaderboardStatus::lsFailed;
 	initialized       = false;
 	synced            = false;
+	time              = _time;
 	handle            = 0;
 	highscore         = 0;
 	rank              = 0;
@@ -231,7 +232,7 @@ void ach::Leaderboard::onDownloadScore(LeaderboardScoresDownloaded_t *pCallback,
 	for (int i = 0; i < count; i++)
 	{
 		SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, i, &data, NULL, 0);
-		entries.push_back(ach::LeaderboardEntry(data.m_nGlobalRank, data.m_nScore, data.m_steamIDUser));
+		entries.push_back(ach::LeaderboardEntry(data.m_nGlobalRank, data.m_nScore, time, data.m_steamIDUser));
 	}
 
 	if (entries.size()) status = ach::LeaderboardStatus::lsSuccess;

@@ -46,9 +46,10 @@ namespace ach
 		char           name[STR_LEN_NAME];
 		bool           initialized;
 		bool           synced;
+		bool           time;
 
 
-		 Leaderboard(const char *_name);
+		 Leaderboard(const char *_name, bool _time);
 		~Leaderboard();
 
 		void init();

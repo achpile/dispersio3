@@ -52,20 +52,20 @@ void ach::Records::init()
 	json_t *item;
 	size_t  index;
 
-	steam->leaderboards.push_back(new ach::Leaderboard("Easy"  ));
-	steam->leaderboards.push_back(new ach::Leaderboard("Normal"));
-	steam->leaderboards.push_back(new ach::Leaderboard("Hard"  ));
+	steam->leaderboards.push_back(new ach::Leaderboard("Easy"  , true));
+	steam->leaderboards.push_back(new ach::Leaderboard("Normal", true));
+	steam->leaderboards.push_back(new ach::Leaderboard("Hard"  , true));
 
 	json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
 		if (db->getMap(json_string_value(item))->leaderboard)
-			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item)));
+			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item), true));
 
 	for (int i = 0; i < ach::ArcadeGame::agCount; i++)
 	{
 		if (i == ach::ArcadeGame::agNone)
 			continue;
 
-		steam->leaderboards.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade)));
+		steam->leaderboards.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade), false));
 	}
 
 	steam->init();

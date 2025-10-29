@@ -6,7 +6,7 @@
      * constructor
 
 ***********************************************************************/
-ach::LeaderboardEntry::LeaderboardEntry(unsigned long _rank, unsigned int _score, CSteamID ID)
+ach::LeaderboardEntry::LeaderboardEntry(unsigned long _rank, unsigned int _score, bool time, CSteamID ID)
 {
 	rank  = _rank;
 	score = _score;
@@ -14,8 +14,7 @@ ach::LeaderboardEntry::LeaderboardEntry(unsigned long _rank, unsigned int _score
 	own   = ID == steam->ID;
 
 	id    = std::to_string(rank) + ". " + name;
-	value = std::to_string(score);
-	time  = str_time(((float)score) / 1000.0f);
+	value = (time) ? str_time(((float)score) / 1000.0f) : sf::String(std::to_string(score));
 }
 
 
