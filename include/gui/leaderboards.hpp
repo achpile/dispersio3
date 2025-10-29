@@ -26,6 +26,7 @@ namespace ach
 
 		float padding;
 		float spacing;
+		float width;
 
 
 		 Leaderboards();
