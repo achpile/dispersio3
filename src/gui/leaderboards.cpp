@@ -183,8 +183,23 @@ void ach::Leaderboards::controls()
      * click
 
 ***********************************************************************/
-void ach::Leaderboards::click(sf::Vector2f)
+void ach::Leaderboards::click(sf::Vector2f c)
 {
+	if (boxBack->getRect().contains(c))
+		quit();
+
+	if (boxSelect->getRect().contains(c))
+	{
+		select(floor( (c.y - pos.y - padding) / spacing  ));
+	}
+
+	if (boxClass->getRect().contains(c))
+	{
+		if (c.x < rect_center(boxClass->getRect()).x)
+			choose(-1);
+		else
+			choose( 1);
+	}
 }
 
 
@@ -213,6 +228,12 @@ void ach::Leaderboards::move(int d)
 ***********************************************************************/
 void ach::Leaderboards::select(int d)
 {
+	if (d < 0 || d >= (int)data.size())
+		return;
+
+	if (index == d)
+		return;
+
 	index = d;
 
 	sm->play(theme->menu.blip);

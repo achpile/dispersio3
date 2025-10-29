@@ -22,6 +22,8 @@ namespace ach
 
 		void init(int _count, float _radius);
 
+		sf::FloatRect getRect();
+
 		std::size_t  getPointCount()             const;
 		sf::Vector2f getPoint(std::size_t index) const;
 	};

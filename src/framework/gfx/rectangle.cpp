@@ -84,6 +84,18 @@ void ach::RectangleShape::init(int _count, float _radius)
 
 /***********************************************************************
      * RectangleShape
+     * getRect
+
+***********************************************************************/
+sf::FloatRect ach::RectangleShape::getRect()
+{
+	return sf::FloatRect(getPosition(), size);
+}
+
+
+
+/***********************************************************************
+     * RectangleShape
      * getPointCount
 
 ***********************************************************************/
