@@ -50,6 +50,7 @@ namespace ach
 		 Leaderboard(const char *_name);
 		~Leaderboard();
 
+		void init();
 		void update(intptr_t utils);
 
 		void setHighscore(unsigned int score);

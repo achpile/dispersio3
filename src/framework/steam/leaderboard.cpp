@@ -19,8 +19,7 @@ ach::Leaderboard::Leaderboard(const char *_name)
 	hSteamAPICallDown = 0;
 	hSteamAPICallHigh = 0;
 	hSteamAPICallLoad = 0;
-
-	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard((intptr_t)SteamUserStats(), name);
+	hSteamAPICallFind = 0;
 }
 
 
@@ -32,6 +31,18 @@ ach::Leaderboard::Leaderboard(const char *_name)
 ***********************************************************************/
 ach::Leaderboard::~Leaderboard()
 {
+}
+
+
+
+/***********************************************************************
+     * Leaderboard
+     * init
+
+***********************************************************************/
+void ach::Leaderboard::init()
+{
+	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard((intptr_t)SteamUserStats(), name);
 }
 
 

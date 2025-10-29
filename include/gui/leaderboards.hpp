@@ -20,6 +20,7 @@ namespace ach
 		ach::RectangleShape  *boxList;
 		ach::RectangleShape  *boxBack;
 
+		sf::Text             *text;
 		sf::Vector2f          pos;
 
 		bool  active;
@@ -42,6 +43,8 @@ namespace ach
 
 		void controls();
 		void init(bool highscores);
+
+		void add(const char *name, sf::String caption);
 	};
 }
 

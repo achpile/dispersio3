@@ -8,10 +8,11 @@
 ***********************************************************************/
 ach::Leaderboards::Leaderboards()
 {
-	active  = false;
-	padding = MENU_PADDING;
-	width   = RENDER_LAYER_GUI_X - MENU_LEADER_WIDTH - padding * 3;
+	active    = false;
+	padding   = MENU_PADDING;
+	width     = RENDER_LAYER_GUI_X - MENU_LEADER_WIDTH - padding * 3;
 
+	text      = new sf::Text();
 	boxSelect = new ach::RectangleShape();
 	boxClass  = new ach::RectangleShape();
 	boxList   = new ach::RectangleShape();
@@ -65,6 +66,9 @@ void ach::Leaderboards::render()
 	rm->draw(boxClass , ach::RenderLayer::rlGUI);
 	rm->draw(boxList  , ach::RenderLayer::rlGUI);
 	rm->draw(boxBack  , ach::RenderLayer::rlGUI);
+
+	list_foreach(data)
+		text_draw(text, data[i].caption, pos.x + padding + spacing, pos.y + padding + spacing * i, 0, ach::TextAlign::taLeft, ach::RenderLayer::rlGUI);
 }
 
 
@@ -117,6 +121,10 @@ void ach::Leaderboards::style()
 	boxClass->style(theme->menu.box);
 	boxList->style(theme->menu.box);
 	boxBack->style(theme->menu.box);
+
+	text->setFont(*theme->menu.text->font);
+	text->setCharacterSize(theme->menu.text->size);
+	text->setFillColor(theme->menu.text->color);
 }
 
 
@@ -137,9 +145,51 @@ void ach::Leaderboards::controls()
      * init
 
 ***********************************************************************/
-void ach::Leaderboards::init(bool)
+void ach::Leaderboards::init(bool highscores)
 {
 	data.clear();
 
 	active = true;
+
+	if (highscores)
+	{
+		for (int i = 0; i < ach::ArcadeGame::agCount; i++)
+		{
+			if (i == ach::ArcadeGame::agNone)
+				continue;
+
+			add(pair_get_string((ach::ArcadeGame)i, pairArcade), str_utf8(pair_get_string((ach::ArcadeGame)i, pairArcadeName)));
+		}
+	}
+	else
+	{
+		json_t *item;
+		size_t  index;
+
+		add("Easy"  , lm->get("UI.Menu.Play.Easy"  ));
+		add("Normal", lm->get("UI.Menu.Play.Normal"));
+		add("Hard"  , lm->get("UI.Menu.Play.Hard"  ));
+
+		json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
+			if (db->getMap(json_string_value(item))->leaderboard)
+				add(json_string_value(item), lm->getv("Game.Map.%s.Name", json_string_value(item)));
+	}
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * add
+
+***********************************************************************/
+void ach::Leaderboards::add(const char *name, sf::String caption)
+{
+	ach ::LeaderboardsData entry;
+
+	entry.lb      = steam->getLeaderboard(name);
+	entry.caption = caption;
+
+	if (entry.lb)
+		data.push_back(entry);
 }

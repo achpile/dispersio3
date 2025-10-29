@@ -49,20 +49,16 @@ void ach::Records::save()
 ***********************************************************************/
 void ach::Records::init()
 {
-	if (!steam->initialized)
-		return;
-
 	json_t *item;
 	size_t  index;
-
-	json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
-		if (db->getMap(json_string_value(item))->leaderboard)
-			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item)));
 
 	steam->leaderboards.push_back(new ach::Leaderboard("Easy"  ));
 	steam->leaderboards.push_back(new ach::Leaderboard("Normal"));
 	steam->leaderboards.push_back(new ach::Leaderboard("Hard"  ));
 
+	json_array_foreach(json_object_get_branch(dm->data, "Data.Game.Campaign.MapList"), index, item)
+		if (db->getMap(json_string_value(item))->leaderboard)
+			steam->leaderboards.push_back(new ach::Leaderboard(json_string_value(item)));
 
 	for (int i = 0; i < ach::ArcadeGame::agCount; i++)
 	{
@@ -71,6 +67,8 @@ void ach::Records::init()
 
 		steam->leaderboards.push_back(new ach::Leaderboard(pair_get_string((ach::ArcadeGame)i, pairArcade)));
 	}
+
+	steam->init();
 }
 
 

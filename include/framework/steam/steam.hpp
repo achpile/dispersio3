@@ -21,6 +21,7 @@ namespace ach
 		~Steam();
 
 		void update();
+		void init();
 		bool check();
 
 		void setAchievement(const char *name);
