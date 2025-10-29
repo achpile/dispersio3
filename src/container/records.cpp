@@ -245,6 +245,7 @@ void ach::Records::setHighscore(ach::ArcadeGame game, int score)
 	if (current >= score)
 		return;
 
+	steam->setHighscore(pair_get_string(game, pairArcade), score);
 	json_object_set_integer(highscores, pair_get_string(game, pairArcade), score);
 	save();
 }
@@ -265,6 +266,7 @@ void ach::Records::setLeaderboard(const char *name, float time)
 	if (current && current <= time)
 		return;
 
+	steam->setHighscore(name, time * 1000);
 	json_object_set_real(leaderboards, name, time);
 	save();
 }
