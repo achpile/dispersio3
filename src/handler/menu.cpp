@@ -45,9 +45,9 @@ void handler_menu_achievements(void *context, json_t *)
      * handler_menu_leaderboards
 
 ***********************************************************************/
-void handler_menu_leaderboards(void *context, json_t *)
+void handler_menu_leaderboards(void *context, json_t *data)
 {
-	((ach::StateMenu*)context)->leaderboards->init();
+	((ach::StateMenu*)context)->leaderboards->init(json_object_get_boolean(data, "Highscores"));
 	((ach::StateMenu*)context)->state = ach::MenuState::msLeaderboards;
 }
 

@@ -21,7 +21,7 @@ namespace ach
 		void style();
 
 		void controls();
-		void init();
+		void init(bool highscores);
 	};
 }
 

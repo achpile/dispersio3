@@ -273,9 +273,9 @@ void ach::StateMenu::fill()
 	options_fill(menu, "UI.Menu.Main.Name");
 
 	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemFolder(menu, "UI.Menu.Main.Records"        ));
-	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , handler_menu_achievements , NULL                  ));
-	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , handler_menu_leaderboards , NULL                  ));
-	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , handler_menu_leaderboards , NULL                  ));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Achievements"   , handler_menu_achievements , NULL                                   ));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Leaderboards"   , handler_menu_leaderboards , json_pack("{s:b}", "Highscores", false)));
+	menu->add("UI.Menu.Main.Records"     , new ach::MenuItemAction(menu, "UI.Menu.Main.Highscores"     , handler_menu_leaderboards , json_pack("{s:b}", "Highscores", true )));
 
 	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemAction(menu, "UI.Menu.Main.Credits"        , handler_common_state      , json_string("credits")));
 	menu->add("UI.Menu.Main.Name"        , new ach::MenuItemAction(menu, "UI.Menu.Misc.Exit"           , handler_common_state      , json_string("end"    )));

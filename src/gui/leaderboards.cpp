@@ -95,6 +95,6 @@ void ach::Leaderboards::controls()
      * init
 
 ***********************************************************************/
-void ach::Leaderboards::init()
+void ach::Leaderboards::init(bool)
 {
 }
