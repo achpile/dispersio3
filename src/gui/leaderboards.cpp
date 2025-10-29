@@ -103,8 +103,15 @@ void ach::Leaderboards::render()
      * event
 
 ***********************************************************************/
-void ach::Leaderboards::event(sf::Event)
+void ach::Leaderboards::event(sf::Event e)
 {
+	if (e.type != sf::Event::MouseButtonReleased)
+		return;
+
+	if (e.mouseButton.button != sf::Mouse::Button::Left)
+		return;
+
+	click(rm->transform(ach::RenderLayer::rlGUI, sf::Vector2f(e.mouseButton.x, e.mouseButton.y)));
 }
 
 
@@ -162,6 +169,88 @@ void ach::Leaderboards::style()
 ***********************************************************************/
 void ach::Leaderboards::controls()
 {
+	if (ctrl->keys[ach::ControlAction::caUp   ].pressed) move(-1);
+	if (ctrl->keys[ach::ControlAction::caDown ].pressed) move( 1);
+	if (ctrl->keys[ach::ControlAction::caLeft ].pressed) choose(-1);
+	if (ctrl->keys[ach::ControlAction::caRight].pressed) choose( 1);
+	if (ctrl->keys[ach::ControlAction::caMenu ].pressed) quit();
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * click
+
+***********************************************************************/
+void ach::Leaderboards::click(sf::Vector2f)
+{
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * move
+
+***********************************************************************/
+void ach::Leaderboards::move(int d)
+{
+	if (index + d < 0)
+		select(data.size() - 1);
+	else if (index + d >= (int)data.size())
+		select(0);
+	else
+		select(index + d);
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * select
+
+***********************************************************************/
+void ach::Leaderboards::select(int d)
+{
+	index = d;
+
+	sm->play(theme->menu.blip);
+	update();
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * choose
+
+***********************************************************************/
+void ach::Leaderboards::choose(int d)
+{
+	switch (type)
+	{
+		case ach::LeaderboardClass::lcNearest: type = (d > 0) ? ach::LeaderboardClass::lcFriends : ach::LeaderboardClass::lcBest   ; break;
+		case ach::LeaderboardClass::lcFriends: type = (d > 0) ? ach::LeaderboardClass::lcBest    : ach::LeaderboardClass::lcNearest; break;
+		case ach::LeaderboardClass::lcBest   : type = (d > 0) ? ach::LeaderboardClass::lcNearest : ach::LeaderboardClass::lcFriends; break;
+	}
+
+	sm->play(theme->menu.blip);
+	update();
+}
+
+
+
+/***********************************************************************
+     * Leaderboards
+     * quit
+
+***********************************************************************/
+void ach::Leaderboards::quit()
+{
+	active = false;
+
+	sm->play(theme->menu.back);
 }
 
 

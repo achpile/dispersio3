@@ -47,6 +47,12 @@ namespace ach
 		void style();
 
 		void controls();
+		void click(sf::Vector2f c);
+		void move(int d);
+		void select(int i);
+		void choose(int d);
+		void quit();
+
 		void init(bool _highscores);
 
 		void add(const char *name, sf::String caption);
