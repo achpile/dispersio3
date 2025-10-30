@@ -33,11 +33,11 @@
     },
     "Factory": {
         "Description": "Finish the factory",
-        "Name": "Factory"
+        "Name": "Hard worker"
     },
     "Forest": {
         "Description": "Finish the forest",
-        "Name": "Forest"
+        "Name": "SHROOOOOMS!"
     },
     "Hard": {
         "Description": "Complete the game on hard difficulty",
@@ -53,7 +53,7 @@
     },
     "Lab": {
         "Description": "Finish the physics laboratory",
-        "Name": "Physics laboratory"
+        "Name": "Einstein"
     },
     "LaunchPad": {
         "Description": "Finish the cosmodrome",
