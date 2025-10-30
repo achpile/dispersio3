@@ -139,11 +139,11 @@ void ach::StateCredits::fill()
 
 
 	add(lm->get("UI.Credits.PrimaryTesting"), ach::CreditsWeight::cwHeader);
-	add("Grisha92"      , ach::CreditsWeight::cwEntry);
-	add("T1tan"         , ach::CreditsWeight::cwEntry);
-	add("Smokey"        , ach::CreditsWeight::cwEntry);
-	add("Mishgan-Zhigan", ach::CreditsWeight::cwEntry);
-	add("Boshyst_Dexter", ach::CreditsWeight::cwEntry);
+	add("T1tan          [ youtube.com/@GameT1tan ]", ach::CreditsWeight::cwEntry);
+	add("Grisha92"                                 , ach::CreditsWeight::cwEntry);
+	add("Smokey"                                   , ach::CreditsWeight::cwEntry);
+	add("Mishgan-Zhigan"                           , ach::CreditsWeight::cwEntry);
+	add("Boshyst_Dexter"                           , ach::CreditsWeight::cwEntry);
 	space();
 
 
