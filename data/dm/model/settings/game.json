@@ -21,5 +21,11 @@
             "default": "Default",
             "type": "link"
         }
+    },
+    "Timer": {
+        "@attr": {
+            "default": false,
+            "type": "boolean"
+        }
     }
 }

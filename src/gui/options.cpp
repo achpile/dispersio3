@@ -16,6 +16,7 @@ void options_fill(ach::Menu *menu, const char *name)
 
 	menu->add("UI.Menu.Options.Game"    , new ach::MenuItemList    (menu, "UI.Menu.Options.Language"    , handler_options_language  , json_object_get_branch(settings->data, "Game"  ), "Language"  , db->listLanguage()   ));
 	menu->add("UI.Menu.Options.Game"    , new ach::MenuItemList    (menu, "UI.Menu.Options.Theme"       , handler_options_theme     , json_object_get_branch(settings->data, "Game"  ), "Theme"     , db->listTheme()      ));
+	menu->add("UI.Menu.Options.Game"    , new ach::MenuItemCheckbox(menu, "UI.Menu.Options.Timer"       , NULL                      , json_object_get_branch(settings->data, "Game"  ), "Timer"     ));
 	menu->add("UI.Menu.Options.Game"    , new ach::MenuItemCheckbox(menu, "UI.Menu.Options.Cutscenes"   , NULL                      , json_object_get_branch(settings->data, "Game"  ), "Cutscenes" ));
 
 	menu->add("UI.Menu.Options.Video"   , new ach::MenuItemCheckbox(menu, "UI.Menu.Options.Fullscreen"  , handler_options_fullscreen, json_object_get_branch(settings->data, "Window"), "Fullscreen"));

@@ -16,6 +16,7 @@ namespace ach
 		bool isDefault();
 		bool isFullscreen();
 		bool isSmooth();
+		bool isTimer();
 		bool isCutscenes();
 
 		const char   *getLanguage();

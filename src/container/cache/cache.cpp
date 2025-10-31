@@ -54,7 +54,7 @@ void ach::Cache::update()
 ***********************************************************************/
 void ach::Cache::render()
 {
-	if (mode != ach::LevelMode::lmTraining)
+	if (mode != ach::LevelMode::lmTraining && !settings->isTimer())
 		return;
 
 	text->setString(getPlaytime());
