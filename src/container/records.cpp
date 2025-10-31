@@ -306,3 +306,83 @@ float ach::Records::getLeaderboard(const char *name)
 {
 	return json_object_get_real(leaderboards, name);
 }
+
+
+
+/***********************************************************************
+     * Records
+     * getBestTime
+
+***********************************************************************/
+float ach::Records::getBestTime(const char *name)
+{
+	if (!steam->initialized)
+		return 0.0f;
+
+	ach::Leaderboard *lb = steam->getLeaderboard(name);
+
+	if (!lb)
+		return 0.0f;
+
+	return (float)lb->best / 1000.0f;
+}
+
+
+
+/***********************************************************************
+     * Records
+     * getBestScore
+
+***********************************************************************/
+int ach::Records::getBestScore(ach::ArcadeGame game)
+{
+	if (!steam->initialized)
+		return 0;
+
+	ach::Leaderboard *lb = steam->getLeaderboard(pair_get_string(game, pairArcade));
+
+	if (!lb)
+		return 0;
+
+	return lb->best;
+}
+
+
+
+/***********************************************************************
+     * Records
+     * getRankTime
+
+***********************************************************************/
+int ach::Records::getRankTime(const char *name)
+{
+	if (!steam->initialized)
+		return 0;
+
+	ach::Leaderboard *lb = steam->getLeaderboard(name);
+
+	if (!lb)
+		return 0;
+
+	return lb->rank;
+}
+
+
+
+/***********************************************************************
+     * Records
+     * getRankScore
+
+***********************************************************************/
+int ach::Records::getRankScore(ach::ArcadeGame game)
+{
+	if (!steam->initialized)
+		return 0;
+
+	ach::Leaderboard *lb = steam->getLeaderboard(pair_get_string(game, pairArcade));
+
+	if (!lb)
+		return 0;
+
+	return lb->rank;
+}

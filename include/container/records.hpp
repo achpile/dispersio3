@@ -66,6 +66,12 @@ namespace ach
 		bool  getAchievement(ach::Achievement achievement);
 		int   getHighscore  (ach::ArcadeGame game);
 		float getLeaderboard(const char *name);
+
+		float getBestTime(const char *name);
+		int   getBestScore(ach::ArcadeGame game);
+
+		int   getRankTime(const char *name);
+		int   getRankScore(ach::ArcadeGame game);
 	};
 }
 
