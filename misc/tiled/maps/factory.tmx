@@ -571,7 +571,11 @@
     <property name="Offset" type="float" value="12"/>
    </properties>
   </object>
-  <object id="123" type="obj_checkpoint" x="1184" y="352" width="16" height="16"/>
+  <object id="123" type="obj_checkpoint" x="1184" y="352" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="124" name="DecorPropellerH" type="obj_decor" x="816" y="480" width="16" height="64">
    <properties>
     <property name="FlipX" type="bool" value="true"/>

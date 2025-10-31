@@ -328,7 +328,11 @@
     <property name="Pair" type="object" value="3"/>
    </properties>
   </object>
-  <object id="9" type="obj_checkpoint" x="1120" y="448" width="16" height="16"/>
+  <object id="9" type="obj_checkpoint" x="1120" y="448" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="30" type="obj_checkpoint" x="1184" y="816" width="16" height="16">
    <properties>
     <property name="Difficulty" propertytype="@difficulty" value="easy"/>

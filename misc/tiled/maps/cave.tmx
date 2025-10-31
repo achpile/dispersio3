@@ -337,7 +337,11 @@
    </properties>
   </object>
   <object id="55" name="Bag" type="obj_points" x="88" y="1088" width="16" height="16"/>
-  <object id="56" type="obj_checkpoint" x="400" y="944" width="16" height="16"/>
+  <object id="56" type="obj_checkpoint" x="400" y="944" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="57" type="trigger_wind" x="32" y="960" width="352" height="144">
    <properties>
     <property name="Direction" propertytype="@direction" value="right"/>

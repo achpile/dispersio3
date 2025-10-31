@@ -657,7 +657,7 @@
                          "name":"Difficulty",
                          "propertytype":"@difficulty",
                          "type":"string",
-                         "value":"normal"
+                         "value":"hard"
                         }],
                  "rotation":0,
                  "type":"obj_checkpoint",

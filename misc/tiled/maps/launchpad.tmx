@@ -350,7 +350,11 @@
     <property name="Difficulty" propertytype="@difficulty" value="easy"/>
    </properties>
   </object>
-  <object id="91" type="obj_checkpoint" x="704" y="592" width="16" height="16"/>
+  <object id="91" type="obj_checkpoint" x="704" y="592" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="103" name="BlockConcreteBarLeft" type="block_fragile" x="560" y="512" width="16" height="16"/>
   <object id="104" name="BlockConcreteBarRight" type="block_fragile" x="576" y="512" width="16" height="16"/>
   <object id="106" name="BlockConcrete" type="block_fragile" x="568" y="448" width="16" height="16"/>

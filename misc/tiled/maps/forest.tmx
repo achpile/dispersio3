@@ -407,7 +407,11 @@
   <object id="37" name="BlockDirt" type="block_fragile" x="592" y="720" width="16" height="16"/>
   <object id="38" name="BlockDirt" type="block_fragile" x="640" y="704" width="16" height="16"/>
   <object id="42" name="Bag" type="obj_points" x="704" y="656" width="16" height="16"/>
-  <object id="51" type="obj_checkpoint" x="392" y="800" width="16" height="16"/>
+  <object id="51" type="obj_checkpoint" x="392" y="800" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="59" name="Bag" type="obj_points" x="320" y="528" width="16" height="16"/>
   <object id="60" name="FreshenerMushroom" type="obj_item" x="40" y="448" width="16" height="16"/>
   <object id="68" name="Bag" type="obj_points" x="48" y="816" width="16" height="16"/>

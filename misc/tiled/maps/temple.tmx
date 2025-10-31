@@ -403,7 +403,11 @@
     <property name="Difficulty" propertytype="@difficulty" value="easy"/>
    </properties>
   </object>
-  <object id="32" type="obj_checkpoint" x="1720" y="736" width="16" height="16"/>
+  <object id="32" type="obj_checkpoint" x="1720" y="736" width="16" height="16">
+   <properties>
+    <property name="Difficulty" propertytype="@difficulty" value="hard"/>
+   </properties>
+  </object>
   <object id="33" type="trigger_goal" x="2080" y="688" width="64" height="96"/>
   <object id="43" name="DecorTorch" type="obj_decor" x="1616" y="624" width="16" height="16"/>
   <object id="44" name="DecorTorch" type="obj_decor" x="1824" y="624" width="16" height="16"/>
