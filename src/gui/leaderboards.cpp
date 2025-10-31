@@ -88,8 +88,8 @@ void ach::Leaderboards::render()
 			if (data[index].lb->entries[i].own) text->setFillColor(sf::Color(84, 252, 84));
 			else                                text->setFillColor(sf::Color::White);
 
-			text_draw(text, data[index].lb->entries[i].id   , pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
-			text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding, pos.y + padding + spacing * (2 + i), width, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
+			text_draw(text, data[index].lb->entries[i].id   , pos.x + MENU_LEADER_WIDTH + padding * 2, pos.y + padding + spacing * (3 + i), width - padding * 2, ach::TextAlign::taLeft , ach::RenderLayer::rlGUI);
+			text_draw(text, data[index].lb->entries[i].value, pos.x + MENU_LEADER_WIDTH + padding * 2, pos.y + padding + spacing * (3 + i), width - padding * 2, ach::TextAlign::taRight, ach::RenderLayer::rlGUI);
 		}
 	}
 

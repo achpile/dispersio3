@@ -154,9 +154,9 @@ bool ach::Records::syncLeaderboard(const char *name)
 
 	unsigned int score = getLeaderboard(name) * 1000;
 
-	if (score && score < lb->highscore)
+	if (score && (!lb->highscore || score < lb->highscore))
 		lb->setHighscore(score);
-	else if (lb->highscore && score > lb->highscore)
+	else if (lb->highscore && (!score || score > lb->highscore))
 		json_object_set_real(leaderboards, name, ((float)lb->highscore) / 1000.0f);
 
 	lb->synced = true;

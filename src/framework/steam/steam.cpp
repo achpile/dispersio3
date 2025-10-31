@@ -158,10 +158,16 @@ void ach::Steam::setHighscore(const char *name, unsigned int score)
 	ach::Leaderboard *lb = getLeaderboard(name);
 
 	if (!lb)
+	{
+		logger->log(ach::LogLevel::llDebug, "Could not find leaderboard \"%s\"", name);
 		return;
+	}
 
 	if (!lb->initialized)
+	{
+		logger->log(ach::LogLevel::llDebug, "Leaderboard \"%s\" is not initialized", name);
 		return;
+	}
 
 	lb->setHighscore(score);
 }

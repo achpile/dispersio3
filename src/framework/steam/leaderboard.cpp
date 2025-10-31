@@ -259,16 +259,17 @@ void ach::Leaderboard::onDownloadHigh(LeaderboardScoresDownloaded_t *pCallback, 
 		return;
 	}
 
+	initialized = true;
+
 	if (pCallback->m_cEntryCount < 1)
 	{
-		status = ach::LeaderboardStatus::lsFailed;
+		status = ach::LeaderboardStatus::lsNoData;
 		return;
 	}
 
 	LeaderboardEntry_t data;
 	SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, 0, &data, NULL, 0);
 
-	initialized = true;
 	status      = ach::LeaderboardStatus::lsSuccess;
 	highscore   = data.m_nScore;
 }
