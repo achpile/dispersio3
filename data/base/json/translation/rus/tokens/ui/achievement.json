@@ -44,7 +44,7 @@
         "Name": "Настоящий геймер"
     },
     "Hexagon": {
-        "Description": "Наберите 60 очков в Hexagon",
+        "Description": "Наберите 30 очков в Hexagon",
         "Name": "Мои глаза!"
     },
     "Island": {
@@ -96,7 +96,7 @@
         "Name": "А что внутри?"
     },
     "Tetris": {
-        "Description": "Наберите 100 очков в Tetris",
+        "Description": "Наберите 50 очков в Tetris",
         "Name": "Укладчик"
     },
     "TimeMachine": {

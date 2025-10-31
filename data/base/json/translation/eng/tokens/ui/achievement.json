@@ -44,7 +44,7 @@
         "Name": "True gamer"
     },
     "Hexagon": {
-        "Description": "Get 60 score in Hexagon",
+        "Description": "Get 30 score in Hexagon",
         "Name": "My eyes!"
     },
     "Island": {
@@ -96,7 +96,7 @@
         "Name": "What's inside?"
     },
     "Tetris": {
-        "Description": "Get 100 score in Tetris",
+        "Description": "Get 50 score in Tetris",
         "Name": "Stacker"
     },
     "TimeMachine": {

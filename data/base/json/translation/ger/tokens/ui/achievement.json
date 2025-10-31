@@ -44,7 +44,7 @@
         "Name": "Krasser Zocker"
     },
     "Hexagon": {
-        "Description": "Erreiche 60 Punkte in Hexagon",
+        "Description": "Erreiche 30 Punkte in Hexagon",
         "Name": "Meine Augen!"
     },
     "Island": {
@@ -96,7 +96,7 @@
         "Name": "Was ist da drin?"
     },
     "Tetris": {
-        "Description": "Erreiche 100 Punkte in Tetris",
+        "Description": "Erreiche 50 Punkte in Tetris",
         "Name": "Packer"
     },
     "TimeMachine": {
