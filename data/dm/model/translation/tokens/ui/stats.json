@@ -57,6 +57,18 @@
             "type": "string"
         }
     },
+    "Rank": {
+        "@attr": {
+            "default": "Your rank",
+            "type": "string"
+        }
+    },
+    "Record": {
+        "@attr": {
+            "default": "World record",
+            "type": "string"
+        }
+    },
     "Unlock": {
         "@attr": {
             "default": "Achievement unlocked",
