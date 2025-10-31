@@ -4,9 +4,13 @@
             "Border": "#FF000096",
             "Color": "#000000"
         },
+        "Cutscene": {
+            "Font": "Terminus"
+        },
         "Menu": {
             "Text": {
-                "Size": 19
+                "Font": "Terminus",
+                "Size": 18
             }
         }
     }

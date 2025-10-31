@@ -5,10 +5,14 @@
             "Color": "#2F5296",
             "Round": true
         },
+        "Cutscene": {
+            "Font": "Terminus"
+        },
         "Menu": {
-            "Selector": "☞",
+            "Selector": "⇒",
             "Text": {
-                "Size": 19
+                "Font": "Terminus",
+                "Size": 18
             }
         }
     }
