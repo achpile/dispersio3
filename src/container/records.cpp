@@ -386,3 +386,23 @@ int ach::Records::getRankScore(ach::ArcadeGame game)
 
 	return lb->rank;
 }
+
+
+
+/***********************************************************************
+     * Records
+     * update
+
+***********************************************************************/
+bool ach::Records::update(ach::ArcadeGame game)
+{
+	if (!steam->initialized)
+		return true;
+
+	ach::Leaderboard *lb = steam->getLeaderboard(pair_get_string(game, pairArcade));
+
+	if (!lb)
+		return true;
+
+	return !lb->hSteamAPICallLoad && !lb->hSteamAPICallBest && !lb->hSteamAPICallHigh;
+}

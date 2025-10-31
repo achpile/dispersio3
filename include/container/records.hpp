@@ -72,6 +72,8 @@ namespace ach
 
 		int   getRankTime(const char *name);
 		int   getRankScore(ach::ArcadeGame game);
+
+		bool  update(ach::ArcadeGame game);
 	};
 }
 

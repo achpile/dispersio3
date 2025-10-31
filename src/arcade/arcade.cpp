@@ -10,10 +10,13 @@ ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 {
 	score   = 0;
 	active  = true;
+	updated = true;
 	game    = _game;
 	offset  = sf::Vector2f(ARCADE_OFFSET_X, ARCADE_OFFSET_Y);
 	caption = str_utf8(pair_get_string(game, pairArcadeName));
 	high    = records->getHighscore(game);
+	best    = records->getBestScore(game);
+	rank    = records->getRankScore(game);
 
 	tex     = new sf::RenderTexture();
 	spr     = new sf::Sprite();
@@ -75,6 +78,7 @@ void ach::Arcade::update()
 		case ach::ArcadeState::asTitle:
 		case ach::ArcadeState::asGameOver:
 			pulse.update(true);
+			sync();
 		break;
 
 
@@ -98,20 +102,26 @@ void ach::Arcade::render()
 	switch (state)
 	{
 		case ach::ArcadeState::asTitle:
-			renderScore("HIGH SCORE", high);
+			renderValue("HIGH SCORE"  ,   5, high, true );
+			renderValue("RANK"        ,  25, rank, false);
+			renderValue("WORLD RECORD", 215, best, false);
+
 			renderTitle(caption);
 			renderPress();
 		break;
 
 
 		case ach::ArcadeState::asGameOver:
-			renderScore("HIGH SCORE", high);
+			renderValue("HIGH SCORE"  ,   5, high, true );
+			renderValue("RANK"        ,  25, rank, false);
+			renderValue("WORLD RECORD", 215, best, false);
+
 			renderTitle("GAME OVER");
 		break;
 
 
 		case ach::ArcadeState::asPlay:
-			renderScore("SCORE", score);
+			renderValue("SCORE", 5, score, true);
 			renderBorder();
 
 			draw();
@@ -145,7 +155,7 @@ void ach::Arcade::renderPress()
 	if (game == ach::ArcadeGame::agNone)
 		return;
 
-	text_draw(text, "press start button", 0, 190, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
+	text_draw(text, "press start button", 0, 170, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
 }
 
 
@@ -160,7 +170,7 @@ void ach::Arcade::renderTitle(sf::String name)
 	text->setCharacterSize(theme->arcade->size * 1.5f);
 
 	if (pulse.active)
-		text_draw(text, name, 0, 100, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
+		text_draw(text, name, 0, 90, ARCADE_SIZE, ach::TextAlign::taCenter, tex);
 
 	text->setCharacterSize(theme->arcade->size);
 }
@@ -169,16 +179,19 @@ void ach::Arcade::renderTitle(sf::String name)
 
 /***********************************************************************
      * Arcade
-     * renderScore
+     * renderValue
 
 ***********************************************************************/
-void ach::Arcade::renderScore(sf::String name, int value)
+void ach::Arcade::renderValue(sf::String name, int y, int value, bool zero)
 {
 	if (game == ach::ArcadeGame::agNone)
 		return;
 
-	text_draw(text, name                 , 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taLeft , tex);
-	text_draw(text, std::to_string(value), 5, 5, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
+	if (!zero && !value)
+		return;
+
+	text_draw(text, name                 , 5, y, ARCADE_SIZE - 10, ach::TextAlign::taLeft , tex);
+	text_draw(text, std::to_string(value), 5, y, ARCADE_SIZE - 10, ach::TextAlign::taRight, tex);
 }
 
 
@@ -296,7 +309,29 @@ void ach::Arcade::highscore()
 {
 	records->setHighscore(game, score);
 
-	high = records->getHighscore(game);
+	updated = false;
+	high    = records->getHighscore(game);
+}
+
+
+
+/***********************************************************************
+     * Arcade
+     * sync
+
+***********************************************************************/
+void ach::Arcade::sync()
+{
+	if (updated)
+		return;
+
+	if (!records->update(game))
+		return;
+
+	updated = true;
+	high    = records->getHighscore(game);
+	best    = records->getBestScore(game);
+	rank    = records->getRankScore(game);
 }
 
 

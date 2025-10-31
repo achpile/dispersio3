@@ -43,7 +43,10 @@ namespace ach
 
 		int  score;
 		int  high;
+		int  rank;
+		int  best;
 		bool active;
+		bool updated;
 
 
 		         Arcade(ach::ArcadeGame _game, bool select);
@@ -55,7 +58,7 @@ namespace ach
 		void renderBorder();
 		void renderPress();
 		void renderTitle(sf::String name);
-		void renderScore(sf::String name, int value);
+		void renderValue(sf::String name, int y, int value, bool zero);
 
 		void controls();
 
@@ -65,6 +68,7 @@ namespace ach
 		void stop();
 		void gameover();
 		void highscore();
+		void sync();
 
 		virtual void prepare() {};
 		virtual void process() {};
