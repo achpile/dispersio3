@@ -1,10 +1,10 @@
 {
-    "Developer": "Разработчик",
-    "Lib": "Мультимедийная библиотека",
-    "MapEditor": "Редактор карт",
-    "Music": "Музыка",
-    "PrimaryTesting": "Основное тестирование",
-    "Sound": "Звуковые эффекты",
-    "Special": "Отдельная благодарность",
-    "Translations": "Локализация"
+    "Developer": "Entwickler",
+    "Lib": "Multimediabibliothek",
+    "MapEditor": "Karteneditor",
+    "Music": "Musik",
+    "PrimaryTesting": "Haupttest",
+    "Sound": "Soundeffekte",
+    "Special": "Besonderer Dank",
+    "Translations": "Lokalisierung"
 }

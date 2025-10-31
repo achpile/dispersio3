@@ -1,106 +1,106 @@
 {
     "BrickOut": {
-        "Description": "Наберите 100 очков в Brick Out",
-        "Name": "Разрушитель блоков"
+        "Description": "Erreiche 100 Punkte in Brick Out",
+        "Name": "Steinbrecher"
     },
     "Cave": {
-        "Description": "Пройдите пещеру",
-        "Name": "Исследователь пещер"
+        "Description": "Schließe die Höhle ab",
+        "Name": "Höhlenerforscher"
     },
     "CollectAll": {
-        "Description": "Соберите все предметы",
-        "Name": "Собиратель"
+        "Description": "Sammle alle Gegenstände",
+        "Name": "Geizhals"
     },
     "CollectFresh": {
-        "Description": "Соберите все освежители воздуха",
-        "Name": "Свежий"
+        "Description": "Sammle alle Luftreiniger",
+        "Name": "Fresch"
     },
     "CollectGames": {
-        "Description": "Соберите все игры",
-        "Name": "Игроман"
+        "Description": "Sammle alle Spiele",
+        "Name": "Spielsüchtig"
     },
     "Donation": {
-        "Description": "Внесите пожертвование",
-        "Name": "Донор"
+        "Description": "Spende eintragen",
+        "Name": "Spender"
     },
     "Duck": {
-        "Description": "Посмотреть утиный сон",
-        "Name": "Утиный сон"
+        "Description": "Ententraum anschauen",
+        "Name": "Ententraum"
     },
     "Easy": {
-        "Description": "Пройдите игру на легкой сложности",
-        "Name": "Проще простого"
+        "Description": "Schließe das Spiel im Schwierigkeitsgrad „Einfach“ ab",
+        "Name": "Zu einfach"
     },
     "Factory": {
-        "Description": "Пройдите завод",
-        "Name": "Завод"
+        "Description": "Schließe die Fabrik ab",
+        "Name": "Baustellenchef"
     },
     "Forest": {
-        "Description": "Пройдите лес",
-        "Name": "Лес"
+        "Description": "Schließe den Wald ab",
+        "Name": "PILZEEE"
     },
     "Hard": {
-        "Description": "Пройдите игру на высокой сложности",
-        "Name": "Настоящий геймер"
+        "Description": "Schließe das Spiel im Schwierigkeitsgrad „Schwer“ ab",
+        "Name": "Krasser Zocker"
     },
     "Hexagon": {
-        "Description": "Наберите 60 очков в Hexagon",
-        "Name": "Мои глаза!"
+        "Description": "Erreiche 60 Punkte in Hexagon",
+        "Name": "Meine Augen!"
     },
     "Island": {
-        "Description": "Посмотреть островной сон",
-        "Name": "Островной сон"
+        "Description": "Inseltraum anschauen",
+        "Name": "Inseltraum"
     },
     "Lab": {
-        "Description": "Пройдите физическую лабораторию",
-        "Name": "Физическая лаборатория"
+        "Description": "Schließe das Physiklabor ab",
+        "Name": "Einstein"
     },
     "LaunchPad": {
-        "Description": "Пройдите космодром",
-        "Name": "Выбрался!"
+        "Description": "Schließe den Weltraumbahnhof ab",
+        "Name": "Geschafft!"
     },
     "Mattress": {
-        "Description": "Застелите матрас",
-        "Name": "Удобненько"
+        "Description": "Matratze eindecken",
+        "Name": "Bequem"
     },
     "MilitaryBase": {
-        "Description": "Пройдите военную базу",
-        "Name": "Выбрался?"
+        "Description": "Schließe die Militärbasis ab",
+        "Name": "Geschafft?"
     },
     "Normal": {
-        "Description": "Пройдите игру на нормальной сложности",
-        "Name": "Геймер"
+        "Description": "Schließe das Spiel im Schwierigkeitsgrad „Normal“ ab",
+        "Name": "Zocker"
     },
     "Plumber": {
-        "Description": "Посмотреть водопроводный сон",
-        "Name": "Водопроводный сон"
+        "Description": "Klempnertraum anschauen",
+        "Name": "Klempnertraum"
     },
     "Race": {
-        "Description": "Наберите 50 очков в Race",
-        "Name": "Гонщик"
+        "Description": "Erreiche 50 Punkte in Race",
+        "Name": "Rennfahrer"
     },
     "Robot": {
-        "Description": "Посмотреть роботизированный сон",
-        "Name": "Роботизированный сон"
+        "Description": "Robotertraum anschauen",
+        "Name": "Robotertraum"
     },
     "Simon": {
-        "Description": "Наберите 78 очков в Simon",
-        "Name": "Хорошая память"
+        "Description": "Erreiche 78 Punkte in Simon",
+        "Name": "Gutes Gedächtnis"
     },
     "Snake": {
-        "Description": "Наберите 25 очков в Snake",
-        "Name": "Маневр"
+        "Description": "Erreiche 25 Punkte in Snake",
+        "Name": "Manöver"
     },
     "Temple": {
-        "Description": "Пройдите храм",
-        "Name": "А что внутри?"
+        "Description": "Schließe den Tempel ab",
+        "Name": "Was ist da drin?"
     },
     "Tetris": {
-        "Description": "Наберите 100 очков в Tetris",
-        "Name": "Укладчик"
+        "Description": "Erreiche 100 Punkte in Tetris",
+        "Name": "Packer"
     },
     "TimeMachine": {
-        "Description": "Почините машину времени",
-        "Name": "Когда мы, Марти?"
+        "Description": "Zeitmaschine reparieren",
+        "Name": "Wann sind wir, Marty?"
     }
 }

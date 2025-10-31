@@ -1,56 +1,56 @@
 {
     "Boss": {
-        "Description": "В глубинах храма хранятся знания древних Майя о космосе. И они очень хорошо охраняются.",
-        "Name": "Глубины храма"
+        "Description": "In den Tiefen des Tempels befindet sich das uralte Maya-Wissen über den Weltraum. Und es wird sehr gut bewacht.",
+        "Name": "Die tiefen des Tempels"
     },
     "Cave": {
-        "Description": "Сеть затопленных пещер, любимая многими дайверами. Наверняка кто-то из них обосновал себе там гнездашко, в котором точно должен быть запас кислорода.",
-        "Name": "Пещера"
+        "Description": "Ein Netz von überfluteten Höhlen, ein beliebter Tauchplatz. Sicherlich hat sich dort jemand eine Stelle gebaut mit einem Sauerstoffvorrat",
+        "Name": "Die Höhle"
     },
     "Default": {
-        "Name": "Неизвестность"
+        "Name": "Die Ungewissheit"
     },
     "Duck": {
-        "Description": "Сон, навеянный освежителем воздуха с запахом денег.",
-        "Name": "Утиный сон"
+        "Description": "Ein Traum, heranwehend von einem Luftreiniger mit Geldgeruch.",
+        "Name": "Der Ententraum"
     },
     "Factory": {
-        "Description": "На этом авиационном заводе точно должно быть топливо. И куча охраны. ^ Хватай первое, убегай от второго, и дело в шляпе.",
-        "Name": "Завод"
+        "Description": "Auf dieser Flugzeugfabrik gibt es definitiv ein Treibstoff... und jede Menge Sicherheitspersonal. ^ Schnapp dir das Erste, renn vor dem Zweiten weg, und du hast es geschafft.",
+        "Name": "Die Fabrik"
     },
     "Forest": {
-        "Description": "Странный лес, грибов в котором больше, чем деревьев. ^ По слухам, здесь жил отшельник, изучавший древних Майя.",
-        "Name": "Лес"
+        "Description": "Ein seltsamer Wald, es gibt mehr Pilze als Bäume. ^ Den Gerüchten nach, lebte hier ein Außenseiter, der die alten Maya erforschte.",
+        "Name": "Der Wald"
     },
     "Island": {
-        "Description": "Сон, навеянный освежителем воздуха с запахом пришельцев.",
-        "Name": "Островной сон"
+        "Description": "Ein Traum, heranwehend von einem Luftreiniger mit Außerirdischengeruch.",
+        "Name": "Der Inseltraum"
     },
     "Lab": {
-        "Description": "Секретная лаборатория, занимающаяся разработкой прорывных технологий. Всё, начиная от новейших ракетных двигателей и до антигравитации. ^ Первое нам как раз и нужно.",
-        "Name": "Физическая лаборатория"
+        "Description": "Ein Geheimlabor, das bahnbrechende Technologien entwickelte. Von hochmodernen Raketentriebwerken bis hin zu Antigravitation ist alles dabei. ^ Das Erste ist genau das, was wir brauchen.",
+        "Name": "Das Physiklabor"
     },
     "LaunchPad": {
-        "Description": "Пусковая площадка со спасительной ракетой, послужившей началом захватывающего приключения.",
-        "Name": "Космодром"
+        "Description": "Eine Startrampe mit einer Rettungskapsel, die den Beginn eines aufregenden Abenteuers markierte.",
+        "Name": "Der Weltraumbahnhof"
     },
     "MilitaryBase": {
-        "Description": "Место, в котором все и началось. ^ Место, в котором звук сирены ознаменовал собой конец привычного мира.",
-        "Name": "Военная база"
+        "Description": "Der Ort, wo alles begann. Der Ort, wo der Klang einer Sirene das Ende der Welt einläutete.",
+        "Name": "Die Militärbasis"
     },
     "Plumber": {
-        "Description": "Сон, навеянный освежителем воздуха с запахом грибов.",
-        "Name": "Водопроводный сон"
+        "Description": "Ein Traum, heranwehend von einem Luftreiniger mit Pilzgeruch.",
+        "Name": "Der Klempnertraum"
     },
     "Robot": {
-        "Description": "Сон, навеянный освежителем воздуха с запахом машинного масла.",
-        "Name": "Роботизированный сон"
+        "Description": "Ein Traum, heranwehend von einem Luftreiniger mit Maschinenöl.",
+        "Name": "Der Robotertraum"
     },
     "Rocket": {
-        "Name": "Космический корабль"
+        "Name": "Der Raumschiff"
     },
     "Temple": {
-        "Description": "Древний храм Майя, служивший им обсерваторией.",
-        "Name": "Храм в джунглях"
+        "Description": "Ein alter Maya-Tempel, der als Observatorium diente.",
+        "Name": "Der Tempel im Dschungel"
     }
 }

@@ -1,18 +1,20 @@
 {
-    "AnyKey": "Нажмите любую клавишу чтобы продолжить",
-    "Best": "Личный рекорд",
-    "Cash": "Деньги",
-    "Collected": "Предметов собрано",
-    "Congratulations": "ПОЗДРАВЛЯЕМ",
-    "CurrentMap": "На текущей карте",
-    "Deaths": "Смерти",
+    "AnyKey": "Beliebige TasteDrücken",
+    "Best": "Bestleistung",
+    "Cash": "Geld",
+    "Collected": "Gesammelte Gegenstände",
+    "Congratulations": "HERZLICHEN GLÜCKWUNSCH",
+    "CurrentMap": "Aktuelle Karte",
+    "Deaths": "Gestorben",
     "Item": {
-        "Freshener": "Освежители воздуха",
-        "Game": "Игры",
-        "Key": "Ключи",
-        "Misc": "Разное"
+        "Freshener": "Luftreiniger",
+        "Game": "Spiele",
+        "Key": "Schlüssel",
+        "Misc": "Sonstiges"
     },
-    "Playtime": "Время игры",
-    "Progress": "Прогресс",
-    "Unlock": "Достижение разблокировано"
+    "Playtime": "Spielzeit",
+    "Progress": "Fortschritt",
+    "Rank": "Dein Rang",
+    "Record": "Weltrekord",
+    "Unlock": "Freigeschaltet"
 }
