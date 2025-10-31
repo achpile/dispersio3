@@ -154,12 +154,13 @@ bool ach::Records::syncLeaderboard(const char *name)
 
 	unsigned int score = getLeaderboard(name) * 1000;
 
-	if (score && (!lb->highscore || score < lb->highscore))
+	if (score && (!lb->high || score < lb->high))
 		lb->setHighscore(score);
-	else if (lb->highscore && (!score || score > lb->highscore))
-		json_object_set_real(leaderboards, name, ((float)lb->highscore) / 1000.0f);
+	else if (lb->high && (!score || score > lb->high))
+		json_object_set_real(leaderboards, name, ((float)lb->high) / 1000.0f);
 
 	lb->synced = true;
+
 	return true;
 }
 
@@ -185,12 +186,13 @@ bool ach::Records::syncHighscore(ach::ArcadeGame game)
 
 	unsigned int score = getHighscore(game);
 
-	if (score > lb->highscore)
+	if (score > lb->high)
 		lb->setHighscore(score);
-	else if (score < lb->highscore)
-		json_object_set_integer(highscores, pair_get_string(game, pairArcade), lb->highscore);
+	else if (score < lb->high)
+		json_object_set_integer(highscores, pair_get_string(game, pairArcade), lb->high);
 
 	lb->synced = true;
+
 	return true;
 }
 

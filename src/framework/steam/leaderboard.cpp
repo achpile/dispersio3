@@ -15,10 +15,12 @@ ach::Leaderboard::Leaderboard(const char *_name, bool _time)
 	synced            = false;
 	time              = _time;
 	handle            = 0;
-	highscore         = 0;
+	high              = 0;
+	best              = 0;
 	rank              = 0;
 	hSteamAPICallDown = 0;
 	hSteamAPICallHigh = 0;
+	hSteamAPICallBest = 0;
 	hSteamAPICallLoad = 0;
 	hSteamAPICallFind = 0;
 }
@@ -97,8 +99,6 @@ void ach::Leaderboard::update(intptr_t utils)
 	{
 		if (SteamAPI_ISteamUtils_IsAPICallCompleted(utils, hSteamAPICallHigh, &ioError))
 		{
-			status = ach::LeaderboardStatus::lsFailed;
-
 			if (!ioError)
 			{
 				LeaderboardScoresDownloaded_t res;
@@ -108,6 +108,23 @@ void ach::Leaderboard::update(intptr_t utils)
 			}
 
 			hSteamAPICallHigh = 0;
+		}
+	}
+
+
+	if (hSteamAPICallBest)
+	{
+		if (SteamAPI_ISteamUtils_IsAPICallCompleted(utils, hSteamAPICallBest, &ioError))
+		{
+			if (!ioError)
+			{
+				LeaderboardScoresDownloaded_t res;
+
+				SteamAPI_ISteamUtils_GetAPICallResult(utils, hSteamAPICallBest, &res, sizeof(res), ach::LeaderboardCallback::lbcDownloadScore, &ioError);
+				onDownloadBest(&res, ioError);
+			}
+
+			hSteamAPICallBest = 0;
 		}
 	}
 
@@ -188,9 +205,22 @@ void ach::Leaderboard::getHighscore()
 	if (!handle)
 		return;
 
-	status            = ach::LeaderboardStatus::lsLoading;
-	highscore         = 0;
-	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, k_ELeaderboardDataRequestGlobal, 1, 1);
+	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, k_ELeaderboardDataRequestGlobalAroundUser, 1, 1);
+}
+
+
+
+/***********************************************************************
+     * Leaderboard
+     * getBestscore
+
+***********************************************************************/
+void ach::Leaderboard::getBestscore()
+{
+	if (!handle)
+		return;
+
+	hSteamAPICallBest = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, k_ELeaderboardDataRequestGlobal, 1, 1);
 }
 
 
@@ -241,6 +271,8 @@ void ach::Leaderboard::onDownloadScore(LeaderboardScoresDownloaded_t *pCallback,
 
 	if (entries.size()) status = ach::LeaderboardStatus::lsSuccess;
 	else                status = ach::LeaderboardStatus::lsNoData;
+
+	getHighscore();
 }
 
 
@@ -254,24 +286,46 @@ void ach::Leaderboard::onDownloadHigh(LeaderboardScoresDownloaded_t *pCallback, 
 {
 	if (bIOFailure)
 	{
-		status = ach::LeaderboardStatus::lsFailed;
 		logger->log(ach::LogLevel::llWarning, "Failed getting highscore for \"%s\"", name);
+		return;
+	}
+
+	if (pCallback->m_cEntryCount >= 1)
+	{
+		LeaderboardEntry_t data;
+		SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, 0, &data, NULL, 0);
+
+		high = data.m_nScore;
+		rank = data.m_nGlobalRank;
+	}
+
+	getBestscore();
+}
+
+
+
+/***********************************************************************
+     * Leaderboard
+     * onDownloadBest
+
+***********************************************************************/
+void ach::Leaderboard::onDownloadBest(LeaderboardScoresDownloaded_t *pCallback, bool bIOFailure)
+{
+	if (bIOFailure)
+	{
+		logger->log(ach::LogLevel::llWarning, "Failed getting bestscore for \"%s\"", name);
 		return;
 	}
 
 	initialized = true;
 
-	if (pCallback->m_cEntryCount < 1)
+	if (pCallback->m_cEntryCount >= 1)
 	{
-		status = ach::LeaderboardStatus::lsNoData;
-		return;
+		LeaderboardEntry_t data;
+		SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, 0, &data, NULL, 0);
+
+		best = data.m_nScore;
 	}
-
-	LeaderboardEntry_t data;
-	SteamUserStats()->GetDownloadedLeaderboardEntry(pCallback->m_hSteamLeaderboardEntries, 0, &data, NULL, 0);
-
-	status      = ach::LeaderboardStatus::lsSuccess;
-	highscore   = data.m_nScore;
 }
 
 

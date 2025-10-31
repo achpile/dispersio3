@@ -39,8 +39,10 @@ namespace ach
 		SteamAPICall_t hSteamAPICallDown;
 		SteamAPICall_t hSteamAPICallLoad;
 		SteamAPICall_t hSteamAPICallHigh;
+		SteamAPICall_t hSteamAPICallBest;
 
-		unsigned int   highscore;
+		unsigned int   high;
+		unsigned int   best;
 		unsigned int   rank;
 
 		char           name[STR_LEN_NAME];
@@ -57,11 +59,13 @@ namespace ach
 
 		void setHighscore(unsigned int score);
 		void getHighscore();
+		void getBestscore();
 		void getLeaderboard(ach::LeaderboardClass lbClass);
 
 		void onFindLeaderboard(LeaderboardFindResult_t       *pResult, bool bIOFailure);
 		void onDownloadScore  (LeaderboardScoresDownloaded_t *pResult, bool bIOFailure);
 		void onDownloadHigh   (LeaderboardScoresDownloaded_t *pResult, bool bIOFailure);
+		void onDownloadBest   (LeaderboardScoresDownloaded_t *pResult, bool bIOFailure);
 		void onUploadHiscore  (LeaderboardScoreUploaded_t    *pResult, bool bIOFailure);
 	};
 }

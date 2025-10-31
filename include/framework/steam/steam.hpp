@@ -29,6 +29,7 @@ namespace ach
 
 		void         setHighscore(const char *name, unsigned int score);
 		unsigned int getHighscore(const char *name);
+		unsigned int getBestscore(const char *name);
 
 		ach::Leaderboard *getLeaderboard(const char *name);
 

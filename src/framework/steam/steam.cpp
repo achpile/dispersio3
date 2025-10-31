@@ -192,7 +192,30 @@ unsigned int ach::Steam::getHighscore(const char *name)
 	if (!lb->initialized)
 		return 0;
 
-	return lb->highscore;
+	return lb->high;
+}
+
+
+
+/***********************************************************************
+     * Steam
+     * getBestscore
+
+***********************************************************************/
+unsigned int ach::Steam::getBestscore(const char *name)
+{
+	if (!initialized)
+		return 0;
+
+	ach::Leaderboard *lb = getLeaderboard(name);
+
+	if (!lb)
+		return 0;
+
+	if (!lb->initialized)
+		return 0;
+
+	return lb->best;
 }
 
 
