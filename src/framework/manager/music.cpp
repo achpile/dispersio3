@@ -59,14 +59,13 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 
 	track->stop();
 	track->openFromFile(current);
+	track->setLoop(loop);
 	track->play();
 
 	if (reset)
 		fader.reset();
 	else
 		track->setPlayingOffset(offset);
-
-	track->setLoop(loop);
 
 	fade();
 }
