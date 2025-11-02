@@ -88,6 +88,9 @@ void ach::ProcessCutscene::render()
 ***********************************************************************/
 void ach::ProcessCutscene::event(sf::Event e)
 {
+	if (!active)
+		return;
+
 	switch (e.type)
 	{
 		case sf::Event::MouseButtonReleased:
