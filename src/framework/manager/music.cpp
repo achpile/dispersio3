@@ -55,7 +55,7 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 
 	strncpy(current, name, STR_LEN_PATH);
 
-	sf::Time offset = track->getPlayingOffset();
+	sf::Time offset = sf::milliseconds(floor(track->getPlayingOffset().asSeconds()) * 1000);
 
 	track->stop();
 	track->openFromFile(current);
