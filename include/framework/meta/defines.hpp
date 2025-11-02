@@ -51,6 +51,7 @@
 
 ***********************************************************************/
 #define TIME_ANIMATION_DEFAULT 0.1f
+#define TIME_FRAME_LIMIT       0.04f
 #define TIME_MUSIC_FADE        3.0f
 
 

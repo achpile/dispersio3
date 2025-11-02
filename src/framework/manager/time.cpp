@@ -50,6 +50,7 @@ void ach::TimeManager::update()
 	long long current = clock->getElapsedTime().asMicroseconds();
 
 	frame   = (current - last) / 1000000.0;
+	frame   = interval_set(frame, 0.0f, TIME_FRAME_LIMIT);
 	real    = frame;
 	last    = current;
 	passed += frame;
