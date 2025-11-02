@@ -55,8 +55,6 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 
 	strncpy(current, name, STR_LEN_PATH);
 
-	sf::Time offset = sf::milliseconds(floor(track->getPlayingOffset().asSeconds()) * 1000);
-
 	track->stop();
 	track->openFromFile(current);
 	track->setLoop(loop);
@@ -64,8 +62,6 @@ void ach::MusicManager::play(const char *name, bool loop, bool reset)
 
 	if (reset)
 		fader.reset();
-	else
-		track->setPlayingOffset(offset);
 
 	fade();
 }
