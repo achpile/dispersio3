@@ -12,6 +12,7 @@ ach::StateMenu::StateMenu()
 	training     = new ach::LevelSelect(this, handler_menu_pick);
 	achievements = new ach::Achievements();
 	leaderboards = new ach::Leaderboards();
+	arcade       = new ach::Cabinet();
 	state        = ach::MenuState::msMain;
 	logo         = db->getSprite(json_object_get_branch_string(dm->data, "Meta.GFX.UI.Logo"))->spr;
 
@@ -39,6 +40,7 @@ ach::StateMenu::~StateMenu()
 {
 	delete menu;
 	delete training;
+	delete arcade;
 	delete achievements;
 	delete leaderboards;
 }
@@ -93,6 +95,10 @@ void ach::StateMenu::event(sf::Event e)
 
 		case ach::MenuState::msTraining:
 			training->event(e);
+		break;
+
+
+		case ach::MenuState::msArcade:
 		break;
 
 
@@ -160,6 +166,12 @@ void ach::StateMenu::prepare()
 		break;
 
 
+		case ach::MenuState::msArcade:
+			training->controls();
+			arcade->update();
+		break;
+
+
 		case ach::MenuState::msAchievements:
 			achievements->controls();
 		break;
@@ -188,6 +200,12 @@ void ach::StateMenu::finalize()
 
 		case ach::MenuState::msTraining:
 			if (!training->active)
+				state = ach::MenuState::msMain;
+		break;
+
+
+		case ach::MenuState::msArcade:
+			if (!arcade->active())
 				state = ach::MenuState::msMain;
 		break;
 
@@ -223,6 +241,11 @@ void ach::StateMenu::draw()
 
 		case ach::MenuState::msTraining:
 			training->render();
+		break;
+
+
+		case ach::MenuState::msArcade:
+			arcade->render();
 		break;
 
 
@@ -262,7 +285,10 @@ void ach::StateMenu::fill()
 		menu->add("UI.Menu.Play.Name"    , new ach::MenuItemFolder(menu, "UI.Menu.Play.Start"          ));
 
 		if (records->getAchievement(ach::Achievement::acEasy))
+		{
 			menu->add("UI.Menu.Play.Name", new ach::MenuItemAction(menu, "UI.Menu.Play.Training"       , handler_menu_training     , NULL                                ));
+			menu->add("UI.Menu.Play.Name", new ach::MenuItemAction(menu, "UI.Menu.Play.Arcade"         , handler_menu_arcade       , NULL                                ));
+		}
 	}
 
 	menu->add("UI.Menu.Play.Start"       , new ach::MenuItemAction(menu, "UI.Menu.Play.Easy"           , handler_menu_start        , json_pack("{s:b,s:s}", "New", true, "Difficulty", "easy"  )));

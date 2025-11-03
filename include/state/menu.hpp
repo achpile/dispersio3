@@ -8,6 +8,7 @@ namespace ach
 	{
 		msMain,
 		msTraining,
+		msArcade,
 		msAchievements,
 		msLeaderboards
 	};
@@ -20,6 +21,7 @@ namespace ach
 		ach::LevelSelect  *training;
 		ach::Achievements *achievements;
 		ach::Leaderboards *leaderboards;
+		ach::Cabinet      *arcade;
 		ach::MenuState     state;
 
 

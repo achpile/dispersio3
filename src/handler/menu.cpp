@@ -30,6 +30,18 @@ void handler_menu_training(void *context, json_t *)
 
 
 /***********************************************************************
+     * handler_menu_arcade
+
+***********************************************************************/
+void handler_menu_arcade(void *context, json_t *)
+{
+	((ach::StateMenu*)context)->arcade->init(true);
+	((ach::StateMenu*)context)->state = ach::MenuState::msArcade;
+}
+
+
+
+/***********************************************************************
      * handler_menu_achievements
 
 ***********************************************************************/

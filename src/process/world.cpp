@@ -372,7 +372,7 @@ void ach::ProcessWorld::play()
 {
 	state = ach::WorldState::wsArcade;
 
-	arcade->init();
+	arcade->init(false);
 }
 
 

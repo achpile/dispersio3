@@ -20,8 +20,8 @@ namespace ach
 		void update();
 		void render();
 
-		void init();
-		void load();
+		void init(bool menu);
+		void load(bool menu);
 		void select(int offset);
 
 		void controls();

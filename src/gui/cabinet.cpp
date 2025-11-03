@@ -64,9 +64,9 @@ void ach::Cabinet::render()
      * init
 
 ***********************************************************************/
-void ach::Cabinet::init()
+void ach::Cabinet::init(bool menu)
 {
-	load();
+	load(menu);
 	select(0);
 }
 
@@ -77,15 +77,24 @@ void ach::Cabinet::init()
      * load
 
 ***********************************************************************/
-void ach::Cabinet::load()
+void ach::Cabinet::load(bool menu)
 {
+	bool flag;
+
 	index = 0;
 
 	games.clear();
 
-	for (int i = ach::ArcadeGame::agNone; i < ach::ArcadeGame::agCount; i++)
-		if (cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcadeFlag)))
+	for (int i = ach::ArcadeGame::agNone + 1; i < ach::ArcadeGame::agCount; i++)
+	{
+		if (menu)
+			flag = records->getHighscore((ach::ArcadeGame)i);
+		else
+			flag = cache->getFlag(pair_get_string((ach::ArcadeGame)i, pairArcadeFlag));
+
+		if (flag)
 			games.push_back((ach::ArcadeGame)i);
+	}
 
 	if (!games.size())
 		games.push_back(ach::ArcadeGame::agNone);

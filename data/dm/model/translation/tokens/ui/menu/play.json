@@ -2,6 +2,12 @@
     "@attr": {
         "type": "object"
     },
+    "Arcade": {
+        "@attr": {
+            "default": "Arcade",
+            "type": "string"
+        }
+    },
     "Continue": {
         "@attr": {
             "default": "Continue",
