@@ -15,6 +15,7 @@
 #include "menu/checkbox.hpp"
 #include "menu/control.hpp"
 #include "menu/rebind.hpp"
+#include "menu/reset.hpp"
 #include "menu/folder.hpp"
 #include "menu/list.hpp"
 #include "menu/slider.hpp"

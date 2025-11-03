@@ -2,52 +2,58 @@
 
 
 /***********************************************************************
-     * MenuItemAction
+     * MenuItemReset
      * constructor
 
 ***********************************************************************/
-ach::MenuItemAction::MenuItemAction(ach::Menu *_menu, const char *_name, ach::Handler _handler, json_t *_param) : MenuItem(_menu, _name)
+ach::MenuItemReset::MenuItemReset(ach::Menu *_menu, const char *_name, bool _keyboard) : MenuItem(_menu, _name)
 {
-	param   = _param;
-	handler = _handler;
+	keyboard = _keyboard;
 }
 
 
 
 /***********************************************************************
-     * MenuItemAction
+     * MenuItemReset
      * destructor
 
 ***********************************************************************/
-ach::MenuItemAction::~MenuItemAction()
+ach::MenuItemReset::~MenuItemReset()
 {
-	if (param)
-		json_decref(param);
 }
 
 
 
 /***********************************************************************
-     * MenuItemAction
+     * MenuItemReset
      * action
 
 ***********************************************************************/
-void ach::MenuItemAction::action()
+void ach::MenuItemReset::action()
 {
-	sm->play(menu->sfxPick);
+	json_t     *act;
+	const char *i;
 
-	if (handler)
-		handler(menu->context, param);
+	json_object_foreach(json_object_get(settings->data, "Control"), i, act)
+		json_object_del(act, keyboard ? "Key" : "Joy");
+
+	json_dm_generate_default(settings->data, json_object_get(dm->dm, "Settings"));
+
+	ctrl->init();
+	ctrl->reset();
+
+	sm->play(menu->sfxPick);
+	menu->binder->init();
 }
 
 
 
 /***********************************************************************
-     * MenuItemAction
+     * MenuItemReset
      * pick
 
 ***********************************************************************/
-void ach::MenuItemAction::pick()
+void ach::MenuItemReset::pick()
 {
 	action();
 }
@@ -55,11 +61,11 @@ void ach::MenuItemAction::pick()
 
 
 /***********************************************************************
-     * MenuItemAction
+     * MenuItemReset
      * click
 
 ***********************************************************************/
-void ach::MenuItemAction::click()
+void ach::MenuItemReset::click()
 {
 	action();
 }

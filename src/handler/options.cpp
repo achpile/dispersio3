@@ -70,34 +70,3 @@ void handler_options_audio(void *, json_t *)
 	sm->volume();
 	mm->volume();
 }
-
-
-
-/***********************************************************************
-     * handler_options_reset
-
-***********************************************************************/
-void handler_options_reset(void *, json_t *data)
-{
-	json_t     *action;
-	const char *i;
-
-	json_object_foreach(json_object_get(settings->data, "Control"), i, action)
-		json_object_del(action, json_string_value(data));
-
-	json_dm_generate_default(settings->data, json_object_get(dm->dm, "Settings"));
-
-	ctrl->init();
-	ctrl->reset();
-}
-
-
-
-/***********************************************************************
-     * handler_options_rebind
-
-***********************************************************************/
-void handler_options_rebind(void *, json_t *)
-{
-	app->ignore();
-}

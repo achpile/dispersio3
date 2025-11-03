@@ -58,7 +58,7 @@ namespace ach
 		void patterns();
 
 		void explode();
-		void warn(sf::Vector2f _pos);
+		void warn(sf::Vector2f _pos, sf::Color color);
 		void aim (sf::Vector2f _pos, sf::Vector2f _dest);
 		void shot(sf::Vector2f _pos, sf::Vector2f _dir);
 

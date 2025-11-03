@@ -335,9 +335,13 @@ void ach::BossMain::explode()
      * warn
 
 ***********************************************************************/
-void ach::BossMain::warn(sf::Vector2f _pos)
+void ach::BossMain::warn(sf::Vector2f _pos, sf::Color color)
 {
-	world->map->gfx.push_back(new ach::EffectSheet(warning, _pos, warning->sheet->size.y));
+	ach::EffectSheet *gfx = new ach::EffectSheet(warning, _pos, warning->sheet->size.y);
+
+	gfx->model->setColor(color);
+
+	world->map->gfx.push_back(gfx);
 }
 
 
@@ -474,67 +478,67 @@ void ach::BossMain::warnings()
 	switch (pattern)
 	{
 		case 1:
-			warn(target->phys.pos);
+			warn(target->phys.pos, sf::Color(255, 100, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 2:
-			warn(target->phys.pos);
+			warn(target->phys.pos, sf::Color(255, 100, 255));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 3:
-			warn(pos + sf::Vector2f( 96.0f, 16.0f));
-			warn(pos + sf::Vector2f(-96.0f, 16.0f));
+			warn(pos + sf::Vector2f( 96.0f, 16.0f), sf::Color(255, 100, 255));
+			warn(pos + sf::Vector2f(-96.0f, 16.0f), sf::Color(255, 100, 255));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 4:
-			warn(target->phys.pos);
+			warn(target->phys.pos, sf::Color(255, 100, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 5:
-			warn(target->phys.pos);
+			warn(target->phys.pos, sf::Color::White);
 		break;
 
 		// -------------------------------------------------------------
 
 		case 6:
-			warn(pos + sf::Vector2f(   0.0f, -112.0f));
-			warn(pos + sf::Vector2f(  80.0f,  -96.0f));
-			warn(pos + sf::Vector2f( -80.0f,  -96.0f));
-			warn(pos + sf::Vector2f( 120.0f,  -24.0f));
-			warn(pos + sf::Vector2f(-120.0f,  -24.0f));
+			warn(pos + sf::Vector2f(   0.0f, -112.0f), sf::Color(255, 100, 255));
+			warn(pos + sf::Vector2f(  80.0f,  -96.0f), sf::Color(255, 100, 255));
+			warn(pos + sf::Vector2f( -80.0f,  -96.0f), sf::Color(255, 100, 255));
+			warn(pos + sf::Vector2f( 120.0f,  -24.0f), sf::Color(255, 100, 255));
+			warn(pos + sf::Vector2f(-120.0f,  -24.0f), sf::Color(255, 100, 255));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 7:
-			warn(pos + sf::Vector2f(   0.0f, -128.0f));
-			warn(pos + sf::Vector2f(  72.0f, -128.0f));
-			warn(pos + sf::Vector2f( -72.0f, -128.0f));
-			warn(pos + sf::Vector2f( 144.0f, -128.0f));
-			warn(pos + sf::Vector2f(-144.0f, -128.0f));
+			warn(pos + sf::Vector2f(   0.0f, -128.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f(  72.0f, -128.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f( -72.0f, -128.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f( 144.0f, -128.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f(-144.0f, -128.0f), sf::Color(255, 255, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 8:
-			warn(pos + sf::Vector2f(32.0f, -16.0f));
+			warn(pos + sf::Vector2f(32.0f, -16.0f), sf::Color(255, 255, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
-			warn(pos + sf::Vector2f(  72.0f, 48.0f));
-			warn(pos + sf::Vector2f( -72.0f, 48.0f));
-			warn(pos + sf::Vector2f( 144.0f, 48.0f));
-			warn(pos + sf::Vector2f(-144.0f, 48.0f));
+			warn(pos + sf::Vector2f(  72.0f, 48.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f( -72.0f, 48.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f( 144.0f, 48.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f(-144.0f, 48.0f), sf::Color(255, 255, 100));
 		break;
 	}
 }
@@ -623,7 +627,7 @@ void ach::BossMain::attack()
 	switch (pattern)
 	{
 		case 1:
-			warn(target->phys.pos);
+			warn(target->phys.pos, sf::Color(255, 100, 100));
 			shot(target->phys.pos, sf::Vector2f(0.0f, 1.0f));
 		break;
 
