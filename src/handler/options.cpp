@@ -77,7 +77,7 @@ void handler_options_audio(void *, json_t *)
      * handler_options_reset
 
 ***********************************************************************/
-void handler_options_reset(void *context, json_t *data)
+void handler_options_reset(void *, json_t *data)
 {
 	json_t     *action;
 	const char *i;
