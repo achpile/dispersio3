@@ -11,6 +11,7 @@ namespace ach
 		ach::GameState      stateCurr;
 		ach::GameState      stateNext;
 
+		bool isIgnored;
 		bool isRunning;
 		bool isFocused;
 
@@ -28,6 +29,7 @@ namespace ach
 		void stateSwitch();
 
 		void mouse(bool visible);
+		void ignore();
 	};
 }
 

@@ -13,6 +13,7 @@ ach::StateGame::StateGame()
 	create();
 
 	app->mouse(false);
+	app->ignore();
 }
 
 

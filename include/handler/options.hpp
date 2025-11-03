@@ -9,5 +9,6 @@ void handler_options_smooth    (void *context, json_t *data);
 void handler_options_framerate (void *context, json_t *data);
 void handler_options_audio     (void *context, json_t *data);
 void handler_options_reset     (void *context, json_t *data);
+void handler_options_rebind    (void *context, json_t *data);
 
 #endif

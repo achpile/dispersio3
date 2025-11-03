@@ -92,3 +92,14 @@ void handler_options_reset(void *context, json_t *data)
 
 	((ach::Menu*)context)->binder->init();
 }
+
+
+
+/***********************************************************************
+     * handler_options_rebind
+
+***********************************************************************/
+void handler_options_rebind(void *, json_t *)
+{
+	app->ignore();
+}

@@ -10,6 +10,7 @@ ach::App::App()
 {
 	isRunning = true;
 	isFocused = true;
+	isIgnored = false;
 
 	window    = NULL;
 	state     = NULL;
@@ -145,6 +146,8 @@ void ach::App::events()
 
 	while (window->pollEvent(e))
 		event(e);
+
+	isIgnored = false;
 }
 
 
@@ -182,7 +185,7 @@ void ach::App::event(sf::Event e)
 			break;
 	}
 
-	if (state)
+	if (state && !isIgnored)
 		state->event(e);
 }
 
@@ -255,6 +258,18 @@ void ach::App::stateSwitch()
 void ach::App::mouse(bool visible)
 {
 	window->setMouseCursorVisible(visible);
+}
+
+
+
+/***********************************************************************
+     * App
+     * ignore
+
+***********************************************************************/
+void ach::App::ignore()
+{
+	isIgnored = true;
 }
 
 

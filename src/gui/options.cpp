@@ -35,8 +35,8 @@ void options_fill(ach::Menu *menu, const char *name)
 		menu->add("UI.Menu.Options.Gamepad" , new ach::MenuItemControl(menu, (ach::ControlAction)i, false));
 	}
 
-	menu->add("UI.Menu.Options.Keyboard", new ach::MenuItemRebind  (menu, "UI.Menu.Options.Redefine"    , true ));
-	menu->add("UI.Menu.Options.Gamepad" , new ach::MenuItemRebind  (menu, "UI.Menu.Options.Redefine"    , false));
+	menu->add("UI.Menu.Options.Keyboard", new ach::MenuItemRebind  (menu, "UI.Menu.Options.Redefine"    , handler_options_rebind    , true ));
+	menu->add("UI.Menu.Options.Gamepad" , new ach::MenuItemRebind  (menu, "UI.Menu.Options.Redefine"    , handler_options_rebind    , false));
 
 	menu->add("UI.Menu.Options.Keyboard", new ach::MenuItemAction  (menu, "UI.Menu.Options.Reset"       , handler_options_reset     , json_string("Key"    )));
 	menu->add("UI.Menu.Options.Gamepad" , new ach::MenuItemAction  (menu, "UI.Menu.Options.Reset"       , handler_options_reset     , json_string("Joy"    )));

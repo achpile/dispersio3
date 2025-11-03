@@ -16,6 +16,7 @@ ach::StateStart::StateStart()
 	slideshow = new ach::SlideShow(&sprites, true);
 
 	app->mouse(false);
+	app->ignore();
 	db->getTrack(json_object_get_branch_string(dm->data, "Meta.Track.Menu"))->play(true);
 
 	slideshow->setDuration(4.0f);

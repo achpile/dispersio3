@@ -26,6 +26,7 @@ ach::StateFinish::StateFinish()
 
 	cache->clear();
 	app->mouse(false);
+	app->ignore();
 }
 
 

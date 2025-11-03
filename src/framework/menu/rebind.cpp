@@ -6,9 +6,10 @@
      * constructor
 
 ***********************************************************************/
-ach::MenuItemRebind::MenuItemRebind(ach::Menu *_menu, const char *_name, bool _keyboard) : MenuItem(_menu, _name)
+ach::MenuItemRebind::MenuItemRebind(ach::Menu *_menu, const char *_name, ach::Handler _handler, bool _keyboard) : MenuItem(_menu, _name)
 {
 	keyboard = _keyboard;
+	handler  = _handler;
 	binding  = false;
 	binder   = menu->binder;
 }
@@ -38,6 +39,9 @@ void ach::MenuItemRebind::action()
 	menu->binding = this;
 
 	binder->clear(keyboard);
+
+	if (handler)
+		handler(menu->context, NULL);
 }
 
 

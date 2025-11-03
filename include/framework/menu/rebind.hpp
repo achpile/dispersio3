@@ -6,10 +6,12 @@ namespace ach
 {
 	struct MenuItemRebind : MenuItem, MenuItemBinder
 	{
-		int act = 0;
+		ach::Handler  handler;
+
+		int           act = 0;
 
 
-		 MenuItemRebind(ach::Menu *_menu, const char *_name, bool _keyboard);
+		 MenuItemRebind(ach::Menu *_menu, const char *_name, ach::Handler _handler, bool _keyboard);
 		~MenuItemRebind();
 
 		void action();
