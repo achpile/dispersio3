@@ -7,7 +7,7 @@
 ***********************************************************************/
 uint32_t file_checksum(const char *path)
 {
-	FILE *fp = fopen(path, "r");
+	FILE *fp = fopen(path, "rb");
 
 	if (!fp)
 		return 0;
@@ -21,6 +21,8 @@ uint32_t file_checksum(const char *path)
 		a += c;
 		b += a;
 	}
+
+	fclose(fp);
 
 	return a + (b << 16);
 }
