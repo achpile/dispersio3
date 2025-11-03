@@ -17,6 +17,7 @@ namespace ach
 
 		void check(const char *path);
 		void store(const char *path);
+		void erase(const char *path);
 	};
 }
 

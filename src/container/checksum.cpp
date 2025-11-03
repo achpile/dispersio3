@@ -69,13 +69,13 @@ void ach::Checksum::check(const char *path)
 
 	if (!json_object_get(data, path))
 	{
-		file_erase(path);
+		erase(path);
 		return;
 	}
 
 	if (json_object_get_integer(data, path) != file_checksum(path))
 	{
-		file_erase(path);
+		erase(path);
 		logger->log(ach::LogLevel::llError, "Checksum mismatch: '%s'", path);
 	}
 }
@@ -92,4 +92,17 @@ void ach::Checksum::store(const char *path)
 	json_object_set_integer(data, path, file_checksum(path));
 
 	save();
+}
+
+
+
+/***********************************************************************
+     * Checksum
+     * store
+
+***********************************************************************/
+void ach::Checksum::erase(const char *path)
+{
+	file_erase(path);
+	store(path);
 }

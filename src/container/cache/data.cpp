@@ -64,6 +64,7 @@ void ach::Cache::clear()
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 
 	file_erase(FILE_CACHE);
+	checksum->store(FILE_CACHE);
 }
 
 
@@ -84,6 +85,7 @@ void ach::Cache::reset(ach::Difficulty _difficulty)
 	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
 
 	file_erase(FILE_CACHE);
+	checksum->store(FILE_CACHE);
 }
 
 
