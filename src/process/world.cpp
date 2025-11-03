@@ -229,7 +229,8 @@ void ach::ProcessWorld::finalize()
 		case ach::WorldState::wsMessage:
 			message->render();
 
-			if (ctrl->keys[ach::ControlAction::caMenu].pressed)
+			if (ctrl->keys[ach::ControlAction::caMenu].pressed ||
+			    ctrl->keys[ach::ControlAction::caJump].pressed)
 				state = ach::WorldState::wsGame;
 		break;
 

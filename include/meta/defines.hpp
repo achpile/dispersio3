@@ -87,7 +87,7 @@
 ***********************************************************************/
 #define GUI_MAP_CAPTION_Y     50.0f
 
-#define GUI_NOTIFICATION_X    300.0f
+#define GUI_NOTIFICATION_X    350.0f
 #define GUI_NOTIFICATION_Y    70.0f
 
 #define GUI_ACHIEVEMENT_W     760.0f
