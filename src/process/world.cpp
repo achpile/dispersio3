@@ -22,7 +22,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 
 	message->setPosition(sf::Vector2f(150.0f, 100.0f));
 
-	menu->setPosition(sf::Vector2f(150, 290));
+	menu->setPosition(sf::Vector2f(150, 310));
 	menu->setWidthE(500);
 	menu->setHeightE(300);
 
