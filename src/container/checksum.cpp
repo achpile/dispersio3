@@ -69,13 +69,13 @@ void ach::Checksum::check(const char *path)
 
 	if (!json_object_get(data, path))
 	{
-		unlink(path);
+		file_erase(path);
 		return;
 	}
 
 	if (json_object_get_integer(data, path) != file_checksum(path))
 	{
-		unlink(path);
+		file_erase(path);
 		logger->log(ach::LogLevel::llError, "Checksum mismatch: '%s'", path);
 	}
 }

@@ -8,5 +8,6 @@
 #define file_is_directory(entry) std::filesystem::is_directory(entry)
 
 uint32_t file_checksum(const char *path);
+void     file_erase(const char *path);
 
 #endif

@@ -41,6 +41,7 @@ void ach::Cache::save()
 
 	if (mode != ach::LevelMode::lmTraining)
 	{
+		json_object_set_boolean(cache, "Default", false);
 		json_dump_file(cache, FILE_CACHE, JSON_INDENT(4) | JSON_SORT_KEYS);
 		checksum->store(FILE_CACHE);
 	}
@@ -62,7 +63,7 @@ void ach::Cache::clear()
 
 	json_object_set_branch(dm->data, "Data.Game.Cache", cache);
 
-	unlink(FILE_CACHE);
+	file_erase(FILE_CACHE);
 }
 
 
@@ -82,7 +83,7 @@ void ach::Cache::reset(ach::Difficulty _difficulty)
 	json_object_set_branch_string(cache, "Current.Map", json_object_get_string(campaign, "Start"));
 	json_object_set_string(cache, "Difficulty", pair_get_string(_difficulty, pairDifficulty));
 
-	unlink(FILE_CACHE);
+	file_erase(FILE_CACHE);
 }
 
 

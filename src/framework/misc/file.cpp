@@ -24,3 +24,18 @@ uint32_t file_checksum(const char *path)
 
 	return a + (b << 16);
 }
+
+
+
+/***********************************************************************
+     * file_erase
+
+***********************************************************************/
+void file_erase(const char *path)
+{
+	json_t *obj = json_object();
+
+	json_dump_file(obj, path, JSON_INDENT(4) | JSON_SORT_KEYS);
+
+	json_decref(obj);
+}

@@ -8,7 +8,7 @@
 ***********************************************************************/
 bool ach::Cache::isDefault()
 {
-	return !file_exists(FILE_CACHE);
+	return json_object_get_branch_boolean(dm->data, "Data.Game.Cache.Default");
 }
 
 

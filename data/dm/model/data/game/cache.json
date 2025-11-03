@@ -41,6 +41,12 @@
             }
         }
     },
+    "Default": {
+        "@attr": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
     "Difficulty": {
         "@attr": {
             "default": "easy",
