@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MENU_BINDER
-#define __FRAMEWORK_MENU_BINDER
+#ifndef __MENU_BINDER
+#define __MENU_BINDER
 
 
 namespace ach

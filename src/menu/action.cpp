@@ -38,6 +38,8 @@ void ach::MenuItemAction::action()
 
 	if (handler)
 		handler(menu->context, param);
+
+	binder->init();
 }
 
 

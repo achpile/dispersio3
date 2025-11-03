@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MENU_CHECKBOX
-#define __FRAMEWORK_MENU_CHECKBOX
+#ifndef __MENU_CHECKBOX
+#define __MENU_CHECKBOX
 
 
 namespace ach

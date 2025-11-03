@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MENU_THEME
-#define __FRAMEWORK_MENU_THEME
+#ifndef __MENU_THEME
+#define __MENU_THEME
 
 
 namespace ach

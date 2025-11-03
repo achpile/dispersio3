@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MENU_FOLDER
-#define __FRAMEWORK_MENU_FOLDER
+#ifndef __MENU_FOLDER
+#define __MENU_FOLDER
 
 
 namespace ach

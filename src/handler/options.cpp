@@ -89,8 +89,6 @@ void handler_options_reset(void *context, json_t *data)
 
 	ctrl->init();
 	ctrl->reset();
-
-	((ach::Menu*)context)->binder->init();
 }
 
 

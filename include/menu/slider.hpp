@@ -1,5 +1,5 @@
-#ifndef __FRAMEWORK_MENU_SLIDER
-#define __FRAMEWORK_MENU_SLIDER
+#ifndef __MENU_SLIDER
+#define __MENU_SLIDER
 
 
 namespace ach
