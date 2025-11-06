@@ -167,7 +167,6 @@ void ach::StateMenu::prepare()
 
 
 		case ach::MenuState::msArcade:
-			training->controls();
 			arcade->update();
 		break;
 

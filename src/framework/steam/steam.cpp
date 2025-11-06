@@ -119,6 +119,9 @@ void ach::Steam::setAchievement(const char *name)
 	if (!initialized)
 		return;
 
+	if (!name)
+		return;
+
 	SteamUserStats()->SetAchievement(name);
 	SteamUserStats()->StoreStats();
 }
@@ -133,6 +136,9 @@ void ach::Steam::setAchievement(const char *name)
 bool ach::Steam::getAchievement(const char *name)
 {
 	if (!initialized)
+		return false;
+
+	if (!name)
 		return false;
 
 	bool res;
@@ -153,6 +159,9 @@ bool ach::Steam::getAchievement(const char *name)
 void ach::Steam::setHighscore(const char *name, unsigned int score)
 {
 	if (!initialized)
+		return;
+
+	if (!name)
 		return;
 
 	ach::Leaderboard *lb = getLeaderboard(name);
@@ -184,6 +193,9 @@ unsigned int ach::Steam::getHighscore(const char *name)
 	if (!initialized)
 		return 0;
 
+	if (!name)
+		return 0;
+
 	ach::Leaderboard *lb = getLeaderboard(name);
 
 	if (!lb)
@@ -207,6 +219,9 @@ unsigned int ach::Steam::getBestscore(const char *name)
 	if (!initialized)
 		return 0;
 
+	if (!name)
+		return 0;
+
 	ach::Leaderboard *lb = getLeaderboard(name);
 
 	if (!lb)
@@ -227,6 +242,9 @@ unsigned int ach::Steam::getBestscore(const char *name)
 ***********************************************************************/
 ach::Leaderboard* ach::Steam::getLeaderboard(const char *name)
 {
+	if (!name)
+		return NULL;
+
 	list_foreach(leaderboards)
 		if (strcmp(name, leaderboards[i]->name) == 0)
 			return leaderboards[i];
