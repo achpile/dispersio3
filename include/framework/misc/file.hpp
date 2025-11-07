@@ -2,8 +2,6 @@
 #define __FRAMEWORK_MISC_FILE
 
 
-#define file_list(entry, dir)      for (std::filesystem::directory_entry entry : std::filesystem::directory_iterator(dir))
-
 bool     file_exists(const char *path);
 bool     file_is_regular(const char *path);
 bool     file_is_directory(const char *path);

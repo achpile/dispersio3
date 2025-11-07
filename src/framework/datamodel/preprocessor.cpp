@@ -124,6 +124,11 @@ json_t *json_preprocess_include(const char *name, const char *dir, bool silent)
 json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 {
 	char path[STR_LEN_PATH];
+	char entry[STR_LEN_PATH];
+
+	DIR           *dp;
+	struct dirent *ent;
+
 	json_t *res;
 	json_t *obj;
 
@@ -135,17 +140,31 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 		return NULL;
 	}
 
+	dp = opendir(path);
+
+	if (!dp)
+	{
+		logger->log(ach::LogLevel::llError, "Error opening directory: '%s'", path);
+		return NULL;
+	}
+
 	obj = json_object();
 
-	file_list(entry, path)
+	while ((ent = readdir(dp)) != NULL)
 	{
-		if (file_is_regular(entry.path().string().c_str()) && file_is_extension(entry.path().string().c_str(), ".json"))
+		snprintf(entry, STR_LEN_PATH, "%s/%s/%s", dir, name, ent->d_name);
+
+		if (ent->d_name[0] == '.')
 		{
-			res = json_preprocess_include(entry.path().filename().string().c_str(), path, false);
+			continue;
 		}
-		else if (recursive && file_is_directory(entry.path().string().c_str()))
+		else if (file_is_regular(entry) && file_is_extension(entry, ".json"))
 		{
-			res = json_preprocess_dir(entry.path().filename().string().c_str(), path, true);
+			res = json_preprocess_include(ent->d_name, path, false);
+		}
+		else if (recursive && file_is_directory(entry))
+		{
+			res = json_preprocess_dir(ent->d_name, path, true);
 		}
 		else
 		{
@@ -159,6 +178,8 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 			json_decref(res);
 		}
 	}
+
+	closedir(dp);
 
 	return obj;
 }
