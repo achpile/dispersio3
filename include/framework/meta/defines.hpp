@@ -41,9 +41,6 @@
 
 #define STR_NEWLINE            "^"
 
-#define STR_REGEX_NAME         "^[[:alnum:]_-]{1,128}$"
-#define STR_REGEX_COLOR        "^#[[:xdigit:]]{2}{3,4}$"
-
 
 
 /***********************************************************************

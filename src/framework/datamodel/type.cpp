@@ -190,7 +190,7 @@ bool json_type_check_color(json_t *obj, json_t *, const char *name, const char *
 		return false;
 	}
 
-	if (!str_check_regex(json_string_value(obj), STR_REGEX_COLOR))
+	if (!str_check_color(json_string_value(obj)))
 	{
 		logger->log(ach::LogLevel::llWarning, "Value '%s' has wrong format (%s)", name, json_string_value(obj));
 		return false;
@@ -219,7 +219,7 @@ bool json_type_check_link(json_t *obj, json_t *, const char *name, const char *)
 		return false;
 	}
 
-	if (!str_check_regex(json_string_value(obj), STR_REGEX_NAME))
+	if (!str_check_name(json_string_value(obj)))
 	{
 		logger->log(ach::LogLevel::llError, "Value '%s' has wrong symbols: '%s'", name, json_string_value(obj));
 		return false;
@@ -248,7 +248,7 @@ bool json_type_check_enum(json_t *obj, json_t *dm, const char *name, const char 
 		return false;
 	}
 
-	if (!str_check_regex(json_string_value(obj), STR_REGEX_NAME))
+	if (!str_check_name(json_string_value(obj)))
 	{
 		logger->log(ach::LogLevel::llError, "Value '%s' has wrong symbols: '%s'", name, json_string_value(obj));
 		return false;

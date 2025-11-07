@@ -14,7 +14,6 @@
 
 #include <random>
 #include <ctime>
-#include <regex>
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>

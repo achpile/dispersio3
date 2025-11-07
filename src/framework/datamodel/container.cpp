@@ -84,7 +84,7 @@ bool json_container_check_multi(json_t *obj, json_t *dm, const char *name, const
 			continue;
 		}
 
-		if (!str_check_regex(key, STR_REGEX_NAME))
+		if (!str_check_name(key))
 		{
 			logger->log(ach::LogLevel::llError, "Name has wrong symbols: '%s'", key);
 			json_object_del(obj, key);

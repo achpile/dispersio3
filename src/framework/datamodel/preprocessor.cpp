@@ -78,6 +78,7 @@ json_t *json_preprocess_directive(const char *name, const char *dir)
 json_t *json_preprocess_include(const char *name, const char *dir, bool silent)
 {
 	char path[STR_LEN_PATH];
+
 	json_error_t error;
 
 	if (name[0] == DM_DIRECTIVE_PWD)
@@ -112,7 +113,12 @@ json_t *json_preprocess_include(const char *name, const char *dir, bool silent)
 		return NULL;
 	}
 
-	return json_preprocess(res, dirname(path));
+	char *slash = strrchr(path, '/');
+
+	if (slash && slash != path)
+		*slash = 0;
+
+	return json_preprocess(res, path);
 }
 
 

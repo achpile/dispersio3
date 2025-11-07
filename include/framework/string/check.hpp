@@ -3,6 +3,7 @@
 
 
 bool str_check_start(const char *str, const char *start);
-bool str_check_regex(const char *str, const char *expr);
+bool str_check_name(const char *str);
+bool str_check_color(const char *str);
 
 #endif
