@@ -8,7 +8,8 @@
 ***********************************************************************/
 ach::Log::Log(ach::LogLevel _level)
 {
-	level = _level;
+	level   = _level;
+	logfile = fopen(FILE_LOG, "w");
 
 	log(ach::LogLevel::llInfo, PROJECT_NAME " v" PROJECT_VERS " started");
 }
@@ -22,6 +23,8 @@ ach::Log::Log(ach::LogLevel _level)
 ***********************************************************************/
 ach::Log::~Log()
 {
+	if (logfile)
+		fclose(logfile);
 }
 
 
@@ -60,6 +63,7 @@ void ach::Log::log(ach::LogLevel _level, const char *format, ...)
 	update();
 
 	put(stdout , buf, _level);
+	put(logfile, buf, _level);
 }
 
 

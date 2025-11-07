@@ -19,6 +19,7 @@ namespace ach
 		ach::LogLevel level;
 
 		struct tm *tm;
+		FILE      *logfile;
 		time_t     now;
 
 

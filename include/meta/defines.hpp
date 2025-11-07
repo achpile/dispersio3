@@ -20,6 +20,7 @@
 #define FILE_CACHE            "save.json"
 #define FILE_RECORDS          "records.json"
 #define FILE_CHECKSUM         "checksum.json"
+#define FILE_LOG              "log.txt"
 #define FILE_APPID            "steam_appid.txt"
 
 
