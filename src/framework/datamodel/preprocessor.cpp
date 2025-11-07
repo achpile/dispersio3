@@ -139,11 +139,11 @@ json_t *json_preprocess_dir(const char *name, const char *dir, bool recursive)
 
 	file_list(entry, path)
 	{
-		if (file_is_regular(entry) && file_extension(entry, ".json"))
+		if (file_is_regular(entry.path().string().c_str()) && file_extension(entry, ".json"))
 		{
 			res = json_preprocess_include(entry.path().filename().string().c_str(), path, false);
 		}
-		else if (recursive && file_is_directory(entry))
+		else if (recursive && file_is_directory(entry.path().string().c_str()))
 		{
 			res = json_preprocess_dir(entry.path().filename().string().c_str(), path, true);
 		}

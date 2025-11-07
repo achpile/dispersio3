@@ -3,11 +3,11 @@
 
 
 #define file_list(entry, dir)      for (std::filesystem::directory_entry entry : std::filesystem::directory_iterator(dir))
-#define file_exists(path)          std::filesystem::exists(path)
+#define file_exists(path)          (access(path, F_OK) == 0)
 #define file_extension(entry, ext) (entry.path().extension() == ext)
-#define file_is_regular(entry)     std::filesystem::is_regular_file(entry)
-#define file_is_directory(entry)   std::filesystem::is_directory(entry)
 
+bool     file_is_regular(const char *path);
+bool     file_is_directory(const char *path);
 uint32_t file_checksum(const char *path);
 void     file_erase(const char *path);
 
