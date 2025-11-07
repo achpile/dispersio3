@@ -2,6 +2,17 @@
 
 
 /***********************************************************************
+     * file_exists
+
+***********************************************************************/
+bool file_exists(const char *path)
+{
+	return (access(path, F_OK) == 0);
+}
+
+
+
+/***********************************************************************
      * file_is_regular
 
 ***********************************************************************/
@@ -25,6 +36,22 @@ bool file_is_directory(const char *path)
 	stat(path, &st);
 
 	return S_ISDIR(st.st_mode);
+}
+
+
+
+/***********************************************************************
+     * file_is_extension
+
+***********************************************************************/
+bool file_is_extension(const char *path, const char *ext)
+{
+	const char *dot = strrchr(path, '.');
+
+	if (!dot || dot == path)
+		return false;
+
+	return (strcmp(dot, ext) == 0);
 }
 
 
