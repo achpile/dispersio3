@@ -8,9 +8,10 @@
 void json_dm_check_datatypes(json_t *obj, json_t *dm, const char *path)
 {
 	json_t     *i, *j;
+	json_t     *copy = json_deep_copy(obj);
 	const char *key;
 
-	json_object_foreach(obj, key, i)
+	json_object_foreach(copy, key, i)
 	{
 		j = json_object_get(dm, key);
 
@@ -21,12 +22,14 @@ void json_dm_check_datatypes(json_t *obj, json_t *dm, const char *path)
 			continue;
 		}
 
-		if (!json_container_check(i, j, key, path))
+		if (!json_container_check(json_object_get(obj, key), j, key, path))
 		{
 			json_object_del(obj, key);
 			continue;
 		}
 	}
+
+	json_decref(copy);
 }
 
 

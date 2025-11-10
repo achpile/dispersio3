@@ -8,12 +8,13 @@
 json_t *json_preprocess(json_t *obj, const char *dir)
 {
 	json_t     *sub;
+	json_t     *copy = json_deep_copy(obj);
 	const char *key;
 
-	json_object_foreach(obj, key, sub)
+	json_object_foreach(copy, key, sub)
 	{
 		if (json_is_object(sub))
-			json_preprocess(sub, dir);
+			json_preprocess(json_object_get(obj, key), dir);
 
 		if (json_is_string(sub))
 		{
@@ -24,18 +25,14 @@ json_t *json_preprocess(json_t *obj, const char *dir)
 				json_t *res = json_preprocess_directive(val, dir);
 
 				if (res)
-				{
 					json_object_set_new_nocheck(obj, key, res);
-					json_decref(sub);
-				}
 				else
-				{
 					json_object_del(obj, key);
-				}
 			}
 		}
 	}
 
+	json_decref(copy);
 	return obj;
 }
 
@@ -110,6 +107,7 @@ json_t *json_preprocess_include(const char *name, const char *dir, bool silent)
 	if (!json_is_object(res))
 	{
 		logger->log(ach::LogLevel::llError, "File has invalid format: '%s'", path);
+		json_decref(res);
 		return NULL;
 	}
 

@@ -62,8 +62,9 @@ void json_dm_class_check_object(json_t *obj, json_t *check)
 		}
 	}
 
+	json_t *copy = json_deep_copy(multi);
 
-	json_object_foreach(multi, key, j)
+	json_object_foreach(copy, key, j)
 	{
 		if (!json_array_contains(json_object_get(check, "Objects"), key))
 		{
@@ -71,4 +72,6 @@ void json_dm_class_check_object(json_t *obj, json_t *check)
 			json_object_del(multi, key);
 		}
 	}
+
+	json_decref(copy);
 }

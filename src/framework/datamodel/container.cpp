@@ -43,17 +43,29 @@ bool json_container_check_array(json_t *obj, json_t *dm, const char *name, const
 		return false;
 	}
 
+	bool    flag;
 	size_t  i;
 	json_t *j;
+	json_t *copy;
 
-	json_array_foreach(obj, i, j)
-	{
-		if (!json_type_check(j, dm, name, path))
+	do {
+		copy = json_deep_copy(obj);
+		flag = true;
+
+		json_array_foreach(copy, i, j)
 		{
-			logger->log(ach::LogLevel::llWarning, "Item [%zu] of array '%s' has wrong type", i, name);
-			json_array_remove(obj, i);
+			if (!json_type_check(json_array_get(obj, i), dm, name, path))
+			{
+				logger->log(ach::LogLevel::llWarning, "Item [%zu] of array '%s' has wrong type", i, name);
+				json_array_remove(obj, i);
+
+				flag = false;
+				break;
+			}
 		}
-	}
+
+		json_decref(copy);
+	} while (!flag);
 
 	return true;
 }
@@ -74,8 +86,9 @@ bool json_container_check_multi(json_t *obj, json_t *dm, const char *name, const
 
 	const char *key;
 	json_t     *instance;
+	json_t     *copy = json_deep_copy(obj);
 
-	json_object_foreach(obj, key, instance)
+	json_object_foreach(copy, key, instance)
 	{
 		if (strlen(key) >= STR_LEN_NAME)
 		{
@@ -91,9 +104,11 @@ bool json_container_check_multi(json_t *obj, json_t *dm, const char *name, const
 			continue;
 		}
 
-		if (!json_type_check(instance, dm, key, path))
+		if (!json_type_check(json_object_get(obj, key), dm, key, path))
 			json_object_del(obj, key);
 	}
+
+	json_decref(copy);
 
 	return true;
 }
