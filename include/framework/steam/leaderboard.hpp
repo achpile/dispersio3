@@ -55,7 +55,7 @@ namespace ach
 		~Leaderboard();
 
 		void init();
-		void update(intptr_t utils);
+		void update(ISteamUtils *utils);
 
 		void setHighscore(unsigned int score);
 		void getHighscore();

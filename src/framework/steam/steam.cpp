@@ -29,11 +29,11 @@ ach::Steam::Steam()
 	if (!initialized)
 		return;
 
-	ID = SteamAPI_ISteamUser_GetSteamID((intptr_t)SteamUser());
+	ID = SteamAPI_ISteamUser_GetSteamID(SteamUser());
 
 	sclient = SteamClient();
-	spipe   = SteamAPI_ISteamClient_CreateSteamPipe((intptr_t)sclient);
-	sutils  = SteamAPI_ISteamClient_GetISteamUtils((intptr_t)sclient, spipe, STEAMUTILS_INTERFACE_VERSION);
+	spipe   = SteamAPI_ISteamClient_CreateSteamPipe(sclient);
+	sutils  = SteamAPI_ISteamClient_GetISteamUtils(sclient, spipe, STEAMUTILS_INTERFACE_VERSION);
 
 	if (!sutils)
 		return;
@@ -69,7 +69,7 @@ void ach::Steam::update()
 		return;
 
 	list_foreach(leaderboards)
-		leaderboards[i]->update((intptr_t)sutils);
+		leaderboards[i]->update(sutils);
 }
 
 

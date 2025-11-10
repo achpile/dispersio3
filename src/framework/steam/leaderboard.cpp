@@ -45,7 +45,7 @@ ach::Leaderboard::~Leaderboard()
 ***********************************************************************/
 void ach::Leaderboard::init()
 {
-	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard((intptr_t)SteamUserStats(), name);
+	hSteamAPICallFind = SteamAPI_ISteamUserStats_FindLeaderboard(SteamUserStats(), name);
 }
 
 
@@ -55,7 +55,7 @@ void ach::Leaderboard::init()
      * update
 
 ***********************************************************************/
-void ach::Leaderboard::update(intptr_t utils)
+void ach::Leaderboard::update(ISteamUtils *utils)
 {
 	bool ioError;
 
@@ -160,7 +160,7 @@ void ach::Leaderboard::setHighscore(unsigned int score)
 
 	rank = 0;
 
-	hSteamAPICallLoad = SteamAPI_ISteamUserStats_UploadLeaderboardScore((intptr_t)SteamUserStats(), handle, k_ELeaderboardUploadScoreMethodKeepBest, score, NULL, 0);
+	hSteamAPICallLoad = SteamAPI_ISteamUserStats_UploadLeaderboardScore(SteamUserStats(), handle, k_ELeaderboardUploadScoreMethodKeepBest, score, NULL, 0);
 }
 
 
@@ -190,7 +190,7 @@ void ach::Leaderboard::getLeaderboard(ach::LeaderboardClass lbClass)
 
 	entries.clear();
 
-	hSteamAPICallDown = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, req, start, end);
+	hSteamAPICallDown = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries(SteamUserStats(), handle, req, start, end);
 }
 
 
@@ -205,7 +205,7 @@ void ach::Leaderboard::getHighscore()
 	if (!handle)
 		return;
 
-	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, k_ELeaderboardDataRequestGlobalAroundUser, 1, 1);
+	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries(SteamUserStats(), handle, k_ELeaderboardDataRequestGlobalAroundUser, 1, 1);
 }
 
 
@@ -220,7 +220,7 @@ void ach::Leaderboard::getBestscore()
 	if (!handle)
 		return;
 
-	hSteamAPICallBest = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries((intptr_t)SteamUserStats(), handle, k_ELeaderboardDataRequestGlobal, 1, 1);
+	hSteamAPICallBest = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries(SteamUserStats(), handle, k_ELeaderboardDataRequestGlobal, 1, 1);
 }
 
 
