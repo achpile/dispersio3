@@ -217,7 +217,10 @@ bool ach::Records::syncHighscore(ach::ArcadeGame game)
 	if (score > lb->high)
 		lb->setHighscore(score);
 	else if (score < lb->high)
-		json_object_set_integer(highscores, pair_get_string(game, pairArcade), lb->high);
+	{
+		json_object_set_integer(highscores, pair_get_string(game, pairArcade),  lb->high);
+		json_object_set_integer(sums      , pair_get_string(game, pairArcade), ~lb->high);
+	}
 
 	lb->synced = true;
 
