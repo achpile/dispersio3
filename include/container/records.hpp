@@ -44,6 +44,7 @@ namespace ach
 		json_t *achievements;
 		json_t *highscores;
 		json_t *leaderboards;
+		json_t *sums;
 
 		bool    synced;
 
@@ -53,6 +54,7 @@ namespace ach
 
 		void save();
 		void init();
+		void csum();
 		void sync();
 
 		void syncAchievement(ach::Achievement achievement);

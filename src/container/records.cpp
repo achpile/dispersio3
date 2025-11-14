@@ -14,6 +14,8 @@ ach::Records::Records()
 	achievements = json_object_get(data, "Achievement");
 	highscores   = json_object_get(data, "Highscore"  );
 	leaderboards = json_object_get(data, "Time"       );
+
+	csum();
 }
 
 
@@ -25,6 +27,7 @@ ach::Records::Records()
 ***********************************************************************/
 ach::Records::~Records()
 {
+	json_decref(sums);
 }
 
 
@@ -36,6 +39,13 @@ ach::Records::~Records()
 ***********************************************************************/
 void ach::Records::save()
 {
+	json_t     *game;
+	const char *key;
+
+	json_object_foreach(highscores, key, game)
+		if (~(json_integer_value(game)) != json_object_get_integer(sums, key))
+			json_integer_set(game, 0);
+
 	json_dump_file(data, FILE_RECORDS, JSON_INDENT(4) | JSON_SORT_KEYS);
 	checksum->store(FILE_RECORDS);
 }
@@ -69,6 +79,24 @@ void ach::Records::init()
 	}
 
 	steam->init();
+}
+
+
+
+/***********************************************************************
+     * Records
+     * csum
+
+***********************************************************************/
+void ach::Records::csum()
+{
+	sums = json_object();
+
+	json_t     *game;
+	const char *key;
+
+	json_object_foreach(highscores, key, game)
+		json_object_set_integer(sums, key, ~(json_integer_value(game)));
 }
 
 
@@ -246,7 +274,8 @@ void ach::Records::setHighscore(ach::ArcadeGame game, int score)
 		return;
 
 	steam->setHighscore(pair_get_string(game, pairArcade), score);
-	json_object_set_integer(highscores, pair_get_string(game, pairArcade), score);
+	json_object_set_integer(highscores, pair_get_string(game, pairArcade),  score);
+	json_object_set_integer(sums      , pair_get_string(game, pairArcade), ~score);
 	save();
 }
 
