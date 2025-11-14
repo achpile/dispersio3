@@ -8,7 +8,6 @@
 ***********************************************************************/
 ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 {
-	score   = 0;
 	active  = true;
 	updated = true;
 	game    = _game;
@@ -42,6 +41,8 @@ ach::Arcade::Arcade(ach::ArcadeGame _game, bool select)
 	tex->setSmooth(false);
 
 	spr->setTexture(tex->getTexture());
+
+	score.reset();
 
 	if (select)
 		caption = "< " + caption + " >";
@@ -121,7 +122,7 @@ void ach::Arcade::render()
 
 
 		case ach::ArcadeState::asPlay:
-			renderValue("SCORE", 5, score, true);
+			renderValue("SCORE", 5, score.get(), true);
 			renderBorder();
 
 			draw();
@@ -263,8 +264,8 @@ void ach::Arcade::quit()
 void ach::Arcade::reset()
 {
 	state = ach::ArcadeState::asTitle;
-	score = 0;
 
+	score.reset();
 	pulse.set(1.0f);
 	sm->play(pick);
 }
@@ -307,7 +308,7 @@ void ach::Arcade::gameover()
 ***********************************************************************/
 void ach::Arcade::highscore()
 {
-	records->setHighscore(game, score);
+	records->setHighscore(game, score.get());
 
 	updated = false;
 	high    = records->getHighscore(game);
@@ -328,10 +329,11 @@ void ach::Arcade::sync()
 	if (!records->update(game))
 		return;
 
+
 	updated = true;
-	high    = records->getHighscore(game);
 	best    = records->getBestScore(game);
 	rank    = records->getRankScore(game);
+	high    = records->getHighscore(game);
 }
 
 

@@ -87,7 +87,7 @@ void ach::ArcadeHexagon::prepare()
 ***********************************************************************/
 void ach::ArcadeHexagon::process()
 {
-	score += ticker.update(true);
+	score.add(ticker.update(true));
 
 	if (!rotor.update(true))
 		rotate();

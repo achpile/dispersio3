@@ -2,107 +2,110 @@
 
 
 /***********************************************************************
-     * Checksum
+     * Score
      * constructor
 
 ***********************************************************************/
-ach::Checksum::Checksum()
+ach::Score::Score()
 {
-	load();
-
-	check(FILE_CACHE);
-	check(FILE_RECORDS);
+	reset();
 }
 
 
 
 /***********************************************************************
-     * Checksum
+     * Score
      * destructor
 
 ***********************************************************************/
-ach::Checksum::~Checksum()
+ach::Score::~Score()
 {
-	json_decref(data);
 }
 
 
 
 /***********************************************************************
-     * Checksum
-     * load
+     * Score
+     * reset
 
 ***********************************************************************/
-void ach::Checksum::load()
+void ach::Score::reset()
 {
-	json_error_t error;
-
-	data = json_load_file(FILE_CHECKSUM, 0, &error);
-
-	if (!data)
-		data = json_object();
+	set(0);
 }
 
 
 
 /***********************************************************************
-     * Checksum
-     * save
-
-***********************************************************************/
-void ach::Checksum::save()
-{
-	json_dump_file(data, FILE_CHECKSUM, JSON_INDENT(4) | JSON_SORT_KEYS);
-}
-
-
-
-/***********************************************************************
-     * Checksum
+     * Score
      * check
 
 ***********************************************************************/
-void ach::Checksum::check(const char *path)
+bool ach::Score::check()
 {
-	if (!file_exists(path))
-		return;
-
-	if (!json_object_get(data, path))
-	{
-		erase(path);
-		return;
-	}
-
-	if (json_object_get_integer(data, path) != file_checksum(path))
-	{
-		erase(path);
-		logger->log(ach::LogLevel::llError, "Checksum mismatch: '%s'", path);
-	}
+	return sum() == csum;
 }
 
 
 
 /***********************************************************************
-     * Checksum
-     * store
+     * Score
+     * increase
 
 ***********************************************************************/
-void ach::Checksum::store(const char *path)
+void ach::Score::increase()
 {
-	json_object_set_integer(data, path, file_checksum(path));
-
-	save();
+	add(1);
 }
 
 
 
 /***********************************************************************
-     * Checksum
-     * erase
+     * Score
+     * add
 
 ***********************************************************************/
-void ach::Checksum::erase(const char *path)
+void ach::Score::add(int score)
 {
-	file_erase(path);
-	store(path);
+	set(check() ? value + score : 0);
+}
+
+
+
+/***********************************************************************
+     * Score
+     * set
+
+***********************************************************************/
+void ach::Score::set(int score)
+{
+	value = score;
+	csum  = sum();
+}
+
+
+
+/***********************************************************************
+     * Score
+     * sum
+
+***********************************************************************/
+int ach::Score::sum()
+{
+	return ~value;
+}
+
+
+
+/***********************************************************************
+     * Score
+     * get
+
+***********************************************************************/
+int ach::Score::get()
+{
+	if (!check())
+		return 0;
+
+	return value;
 }

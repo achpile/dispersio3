@@ -263,7 +263,7 @@ void ach::ArcadeTetris::lines()
 	if (removed)
 	{
 		for (int i = 1; i <= count; i++)
-			score += i;
+			score.add(i);
 
 		sm->play(line);
 	}

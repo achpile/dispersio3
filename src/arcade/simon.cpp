@@ -245,7 +245,7 @@ void ach::ArcadeSimon::press(ach::Direction dir)
 
 
 		case ach::ArcadeSimonStage::assInput:
-			score++;
+			score.increase();
 
 			if (pos == len)
 			{

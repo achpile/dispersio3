@@ -180,7 +180,7 @@ bool ach::ArcadeSnake::move()
 	{
 		snake.push_back(sf::Vector2i(0, 0));
 
-		score++;
+		score.increase();
 
 		sm->play(eat);
 		gen();

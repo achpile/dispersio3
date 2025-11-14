@@ -274,7 +274,7 @@ void ach::ArcadeBrickOut::collideTile(int i, int j)
 	if (fabs(intersection.width ) < 0.1f) return;
 	if (fabs(intersection.height) < 0.1f) return;
 
-	score++;
+	score.increase();
 	sm->play(hit);
 
 	if (fabs(intersection.width) > fabs(intersection.height))

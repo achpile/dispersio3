@@ -121,7 +121,7 @@ void ach::ArcadeRace::tick()
 
 	if (cars[0].x < -ARCADE_RACE_WIDTH)
 	{
-		score++;
+		score.increase();
 
 		gen();
 	}

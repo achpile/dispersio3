@@ -31,6 +31,7 @@ namespace ach
 		ach::ArcadeState     state;
 		ach::RectangleShape *border;
 		ach::Pulse           pulse;
+		ach::Score           score;
 
 		sf::SoundBuffer     *pick;
 		sf::SoundBuffer     *over;
@@ -41,10 +42,9 @@ namespace ach
 		sf::String           caption;
 		sf::Vector2f         offset;
 
-		int  score;
-		int  high;
 		int  rank;
 		int  best;
+		int  high;
 		bool active;
 		bool updated;
 
