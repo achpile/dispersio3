@@ -153,7 +153,7 @@ void ach::Leaderboard::update(ISteamUtils *utils)
      * setHighscore
 
 ***********************************************************************/
-void ach::Leaderboard::setHighscore(unsigned int score)
+void ach::Leaderboard::setHighscore(int score)
 {
 	if (!handle)
 		return;

@@ -41,14 +41,14 @@ namespace ach
 		SteamAPICall_t hSteamAPICallHigh;
 		SteamAPICall_t hSteamAPICallBest;
 
-		unsigned int   high;
-		unsigned int   best;
-		unsigned int   rank;
+		int   high;
+		int   best;
+		int   rank;
 
-		char           name[STR_LEN_NAME];
-		bool           initialized;
-		bool           synced;
-		bool           time;
+		char  name[STR_LEN_NAME];
+		bool  initialized;
+		bool  synced;
+		bool  time;
 
 
 		 Leaderboard(const char *_name, bool _time);
@@ -57,7 +57,7 @@ namespace ach
 		void init();
 		void update(ISteamUtils *utils);
 
-		void setHighscore(unsigned int score);
+		void setHighscore(int score);
 		void getHighscore();
 		void getBestscore();
 		void getLeaderboard(ach::LeaderboardClass lbClass);

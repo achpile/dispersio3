@@ -180,7 +180,7 @@ bool ach::Records::syncLeaderboard(const char *name)
 	if (lb->synced)
 		return true;
 
-	unsigned int score = getLeaderboard(name) * 1000;
+	int score = getLeaderboard(name) * 1000;
 
 	if (score && (!lb->high || score < lb->high))
 		lb->setHighscore(score);
@@ -212,7 +212,7 @@ bool ach::Records::syncHighscore(ach::ArcadeGame game)
 	if (lb->synced)
 		return true;
 
-	unsigned int score = getHighscore(game);
+	int score = getHighscore(game);
 
 	if (score > lb->high)
 		lb->setHighscore(score);
