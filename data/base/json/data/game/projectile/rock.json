@@ -1,0 +1,16 @@
+{
+    "Rock": {
+        "Appearance": {
+            "Orientation": "rotation",
+            "Sheet": "ProjectileBoulder"
+        },
+        "Impact": {
+            "Sound": "BulletBump",
+            "Type": "spark"
+        },
+        "Physics": {
+            "Gravity": 700.0,
+            "Radius": 5
+        }
+    }
+}

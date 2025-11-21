@@ -461,7 +461,13 @@ void ach::BossMain::prepare()
 		case 9:
 			timer.zero();
 
-			weapon = db->getWeapon(json_object_get_string(base->weapon, "Slam"));
+			counter     = 1;
+			weapon      = db->getWeapon(json_object_get_string(base->weapon, "Slam"));
+
+			boulders[0] = rect_value(rect, ach::Direction::dLeft ) + random_float( 8.0f,  52.0f);
+			boulders[1] = rect_value(rect, ach::Direction::dLeft ) + random_float(60.0f, 104.0f);
+			boulders[2] = rect_value(rect, ach::Direction::dRight) - random_float( 8.0f,  52.0f);
+			boulders[3] = rect_value(rect, ach::Direction::dRight) - random_float(60.0f, 104.0f);
 		break;
 	}
 }
@@ -529,16 +535,12 @@ void ach::BossMain::warnings()
 		// -------------------------------------------------------------
 
 		case 8:
-			warn(pos + sf::Vector2f(32.0f, -16.0f), sf::Color(255, 255, 100));
+			warn(pos + sf::Vector2f(32.0f * (counter ? -1 : 1) + 128.0f * tan((angle) * MATH_RAD), -128.0f), sf::Color(255, 255, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
-			warn(pos + sf::Vector2f(  72.0f, 48.0f), sf::Color(255, 255, 100));
-			warn(pos + sf::Vector2f( -72.0f, 48.0f), sf::Color(255, 255, 100));
-			warn(pos + sf::Vector2f( 144.0f, 48.0f), sf::Color(255, 255, 100));
-			warn(pos + sf::Vector2f(-144.0f, 48.0f), sf::Color(255, 255, 100));
 		break;
 	}
 }
@@ -556,7 +558,7 @@ void ach::BossMain::initialize()
 	{
 		case 1: timer.set(1.0f ); break;
 		case 2: timer.set(1.0f ); break;
-		case 3: timer.set(0.3f ); break;
+		case 3: timer.set(0.45f); break;
 		case 4: timer.set(2.0f ); break;
 		case 5: timer.set(2.0f ); break;
 		case 6: timer.set(1.0f ); break;
@@ -611,6 +613,14 @@ void ach::BossMain::evaluate()
 
 		case 9:
 			offsetR = offsetL = 16.0f * sin(MATH_PI * math_sqr(math_sqr(timer.progress())));
+
+			if (counter && timer.value < 1.0f)
+			{
+				counter = 0;
+
+				for (int i = 0; i < 4; i++)
+					warn(sf::Vector2f(boulders[i], pos.y + 48.0f), sf::Color(255, 255, 100));
+			}
 		break;
 	}
 }
@@ -698,8 +708,11 @@ void ach::BossMain::attack()
 		// -------------------------------------------------------------
 
 		case 7:
-			for (int i = 0; i < 5; i++)
-				shot(sf::Vector2f(random_float(rect_value(rect, ach::Direction::dLeft) + 8.0f, rect_value(rect, ach::Direction::dRight) - 8.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, 1.0f));
+			shot(sf::Vector2f(rect_center(rect).x + random_float(-150.0f, -90.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_center(rect).x + random_float( -90.0f, -30.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_center(rect).x + random_float( -30.0f,  30.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_center(rect).x + random_float(  30.0f,  90.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			shot(sf::Vector2f(rect_center(rect).x + random_float(  90.0f, 150.0f), rect.top + weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
 		break;
 
 		// -------------------------------------------------------------
@@ -720,16 +733,21 @@ void ach::BossMain::attack()
 
 			counter = !counter;
 			angle   = random_float(30.0f);
+
+			warn(pos + sf::Vector2f(32.0f * (counter ? -1 : 1) + 128.0f * tan(angle * MATH_RAD), -128.0f), sf::Color(255, 255, 100));
 		break;
 
 		// -------------------------------------------------------------
 
 		case 9:
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float( 8.0f,  52.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dLeft ) + random_float(60.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			for (int i = 0; i < 4; i++)
+				shot(sf::Vector2f(boulders[i], rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
 
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float( 8.0f,  52.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
-			shot(sf::Vector2f(rect_value(rect, ach::Direction::dRight) - random_float(60.0f, 104.0f), rect_value(rect, ach::Direction::dDown) - weapon->projectile->radius), sf::Vector2f(0.0f, -1.0f));
+			counter     = 1;
+			boulders[0] = rect_value(rect, ach::Direction::dLeft ) + random_float( 8.0f,  52.0f);
+			boulders[1] = rect_value(rect, ach::Direction::dLeft ) + random_float(60.0f, 104.0f);
+			boulders[2] = rect_value(rect, ach::Direction::dRight) - random_float( 8.0f,  52.0f);
+			boulders[3] = rect_value(rect, ach::Direction::dRight) - random_float(60.0f, 104.0f);
 		break;
 	}
 }

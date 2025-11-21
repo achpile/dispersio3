@@ -7,8 +7,8 @@
         "Explosion": {
             "Count": 1,
             "Enable": true,
-            "Force": 200,
-            "Projectile": "Boulder"
+            "Force": 150,
+            "Projectile": "Rock"
         },
         "Impact": {
             "Sound": "Break",

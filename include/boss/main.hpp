@@ -37,6 +37,7 @@ namespace ach
 		float offsetL;
 		float offsetR;
 		float angle;
+		float boulders[4];
 
 		int   counter;
 		int   pattern;
