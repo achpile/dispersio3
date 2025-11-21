@@ -13,7 +13,7 @@ ach::MapObjectCheckpoint::MapObjectCheckpoint(ach::ProcessWorld *_world, json_t 
 
 	setModel(json_object_get_branch_string(dm->data, "Data.Game.Meta.GFX.Checkpoint"));
 
-	if (difficulty < cache->difficulty)
+	if (difficulty < cache->difficulty && cache->mode != ach::LevelMode::lmReplay)
 		alive = false;
 
 	deactivate();
