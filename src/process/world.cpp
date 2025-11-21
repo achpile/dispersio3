@@ -24,7 +24,7 @@ ach::ProcessWorld::ProcessWorld(ach::StateGame *_owner, ach::DataMap *_map) : Pr
 
 	menu->setPosition(sf::Vector2f(150, 310));
 	menu->setWidthE(500);
-	menu->setHeightE(300);
+	menu->setHeightE(280);
 
 	fader.set(1.0f);
 
