@@ -82,7 +82,9 @@ bool ach::PhysLine::check(ach::Phys *p, long filter)
 	if (type == ach::PhysType::ptPlatform && (o == ach::Orientation::oVertical || p->jumpdown || p->vel.y < 0.0f))
 		return false;
 
-	if (!collision_box_vs_line(p->rect, line))
+	sf::Vector2f n;
+
+	if (!collision_box_vs_line(p->rect, line, NULL, &n))
 		return false;
 
 
@@ -103,6 +105,9 @@ bool ach::PhysLine::check(ach::Phys *p, long filter)
 
 
 	d = (fabs(d1) > fabs(d2)) ? d1 : d2;
+
+	if (math_sign(d) == math_sign(orient_v_coord(!o, n)))
+		d = -d;
 
 	if (type == ach::PhysType::ptPlatform && !interval_check(d, -2.0f, 0.0f))
 	{

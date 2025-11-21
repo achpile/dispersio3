@@ -49,7 +49,7 @@ void ach::Map::collideCharacter(ach::Character *character)
 	while (left > 0.0f)
 	{
 		velocity = vector_len(character->phys.vel);
-		chunk    = (velocity == 0.0f) ? left : 1.5f / velocity;
+		chunk    = (math_epsilon(velocity)) ? left : 1.0f / velocity;
 
 		if (chunk > left)
 			chunk = left;
