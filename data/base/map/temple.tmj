@@ -2884,49 +2884,7 @@
                  "type":"character",
                  "visible":true,
                  "width":16,
-                 "x":1992,
-                 "y":224
-                }, 
-                {
-                 "height":16,
-                 "id":154,
-                 "name":"Bat",
-                 "properties":[
-                        {
-                         "name":"Jumping",
-                         "propertytype":"#jumping",
-                         "type":"class",
-                         "value":
-                            {
-                             "Cooldown":0.5
-                            }
-                        }, 
-                        {
-                         "name":"Moving",
-                         "propertytype":"#moving",
-                         "type":"class",
-                         "value":
-                            {
-                             "Direction":"right",
-                             "Fall":false
-                            }
-                        }, 
-                        {
-                         "name":"Shooting",
-                         "propertytype":"#shooting",
-                         "type":"class",
-                         "value":
-                            {
-                             "Aim":"none",
-                             "Cooldown":0.8,
-                             "Offset":0.8
-                            }
-                        }],
-                 "rotation":0,
-                 "type":"character",
-                 "visible":true,
-                 "width":16,
-                 "x":2088,
+                 "x":2040,
                  "y":224
                 }, 
                 {
