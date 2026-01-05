@@ -183,8 +183,8 @@ void ach::Leaderboard::getLeaderboard(ach::LeaderboardClass lbClass)
 	int end;
 
 	switch (lbClass) {
-		case ach::LeaderboardClass::lcNearest: req = k_ELeaderboardDataRequestGlobalAroundUser; start = -4; end = 5; break;
-		case ach::LeaderboardClass::lcFriends: req = k_ELeaderboardDataRequestFriends         ; start = -4; end = 5; break;
+		case ach::LeaderboardClass::lcNearest: req = k_ELeaderboardDataRequestGlobalAroundUser; start = -4; end = 4; break;
+		case ach::LeaderboardClass::lcFriends: req = k_ELeaderboardDataRequestFriends         ; start = -4; end = 4; break;
 		case ach::LeaderboardClass::lcBest   : req = k_ELeaderboardDataRequestGlobal          ; start =  1; end = 9; break;
 	}
 
@@ -205,7 +205,7 @@ void ach::Leaderboard::getHighscore()
 	if (!handle)
 		return;
 
-	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries(SteamUserStats(), handle, k_ELeaderboardDataRequestGlobalAroundUser, 1, 1);
+	hSteamAPICallHigh = SteamAPI_ISteamUserStats_DownloadLeaderboardEntries(SteamUserStats(), handle, k_ELeaderboardDataRequestGlobalAroundUser, 0, 0);
 }
 
 
